@@ -1,0 +1,9 @@
+{
+  "date_kst": "2026-10-10",
+  "package": "Model349_fusion805_reproduction_code.zip (pre-receipt build sha256 34c398724a3259ab4ba0d67c5531cc94a0ddff18609b18d58c03061c255a6c8e)",
+  "procedure": "unzipped into a new folder on P100 (GPU4); infer_model401.py --b4-warmstart on valid20 raw images with published warm-start folds (config/b4ws_assets.json SHA checked); infer_stage1.py on the fresh exh14 release labels; score_masks.py",
+  "expert_probability_sha256_equal_to_original_run": "20/20",
+  "stage1_label_pixel_difference_vs_original_run": 0,
+  "valid20_image_miou": 80.50167744815056,
+  "completion_flag_b4_warmstart": true
+}

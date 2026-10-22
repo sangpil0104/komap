@@ -1,0 +1,29 @@
+usage: evaluate_image_mean.py [-h] --checkpoint CHECKPOINT --data-root
+                              DATA_ROOT [--split {valid,test}] --output-dir
+                              OUTPUT_DIR [--device DEVICE]
+                              [--patch-size PATCH_SIZE] [--overlap OVERLAP]
+                              [--input-scale INPUT_SCALE]
+                              [--target-width TARGET_WIDTH]
+                              [--batch-size BATCH_SIZE] [--no-tta]
+                              [--tta-mode {flip4,d4}] [--downsample-antialias]
+
+options:
+  -h, --help            show this help message and exit
+  --checkpoint CHECKPOINT
+  --data-root DATA_ROOT
+  --split {valid,test}
+  --output-dir OUTPUT_DIR
+  --device DEVICE
+  --patch-size PATCH_SIZE
+  --overlap OVERLAP
+  --input-scale INPUT_SCALE
+  --target-width TARGET_WIDTH
+                        Optional assertion against checkpoint metadata; by
+                        default use the saved width.
+  --batch-size BATCH_SIZE
+  --no-tta
+  --tta-mode {flip4,d4}
+                        flip4 preserves Model336; d4 adds 90-degree rotations
+  --downsample-antialias
+                        low-pass filter probability maps when reducing scaled
+                        tiles

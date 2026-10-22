@@ -1,0 +1,33 @@
+{
+  "metric": "valid20 image-wise four-class mIoU, empty union = 0",
+  "original_model349": {
+    "checkpoints": 23,
+    "valid_miou": 0.8006834648740921,
+    "p100_seconds": 1895.939146772027
+  },
+  "d3": {
+    "active_checkpoints": 16,
+    "valid_miou": 0.8006429602564389,
+    "p100_seconds": 407.51632872596383
+  },
+  "rep_free_d3_standalone": {
+    "bundle": "/workspace/model349_compress/model349_lite_rep_free_15weights_v2",
+    "checkpoints": 15,
+    "b4_fold_args_files": 8,
+    "all_checkpoint_sha256_verified": true,
+    "valid_miou": 0.8006435964878685,
+    "valid_delta_vs_original_percentage_points": -0.003986838622360711,
+    "valid_delta_vs_d3_percentage_points": 0.00006362314296515237,
+    "valid_pixels_different_vs_d3": 22,
+    "valid_total_pixels": 15757260,
+    "test_pixels_different_vs_d3": 14,
+    "test_total_pixels": 9074964,
+    "p100_seconds": 366.56126058800146,
+    "test_ground_truth_available": false
+  },
+  "caveats": [
+    "The 20 validation images had already been used repeatedly for model choices.",
+    "The test output comparison measures prediction agreement, not test mIoU.",
+    "Single-run wall-clock differences cannot isolate the speed effect of representation-model removal."
+  ]
+}

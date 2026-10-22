@@ -1,0 +1,45 @@
+{
+  "decision": "exploratory_candidate_no_base_change",
+  "reason": "20-image PNG/GT score improves, and specimen leave-one-out rule selection is positive, but 69 runs × 30 rules were screened on repeatedly used valid labels; there is no independent generalization proof and worst-image loss exceeds the current guard. The candidate remains an exploratory valid-selected artifact rather than a verified 81% model.",
+  "baseline_percent": 80.23123131980381,
+  "candidate_percent": 80.47462061710547,
+  "delta_pp": 0.24338929730166603,
+  "worst_image": "A71_step2_sample1",
+  "worst_image_delta_pp": -0.2300308849183752,
+  "specimen_leave_one_out_percent": 80.40878714042867,
+  "specimen_leave_one_out_delta_pp": 0.17755582062488617,
+  "crossweight_fixed_rule_pp": {
+    "release": 0.24338929730167322,
+    "p100_transfer": 0.2393307622821894,
+    "p100_original_fresh": 0.27969668014838467
+  },
+  "all_completed_candidate_image_oracle_percent": 80.9820608393505,
+  "base_changed": false,
+  "test_used": false,
+  "independent_generalization_verified": false,
+  "goal_81_percent_achieved": false,
+  "stage2": {
+    "status": "not_adopted_due_to_negative_incremental_conditional_cv",
+    "independent_png_percent": 80.50068909458147,
+    "vs_release_pp": 0.2694577747776705,
+    "conditional_stage1_fixed_specimen_leave_one_out_percent": 80.31601760913638,
+    "conditional_cv_vs_release_pp": 0.08478628933256971,
+    "reason": "Conditional CV is lower than stage1; positive versus release does not establish benefit of adding F.",
+    "incremental_conditional_cv_vs_stage1_pp": -0.15860300796909
+  },
+  "representative_candidate": "stage1_R_plus_E",
+  "cv_selection_scope": {
+    "candidate_runs": 69,
+    "rules_per_run": 30,
+    "reselect_run_and_rule_inside_each_specimen_exclusion": true,
+    "historical_candidate_development_bias_removed": false
+  },
+  "quality_pass": false,
+  "fresh_submission_verification": {
+    "status": "completed_fixed_weight_valid20_and_test10",
+    "valid_percent": 80.47442360179173,
+    "training_reproducibility_verified": false,
+    "test_gt_available": false,
+    "report": "../accuracy81_stage1_fresh_20261009/report.md"
+  }
+}

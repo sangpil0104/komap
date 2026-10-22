@@ -1,0 +1,3 @@
+#!/home/sppark/miniconda3/envs/komap/bin/python
+import json,sys
+with open('/Data3/sppark/komap/experiments/model349_train_route_v1/outputs/checks/commands_0rjjmocl/calls.jsonl', 'a') as f: f.write(json.dumps(sys.argv[1:])+'\n')

@@ -1,0 +1,80 @@
+[
+  {
+    "id": "normalization_followup",
+    "script": "parallel_expandable.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/normalization_followup_plan.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "normalization_followup.log"
+  },
+  {
+    "id": "full_normalization",
+    "script": "parallel_expandable.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/full_normalization_plan.json",
+      "--batch",
+      "1",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "full_normalization.log"
+  },
+  {
+    "id": "photometric_refinement",
+    "script": "parallel_expandable.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/photometric_refinement_plan.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "photometric_refinement.log"
+  },
+  {
+    "id": "expanded_phase",
+    "script": "parallel_expandable.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/expanded_phase_plan.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "expanded_phase.log"
+  },
+  {
+    "id": "model_pixel_phase",
+    "script": "parallel_expandable.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/model_phase_plan.json",
+      "--batch",
+      "1",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "model_pixel_phase.log"
+  },
+  {
+    "id": "fractional_restore",
+    "script": "parallel_expandable.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/fractional_restore_plan.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "fractional_restore.log"
+  }
+]

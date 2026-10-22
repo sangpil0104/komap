@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "alphase"
+version = "0.1.0"
+description = "Native-resolution aluminum phase segmentation"
+requires-python = ">=3.11"
+dependencies = ["torch>=2.7", "torchvision>=0.22", "numpy", "pillow", "scipy", "pandas", "scikit-learn", "omegaconf", "pyyaml", "tqdm", "tensorboard"]
+
+[project.optional-dependencies]
+dino = ["torchmetrics", "ftfy", "regex", "submitit", "termcolor"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+alphase = ["engine/dashboard.html"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

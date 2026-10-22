@@ -1,0 +1,302 @@
+[
+  {
+    "id": "O_A_native_native",
+    "contrast": "A00_control",
+    "change": {
+      "engine": "equivalent implementation"
+    },
+    "engine": "canvas_v1",
+    "config": {
+      "patch": 512,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bilinear",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "flip4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0,
+      "input_canvas": "native",
+      "merge_grid": "native"
+    }
+  },
+  {
+    "id": "O_A_native_model",
+    "contrast": "O_A_native_native",
+    "change": {
+      "merge_grid": "model"
+    },
+    "engine": "canvas_v1",
+    "config": {
+      "patch": 512,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bilinear",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "flip4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0,
+      "input_canvas": "native",
+      "merge_grid": "model"
+    }
+  },
+  {
+    "id": "O_C_native_native",
+    "contrast": "C640_d4_bicubic",
+    "change": {
+      "engine": "equivalent implementation"
+    },
+    "engine": "canvas_v1",
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0,
+      "input_canvas": "native",
+      "merge_grid": "native"
+    }
+  },
+  {
+    "id": "O_C_global_native",
+    "contrast": "O_C_native_native",
+    "change": {
+      "input_canvas": "global"
+    },
+    "engine": "canvas_v1",
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0,
+      "input_canvas": "global",
+      "merge_grid": "native"
+    }
+  },
+  {
+    "id": "O_C_native_model",
+    "contrast": "O_C_native_native",
+    "change": {
+      "merge_grid": "model"
+    },
+    "engine": "canvas_v1",
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0,
+      "input_canvas": "native",
+      "merge_grid": "model"
+    }
+  },
+  {
+    "id": "O_C_global_model",
+    "contrast": "O_C_global_native",
+    "change": {
+      "merge_grid": "model"
+    },
+    "engine": "canvas_v1",
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0,
+      "input_canvas": "global",
+      "merge_grid": "model"
+    }
+  },
+  {
+    "id": "O_M_native_native",
+    "contrast": "M01_gamma",
+    "change": {
+      "engine": "equivalent implementation"
+    },
+    "engine": "canvas_v1",
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 0.9,
+      "contrast": 1.0,
+      "sharpen": 0.0,
+      "input_canvas": "native",
+      "merge_grid": "native"
+    }
+  },
+  {
+    "id": "O_M_global_native",
+    "contrast": "O_M_native_native",
+    "change": {
+      "input_canvas": "global"
+    },
+    "engine": "canvas_v1",
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 0.9,
+      "contrast": 1.0,
+      "sharpen": 0.0,
+      "input_canvas": "global",
+      "merge_grid": "native"
+    }
+  },
+  {
+    "id": "O_M_native_model",
+    "contrast": "O_M_native_native",
+    "change": {
+      "merge_grid": "model"
+    },
+    "engine": "canvas_v1",
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 0.9,
+      "contrast": 1.0,
+      "sharpen": 0.0,
+      "input_canvas": "native",
+      "merge_grid": "model"
+    }
+  },
+  {
+    "id": "O_M_global_model",
+    "contrast": "O_M_global_native",
+    "change": {
+      "merge_grid": "model"
+    },
+    "engine": "canvas_v1",
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 0.9,
+      "contrast": 1.0,
+      "sharpen": 0.0,
+      "input_canvas": "global",
+      "merge_grid": "model"
+    }
+  }
+]

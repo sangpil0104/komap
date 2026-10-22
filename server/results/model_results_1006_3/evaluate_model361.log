@@ -1,0 +1,19 @@
+HRNet validation:   0%|          | 0/20 [00:00<?, ?item/s]HRNet validation:   0%|          | 0/20 [00:00<?, ?item/s]
+Traceback (most recent call last):
+  File "/Data3/sppark/komap/experiments/model364_reproduction_gpu4567_v1/outputs/runs/model364_train_20261006T075724_689269Z/source_snapshot/experiments/model336_hrnet_best/evaluate_image_mean.py", line 151, in <module>
+    main()
+  File "/Data3/sppark/komap/experiments/model364_reproduction_gpu4567_v1/outputs/runs/model364_train_20261006T075724_689269Z/source_snapshot/experiments/model336_hrnet_best/evaluate_image_mean.py", line 77, in main
+    probs = predict_probs_tta(
+            ^^^^^^^^^^^^^^^^^^
+  File "/home/sppark/miniconda3/envs/komap/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Data3/sppark/komap/experiments/model364_reproduction_gpu4567_v1/outputs/runs/model364_train_20261006T075724_689269Z/source_snapshot/experiments/model336_hrnet_best/komap_seg/inference.py", line 156, in predict_probs_tta
+    probs = predict_probs(
+            ^^^^^^^^^^^^^^
+  File "/home/sppark/miniconda3/envs/komap/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Data3/sppark/komap/experiments/model364_reproduction_gpu4567_v1/outputs/runs/model364_train_20261006T075724_689269Z/source_snapshot/experiments/model336_hrnet_best/komap_seg/inference.py", line 59, in predict_probs
+    raise ValueError(
+ValueError: invalid or impractically dense tiling: patch_size=512, input_scale=3.0, native_tile=171, overlap=170, stride=1; use overlap below 90% of the native tile size

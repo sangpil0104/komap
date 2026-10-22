@@ -1,0 +1,144 @@
+project: alphase
+experiment: e024_m063_v4_boundary_head
+seed: 2026
+data:
+  root: /Data3/sppark/komap/dataset
+  manifest: /Data3/sppark/komap/experiments/accuracy_v1/baseline/data/manifest.csv
+  folds: /Data3/sppark/komap/experiments/accuracy_v1/baseline/data/folds.json
+  classes:
+  - primary_si
+  - al3ni
+  - eutectic_si
+  - al
+  palette:
+  - - 76
+    - 178
+    - 76
+  - - 25
+    - 76
+    - 153
+  - - 204
+    - 204
+    - 204
+  - - 153
+    - 127
+    - 76
+  ignore_index: 255
+  image_channels:
+  - gray
+  - image_zscore
+  - image_cdf
+  pad_multiple: 32
+  image_pad_mode: reflect
+  mask_pad_value: 255
+model:
+  name: evolve_cnn
+  techniques:
+    boundary_aux_plus:
+      enabled: true
+      level: light
+sampling:
+  sample_image_uniformly: true
+  core_sizes:
+  - 512
+  - 768
+  halo: 64
+  mix:
+    uniform: 1.0
+    complex_region: 0.0
+    boundary_rich: 0.0
+    hard_example: 0.0
+augmentation:
+  d4: true
+  scales:
+  - 1.0
+  photometric_probability: 0.0
+  brightness_offset:
+  - -0.04
+  - 0.04
+  contrast_gain:
+  - 0.9
+  - 1.1
+  gamma:
+  - 0.9
+  - 1.1
+  gaussian_noise_std:
+  - 0.0
+  - 0.0
+  strong_blur: false
+  elastic: false
+  mixup: false
+  cutmix: false
+loss:
+  ce: 1.0
+  dice: 0.5
+  lovasz: 0.5
+  per_image: true
+  dice_classes: present
+  lovasz_classes: present
+  class_weights: null
+  auxiliary: 0.0
+  auxiliary_target: area_fraction
+  boundary: 0.08
+  composition: 0.0
+  float32_reductions: true
+  edge_weight: 0.3
+train:
+  optimizer: adamw
+  new_weight_decay: 0.01
+  backbone_weight_decay: 0.05
+  norm_bias_weight_decay: 0.0
+  effective_batch_size: 8
+  micro_batch_size: 1
+  precision: bf16
+  gradient_clip_norm: 1.0
+  ema_decay: 0.99
+  eval_every_updates: 200
+  no_improvement_checks: 0
+  stages:
+  - max_updates: 900
+    new_lr: 2.0e-06
+    mode: full_frame
+    warmup_updates: 25
+    name: s0_fullframe
+    policy: all
+  num_workers: 2
+  cpu_threads: 4
+  checkpoint_every_updates: 100
+  log_every_updates: 10
+evaluation:
+  primary_metric: image_mean_miou
+  empty_union: exclude
+  report_empty_policies:
+  - exclude
+  - one
+  - zero
+  restore_original_resolution: true
+  compute_on_all_pixels: true
+  validation_tta: false
+inference:
+  mode: full_frame
+  local_core_size: 768
+  halo: 64
+  overlap_fraction: 0.5
+  tile_weight: gaussian
+  d4: false
+  scales:
+  - 1.0
+  probability_dtype: float32
+  refiner_enabled: false
+  class_logit_bias:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  output_mode: RGBA
+hundred:
+  parent: m063_aux_02
+  parent_checkpoint: /Data3/sppark/komap/experiments/hundred_v1/outputs/runs/m063_aux_02/best_trained.pt
+  parent_sha256: ff3035f78584d6b59bf391ef4138b7a5ab8e14b684f508464d09f57f94dd6497
+  source_sha256: 2adfe3096fdc1f68377ba5f3504ec482f383ece4078f72292f3063afa030b833
+  mining_folder: /Data3/sppark/komap/experiments/evolve_v1/data/hard_maps/m063_aux_02
+  group: light_single
+  description: 'm063_aux_02 기반, 기법4 경계 보조 헤드 단독 (light: boundary=.08, edge_weight=.3)'
+  smoke: false

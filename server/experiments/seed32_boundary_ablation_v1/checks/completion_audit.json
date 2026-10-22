@@ -1,0 +1,65 @@
+{
+  "new_training_arms": 10,
+  "inference_arms": 3,
+  "initialization": "ImageNet encoder + fresh decoder seed32",
+  "all_contrasts_single_factor": true,
+  "default_gpu_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "sequential_evaluation_verified": true,
+  "pytest_passed": 19,
+  "full_size_ddp_architectures_verified": 10,
+  "ddp_world_size": 8,
+  "synthetic_trainer_resume_bitwise_equal": true,
+  "real_b4_training_started": false,
+  "previous_artifacts_sha256_verified": true,
+  "results": [
+    {
+      "path": "/Data3/sppark/komap/results/model_results_0929_3",
+      "image_miou": 0.7897654566541208,
+      "panels_pixel_verified": 20
+    },
+    {
+      "path": "/Data3/sppark/komap/results/model_results_0929_4",
+      "image_miou": 0.7872980502438904,
+      "panels_pixel_verified": 20
+    },
+    {
+      "path": "/Data3/sppark/komap/results/model_results_0929_5",
+      "image_miou": 0.7914780896901228,
+      "panels_pixel_verified": 20
+    }
+  ],
+  "source_hash": "02a545a884dabc110b9869315a702534f9a8c55ebb9e5a101a32b1ba2636c300",
+  "source_files": {
+    "BUILD_REPORT.md": "d865dc02f4d98b166dae2e5efb4984e98e471350771a9f0ea9dca4e85a4b73b7",
+    "README.md": "c3ce028817480c6a69ae327fdd35d2e3415495b9a710b93646a8a3061d946410",
+    "boundarylab/__init__.py": "6274bd7ceca84bbbd7e0915c096835394c4a66a122376f472e0862f21501ebd8",
+    "boundarylab/config.py": "c8318b264af9fcdf76d2ee4ba3310459158d8c5a5b327b11d07b7f1d46c636d3",
+    "boundarylab/data.py": "aec5d7286ee4261c5069e8527e92fd0913dbd1f3c9777193a71a53e3c93f5e41",
+    "boundarylab/inference.py": "7b268bf0f1d7c093f23799496d9cc307fe589a23261026736b8d20759a6e25c1",
+    "boundarylab/io.py": "6ace8a153c2aac2a2aa2b812548a64361289cf40ba14a60a53bebffab65beaee",
+    "boundarylab/losses.py": "cf871c709a89f9790572c9a23584182a1d7f46c01e9016d6f5b4b6d1201ce55a",
+    "boundarylab/metrics.py": "dac062f5901accdd5534dad10244f0a0f2eb4338d4d602e71a2195f593b348b1",
+    "boundarylab/models.py": "a32908656cabc14ed49c79ff38571521f86f8931d094865ebd4c3494db9bf91e",
+    "boundarylab/report.py": "002ba01c6b630a0befd4d3a56dbae635022267c00582470d2890fc230be4b034",
+    "environment.freeze.txt": "113e57d476d0a89bbc041b0f94a92ae6e78aa2442093fdd4b342aac97fdc53c0",
+    "preservation.json": "0592c3cea4c6dc66573fbddf09dad67f24fb3177bf0be208c666aa76747f74a6",
+    "pytest.ini": "6a96ba0e2d5a8296fb90f474da9d2f0173d3e41eba18965513f711104155f913",
+    "requirements.txt": "3402e2763692df40b3ff8301481303745673a63ed4e6befb7d919630dae90806",
+    "run.py": "28217f1bfed2e6f9daadb8025942d6eb69586be1b882320cccf19513bea5b1e2",
+    "run.sh": "e1f4be68a1352519a9816b0cac194dd15981653a65a2c38023759c488d43bcca",
+    "tests/conftest.py": "d7b7d7ea9a887f8d919650647b88a9b22d22edf5bc2da3ccf7d02c47e2bf8efe",
+    "tests/test_lifecycle.py": "de491eb611b855f371c288e1cbcf3817246e6db1187ee7000cba5001e80732d9",
+    "tests/test_protocol.py": "fdaa5e88361edfd1af968bcf5e891525ac2acf3cda240290bb532084dd137ae4",
+    "vendor/original_common.py": "92df2bbd1bfe593437d325970fc40771864f8a71578522980cc375f30b61dc11",
+    "worker.py": "e8ae87f9f557bc0769ebc098933a6c3938362a31504bd146f2186c12c3b950ad"
+  }
+}

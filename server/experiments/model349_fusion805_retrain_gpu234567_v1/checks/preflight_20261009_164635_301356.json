@@ -1,0 +1,101 @@
+{
+  "ok": true,
+  "training_started": false,
+  "inference_started": false,
+  "training_count": 27,
+  "gpus": {
+    "2": {
+      "uuid": "GPU-616f69eb-638e-0010-f57e-7eea9ca9e563",
+      "name": "NVIDIA GeForce RTX 4090",
+      "used_mib": 1,
+      "utilization": 0
+    },
+    "3": {
+      "uuid": "GPU-2cbc38c2-5330-cfed-4e43-819c008330e7",
+      "name": "NVIDIA GeForce RTX 4090",
+      "used_mib": 1,
+      "utilization": 0
+    },
+    "4": {
+      "uuid": "GPU-c26b1177-bd33-c433-b7b2-7b0cbeafc4d2",
+      "name": "NVIDIA GeForce RTX 4090",
+      "used_mib": 1,
+      "utilization": 0
+    },
+    "5": {
+      "uuid": "GPU-797180ea-8868-f008-3828-0d465756997f",
+      "name": "NVIDIA GeForce RTX 4090",
+      "used_mib": 1,
+      "utilization": 0
+    },
+    "6": {
+      "uuid": "GPU-d7e94612-cce1-c1d5-78b5-3c538803e341",
+      "name": "NVIDIA GeForce RTX 4090",
+      "used_mib": 1,
+      "utilization": 0
+    },
+    "7": {
+      "uuid": "GPU-9a9706ca-83f7-9d16-de3b-11a5f7ca7b6e",
+      "name": "NVIDIA GeForce RTX 4090",
+      "used_mib": 1,
+      "utilization": 0
+    }
+  },
+  "python": "/home/sppark/miniconda3/envs/komap/bin/python",
+  "data": {
+    "counts": {
+      "train": 70,
+      "valid": 20
+    },
+    "folds": {
+      "1": {
+        "train": 52,
+        "heldout": 18
+      },
+      "2": {
+        "train": 52,
+        "heldout": 18
+      },
+      "3": {
+        "train": 53,
+        "heldout": 17
+      },
+      "4": {
+        "train": 53,
+        "heldout": 17
+      }
+    }
+  },
+  "expert_data": {
+    "images": 70,
+    "specimen_groups": 59,
+    "folds": {
+      "1": {
+        "train": 52,
+        "heldout": 18
+      },
+      "2": {
+        "train": 52,
+        "heldout": 18
+      },
+      "3": {
+        "train": 53,
+        "heldout": 17
+      },
+      "4": {
+        "train": 53,
+        "heldout": 17
+      }
+    },
+    "valid_test_in_training": false
+  },
+  "versions": {
+    "torch": "2.7.1+cu128",
+    "torchvision": "0.22.1+cu128",
+    "segmentation-models-pytorch": "0.5.0",
+    "timm": "1.0.29",
+    "numpy": "2.4.6",
+    "albumentations": "2.0.8",
+    "tqdm": "4.70.1"
+  }
+}

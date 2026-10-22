@@ -1,0 +1,41 @@
+usage: improve_five_causes.py [-h] --data-dir DATA_DIR
+                              [--checkpoint CHECKPOINT] --output-dir
+                              OUTPUT_DIR [--mode {train,groups,predict-test}]
+                              [--patch-size PATCH_SIZE]
+                              [--patches-per-image PATCHES_PER_IMAGE]
+                              [--val-stride VAL_STRIDE]
+                              [--final-stride FINAL_STRIDE]
+                              [--tile-batch-size TILE_BATCH_SIZE]
+                              [--batch-size BATCH_SIZE]
+                              [--num-workers NUM_WORKERS]
+                              [--freeze-epochs FREEZE_EPOCHS]
+                              [--finetune-epochs FINETUNE_EPOCHS]
+                              [--encoder-lr ENCODER_LR]
+                              [--decoder-lr DECODER_LR]
+                              [--weight-decay WEIGHT_DECAY]
+                              [--patience PATIENCE] [--folds FOLDS]
+                              [--seed SEED] [--tta] [--no-amp]
+
+options:
+  -h, --help            show this help message and exit
+  --data-dir DATA_DIR
+  --checkpoint CHECKPOINT
+  --output-dir OUTPUT_DIR
+  --mode {train,groups,predict-test}
+  --patch-size PATCH_SIZE
+  --patches-per-image PATCHES_PER_IMAGE
+  --val-stride VAL_STRIDE
+  --final-stride FINAL_STRIDE
+  --tile-batch-size TILE_BATCH_SIZE
+  --batch-size BATCH_SIZE
+  --num-workers NUM_WORKERS
+  --freeze-epochs FREEZE_EPOCHS
+  --finetune-epochs FINETUNE_EPOCHS
+  --encoder-lr ENCODER_LR
+  --decoder-lr DECODER_LR
+  --weight-decay WEIGHT_DECAY
+  --patience PATIENCE
+  --folds FOLDS
+  --seed SEED
+  --tta
+  --no-amp

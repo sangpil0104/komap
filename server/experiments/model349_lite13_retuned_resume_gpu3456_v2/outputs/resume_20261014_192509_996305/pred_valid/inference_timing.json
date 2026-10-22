@@ -1,0 +1,82 @@
+{
+  "split": "valid",
+  "images": 20,
+  "wall_seconds": 407.56106707360595,
+  "seconds_per_image": 20.378053353680297,
+  "images_per_second": 0.049072400716793634,
+  "started_at": "2026-10-14T19:25:10.396762+09:00",
+  "finished_at": "2026-10-14T19:31:58.083759+09:00",
+  "scope": "Fresh end-to-end wall time: code/weight link preparation, Python startup, model loading, image I/O and preprocessing, R inference/TTA/TENT, E inference, CPU F/postprocessing, probability and mask writes, temporary cleanup. Excludes training, GT scoring and report figures. No explicit warm-up; no precomputed predictions reused. Child exit follows CPU mask writes and therefore completed CUDA work. Seconds/image = batch wall time divided by image count; not an isolated single-image latency or sum of GPU compute times.",
+  "requested_physical_gpus": [
+    3,
+    4,
+    5,
+    6
+  ],
+  "gpu_uuids": [
+    "GPU-2cbc38c2-5330-cfed-4e43-819c008330e7",
+    "GPU-c26b1177-bd33-c433-b7b2-7b0cbeafc4d2",
+    "GPU-797180ea-8868-f008-3828-0d465756997f",
+    "GPU-d7e94612-cce1-c1d5-78b5-3c538803e341"
+  ],
+  "hardware": {
+    "3": {
+      "index": 3,
+      "uuid": "GPU-2cbc38c2-5330-cfed-4e43-819c008330e7",
+      "name": "NVIDIA GeForce RTX 4090",
+      "memory_used_mib": 4,
+      "utilization_percent": 0
+    },
+    "4": {
+      "index": 4,
+      "uuid": "GPU-c26b1177-bd33-c433-b7b2-7b0cbeafc4d2",
+      "name": "NVIDIA GeForce RTX 4090",
+      "memory_used_mib": 4,
+      "utilization_percent": 0
+    },
+    "5": {
+      "index": 5,
+      "uuid": "GPU-797180ea-8868-f008-3828-0d465756997f",
+      "name": "NVIDIA GeForce RTX 4090",
+      "memory_used_mib": 4,
+      "utilization_percent": 0
+    },
+    "6": {
+      "index": 6,
+      "uuid": "GPU-d7e94612-cce1-c1d5-78b5-3c538803e341",
+      "name": "NVIDIA GeForce RTX 4090",
+      "memory_used_mib": 4,
+      "utilization_percent": 0
+    }
+  },
+  "execution": "R components across GPUs 3-6; E on first visible GPU (3); F on CPU",
+  "phase_times": [
+    {
+      "script": "infer_lite.py",
+      "wall_seconds": 56.187345400452614
+    },
+    {
+      "script": "infer_expert.py",
+      "wall_seconds": 340.3389610974118
+    },
+    {
+      "script": "infer_fusion.py",
+      "wall_seconds": 10.916973593644798
+    }
+  ],
+  "command": [
+    "bash",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_resume_gpu3456_v2/outputs/resume_20261014_192509_996305/implementation/source/run_predict.sh",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_resume_gpu3456_v2/outputs/resume_20261014_192509_996305/model/weights",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_resume_gpu3456_v2/data/valid/images",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_resume_gpu3456_v2/outputs/resume_20261014_192509_996305/pred_valid",
+    "GPU-2cbc38c2-5330-cfed-4e43-819c008330e7,GPU-c26b1177-bd33-c433-b7b2-7b0cbeafc4d2,GPU-797180ea-8868-f008-3828-0d465756997f,GPU-d7e94612-cce1-c1d5-78b5-3c538803e341"
+  ],
+  "inventory_verified": true,
+  "inventory": {
+    "ok": true,
+    "images": 20,
+    "labels_suffix": ".png",
+    "masks_suffix": "_mask.png"
+  }
+}

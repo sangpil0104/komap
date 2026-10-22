@@ -1,0 +1,12 @@
+--- baseline/fusion_source/refiner/train_residual.py
++++ seed100/fusion_source/refiner/train_residual.py
+@@ -36,7 +36,8 @@
+  ce=-torch.nn.functional.log_softmax(logits,dim=1).gather(1,target[:,None]).mean()
+  return .5*ce+.5*dice+.05*delta.square().mean()
+ def main():
+- parser=argparse.ArgumentParser();parser.add_argument('--features',type=Path,required=True);parser.add_argument('--output-dir',type=Path,required=True);args=parser.parse_args()
++ global SEED
++ parser=argparse.ArgumentParser();parser.add_argument('--features',type=Path,required=True);parser.add_argument('--output-dir',type=Path,required=True);parser.add_argument('--seed',type=int,default=81349);args=parser.parse_args();SEED=args.seed
+  torch.set_num_threads(2);random.seed(SEED);np.random.seed(SEED);torch.manual_seed(SEED);torch.cuda.manual_seed_all(SEED);torch.backends.cudnn.benchmark=False;torch.backends.cudnn.deterministic=True;torch.use_deterministic_algorithms(True)
+  out=args.output_dir;out.mkdir(parents=True,exist_ok=False);ds=Crops(args.features);generator=torch.Generator().manual_seed(SEED);loader=DataLoader(ds,batch_size=8,shuffle=True,num_workers=0,generator=generator,pin_memory=True)
+  assert len(loader)==140;model=Residual().cuda();opt=torch.optim.AdamW(model.parameters(),lr=1e-3,weight_decay=1e-4);scheduler=torch.optim.lr_scheduler.CosineAnnealingLR(opt,T_max=8)

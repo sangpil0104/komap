@@ -1,0 +1,52 @@
+{
+  "ok": true,
+  "training_started": false,
+  "gpus": {
+    "4": {
+      "uuid": "GPU-c26b1177-bd33-c433-b7b2-7b0cbeafc4d2",
+      "name": "NVIDIA GeForce RTX 4090",
+      "used_mib": 1,
+      "utilization": 0
+    },
+    "5": {
+      "uuid": "GPU-797180ea-8868-f008-3828-0d465756997f",
+      "name": "NVIDIA GeForce RTX 4090",
+      "used_mib": 1,
+      "utilization": 0
+    },
+    "6": {
+      "uuid": "GPU-d7e94612-cce1-c1d5-78b5-3c538803e341",
+      "name": "NVIDIA GeForce RTX 4090",
+      "used_mib": 1,
+      "utilization": 0
+    },
+    "7": {
+      "uuid": "GPU-9a9706ca-83f7-9d16-de3b-11a5f7ca7b6e",
+      "name": "NVIDIA GeForce RTX 4090",
+      "used_mib": 1,
+      "utilization": 0
+    }
+  },
+  "training_count": 3,
+  "data": {
+    "counts": {
+      "train": 70,
+      "valid": 20,
+      "test": 10
+    },
+    "train_only_data_view": true,
+    "train_valid_test_disjoint": true
+  },
+  "recipe": {
+    "training_count": 3,
+    "iterations": 21000,
+    "seed": 0,
+    "r70_weights": 17,
+    "control_weights": 20,
+    "only_R_B4_changes": true,
+    "baseline_REF_image_miou": 0.8025584552762022,
+    "baseline_R_image_miou": 0.8001013505955459
+  },
+  "blocking_experiments": [],
+  "free_gib": 5056.462406158447
+}

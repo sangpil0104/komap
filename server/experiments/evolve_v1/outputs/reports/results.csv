@@ -1,0 +1,101 @@
+experiment,parent,group,description,image_mIoU,global_mIoU
+e014_m013_v4_boundary_head,m013_fullframe_parent,light_single,"m013_fullframe_parent 기반, 기법4 경계 보조 헤드 단독 (light: boundary=.08, edge_weight=.3)",78.82906599507405,81.3197925893034
+e018_m013_v8_complex_expert,m013_fullframe_parent,light_single,"m013_fullframe_parent 기반, 기법8 Complex-region expert 단독 (light)",78.80757706240841,81.31691828794716
+e013_m013_v3_hires_branch,m013_fullframe_parent,light_single,"m013_fullframe_parent 기반, 기법3 고해상도 CNN 브랜치 단독 (light, DINOv3 제외)",78.8073314105563,81.31642088000154
+e011_m013_v1_hires_decoder,m013_fullframe_parent,light_single,"m013_fullframe_parent 기반, 기법1 High-res decoder 단독 (light)",78.80729479118645,81.31622767121961
+e007_m011_v7_texture_branch,m011_seed2028_parent,light_single,"m011_seed2028_parent 기반, 기법7 멀티스케일 텍스처 브랜치 단독 (light: ASPP류 컨텍스트만)",78.80657747403586,81.54537868691915
+e017_m013_v7_texture_branch,m013_fullframe_parent,light_single,"m013_fullframe_parent 기반, 기법7 멀티스케일 텍스처 브랜치 단독 (light: ASPP류 컨텍스트만)",78.80620078221133,81.31567500270383
+e001_m011_v1_hires_decoder,m011_seed2028_parent,light_single,"m011_seed2028_parent 기반, 기법1 High-res decoder 단독 (light)",78.80611239315688,81.54471690211463
+e015_m013_v5_fullres_refine,m013_fullframe_parent,light_single,"m013_fullframe_parent 기반, 기법5 전체 해상도 리파인먼트 단독 (light)",78.8057591329557,81.31535215862321
+e005_m011_v5_fullres_refine,m011_seed2028_parent,light_single,"m011_seed2028_parent 기반, 기법5 전체 해상도 리파인먼트 단독 (light)",78.80565440413918,81.54452504171581
+e003_m011_v3_hires_branch,m011_seed2028_parent,light_single,"m011_seed2028_parent 기반, 기법3 고해상도 CNN 브랜치 단독 (light, DINOv3 제외)",78.80557132832813,81.54432531599358
+e008_m011_v8_complex_expert,m011_seed2028_parent,light_single,"m011_seed2028_parent 기반, 기법8 Complex-region expert 단독 (light)",78.8007582285839,81.54530180560398
+e020_m013_v10_texture_combo,m013_fullframe_parent,heavy_combo,"m013_fullframe_parent 기반, 복잡 텍스처 집중 heavy 조합: 기법2+3+7+8 heavy 동시 적용 (patch->fullframe)",78.78423479079183,81.25352930956115
+e019_m013_v9_boundary_combo,m013_fullframe_parent,heavy_combo,"m013_fullframe_parent 기반, 경계 집중 heavy 조합: 기법1+4+5+6 heavy 동시 적용 + 기법2 light 믹스 (patch->fullframe)",78.78270809582249,81.32435157878052
+e012_m013_v2_crop_mix,m013_fullframe_parent,light_single,"m013_fullframe_parent 기반, 기법2 크롭 믹스 단독 (light: uniform .7/복잡영역 .15/경계 .1/hard .05, patch->fullframe)",78.76814914153945,81.30827450754326
+e002_m011_v2_crop_mix,m011_seed2028_parent,light_single,"m011_seed2028_parent 기반, 기법2 크롭 믹스 단독 (light: uniform .7/복잡영역 .15/경계 .1/hard .05, patch->fullframe)",78.76710880293612,81.53138889208401
+e010_m011_v10_texture_combo,m011_seed2028_parent,heavy_combo,"m011_seed2028_parent 기반, 복잡 텍스처 집중 heavy 조합: 기법2+3+7+8 heavy 동시 적용 (patch->fullframe)",78.75749762515115,81.44718356490907
+e004_m011_v4_boundary_head,m011_seed2028_parent,light_single,"m011_seed2028_parent 기반, 기법4 경계 보조 헤드 단독 (light: boundary=.08, edge_weight=.3)",78.72093625258006,81.46281195981325
+e022_m063_v2_crop_mix,m063_aux_02,light_single,"m063_aux_02 기반, 기법2 크롭 믹스 단독 (light: uniform .7/복잡영역 .15/경계 .1/hard .05, patch->fullframe)",78.70992427302934,81.55227523461554
+e059_m012_v9_boundary_combo,m012_photo_parent,heavy_combo,"m012_photo_parent 기반, 경계 집중 heavy 조합: 기법1+4+5+6 heavy 동시 적용 + 기법2 light 믹스 (patch->fullframe)",78.70574467612595,81.48175020976433
+e029_m063_v9_boundary_combo,m063_aux_02,heavy_combo,"m063_aux_02 기반, 경계 집중 heavy 조합: 기법1+4+5+6 heavy 동시 적용 + 기법2 light 믹스 (patch->fullframe)",78.69895103948133,81.52345652575951
+e016_m013_v6_composition_head,m013_fullframe_parent,light_single,"m013_fullframe_parent 기반, 기법6 국소 상 조성 헤드 단독 (light, decoder feedback 없음)",78.6952055209881,81.18661245334373
+e060_m012_v10_texture_combo,m012_photo_parent,heavy_combo,"m012_photo_parent 기반, 복잡 텍스처 집중 heavy 조합: 기법2+3+7+8 heavy 동시 적용 (patch->fullframe)",78.69434627972532,81.45808147997246
+e030_m063_v10_texture_combo,m063_aux_02,heavy_combo,"m063_aux_02 기반, 복잡 텍스처 집중 heavy 조합: 기법2+3+7+8 heavy 동시 적용 (patch->fullframe)",78.69048591419909,81.53257152295252
+e057_m012_v7_texture_branch,m012_photo_parent,light_single,"m012_photo_parent 기반, 기법7 멀티스케일 텍스처 브랜치 단독 (light: ASPP류 컨텍스트만)",78.68747847058837,81.43120652772372
+e055_m012_v5_fullres_refine,m012_photo_parent,light_single,"m012_photo_parent 기반, 기법5 전체 해상도 리파인먼트 단독 (light)",78.6874357927562,81.43080539487296
+e052_m012_v2_crop_mix,m012_photo_parent,light_single,"m012_photo_parent 기반, 기법2 크롭 믹스 단독 (light: uniform .7/복잡영역 .15/경계 .1/hard .05, patch->fullframe)",78.68721468393488,81.44402199869931
+e058_m012_v8_complex_expert,m012_photo_parent,light_single,"m012_photo_parent 기반, 기법8 Complex-region expert 단독 (light)",78.68681226491725,81.43198930451659
+e053_m012_v3_hires_branch,m012_photo_parent,light_single,"m012_photo_parent 기반, 기법3 고해상도 CNN 브랜치 단독 (light, DINOv3 제외)",78.68679220319525,81.43071447231765
+e051_m012_v1_hires_decoder,m012_photo_parent,light_single,"m012_photo_parent 기반, 기법1 High-res decoder 단독 (light)",78.68565123907588,81.43040197248747
+e082_m062_v2_crop_mix,m062_aux_01,light_single,"m062_aux_01 기반, 기법2 크롭 믹스 단독 (light: uniform .7/복잡영역 .15/경계 .1/hard .05, patch->fullframe)",78.68382576396732,81.53275285095245
+e034_m085_v4_boundary_head,m085_local_contrast,light_single,"m085_local_contrast 기반, 기법4 경계 보조 헤드 단독 (light: boundary=.08, edge_weight=.3)",78.67732081501583,81.47643470105444
+e031_m085_v1_hires_decoder,m085_local_contrast,light_single,"m085_local_contrast 기반, 기법1 High-res decoder 단독 (light)",78.67163513165231,81.4824379530522
+e037_m085_v7_texture_branch,m085_local_contrast,light_single,"m085_local_contrast 기반, 기법7 멀티스케일 텍스처 브랜치 단독 (light: ASPP류 컨텍스트만)",78.67161484121871,81.48198967296932
+e035_m085_v5_fullres_refine,m085_local_contrast,light_single,"m085_local_contrast 기반, 기법5 전체 해상도 리파인먼트 단독 (light)",78.67145428143186,81.48217085320488
+e033_m085_v3_hires_branch,m085_local_contrast,light_single,"m085_local_contrast 기반, 기법3 고해상도 CNN 브랜치 단독 (light, DINOv3 제외)",78.67128746546197,81.48225365217964
+e038_m085_v8_complex_expert,m085_local_contrast,light_single,"m085_local_contrast 기반, 기법8 Complex-region expert 단독 (light)",78.66888517639431,81.47998404153154
+e089_m062_v9_boundary_combo,m062_aux_01,heavy_combo,"m062_aux_01 기반, 경계 집중 heavy 조합: 기법1+4+5+6 heavy 동시 적용 + 기법2 light 믹스 (patch->fullframe)",78.66853194176005,81.49798221372387
+e090_m062_v10_texture_combo,m062_aux_01,heavy_combo,"m062_aux_01 기반, 복잡 텍스처 집중 heavy 조합: 기법2+3+7+8 heavy 동시 적용 (patch->fullframe)",78.66652826141959,81.51682366850989
+e054_m012_v4_boundary_head,m012_photo_parent,light_single,"m012_photo_parent 기반, 기법4 경계 보조 헤드 단독 (light: boundary=.08, edge_weight=.3)",78.6658126101087,81.39907514988022
+e064_m008_v4_boundary_head,m008_decoder_only,light_single,"m008_decoder_only 기반, 기법4 경계 보조 헤드 단독 (light: boundary=.08, edge_weight=.3)",78.66413146576116,81.43934440089645
+e032_m085_v2_crop_mix,m085_local_contrast,light_single,"m085_local_contrast 기반, 기법2 크롭 믹스 단독 (light: uniform .7/복잡영역 .15/경계 .1/hard .05, patch->fullframe)",78.66179305178915,81.49553089485757
+e042_m009_v2_crop_mix,m009_head_only,light_single,"m009_head_only 기반, 기법2 크롭 믹스 단독 (light: uniform .7/복잡영역 .15/경계 .1/hard .05, patch->fullframe)",78.6616171179476,81.48943219304776
+e044_m009_v4_boundary_head,m009_head_only,light_single,"m009_head_only 기반, 기법4 경계 보조 헤드 단독 (light: boundary=.08, edge_weight=.3)",78.66148440279757,81.438022990204
+e092_m016_v2_crop_mix,m016_aspp_w64_staged,light_single,"m016_aspp_w64_staged 기반, 기법2 크롭 믹스 단독 (light: uniform .7/복잡영역 .15/경계 .1/hard .05, patch->fullframe)",78.66143999091487,81.49174412559978
+e094_m016_v4_boundary_head,m016_aspp_w64_staged,light_single,"m016_aspp_w64_staged 기반, 기법4 경계 보조 헤드 단독 (light: boundary=.08, edge_weight=.3)",78.66134203574204,81.43775396283328
+e074_m006_v4_boundary_head,m006_ema999,light_single,"m006_ema999 기반, 기법4 경계 보조 헤드 단독 (light: boundary=.08, edge_weight=.3)",78.66058732301602,81.43777614801432
+e062_m008_v2_crop_mix,m008_decoder_only,light_single,"m008_decoder_only 기반, 기법2 크롭 믹스 단독 (light: uniform .7/복잡영역 .15/경계 .1/hard .05, patch->fullframe)",78.65633253156516,81.48813694604505
+e023_m063_v3_hires_branch,m063_aux_02,light_single,"m063_aux_02 기반, 기법3 고해상도 CNN 브랜치 단독 (light, DINOv3 제외)",78.65631098334771,81.45172592441807
+e027_m063_v7_texture_branch,m063_aux_02,light_single,"m063_aux_02 기반, 기법7 멀티스케일 텍스처 브랜치 단독 (light: ASPP류 컨텍스트만)",78.65609571723328,81.45139345373656
+e021_m063_v1_hires_decoder,m063_aux_02,light_single,"m063_aux_02 기반, 기법1 High-res decoder 단독 (light)",78.65582426155149,81.45140123951191
+e025_m063_v5_fullres_refine,m063_aux_02,light_single,"m063_aux_02 기반, 기법5 전체 해상도 리파인먼트 단독 (light)",78.65576679884293,81.45202581683189
+e097_m016_v7_texture_branch,m016_aspp_w64_staged,light_single,"m016_aspp_w64_staged 기반, 기법7 멀티스케일 텍스처 브랜치 단독 (light: ASPP류 컨텍스트만)",78.6527518133009,81.45058302966567
+e041_m009_v1_hires_decoder,m009_head_only,light_single,"m009_head_only 기반, 기법1 High-res decoder 단독 (light)",78.65269480830625,81.44901054046166
+e047_m009_v7_texture_branch,m009_head_only,light_single,"m009_head_only 기반, 기법7 멀티스케일 텍스처 브랜치 단독 (light: ASPP류 컨텍스트만)",78.65214283808348,81.4501374887947
+e028_m063_v8_complex_expert,m063_aux_02,light_single,"m063_aux_02 기반, 기법8 Complex-region expert 단독 (light)",78.65208741361116,81.44921655435508
+e072_m006_v2_crop_mix,m006_ema999,light_single,"m006_ema999 기반, 기법2 크롭 믹스 단독 (light: uniform .7/복잡영역 .15/경계 .1/hard .05, patch->fullframe)",78.65174701639083,81.4808577553512
+e073_m006_v3_hires_branch,m006_ema999,light_single,"m006_ema999 기반, 기법3 고해상도 CNN 브랜치 단독 (light, DINOv3 제외)",78.65168096972612,81.44818185968559
+e077_m006_v7_texture_branch,m006_ema999,light_single,"m006_ema999 기반, 기법7 멀티스케일 텍스처 브랜치 단독 (light: ASPP류 컨텍스트만)",78.6509379302273,81.44778494973633
+e071_m006_v1_hires_decoder,m006_ema999,light_single,"m006_ema999 기반, 기법1 High-res decoder 단독 (light)",78.65053892199431,81.44754098113093
+e075_m006_v5_fullres_refine,m006_ema999,light_single,"m006_ema999 기반, 기법5 전체 해상도 리파인먼트 단독 (light)",78.65044962348269,81.44724668127404
+e081_m062_v1_hires_decoder,m062_aux_01,light_single,"m062_aux_01 기반, 기법1 High-res decoder 단독 (light)",78.64756770317402,81.45197808606028
+e024_m063_v4_boundary_head,m063_aux_02,light_single,"m063_aux_02 기반, 기법4 경계 보조 헤드 단독 (light: boundary=.08, edge_weight=.3)",78.64709693224174,81.43191818472002
+e083_m062_v3_hires_branch,m062_aux_01,light_single,"m062_aux_01 기반, 기법3 고해상도 CNN 브랜치 단독 (light, DINOv3 제외)",78.64707407321572,81.45126311243985
+e048_m009_v8_complex_expert,m009_head_only,light_single,"m009_head_only 기반, 기법8 Complex-region expert 단독 (light)",78.64692668307399,81.44466344869853
+e087_m062_v7_texture_branch,m062_aux_01,light_single,"m062_aux_01 기반, 기법7 멀티스케일 텍스처 브랜치 단독 (light: ASPP류 컨텍스트만)",78.64674738076152,81.4515142433716
+e085_m062_v5_fullres_refine,m062_aux_01,light_single,"m062_aux_01 기반, 기법5 전체 해상도 리파인먼트 단독 (light)",78.64664357920597,81.45157536006207
+e098_m016_v8_complex_expert,m016_aspp_w64_staged,light_single,"m016_aspp_w64_staged 기반, 기법8 Complex-region expert 단독 (light)",78.64655874657473,81.44519370838432
+e078_m006_v8_complex_expert,m006_ema999,light_single,"m006_ema999 기반, 기법8 Complex-region expert 단독 (light)",78.6460759743176,81.44452084590074
+e084_m062_v4_boundary_head,m062_aux_01,light_single,"m062_aux_01 기반, 기법4 경계 보조 헤드 단독 (light: boundary=.08, edge_weight=.3)",78.64599288775831,81.43054952256408
+e088_m062_v8_complex_expert,m062_aux_01,light_single,"m062_aux_01 기반, 기법8 Complex-region expert 단독 (light)",78.6444226447535,81.45204378422696
+e068_m008_v8_complex_expert,m008_decoder_only,light_single,"m008_decoder_only 기반, 기법8 Complex-region expert 단독 (light)",78.64409643910238,81.44606689396487
+e045_m009_v5_fullres_refine,m009_head_only,light_single,"m009_head_only 기반, 기법5 전체 해상도 리파인먼트 단독 (light)",78.6374734269987,81.4373734230496
+e095_m016_v5_fullres_refine,m016_aspp_w64_staged,light_single,"m016_aspp_w64_staged 기반, 기법5 전체 해상도 리파인먼트 단독 (light)",78.63734370744645,81.43753315380437
+e093_m016_v3_hires_branch,m016_aspp_w64_staged,light_single,"m016_aspp_w64_staged 기반, 기법3 고해상도 CNN 브랜치 단독 (light, DINOv3 제외)",78.63718985584887,81.43744047632708
+e091_m016_v1_hires_decoder,m016_aspp_w64_staged,light_single,"m016_aspp_w64_staged 기반, 기법1 High-res decoder 단독 (light)",78.63670102400732,81.43669138698303
+e061_m008_v1_hires_decoder,m008_decoder_only,light_single,"m008_decoder_only 기반, 기법1 High-res decoder 단독 (light)",78.63616008212175,81.43971367620097
+e043_m009_v3_hires_branch,m009_head_only,light_single,"m009_head_only 기반, 기법3 고해상도 CNN 브랜치 단독 (light, DINOv3 제외)",78.63594693257184,81.43675474303139
+e067_m008_v7_texture_branch,m008_decoder_only,light_single,"m008_decoder_only 기반, 기법7 멀티스케일 텍스처 브랜치 단독 (light: ASPP류 컨텍스트만)",78.63506638025063,81.43924817500233
+e065_m008_v5_fullres_refine,m008_decoder_only,light_single,"m008_decoder_only 기반, 기법5 전체 해상도 리파인먼트 단독 (light)",78.63484990737048,81.4391130915355
+e063_m008_v3_hires_branch,m008_decoder_only,light_single,"m008_decoder_only 기반, 기법3 고해상도 CNN 브랜치 단독 (light, DINOv3 제외)",78.63451292024332,81.43848991509921
+e100_m016_v10_texture_combo,m016_aspp_w64_staged,heavy_combo,"m016_aspp_w64_staged 기반, 복잡 텍스처 집중 heavy 조합: 기법2+3+7+8 heavy 동시 적용 (patch->fullframe)",78.63408173590183,81.41860537383027
+e050_m009_v10_texture_combo,m009_head_only,heavy_combo,"m009_head_only 기반, 복잡 텍스처 집중 heavy 조합: 기법2+3+7+8 heavy 동시 적용 (patch->fullframe)",78.6337138964234,81.41649381636697
+e080_m006_v10_texture_combo,m006_ema999,heavy_combo,"m006_ema999 기반, 복잡 텍스처 집중 heavy 조합: 기법2+3+7+8 heavy 동시 적용 (patch->fullframe)",78.63357548903761,81.42016567182944
+e070_m008_v10_texture_combo,m008_decoder_only,heavy_combo,"m008_decoder_only 기반, 복잡 텍스처 집중 heavy 조합: 기법2+3+7+8 heavy 동시 적용 (patch->fullframe)",78.63349712838885,81.41960142513007
+e040_m085_v10_texture_combo,m085_local_contrast,heavy_combo,"m085_local_contrast 기반, 복잡 텍스처 집중 heavy 조합: 기법2+3+7+8 heavy 동시 적용 (patch->fullframe)",78.61955531023901,81.41731927476513
+e039_m085_v9_boundary_combo,m085_local_contrast,heavy_combo,"m085_local_contrast 기반, 경계 집중 heavy 조합: 기법1+4+5+6 heavy 동시 적용 + 기법2 light 믹스 (patch->fullframe)",78.61218668767583,81.43109261263977
+e099_m016_v9_boundary_combo,m016_aspp_w64_staged,heavy_combo,"m016_aspp_w64_staged 기반, 경계 집중 heavy 조합: 기법1+4+5+6 heavy 동시 적용 + 기법2 light 믹스 (patch->fullframe)",78.60904702262054,81.4188073021806
+e049_m009_v9_boundary_combo,m009_head_only,heavy_combo,"m009_head_only 기반, 경계 집중 heavy 조합: 기법1+4+5+6 heavy 동시 적용 + 기법2 light 믹스 (patch->fullframe)",78.60891130621037,81.41680631579149
+e069_m008_v9_boundary_combo,m008_decoder_only,heavy_combo,"m008_decoder_only 기반, 경계 집중 heavy 조합: 기법1+4+5+6 heavy 동시 적용 + 기법2 light 믹스 (patch->fullframe)",78.60551097470582,81.41522929764443
+e079_m006_v9_boundary_combo,m006_ema999,heavy_combo,"m006_ema999 기반, 경계 집중 heavy 조합: 기법1+4+5+6 heavy 동시 적용 + 기법2 light 믹스 (patch->fullframe)",78.60367303674067,81.41373662958875
+e009_m011_v9_boundary_combo,m011_seed2028_parent,heavy_combo,"m011_seed2028_parent 기반, 경계 집중 heavy 조합: 기법1+4+5+6 heavy 동시 적용 + 기법2 light 믹스 (patch->fullframe)",78.59284945326644,81.44069564264562
+e056_m012_v6_composition_head,m012_photo_parent,light_single,"m012_photo_parent 기반, 기법6 국소 상 조성 헤드 단독 (light, decoder feedback 없음)",78.56457987300138,81.25702319581218
+e026_m063_v6_composition_head,m063_aux_02,light_single,"m063_aux_02 기반, 기법6 국소 상 조성 헤드 단독 (light, decoder feedback 없음)",78.47761884115741,81.28655426707594
+e086_m062_v6_composition_head,m062_aux_01,light_single,"m062_aux_01 기반, 기법6 국소 상 조성 헤드 단독 (light, decoder feedback 없음)",78.44009034931607,81.2770659757386
+e036_m085_v6_composition_head,m085_local_contrast,light_single,"m085_local_contrast 기반, 기법6 국소 상 조성 헤드 단독 (light, decoder feedback 없음)",78.41636332871869,81.27029208266076
+e046_m009_v6_composition_head,m009_head_only,light_single,"m009_head_only 기반, 기법6 국소 상 조성 헤드 단독 (light, decoder feedback 없음)",78.40976571804076,81.2560273604936
+e076_m006_v6_composition_head,m006_ema999,light_single,"m006_ema999 기반, 기법6 국소 상 조성 헤드 단독 (light, decoder feedback 없음)",78.40959948189571,81.25752725529281
+e096_m016_v6_composition_head,m016_aspp_w64_staged,light_single,"m016_aspp_w64_staged 기반, 기법6 국소 상 조성 헤드 단독 (light, decoder feedback 없음)",78.40906231946863,81.25697139125339
+e066_m008_v6_composition_head,m008_decoder_only,light_single,"m008_decoder_only 기반, 기법6 국소 상 조성 헤드 단독 (light, decoder feedback 없음)",78.40828481524052,81.2573362320327
+e006_m011_v6_composition_head,m011_seed2028_parent,light_single,"m011_seed2028_parent 기반, 기법6 국소 상 조성 헤드 단독 (light, decoder feedback 없음)",77.86940899562953,81.33788940417483

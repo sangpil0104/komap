@@ -1,0 +1,44 @@
+HRNet validation:   0%|          | 0/20 [00:00<?, ?item/s]A117_step4_sample2: image mIoU zero=0.876884, skip=0.876884
+HRNet validation:   5%|▌         | 1/20 [00:14<04:28, 14.14s/item]A11_step1_sample4: image mIoU zero=0.721227, skip=0.721227
+A11_step2_sample4: image mIoU zero=0.766464, skip=0.766464
+A125_step1_sample4: image mIoU zero=0.796198, skip=0.796198
+HRNet validation:  20%|██        | 4/20 [00:31<01:59,  7.44s/item]A153_step3_sample3: image mIoU zero=0.725749, skip=0.725749
+A170_step4_sample3: image mIoU zero=0.860570, skip=0.860570
+HRNet validation:  30%|███       | 6/20 [00:46<01:43,  7.42s/item]HRNet validation:  30%|███       | 6/20 [01:00<01:43,  7.42s/item]A181_step1_sample1: image mIoU zero=0.786828, skip=0.786828
+HRNet validation:  35%|███▌      | 7/20 [01:02<02:02,  9.41s/item]A186_step2_sample2: image mIoU zero=0.788649, skip=0.788649
+HRNet validation:  40%|████      | 8/20 [01:14<02:01, 10.13s/item]A191_step4_sample3: image mIoU zero=0.835038, skip=0.835038
+HRNet validation:  45%|████▌     | 9/20 [01:30<02:07, 11.62s/item]A40_step3_sample3: image mIoU zero=0.826822, skip=0.826822
+HRNet validation:  50%|█████     | 10/20 [01:42<01:57, 11.78s/item]A42_step2_sample4: image mIoU zero=0.801277, skip=0.801277
+HRNet validation:  55%|█████▌    | 11/20 [01:54<01:47, 11.91s/item]A44_step4_sample3: image mIoU zero=0.894630, skip=0.894630
+HRNet validation:  60%|██████    | 12/20 [02:07<01:36, 12.01s/item]A55_step2_sample1: image mIoU zero=0.822648, skip=0.822648
+A59_step3_sample1: image mIoU zero=0.823738, skip=0.823738
+HRNet validation:  70%|███████   | 14/20 [02:18<00:55,  9.25s/item]A63_step1_sample4: image mIoU zero=0.829208, skip=0.829208
+A67_step1_sample1: image mIoU zero=0.747783, skip=0.747783
+A71_step2_sample1: image mIoU zero=0.400336, skip=0.400336
+A72_step4_sample4: image mIoU zero=0.858061, skip=0.858061
+HRNet validation:  90%|█████████ | 18/20 [02:29<00:10,  5.48s/item]A74_step3_sample4: image mIoU zero=0.747487, skip=0.747487
+HRNet validation:  90%|█████████ | 18/20 [02:40<00:10,  5.48s/item]A7_step1_sample4: image mIoU zero=0.814913, skip=0.814913
+HRNet validation: 100%|██████████| 20/20 [02:43<00:00,  6.04s/item]HRNet validation: 100%|██████████| 20/20 [02:43<00:00,  8.20s/item]
+{
+  "model": "Model336 HRNet-W48 + SMP U-Net++",
+  "split": "valid",
+  "images": 20,
+  "class_order": [
+    "Al",
+    "Al3Ni",
+    "Primary_Si",
+    "Eutectic_Si"
+  ],
+  "inference": {
+    "patch_size": 512,
+    "input_scale": 2.0,
+    "overlap": 170,
+    "tta": "8-way dihedral rotations and flips",
+    "downsample_antialias": false
+  },
+  "per_image_metrics": "/Data3/sppark/komap/experiments/model364_reproduction_gpu4567_v1/outputs/runs/model364_train_20261006T075724_689269Z/outputs/model351_model336_d4_tta/valid_eval_d4/valid_per_image.csv",
+  "probabilities": "/Data3/sppark/komap/experiments/model364_reproduction_gpu4567_v1/outputs/runs/model364_train_20261006T075724_689269Z/outputs/model351_model336_d4_tta/valid_eval_d4/valid_probabilities.npz",
+  "image_miou_empty_zero": 0.7862254209081555,
+  "image_miou_empty_skip": 0.7862254209081555,
+  "image_miou_empty_one": 0.7862254209081555
+}

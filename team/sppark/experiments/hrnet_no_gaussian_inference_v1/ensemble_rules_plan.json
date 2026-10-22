@@ -1,0 +1,458 @@
+[
+  {
+    "id": "ER0_arithmetic",
+    "contrast": "M01_gamma",
+    "change": {
+      "ensemble_rule": {
+        "kind": "arithmetic"
+      },
+      "members": [
+        "M01_gamma",
+        "M00_gamma"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ]
+    },
+    "aggregation": {
+      "kind": "arithmetic"
+    },
+    "members": [
+      "M01_gamma",
+      "M00_gamma"
+    ],
+    "weights": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "ER0_geometric",
+    "contrast": "ER0_arithmetic",
+    "change": {
+      "ensemble_rule": {
+        "kind": "geometric"
+      }
+    },
+    "aggregation": {
+      "kind": "geometric"
+    },
+    "members": [
+      "M01_gamma",
+      "M00_gamma"
+    ],
+    "weights": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "ER0_entropy",
+    "contrast": "ER0_arithmetic",
+    "change": {
+      "ensemble_rule": {
+        "kind": "entropy",
+        "strength": 2
+      }
+    },
+    "aggregation": {
+      "kind": "entropy",
+      "strength": 2
+    },
+    "members": [
+      "M01_gamma",
+      "M00_gamma"
+    ],
+    "weights": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "ER0_margin",
+    "contrast": "ER0_arithmetic",
+    "change": {
+      "ensemble_rule": {
+        "kind": "margin",
+        "strength": 2
+      }
+    },
+    "aggregation": {
+      "kind": "margin",
+      "strength": 2
+    },
+    "members": [
+      "M01_gamma",
+      "M00_gamma"
+    ],
+    "weights": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "ER0_margin_gate",
+    "contrast": "ER0_arithmetic",
+    "change": {
+      "ensemble_rule": {
+        "kind": "margin_gate",
+        "threshold": 0.25
+      }
+    },
+    "aggregation": {
+      "kind": "margin_gate",
+      "threshold": 0.25
+    },
+    "members": [
+      "M01_gamma",
+      "M00_gamma"
+    ],
+    "weights": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "ER1_arithmetic",
+    "contrast": "C640_d4_bicubic",
+    "change": {
+      "ensemble_rule": {
+        "kind": "arithmetic"
+      },
+      "members": [
+        "C640_d4_bicubic",
+        "S_input608"
+      ],
+      "weights": [
+        0.8,
+        0.2
+      ]
+    },
+    "aggregation": {
+      "kind": "arithmetic"
+    },
+    "members": [
+      "C640_d4_bicubic",
+      "S_input608"
+    ],
+    "weights": [
+      0.8,
+      0.2
+    ]
+  },
+  {
+    "id": "ER1_geometric",
+    "contrast": "ER1_arithmetic",
+    "change": {
+      "ensemble_rule": {
+        "kind": "geometric"
+      }
+    },
+    "aggregation": {
+      "kind": "geometric"
+    },
+    "members": [
+      "C640_d4_bicubic",
+      "S_input608"
+    ],
+    "weights": [
+      0.8,
+      0.2
+    ]
+  },
+  {
+    "id": "ER1_entropy",
+    "contrast": "ER1_arithmetic",
+    "change": {
+      "ensemble_rule": {
+        "kind": "entropy",
+        "strength": 2
+      }
+    },
+    "aggregation": {
+      "kind": "entropy",
+      "strength": 2
+    },
+    "members": [
+      "C640_d4_bicubic",
+      "S_input608"
+    ],
+    "weights": [
+      0.8,
+      0.2
+    ]
+  },
+  {
+    "id": "ER1_margin",
+    "contrast": "ER1_arithmetic",
+    "change": {
+      "ensemble_rule": {
+        "kind": "margin",
+        "strength": 2
+      }
+    },
+    "aggregation": {
+      "kind": "margin",
+      "strength": 2
+    },
+    "members": [
+      "C640_d4_bicubic",
+      "S_input608"
+    ],
+    "weights": [
+      0.8,
+      0.2
+    ]
+  },
+  {
+    "id": "ER1_margin_gate",
+    "contrast": "ER1_arithmetic",
+    "change": {
+      "ensemble_rule": {
+        "kind": "margin_gate",
+        "threshold": 0.25
+      }
+    },
+    "aggregation": {
+      "kind": "margin_gate",
+      "threshold": 0.25
+    },
+    "members": [
+      "C640_d4_bicubic",
+      "S_input608"
+    ],
+    "weights": [
+      0.8,
+      0.2
+    ]
+  },
+  {
+    "id": "ER2_arithmetic",
+    "contrast": "C640_d4_bicubic",
+    "change": {
+      "ensemble_rule": {
+        "kind": "arithmetic"
+      },
+      "members": [
+        "C640_d4_bicubic",
+        "S_input672"
+      ],
+      "weights": [
+        0.8,
+        0.2
+      ]
+    },
+    "aggregation": {
+      "kind": "arithmetic"
+    },
+    "members": [
+      "C640_d4_bicubic",
+      "S_input672"
+    ],
+    "weights": [
+      0.8,
+      0.2
+    ]
+  },
+  {
+    "id": "ER2_geometric",
+    "contrast": "ER2_arithmetic",
+    "change": {
+      "ensemble_rule": {
+        "kind": "geometric"
+      }
+    },
+    "aggregation": {
+      "kind": "geometric"
+    },
+    "members": [
+      "C640_d4_bicubic",
+      "S_input672"
+    ],
+    "weights": [
+      0.8,
+      0.2
+    ]
+  },
+  {
+    "id": "ER2_entropy",
+    "contrast": "ER2_arithmetic",
+    "change": {
+      "ensemble_rule": {
+        "kind": "entropy",
+        "strength": 2
+      }
+    },
+    "aggregation": {
+      "kind": "entropy",
+      "strength": 2
+    },
+    "members": [
+      "C640_d4_bicubic",
+      "S_input672"
+    ],
+    "weights": [
+      0.8,
+      0.2
+    ]
+  },
+  {
+    "id": "ER2_margin",
+    "contrast": "ER2_arithmetic",
+    "change": {
+      "ensemble_rule": {
+        "kind": "margin",
+        "strength": 2
+      }
+    },
+    "aggregation": {
+      "kind": "margin",
+      "strength": 2
+    },
+    "members": [
+      "C640_d4_bicubic",
+      "S_input672"
+    ],
+    "weights": [
+      0.8,
+      0.2
+    ]
+  },
+  {
+    "id": "ER2_margin_gate",
+    "contrast": "ER2_arithmetic",
+    "change": {
+      "ensemble_rule": {
+        "kind": "margin_gate",
+        "threshold": 0.25
+      }
+    },
+    "aggregation": {
+      "kind": "margin_gate",
+      "threshold": 0.25
+    },
+    "members": [
+      "C640_d4_bicubic",
+      "S_input672"
+    ],
+    "weights": [
+      0.8,
+      0.2
+    ]
+  },
+  {
+    "id": "ER3_arithmetic",
+    "contrast": "M01_gamma",
+    "change": {
+      "ensemble_rule": {
+        "kind": "arithmetic"
+      },
+      "members": [
+        "M01_gamma",
+        "C640_d4_bicubic"
+      ],
+      "weights": [
+        0.75,
+        0.25
+      ]
+    },
+    "aggregation": {
+      "kind": "arithmetic"
+    },
+    "members": [
+      "M01_gamma",
+      "C640_d4_bicubic"
+    ],
+    "weights": [
+      0.75,
+      0.25
+    ]
+  },
+  {
+    "id": "ER3_geometric",
+    "contrast": "ER3_arithmetic",
+    "change": {
+      "ensemble_rule": {
+        "kind": "geometric"
+      }
+    },
+    "aggregation": {
+      "kind": "geometric"
+    },
+    "members": [
+      "M01_gamma",
+      "C640_d4_bicubic"
+    ],
+    "weights": [
+      0.75,
+      0.25
+    ]
+  },
+  {
+    "id": "ER3_entropy",
+    "contrast": "ER3_arithmetic",
+    "change": {
+      "ensemble_rule": {
+        "kind": "entropy",
+        "strength": 2
+      }
+    },
+    "aggregation": {
+      "kind": "entropy",
+      "strength": 2
+    },
+    "members": [
+      "M01_gamma",
+      "C640_d4_bicubic"
+    ],
+    "weights": [
+      0.75,
+      0.25
+    ]
+  },
+  {
+    "id": "ER3_margin",
+    "contrast": "ER3_arithmetic",
+    "change": {
+      "ensemble_rule": {
+        "kind": "margin",
+        "strength": 2
+      }
+    },
+    "aggregation": {
+      "kind": "margin",
+      "strength": 2
+    },
+    "members": [
+      "M01_gamma",
+      "C640_d4_bicubic"
+    ],
+    "weights": [
+      0.75,
+      0.25
+    ]
+  },
+  {
+    "id": "ER3_margin_gate",
+    "contrast": "ER3_arithmetic",
+    "change": {
+      "ensemble_rule": {
+        "kind": "margin_gate",
+        "threshold": 0.25
+      }
+    },
+    "aggregation": {
+      "kind": "margin_gate",
+      "threshold": 0.25
+    },
+    "members": [
+      "M01_gamma",
+      "C640_d4_bicubic"
+    ],
+    "weights": [
+      0.75,
+      0.25
+    ]
+  }
+]

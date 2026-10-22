@@ -1,0 +1,151 @@
+{
+  "python": "/Data3/sppark/komap/experiments/seonghyeon_seed10_v1/.venv/bin/python",
+  "python_version": "3.11.16",
+  "packages": {
+    "torch": "2.7.1+cu128",
+    "torchvision": "0.22.1+cu128",
+    "segmentation-models-pytorch": "0.5.0",
+    "timm": "1.0.29",
+    "albumentations": "2.0.8",
+    "opencv-python-headless": "4.13.0.92",
+    "numpy": "2.4.6",
+    "Pillow": "12.3.0",
+    "tqdm": "4.70.1",
+    "PyYAML": "6.0.3",
+    "pytest": "9.1.1"
+  },
+  "source": "/Data3/sppark/komap/experiments/seonghyeon_seed10_99_v1/outputs/20260926T082111_741695Z/source",
+  "source_hashes": {
+    "runtime.py": "9d2aa782abfd8c672ce50d71dc3c77c401d9032482fdb888d261a20583883171",
+    "report.py": "ea2a9448b01712d4a481002cdec050b3561847da5ee6bb4b71a467d7499bc9a5",
+    "run.py": "45162ddac7175ac194320f80af84fd2f8905cb9cd9c105a6b4622448e1638900",
+    "comparison_layout.py": "67e6553650d44f9f161440d3d3c6065f2ce8b8e2d37434f81c00a57e4c8ffb74",
+    "train.py": "0943606c763d97f3a54b3556823e7d1eff87078107d4f5b56000e5de25bd983e",
+    "vendor/train.py": "b9a65aa2dda5444a8c04362c49e7adcb52dde2a0e329e6b15cf0d5314f3a9e9e",
+    "vendor/common.py": "92df2bbd1bfe593437d325970fc40771864f8a71578522980cc375f30b61dc11"
+  },
+  "input_hashes": {
+    "input/CODEX_START_PROMPT.md": "f243dc716ebf1a7fb668e63dadf0fd736ced44c280e22e5ac9bb00aa4b9c6ed7",
+    "input/README.md": "fc1e13652483ce3ddd926fa0c68ae8023a4aa6a38c088ae6ba85e0308e857aec",
+    "input/alphase_b4_codex_spec.md": "2c96926b0a7179764e79088bbef1e7407ec7be435921679525a546caecef7514",
+    "input/fixtures/a71_confusion.json": "3f710443f5141f49bbecba36a84f1cda28ae3f6edf2030bac2faff8217ec3a1c",
+    "input/reference_code/contract_reference.py": "526818c9cdd16643c1b34821024450274353054b0a2d7a55551adef90f40ec7e",
+    "input/reference_code/__init__.py": "04e4d37f602ce439d37360b0dabe9d646707b01b4ebda110d999232366c30e13",
+    "input/reference_code/test_contract_reference.py": "97476f41edd04dc22fd49c0b0131b89acf2d2973d94bbec0aaced6bc0dac4ad0",
+    "input/references/a71_error_diagnosis.md": "b142a68b413489adc05effe791feef657395315275acc94b9b46a6935fb4d826",
+    "input/references/phase_analysis_final.md": "348e735085acecb2801390b0a765fed16dc472ac05b1aa2d86c8c102daa62a5f"
+  },
+  "encoder_channels": [
+    3,
+    48,
+    32,
+    56,
+    160,
+    448
+  ],
+  "feature_shapes": [
+    [
+      1,
+      3,
+      64,
+      96
+    ],
+    [
+      1,
+      48,
+      32,
+      48
+    ],
+    [
+      1,
+      32,
+      16,
+      24
+    ],
+    [
+      1,
+      56,
+      8,
+      12
+    ],
+    [
+      1,
+      160,
+      4,
+      6
+    ],
+    [
+      1,
+      448,
+      2,
+      3
+    ]
+  ],
+  "decoder_output_shape": [
+    1,
+    16,
+    64,
+    96
+  ],
+  "decoder_repr": "UnetDecoder(\n  (center): Identity()\n  (blocks): ModuleList(\n    (0): UnetDecoderBlock(\n      (conv1): Conv2dReLU(\n        (0): Conv2d(608, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n        (2): ReLU(inplace=True)\n      )\n      (attention1): Attention(\n        (attention): Identity()\n      )\n      (conv2): Conv2dReLU(\n        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n        (2): ReLU(inplace=True)\n      )\n      (attention2): Attention(\n        (attention): Identity()\n      )\n    )\n    (1): UnetDecoderBlock(\n      (conv1): Conv2dReLU(\n        (0): Conv2d(312, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n        (2): ReLU(inplace=True)\n      )\n      (attention1): Attention(\n        (attention): Identity()\n      )\n      (conv2): Conv2dReLU(\n        (0): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n        (2): ReLU(inplace=True)\n      )\n      (attention2): Attention(\n        (attention): Identity()\n      )\n    )\n    (2): UnetDecoderBlock(\n      (conv1): Conv2dReLU(\n        (0): Conv2d(160, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n        (2): ReLU(inplace=True)\n      )\n      (attention1): Attention(\n        (attention): Identity()\n      )\n      (conv2): Conv2dReLU(\n        (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n        (2): ReLU(inplace=True)\n      )\n      (attention2): Attention(\n        (attention): Identity()\n      )\n    )\n    (3): UnetDecoderBlock(\n      (conv1): Conv2dReLU(\n        (0): Conv2d(112, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n        (2): ReLU(inplace=True)\n      )\n      (attention1): Attention(\n        (attention): Identity()\n      )\n      (conv2): Conv2dReLU(\n        (0): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n        (2): ReLU(inplace=True)\n      )\n      (attention2): Attention(\n        (attention): Identity()\n      )\n    )\n    (4): UnetDecoderBlock(\n      (conv1): Conv2dReLU(\n        (0): Conv2d(32, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n        (2): ReLU(inplace=True)\n      )\n      (attention1): Attention(\n        (attention): Identity()\n      )\n      (conv2): Conv2dReLU(\n        (0): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)\n        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)\n        (2): ReLU(inplace=True)\n      )\n      (attention2): Attention(\n        (attention): Identity()\n      )\n    )\n  )\n)",
+  "head_repr": "SegmentationHead(\n  (0): Conv2d(16, 4, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n  (1): Identity()\n  (2): Activation(\n    (activation): Identity()\n  )\n)",
+  "dataset_counts": {
+    "train": 70,
+    "valid": 20,
+    "test": 10
+  },
+  "dataset_hash": "1f409bf1fda79be013c7954b217af0b1c87b55964237b2d72370731c0ab1a318",
+  "training_ids_hash": "ad0a86958cdcf354774d045a4242c355b10387fd63c089616a954b2240869104",
+  "valid_ids_hash": "c209dbb6c371a5818e41db0f41cee665819cfff28064529114d4e40204dc8f63",
+  "shared_group_hints": [
+    "A125",
+    "A153",
+    "A181",
+    "A191",
+    "A40",
+    "A55",
+    "A7"
+  ],
+  "gpus": [
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4090",
+      "memory_bytes": 25261047808
+    },
+    {
+      "index": 1,
+      "name": "NVIDIA GeForce RTX 4090",
+      "memory_bytes": 25261047808
+    },
+    {
+      "index": 2,
+      "name": "NVIDIA GeForce RTX 4090",
+      "memory_bytes": 25261047808
+    },
+    {
+      "index": 3,
+      "name": "NVIDIA GeForce RTX 4090",
+      "memory_bytes": 25261047808
+    },
+    {
+      "index": 4,
+      "name": "NVIDIA GeForce RTX 4090",
+      "memory_bytes": 25261047808
+    },
+    {
+      "index": 5,
+      "name": "NVIDIA GeForce RTX 4090",
+      "memory_bytes": 25261047808
+    },
+    {
+      "index": 6,
+      "name": "NVIDIA GeForce RTX 4090",
+      "memory_bytes": 25261047808
+    },
+    {
+      "index": 7,
+      "name": "NVIDIA GeForce RTX 4090",
+      "memory_bytes": 25261047808
+    }
+  ]
+}

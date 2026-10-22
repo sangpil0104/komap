@@ -1,0 +1,49 @@
+{
+  "model": 386,
+  "scope": "synthetic transform-only check; does not test encoder/decoder feature stride or learned logits",
+  "chain": "native one-hot labels -> nearest 2x -> ideal one-hot probabilities -> bilinear 0.5x align_corners=False",
+  "cases": [
+    {
+      "seed": 1,
+      "native_shape": [
+        256,
+        256
+      ],
+      "native_pixels": 65536,
+      "argmax_mismatches": 0,
+      "non_one_hot_native_pixels": 0
+    },
+    {
+      "seed": 2,
+      "native_shape": [
+        256,
+        256
+      ],
+      "native_pixels": 65536,
+      "argmax_mismatches": 0,
+      "non_one_hot_native_pixels": 0
+    },
+    {
+      "seed": 3,
+      "native_shape": [
+        128,
+        256
+      ],
+      "native_pixels": 32768,
+      "argmax_mismatches": 0,
+      "non_one_hot_native_pixels": 0
+    },
+    {
+      "seed": 4,
+      "native_shape": [
+        255,
+        255
+      ],
+      "native_pixels": 65025,
+      "argmax_mismatches": 0,
+      "non_one_hot_native_pixels": 0
+    }
+  ],
+  "all_exact": true,
+  "interpretation_guard": "The pixel-resize round-trip itself adds no label loss under ideal one-hot predictions; this does not rule out learned feature-resolution or context limitations."
+}

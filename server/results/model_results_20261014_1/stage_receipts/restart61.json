@@ -1,0 +1,36 @@
+{
+  "name": "restart61",
+  "artifact": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/outputs/retrain_20261014_062959_1791959399643234660/R/restart61_pairwise_margin/best.pt",
+  "command": [
+    "/home/sppark/miniconda3/envs/komap/bin/python",
+    "-B",
+    "-u",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/outputs/retrain_20261014_062959_1791959399643234660/implementation/source/training/train_route/experiments/historical_scripts/pairwise_margin_finetune.py",
+    "--data-dir",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/data",
+    "--checkpoint",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/outputs/retrain_20261014_062959_1791959399643234660/R/restart51_aspp_768_finetune/best.pt",
+    "--output-dir",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/outputs/retrain_20261014_062959_1791959399643234660/R/restart61_pairwise_margin",
+    "--batch-size",
+    "1",
+    "--num-workers",
+    "2",
+    "--seed",
+    "42"
+  ],
+  "cwd": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/outputs/retrain_20261014_062959_1791959399643234660/implementation/source",
+  "env": {
+    "CUDA_VISIBLE_DEVICES": "GPU-2cbc38c2-5330-cfed-4e43-819c008330e7",
+    "PYTHONPATH": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/outputs/retrain_20261014_062959_1791959399643234660/implementation/source/training/train_route/experiments:/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/outputs/retrain_20261014_062959_1791959399643234660/implementation/source/training/train_route/experiments/historical_scripts",
+    "OMP_NUM_THREADS": "2"
+  },
+  "status": "done",
+  "started_at": "2026-10-14T15:46:11.541866+09:00",
+  "started_unix": 1791960371.5418875,
+  "log": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/outputs/retrain_20261014_062959_1791959399643234660/logs/restart61.log",
+  "returncode": 0,
+  "wall_seconds": 289.17652832437307,
+  "finished_at": "2026-10-14T15:51:00.718655+09:00",
+  "artifact_sha256": "568cc22a01c1f926aacd2d2d0e3259bb6d68cd1708b02a17665c487b065a5e40"
+}

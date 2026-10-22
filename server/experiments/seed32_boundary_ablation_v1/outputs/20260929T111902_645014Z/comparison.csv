@@ -1,0 +1,14 @@
+id,kind,contrast,image_miou,delta_percentage_points,result
+R00_seed32,eval,,0.7897654566541208,,/Data3/sppark/komap/results/model_results_0929_6/model_results_0929_6.md
+R01_no_tta,eval,R00_seed32,0.7872980502438904,-0.2467406410230355,/Data3/sppark/komap/results/model_results_0929_7/model_results_0929_7.md
+R02_bilinear_restore,eval,R00_seed32,0.7914780896901228,0.1712633036001998,/Data3/sppark/komap/results/model_results_0929_8/model_results_0929_8.md
+T00_control,train,,0.7806601198894978,,/Data3/sppark/komap/results/model_results_0929_190/model_results_0929_190.md
+T01_native_geometry,train,T00_control,0.7753827903063725,-0.5277329583125323,/Data3/sppark/komap/results/model_results_0929_533/model_results_0929_533.md
+T02_native_loss,train,T01_native_geometry,0.7767207813899114,0.13379910835389364,/Data3/sppark/komap/results/model_results_0929_534/model_results_0929_534.md
+T03_boundary_sampling,train,T01_native_geometry,0.775100485204476,-0.028230510189641844,/Data3/sppark/komap/results/model_results_0929_535/model_results_0929_535.md
+T04_boundary_weight,train,T01_native_geometry,0.7762627402396493,0.08799499332767802,/Data3/sppark/komap/results/model_results_0929_536/model_results_0929_536.md
+T05_detail_branch,train,T00_control,0.7802905886648644,-0.0369531224633346,/Data3/sppark/komap/results/model_results_0929_537/model_results_0929_537.md
+T06_no_gaussian,train,T00_control,0.7795546984872577,-0.11054214022401254,/Data3/sppark/komap/results/model_results_0929_538/model_results_0929_538.md
+T07_native_refiner,train,T02_native_loss,0.7787572230535705,0.20364416636591276,/Data3/sppark/komap/results/model_results_0929_539/model_results_0929_539.md
+T08_refiner_no_gray,train,T07_native_refiner,0.7784601012951329,-0.02971217584376573,/Data3/sppark/komap/results/model_results_0929_540/model_results_0929_540.md
+T09_bilinear_decoder,train,T00_control,0.781391631947425,0.07315120579272083,/Data3/sppark/komap/results/model_results_0929_541/model_results_0929_541.md

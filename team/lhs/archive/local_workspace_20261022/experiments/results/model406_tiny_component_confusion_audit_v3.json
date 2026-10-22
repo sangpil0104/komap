@@ -1,0 +1,663 @@
+{
+  "experiment": "Model406 native tiny-GT-component confusion secondary audit",
+  "scope": "fixed grouped train OOF only: 70 images / 59 specimen groups",
+  "metric": "native 8-connected GT components; per-pixel predicted-class confusion and component recall",
+  "area_bins_native_pixels": {
+    "1-3px": [
+      1,
+      4
+    ],
+    "4-15px": [
+      4,
+      16
+    ],
+    "16-63px": [
+      16,
+      64
+    ]
+  },
+  "target_classes": {
+    "1": "Al3Ni",
+    "3": "Eutectic_Si"
+  },
+  "paired_group_bootstrap_draws": 20000,
+  "paired_group_bootstrap_seed": 40603,
+  "descriptive_only_no_miou_gate_or_threshold_selection": true,
+  "official_valid_read": false,
+  "test_read": false,
+  "source_lock_sha256": "3cfd15afd61620787285feaf63f7bf32e1ee00b2a0f9f4036189dd08c6dc90d0",
+  "oof_lock_sha256": "21b3152353958adade3a3d1690b08c2e7567adea9bdd03fb1d41d9e76dec43c3",
+  "input_sha256": {
+    "outputs/model406_component_hardnegative_v3/candidate/fold1_oof/valid_probabilities.npz": "ddf9592b60853696337d1bc4794bc09e89543859a78d92b692dce90278098f28",
+    "outputs/model406_component_hardnegative_v3/control/fold1_oof/valid_probabilities.npz": "64a1007828c4fa78a2963cfbf94c14e78a792414de1213ee1b6c7c2049609bf9",
+    "data/train/masks/A118_step2_sample1_mask.png": "d09e568203a119414bcd19459cefbe96dd595b288850c0b60d15960aa4b24dab",
+    "data/train/masks/A138_step4_sample3_mask.png": "7c92d33645a3cbed978eaa6fe42a29b8b635979b134197529ec0c027af61a3f9",
+    "data/train/masks/A140_step4_sample2_mask.png": "516b5863fa4b60097320be56dd66010d64550df4aaf1e750f8d7c7ddce6c4a8c",
+    "data/train/masks/A155_step3_sample2_mask.png": "f28bb39cec5b5fc63a58cba89f29618fa01521bfc372c572007f1125b8855e7e",
+    "data/train/masks/A164_step1_sample2_mask.png": "73dc24306039e0c85289949ae80478bed121bd0fb07c856e96c13ff771a07a0c",
+    "data/train/masks/A164_step4_sample1_mask.png": "4bab8ff4491a95316b8da42f250e54a6192b9a3c3b27801316fceaf54c1c9183",
+    "data/train/masks/A16_step4_sample4_mask.png": "28326fe36f95a2e1b80adcdddc2eb99cacefb40d69a964d0889e0d75fafdcdda",
+    "data/train/masks/A200_step4_sample3_mask.png": "9cec89f1bef0ff472a8db56878c22154337b68bd8893d6f5844ab5639709493c",
+    "data/train/masks/A51_step4_sample4_mask.png": "55d3ef786a53d42402e868880fe51e70b1d96a7222be78830b47265ac4c27fa2",
+    "data/train/masks/A57_step1_sample3_mask.png": "61e363c0ee6f6644aceb9411fcb1105235ed89b3e7ac9a0675f26f23142ecf6c",
+    "data/train/masks/A64_step2_sample3_mask.png": "ac69845b829833c9f2636889eac7def92346962d67e8c1737517032046dc089b",
+    "data/train/masks/A69_step4_sample4_mask.png": "80d41898b4dadfcf15d596c6409f916003a50f94583f20cb0b2b5460e4d9e40f",
+    "data/train/masks/A7_step1_sample2_mask.png": "c484ec29f51bda56a6a1e922918ecec65bb40d6a4cdec00b01cf86d070356d89",
+    "data/train/masks/A7_step4_sample3_mask.png": "24b2b53b8bb634e1761d4e045f5308047c326237aca8299fe23e488394f264cc",
+    "data/train/masks/A87_step2_sample2_mask.png": "83e34acf5aa99c63134d2e7c3d59525f8f27dafc0cb7f3d9cd7443dd1021b548",
+    "data/train/masks/A8_step2_sample3_mask.png": "d1b41d050d8baadd9d838266b9f228c7f9d70fa5860e19653472d3fa09b69088",
+    "data/train/masks/A8_step3_sample3_mask.png": "b1aea239f2433c7fc91d9b2edce293994da2ad97154ba978a848ae8d71aeae1c",
+    "data/train/masks/A94_step4_sample2_mask.png": "44c99de80ead70a3cb3b05b5e8bf9cbda01e1415d4f02c9087b3092f30d7a0fd",
+    "outputs/model406_component_hardnegative_v3/candidate/fold2_oof/valid_probabilities.npz": "41b9cf8fcb6ad35730c185a3446443a92abc6844797eac457e8f6bc917af3f3c",
+    "outputs/model406_component_hardnegative_v3/control/fold2_oof/valid_probabilities.npz": "232cd18c4f1ba7ac55087dbf1d8ff8e002aa3b412128677a39111ea12a82a9c5",
+    "data/train/masks/A106_step4_sample1_mask.png": "eb81fb8de655ce3c30c292dcafd1a2616ebdd46e20cf911421c5838adf71321a",
+    "data/train/masks/A111_step1_sample2_mask.png": "9b814afc3d72a7458773f032711b69dce9fd1177d5076e7d884f0f1639938a58",
+    "data/train/masks/A111_step3_sample4_mask.png": "c08a4f2fa8d5c7375cb4fa9d802f92d41af644b7019dec969b90091cf2bdc87d",
+    "data/train/masks/A123_step1_sample1_mask.png": "7dd29738ab4f39a05322820460077daaaeea6c9af864356c8fdc8e35a7a91d6b",
+    "data/train/masks/A123_step4_sample2_mask.png": "fc15bf9cb29d0e1d1021c7748f2c9704e4f8c721e76a59a12bc98be5ff368eb5",
+    "data/train/masks/A139_step3_sample4_mask.png": "f3cfa487959925b6a4d5073a4fbd25754f3f0353d1980fef0206308c0e7611b1",
+    "data/train/masks/A139_step4_sample3_mask.png": "6dcaafd00ad6757984f6d9accb691aba5d1d7d67f3d6647602cb41e751ab4d1d",
+    "data/train/masks/A147_step4_sample4_mask.png": "9a09feaf5e664f077bcc848c9ac3391c092becd1f7d9889195f7010f20403d27",
+    "data/train/masks/A152_step2_sample1_mask.png": "d857d184ddff3b3ed5739e1d6cda84f8dd9b11a7e64de3636230cb0354f48031",
+    "data/train/masks/A15_step1_sample1_mask.png": "d5883f84db9158a9a7d6b8edac9a6b9f41be7897f2acfaa00a07db54719a1547",
+    "data/train/masks/A167_step3_sample4_mask.png": "ab6e88bd0cf86995078d1979898728c0e5af2dd4ad29e041c62403091077fb56",
+    "data/train/masks/A182_step4_sample3_mask.png": "2eb4a49d5ffee6f948c34b47d42cba2086eb3e617662d66b3ed323f8e9463973",
+    "data/train/masks/A21_step2_sample4_mask.png": "03b8dbaa0e5669708bd40cb5a43f347787b36e565f9a668df94ddb82cfdef50f",
+    "data/train/masks/A2_step4_sample1_mask.png": "8b94b37c197d94d16063ab98e53824da06aef8ba6117105aea06780f869371f5",
+    "data/train/masks/A39_step2_sample3_mask.png": "eb863ec019f70ec40778ac29287eed77bcea9798936fbcd697f1f0e15a8fbeeb",
+    "data/train/masks/A49_step2_sample2_mask.png": "d0980e1c2ebcfd9777f8555e535c3fbf1ca2f8d4dbbc2072e2e6467c2bea362e",
+    "data/train/masks/A61_step2_sample2_mask.png": "3a0abeb32bfe1fc8cae1d0008295b7bb3a6118d463e6827142f13f0f96b2870f",
+    "data/train/masks/A78_step4_sample1_mask.png": "37aea64a589c4c1c7b1d8959ddf69b9546d7c759c1207b1a7fc19e1138c4312b",
+    "outputs/model406_component_hardnegative_v3/candidate/fold3_oof/valid_probabilities.npz": "04c54aa82a2cdd4d08592c63931346671e0b5645ff3163de2ade05954cf5c082",
+    "outputs/model406_component_hardnegative_v3/control/fold3_oof/valid_probabilities.npz": "75712688da1ad855b8f0e7c11126fa7b3d986a57fc8b2822259d439fcf7a2fe8",
+    "data/train/masks/A108_step2_sample2_mask.png": "b234c8d5b408dc6109d36fa070039c17879e7ba420cf68ee482ea65ec487fd49",
+    "data/train/masks/A109_step1_sample3_mask.png": "70d86b9d7f63363262a4ab24958f14fb869a6885f1c7c478ca18fd4796077f14",
+    "data/train/masks/A130_step1_sample1_mask.png": "5d79d43f9ad87dd5ed904f2570a3fc13381b53f9abc5054bab77ae977d90dfc6",
+    "data/train/masks/A137_step4_sample2_mask.png": "d545725253e515cfd4260b0add4ca07d48c22fad65dcd3c88dcae59df349c45f",
+    "data/train/masks/A153_step1_sample4_mask.png": "6c92d52bbd213f368e671bc09290557cfe43b2be644f67faf0c337ff6dab7a1f",
+    "data/train/masks/A154_step2_sample3_mask.png": "34646cb2086f58342c07ec136dc728113c1e314d9a70a2957ffa0d4405f2a8e2",
+    "data/train/masks/A159_step4_sample4_mask.png": "46e77b42cb87829a70e0c63c77ce90c7226959f8915403a702e5bee275eb369e",
+    "data/train/masks/A187_step2_sample1_mask.png": "8e7919ef66598d795f895b8fa920174ae0d7008fdaef6961ae530cbfff05df83",
+    "data/train/masks/A187_step4_sample4_mask.png": "f073400613b958b84cd4c545d506cc02ad5115ba639c387a54d764cf85cce741",
+    "data/train/masks/A18_step2_sample1_mask.png": "73ccc11a6c888b58d1b54a47800679ce97f65084469e7b66a06ceb43eb3a9a70",
+    "data/train/masks/A191_step3_sample1_mask.png": "5913ba6531e7818ac9d53e7903dacb0b7bcd0ba686b0f7b758107998f7d217e4",
+    "data/train/masks/A191_step4_sample1_mask.png": "d9bda68a64c6350a841cfdb29e1933433b9271341deed6bcf2e18f83ce91495b",
+    "data/train/masks/A201_step3_sample1_mask.png": "fc3140aa01b296849eec6b5a71a88ca5150b6cf303ffaa3febed3f750425dc9f",
+    "data/train/masks/A201_step3_sample4_mask.png": "849ec291195a451aca342fec455bc43ffe7dda6412efc7abbeb27a57f210d185",
+    "data/train/masks/A222_step2_sample2_mask.png": "8967c3ede7e0cd195cbe3d9a8a227ff4dc5d8c5c76e0d378aedbe428f9dcd19b",
+    "data/train/masks/A55_step3_sample4_mask.png": "2a67d465f32ec4d5d18f5cbe26707ec9413621c31cc92d215a5c5cfc49beffe3",
+    "data/train/masks/A98_step2_sample4_mask.png": "f3e103a443bc9c744b97f458848a474101188677acf72616bfd93a425242cc22",
+    "outputs/model406_component_hardnegative_v3/candidate/fold4_oof/valid_probabilities.npz": "fcb4da846c5ef1b20cd9fb2da71c8dc6dcc68207b1abe5405a6286d20c3c7a6b",
+    "outputs/model406_component_hardnegative_v3/control/fold4_oof/valid_probabilities.npz": "4ddf2f350a0dcad88a7bec8fb7846c7c05b405f7d83b205d5d3d82c1acf08d95",
+    "data/train/masks/A101_step3_sample3_mask.png": "b9e9c4101788fe3829759072475ff1cd93ee8f0cc23f743aecafe177d96f5e15",
+    "data/train/masks/A121_step2_sample2_mask.png": "e30574993cca8e0b0cfd8ead910226dc597f8f811a31d0dbc854dc47f72d9364",
+    "data/train/masks/A125_step2_sample1_mask.png": "1ee9cc4da1916a27d8ad51684b009806e2f9503e0a24384ec65cd274080e3f83",
+    "data/train/masks/A146_step2_sample1_mask.png": "1119380aa7e90082b599359b65aafe25b57d7f113d0f69059a05a66fc66984c1",
+    "data/train/masks/A150_step4_sample1_mask.png": "613fa2873b806374a27353df97e9299c265596f275a384c83006d27ffd986b6b",
+    "data/train/masks/A156_step4_sample1_mask.png": "86d32434977ec5b898eed7bd6b07f62ba90a110fd58b07ab4ac9d0ae06c4849f",
+    "data/train/masks/A156_step4_sample2_mask.png": "c69294cb5bd5ff6aacb6b8a1cfad9d0156841c9f40fab2a0ca9233e5584ced6e",
+    "data/train/masks/A166_step4_sample3_mask.png": "eeaaca8cb0a415a76f4f1dc103810e24309d9ad4d25d7dff233838ff0bde9f5e",
+    "data/train/masks/A181_step4_sample4_mask.png": "165971724eb7cca69b23618aa41762a1f76eadc16462f9fea188afd4a00dfbae",
+    "data/train/masks/A188_step4_sample1_mask.png": "19797631b1e8644e23ab14b9896836f9311802f00326eae79a3933ac573b0af0",
+    "data/train/masks/A224_step1_sample2_mask.png": "cb664c26fa6f9271fe8877025c90c35c7ef2d78dfc64459efc1bc0dfd98d92ab",
+    "data/train/masks/A224_step4_sample2_mask.png": "d3d2b2cd031645c9e066bd80f009a71fde8acc04d030f681e252332534724df1",
+    "data/train/masks/A40_step3_sample4_mask.png": "802c3c94845250d4086c7fc23abb3d6cad3c143218e512947aa2fc7a0bcf65e6",
+    "data/train/masks/A66_step3_sample2_mask.png": "07f108e638c26f2760e58ee95838862ef73d06684a867fdea8cddb3a501e9462",
+    "data/train/masks/A83_step1_sample2_mask.png": "6911b34ee058ac03ce391d4401e626da9114d4be1974477a042393c25985e74e",
+    "data/train/masks/A89_step1_sample2_mask.png": "bb08649c239f2c6aa1cde29c9c7754c78cfb7b2947b5978b2e2bbbf300ab6f0c",
+    "data/train/masks/A96_step1_sample1_mask.png": "6cdb047587366c3160780416e6767e37ed0ca4165d41eb0f1e38b8ddf18e02bf"
+  },
+  "classes": {
+    "Al3Ni": {
+      "1-3px": {
+        "control_support": {
+          "images_with_components": 62,
+          "components": 7444,
+          "gt_pixels": 15751
+        },
+        "candidate_support": {
+          "images_with_components": 62,
+          "components": 7444,
+          "gt_pixels": 15751
+        },
+        "control": {
+          "predicted_class_pixel_percent": [
+            48.22550949146086,
+            39.21655767887753,
+            2.139546695447908,
+            10.418386134213701
+          ],
+          "mean_component_recall_percent": 39.16801003044958,
+          "zero_recall_component_percent": 52.45835572272971,
+          "lt50_recall_component_percent": 56.810854379365935,
+          "predicted_class_order": [
+            "Al",
+            "Al3Ni",
+            "Primary Si",
+            "Eutectic Si"
+          ]
+        },
+        "candidate": {
+          "predicted_class_pixel_percent": [
+            46.130404418767064,
+            40.835502507777285,
+            2.1268490889467335,
+            10.90724398450892
+          ],
+          "mean_component_recall_percent": 40.83154218162279,
+          "zero_recall_component_percent": 50.7791509940892,
+          "lt50_recall_component_percent": 55.252552391187535,
+          "predicted_class_order": [
+            "Al",
+            "Al3Ni",
+            "Primary Si",
+            "Eutectic Si"
+          ]
+        },
+        "candidate_vs_control": {
+          "predicted_class_pixel_percent": {
+            "candidate_minus_control": [
+              -2.095105072693798,
+              1.6189448288997568,
+              -0.012697606501174352,
+              0.48885785029521855
+            ],
+            "paired_group_bootstrap_95ci": [
+              [
+                -2.5018919297734916,
+                1.209471366300464,
+                -0.03133353581295898,
+                0.2871376036502301
+              ],
+              [
+                -1.7601876286452762,
+                2.0748987377232555,
+                0.0,
+                0.7094497089556988
+              ]
+            ]
+          },
+          "mean_component_recall_percent": {
+            "candidate_minus_control": 1.6635321511732073,
+            "paired_group_bootstrap_95ci": [
+              1.2527415170403209,
+              2.0713499279028253
+            ]
+          },
+          "zero_recall_component_percent": {
+            "candidate_minus_control": -1.6792047286405136,
+            "paired_group_bootstrap_95ci": [
+              -2.2303551081629727,
+              -1.0517723169936417
+            ]
+          },
+          "lt50_recall_component_percent": {
+            "candidate_minus_control": -1.5583019881783997,
+            "paired_group_bootstrap_95ci": [
+              -2.0389531983979468,
+              -1.0571588644625693
+            ]
+          }
+        }
+      },
+      "4-15px": {
+        "control_support": {
+          "images_with_components": 70,
+          "components": 29790,
+          "gt_pixels": 263879
+        },
+        "candidate_support": {
+          "images_with_components": 70,
+          "components": 29790,
+          "gt_pixels": 263879
+        },
+        "control": {
+          "predicted_class_pixel_percent": [
+            36.02181302794084,
+            49.46736951405758,
+            2.3874578878955885,
+            12.123359570105995
+          ],
+          "mean_component_recall_percent": 48.25440318139212,
+          "zero_recall_component_percent": 29.365558912386707,
+          "lt50_recall_component_percent": 44.35045317220544,
+          "predicted_class_order": [
+            "Al",
+            "Al3Ni",
+            "Primary Si",
+            "Eutectic Si"
+          ]
+        },
+        "candidate": {
+          "predicted_class_pixel_percent": [
+            34.68597349542783,
+            50.56560014248955,
+            2.357519923904517,
+            12.390906438178105
+          ],
+          "mean_component_recall_percent": 49.52826279311679,
+          "zero_recall_component_percent": 28.17052702249077,
+          "lt50_recall_component_percent": 43.00100704934542,
+          "predicted_class_order": [
+            "Al",
+            "Al3Ni",
+            "Primary Si",
+            "Eutectic Si"
+          ]
+        },
+        "candidate_vs_control": {
+          "predicted_class_pixel_percent": {
+            "candidate_minus_control": [
+              -1.3358395325130061,
+              1.0982306284319705,
+              -0.029937963991071737,
+              0.2675468680721096
+            ],
+            "paired_group_bootstrap_95ci": [
+              [
+                -1.499659906444358,
+                0.9318544816544281,
+                -0.04676787566024219,
+                0.20160799140528035
+              ],
+              [
+                -1.160398008356673,
+                1.2512926000194649,
+                -0.01604867318887566,
+                0.3318715954675081
+              ]
+            ]
+          },
+          "mean_component_recall_percent": {
+            "candidate_minus_control": 1.2738596117246672,
+            "paired_group_bootstrap_95ci": [
+              1.072045186956622,
+              1.4597145871091155
+            ]
+          },
+          "zero_recall_component_percent": {
+            "candidate_minus_control": -1.1950318898959367,
+            "paired_group_bootstrap_95ci": [
+              -1.4319270955229668,
+              -0.9591656700807315
+            ]
+          },
+          "lt50_recall_component_percent": {
+            "candidate_minus_control": -1.349446122860023,
+            "paired_group_bootstrap_95ci": [
+              -1.5956233650804266,
+              -1.0883136029828726
+            ]
+          }
+        }
+      },
+      "16-63px": {
+        "control_support": {
+          "images_with_components": 70,
+          "components": 29108,
+          "gt_pixels": 930110
+        },
+        "candidate_support": {
+          "images_with_components": 70,
+          "components": 29108,
+          "gt_pixels": 930110
+        },
+        "control": {
+          "predicted_class_pixel_percent": [
+            22.514541290815064,
+            62.1398544258206,
+            2.088892711614755,
+            13.256711571749578
+          ],
+          "mean_component_recall_percent": 60.26349457113104,
+          "zero_recall_component_percent": 12.996427099079291,
+          "lt50_recall_component_percent": 30.225367596537033,
+          "predicted_class_order": [
+            "Al",
+            "Al3Ni",
+            "Primary Si",
+            "Eutectic Si"
+          ]
+        },
+        "candidate": {
+          "predicted_class_pixel_percent": [
+            22.10319209555859,
+            62.48723269290729,
+            2.075130898495877,
+            13.334444313038242
+          ],
+          "mean_component_recall_percent": 60.664136460953905,
+          "zero_recall_component_percent": 12.56012092895424,
+          "lt50_recall_component_percent": 29.730658238285006,
+          "predicted_class_order": [
+            "Al",
+            "Al3Ni",
+            "Primary Si",
+            "Eutectic Si"
+          ]
+        },
+        "candidate_vs_control": {
+          "predicted_class_pixel_percent": {
+            "candidate_minus_control": [
+              -0.4113491952564736,
+              0.3473782670866896,
+              -0.013761813118878141,
+              0.07773274128866348
+            ],
+            "paired_group_bootstrap_95ci": [
+              [
+                -0.4633930284137964,
+                0.28605708471181207,
+                -0.026967681874565698,
+                0.03342973655779633
+              ],
+              [
+                -0.35806439524584455,
+                0.4117612488688371,
+                -0.00011017705868569386,
+                0.1241324688908948
+              ]
+            ]
+          },
+          "mean_component_recall_percent": {
+            "candidate_minus_control": 0.4006418898228645,
+            "paired_group_bootstrap_95ci": [
+              0.33560123915328505,
+              0.4696827397298623
+            ]
+          },
+          "zero_recall_component_percent": {
+            "candidate_minus_control": -0.4363061701250519,
+            "paired_group_bootstrap_95ci": [
+              -0.5793261367064275,
+              -0.31803916414803274
+            ]
+          },
+          "lt50_recall_component_percent": {
+            "candidate_minus_control": -0.49470935825202744,
+            "paired_group_bootstrap_95ci": [
+              -0.6293121340092946,
+              -0.3581454142357287
+            ]
+          }
+        }
+      }
+    },
+    "Eutectic_Si": {
+      "1-3px": {
+        "control_support": {
+          "images_with_components": 57,
+          "components": 2151,
+          "gt_pixels": 4479
+        },
+        "candidate_support": {
+          "images_with_components": 57,
+          "components": 2151,
+          "gt_pixels": 4479
+        },
+        "control": {
+          "predicted_class_pixel_percent": [
+            19.42397856664434,
+            34.65059164992186,
+            0.24559053360125027,
+            45.679839249832554
+          ],
+          "mean_component_recall_percent": 43.196962653029594,
+          "zero_recall_component_percent": 49.651324965132495,
+          "lt50_recall_component_percent": 53.27754532775453,
+          "predicted_class_order": [
+            "Al",
+            "Al3Ni",
+            "Primary Si",
+            "Eutectic Si"
+          ]
+        },
+        "candidate": {
+          "predicted_class_pixel_percent": [
+            17.526233534271043,
+            33.04308997544095,
+            0.24559053360125027,
+            49.18508595668676
+          ],
+          "mean_component_recall_percent": 46.7844413451108,
+          "zero_recall_component_percent": 45.83914458391446,
+          "lt50_recall_component_percent": 49.37238493723849,
+          "predicted_class_order": [
+            "Al",
+            "Al3Ni",
+            "Primary Si",
+            "Eutectic Si"
+          ]
+        },
+        "candidate_vs_control": {
+          "predicted_class_pixel_percent": {
+            "candidate_minus_control": [
+              -1.8977450323732974,
+              -1.6075016744809076,
+              0.0,
+              3.5052467068542086
+            ],
+            "paired_group_bootstrap_95ci": [
+              [
+                -2.279897455251449,
+                -2.1985145423639563,
+                0.0,
+                2.2866235225308835
+              ],
+              [
+                -1.373083871201295,
+                -0.6172839506172847,
+                0.0,
+                4.320990713210732
+              ]
+            ]
+          },
+          "mean_component_recall_percent": {
+            "candidate_minus_control": 3.5874786920812056,
+            "paired_group_bootstrap_95ci": [
+              2.1367382346562565,
+              4.59231078127913
+            ]
+          },
+          "zero_recall_component_percent": {
+            "candidate_minus_control": -3.8121803812180346,
+            "paired_group_bootstrap_95ci": [
+              -4.7361427243373955,
+              -2.422354875454012
+            ]
+          },
+          "lt50_recall_component_percent": {
+            "candidate_minus_control": -3.9051603905160377,
+            "paired_group_bootstrap_95ci": [
+              -5.021470957129147,
+              -2.220363370501497
+            ]
+          }
+        }
+      },
+      "4-15px": {
+        "control_support": {
+          "images_with_components": 68,
+          "components": 12918,
+          "gt_pixels": 125037
+        },
+        "candidate_support": {
+          "images_with_components": 68,
+          "components": 12918,
+          "gt_pixels": 125037
+        },
+        "control": {
+          "predicted_class_pixel_percent": [
+            12.162000047985796,
+            36.13730335820597,
+            0.3319017570799043,
+            51.36879483672833
+          ],
+          "mean_component_recall_percent": 50.166079748638964,
+          "zero_recall_component_percent": 33.72813128967332,
+          "lt50_recall_component_percent": 43.3039170150178,
+          "predicted_class_order": [
+            "Al",
+            "Al3Ni",
+            "Primary Si",
+            "Eutectic Si"
+          ]
+        },
+        "candidate": {
+          "predicted_class_pixel_percent": [
+            11.730127882146885,
+            34.786503195054266,
+            0.32390412437918376,
+            53.15946479841967
+          ],
+          "mean_component_recall_percent": 52.08404893089053,
+          "zero_recall_component_percent": 31.12710945966868,
+          "lt50_recall_component_percent": 41.23703359653197,
+          "predicted_class_order": [
+            "Al",
+            "Al3Ni",
+            "Primary Si",
+            "Eutectic Si"
+          ]
+        },
+        "candidate_vs_control": {
+          "predicted_class_pixel_percent": {
+            "candidate_minus_control": [
+              -0.43187216583891086,
+              -1.3508001631517033,
+              -0.00799763270072057,
+              1.7906699616913428
+            ],
+            "paired_group_bootstrap_95ci": [
+              [
+                -0.5251482055342808,
+                -1.6837029970102115,
+                -0.023627137115099832,
+                1.446178483778314
+              ],
+              [
+                -0.34431592195853195,
+                -1.0474979732121412,
+                0.0034235855802911756,
+                2.159039447761732
+              ]
+            ]
+          },
+          "mean_component_recall_percent": {
+            "candidate_minus_control": 1.9179691822515679,
+            "paired_group_bootstrap_95ci": [
+              1.5650591985074205,
+              2.311619419284032
+            ]
+          },
+          "zero_recall_component_percent": {
+            "candidate_minus_control": -2.6010218300046404,
+            "paired_group_bootstrap_95ci": [
+              -3.2542758085798558,
+              -2.0445838130824527
+            ]
+          },
+          "lt50_recall_component_percent": {
+            "candidate_minus_control": -2.06688341848583,
+            "paired_group_bootstrap_95ci": [
+              -2.566421021950273,
+              -1.6428937696645312
+            ]
+          }
+        }
+      },
+      "16-63px": {
+        "control_support": {
+          "images_with_components": 70,
+          "components": 28476,
+          "gt_pixels": 967065
+        },
+        "candidate_support": {
+          "images_with_components": 70,
+          "components": 28476,
+          "gt_pixels": 967065
+        },
+        "control": {
+          "predicted_class_pixel_percent": [
+            10.635479517922787,
+            21.71394890726063,
+            0.5072047897504304,
+            67.14336678506615
+          ],
+          "mean_component_recall_percent": 65.3023800862786,
+          "zero_recall_component_percent": 15.434049726085124,
+          "lt50_recall_component_percent": 25.906026127265065,
+          "predicted_class_order": [
+            "Al",
+            "Al3Ni",
+            "Primary Si",
+            "Eutectic Si"
+          ]
+        },
+        "candidate": {
+          "predicted_class_pixel_percent": [
+            10.478613123213021,
+            21.513755538665965,
+            0.5149602146701617,
+            67.49267112345085
+          ],
+          "mean_component_recall_percent": 65.75932182794504,
+          "zero_recall_component_percent": 14.794915016153954,
+          "lt50_recall_component_percent": 25.43896614693075,
+          "predicted_class_order": [
+            "Al",
+            "Al3Ni",
+            "Primary Si",
+            "Eutectic Si"
+          ]
+        },
+        "candidate_vs_control": {
+          "predicted_class_pixel_percent": {
+            "candidate_minus_control": [
+              -0.15686639470976615,
+              -0.20019336859466463,
+              0.007755424919731357,
+              0.3493043383846981
+            ],
+            "paired_group_bootstrap_95ci": [
+              [
+                -0.18517030023095143,
+                -0.2830491943372131,
+                0.0031777255599375344,
+                0.2618960321502737
+              ],
+              [
+                -0.12615339002741044,
+                -0.12176164946854658,
+                0.01289733773289072,
+                0.44051120534636773
+              ]
+            ]
+          },
+          "mean_component_recall_percent": {
+            "candidate_minus_control": 0.45694174166644075,
+            "paired_group_bootstrap_95ci": [
+              0.3613285188156549,
+              0.5546844997765671
+            ]
+          },
+          "zero_recall_component_percent": {
+            "candidate_minus_control": -0.6391347099311702,
+            "paired_group_bootstrap_95ci": [
+              -0.783750194011706,
+              -0.5009625282267469
+            ]
+          },
+          "lt50_recall_component_percent": {
+            "candidate_minus_control": -0.46705998033431584,
+            "paired_group_bootstrap_95ci": [
+              -0.5929904903039465,
+              -0.34179272636385105
+            ]
+          }
+        }
+      }
+    }
+  },
+  "created_at_utc": "2026-10-05T19:30:49.723569Z"
+}

@@ -1,0 +1,644 @@
+[preflight] 10/100 elapsed=1.7s remaining~15.2s
+[preflight] 20/100 elapsed=3.6s remaining~14.5s
+[preflight] 30/100 elapsed=5.2s remaining~12.2s
+[preflight] 40/100 elapsed=6.2s remaining~9.4s
+[preflight] 50/100 elapsed=7.3s remaining~7.3s
+[preflight] 60/100 elapsed=8.0s remaining~5.3s
+[preflight] 70/100 elapsed=8.5s remaining~3.6s
+[preflight] 80/100 elapsed=9.4s remaining~2.3s
+[preflight] 90/100 elapsed=10.0s remaining~1.1s
+[preflight] 100/100 elapsed=10.2s remaining~0.0s
+SUITE=/Data3/sppark/komap/experiments/selfsup_unet_v1/outputs/suite_20260924T113719_442712Z
+Order: A supervised/eval -> B SSL -> B finetune/eval -> C continuation/eval
+/home/sppark/miniconda3/envs/komap/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/home/sppark/miniconda3/envs/komap/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/home/sppark/miniconda3/envs/komap/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/home/sppark/miniconda3/envs/komap/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/home/sppark/miniconda3/envs/komap/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/home/sppark/miniconda3/envs/komap/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[A_supervised] task=seg updates=4000 compute_budget=None world=6 effective_batch=12
+[A_supervised] 20/4000 loss=1.83216 elapsed=4.9s remaining~981.0s finish~2026-09-24T11:53:46+00:00 suite_elapsed=16.6s suite_total_estimate~2969.5s suite_finish~2026-09-24T12:26:38+00:00 (evaluation time not measured yet)
+[A_supervised] 40/4000 loss=1.63637 elapsed=7.8s remaining~776.0s finish~2026-09-24T11:50:24+00:00 suite_elapsed=19.5s suite_total_estimate~2363.2s suite_finish~2026-09-24T12:16:32+00:00 (evaluation time not measured yet)
+[A_supervised] 60/4000 loss=1.41560 elapsed=10.6s remaining~695.8s finish~2026-09-24T11:49:07+00:00 suite_elapsed=22.2s suite_total_estimate~2130.8s suite_finish~2026-09-24T12:12:39+00:00 (evaluation time not measured yet)
+[A_supervised] 80/4000 loss=1.21166 elapsed=13.3s remaining~653.9s finish~2026-09-24T11:48:28+00:00 suite_elapsed=25.0s suite_total_estimate~2013.4s suite_finish~2026-09-24T12:10:42+00:00 (evaluation time not measured yet)
+[A_supervised] 100/4000 loss=1.10898 elapsed=16.3s remaining~635.8s finish~2026-09-24T11:48:12+00:00 suite_elapsed=28.0s suite_total_estimate~1967.8s suite_finish~2026-09-24T12:09:57+00:00 (evaluation time not measured yet)
+[A_supervised] 120/4000 loss=1.01531 elapsed=19.0s remaining~613.3s finish~2026-09-24T11:47:53+00:00 suite_elapsed=30.6s suite_total_estimate~1908.4s suite_finish~2026-09-24T12:08:57+00:00 (evaluation time not measured yet)
+[A_supervised] 140/4000 loss=0.95895 elapsed=21.9s remaining~603.6s finish~2026-09-24T11:47:46+00:00 suite_elapsed=33.5s suite_total_estimate~1888.0s suite_finish~2026-09-24T12:08:37+00:00 (evaluation time not measured yet)
+[A_supervised] 160/4000 loss=0.78411 elapsed=24.7s remaining~592.7s finish~2026-09-24T11:47:38+00:00 suite_elapsed=36.3s suite_total_estimate~1863.8s suite_finish~2026-09-24T12:08:13+00:00 (evaluation time not measured yet)
+[A_supervised] 180/4000 loss=0.82784 elapsed=28.0s remaining~594.6s finish~2026-09-24T11:47:43+00:00 suite_elapsed=39.7s suite_total_estimate~1879.5s suite_finish~2026-09-24T12:08:28+00:00 (evaluation time not measured yet)
+[A_supervised] 200/4000 loss=0.80292 elapsed=31.0s remaining~589.3s finish~2026-09-24T11:47:41+00:00 suite_elapsed=42.7s suite_total_estimate~1872.7s suite_finish~2026-09-24T12:08:21+00:00 (evaluation time not measured yet)
+[A_supervised] 220/4000 loss=0.76536 elapsed=34.0s remaining~584.4s finish~2026-09-24T11:47:39+00:00 suite_elapsed=45.7s suite_total_estimate~1866.8s suite_finish~2026-09-24T12:08:16+00:00 (evaluation time not measured yet)
+[A_supervised] 240/4000 loss=0.70027 elapsed=36.9s remaining~577.4s finish~2026-09-24T11:47:35+00:00 suite_elapsed=48.5s suite_total_estimate~1854.4s suite_finish~2026-09-24T12:08:03+00:00 (evaluation time not measured yet)
+[A_supervised] 260/4000 loss=0.72828 elapsed=39.7s remaining~571.4s finish~2026-09-24T11:47:32+00:00 suite_elapsed=51.4s suite_total_estimate~1845.1s suite_finish~2026-09-24T12:07:54+00:00 (evaluation time not measured yet)
+[A_supervised] 280/4000 loss=0.62985 elapsed=42.7s remaining~567.4s finish~2026-09-24T11:47:30+00:00 suite_elapsed=54.4s suite_total_estimate~1842.0s suite_finish~2026-09-24T12:07:51+00:00 (evaluation time not measured yet)
+[A_supervised] 300/4000 loss=0.75692 elapsed=45.6s remaining~562.0s finish~2026-09-24T11:47:28+00:00 suite_elapsed=57.2s suite_total_estimate~1834.5s suite_finish~2026-09-24T12:07:43+00:00 (evaluation time not measured yet)
+[A_supervised] 320/4000 loss=0.56450 elapsed=48.6s remaining~559.0s finish~2026-09-24T11:47:28+00:00 suite_elapsed=60.3s suite_total_estimate~1834.4s suite_finish~2026-09-24T12:07:43+00:00 (evaluation time not measured yet)
+[A_supervised] 340/4000 loss=0.61487 elapsed=51.5s remaining~554.4s finish~2026-09-24T11:47:26+00:00 suite_elapsed=63.1s suite_total_estimate~1829.3s suite_finish~2026-09-24T12:07:38+00:00 (evaluation time not measured yet)
+[A_supervised] 360/4000 loss=0.55185 elapsed=53.9s remaining~545.3s finish~2026-09-24T11:47:20+00:00 suite_elapsed=65.6s suite_total_estimate~1809.4s suite_finish~2026-09-24T12:07:18+00:00 (evaluation time not measured yet)
+[A_supervised] 380/4000 loss=0.57690 elapsed=56.8s remaining~540.9s finish~2026-09-24T11:47:18+00:00 suite_elapsed=68.4s suite_total_estimate~1804.8s suite_finish~2026-09-24T12:07:13+00:00 (evaluation time not measured yet)
+[A_supervised] 400/4000 loss=0.57592 elapsed=59.7s remaining~537.0s finish~2026-09-24T11:47:17+00:00 suite_elapsed=71.3s suite_total_estimate~1801.7s suite_finish~2026-09-24T12:07:10+00:00 (evaluation time not measured yet)
+[A_supervised] 420/4000 loss=0.52762 elapsed=62.3s remaining~531.2s finish~2026-09-24T11:47:14+00:00 suite_elapsed=74.0s suite_total_estimate~1792.2s suite_finish~2026-09-24T12:07:01+00:00 (evaluation time not measured yet)
+[A_supervised] 440/4000 loss=0.54728 elapsed=64.8s remaining~524.3s finish~2026-09-24T11:47:09+00:00 suite_elapsed=76.5s suite_total_estimate~1779.0s suite_finish~2026-09-24T12:06:48+00:00 (evaluation time not measured yet)
+[A_supervised] 460/4000 loss=0.52721 elapsed=67.7s remaining~520.9s finish~2026-09-24T11:47:09+00:00 suite_elapsed=79.3s suite_total_estimate~1777.4s suite_finish~2026-09-24T12:06:46+00:00 (evaluation time not measured yet)
+[A_supervised] 480/4000 loss=0.46800 elapsed=70.5s remaining~517.0s finish~2026-09-24T11:47:08+00:00 suite_elapsed=82.1s suite_total_estimate~1774.0s suite_finish~2026-09-24T12:06:43+00:00 (evaluation time not measured yet)
+[A_supervised] 500/4000 loss=0.48049 elapsed=73.0s remaining~511.0s finish~2026-09-24T11:47:04+00:00 suite_elapsed=84.7s suite_total_estimate~1763.8s suite_finish~2026-09-24T12:06:32+00:00 (evaluation time not measured yet)
+[A_supervised] 520/4000 loss=0.48420 elapsed=75.8s remaining~507.0s finish~2026-09-24T11:47:03+00:00 suite_elapsed=87.4s suite_total_estimate~1759.8s suite_finish~2026-09-24T12:06:29+00:00 (evaluation time not measured yet)
+[A_supervised] 540/4000 loss=0.50312 elapsed=78.3s remaining~501.5s finish~2026-09-24T11:47:00+00:00 suite_elapsed=89.9s suite_total_estimate~1751.0s suite_finish~2026-09-24T12:06:20+00:00 (evaluation time not measured yet)
+[A_supervised] 560/4000 loss=0.48098 elapsed=81.0s remaining~497.6s finish~2026-09-24T11:46:59+00:00 suite_elapsed=92.7s suite_total_estimate~1747.5s suite_finish~2026-09-24T12:06:16+00:00 (evaluation time not measured yet)
+[A_supervised] 580/4000 loss=0.45071 elapsed=83.7s remaining~493.7s finish~2026-09-24T11:46:58+00:00 suite_elapsed=95.4s suite_total_estimate~1743.8s suite_finish~2026-09-24T12:06:13+00:00 (evaluation time not measured yet)
+[A_supervised] 600/4000 loss=0.56689 elapsed=86.6s remaining~490.7s finish~2026-09-24T11:46:58+00:00 suite_elapsed=98.3s suite_total_estimate~1743.7s suite_finish~2026-09-24T12:06:12+00:00 (evaluation time not measured yet)
+[A_supervised] 620/4000 loss=0.49333 elapsed=89.5s remaining~488.0s finish~2026-09-24T11:46:58+00:00 suite_elapsed=101.2s suite_total_estimate~1744.3s suite_finish~2026-09-24T12:06:13+00:00 (evaluation time not measured yet)
+[A_supervised] 640/4000 loss=0.42039 elapsed=92.4s remaining~485.2s finish~2026-09-24T11:46:58+00:00 suite_elapsed=104.1s suite_total_estimate~1744.5s suite_finish~2026-09-24T12:06:13+00:00 (evaluation time not measured yet)
+[A_supervised] 660/4000 loss=0.43053 elapsed=95.4s remaining~482.8s finish~2026-09-24T11:46:59+00:00 suite_elapsed=107.1s suite_total_estimate~1746.4s suite_finish~2026-09-24T12:06:15+00:00 (evaluation time not measured yet)
+[A_supervised] 680/4000 loss=0.49688 elapsed=98.1s remaining~478.9s finish~2026-09-24T11:46:57+00:00 suite_elapsed=109.7s suite_total_estimate~1742.8s suite_finish~2026-09-24T12:06:12+00:00 (evaluation time not measured yet)
+[A_supervised] 700/4000 loss=0.44446 elapsed=100.9s remaining~475.5s finish~2026-09-24T11:46:57+00:00 suite_elapsed=112.5s suite_total_estimate~1740.6s suite_finish~2026-09-24T12:06:09+00:00 (evaluation time not measured yet)
+[A_supervised] 720/4000 loss=0.41037 elapsed=103.7s remaining~472.5s finish~2026-09-24T11:46:57+00:00 suite_elapsed=115.4s suite_total_estimate~1740.3s suite_finish~2026-09-24T12:06:09+00:00 (evaluation time not measured yet)
+[A_supervised] 740/4000 loss=0.48954 elapsed=106.1s remaining~467.3s finish~2026-09-24T11:46:54+00:00 suite_elapsed=117.7s suite_total_estimate~1731.7s suite_finish~2026-09-24T12:06:00+00:00 (evaluation time not measured yet)
+[A_supervised] 760/4000 loss=0.39535 elapsed=108.8s remaining~463.6s finish~2026-09-24T11:46:53+00:00 suite_elapsed=120.4s suite_total_estimate~1728.8s suite_finish~2026-09-24T12:05:58+00:00 (evaluation time not measured yet)
+[A_supervised] 780/4000 loss=0.36712 elapsed=111.7s remaining~461.3s finish~2026-09-24T11:46:53+00:00 suite_elapsed=123.4s suite_total_estimate~1730.7s suite_finish~2026-09-24T12:05:59+00:00 (evaluation time not measured yet)
+[A_supervised] 800/4000 loss=0.39279 elapsed=114.4s remaining~457.6s finish~2026-09-24T11:46:52+00:00 suite_elapsed=126.1s suite_total_estimate~1727.8s suite_finish~2026-09-24T12:05:56+00:00 (evaluation time not measured yet)
+[A_supervised] 820/4000 loss=0.45354 elapsed=116.8s remaining~452.9s finish~2026-09-24T11:46:50+00:00 suite_elapsed=128.4s suite_total_estimate~1720.8s suite_finish~2026-09-24T12:05:49+00:00 (evaluation time not measured yet)
+[A_supervised] 840/4000 loss=0.43648 elapsed=119.6s remaining~450.0s finish~2026-09-24T11:46:50+00:00 suite_elapsed=131.3s suite_total_estimate~1720.6s suite_finish~2026-09-24T12:05:49+00:00 (evaluation time not measured yet)
+[A_supervised] 860/4000 loss=0.41625 elapsed=121.9s remaining~445.2s finish~2026-09-24T11:46:47+00:00 suite_elapsed=133.6s suite_total_estimate~1712.9s suite_finish~2026-09-24T12:05:42+00:00 (evaluation time not measured yet)
+[A_supervised] 880/4000 loss=0.40138 elapsed=124.4s remaining~441.0s finish~2026-09-24T11:46:46+00:00 suite_elapsed=136.0s suite_total_estimate~1707.8s suite_finish~2026-09-24T12:05:37+00:00 (evaluation time not measured yet)
+[A_supervised] 900/4000 loss=0.33668 elapsed=127.0s remaining~437.5s finish~2026-09-24T11:46:45+00:00 suite_elapsed=138.7s suite_total_estimate~1705.3s suite_finish~2026-09-24T12:05:34+00:00 (evaluation time not measured yet)
+[A_supervised] 920/4000 loss=0.38054 elapsed=129.8s remaining~434.7s finish~2026-09-24T11:46:45+00:00 suite_elapsed=141.5s suite_total_estimate~1705.2s suite_finish~2026-09-24T12:05:34+00:00 (evaluation time not measured yet)
+[A_supervised] 940/4000 loss=0.39746 elapsed=132.3s remaining~430.8s finish~2026-09-24T11:46:44+00:00 suite_elapsed=144.0s suite_total_estimate~1701.1s suite_finish~2026-09-24T12:05:30+00:00 (evaluation time not measured yet)
+[A_supervised] 960/4000 loss=0.35684 elapsed=134.8s remaining~426.7s finish~2026-09-24T11:46:42+00:00 suite_elapsed=146.4s suite_total_estimate~1696.1s suite_finish~2026-09-24T12:05:25+00:00 (evaluation time not measured yet)
+[A_supervised] 980/4000 loss=0.39584 elapsed=137.5s remaining~423.7s finish~2026-09-24T11:46:42+00:00 suite_elapsed=149.1s suite_total_estimate~1695.3s suite_finish~2026-09-24T12:05:24+00:00 (evaluation time not measured yet)
+[A_supervised] 1000/4000 loss=0.46979 elapsed=140.1s remaining~420.3s finish~2026-09-24T11:46:41+00:00 suite_elapsed=151.8s suite_total_estimate~1692.9s suite_finish~2026-09-24T12:05:22+00:00 (evaluation time not measured yet)
+[A_supervised] 1020/4000 loss=0.40000 elapsed=143.0s remaining~417.9s finish~2026-09-24T11:46:41+00:00 suite_elapsed=154.7s suite_total_estimate~1694.5s suite_finish~2026-09-24T12:05:23+00:00 (evaluation time not measured yet)
+[A_supervised] 1040/4000 loss=0.39560 elapsed=145.8s remaining~415.0s finish~2026-09-24T11:46:41+00:00 suite_elapsed=157.5s suite_total_estimate~1694.1s suite_finish~2026-09-24T12:05:23+00:00 (evaluation time not measured yet)
+[A_supervised] 1060/4000 loss=0.36768 elapsed=148.6s remaining~412.2s finish~2026-09-24T11:46:41+00:00 suite_elapsed=160.3s suite_total_estimate~1694.2s suite_finish~2026-09-24T12:05:23+00:00 (evaluation time not measured yet)
+[A_supervised] 1080/4000 loss=0.33381 elapsed=151.4s remaining~409.5s finish~2026-09-24T11:46:41+00:00 suite_elapsed=163.1s suite_total_estimate~1694.4s suite_finish~2026-09-24T12:05:23+00:00 (evaluation time not measured yet)
+[A_supervised] 1100/4000 loss=0.35868 elapsed=154.3s remaining~406.7s finish~2026-09-24T11:46:41+00:00 suite_elapsed=165.9s suite_total_estimate~1694.5s suite_finish~2026-09-24T12:05:23+00:00 (evaluation time not measured yet)
+[A_supervised] 1120/4000 loss=0.35942 elapsed=157.1s remaining~404.0s finish~2026-09-24T11:46:41+00:00 suite_elapsed=168.7s suite_total_estimate~1694.8s suite_finish~2026-09-24T12:05:24+00:00 (evaluation time not measured yet)
+[A_supervised] 1140/4000 loss=0.32331 elapsed=159.5s remaining~400.2s finish~2026-09-24T11:46:40+00:00 suite_elapsed=171.2s suite_total_estimate~1690.8s suite_finish~2026-09-24T12:05:19+00:00 (evaluation time not measured yet)
+[A_supervised] 1160/4000 loss=0.40791 elapsed=162.5s remaining~397.8s finish~2026-09-24T11:46:41+00:00 suite_elapsed=174.1s suite_total_estimate~1692.6s suite_finish~2026-09-24T12:05:21+00:00 (evaluation time not measured yet)
+[A_supervised] 1180/4000 loss=0.38870 elapsed=165.3s remaining~395.1s finish~2026-09-24T11:46:41+00:00 suite_elapsed=177.0s suite_total_estimate~1693.0s suite_finish~2026-09-24T12:05:22+00:00 (evaluation time not measured yet)
+[A_supervised] 1200/4000 loss=0.36287 elapsed=167.8s remaining~391.6s finish~2026-09-24T11:46:40+00:00 suite_elapsed=179.5s suite_total_estimate~1689.8s suite_finish~2026-09-24T12:05:19+00:00 (evaluation time not measured yet)
+[A_supervised] 1220/4000 loss=0.32663 elapsed=170.6s remaining~388.7s finish~2026-09-24T11:46:40+00:00 suite_elapsed=182.2s suite_total_estimate~1689.5s suite_finish~2026-09-24T12:05:18+00:00 (evaluation time not measured yet)
+[A_supervised] 1240/4000 loss=0.27853 elapsed=173.6s remaining~386.3s finish~2026-09-24T11:46:40+00:00 suite_elapsed=185.2s suite_total_estimate~1691.2s suite_finish~2026-09-24T12:05:20+00:00 (evaluation time not measured yet)
+[A_supervised] 1260/4000 loss=0.33420 elapsed=176.4s remaining~383.6s finish~2026-09-24T11:46:40+00:00 suite_elapsed=188.1s suite_total_estimate~1691.8s suite_finish~2026-09-24T12:05:20+00:00 (evaluation time not measured yet)
+[A_supervised] 1280/4000 loss=0.40067 elapsed=179.5s remaining~381.4s finish~2026-09-24T11:46:41+00:00 suite_elapsed=191.1s suite_total_estimate~1694.3s suite_finish~2026-09-24T12:05:23+00:00 (evaluation time not measured yet)
+[A_supervised] 1300/4000 loss=0.44779 elapsed=182.2s remaining~378.5s finish~2026-09-24T11:46:41+00:00 suite_elapsed=193.9s suite_total_estimate~1693.8s suite_finish~2026-09-24T12:05:23+00:00 (evaluation time not measured yet)
+[A_supervised] 1320/4000 loss=0.40604 elapsed=184.8s remaining~375.1s finish~2026-09-24T11:46:40+00:00 suite_elapsed=196.4s suite_total_estimate~1691.4s suite_finish~2026-09-24T12:05:20+00:00 (evaluation time not measured yet)
+[A_supervised] 1340/4000 loss=0.37726 elapsed=187.1s remaining~371.3s finish~2026-09-24T11:46:39+00:00 suite_elapsed=198.7s suite_total_estimate~1686.7s suite_finish~2026-09-24T12:05:15+00:00 (evaluation time not measured yet)
+[A_supervised] 1360/4000 loss=0.38950 elapsed=189.7s remaining~368.3s finish~2026-09-24T11:46:38+00:00 suite_elapsed=201.4s suite_total_estimate~1685.7s suite_finish~2026-09-24T12:05:14+00:00 (evaluation time not measured yet)
+[A_supervised] 1380/4000 loss=0.36100 elapsed=192.1s remaining~364.7s finish~2026-09-24T11:46:37+00:00 suite_elapsed=203.8s suite_total_estimate~1682.3s suite_finish~2026-09-24T12:05:11+00:00 (evaluation time not measured yet)
+[A_supervised] 1400/4000 loss=0.38795 elapsed=194.5s remaining~361.3s finish~2026-09-24T11:46:36+00:00 suite_elapsed=206.2s suite_total_estimate~1679.0s suite_finish~2026-09-24T12:05:08+00:00 (evaluation time not measured yet)
+[A_supervised] 1420/4000 loss=0.42091 elapsed=197.4s remaining~358.6s finish~2026-09-24T11:46:36+00:00 suite_elapsed=209.0s suite_total_estimate~1679.5s suite_finish~2026-09-24T12:05:08+00:00 (evaluation time not measured yet)
+[A_supervised] 1440/4000 loss=0.33415 elapsed=199.9s remaining~355.4s finish~2026-09-24T11:46:36+00:00 suite_elapsed=211.6s suite_total_estimate~1677.6s suite_finish~2026-09-24T12:05:06+00:00 (evaluation time not measured yet)
+[A_supervised] 1460/4000 loss=0.34052 elapsed=202.3s remaining~351.9s finish~2026-09-24T11:46:35+00:00 suite_elapsed=213.9s suite_total_estimate~1674.2s suite_finish~2026-09-24T12:05:03+00:00 (evaluation time not measured yet)
+[A_supervised] 1480/4000 loss=0.33613 elapsed=205.1s remaining~349.3s finish~2026-09-24T11:46:35+00:00 suite_elapsed=216.8s suite_total_estimate~1675.0s suite_finish~2026-09-24T12:05:04+00:00 (evaluation time not measured yet)
+[A_supervised] 1500/4000 loss=0.30509 elapsed=207.4s remaining~345.7s finish~2026-09-24T11:46:34+00:00 suite_elapsed=219.1s suite_total_estimate~1671.1s suite_finish~2026-09-24T12:05:00+00:00 (evaluation time not measured yet)
+[A_supervised] 1520/4000 loss=0.41250 elapsed=209.7s remaining~342.1s finish~2026-09-24T11:46:32+00:00 suite_elapsed=221.3s suite_total_estimate~1666.9s suite_finish~2026-09-24T12:04:56+00:00 (evaluation time not measured yet)
+[A_supervised] 1540/4000 loss=0.35370 elapsed=212.0s remaining~338.6s finish~2026-09-24T11:46:31+00:00 suite_elapsed=223.6s suite_total_estimate~1663.4s suite_finish~2026-09-24T12:04:52+00:00 (evaluation time not measured yet)
+[A_supervised] 1560/4000 loss=0.32071 elapsed=214.3s remaining~335.2s finish~2026-09-24T11:46:30+00:00 suite_elapsed=226.0s suite_total_estimate~1660.2s suite_finish~2026-09-24T12:04:49+00:00 (evaluation time not measured yet)
+[A_supervised] 1580/4000 loss=0.34134 elapsed=216.7s remaining~331.9s finish~2026-09-24T11:46:29+00:00 suite_elapsed=228.3s suite_total_estimate~1657.3s suite_finish~2026-09-24T12:04:46+00:00 (evaluation time not measured yet)
+[A_supervised] 1600/4000 loss=0.34897 elapsed=219.0s remaining~328.5s finish~2026-09-24T11:46:28+00:00 suite_elapsed=230.6s suite_total_estimate~1654.1s suite_finish~2026-09-24T12:04:43+00:00 (evaluation time not measured yet)
+[A_supervised] 1620/4000 loss=0.34147 elapsed=221.3s remaining~325.2s finish~2026-09-24T11:46:27+00:00 suite_elapsed=233.0s suite_total_estimate~1651.1s suite_finish~2026-09-24T12:04:40+00:00 (evaluation time not measured yet)
+[A_supervised] 1640/4000 loss=0.36673 elapsed=224.0s remaining~322.4s finish~2026-09-24T11:46:27+00:00 suite_elapsed=235.7s suite_total_estimate~1651.0s suite_finish~2026-09-24T12:04:40+00:00 (evaluation time not measured yet)
+[A_supervised] 1660/4000 loss=0.37733 elapsed=226.4s remaining~319.1s finish~2026-09-24T11:46:26+00:00 suite_elapsed=238.0s suite_total_estimate~1648.1s suite_finish~2026-09-24T12:04:37+00:00 (evaluation time not measured yet)
+[A_supervised] 1680/4000 loss=0.32284 elapsed=228.8s remaining~316.0s finish~2026-09-24T11:46:25+00:00 suite_elapsed=240.5s suite_total_estimate~1646.0s suite_finish~2026-09-24T12:04:35+00:00 (evaluation time not measured yet)
+[A_supervised] 1700/4000 loss=0.33224 elapsed=231.1s remaining~312.6s finish~2026-09-24T11:46:24+00:00 suite_elapsed=242.7s suite_total_estimate~1642.7s suite_finish~2026-09-24T12:04:31+00:00 (evaluation time not measured yet)
+[A_supervised] 1720/4000 loss=0.39257 elapsed=233.4s remaining~309.4s finish~2026-09-24T11:46:23+00:00 suite_elapsed=245.0s suite_total_estimate~1639.9s suite_finish~2026-09-24T12:04:29+00:00 (evaluation time not measured yet)
+[A_supervised] 1740/4000 loss=0.32536 elapsed=235.6s remaining~306.0s finish~2026-09-24T11:46:22+00:00 suite_elapsed=247.3s suite_total_estimate~1636.6s suite_finish~2026-09-24T12:04:25+00:00 (evaluation time not measured yet)
+[A_supervised] 1760/4000 loss=0.35630 elapsed=238.0s remaining~302.8s finish~2026-09-24T11:46:21+00:00 suite_elapsed=249.6s suite_total_estimate~1634.1s suite_finish~2026-09-24T12:04:23+00:00 (evaluation time not measured yet)
+[A_supervised] 1780/4000 loss=0.32727 elapsed=240.2s remaining~299.6s finish~2026-09-24T11:46:20+00:00 suite_elapsed=251.8s suite_total_estimate~1630.8s suite_finish~2026-09-24T12:04:20+00:00 (evaluation time not measured yet)
+[A_supervised] 1800/4000 loss=0.34066 elapsed=242.6s remaining~296.5s finish~2026-09-24T11:46:19+00:00 suite_elapsed=254.2s suite_total_estimate~1628.9s suite_finish~2026-09-24T12:04:18+00:00 (evaluation time not measured yet)
+[A_supervised] 1820/4000 loss=0.32253 elapsed=244.9s remaining~293.4s finish~2026-09-24T11:46:19+00:00 suite_elapsed=256.6s suite_total_estimate~1626.5s suite_finish~2026-09-24T12:04:15+00:00 (evaluation time not measured yet)
+[A_supervised] 1840/4000 loss=0.33560 elapsed=247.4s remaining~290.4s finish~2026-09-24T11:46:18+00:00 suite_elapsed=259.0s suite_total_estimate~1625.1s suite_finish~2026-09-24T12:04:14+00:00 (evaluation time not measured yet)
+[A_supervised] 1860/4000 loss=0.29899 elapsed=249.7s remaining~287.3s finish~2026-09-24T11:46:17+00:00 suite_elapsed=261.3s suite_total_estimate~1622.4s suite_finish~2026-09-24T12:04:11+00:00 (evaluation time not measured yet)
+[A_supervised] 1880/4000 loss=0.30675 elapsed=252.0s remaining~284.1s finish~2026-09-24T11:46:16+00:00 suite_elapsed=263.6s suite_total_estimate~1620.0s suite_finish~2026-09-24T12:04:09+00:00 (evaluation time not measured yet)
+[A_supervised] 1900/4000 loss=0.31563 elapsed=254.4s remaining~281.1s finish~2026-09-24T11:46:16+00:00 suite_elapsed=266.0s suite_total_estimate~1618.2s suite_finish~2026-09-24T12:04:07+00:00 (evaluation time not measured yet)
+[A_supervised] 1920/4000 loss=0.43109 elapsed=256.7s remaining~278.1s finish~2026-09-24T11:46:15+00:00 suite_elapsed=268.3s suite_total_estimate~1615.9s suite_finish~2026-09-24T12:04:05+00:00 (evaluation time not measured yet)
+[A_supervised] 1940/4000 loss=0.29971 elapsed=259.0s remaining~275.0s finish~2026-09-24T11:46:14+00:00 suite_elapsed=270.7s suite_total_estimate~1613.7s suite_finish~2026-09-24T12:04:02+00:00 (evaluation time not measured yet)
+[A_supervised] 1960/4000 loss=0.28855 elapsed=261.2s remaining~271.8s finish~2026-09-24T11:46:13+00:00 suite_elapsed=272.8s suite_total_estimate~1610.7s suite_finish~2026-09-24T12:03:59+00:00 (evaluation time not measured yet)
+[A_supervised] 1980/4000 loss=0.34149 elapsed=263.5s remaining~268.8s finish~2026-09-24T11:46:13+00:00 suite_elapsed=275.2s suite_total_estimate~1608.7s suite_finish~2026-09-24T12:03:57+00:00 (evaluation time not measured yet)
+[A_supervised] 2000/4000 loss=0.32540 elapsed=265.9s remaining~265.9s finish~2026-09-24T11:46:12+00:00 suite_elapsed=277.6s suite_total_estimate~1607.3s suite_finish~2026-09-24T12:03:56+00:00 (evaluation time not measured yet)
+[A_supervised] 2020/4000 loss=0.36903 elapsed=268.5s remaining~263.2s finish~2026-09-24T11:46:12+00:00 suite_elapsed=280.1s suite_total_estimate~1606.5s suite_finish~2026-09-24T12:03:55+00:00 (evaluation time not measured yet)
+[A_supervised] 2040/4000 loss=0.33678 elapsed=270.8s remaining~260.2s finish~2026-09-24T11:46:11+00:00 suite_elapsed=282.4s suite_total_estimate~1604.4s suite_finish~2026-09-24T12:03:53+00:00 (evaluation time not measured yet)
+[A_supervised] 2060/4000 loss=0.26917 elapsed=273.6s remaining~257.6s finish~2026-09-24T11:46:12+00:00 suite_elapsed=285.2s suite_total_estimate~1605.4s suite_finish~2026-09-24T12:03:54+00:00 (evaluation time not measured yet)
+[A_supervised] 2080/4000 loss=0.28978 elapsed=276.1s remaining~254.9s finish~2026-09-24T11:46:11+00:00 suite_elapsed=287.8s suite_total_estimate~1604.7s suite_finish~2026-09-24T12:03:53+00:00 (evaluation time not measured yet)
+[A_supervised] 2100/4000 loss=0.34318 elapsed=278.8s remaining~252.3s finish~2026-09-24T11:46:11+00:00 suite_elapsed=290.5s suite_total_estimate~1604.9s suite_finish~2026-09-24T12:03:54+00:00 (evaluation time not measured yet)
+[A_supervised] 2120/4000 loss=0.32370 elapsed=281.4s remaining~249.5s finish~2026-09-24T11:46:11+00:00 suite_elapsed=293.0s suite_total_estimate~1604.4s suite_finish~2026-09-24T12:03:53+00:00 (evaluation time not measured yet)
+[A_supervised] 2140/4000 loss=0.31775 elapsed=284.3s remaining~247.1s finish~2026-09-24T11:46:12+00:00 suite_elapsed=296.0s suite_total_estimate~1606.0s suite_finish~2026-09-24T12:03:55+00:00 (evaluation time not measured yet)
+[A_supervised] 2160/4000 loss=0.32418 elapsed=286.6s remaining~244.1s finish~2026-09-24T11:46:11+00:00 suite_elapsed=298.2s suite_total_estimate~1603.6s suite_finish~2026-09-24T12:03:52+00:00 (evaluation time not measured yet)
+[A_supervised] 2180/4000 loss=0.37548 elapsed=288.9s remaining~241.2s finish~2026-09-24T11:46:10+00:00 suite_elapsed=300.5s suite_total_estimate~1601.7s suite_finish~2026-09-24T12:03:50+00:00 (evaluation time not measured yet)
+[A_supervised] 2200/4000 loss=0.31247 elapsed=291.1s remaining~238.2s finish~2026-09-24T11:46:10+00:00 suite_elapsed=302.8s suite_total_estimate~1599.7s suite_finish~2026-09-24T12:03:48+00:00 (evaluation time not measured yet)
+[A_supervised] 2220/4000 loss=0.35757 elapsed=293.4s remaining~235.3s finish~2026-09-24T11:46:09+00:00 suite_elapsed=305.1s suite_total_estimate~1597.7s suite_finish~2026-09-24T12:03:46+00:00 (evaluation time not measured yet)
+[A_supervised] 2240/4000 loss=0.33522 elapsed=295.7s remaining~232.4s finish~2026-09-24T11:46:08+00:00 suite_elapsed=307.4s suite_total_estimate~1596.0s suite_finish~2026-09-24T12:03:45+00:00 (evaluation time not measured yet)
+[A_supervised] 2260/4000 loss=0.32974 elapsed=298.0s remaining~229.5s finish~2026-09-24T11:46:08+00:00 suite_elapsed=309.7s suite_total_estimate~1594.1s suite_finish~2026-09-24T12:03:43+00:00 (evaluation time not measured yet)
+[A_supervised] 2280/4000 loss=0.38863 elapsed=300.2s remaining~226.5s finish~2026-09-24T11:46:07+00:00 suite_elapsed=311.8s suite_total_estimate~1591.6s suite_finish~2026-09-24T12:03:40+00:00 (evaluation time not measured yet)
+[A_supervised] 2300/4000 loss=0.32205 elapsed=302.6s remaining~223.6s finish~2026-09-24T11:46:07+00:00 suite_elapsed=314.2s suite_total_estimate~1590.2s suite_finish~2026-09-24T12:03:39+00:00 (evaluation time not measured yet)
+[A_supervised] 2320/4000 loss=0.33984 elapsed=304.8s remaining~220.7s finish~2026-09-24T11:46:06+00:00 suite_elapsed=316.5s suite_total_estimate~1588.3s suite_finish~2026-09-24T12:03:37+00:00 (evaluation time not measured yet)
+[A_supervised] 2340/4000 loss=0.33280 elapsed=307.1s remaining~217.9s finish~2026-09-24T11:46:05+00:00 suite_elapsed=318.8s suite_total_estimate~1586.7s suite_finish~2026-09-24T12:03:35+00:00 (evaluation time not measured yet)
+[A_supervised] 2360/4000 loss=0.34681 elapsed=309.4s remaining~215.0s finish~2026-09-24T11:46:05+00:00 suite_elapsed=321.1s suite_total_estimate~1585.1s suite_finish~2026-09-24T12:03:34+00:00 (evaluation time not measured yet)
+[A_supervised] 2380/4000 loss=0.30363 elapsed=311.8s remaining~212.2s finish~2026-09-24T11:46:04+00:00 suite_elapsed=323.4s suite_total_estimate~1583.7s suite_finish~2026-09-24T12:03:32+00:00 (evaluation time not measured yet)
+[A_supervised] 2400/4000 loss=0.38404 elapsed=313.9s remaining~209.3s finish~2026-09-24T11:46:04+00:00 suite_elapsed=325.6s suite_total_estimate~1581.2s suite_finish~2026-09-24T12:03:30+00:00 (evaluation time not measured yet)
+[A_supervised] 2420/4000 loss=0.31832 elapsed=316.4s remaining~206.6s finish~2026-09-24T11:46:03+00:00 suite_elapsed=328.0s suite_total_estimate~1580.6s suite_finish~2026-09-24T12:03:29+00:00 (evaluation time not measured yet)
+[A_supervised] 2440/4000 loss=0.31403 elapsed=318.6s remaining~203.7s finish~2026-09-24T11:46:03+00:00 suite_elapsed=330.2s suite_total_estimate~1578.4s suite_finish~2026-09-24T12:03:27+00:00 (evaluation time not measured yet)
+[A_supervised] 2460/4000 loss=0.30527 elapsed=321.0s remaining~200.9s finish~2026-09-24T11:46:02+00:00 suite_elapsed=332.6s suite_total_estimate~1577.3s suite_finish~2026-09-24T12:03:26+00:00 (evaluation time not measured yet)
+[A_supervised] 2480/4000 loss=0.29292 elapsed=323.5s remaining~198.3s finish~2026-09-24T11:46:02+00:00 suite_elapsed=335.2s suite_total_estimate~1577.2s suite_finish~2026-09-24T12:03:26+00:00 (evaluation time not measured yet)
+[A_supervised] 2500/4000 loss=0.35230 elapsed=326.0s remaining~195.6s finish~2026-09-24T11:46:02+00:00 suite_elapsed=337.6s suite_total_estimate~1576.2s suite_finish~2026-09-24T12:03:25+00:00 (evaluation time not measured yet)
+[A_supervised] 2520/4000 loss=0.37425 elapsed=328.3s remaining~192.8s finish~2026-09-24T11:46:02+00:00 suite_elapsed=340.0s suite_total_estimate~1575.2s suite_finish~2026-09-24T12:03:24+00:00 (evaluation time not measured yet)
+[A_supervised] 2540/4000 loss=0.30707 elapsed=331.0s remaining~190.3s finish~2026-09-24T11:46:02+00:00 suite_elapsed=342.7s suite_total_estimate~1575.6s suite_finish~2026-09-24T12:03:24+00:00 (evaluation time not measured yet)
+[A_supervised] 2560/4000 loss=0.30175 elapsed=333.5s remaining~187.6s finish~2026-09-24T11:46:02+00:00 suite_elapsed=345.2s suite_total_estimate~1575.1s suite_finish~2026-09-24T12:03:24+00:00 (evaluation time not measured yet)
+[A_supervised] 2580/4000 loss=0.29174 elapsed=335.8s remaining~184.8s finish~2026-09-24T11:46:01+00:00 suite_elapsed=347.4s suite_total_estimate~1573.4s suite_finish~2026-09-24T12:03:22+00:00 (evaluation time not measured yet)
+[A_supervised] 2600/4000 loss=0.29418 elapsed=338.0s remaining~182.0s finish~2026-09-24T11:46:00+00:00 suite_elapsed=349.7s suite_total_estimate~1571.7s suite_finish~2026-09-24T12:03:20+00:00 (evaluation time not measured yet)
+[A_supervised] 2620/4000 loss=0.29394 elapsed=340.4s remaining~179.3s finish~2026-09-24T11:46:00+00:00 suite_elapsed=352.0s suite_total_estimate~1570.5s suite_finish~2026-09-24T12:03:19+00:00 (evaluation time not measured yet)
+[A_supervised] 2640/4000 loss=0.31556 elapsed=342.7s remaining~176.5s finish~2026-09-24T11:46:00+00:00 suite_elapsed=354.3s suite_total_estimate~1569.3s suite_finish~2026-09-24T12:03:18+00:00 (evaluation time not measured yet)
+[A_supervised] 2660/4000 loss=0.36110 elapsed=344.9s remaining~173.8s finish~2026-09-24T11:45:59+00:00 suite_elapsed=356.6s suite_total_estimate~1567.6s suite_finish~2026-09-24T12:03:16+00:00 (evaluation time not measured yet)
+[A_supervised] 2680/4000 loss=0.30792 elapsed=347.1s remaining~171.0s finish~2026-09-24T11:45:58+00:00 suite_elapsed=358.8s suite_total_estimate~1566.0s suite_finish~2026-09-24T12:03:15+00:00 (evaluation time not measured yet)
+[A_supervised] 2700/4000 loss=0.30271 elapsed=349.4s remaining~168.2s finish~2026-09-24T11:45:58+00:00 suite_elapsed=361.0s suite_total_estimate~1564.4s suite_finish~2026-09-24T12:03:13+00:00 (evaluation time not measured yet)
+[A_supervised] 2720/4000 loss=0.28926 elapsed=351.7s remaining~165.5s finish~2026-09-24T11:45:58+00:00 suite_elapsed=363.3s suite_total_estimate~1563.2s suite_finish~2026-09-24T12:03:12+00:00 (evaluation time not measured yet)
+[A_supervised] 2740/4000 loss=0.26603 elapsed=354.0s remaining~162.8s finish~2026-09-24T11:45:57+00:00 suite_elapsed=365.6s suite_total_estimate~1561.9s suite_finish~2026-09-24T12:03:11+00:00 (evaluation time not measured yet)
+[A_supervised] 2760/4000 loss=0.29417 elapsed=356.3s remaining~160.1s finish~2026-09-24T11:45:57+00:00 suite_elapsed=367.9s suite_total_estimate~1560.7s suite_finish~2026-09-24T12:03:09+00:00 (evaluation time not measured yet)
+[A_supervised] 2780/4000 loss=0.32519 elapsed=358.5s remaining~157.3s finish~2026-09-24T11:45:56+00:00 suite_elapsed=370.1s suite_total_estimate~1559.0s suite_finish~2026-09-24T12:03:08+00:00 (evaluation time not measured yet)
+[A_supervised] 2800/4000 loss=0.38190 elapsed=360.7s remaining~154.6s finish~2026-09-24T11:45:56+00:00 suite_elapsed=372.4s suite_total_estimate~1557.5s suite_finish~2026-09-24T12:03:06+00:00 (evaluation time not measured yet)
+[A_supervised] 2820/4000 loss=0.31503 elapsed=363.0s remaining~151.9s finish~2026-09-24T11:45:55+00:00 suite_elapsed=374.7s suite_total_estimate~1556.4s suite_finish~2026-09-24T12:03:05+00:00 (evaluation time not measured yet)
+[A_supervised] 2840/4000 loss=0.33456 elapsed=365.2s remaining~149.2s finish~2026-09-24T11:45:55+00:00 suite_elapsed=376.9s suite_total_estimate~1554.9s suite_finish~2026-09-24T12:03:04+00:00 (evaluation time not measured yet)
+[A_supervised] 2860/4000 loss=0.28353 elapsed=367.6s remaining~146.5s finish~2026-09-24T11:45:54+00:00 suite_elapsed=379.2s suite_total_estimate~1553.8s suite_finish~2026-09-24T12:03:03+00:00 (evaluation time not measured yet)
+[A_supervised] 2880/4000 loss=0.28509 elapsed=369.8s remaining~143.8s finish~2026-09-24T11:45:54+00:00 suite_elapsed=381.5s suite_total_estimate~1552.5s suite_finish~2026-09-24T12:03:01+00:00 (evaluation time not measured yet)
+[A_supervised] 2900/4000 loss=0.30423 elapsed=372.1s remaining~141.1s finish~2026-09-24T11:45:54+00:00 suite_elapsed=383.7s suite_total_estimate~1551.4s suite_finish~2026-09-24T12:03:00+00:00 (evaluation time not measured yet)
+[A_supervised] 2920/4000 loss=0.29753 elapsed=374.5s remaining~138.5s finish~2026-09-24T11:45:53+00:00 suite_elapsed=386.2s suite_total_estimate~1550.7s suite_finish~2026-09-24T12:02:59+00:00 (evaluation time not measured yet)
+[A_supervised] 2940/4000 loss=0.29212 elapsed=377.0s remaining~135.9s finish~2026-09-24T11:45:53+00:00 suite_elapsed=388.6s suite_total_estimate~1550.3s suite_finish~2026-09-24T12:02:59+00:00 (evaluation time not measured yet)
+[A_supervised] 2960/4000 loss=0.32632 elapsed=379.5s remaining~133.3s finish~2026-09-24T11:45:53+00:00 suite_elapsed=391.1s suite_total_estimate~1550.0s suite_finish~2026-09-24T12:02:59+00:00 (evaluation time not measured yet)
+[A_supervised] 2980/4000 loss=0.33162 elapsed=381.7s remaining~130.7s finish~2026-09-24T11:45:53+00:00 suite_elapsed=393.4s suite_total_estimate~1548.8s suite_finish~2026-09-24T12:02:57+00:00 (evaluation time not measured yet)
+[A_supervised] 3000/4000 loss=0.34425 elapsed=384.2s remaining~128.1s finish~2026-09-24T11:45:53+00:00 suite_elapsed=395.8s suite_total_estimate~1548.4s suite_finish~2026-09-24T12:02:57+00:00 (evaluation time not measured yet)
+[A_supervised] 3020/4000 loss=0.27113 elapsed=386.9s remaining~125.6s finish~2026-09-24T11:45:53+00:00 suite_elapsed=398.6s suite_total_estimate~1549.1s suite_finish~2026-09-24T12:02:58+00:00 (evaluation time not measured yet)
+[A_supervised] 3040/4000 loss=0.30957 elapsed=389.3s remaining~122.9s finish~2026-09-24T11:45:53+00:00 suite_elapsed=400.9s suite_total_estimate~1548.3s suite_finish~2026-09-24T12:02:57+00:00 (evaluation time not measured yet)
+[A_supervised] 3060/4000 loss=0.30496 elapsed=391.6s remaining~120.3s finish~2026-09-24T11:45:52+00:00 suite_elapsed=403.2s suite_total_estimate~1547.2s suite_finish~2026-09-24T12:02:56+00:00 (evaluation time not measured yet)
+[A_supervised] 3080/4000 loss=0.32042 elapsed=393.9s remaining~117.7s finish~2026-09-24T11:45:52+00:00 suite_elapsed=405.6s suite_total_estimate~1546.3s suite_finish~2026-09-24T12:02:55+00:00 (evaluation time not measured yet)
+[A_supervised] 3100/4000 loss=0.33743 elapsed=396.6s remaining~115.1s finish~2026-09-24T11:45:52+00:00 suite_elapsed=408.2s suite_total_estimate~1546.8s suite_finish~2026-09-24T12:02:56+00:00 (evaluation time not measured yet)
+[A_supervised] 3120/4000 loss=0.33841 elapsed=398.8s remaining~112.5s finish~2026-09-24T11:45:52+00:00 suite_elapsed=410.5s suite_total_estimate~1545.7s suite_finish~2026-09-24T12:02:54+00:00 (evaluation time not measured yet)
+[A_supervised] 3140/4000 loss=0.28491 elapsed=401.3s remaining~109.9s finish~2026-09-24T11:45:52+00:00 suite_elapsed=412.9s suite_total_estimate~1545.3s suite_finish~2026-09-24T12:02:54+00:00 (evaluation time not measured yet)
+[A_supervised] 3160/4000 loss=0.27367 elapsed=404.0s remaining~107.4s finish~2026-09-24T11:45:52+00:00 suite_elapsed=415.7s suite_total_estimate~1545.9s suite_finish~2026-09-24T12:02:55+00:00 (evaluation time not measured yet)
+[A_supervised] 3180/4000 loss=0.29514 elapsed=406.9s remaining~104.9s finish~2026-09-24T11:45:52+00:00 suite_elapsed=418.5s suite_total_estimate~1547.1s suite_finish~2026-09-24T12:02:56+00:00 (evaluation time not measured yet)
+[A_supervised] 3200/4000 loss=0.30720 elapsed=409.2s remaining~102.3s finish~2026-09-24T11:45:52+00:00 suite_elapsed=420.8s suite_total_estimate~1546.1s suite_finish~2026-09-24T12:02:55+00:00 (evaluation time not measured yet)
+[A_supervised] 3220/4000 loss=0.37679 elapsed=411.5s remaining~99.7s finish~2026-09-24T11:45:52+00:00 suite_elapsed=423.2s suite_total_estimate~1545.3s suite_finish~2026-09-24T12:02:54+00:00 (evaluation time not measured yet)
+[A_supervised] 3240/4000 loss=0.27003 elapsed=413.9s remaining~97.1s finish~2026-09-24T11:45:51+00:00 suite_elapsed=425.6s suite_total_estimate~1544.8s suite_finish~2026-09-24T12:02:54+00:00 (evaluation time not measured yet)
+[A_supervised] 3260/4000 loss=0.31463 elapsed=416.4s remaining~94.5s finish~2026-09-24T11:45:51+00:00 suite_elapsed=428.1s suite_total_estimate~1544.4s suite_finish~2026-09-24T12:02:53+00:00 (evaluation time not measured yet)
+[A_supervised] 3280/4000 loss=0.30894 elapsed=419.0s remaining~92.0s finish~2026-09-24T11:45:51+00:00 suite_elapsed=430.7s suite_total_estimate~1544.8s suite_finish~2026-09-24T12:02:53+00:00 (evaluation time not measured yet)
+[A_supervised] 3300/4000 loss=0.26189 elapsed=421.4s remaining~89.4s finish~2026-09-24T11:45:51+00:00 suite_elapsed=433.1s suite_total_estimate~1544.1s suite_finish~2026-09-24T12:02:53+00:00 (evaluation time not measured yet)
+[A_supervised] 3320/4000 loss=0.26516 elapsed=423.8s remaining~86.8s finish~2026-09-24T11:45:51+00:00 suite_elapsed=435.5s suite_total_estimate~1543.6s suite_finish~2026-09-24T12:02:52+00:00 (evaluation time not measured yet)
+[A_supervised] 3340/4000 loss=0.34004 elapsed=426.1s remaining~84.2s finish~2026-09-24T11:45:51+00:00 suite_elapsed=437.7s suite_total_estimate~1542.4s suite_finish~2026-09-24T12:02:51+00:00 (evaluation time not measured yet)
+[A_supervised] 3360/4000 loss=0.32407 elapsed=428.4s remaining~81.6s finish~2026-09-24T11:45:50+00:00 suite_elapsed=440.0s suite_total_estimate~1541.6s suite_finish~2026-09-24T12:02:50+00:00 (evaluation time not measured yet)
+[A_supervised] 3380/4000 loss=0.30209 elapsed=431.2s remaining~79.1s finish~2026-09-24T11:45:51+00:00 suite_elapsed=442.8s suite_total_estimate~1542.4s suite_finish~2026-09-24T12:02:51+00:00 (evaluation time not measured yet)
+[A_supervised] 3400/4000 loss=0.30111 elapsed=433.5s remaining~76.5s finish~2026-09-24T11:45:50+00:00 suite_elapsed=445.2s suite_total_estimate~1541.7s suite_finish~2026-09-24T12:02:50+00:00 (evaluation time not measured yet)
+[A_supervised] 3420/4000 loss=0.30273 elapsed=436.0s remaining~73.9s finish~2026-09-24T11:45:50+00:00 suite_elapsed=447.7s suite_total_estimate~1541.6s suite_finish~2026-09-24T12:02:50+00:00 (evaluation time not measured yet)
+[A_supervised] 3440/4000 loss=0.27104 elapsed=438.4s remaining~71.4s finish~2026-09-24T11:45:50+00:00 suite_elapsed=450.0s suite_total_estimate~1540.8s suite_finish~2026-09-24T12:02:50+00:00 (evaluation time not measured yet)
+[A_supervised] 3460/4000 loss=0.30380 elapsed=440.7s remaining~68.8s finish~2026-09-24T11:45:50+00:00 suite_elapsed=452.3s suite_total_estimate~1540.0s suite_finish~2026-09-24T12:02:49+00:00 (evaluation time not measured yet)
+[A_supervised] 3480/4000 loss=0.30728 elapsed=442.9s remaining~66.2s finish~2026-09-24T11:45:49+00:00 suite_elapsed=454.6s suite_total_estimate~1539.0s suite_finish~2026-09-24T12:02:48+00:00 (evaluation time not measured yet)
+[A_supervised] 3500/4000 loss=0.27743 elapsed=445.2s remaining~63.6s finish~2026-09-24T11:45:49+00:00 suite_elapsed=456.9s suite_total_estimate~1538.1s suite_finish~2026-09-24T12:02:47+00:00 (evaluation time not measured yet)
+[A_supervised] 3520/4000 loss=0.26026 elapsed=447.6s remaining~61.0s finish~2026-09-24T11:45:49+00:00 suite_elapsed=459.3s suite_total_estimate~1537.7s suite_finish~2026-09-24T12:02:46+00:00 (evaluation time not measured yet)
+[A_supervised] 3540/4000 loss=0.27813 elapsed=449.8s remaining~58.4s finish~2026-09-24T11:45:49+00:00 suite_elapsed=461.4s suite_total_estimate~1536.3s suite_finish~2026-09-24T12:02:45+00:00 (evaluation time not measured yet)
+[A_supervised] 3560/4000 loss=0.30690 elapsed=452.2s remaining~55.9s finish~2026-09-24T11:45:48+00:00 suite_elapsed=463.8s suite_total_estimate~1535.8s suite_finish~2026-09-24T12:02:44+00:00 (evaluation time not measured yet)
+[A_supervised] 3580/4000 loss=0.27848 elapsed=454.5s remaining~53.3s finish~2026-09-24T11:45:48+00:00 suite_elapsed=466.1s suite_total_estimate~1535.1s suite_finish~2026-09-24T12:02:44+00:00 (evaluation time not measured yet)
+[A_supervised] 3600/4000 loss=0.28583 elapsed=456.7s remaining~50.7s finish~2026-09-24T11:45:48+00:00 suite_elapsed=468.4s suite_total_estimate~1534.0s suite_finish~2026-09-24T12:02:43+00:00 (evaluation time not measured yet)
+[A_supervised] 3620/4000 loss=0.35266 elapsed=459.3s remaining~48.2s finish~2026-09-24T11:45:48+00:00 suite_elapsed=471.0s suite_total_estimate~1534.3s suite_finish~2026-09-24T12:02:43+00:00 (evaluation time not measured yet)
+[A_supervised] 3640/4000 loss=0.30679 elapsed=461.8s remaining~45.7s finish~2026-09-24T11:45:48+00:00 suite_elapsed=473.4s suite_total_estimate~1534.0s suite_finish~2026-09-24T12:02:43+00:00 (evaluation time not measured yet)
+[A_supervised] 3660/4000 loss=0.30918 elapsed=464.0s remaining~43.1s finish~2026-09-24T11:45:47+00:00 suite_elapsed=475.6s suite_total_estimate~1532.9s suite_finish~2026-09-24T12:02:42+00:00 (evaluation time not measured yet)
+[A_supervised] 3680/4000 loss=0.35657 elapsed=466.3s remaining~40.5s finish~2026-09-24T11:45:47+00:00 suite_elapsed=478.0s suite_total_estimate~1532.2s suite_finish~2026-09-24T12:02:41+00:00 (evaluation time not measured yet)
+[A_supervised] 3700/4000 loss=0.34753 elapsed=468.6s remaining~38.0s finish~2026-09-24T11:45:47+00:00 suite_elapsed=480.2s suite_total_estimate~1531.4s suite_finish~2026-09-24T12:02:40+00:00 (evaluation time not measured yet)
+[A_supervised] 3720/4000 loss=0.28275 elapsed=470.8s remaining~35.4s finish~2026-09-24T11:45:47+00:00 suite_elapsed=482.5s suite_total_estimate~1530.5s suite_finish~2026-09-24T12:02:39+00:00 (evaluation time not measured yet)
+[A_supervised] 3740/4000 loss=0.26791 elapsed=473.1s remaining~32.9s finish~2026-09-24T11:45:46+00:00 suite_elapsed=484.7s suite_total_estimate~1529.6s suite_finish~2026-09-24T12:02:38+00:00 (evaluation time not measured yet)
+[A_supervised] 3760/4000 loss=0.30298 elapsed=475.6s remaining~30.4s finish~2026-09-24T11:45:46+00:00 suite_elapsed=487.2s suite_total_estimate~1529.4s suite_finish~2026-09-24T12:02:38+00:00 (evaluation time not measured yet)
+[A_supervised] 3780/4000 loss=0.34527 elapsed=477.9s remaining~27.8s finish~2026-09-24T11:45:46+00:00 suite_elapsed=489.6s suite_total_estimate~1528.9s suite_finish~2026-09-24T12:02:38+00:00 (evaluation time not measured yet)
+[A_supervised] 3800/4000 loss=0.29584 elapsed=480.2s remaining~25.3s finish~2026-09-24T11:45:46+00:00 suite_elapsed=491.9s suite_total_estimate~1528.1s suite_finish~2026-09-24T12:02:37+00:00 (evaluation time not measured yet)
+[A_supervised] 3820/4000 loss=0.29428 elapsed=482.5s remaining~22.7s finish~2026-09-24T11:45:46+00:00 suite_elapsed=494.1s suite_total_estimate~1527.3s suite_finish~2026-09-24T12:02:36+00:00 (evaluation time not measured yet)
+[A_supervised] 3840/4000 loss=0.27943 elapsed=485.2s remaining~20.2s finish~2026-09-24T11:45:46+00:00 suite_elapsed=496.9s suite_total_estimate~1528.0s suite_finish~2026-09-24T12:02:37+00:00 (evaluation time not measured yet)
+[A_supervised] 3860/4000 loss=0.30240 elapsed=487.7s remaining~17.7s finish~2026-09-24T11:45:46+00:00 suite_elapsed=499.4s suite_total_estimate~1527.9s suite_finish~2026-09-24T12:02:37+00:00 (evaluation time not measured yet)
+[A_supervised] 3880/4000 loss=0.32627 elapsed=490.1s remaining~15.2s finish~2026-09-24T11:45:46+00:00 suite_elapsed=501.8s suite_total_estimate~1527.5s suite_finish~2026-09-24T12:02:36+00:00 (evaluation time not measured yet)
+[A_supervised] 3900/4000 loss=0.27833 elapsed=492.5s remaining~12.6s finish~2026-09-24T11:45:45+00:00 suite_elapsed=504.1s suite_total_estimate~1527.0s suite_finish~2026-09-24T12:02:36+00:00 (evaluation time not measured yet)
+[A_supervised] 3920/4000 loss=0.31872 elapsed=494.7s remaining~10.1s finish~2026-09-24T11:45:45+00:00 suite_elapsed=506.4s suite_total_estimate~1526.2s suite_finish~2026-09-24T12:02:35+00:00 (evaluation time not measured yet)
+[A_supervised] 3940/4000 loss=0.32251 elapsed=497.1s remaining~7.6s finish~2026-09-24T11:45:45+00:00 suite_elapsed=508.8s suite_total_estimate~1525.8s suite_finish~2026-09-24T12:02:34+00:00 (evaluation time not measured yet)
+[A_supervised] 3960/4000 loss=0.34698 elapsed=499.9s remaining~5.0s finish~2026-09-24T11:45:45+00:00 suite_elapsed=511.6s suite_total_estimate~1526.6s suite_finish~2026-09-24T12:02:35+00:00 (evaluation time not measured yet)
+[A_supervised] 3980/4000 loss=0.36447 elapsed=502.2s remaining~2.5s finish~2026-09-24T11:45:45+00:00 suite_elapsed=513.8s suite_total_estimate~1525.7s suite_finish~2026-09-24T12:02:34+00:00 (evaluation time not measured yet)
+[A_supervised] 4000/4000 loss=0.27362 elapsed=504.7s remaining~0.0s finish~2026-09-24T11:45:45+00:00 suite_elapsed=516.3s suite_total_estimate~1525.6s suite_finish~2026-09-24T12:02:34+00:00 (evaluation time not measured yet)
+[evaluation A] RESULTS=/Data3/sppark/komap/results/model_results_0924_5
+[valid A] 1/20 image_mIoU=87.2163% elapsed=3.2s remaining~61.1s finish~2026-09-24T11:46:50+00:00
+[valid A] 2/20 image_mIoU=67.8400% elapsed=4.1s remaining~37.0s finish~2026-09-24T11:46:27+00:00
+[valid A] 3/20 image_mIoU=71.9420% elapsed=5.1s remaining~28.7s finish~2026-09-24T11:46:19+00:00
+[valid A] 4/20 image_mIoU=75.9135% elapsed=7.0s remaining~28.2s finish~2026-09-24T11:46:21+00:00
+[valid A] 5/20 image_mIoU=68.7802% elapsed=9.3s remaining~27.9s finish~2026-09-24T11:46:23+00:00
+[valid A] 6/20 image_mIoU=85.1403% elapsed=9.9s remaining~23.0s finish~2026-09-24T11:46:18+00:00
+[valid A] 7/20 image_mIoU=76.3812% elapsed=12.5s remaining~23.1s finish~2026-09-24T11:46:21+00:00
+[valid A] 8/20 image_mIoU=77.6058% elapsed=14.4s remaining~21.6s finish~2026-09-24T11:46:22+00:00
+[valid A] 9/20 image_mIoU=79.7025% elapsed=16.9s remaining~20.7s finish~2026-09-24T11:46:23+00:00
+[valid A] 10/20 image_mIoU=81.8267% elapsed=18.9s remaining~18.9s finish~2026-09-24T11:46:23+00:00
+[valid A] 11/20 image_mIoU=81.4735% elapsed=20.6s remaining~16.9s finish~2026-09-24T11:46:23+00:00
+[valid A] 12/20 image_mIoU=86.6313% elapsed=22.5s remaining~15.0s finish~2026-09-24T11:46:23+00:00
+[valid A] 13/20 image_mIoU=79.8636% elapsed=24.0s remaining~12.9s finish~2026-09-24T11:46:23+00:00
+[valid A] 14/20 image_mIoU=79.4234% elapsed=24.6s remaining~10.5s finish~2026-09-24T11:46:21+00:00
+[valid A] 15/20 image_mIoU=80.9432% elapsed=25.1s remaining~8.4s finish~2026-09-24T11:46:19+00:00
+[valid A] 16/20 image_mIoU=72.8662% elapsed=25.7s remaining~6.4s finish~2026-09-24T11:46:18+00:00
+[valid A] 17/20 image_mIoU=64.7551% elapsed=26.3s remaining~4.6s finish~2026-09-24T11:46:17+00:00
+[valid A] 18/20 image_mIoU=79.1267% elapsed=26.9s remaining~3.0s finish~2026-09-24T11:46:15+00:00
+[valid A] 19/20 image_mIoU=71.2476% elapsed=27.4s remaining~1.4s finish~2026-09-24T11:46:15+00:00
+[valid A] 20/20 image_mIoU=79.8377% elapsed=29.4s remaining~0.0s finish~2026-09-24T11:46:15+00:00
+[B_ssl] task=ssl updates=2000 compute_budget=None world=6 effective_batch=12
+[B_ssl] 20/2000 loss=0.23290 elapsed=2.2s remaining~215.9s finish~2026-09-24T11:49:53+00:00 suite_elapsed=548.8s suite_total_estimate~1580.8s suite_finish~2026-09-24T12:03:29+00:00
+[B_ssl] 40/2000 loss=0.16612 elapsed=3.7s remaining~179.3s finish~2026-09-24T11:49:18+00:00 suite_elapsed=550.3s suite_total_estimate~1545.6s suite_finish~2026-09-24T12:02:54+00:00
+[B_ssl] 60/2000 loss=0.16703 elapsed=5.2s remaining~166.6s finish~2026-09-24T11:49:07+00:00 suite_elapsed=551.8s suite_total_estimate~1534.4s suite_finish~2026-09-24T12:02:43+00:00
+[B_ssl] 80/2000 loss=0.12164 elapsed=6.6s remaining~158.6s finish~2026-09-24T11:49:01+00:00 suite_elapsed=553.2s suite_total_estimate~1527.9s suite_finish~2026-09-24T12:02:37+00:00
+[B_ssl] 100/2000 loss=0.11389 elapsed=8.1s remaining~154.0s finish~2026-09-24T11:48:57+00:00 suite_elapsed=554.7s suite_total_estimate~1524.7s suite_finish~2026-09-24T12:02:33+00:00
+[B_ssl] 120/2000 loss=0.14561 elapsed=9.6s remaining~150.7s finish~2026-09-24T11:48:56+00:00 suite_elapsed=556.2s suite_total_estimate~1522.9s suite_finish~2026-09-24T12:02:32+00:00
+[B_ssl] 140/2000 loss=0.10926 elapsed=11.1s remaining~147.8s finish~2026-09-24T11:48:54+00:00 suite_elapsed=557.7s suite_total_estimate~1521.5s suite_finish~2026-09-24T12:02:30+00:00
+[B_ssl] 160/2000 loss=0.11595 elapsed=12.7s remaining~145.5s finish~2026-09-24T11:48:54+00:00 suite_elapsed=559.3s suite_total_estimate~1520.8s suite_finish~2026-09-24T12:02:30+00:00
+[B_ssl] 180/2000 loss=0.12210 elapsed=14.2s remaining~143.8s finish~2026-09-24T11:48:53+00:00 suite_elapsed=560.9s suite_total_estimate~1520.7s suite_finish~2026-09-24T12:02:29+00:00
+[B_ssl] 200/2000 loss=0.13594 elapsed=15.7s remaining~141.6s finish~2026-09-24T11:48:53+00:00 suite_elapsed=562.4s suite_total_estimate~1519.9s suite_finish~2026-09-24T12:02:29+00:00
+[B_ssl] 220/2000 loss=0.10393 elapsed=17.3s remaining~139.6s finish~2026-09-24T11:48:52+00:00 suite_elapsed=563.9s suite_total_estimate~1519.6s suite_finish~2026-09-24T12:02:28+00:00
+[B_ssl] 240/2000 loss=0.09268 elapsed=18.8s remaining~137.7s finish~2026-09-24T11:48:52+00:00 suite_elapsed=565.4s suite_total_estimate~1519.1s suite_finish~2026-09-24T12:02:28+00:00
+[B_ssl] 260/2000 loss=0.10685 elapsed=20.3s remaining~135.7s finish~2026-09-24T11:48:51+00:00 suite_elapsed=566.9s suite_total_estimate~1518.6s suite_finish~2026-09-24T12:02:27+00:00
+[B_ssl] 280/2000 loss=0.11631 elapsed=21.8s remaining~133.7s finish~2026-09-24T11:48:51+00:00 suite_elapsed=568.4s suite_total_estimate~1518.1s suite_finish~2026-09-24T12:02:27+00:00
+[B_ssl] 300/2000 loss=0.10677 elapsed=23.3s remaining~131.8s finish~2026-09-24T11:48:50+00:00 suite_elapsed=569.9s suite_total_estimate~1517.7s suite_finish~2026-09-24T12:02:26+00:00
+[B_ssl] 320/2000 loss=0.11201 elapsed=24.8s remaining~130.0s finish~2026-09-24T11:48:50+00:00 suite_elapsed=571.4s suite_total_estimate~1517.4s suite_finish~2026-09-24T12:02:26+00:00
+[B_ssl] 340/2000 loss=0.09984 elapsed=26.3s remaining~128.2s finish~2026-09-24T11:48:50+00:00 suite_elapsed=572.9s suite_total_estimate~1517.1s suite_finish~2026-09-24T12:02:26+00:00
+[B_ssl] 360/2000 loss=0.11595 elapsed=27.8s remaining~126.5s finish~2026-09-24T11:48:50+00:00 suite_elapsed=574.4s suite_total_estimate~1516.9s suite_finish~2026-09-24T12:02:26+00:00
+[B_ssl] 380/2000 loss=0.11097 elapsed=29.3s remaining~124.8s finish~2026-09-24T11:48:49+00:00 suite_elapsed=575.9s suite_total_estimate~1516.7s suite_finish~2026-09-24T12:02:25+00:00
+[B_ssl] 400/2000 loss=0.12193 elapsed=30.8s remaining~123.0s finish~2026-09-24T11:48:49+00:00 suite_elapsed=577.4s suite_total_estimate~1516.4s suite_finish~2026-09-24T12:02:25+00:00
+[B_ssl] 420/2000 loss=0.12549 elapsed=32.2s remaining~121.3s finish~2026-09-24T11:48:49+00:00 suite_elapsed=578.9s suite_total_estimate~1516.2s suite_finish~2026-09-24T12:02:25+00:00
+[B_ssl] 440/2000 loss=0.10493 elapsed=33.8s remaining~119.8s finish~2026-09-24T11:48:49+00:00 suite_elapsed=580.4s suite_total_estimate~1516.3s suite_finish~2026-09-24T12:02:25+00:00
+[B_ssl] 460/2000 loss=0.10729 elapsed=35.3s remaining~118.2s finish~2026-09-24T11:48:49+00:00 suite_elapsed=581.9s suite_total_estimate~1516.2s suite_finish~2026-09-24T12:02:25+00:00
+[B_ssl] 480/2000 loss=0.08993 elapsed=36.8s remaining~116.6s finish~2026-09-24T11:48:49+00:00 suite_elapsed=583.4s suite_total_estimate~1516.1s suite_finish~2026-09-24T12:02:25+00:00
+[B_ssl] 500/2000 loss=0.10582 elapsed=38.3s remaining~114.9s finish~2026-09-24T11:48:49+00:00 suite_elapsed=584.9s suite_total_estimate~1515.9s suite_finish~2026-09-24T12:02:25+00:00
+[B_ssl] 520/2000 loss=0.09503 elapsed=39.8s remaining~113.3s finish~2026-09-24T11:48:48+00:00 suite_elapsed=586.4s suite_total_estimate~1515.7s suite_finish~2026-09-24T12:02:24+00:00
+[B_ssl] 540/2000 loss=0.08689 elapsed=41.3s remaining~111.7s finish~2026-09-24T11:48:48+00:00 suite_elapsed=587.9s suite_total_estimate~1515.6s suite_finish~2026-09-24T12:02:24+00:00
+[B_ssl] 560/2000 loss=0.10877 elapsed=42.8s remaining~110.2s finish~2026-09-24T11:48:48+00:00 suite_elapsed=589.5s suite_total_estimate~1515.6s suite_finish~2026-09-24T12:02:24+00:00
+[B_ssl] 580/2000 loss=0.09978 elapsed=44.3s remaining~108.5s finish~2026-09-24T11:48:48+00:00 suite_elapsed=591.0s suite_total_estimate~1515.5s suite_finish~2026-09-24T12:02:24+00:00
+[B_ssl] 600/2000 loss=0.10373 elapsed=45.8s remaining~106.9s finish~2026-09-24T11:48:48+00:00 suite_elapsed=592.4s suite_total_estimate~1515.4s suite_finish~2026-09-24T12:02:24+00:00
+[B_ssl] 620/2000 loss=0.11204 elapsed=47.3s remaining~105.3s finish~2026-09-24T11:48:48+00:00 suite_elapsed=593.9s suite_total_estimate~1515.2s suite_finish~2026-09-24T12:02:24+00:00
+[B_ssl] 640/2000 loss=0.10135 elapsed=48.8s remaining~103.6s finish~2026-09-24T11:48:48+00:00 suite_elapsed=595.4s suite_total_estimate~1515.0s suite_finish~2026-09-24T12:02:24+00:00
+[B_ssl] 660/2000 loss=0.08996 elapsed=50.2s remaining~102.0s finish~2026-09-24T11:48:48+00:00 suite_elapsed=596.9s suite_total_estimate~1514.9s suite_finish~2026-09-24T12:02:24+00:00
+[B_ssl] 680/2000 loss=0.10582 elapsed=51.8s remaining~100.5s finish~2026-09-24T11:48:48+00:00 suite_elapsed=598.4s suite_total_estimate~1514.9s suite_finish~2026-09-24T12:02:24+00:00
+[B_ssl] 700/2000 loss=0.10539 elapsed=53.3s remaining~99.0s finish~2026-09-24T11:48:48+00:00 suite_elapsed=599.9s suite_total_estimate~1514.9s suite_finish~2026-09-24T12:02:24+00:00
+[B_ssl] 720/2000 loss=0.10056 elapsed=54.8s remaining~97.4s finish~2026-09-24T11:48:48+00:00 suite_elapsed=601.4s suite_total_estimate~1514.9s suite_finish~2026-09-24T12:02:24+00:00
+[B_ssl] 740/2000 loss=0.11899 elapsed=56.3s remaining~95.9s finish~2026-09-24T11:48:48+00:00 suite_elapsed=602.9s suite_total_estimate~1514.9s suite_finish~2026-09-24T12:02:24+00:00
+[B_ssl] 760/2000 loss=0.09651 elapsed=57.8s remaining~94.3s finish~2026-09-24T11:48:47+00:00 suite_elapsed=604.4s suite_total_estimate~1514.7s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 780/2000 loss=0.08508 elapsed=59.3s remaining~92.7s finish~2026-09-24T11:48:47+00:00 suite_elapsed=605.9s suite_total_estimate~1514.6s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 800/2000 loss=0.10329 elapsed=60.8s remaining~91.1s finish~2026-09-24T11:48:47+00:00 suite_elapsed=607.4s suite_total_estimate~1514.6s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 820/2000 loss=0.10999 elapsed=62.3s remaining~89.6s finish~2026-09-24T11:48:47+00:00 suite_elapsed=608.9s suite_total_estimate~1514.5s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 840/2000 loss=0.09421 elapsed=63.7s remaining~88.0s finish~2026-09-24T11:48:47+00:00 suite_elapsed=610.4s suite_total_estimate~1514.4s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 860/2000 loss=0.11157 elapsed=65.2s remaining~86.5s finish~2026-09-24T11:48:47+00:00 suite_elapsed=611.9s suite_total_estimate~1514.3s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 880/2000 loss=0.08878 elapsed=66.7s remaining~84.9s finish~2026-09-24T11:48:47+00:00 suite_elapsed=613.4s suite_total_estimate~1514.3s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 900/2000 loss=0.07823 elapsed=68.2s remaining~83.4s finish~2026-09-24T11:48:47+00:00 suite_elapsed=614.8s suite_total_estimate~1514.2s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 920/2000 loss=0.09942 elapsed=69.7s remaining~81.8s finish~2026-09-24T11:48:47+00:00 suite_elapsed=616.3s suite_total_estimate~1514.1s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 940/2000 loss=0.08780 elapsed=71.2s remaining~80.3s finish~2026-09-24T11:48:47+00:00 suite_elapsed=617.8s suite_total_estimate~1514.1s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 960/2000 loss=0.10470 elapsed=72.6s remaining~78.7s finish~2026-09-24T11:48:47+00:00 suite_elapsed=619.3s suite_total_estimate~1514.0s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 980/2000 loss=0.09065 elapsed=74.1s remaining~77.2s finish~2026-09-24T11:48:47+00:00 suite_elapsed=620.8s suite_total_estimate~1513.9s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 1000/2000 loss=0.09645 elapsed=75.6s remaining~75.6s finish~2026-09-24T11:48:47+00:00 suite_elapsed=622.2s suite_total_estimate~1513.9s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 1020/2000 loss=0.09438 elapsed=77.3s remaining~74.3s finish~2026-09-24T11:48:47+00:00 suite_elapsed=624.0s suite_total_estimate~1514.3s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 1040/2000 loss=0.09960 elapsed=78.8s remaining~72.8s finish~2026-09-24T11:48:47+00:00 suite_elapsed=625.4s suite_total_estimate~1514.2s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 1060/2000 loss=0.09932 elapsed=80.3s remaining~71.2s finish~2026-09-24T11:48:47+00:00 suite_elapsed=626.9s suite_total_estimate~1514.2s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 1080/2000 loss=0.09173 elapsed=81.8s remaining~69.7s finish~2026-09-24T11:48:47+00:00 suite_elapsed=628.4s suite_total_estimate~1514.1s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 1100/2000 loss=0.09683 elapsed=83.3s remaining~68.1s finish~2026-09-24T11:48:47+00:00 suite_elapsed=629.9s suite_total_estimate~1514.1s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 1120/2000 loss=0.10097 elapsed=84.8s remaining~66.6s finish~2026-09-24T11:48:47+00:00 suite_elapsed=631.4s suite_total_estimate~1514.0s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 1140/2000 loss=0.09634 elapsed=86.3s remaining~65.1s finish~2026-09-24T11:48:47+00:00 suite_elapsed=632.9s suite_total_estimate~1514.0s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 1160/2000 loss=0.11351 elapsed=87.8s remaining~63.6s finish~2026-09-24T11:48:47+00:00 suite_elapsed=634.4s suite_total_estimate~1514.0s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 1180/2000 loss=0.09300 elapsed=89.3s remaining~62.0s finish~2026-09-24T11:48:47+00:00 suite_elapsed=635.9s suite_total_estimate~1513.9s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 1200/2000 loss=0.10269 elapsed=90.8s remaining~60.5s finish~2026-09-24T11:48:47+00:00 suite_elapsed=637.4s suite_total_estimate~1513.9s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 1220/2000 loss=0.08698 elapsed=92.3s remaining~59.0s finish~2026-09-24T11:48:47+00:00 suite_elapsed=638.9s suite_total_estimate~1513.9s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 1240/2000 loss=0.08057 elapsed=93.8s remaining~57.5s finish~2026-09-24T11:48:47+00:00 suite_elapsed=640.4s suite_total_estimate~1513.9s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 1260/2000 loss=0.08838 elapsed=95.3s remaining~56.0s finish~2026-09-24T11:48:47+00:00 suite_elapsed=641.9s suite_total_estimate~1513.9s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 1280/2000 loss=0.10151 elapsed=96.8s remaining~54.4s finish~2026-09-24T11:48:47+00:00 suite_elapsed=643.4s suite_total_estimate~1513.8s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 1300/2000 loss=0.11171 elapsed=98.3s remaining~52.9s finish~2026-09-24T11:48:47+00:00 suite_elapsed=644.9s suite_total_estimate~1513.8s suite_finish~2026-09-24T12:02:23+00:00
+[B_ssl] 1320/2000 loss=0.07375 elapsed=99.7s remaining~51.4s finish~2026-09-24T11:48:46+00:00 suite_elapsed=646.4s suite_total_estimate~1513.8s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1340/2000 loss=0.09363 elapsed=101.2s remaining~49.9s finish~2026-09-24T11:48:46+00:00 suite_elapsed=647.9s suite_total_estimate~1513.7s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1360/2000 loss=0.10486 elapsed=102.7s remaining~48.3s finish~2026-09-24T11:48:46+00:00 suite_elapsed=649.3s suite_total_estimate~1513.7s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1380/2000 loss=0.12320 elapsed=104.2s remaining~46.8s finish~2026-09-24T11:48:46+00:00 suite_elapsed=650.8s suite_total_estimate~1513.7s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1400/2000 loss=0.10689 elapsed=105.7s remaining~45.3s finish~2026-09-24T11:48:46+00:00 suite_elapsed=652.3s suite_total_estimate~1513.6s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1420/2000 loss=0.10240 elapsed=107.2s remaining~43.8s finish~2026-09-24T11:48:46+00:00 suite_elapsed=653.8s suite_total_estimate~1513.6s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1440/2000 loss=0.08374 elapsed=108.7s remaining~42.3s finish~2026-09-24T11:48:46+00:00 suite_elapsed=655.3s suite_total_estimate~1513.6s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1460/2000 loss=0.09140 elapsed=110.2s remaining~40.7s finish~2026-09-24T11:48:46+00:00 suite_elapsed=656.8s suite_total_estimate~1513.5s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1480/2000 loss=0.10178 elapsed=111.7s remaining~39.2s finish~2026-09-24T11:48:46+00:00 suite_elapsed=658.3s suite_total_estimate~1513.5s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1500/2000 loss=0.08976 elapsed=113.2s remaining~37.7s finish~2026-09-24T11:48:46+00:00 suite_elapsed=659.8s suite_total_estimate~1513.6s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1520/2000 loss=0.11301 elapsed=114.7s remaining~36.2s finish~2026-09-24T11:48:46+00:00 suite_elapsed=661.3s suite_total_estimate~1513.6s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1540/2000 loss=0.10477 elapsed=116.2s remaining~34.7s finish~2026-09-24T11:48:46+00:00 suite_elapsed=662.8s suite_total_estimate~1513.6s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1560/2000 loss=0.08983 elapsed=117.7s remaining~33.2s finish~2026-09-24T11:48:46+00:00 suite_elapsed=664.4s suite_total_estimate~1513.6s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1580/2000 loss=0.09423 elapsed=119.2s remaining~31.7s finish~2026-09-24T11:48:46+00:00 suite_elapsed=665.9s suite_total_estimate~1513.6s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1600/2000 loss=0.11079 elapsed=120.7s remaining~30.2s finish~2026-09-24T11:48:46+00:00 suite_elapsed=667.3s suite_total_estimate~1513.5s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1620/2000 loss=0.09934 elapsed=122.2s remaining~28.7s finish~2026-09-24T11:48:46+00:00 suite_elapsed=668.8s suite_total_estimate~1513.5s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1640/2000 loss=0.09568 elapsed=123.7s remaining~27.2s finish~2026-09-24T11:48:46+00:00 suite_elapsed=670.3s suite_total_estimate~1513.5s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1660/2000 loss=0.10251 elapsed=125.2s remaining~25.6s finish~2026-09-24T11:48:46+00:00 suite_elapsed=671.8s suite_total_estimate~1513.5s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1680/2000 loss=0.09083 elapsed=126.6s remaining~24.1s finish~2026-09-24T11:48:46+00:00 suite_elapsed=673.3s suite_total_estimate~1513.4s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1700/2000 loss=0.09456 elapsed=128.1s remaining~22.6s finish~2026-09-24T11:48:46+00:00 suite_elapsed=674.8s suite_total_estimate~1513.4s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1720/2000 loss=0.12598 elapsed=129.6s remaining~21.1s finish~2026-09-24T11:48:46+00:00 suite_elapsed=676.2s suite_total_estimate~1513.4s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1740/2000 loss=0.08144 elapsed=131.1s remaining~19.6s finish~2026-09-24T11:48:46+00:00 suite_elapsed=677.7s suite_total_estimate~1513.3s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1760/2000 loss=0.11141 elapsed=132.6s remaining~18.1s finish~2026-09-24T11:48:46+00:00 suite_elapsed=679.3s suite_total_estimate~1513.4s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1780/2000 loss=0.09856 elapsed=134.1s remaining~16.6s finish~2026-09-24T11:48:46+00:00 suite_elapsed=680.8s suite_total_estimate~1513.4s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1800/2000 loss=0.09348 elapsed=135.7s remaining~15.1s finish~2026-09-24T11:48:46+00:00 suite_elapsed=682.3s suite_total_estimate~1513.4s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1820/2000 loss=0.10063 elapsed=137.2s remaining~13.6s finish~2026-09-24T11:48:46+00:00 suite_elapsed=683.9s suite_total_estimate~1513.4s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1840/2000 loss=0.10349 elapsed=138.7s remaining~12.1s finish~2026-09-24T11:48:46+00:00 suite_elapsed=685.4s suite_total_estimate~1513.4s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1860/2000 loss=0.10059 elapsed=140.2s remaining~10.6s finish~2026-09-24T11:48:46+00:00 suite_elapsed=686.8s suite_total_estimate~1513.4s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1880/2000 loss=0.09710 elapsed=141.7s remaining~9.0s finish~2026-09-24T11:48:46+00:00 suite_elapsed=688.4s suite_total_estimate~1513.4s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1900/2000 loss=0.09129 elapsed=143.2s remaining~7.5s finish~2026-09-24T11:48:46+00:00 suite_elapsed=689.9s suite_total_estimate~1513.4s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1920/2000 loss=0.10855 elapsed=144.7s remaining~6.0s finish~2026-09-24T11:48:46+00:00 suite_elapsed=691.4s suite_total_estimate~1513.4s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1940/2000 loss=0.10086 elapsed=146.2s remaining~4.5s finish~2026-09-24T11:48:46+00:00 suite_elapsed=692.8s suite_total_estimate~1513.4s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1960/2000 loss=0.09110 elapsed=147.7s remaining~3.0s finish~2026-09-24T11:48:46+00:00 suite_elapsed=694.4s suite_total_estimate~1513.4s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 1980/2000 loss=0.09342 elapsed=149.3s remaining~1.5s finish~2026-09-24T11:48:46+00:00 suite_elapsed=695.9s suite_total_estimate~1513.4s suite_finish~2026-09-24T12:02:22+00:00
+[B_ssl] 2000/2000 loss=0.10432 elapsed=150.8s remaining~0.0s finish~2026-09-24T11:48:46+00:00 suite_elapsed=697.4s suite_total_estimate~1513.4s suite_finish~2026-09-24T12:02:22+00:00
+[B_finetune] task=seg updates=4000 compute_budget=None world=6 effective_batch=12
+[B_finetune] 20/4000 loss=1.78521 elapsed=3.5s remaining~703.4s finish~2026-09-24T12:00:34+00:00 suite_elapsed=702.1s suite_total_estimate~1617.1s suite_finish~2026-09-24T12:04:06+00:00
+[B_finetune] 40/4000 loss=1.61042 elapsed=6.5s remaining~645.3s finish~2026-09-24T11:59:39+00:00 suite_elapsed=705.1s suite_total_estimate~1562.0s suite_finish~2026-09-24T12:03:11+00:00
+[B_finetune] 60/4000 loss=1.41576 elapsed=9.2s remaining~606.9s finish~2026-09-24T11:59:03+00:00 suite_elapsed=707.8s suite_total_estimate~1526.2s suite_finish~2026-09-24T12:02:35+00:00
+[B_finetune] 80/4000 loss=1.21171 elapsed=12.1s remaining~594.1s finish~2026-09-24T11:58:54+00:00 suite_elapsed=710.7s suite_total_estimate~1516.4s suite_finish~2026-09-24T12:02:25+00:00
+[B_finetune] 100/4000 loss=1.09805 elapsed=14.7s remaining~571.7s finish~2026-09-24T11:58:34+00:00 suite_elapsed=713.2s suite_total_estimate~1496.5s suite_finish~2026-09-24T12:02:05+00:00
+[B_finetune] 120/4000 loss=1.01015 elapsed=17.4s remaining~563.9s finish~2026-09-24T11:58:29+00:00 suite_elapsed=716.0s suite_total_estimate~1491.4s suite_finish~2026-09-24T12:02:00+00:00
+[B_finetune] 140/4000 loss=0.96583 elapsed=20.1s remaining~554.1s finish~2026-09-24T11:58:21+00:00 suite_elapsed=718.7s suite_total_estimate~1484.3s suite_finish~2026-09-24T12:01:53+00:00
+[B_finetune] 160/4000 loss=0.79711 elapsed=22.3s remaining~536.2s finish~2026-09-24T11:58:06+00:00 suite_elapsed=720.9s suite_total_estimate~1468.7s suite_finish~2026-09-24T12:01:37+00:00
+[B_finetune] 180/4000 loss=0.85608 elapsed=24.8s remaining~526.1s finish~2026-09-24T11:57:58+00:00 suite_elapsed=723.4s suite_total_estimate~1461.1s suite_finish~2026-09-24T12:01:30+00:00
+[B_finetune] 200/4000 loss=0.77427 elapsed=27.5s remaining~523.2s finish~2026-09-24T11:57:58+00:00 suite_elapsed=726.1s suite_total_estimate~1460.9s suite_finish~2026-09-24T12:01:30+00:00
+[B_finetune] 220/4000 loss=0.76139 elapsed=29.8s remaining~512.0s finish~2026-09-24T11:57:49+00:00 suite_elapsed=728.4s suite_total_estimate~1451.9s suite_finish~2026-09-24T12:01:21+00:00
+[B_finetune] 240/4000 loss=0.66290 elapsed=32.1s remaining~502.1s finish~2026-09-24T11:57:41+00:00 suite_elapsed=730.6s suite_total_estimate~1444.3s suite_finish~2026-09-24T12:01:13+00:00
+[B_finetune] 260/4000 loss=0.70367 elapsed=34.4s remaining~495.3s finish~2026-09-24T11:57:37+00:00 suite_elapsed=733.0s suite_total_estimate~1439.9s suite_finish~2026-09-24T12:01:09+00:00
+[B_finetune] 280/4000 loss=0.61090 elapsed=36.7s remaining~487.4s finish~2026-09-24T11:57:31+00:00 suite_elapsed=735.3s suite_total_estimate~1434.2s suite_finish~2026-09-24T12:01:03+00:00
+[B_finetune] 300/4000 loss=0.70117 elapsed=39.0s remaining~481.2s finish~2026-09-24T11:57:27+00:00 suite_elapsed=737.6s suite_total_estimate~1430.3s suite_finish~2026-09-24T12:00:59+00:00
+[B_finetune] 320/4000 loss=0.52724 elapsed=41.4s remaining~476.2s finish~2026-09-24T11:57:25+00:00 suite_elapsed=740.0s suite_total_estimate~1427.7s suite_finish~2026-09-24T12:00:56+00:00
+[B_finetune] 340/4000 loss=0.59035 elapsed=44.1s remaining~474.5s finish~2026-09-24T11:57:26+00:00 suite_elapsed=742.6s suite_total_estimate~1428.7s suite_finish~2026-09-24T12:00:57+00:00
+[B_finetune] 360/4000 loss=0.52139 elapsed=46.3s remaining~467.9s finish~2026-09-24T11:57:21+00:00 suite_elapsed=744.8s suite_total_estimate~1424.3s suite_finish~2026-09-24T12:00:53+00:00
+[B_finetune] 380/4000 loss=0.54896 elapsed=48.6s remaining~462.6s finish~2026-09-24T11:57:18+00:00 suite_elapsed=747.1s suite_total_estimate~1421.3s suite_finish~2026-09-24T12:00:50+00:00
+[B_finetune] 400/4000 loss=0.56514 elapsed=50.8s remaining~456.9s finish~2026-09-24T11:57:15+00:00 suite_elapsed=749.3s suite_total_estimate~1417.8s suite_finish~2026-09-24T12:00:47+00:00
+[B_finetune] 420/4000 loss=0.51077 elapsed=53.1s remaining~452.3s finish~2026-09-24T11:57:13+00:00 suite_elapsed=751.6s suite_total_estimate~1415.5s suite_finish~2026-09-24T12:00:44+00:00
+[B_finetune] 440/4000 loss=0.52254 elapsed=55.4s remaining~448.0s finish~2026-09-24T11:57:11+00:00 suite_elapsed=753.9s suite_total_estimate~1413.5s suite_finish~2026-09-24T12:00:42+00:00
+[B_finetune] 460/4000 loss=0.49913 elapsed=57.7s remaining~444.0s finish~2026-09-24T11:57:09+00:00 suite_elapsed=756.3s suite_total_estimate~1411.8s suite_finish~2026-09-24T12:00:41+00:00
+[B_finetune] 480/4000 loss=0.44713 elapsed=60.1s remaining~441.0s finish~2026-09-24T11:57:08+00:00 suite_elapsed=758.7s suite_total_estimate~1411.2s suite_finish~2026-09-24T12:00:40+00:00
+[B_finetune] 500/4000 loss=0.45996 elapsed=62.7s remaining~438.6s finish~2026-09-24T11:57:09+00:00 suite_elapsed=761.2s suite_total_estimate~1411.4s suite_finish~2026-09-24T12:00:40+00:00
+[B_finetune] 520/4000 loss=0.48113 elapsed=65.2s remaining~436.3s finish~2026-09-24T11:57:09+00:00 suite_elapsed=763.8s suite_total_estimate~1411.6s suite_finish~2026-09-24T12:00:40+00:00
+[B_finetune] 540/4000 loss=0.48142 elapsed=67.9s remaining~435.2s finish~2026-09-24T11:57:10+00:00 suite_elapsed=766.5s suite_total_estimate~1413.2s suite_finish~2026-09-24T12:00:42+00:00
+[B_finetune] 560/4000 loss=0.45459 elapsed=70.3s remaining~431.6s finish~2026-09-24T11:57:09+00:00 suite_elapsed=768.8s suite_total_estimate~1411.9s suite_finish~2026-09-24T12:00:41+00:00
+[B_finetune] 580/4000 loss=0.43482 elapsed=72.6s remaining~427.9s finish~2026-09-24T11:57:08+00:00 suite_elapsed=771.1s suite_total_estimate~1410.5s suite_finish~2026-09-24T12:00:39+00:00
+[B_finetune] 600/4000 loss=0.53188 elapsed=75.2s remaining~426.1s finish~2026-09-24T11:57:09+00:00 suite_elapsed=773.8s suite_total_estimate~1411.5s suite_finish~2026-09-24T12:00:40+00:00
+[B_finetune] 620/4000 loss=0.47833 elapsed=77.4s remaining~422.1s finish~2026-09-24T11:57:07+00:00 suite_elapsed=776.0s suite_total_estimate~1409.7s suite_finish~2026-09-24T12:00:38+00:00
+[B_finetune] 640/4000 loss=0.40372 elapsed=79.9s remaining~419.2s finish~2026-09-24T11:57:06+00:00 suite_elapsed=778.4s suite_total_estimate~1409.2s suite_finish~2026-09-24T12:00:38+00:00
+[B_finetune] 660/4000 loss=0.41062 elapsed=82.2s remaining~416.0s finish~2026-09-24T11:57:06+00:00 suite_elapsed=780.8s suite_total_estimate~1408.4s suite_finish~2026-09-24T12:00:37+00:00
+[B_finetune] 680/4000 loss=0.49522 elapsed=85.1s remaining~415.3s finish~2026-09-24T11:57:08+00:00 suite_elapsed=783.6s suite_total_estimate~1410.4s suite_finish~2026-09-24T12:00:39+00:00
+[B_finetune] 700/4000 loss=0.39451 elapsed=87.4s remaining~412.0s finish~2026-09-24T11:57:07+00:00 suite_elapsed=786.0s suite_total_estimate~1409.5s suite_finish~2026-09-24T12:00:38+00:00
+[B_finetune] 720/4000 loss=0.38162 elapsed=90.0s remaining~409.9s finish~2026-09-24T11:57:07+00:00 suite_elapsed=788.5s suite_total_estimate~1410.0s suite_finish~2026-09-24T12:00:39+00:00
+[B_finetune] 740/4000 loss=0.47359 elapsed=92.8s remaining~408.6s finish~2026-09-24T11:57:09+00:00 suite_elapsed=791.3s suite_total_estimate~1411.5s suite_finish~2026-09-24T12:00:40+00:00
+[B_finetune] 760/4000 loss=0.38503 elapsed=95.1s remaining~405.5s finish~2026-09-24T11:57:08+00:00 suite_elapsed=793.7s suite_total_estimate~1410.7s suite_finish~2026-09-24T12:00:39+00:00
+[B_finetune] 780/4000 loss=0.37237 elapsed=97.5s remaining~402.4s finish~2026-09-24T11:57:07+00:00 suite_elapsed=796.0s suite_total_estimate~1410.0s suite_finish~2026-09-24T12:00:39+00:00
+[B_finetune] 800/4000 loss=0.37115 elapsed=99.7s remaining~398.8s finish~2026-09-24T11:57:06+00:00 suite_elapsed=798.3s suite_total_estimate~1408.6s suite_finish~2026-09-24T12:00:37+00:00
+[B_finetune] 820/4000 loss=0.43378 elapsed=102.1s remaining~395.8s finish~2026-09-24T11:57:05+00:00 suite_elapsed=800.6s suite_total_estimate~1408.0s suite_finish~2026-09-24T12:00:37+00:00
+[B_finetune] 840/4000 loss=0.42502 elapsed=104.5s remaining~393.2s finish~2026-09-24T11:57:05+00:00 suite_elapsed=803.1s suite_total_estimate~1407.9s suite_finish~2026-09-24T12:00:37+00:00
+[B_finetune] 860/4000 loss=0.40526 elapsed=106.9s remaining~390.3s finish~2026-09-24T11:57:04+00:00 suite_elapsed=805.5s suite_total_estimate~1407.3s suite_finish~2026-09-24T12:00:36+00:00
+[B_finetune] 880/4000 loss=0.39833 elapsed=109.3s remaining~387.3s finish~2026-09-24T11:57:04+00:00 suite_elapsed=807.8s suite_total_estimate~1406.7s suite_finish~2026-09-24T12:00:35+00:00
+[B_finetune] 900/4000 loss=0.32459 elapsed=111.7s remaining~384.7s finish~2026-09-24T11:57:04+00:00 suite_elapsed=810.2s suite_total_estimate~1406.5s suite_finish~2026-09-24T12:00:35+00:00
+[B_finetune] 920/4000 loss=0.38777 elapsed=113.8s remaining~381.0s finish~2026-09-24T11:57:02+00:00 suite_elapsed=812.4s suite_total_estimate~1405.0s suite_finish~2026-09-24T12:00:34+00:00
+[B_finetune] 940/4000 loss=0.39200 elapsed=116.1s remaining~377.9s finish~2026-09-24T11:57:01+00:00 suite_elapsed=814.6s suite_total_estimate~1404.1s suite_finish~2026-09-24T12:00:33+00:00
+[B_finetune] 960/4000 loss=0.33886 elapsed=118.4s remaining~375.0s finish~2026-09-24T11:57:01+00:00 suite_elapsed=817.0s suite_total_estimate~1403.5s suite_finish~2026-09-24T12:00:32+00:00
+[B_finetune] 980/4000 loss=0.37538 elapsed=121.3s remaining~373.8s finish~2026-09-24T11:57:02+00:00 suite_elapsed=819.9s suite_total_estimate~1405.2s suite_finish~2026-09-24T12:00:34+00:00
+[B_finetune] 1000/4000 loss=0.47161 elapsed=123.9s remaining~371.6s finish~2026-09-24T11:57:03+00:00 suite_elapsed=822.4s suite_total_estimate~1405.6s suite_finish~2026-09-24T12:00:34+00:00
+[B_finetune] 1020/4000 loss=0.38696 elapsed=126.4s remaining~369.2s finish~2026-09-24T11:57:03+00:00 suite_elapsed=825.0s suite_total_estimate~1405.8s suite_finish~2026-09-24T12:00:34+00:00
+[B_finetune] 1040/4000 loss=0.39784 elapsed=128.6s remaining~366.0s finish~2026-09-24T11:57:02+00:00 suite_elapsed=827.1s suite_total_estimate~1404.7s suite_finish~2026-09-24T12:00:33+00:00
+[B_finetune] 1060/4000 loss=0.35498 elapsed=131.3s remaining~364.1s finish~2026-09-24T11:57:03+00:00 suite_elapsed=829.9s suite_total_estimate~1405.5s suite_finish~2026-09-24T12:00:34+00:00
+[B_finetune] 1080/4000 loss=0.31597 elapsed=133.6s remaining~361.2s finish~2026-09-24T11:57:02+00:00 suite_elapsed=832.1s suite_total_estimate~1404.9s suite_finish~2026-09-24T12:00:34+00:00
+[B_finetune] 1100/4000 loss=0.35114 elapsed=135.8s remaining~358.1s finish~2026-09-24T11:57:01+00:00 suite_elapsed=834.4s suite_total_estimate~1404.1s suite_finish~2026-09-24T12:00:33+00:00
+[B_finetune] 1120/4000 loss=0.35780 elapsed=138.0s remaining~354.9s finish~2026-09-24T11:57:00+00:00 suite_elapsed=836.6s suite_total_estimate~1403.0s suite_finish~2026-09-24T12:00:32+00:00
+[B_finetune] 1140/4000 loss=0.32942 elapsed=140.3s remaining~352.0s finish~2026-09-24T11:57:00+00:00 suite_elapsed=838.9s suite_total_estimate~1402.4s suite_finish~2026-09-24T12:00:31+00:00
+[B_finetune] 1160/4000 loss=0.39733 elapsed=142.6s remaining~349.1s finish~2026-09-24T11:56:59+00:00 suite_elapsed=841.2s suite_total_estimate~1401.8s suite_finish~2026-09-24T12:00:31+00:00
+[B_finetune] 1180/4000 loss=0.39224 elapsed=145.0s remaining~346.5s finish~2026-09-24T11:56:59+00:00 suite_elapsed=843.6s suite_total_estimate~1401.6s suite_finish~2026-09-24T12:00:30+00:00
+[B_finetune] 1200/4000 loss=0.36058 elapsed=147.2s remaining~343.5s finish~2026-09-24T11:56:58+00:00 suite_elapsed=845.8s suite_total_estimate~1400.9s suite_finish~2026-09-24T12:00:30+00:00
+[B_finetune] 1220/4000 loss=0.32811 elapsed=149.6s remaining~340.8s finish~2026-09-24T11:56:58+00:00 suite_elapsed=848.1s suite_total_estimate~1400.5s suite_finish~2026-09-24T12:00:29+00:00
+[B_finetune] 1240/4000 loss=0.28071 elapsed=151.9s remaining~338.2s finish~2026-09-24T11:56:57+00:00 suite_elapsed=850.5s suite_total_estimate~1400.3s suite_finish~2026-09-24T12:00:29+00:00
+[B_finetune] 1260/4000 loss=0.33840 elapsed=154.2s remaining~335.4s finish~2026-09-24T11:56:57+00:00 suite_elapsed=852.8s suite_total_estimate~1399.8s suite_finish~2026-09-24T12:00:29+00:00
+[B_finetune] 1280/4000 loss=0.39045 elapsed=156.6s remaining~332.7s finish~2026-09-24T11:56:57+00:00 suite_elapsed=855.1s suite_total_estimate~1399.4s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 1300/4000 loss=0.43574 elapsed=158.9s remaining~329.9s finish~2026-09-24T11:56:56+00:00 suite_elapsed=857.4s suite_total_estimate~1398.9s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 1320/4000 loss=0.38790 elapsed=161.0s remaining~327.0s finish~2026-09-24T11:56:55+00:00 suite_elapsed=859.6s suite_total_estimate~1398.1s suite_finish~2026-09-24T12:00:27+00:00
+[B_finetune] 1340/4000 loss=0.36685 elapsed=163.5s remaining~324.5s finish~2026-09-24T11:56:55+00:00 suite_elapsed=862.0s suite_total_estimate~1398.1s suite_finish~2026-09-24T12:00:27+00:00
+[B_finetune] 1360/4000 loss=0.38542 elapsed=165.8s remaining~321.9s finish~2026-09-24T11:56:55+00:00 suite_elapsed=864.4s suite_total_estimate~1397.8s suite_finish~2026-09-24T12:00:27+00:00
+[B_finetune] 1380/4000 loss=0.35240 elapsed=168.1s remaining~319.1s finish~2026-09-24T11:56:54+00:00 suite_elapsed=866.6s suite_total_estimate~1397.3s suite_finish~2026-09-24T12:00:26+00:00
+[B_finetune] 1400/4000 loss=0.37899 elapsed=170.4s remaining~316.5s finish~2026-09-24T11:56:54+00:00 suite_elapsed=869.0s suite_total_estimate~1397.1s suite_finish~2026-09-24T12:00:26+00:00
+[B_finetune] 1420/4000 loss=0.41222 elapsed=172.9s remaining~314.1s finish~2026-09-24T11:56:54+00:00 suite_elapsed=871.4s suite_total_estimate~1397.1s suite_finish~2026-09-24T12:00:26+00:00
+[B_finetune] 1440/4000 loss=0.32899 elapsed=175.7s remaining~312.3s finish~2026-09-24T11:56:55+00:00 suite_elapsed=874.2s suite_total_estimate~1398.1s suite_finish~2026-09-24T12:00:27+00:00
+[B_finetune] 1460/4000 loss=0.33333 elapsed=178.6s remaining~310.7s finish~2026-09-24T11:56:57+00:00 suite_elapsed=877.2s suite_total_estimate~1399.5s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 1480/4000 loss=0.32915 elapsed=181.3s remaining~308.8s finish~2026-09-24T11:56:57+00:00 suite_elapsed=879.9s suite_total_estimate~1400.2s suite_finish~2026-09-24T12:00:29+00:00
+[B_finetune] 1500/4000 loss=0.30224 elapsed=184.0s remaining~306.7s finish~2026-09-24T11:56:58+00:00 suite_elapsed=882.6s suite_total_estimate~1400.9s suite_finish~2026-09-24T12:00:30+00:00
+[B_finetune] 1520/4000 loss=0.40816 elapsed=186.3s remaining~303.9s finish~2026-09-24T11:56:58+00:00 suite_elapsed=884.9s suite_total_estimate~1400.4s suite_finish~2026-09-24T12:00:29+00:00
+[B_finetune] 1540/4000 loss=0.34322 elapsed=188.5s remaining~301.1s finish~2026-09-24T11:56:57+00:00 suite_elapsed=887.1s suite_total_estimate~1399.8s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 1560/4000 loss=0.30933 elapsed=190.8s remaining~298.4s finish~2026-09-24T11:56:56+00:00 suite_elapsed=889.4s suite_total_estimate~1399.3s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 1580/4000 loss=0.34688 elapsed=193.1s remaining~295.8s finish~2026-09-24T11:56:56+00:00 suite_elapsed=891.7s suite_total_estimate~1399.0s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 1600/4000 loss=0.35099 elapsed=195.4s remaining~293.1s finish~2026-09-24T11:56:56+00:00 suite_elapsed=894.0s suite_total_estimate~1398.7s suite_finish~2026-09-24T12:00:27+00:00
+[B_finetune] 1620/4000 loss=0.33574 elapsed=197.7s remaining~290.4s finish~2026-09-24T11:56:55+00:00 suite_elapsed=896.2s suite_total_estimate~1398.2s suite_finish~2026-09-24T12:00:27+00:00
+[B_finetune] 1640/4000 loss=0.32171 elapsed=200.3s remaining~288.2s finish~2026-09-24T11:56:56+00:00 suite_elapsed=898.8s suite_total_estimate~1398.6s suite_finish~2026-09-24T12:00:27+00:00
+[B_finetune] 1660/4000 loss=0.36502 elapsed=202.8s remaining~285.8s finish~2026-09-24T11:56:56+00:00 suite_elapsed=901.3s suite_total_estimate~1398.7s suite_finish~2026-09-24T12:00:27+00:00
+[B_finetune] 1680/4000 loss=0.31726 elapsed=205.6s remaining~284.0s finish~2026-09-24T11:56:57+00:00 suite_elapsed=904.2s suite_total_estimate~1399.7s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 1700/4000 loss=0.32700 elapsed=208.0s remaining~281.4s finish~2026-09-24T11:56:57+00:00 suite_elapsed=906.6s suite_total_estimate~1399.6s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 1720/4000 loss=0.38191 elapsed=210.4s remaining~278.9s finish~2026-09-24T11:56:57+00:00 suite_elapsed=909.0s suite_total_estimate~1399.4s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 1740/4000 loss=0.30956 elapsed=212.6s remaining~276.1s finish~2026-09-24T11:56:56+00:00 suite_elapsed=911.1s suite_total_estimate~1398.8s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 1760/4000 loss=0.34981 elapsed=215.1s remaining~273.8s finish~2026-09-24T11:56:56+00:00 suite_elapsed=913.7s suite_total_estimate~1399.0s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 1780/4000 loss=0.32135 elapsed=217.7s remaining~271.5s finish~2026-09-24T11:56:57+00:00 suite_elapsed=916.3s suite_total_estimate~1399.4s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 1800/4000 loss=0.34358 elapsed=220.1s remaining~269.0s finish~2026-09-24T11:56:56+00:00 suite_elapsed=918.6s suite_total_estimate~1399.2s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 1820/4000 loss=0.32007 elapsed=222.3s remaining~266.3s finish~2026-09-24T11:56:56+00:00 suite_elapsed=920.9s suite_total_estimate~1398.8s suite_finish~2026-09-24T12:00:27+00:00
+[B_finetune] 1840/4000 loss=0.33143 elapsed=225.0s remaining~264.1s finish~2026-09-24T11:56:56+00:00 suite_elapsed=923.5s suite_total_estimate~1399.2s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 1860/4000 loss=0.28890 elapsed=227.4s remaining~261.6s finish~2026-09-24T11:56:56+00:00 suite_elapsed=926.0s suite_total_estimate~1399.2s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 1880/4000 loss=0.31504 elapsed=230.2s remaining~259.6s finish~2026-09-24T11:56:57+00:00 suite_elapsed=928.8s suite_total_estimate~1400.0s suite_finish~2026-09-24T12:00:29+00:00
+[B_finetune] 1900/4000 loss=0.31247 elapsed=232.7s remaining~257.2s finish~2026-09-24T11:56:57+00:00 suite_elapsed=931.2s suite_total_estimate~1400.0s suite_finish~2026-09-24T12:00:29+00:00
+[B_finetune] 1920/4000 loss=0.41941 elapsed=235.1s remaining~254.7s finish~2026-09-24T11:56:57+00:00 suite_elapsed=933.6s suite_total_estimate~1399.9s suite_finish~2026-09-24T12:00:29+00:00
+[B_finetune] 1940/4000 loss=0.29966 elapsed=237.4s remaining~252.1s finish~2026-09-24T11:56:57+00:00 suite_elapsed=936.0s suite_total_estimate~1399.7s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 1960/4000 loss=0.28362 elapsed=239.6s remaining~249.3s finish~2026-09-24T11:56:56+00:00 suite_elapsed=938.1s suite_total_estimate~1399.0s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 1980/4000 loss=0.33060 elapsed=241.8s remaining~246.7s finish~2026-09-24T11:56:56+00:00 suite_elapsed=940.4s suite_total_estimate~1398.6s suite_finish~2026-09-24T12:00:27+00:00
+[B_finetune] 2000/4000 loss=0.31789 elapsed=244.2s remaining~244.2s finish~2026-09-24T11:56:56+00:00 suite_elapsed=942.8s suite_total_estimate~1398.6s suite_finish~2026-09-24T12:00:27+00:00
+[B_finetune] 2020/4000 loss=0.35907 elapsed=246.8s remaining~241.9s finish~2026-09-24T11:56:56+00:00 suite_elapsed=945.4s suite_total_estimate~1398.9s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 2040/4000 loss=0.32790 elapsed=249.2s remaining~239.4s finish~2026-09-24T11:56:56+00:00 suite_elapsed=947.8s suite_total_estimate~1398.7s suite_finish~2026-09-24T12:00:27+00:00
+[B_finetune] 2060/4000 loss=0.26672 elapsed=251.6s remaining~236.9s finish~2026-09-24T11:56:56+00:00 suite_elapsed=950.1s suite_total_estimate~1398.6s suite_finish~2026-09-24T12:00:27+00:00
+[B_finetune] 2080/4000 loss=0.28657 elapsed=254.1s remaining~234.5s finish~2026-09-24T11:56:56+00:00 suite_elapsed=952.6s suite_total_estimate~1398.7s suite_finish~2026-09-24T12:00:27+00:00
+[B_finetune] 2100/4000 loss=0.34091 elapsed=256.7s remaining~232.3s finish~2026-09-24T11:56:56+00:00 suite_elapsed=955.3s suite_total_estimate~1399.2s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 2120/4000 loss=0.31273 elapsed=259.4s remaining~230.0s finish~2026-09-24T11:56:57+00:00 suite_elapsed=958.0s suite_total_estimate~1399.5s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 2140/4000 loss=0.32458 elapsed=261.9s remaining~227.7s finish~2026-09-24T11:56:57+00:00 suite_elapsed=960.5s suite_total_estimate~1399.7s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 2160/4000 loss=0.32543 elapsed=264.3s remaining~225.1s finish~2026-09-24T11:56:57+00:00 suite_elapsed=962.9s suite_total_estimate~1399.5s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 2180/4000 loss=0.37580 elapsed=266.6s remaining~222.6s finish~2026-09-24T11:56:56+00:00 suite_elapsed=965.1s suite_total_estimate~1399.3s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 2200/4000 loss=0.31494 elapsed=269.1s remaining~220.2s finish~2026-09-24T11:56:57+00:00 suite_elapsed=967.7s suite_total_estimate~1399.4s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 2220/4000 loss=0.36049 elapsed=271.4s remaining~217.6s finish~2026-09-24T11:56:56+00:00 suite_elapsed=969.9s suite_total_estimate~1399.1s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 2240/4000 loss=0.33093 elapsed=273.7s remaining~215.0s finish~2026-09-24T11:56:56+00:00 suite_elapsed=972.2s suite_total_estimate~1398.8s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 2260/4000 loss=0.32830 elapsed=276.4s remaining~212.8s finish~2026-09-24T11:56:56+00:00 suite_elapsed=975.0s suite_total_estimate~1399.3s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 2280/4000 loss=0.38496 elapsed=279.0s remaining~210.5s finish~2026-09-24T11:56:57+00:00 suite_elapsed=977.6s suite_total_estimate~1399.6s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 2300/4000 loss=0.30950 elapsed=281.4s remaining~208.0s finish~2026-09-24T11:56:57+00:00 suite_elapsed=980.0s suite_total_estimate~1399.5s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 2320/4000 loss=0.33723 elapsed=283.9s remaining~205.6s finish~2026-09-24T11:56:57+00:00 suite_elapsed=982.5s suite_total_estimate~1399.7s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 2340/4000 loss=0.33116 elapsed=286.3s remaining~203.1s finish~2026-09-24T11:56:57+00:00 suite_elapsed=984.9s suite_total_estimate~1399.5s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 2360/4000 loss=0.33824 elapsed=288.6s remaining~200.5s finish~2026-09-24T11:56:56+00:00 suite_elapsed=987.1s suite_total_estimate~1399.2s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 2380/4000 loss=0.29866 elapsed=291.0s remaining~198.0s finish~2026-09-24T11:56:56+00:00 suite_elapsed=989.5s suite_total_estimate~1399.1s suite_finish~2026-09-24T12:00:28+00:00
+[B_finetune] 2400/4000 loss=0.37779 elapsed=293.1s remaining~195.4s finish~2026-09-24T11:56:56+00:00 suite_elapsed=991.6s suite_total_estimate~1398.6s suite_finish~2026-09-24T12:00:27+00:00
+[B_finetune] 2420/4000 loss=0.31703 elapsed=295.6s remaining~193.0s finish~2026-09-24T11:56:56+00:00 suite_elapsed=994.2s suite_total_estimate~1398.7s suite_finish~2026-09-24T12:00:27+00:00
+[B_finetune] 2440/4000 loss=0.30409 elapsed=297.8s remaining~190.4s finish~2026-09-24T11:56:55+00:00 suite_elapsed=996.3s suite_total_estimate~1398.3s suite_finish~2026-09-24T12:00:27+00:00
+[B_finetune] 2460/4000 loss=0.30144 elapsed=300.1s remaining~187.9s finish~2026-09-24T11:56:55+00:00 suite_elapsed=998.7s suite_total_estimate~1398.1s suite_finish~2026-09-24T12:00:27+00:00
+[B_finetune] 2480/4000 loss=0.28831 elapsed=302.3s remaining~185.3s finish~2026-09-24T11:56:55+00:00 suite_elapsed=1000.9s suite_total_estimate~1397.8s suite_finish~2026-09-24T12:00:26+00:00
+[B_finetune] 2500/4000 loss=0.34036 elapsed=304.5s remaining~182.7s finish~2026-09-24T11:56:55+00:00 suite_elapsed=1003.1s suite_total_estimate~1397.4s suite_finish~2026-09-24T12:00:26+00:00
+[B_finetune] 2520/4000 loss=0.37126 elapsed=306.8s remaining~180.2s finish~2026-09-24T11:56:54+00:00 suite_elapsed=1005.4s suite_total_estimate~1397.1s suite_finish~2026-09-24T12:00:26+00:00
+[B_finetune] 2540/4000 loss=0.30235 elapsed=309.1s remaining~177.7s finish~2026-09-24T11:56:54+00:00 suite_elapsed=1007.7s suite_total_estimate~1397.0s suite_finish~2026-09-24T12:00:26+00:00
+[B_finetune] 2560/4000 loss=0.29880 elapsed=311.4s remaining~175.2s finish~2026-09-24T11:56:54+00:00 suite_elapsed=1010.0s suite_total_estimate~1396.8s suite_finish~2026-09-24T12:00:25+00:00
+[B_finetune] 2580/4000 loss=0.28397 elapsed=314.0s remaining~172.8s finish~2026-09-24T11:56:54+00:00 suite_elapsed=1012.5s suite_total_estimate~1396.9s suite_finish~2026-09-24T12:00:26+00:00
+[B_finetune] 2600/4000 loss=0.29040 elapsed=316.5s remaining~170.4s finish~2026-09-24T11:56:54+00:00 suite_elapsed=1015.1s suite_total_estimate~1397.1s suite_finish~2026-09-24T12:00:26+00:00
+[B_finetune] 2620/4000 loss=0.28528 elapsed=318.9s remaining~168.0s finish~2026-09-24T11:56:54+00:00 suite_elapsed=1017.5s suite_total_estimate~1397.0s suite_finish~2026-09-24T12:00:26+00:00
+[B_finetune] 2640/4000 loss=0.30606 elapsed=321.2s remaining~165.5s finish~2026-09-24T11:56:54+00:00 suite_elapsed=1019.8s suite_total_estimate~1396.9s suite_finish~2026-09-24T12:00:26+00:00
+[B_finetune] 2660/4000 loss=0.35754 elapsed=323.5s remaining~162.9s finish~2026-09-24T11:56:54+00:00 suite_elapsed=1022.0s suite_total_estimate~1396.5s suite_finish~2026-09-24T12:00:25+00:00
+[B_finetune] 2680/4000 loss=0.30174 elapsed=325.6s remaining~160.4s finish~2026-09-24T11:56:53+00:00 suite_elapsed=1024.2s suite_total_estimate~1396.2s suite_finish~2026-09-24T12:00:25+00:00
+[B_finetune] 2700/4000 loss=0.29272 elapsed=327.9s remaining~157.9s finish~2026-09-24T11:56:53+00:00 suite_elapsed=1026.4s suite_total_estimate~1395.9s suite_finish~2026-09-24T12:00:25+00:00
+[B_finetune] 2720/4000 loss=0.28632 elapsed=330.2s remaining~155.4s finish~2026-09-24T11:56:53+00:00 suite_elapsed=1028.7s suite_total_estimate~1395.7s suite_finish~2026-09-24T12:00:24+00:00
+[B_finetune] 2740/4000 loss=0.26288 elapsed=332.6s remaining~152.9s finish~2026-09-24T11:56:53+00:00 suite_elapsed=1031.1s suite_total_estimate~1395.6s suite_finish~2026-09-24T12:00:24+00:00
+[B_finetune] 2760/4000 loss=0.28897 elapsed=334.7s remaining~150.4s finish~2026-09-24T11:56:52+00:00 suite_elapsed=1033.3s suite_total_estimate~1395.3s suite_finish~2026-09-24T12:00:24+00:00
+[B_finetune] 2780/4000 loss=0.32841 elapsed=337.0s remaining~147.9s finish~2026-09-24T11:56:52+00:00 suite_elapsed=1035.6s suite_total_estimate~1395.0s suite_finish~2026-09-24T12:00:24+00:00
+[B_finetune] 2800/4000 loss=0.37770 elapsed=339.3s remaining~145.4s finish~2026-09-24T11:56:52+00:00 suite_elapsed=1037.8s suite_total_estimate~1394.8s suite_finish~2026-09-24T12:00:24+00:00
+[B_finetune] 2820/4000 loss=0.30572 elapsed=341.8s remaining~143.0s finish~2026-09-24T11:56:52+00:00 suite_elapsed=1040.4s suite_total_estimate~1395.0s suite_finish~2026-09-24T12:00:24+00:00
+[B_finetune] 2840/4000 loss=0.32787 elapsed=344.9s remaining~140.9s finish~2026-09-24T11:56:53+00:00 suite_elapsed=1043.4s suite_total_estimate~1395.8s suite_finish~2026-09-24T12:00:25+00:00
+[B_finetune] 2860/4000 loss=0.27702 elapsed=347.4s remaining~138.5s finish~2026-09-24T11:56:53+00:00 suite_elapsed=1045.9s suite_total_estimate~1395.9s suite_finish~2026-09-24T12:00:25+00:00
+[B_finetune] 2880/4000 loss=0.27769 elapsed=349.6s remaining~136.0s finish~2026-09-24T11:56:53+00:00 suite_elapsed=1048.2s suite_total_estimate~1395.7s suite_finish~2026-09-24T12:00:24+00:00
+[B_finetune] 2900/4000 loss=0.30169 elapsed=351.9s remaining~133.5s finish~2026-09-24T11:56:53+00:00 suite_elapsed=1050.5s suite_total_estimate~1395.5s suite_finish~2026-09-24T12:00:24+00:00
+[B_finetune] 2920/4000 loss=0.29510 elapsed=354.3s remaining~131.0s finish~2026-09-24T11:56:53+00:00 suite_elapsed=1052.9s suite_total_estimate~1395.5s suite_finish~2026-09-24T12:00:24+00:00
+[B_finetune] 2940/4000 loss=0.28574 elapsed=356.5s remaining~128.5s finish~2026-09-24T11:56:52+00:00 suite_elapsed=1055.1s suite_total_estimate~1395.2s suite_finish~2026-09-24T12:00:24+00:00
+[B_finetune] 2960/4000 loss=0.31913 elapsed=359.0s remaining~126.1s finish~2026-09-24T11:56:52+00:00 suite_elapsed=1057.6s suite_total_estimate~1395.2s suite_finish~2026-09-24T12:00:24+00:00
+[B_finetune] 2980/4000 loss=0.32574 elapsed=361.5s remaining~123.7s finish~2026-09-24T11:56:53+00:00 suite_elapsed=1060.1s suite_total_estimate~1395.4s suite_finish~2026-09-24T12:00:24+00:00
+[B_finetune] 3000/4000 loss=0.34009 elapsed=364.1s remaining~121.4s finish~2026-09-24T11:56:53+00:00 suite_elapsed=1062.6s suite_total_estimate~1395.5s suite_finish~2026-09-24T12:00:24+00:00
+[B_finetune] 3020/4000 loss=0.26639 elapsed=366.5s remaining~118.9s finish~2026-09-24T11:56:53+00:00 suite_elapsed=1065.1s suite_total_estimate~1395.6s suite_finish~2026-09-24T12:00:24+00:00
+[B_finetune] 3040/4000 loss=0.31037 elapsed=368.8s remaining~116.4s finish~2026-09-24T11:56:52+00:00 suite_elapsed=1067.3s suite_total_estimate~1395.3s suite_finish~2026-09-24T12:00:24+00:00
+[B_finetune] 3060/4000 loss=0.30260 elapsed=371.0s remaining~114.0s finish~2026-09-24T11:56:52+00:00 suite_elapsed=1069.6s suite_total_estimate~1395.1s suite_finish~2026-09-24T12:00:24+00:00
+[B_finetune] 3080/4000 loss=0.31685 elapsed=373.4s remaining~111.5s finish~2026-09-24T11:56:52+00:00 suite_elapsed=1071.9s suite_total_estimate~1395.0s suite_finish~2026-09-24T12:00:24+00:00
+[B_finetune] 3100/4000 loss=0.32392 elapsed=375.5s remaining~109.0s finish~2026-09-24T11:56:52+00:00 suite_elapsed=1074.1s suite_total_estimate~1394.7s suite_finish~2026-09-24T12:00:23+00:00
+[B_finetune] 3120/4000 loss=0.33283 elapsed=377.8s remaining~106.6s finish~2026-09-24T11:56:52+00:00 suite_elapsed=1076.3s suite_total_estimate~1394.4s suite_finish~2026-09-24T12:00:23+00:00
+[B_finetune] 3140/4000 loss=0.28109 elapsed=380.2s remaining~104.1s finish~2026-09-24T11:56:52+00:00 suite_elapsed=1078.8s suite_total_estimate~1394.4s suite_finish~2026-09-24T12:00:23+00:00
+[B_finetune] 3160/4000 loss=0.27284 elapsed=382.3s remaining~101.6s finish~2026-09-24T11:56:51+00:00 suite_elapsed=1080.9s suite_total_estimate~1394.1s suite_finish~2026-09-24T12:00:23+00:00
+[B_finetune] 3180/4000 loss=0.29035 elapsed=384.6s remaining~99.2s finish~2026-09-24T11:56:51+00:00 suite_elapsed=1083.2s suite_total_estimate~1393.9s suite_finish~2026-09-24T12:00:23+00:00
+[B_finetune] 3200/4000 loss=0.29995 elapsed=386.9s remaining~96.7s finish~2026-09-24T11:56:51+00:00 suite_elapsed=1085.5s suite_total_estimate~1393.8s suite_finish~2026-09-24T12:00:22+00:00
+[B_finetune] 3220/4000 loss=0.37337 elapsed=389.2s remaining~94.3s finish~2026-09-24T11:56:51+00:00 suite_elapsed=1087.8s suite_total_estimate~1393.6s suite_finish~2026-09-24T12:00:22+00:00
+[B_finetune] 3240/4000 loss=0.26805 elapsed=391.6s remaining~91.9s finish~2026-09-24T11:56:51+00:00 suite_elapsed=1090.1s suite_total_estimate~1393.6s suite_finish~2026-09-24T12:00:22+00:00
+[B_finetune] 3260/4000 loss=0.30595 elapsed=393.9s remaining~89.4s finish~2026-09-24T11:56:51+00:00 suite_elapsed=1092.5s suite_total_estimate~1393.5s suite_finish~2026-09-24T12:00:22+00:00
+[B_finetune] 3280/4000 loss=0.30515 elapsed=396.3s remaining~87.0s finish~2026-09-24T11:56:51+00:00 suite_elapsed=1094.9s suite_total_estimate~1393.4s suite_finish~2026-09-24T12:00:22+00:00
+[B_finetune] 3300/4000 loss=0.25965 elapsed=398.5s remaining~84.5s finish~2026-09-24T11:56:50+00:00 suite_elapsed=1097.1s suite_total_estimate~1393.2s suite_finish~2026-09-24T12:00:22+00:00
+[B_finetune] 3320/4000 loss=0.25875 elapsed=401.0s remaining~82.1s finish~2026-09-24T11:56:50+00:00 suite_elapsed=1099.5s suite_total_estimate~1393.2s suite_finish~2026-09-24T12:00:22+00:00
+[B_finetune] 3340/4000 loss=0.33574 elapsed=403.5s remaining~79.7s finish~2026-09-24T11:56:50+00:00 suite_elapsed=1102.1s suite_total_estimate~1393.3s suite_finish~2026-09-24T12:00:22+00:00
+[B_finetune] 3360/4000 loss=0.31928 elapsed=406.1s remaining~77.4s finish~2026-09-24T11:56:51+00:00 suite_elapsed=1104.7s suite_total_estimate~1393.6s suite_finish~2026-09-24T12:00:22+00:00
+[B_finetune] 3380/4000 loss=0.29764 elapsed=408.6s remaining~74.9s finish~2026-09-24T11:56:51+00:00 suite_elapsed=1107.2s suite_total_estimate~1393.7s suite_finish~2026-09-24T12:00:22+00:00
+[B_finetune] 3400/4000 loss=0.29782 elapsed=411.3s remaining~72.6s finish~2026-09-24T11:56:51+00:00 suite_elapsed=1109.8s suite_total_estimate~1394.0s suite_finish~2026-09-24T12:00:23+00:00
+[B_finetune] 3420/4000 loss=0.30332 elapsed=413.8s remaining~70.2s finish~2026-09-24T11:56:51+00:00 suite_elapsed=1112.3s suite_total_estimate~1394.1s suite_finish~2026-09-24T12:00:23+00:00
+[B_finetune] 3440/4000 loss=0.26666 elapsed=416.6s remaining~67.8s finish~2026-09-24T11:56:52+00:00 suite_elapsed=1115.2s suite_total_estimate~1394.5s suite_finish~2026-09-24T12:00:23+00:00
+[B_finetune] 3460/4000 loss=0.29773 elapsed=419.0s remaining~65.4s finish~2026-09-24T11:56:52+00:00 suite_elapsed=1117.6s suite_total_estimate~1394.6s suite_finish~2026-09-24T12:00:23+00:00
+[B_finetune] 3480/4000 loss=0.30441 elapsed=421.5s remaining~63.0s finish~2026-09-24T11:56:52+00:00 suite_elapsed=1120.1s suite_total_estimate~1394.6s suite_finish~2026-09-24T12:00:23+00:00
+[B_finetune] 3500/4000 loss=0.27103 elapsed=423.8s remaining~60.5s finish~2026-09-24T11:56:52+00:00 suite_elapsed=1122.3s suite_total_estimate~1394.4s suite_finish~2026-09-24T12:00:23+00:00
+[B_finetune] 3520/4000 loss=0.25966 elapsed=426.2s remaining~58.1s finish~2026-09-24T11:56:52+00:00 suite_elapsed=1124.8s suite_total_estimate~1394.4s suite_finish~2026-09-24T12:00:23+00:00
+[B_finetune] 3540/4000 loss=0.26900 elapsed=428.3s remaining~55.7s finish~2026-09-24T11:56:51+00:00 suite_elapsed=1126.9s suite_total_estimate~1394.1s suite_finish~2026-09-24T12:00:23+00:00
+[B_finetune] 3560/4000 loss=0.30051 elapsed=431.3s remaining~53.3s finish~2026-09-24T11:56:52+00:00 suite_elapsed=1129.9s suite_total_estimate~1394.8s suite_finish~2026-09-24T12:00:23+00:00
+[B_finetune] 3580/4000 loss=0.27862 elapsed=433.7s remaining~50.9s finish~2026-09-24T11:56:52+00:00 suite_elapsed=1132.3s suite_total_estimate~1394.7s suite_finish~2026-09-24T12:00:23+00:00
+[B_finetune] 3600/4000 loss=0.27981 elapsed=435.9s remaining~48.4s finish~2026-09-24T11:56:52+00:00 suite_elapsed=1134.5s suite_total_estimate~1394.5s suite_finish~2026-09-24T12:00:23+00:00
+[B_finetune] 3620/4000 loss=0.34863 elapsed=438.2s remaining~46.0s finish~2026-09-24T11:56:52+00:00 suite_elapsed=1136.8s suite_total_estimate~1394.4s suite_finish~2026-09-24T12:00:23+00:00
+[B_finetune] 3640/4000 loss=0.30255 elapsed=440.5s remaining~43.6s finish~2026-09-24T11:56:51+00:00 suite_elapsed=1139.1s suite_total_estimate~1394.2s suite_finish~2026-09-24T12:00:23+00:00
+[B_finetune] 3660/4000 loss=0.30845 elapsed=442.7s remaining~41.1s finish~2026-09-24T11:56:51+00:00 suite_elapsed=1141.3s suite_total_estimate~1394.0s suite_finish~2026-09-24T12:00:23+00:00
+[B_finetune] 3680/4000 loss=0.36140 elapsed=445.0s remaining~38.7s finish~2026-09-24T11:56:51+00:00 suite_elapsed=1143.6s suite_total_estimate~1393.9s suite_finish~2026-09-24T12:00:23+00:00
+[B_finetune] 3700/4000 loss=0.34395 elapsed=447.3s remaining~36.3s finish~2026-09-24T11:56:51+00:00 suite_elapsed=1145.9s suite_total_estimate~1393.7s suite_finish~2026-09-24T12:00:22+00:00
+[B_finetune] 3720/4000 loss=0.27617 elapsed=449.6s remaining~33.8s finish~2026-09-24T11:56:51+00:00 suite_elapsed=1148.2s suite_total_estimate~1393.6s suite_finish~2026-09-24T12:00:22+00:00
+[B_finetune] 3740/4000 loss=0.26303 elapsed=451.9s remaining~31.4s finish~2026-09-24T11:56:51+00:00 suite_elapsed=1150.5s suite_total_estimate~1393.5s suite_finish~2026-09-24T12:00:22+00:00
+[B_finetune] 3760/4000 loss=0.29590 elapsed=454.4s remaining~29.0s finish~2026-09-24T11:56:51+00:00 suite_elapsed=1152.9s suite_total_estimate~1393.5s suite_finish~2026-09-24T12:00:22+00:00
+[B_finetune] 3780/4000 loss=0.34281 elapsed=456.6s remaining~26.6s finish~2026-09-24T11:56:50+00:00 suite_elapsed=1155.1s suite_total_estimate~1393.3s suite_finish~2026-09-24T12:00:22+00:00
+[B_finetune] 3800/4000 loss=0.29376 elapsed=458.8s remaining~24.1s finish~2026-09-24T11:56:50+00:00 suite_elapsed=1157.4s suite_total_estimate~1393.1s suite_finish~2026-09-24T12:00:22+00:00
+[B_finetune] 3820/4000 loss=0.29005 elapsed=461.1s remaining~21.7s finish~2026-09-24T11:56:50+00:00 suite_elapsed=1159.6s suite_total_estimate~1392.9s suite_finish~2026-09-24T12:00:22+00:00
+[B_finetune] 3840/4000 loss=0.27185 elapsed=463.4s remaining~19.3s finish~2026-09-24T11:56:50+00:00 suite_elapsed=1162.0s suite_total_estimate~1392.9s suite_finish~2026-09-24T12:00:22+00:00
+[B_finetune] 3860/4000 loss=0.29743 elapsed=465.8s remaining~16.9s finish~2026-09-24T11:56:50+00:00 suite_elapsed=1164.4s suite_total_estimate~1392.8s suite_finish~2026-09-24T12:00:22+00:00
+[B_finetune] 3880/4000 loss=0.32360 elapsed=468.4s remaining~14.5s finish~2026-09-24T11:56:50+00:00 suite_elapsed=1167.0s suite_total_estimate~1393.0s suite_finish~2026-09-24T12:00:22+00:00
+[B_finetune] 3900/4000 loss=0.27247 elapsed=470.8s remaining~12.1s finish~2026-09-24T11:56:50+00:00 suite_elapsed=1169.3s suite_total_estimate~1393.0s suite_finish~2026-09-24T12:00:22+00:00
+[B_finetune] 3920/4000 loss=0.31279 elapsed=473.1s remaining~9.7s finish~2026-09-24T11:56:50+00:00 suite_elapsed=1171.6s suite_total_estimate~1392.8s suite_finish~2026-09-24T12:00:22+00:00
+[B_finetune] 3940/4000 loss=0.32273 elapsed=475.3s remaining~7.2s finish~2026-09-24T11:56:50+00:00 suite_elapsed=1173.9s suite_total_estimate~1392.7s suite_finish~2026-09-24T12:00:21+00:00
+[B_finetune] 3960/4000 loss=0.34710 elapsed=477.6s remaining~4.8s finish~2026-09-24T11:56:50+00:00 suite_elapsed=1176.2s suite_total_estimate~1392.6s suite_finish~2026-09-24T12:00:21+00:00
+[B_finetune] 3980/4000 loss=0.35872 elapsed=479.9s remaining~2.4s finish~2026-09-24T11:56:50+00:00 suite_elapsed=1178.4s suite_total_estimate~1392.4s suite_finish~2026-09-24T12:00:21+00:00
+[B_finetune] 4000/4000 loss=0.27435 elapsed=482.1s remaining~0.0s finish~2026-09-24T11:56:49+00:00 suite_elapsed=1180.7s suite_total_estimate~1392.3s suite_finish~2026-09-24T12:00:21+00:00
+[evaluation B] RESULTS=/Data3/sppark/komap/results/model_results_0924_6
+[valid B] 1/20 image_mIoU=86.2183% elapsed=3.3s remaining~63.1s finish~2026-09-24T11:57:57+00:00
+[valid B] 2/20 image_mIoU=67.6576% elapsed=4.2s remaining~37.7s finish~2026-09-24T11:57:32+00:00
+[valid B] 3/20 image_mIoU=72.0628% elapsed=5.1s remaining~29.0s finish~2026-09-24T11:57:24+00:00
+[valid B] 4/20 image_mIoU=77.5638% elapsed=7.2s remaining~28.6s finish~2026-09-24T11:57:26+00:00
+[valid B] 5/20 image_mIoU=69.9184% elapsed=9.3s remaining~28.0s finish~2026-09-24T11:57:28+00:00
+[valid B] 6/20 image_mIoU=84.7503% elapsed=9.9s remaining~23.1s finish~2026-09-24T11:57:23+00:00
+[valid B] 7/20 image_mIoU=76.1621% elapsed=12.4s remaining~23.1s finish~2026-09-24T11:57:26+00:00
+[valid B] 8/20 image_mIoU=78.8761% elapsed=14.4s remaining~21.6s finish~2026-09-24T11:57:26+00:00
+[valid B] 9/20 image_mIoU=80.8690% elapsed=17.0s remaining~20.7s finish~2026-09-24T11:57:28+00:00
+[valid B] 10/20 image_mIoU=81.2317% elapsed=19.0s remaining~19.0s finish~2026-09-24T11:57:28+00:00
+[valid B] 11/20 image_mIoU=81.2666% elapsed=20.7s remaining~17.0s finish~2026-09-24T11:57:28+00:00
+[valid B] 12/20 image_mIoU=86.4737% elapsed=22.7s remaining~15.2s finish~2026-09-24T11:57:28+00:00
+[valid B] 13/20 image_mIoU=79.1847% elapsed=24.2s remaining~13.0s finish~2026-09-24T11:57:28+00:00
+[valid B] 14/20 image_mIoU=79.3635% elapsed=24.8s remaining~10.6s finish~2026-09-24T11:57:26+00:00
+[valid B] 15/20 image_mIoU=76.2949% elapsed=25.4s remaining~8.5s finish~2026-09-24T11:57:24+00:00
+[valid B] 16/20 image_mIoU=68.0906% elapsed=26.0s remaining~6.5s finish~2026-09-24T11:57:23+00:00
+[valid B] 17/20 image_mIoU=64.5386% elapsed=26.5s remaining~4.7s finish~2026-09-24T11:57:22+00:00
+[valid B] 18/20 image_mIoU=81.4493% elapsed=27.1s remaining~3.0s finish~2026-09-24T11:57:20+00:00
+[valid B] 19/20 image_mIoU=71.0958% elapsed=27.7s remaining~1.5s finish~2026-09-24T11:57:19+00:00
+[valid B] 20/20 image_mIoU=79.8659% elapsed=29.7s remaining~0.0s finish~2026-09-24T11:57:20+00:00
+[C_extra] task=seg updates=12000 compute_budget=124.38991282740608 world=6 effective_batch=12
+[C_extra] 20/1024 loss=0.33876 elapsed=3.5s remaining~129.7s finish~2026-09-24T11:59:34+00:00 suite_elapsed=1215.7s suite_total_estimate~1374.9s suite_finish~2026-09-24T12:00:04+00:00
+[C_extra] 40/1024 loss=0.29302 elapsed=6.2s remaining~125.0s finish~2026-09-24T11:59:32+00:00 suite_elapsed=1218.5s suite_total_estimate~1373.0s suite_finish~2026-09-24T12:00:02+00:00
+[C_extra] 60/1024 loss=0.32880 elapsed=8.8s remaining~121.8s finish~2026-09-24T11:59:31+00:00 suite_elapsed=1221.0s suite_total_estimate~1372.3s suite_finish~2026-09-24T12:00:01+00:00
+[C_extra] 80/1024 loss=0.35414 elapsed=11.6s remaining~118.5s finish~2026-09-24T11:59:31+00:00 suite_elapsed=1223.8s suite_total_estimate~1371.9s suite_finish~2026-09-24T12:00:01+00:00
+[C_extra] 100/1024 loss=0.29098 elapsed=14.5s remaining~115.3s finish~2026-09-24T11:59:31+00:00 suite_elapsed=1226.7s suite_total_estimate~1371.6s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 120/1024 loss=0.34844 elapsed=17.1s remaining~112.6s finish~2026-09-24T11:59:31+00:00 suite_elapsed=1229.3s suite_total_estimate~1371.5s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 140/1024 loss=0.33974 elapsed=19.7s remaining~109.8s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1232.0s suite_total_estimate~1371.3s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 160/1024 loss=0.38427 elapsed=22.0s remaining~107.5s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1234.2s suite_total_estimate~1371.2s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 180/1024 loss=0.29913 elapsed=24.5s remaining~104.9s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1236.8s suite_total_estimate~1371.2s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 200/1024 loss=0.30161 elapsed=26.8s remaining~102.6s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1239.0s suite_total_estimate~1371.1s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 220/1024 loss=0.31065 elapsed=29.1s remaining~100.2s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1241.4s suite_total_estimate~1371.1s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 240/1024 loss=0.29879 elapsed=31.8s remaining~97.5s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1244.1s suite_total_estimate~1371.0s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 260/1024 loss=0.36091 elapsed=34.4s remaining~94.8s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1246.7s suite_total_estimate~1371.0s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 280/1024 loss=0.33865 elapsed=36.8s remaining~92.5s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1249.0s suite_total_estimate~1371.0s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 300/1024 loss=0.34481 elapsed=39.0s remaining~90.2s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1251.3s suite_total_estimate~1371.0s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 320/1024 loss=0.25546 elapsed=41.3s remaining~88.0s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1253.5s suite_total_estimate~1371.0s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 340/1024 loss=0.27663 elapsed=43.6s remaining~85.6s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1255.9s suite_total_estimate~1371.0s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 360/1024 loss=0.25986 elapsed=45.8s remaining~83.5s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1258.0s suite_total_estimate~1371.0s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 380/1024 loss=0.33761 elapsed=48.2s remaining~81.1s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1260.4s suite_total_estimate~1371.0s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 400/1024 loss=0.38270 elapsed=50.7s remaining~78.5s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1262.9s suite_total_estimate~1371.0s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 420/1024 loss=0.29970 elapsed=53.4s remaining~75.9s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1265.6s suite_total_estimate~1371.0s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 440/1024 loss=0.26653 elapsed=55.9s remaining~73.3s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1268.2s suite_total_estimate~1371.0s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 460/1024 loss=0.27313 elapsed=58.2s remaining~71.1s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1270.4s suite_total_estimate~1371.0s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 480/1024 loss=0.28780 elapsed=60.6s remaining~68.6s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1272.8s suite_total_estimate~1371.0s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 500/1024 loss=0.34816 elapsed=63.3s remaining~65.9s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1275.6s suite_total_estimate~1370.9s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 520/1024 loss=0.31665 elapsed=65.8s remaining~63.4s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1278.0s suite_total_estimate~1370.9s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 540/1024 loss=0.34820 elapsed=68.6s remaining~60.6s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1280.8s suite_total_estimate~1370.9s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 560/1024 loss=0.31702 elapsed=71.1s remaining~58.1s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1283.3s suite_total_estimate~1370.9s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 580/1024 loss=0.25388 elapsed=73.3s remaining~55.8s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1285.6s suite_total_estimate~1370.9s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 600/1024 loss=0.25395 elapsed=75.7s remaining~53.5s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1287.9s suite_total_estimate~1370.9s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 620/1024 loss=0.27660 elapsed=78.1s remaining~51.1s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1290.3s suite_total_estimate~1370.9s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 640/1024 loss=0.26457 elapsed=80.9s remaining~48.2s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1293.1s suite_total_estimate~1370.9s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 660/1024 loss=0.31412 elapsed=83.9s remaining~45.2s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1296.1s suite_total_estimate~1370.9s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 680/1024 loss=0.25449 elapsed=86.3s remaining~42.8s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1298.5s suite_total_estimate~1370.8s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 700/1024 loss=0.29752 elapsed=88.6s remaining~40.5s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1300.8s suite_total_estimate~1370.8s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 720/1024 loss=0.27012 elapsed=91.0s remaining~38.1s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1303.2s suite_total_estimate~1370.8s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 740/1024 loss=0.29966 elapsed=93.2s remaining~35.9s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1305.4s suite_total_estimate~1370.8s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 760/1024 loss=0.24826 elapsed=95.4s remaining~33.7s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1307.7s suite_total_estimate~1370.8s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 780/1024 loss=0.24887 elapsed=97.9s remaining~31.2s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1310.1s suite_total_estimate~1370.8s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 800/1024 loss=0.24363 elapsed=100.2s remaining~28.9s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1312.4s suite_total_estimate~1370.8s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 820/1024 loss=0.24607 elapsed=102.4s remaining~26.7s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1314.6s suite_total_estimate~1370.9s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 840/1024 loss=0.31798 elapsed=104.6s remaining~24.5s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1316.9s suite_total_estimate~1370.9s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 860/1024 loss=0.28732 elapsed=106.9s remaining~22.2s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1319.1s suite_total_estimate~1370.8s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 880/1024 loss=0.28628 elapsed=109.1s remaining~20.0s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1321.3s suite_total_estimate~1370.8s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 900/1024 loss=0.25315 elapsed=111.3s remaining~17.8s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1323.6s suite_total_estimate~1370.8s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 920/1024 loss=0.31708 elapsed=113.6s remaining~15.5s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1325.8s suite_total_estimate~1370.8s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 940/1024 loss=0.32316 elapsed=116.7s remaining~12.4s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1328.9s suite_total_estimate~1370.8s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 960/1024 loss=0.29325 elapsed=119.4s remaining~9.7s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1331.6s suite_total_estimate~1370.8s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 980/1024 loss=0.28686 elapsed=122.1s remaining~7.0s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1334.3s suite_total_estimate~1370.8s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 1000/1024 loss=0.29263 elapsed=124.7s remaining~4.4s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1336.9s suite_total_estimate~1370.8s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 1020/1024 loss=0.26836 elapsed=127.1s remaining~2.3s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1339.3s suite_total_estimate~1371.1s suite_finish~2026-09-24T12:00:00+00:00
+[C_extra] 1037/1024 loss=0.25093 elapsed=129.4s remaining~0.0s finish~2026-09-24T11:59:30+00:00 suite_elapsed=1341.6s suite_total_estimate~1371.1s suite_finish~2026-09-24T12:00:00+00:00
+[evaluation C] RESULTS=/Data3/sppark/komap/results/model_results_0924_7
+[valid C] 1/20 image_mIoU=87.0628% elapsed=3.0s remaining~57.6s finish~2026-09-24T12:00:31+00:00
+[valid C] 2/20 image_mIoU=68.9582% elapsed=3.8s remaining~34.6s finish~2026-09-24T12:00:09+00:00
+[valid C] 3/20 image_mIoU=72.3540% elapsed=4.7s remaining~26.7s finish~2026-09-24T12:00:02+00:00
+[valid C] 4/20 image_mIoU=76.5344% elapsed=6.9s remaining~27.6s finish~2026-09-24T12:00:05+00:00
+[valid C] 5/20 image_mIoU=70.1439% elapsed=9.0s remaining~27.1s finish~2026-09-24T12:00:07+00:00
+[valid C] 6/20 image_mIoU=84.3320% elapsed=9.6s remaining~22.3s finish~2026-09-24T12:00:03+00:00
+[valid C] 7/20 image_mIoU=76.8661% elapsed=12.0s remaining~22.3s finish~2026-09-24T12:00:05+00:00
+[valid C] 8/20 image_mIoU=78.2860% elapsed=13.8s remaining~20.8s finish~2026-09-24T12:00:05+00:00
+[valid C] 9/20 image_mIoU=80.0943% elapsed=16.3s remaining~19.9s finish~2026-09-24T12:00:07+00:00
+[valid C] 10/20 image_mIoU=81.4090% elapsed=18.3s remaining~18.3s finish~2026-09-24T12:00:07+00:00
+[valid C] 11/20 image_mIoU=81.1318% elapsed=19.9s remaining~16.3s finish~2026-09-24T12:00:07+00:00
+[valid C] 12/20 image_mIoU=86.6718% elapsed=21.8s remaining~14.6s finish~2026-09-24T12:00:07+00:00
+[valid C] 13/20 image_mIoU=79.8665% elapsed=23.3s remaining~12.5s finish~2026-09-24T12:00:07+00:00
+[valid C] 14/20 image_mIoU=80.0638% elapsed=23.9s remaining~10.2s finish~2026-09-24T12:00:05+00:00
+[valid C] 15/20 image_mIoU=80.6143% elapsed=24.4s remaining~8.1s finish~2026-09-24T12:00:03+00:00
+[valid C] 16/20 image_mIoU=72.5047% elapsed=25.0s remaining~6.3s finish~2026-09-24T12:00:02+00:00
+[valid C] 17/20 image_mIoU=39.6570% elapsed=25.6s remaining~4.5s finish~2026-09-24T12:00:01+00:00
+[valid C] 18/20 image_mIoU=79.5354% elapsed=26.2s remaining~2.9s finish~2026-09-24T12:00:00+00:00
+[valid C] 19/20 image_mIoU=70.7403% elapsed=26.7s remaining~1.4s finish~2026-09-24T11:59:59+00:00
+[valid C] 20/20 image_mIoU=80.2549% elapsed=28.6s remaining~0.0s finish~2026-09-24T11:59:59+00:00
+DONE | COMPARISON=/Data3/sppark/komap/results/model_results_0924_8 | elapsed=1370.7s

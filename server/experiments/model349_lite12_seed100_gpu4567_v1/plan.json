@@ -1,0 +1,1313 @@
+{
+  "training_count": 100,
+  "candidate_count": 84,
+  "seed_start": 3407,
+  "seed_end": 3506,
+  "gpus": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "metric": "image_mean_four_classes_empty0",
+  "tasks": [
+    {
+      "id": "baseline_326",
+      "kind": "baseline",
+      "model": "326",
+      "deps": [],
+      "priority": 0,
+      "expected_seconds": 120
+    },
+    {
+      "id": "baseline_329",
+      "kind": "baseline",
+      "model": "329",
+      "deps": [],
+      "priority": 0,
+      "expected_seconds": 120
+    },
+    {
+      "id": "baseline_base",
+      "kind": "baseline",
+      "model": "base",
+      "deps": [],
+      "priority": 0,
+      "expected_seconds": 300
+    },
+    {
+      "id": "baseline_336",
+      "kind": "baseline",
+      "model": "336",
+      "deps": [],
+      "priority": 0,
+      "expected_seconds": 120
+    },
+    {
+      "id": "baseline_269",
+      "kind": "baseline",
+      "model": "269",
+      "deps": [],
+      "priority": 0,
+      "expected_seconds": 120
+    },
+    {
+      "id": "baseline_score",
+      "kind": "select",
+      "model": "baseline",
+      "priority": 0,
+      "deps": [
+        "baseline_326",
+        "baseline_329",
+        "baseline_base",
+        "baseline_336",
+        "baseline_269"
+      ],
+      "expected_seconds": 20
+    },
+    {
+      "id": "m269_s3407",
+      "model": "269",
+      "seed": 3407,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 450
+    },
+    {
+      "id": "m269_s3408",
+      "model": "269",
+      "seed": 3408,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 450
+    },
+    {
+      "id": "m269_s3409",
+      "model": "269",
+      "seed": 3409,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 450
+    },
+    {
+      "id": "m269_s3410",
+      "model": "269",
+      "seed": 3410,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 450
+    },
+    {
+      "id": "m269_s3411",
+      "model": "269",
+      "seed": 3411,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 450
+    },
+    {
+      "id": "m269_s3412",
+      "model": "269",
+      "seed": 3412,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 450
+    },
+    {
+      "id": "m269_s3413",
+      "model": "269",
+      "seed": 3413,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 450
+    },
+    {
+      "id": "m269_s3414",
+      "model": "269",
+      "seed": 3414,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 450
+    },
+    {
+      "id": "m269_s3415",
+      "model": "269",
+      "seed": 3415,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 450
+    },
+    {
+      "id": "m269_s3416",
+      "model": "269",
+      "seed": 3416,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 450
+    },
+    {
+      "id": "m269_s3417",
+      "model": "269",
+      "seed": 3417,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 450
+    },
+    {
+      "id": "m269_s3418",
+      "model": "269",
+      "seed": 3418,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 450
+    },
+    {
+      "id": "m269_s3419",
+      "model": "269",
+      "seed": 3419,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 450
+    },
+    {
+      "id": "m269_s3420",
+      "model": "269",
+      "seed": 3420,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 450
+    },
+    {
+      "id": "m269_s3421",
+      "model": "269",
+      "seed": 3421,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 450
+    },
+    {
+      "id": "m269_s3422",
+      "model": "269",
+      "seed": 3422,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 450
+    },
+    {
+      "id": "m336_s3423",
+      "model": "336",
+      "seed": 3423,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 20,
+      "expected_seconds": 3000
+    },
+    {
+      "id": "m336_s3424",
+      "model": "336",
+      "seed": 3424,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 20,
+      "expected_seconds": 3000
+    },
+    {
+      "id": "m336_s3425",
+      "model": "336",
+      "seed": 3425,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 20,
+      "expected_seconds": 3000
+    },
+    {
+      "id": "m336_s3426",
+      "model": "336",
+      "seed": 3426,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 20,
+      "expected_seconds": 3000
+    },
+    {
+      "id": "m336_s3427",
+      "model": "336",
+      "seed": 3427,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 20,
+      "expected_seconds": 3000
+    },
+    {
+      "id": "m336_s3428",
+      "model": "336",
+      "seed": 3428,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 20,
+      "expected_seconds": 3000
+    },
+    {
+      "id": "m336_s3429",
+      "model": "336",
+      "seed": 3429,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 20,
+      "expected_seconds": 3000
+    },
+    {
+      "id": "m336_s3430",
+      "model": "336",
+      "seed": 3430,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 20,
+      "expected_seconds": 3000
+    },
+    {
+      "id": "m336_s3431",
+      "model": "336",
+      "seed": 3431,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 20,
+      "expected_seconds": 3000
+    },
+    {
+      "id": "m336_s3432",
+      "model": "336",
+      "seed": 3432,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 20,
+      "expected_seconds": 3000
+    },
+    {
+      "id": "m336_s3433",
+      "model": "336",
+      "seed": 3433,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 20,
+      "expected_seconds": 3000
+    },
+    {
+      "id": "m336_s3434",
+      "model": "336",
+      "seed": 3434,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 20,
+      "expected_seconds": 3000
+    },
+    {
+      "id": "m109_s3435",
+      "model": "109",
+      "seed": 3435,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 300
+    },
+    {
+      "id": "m109_s3436",
+      "model": "109",
+      "seed": 3436,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 300
+    },
+    {
+      "id": "m109_s3437",
+      "model": "109",
+      "seed": 3437,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 300
+    },
+    {
+      "id": "m109_s3438",
+      "model": "109",
+      "seed": 3438,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 300
+    },
+    {
+      "id": "m109_s3439",
+      "model": "109",
+      "seed": 3439,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 300
+    },
+    {
+      "id": "m109_s3440",
+      "model": "109",
+      "seed": 3440,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 300
+    },
+    {
+      "id": "m109_s3441",
+      "model": "109",
+      "seed": 3441,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 300
+    },
+    {
+      "id": "m109_s3442",
+      "model": "109",
+      "seed": 3442,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 300
+    },
+    {
+      "id": "m109_s3443",
+      "model": "109",
+      "seed": 3443,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 300
+    },
+    {
+      "id": "m109_s3444",
+      "model": "109",
+      "seed": 3444,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 300
+    },
+    {
+      "id": "m109_s3445",
+      "model": "109",
+      "seed": 3445,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 300
+    },
+    {
+      "id": "m109_s3446",
+      "model": "109",
+      "seed": 3446,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 300
+    },
+    {
+      "id": "m109_s3447",
+      "model": "109",
+      "seed": 3447,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 300
+    },
+    {
+      "id": "m109_s3448",
+      "model": "109",
+      "seed": 3448,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 300
+    },
+    {
+      "id": "m109_s3449",
+      "model": "109",
+      "seed": 3449,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 300
+    },
+    {
+      "id": "m109_s3450",
+      "model": "109",
+      "seed": 3450,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 300
+    },
+    {
+      "id": "mrestart51_s3451",
+      "model": "restart51",
+      "seed": 3451,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 600
+    },
+    {
+      "id": "mrestart51_s3452",
+      "model": "restart51",
+      "seed": 3452,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 600
+    },
+    {
+      "id": "mrestart51_s3453",
+      "model": "restart51",
+      "seed": 3453,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 600
+    },
+    {
+      "id": "mrestart51_s3454",
+      "model": "restart51",
+      "seed": 3454,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 600
+    },
+    {
+      "id": "mrestart51_s3455",
+      "model": "restart51",
+      "seed": 3455,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 600
+    },
+    {
+      "id": "mrestart51_s3456",
+      "model": "restart51",
+      "seed": 3456,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 600
+    },
+    {
+      "id": "mrestart51_s3457",
+      "model": "restart51",
+      "seed": 3457,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 600
+    },
+    {
+      "id": "mrestart51_s3458",
+      "model": "restart51",
+      "seed": 3458,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 600
+    },
+    {
+      "id": "mrestart51_s3459",
+      "model": "restart51",
+      "seed": 3459,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 600
+    },
+    {
+      "id": "mrestart51_s3460",
+      "model": "restart51",
+      "seed": 3460,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 600
+    },
+    {
+      "id": "mrestart51_s3461",
+      "model": "restart51",
+      "seed": 3461,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 600
+    },
+    {
+      "id": "mrestart51_s3462",
+      "model": "restart51",
+      "seed": 3462,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 600
+    },
+    {
+      "id": "mrestart51_s3463",
+      "model": "restart51",
+      "seed": 3463,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 600
+    },
+    {
+      "id": "mrestart51_s3464",
+      "model": "restart51",
+      "seed": 3464,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 600
+    },
+    {
+      "id": "mrestart51_s3465",
+      "model": "restart51",
+      "seed": 3465,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 600
+    },
+    {
+      "id": "mrestart51_s3466",
+      "model": "restart51",
+      "seed": 3466,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 600
+    },
+    {
+      "id": "mrestart59_s3467",
+      "model": "restart59",
+      "seed": 3467,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 550
+    },
+    {
+      "id": "mrestart59_s3468",
+      "model": "restart59",
+      "seed": 3468,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 550
+    },
+    {
+      "id": "mrestart59_s3469",
+      "model": "restart59",
+      "seed": 3469,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 550
+    },
+    {
+      "id": "mrestart59_s3470",
+      "model": "restart59",
+      "seed": 3470,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 550
+    },
+    {
+      "id": "mrestart59_s3471",
+      "model": "restart59",
+      "seed": 3471,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 550
+    },
+    {
+      "id": "mrestart59_s3472",
+      "model": "restart59",
+      "seed": 3472,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 550
+    },
+    {
+      "id": "mrestart59_s3473",
+      "model": "restart59",
+      "seed": 3473,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 550
+    },
+    {
+      "id": "mrestart59_s3474",
+      "model": "restart59",
+      "seed": 3474,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 550
+    },
+    {
+      "id": "mrestart61_s3475",
+      "model": "restart61",
+      "seed": 3475,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 650
+    },
+    {
+      "id": "mrestart61_s3476",
+      "model": "restart61",
+      "seed": 3476,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 650
+    },
+    {
+      "id": "mrestart61_s3477",
+      "model": "restart61",
+      "seed": 3477,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 650
+    },
+    {
+      "id": "mrestart61_s3478",
+      "model": "restart61",
+      "seed": 3478,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 650
+    },
+    {
+      "id": "mrestart61_s3479",
+      "model": "restart61",
+      "seed": 3479,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 650
+    },
+    {
+      "id": "mrestart61_s3480",
+      "model": "restart61",
+      "seed": 3480,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 650
+    },
+    {
+      "id": "mrestart61_s3481",
+      "model": "restart61",
+      "seed": 3481,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 650
+    },
+    {
+      "id": "mrestart61_s3482",
+      "model": "restart61",
+      "seed": 3482,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 10,
+      "expected_seconds": 650
+    },
+    {
+      "id": "m326_s3483",
+      "model": "326",
+      "seed": 3483,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 30,
+      "expected_seconds": 3120,
+      "fold": 1,
+      "group": "m326_set1"
+    },
+    {
+      "id": "m326_s3484",
+      "model": "326",
+      "seed": 3484,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 30,
+      "expected_seconds": 3120,
+      "fold": 3,
+      "group": "m326_set1"
+    },
+    {
+      "id": "m326_set1",
+      "kind": "ensemble",
+      "model": "326",
+      "deps": [
+        "m326_s3483",
+        "m326_s3484"
+      ],
+      "priority": 1,
+      "expected_seconds": 200
+    },
+    {
+      "id": "m326_s3485",
+      "model": "326",
+      "seed": 3485,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 30,
+      "expected_seconds": 3120,
+      "fold": 1,
+      "group": "m326_set2"
+    },
+    {
+      "id": "m326_s3486",
+      "model": "326",
+      "seed": 3486,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 30,
+      "expected_seconds": 3120,
+      "fold": 3,
+      "group": "m326_set2"
+    },
+    {
+      "id": "m326_set2",
+      "kind": "ensemble",
+      "model": "326",
+      "deps": [
+        "m326_s3485",
+        "m326_s3486"
+      ],
+      "priority": 1,
+      "expected_seconds": 200
+    },
+    {
+      "id": "m326_s3487",
+      "model": "326",
+      "seed": 3487,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 30,
+      "expected_seconds": 3120,
+      "fold": 1,
+      "group": "m326_set3"
+    },
+    {
+      "id": "m326_s3488",
+      "model": "326",
+      "seed": 3488,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 30,
+      "expected_seconds": 3120,
+      "fold": 3,
+      "group": "m326_set3"
+    },
+    {
+      "id": "m326_set3",
+      "kind": "ensemble",
+      "model": "326",
+      "deps": [
+        "m326_s3487",
+        "m326_s3488"
+      ],
+      "priority": 1,
+      "expected_seconds": 200
+    },
+    {
+      "id": "m326_s3489",
+      "model": "326",
+      "seed": 3489,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 30,
+      "expected_seconds": 3120,
+      "fold": 1,
+      "group": "m326_set4"
+    },
+    {
+      "id": "m326_s3490",
+      "model": "326",
+      "seed": 3490,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 30,
+      "expected_seconds": 3120,
+      "fold": 3,
+      "group": "m326_set4"
+    },
+    {
+      "id": "m326_set4",
+      "kind": "ensemble",
+      "model": "326",
+      "deps": [
+        "m326_s3489",
+        "m326_s3490"
+      ],
+      "priority": 1,
+      "expected_seconds": 200
+    },
+    {
+      "id": "m329_s3491",
+      "model": "329",
+      "seed": 3491,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 30,
+      "expected_seconds": 3120,
+      "fold": 1,
+      "group": "m329_set1"
+    },
+    {
+      "id": "m329_s3492",
+      "model": "329",
+      "seed": 3492,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 30,
+      "expected_seconds": 3120,
+      "fold": 2,
+      "group": "m329_set1"
+    },
+    {
+      "id": "m329_s3493",
+      "model": "329",
+      "seed": 3493,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 30,
+      "expected_seconds": 3120,
+      "fold": 3,
+      "group": "m329_set1"
+    },
+    {
+      "id": "m329_s3494",
+      "model": "329",
+      "seed": 3494,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 30,
+      "expected_seconds": 3120,
+      "fold": 4,
+      "group": "m329_set1"
+    },
+    {
+      "id": "m329_set1",
+      "kind": "ensemble",
+      "model": "329",
+      "deps": [
+        "m329_s3491",
+        "m329_s3492",
+        "m329_s3493",
+        "m329_s3494"
+      ],
+      "priority": 1,
+      "expected_seconds": 200
+    },
+    {
+      "id": "m329_s3495",
+      "model": "329",
+      "seed": 3495,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 30,
+      "expected_seconds": 3120,
+      "fold": 1,
+      "group": "m329_set2"
+    },
+    {
+      "id": "m329_s3496",
+      "model": "329",
+      "seed": 3496,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 30,
+      "expected_seconds": 3120,
+      "fold": 2,
+      "group": "m329_set2"
+    },
+    {
+      "id": "m329_s3497",
+      "model": "329",
+      "seed": 3497,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 30,
+      "expected_seconds": 3120,
+      "fold": 3,
+      "group": "m329_set2"
+    },
+    {
+      "id": "m329_s3498",
+      "model": "329",
+      "seed": 3498,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 30,
+      "expected_seconds": 3120,
+      "fold": 4,
+      "group": "m329_set2"
+    },
+    {
+      "id": "m329_set2",
+      "kind": "ensemble",
+      "model": "329",
+      "deps": [
+        "m329_s3495",
+        "m329_s3496",
+        "m329_s3497",
+        "m329_s3498"
+      ],
+      "priority": 1,
+      "expected_seconds": 200
+    },
+    {
+      "id": "m329_s3499",
+      "model": "329",
+      "seed": 3499,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 30,
+      "expected_seconds": 3120,
+      "fold": 1,
+      "group": "m329_set3"
+    },
+    {
+      "id": "m329_s3500",
+      "model": "329",
+      "seed": 3500,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 30,
+      "expected_seconds": 3120,
+      "fold": 2,
+      "group": "m329_set3"
+    },
+    {
+      "id": "m329_s3501",
+      "model": "329",
+      "seed": 3501,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 30,
+      "expected_seconds": 3120,
+      "fold": 3,
+      "group": "m329_set3"
+    },
+    {
+      "id": "m329_s3502",
+      "model": "329",
+      "seed": 3502,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 30,
+      "expected_seconds": 3120,
+      "fold": 4,
+      "group": "m329_set3"
+    },
+    {
+      "id": "m329_set3",
+      "kind": "ensemble",
+      "model": "329",
+      "deps": [
+        "m329_s3499",
+        "m329_s3500",
+        "m329_s3501",
+        "m329_s3502"
+      ],
+      "priority": 1,
+      "expected_seconds": 200
+    },
+    {
+      "id": "m329_s3503",
+      "model": "329",
+      "seed": 3503,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 30,
+      "expected_seconds": 3120,
+      "fold": 1,
+      "group": "m329_set4"
+    },
+    {
+      "id": "m329_s3504",
+      "model": "329",
+      "seed": 3504,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 30,
+      "expected_seconds": 3120,
+      "fold": 2,
+      "group": "m329_set4"
+    },
+    {
+      "id": "m329_s3505",
+      "model": "329",
+      "seed": 3505,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 30,
+      "expected_seconds": 3120,
+      "fold": 3,
+      "group": "m329_set4"
+    },
+    {
+      "id": "m329_s3506",
+      "model": "329",
+      "seed": 3506,
+      "kind": "train",
+      "deps": [
+        "baseline_score"
+      ],
+      "priority": 30,
+      "expected_seconds": 3120,
+      "fold": 4,
+      "group": "m329_set4"
+    },
+    {
+      "id": "m329_set4",
+      "kind": "ensemble",
+      "model": "329",
+      "deps": [
+        "m329_s3503",
+        "m329_s3504",
+        "m329_s3505",
+        "m329_s3506"
+      ],
+      "priority": 1,
+      "expected_seconds": 200
+    }
+  ]
+}

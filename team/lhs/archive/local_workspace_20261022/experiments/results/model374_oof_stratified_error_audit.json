@@ -1,0 +1,1834 @@
+{
+  "model": 374,
+  "scope": "70 train images, exactly-once specimen-grouped OOF; valid/test excluded",
+  "metric": "image-wise mean of four class IoUs; empty union=0",
+  "boundary_radius_pixels": 1,
+  "images": 70,
+  "specimen_groups": 59,
+  "overall": {
+    "images": 70,
+    "image_mean_miou_empty0": 0.7928232907274607,
+    "class_mean_iou_empty0": {
+      "Al": 0.9293396553195519,
+      "Al3Ni": 0.7961652921881885,
+      "Primary_Si": 0.8635164036792721,
+      "Eutectic_Si": 0.5822718117228303
+    },
+    "mean_gt_boundary_band_fraction": 0.45951891652565485,
+    "mean_error_fraction_in_gt_boundary_band": 0.8859385659278848,
+    "mean_gray_mean": 170.35884552001954,
+    "mean_gray_std": 57.725674057006835
+  },
+  "by_resolution": {
+    "1230x875": {
+      "images": 20,
+      "image_mean_miou_empty0": 0.798427670046187,
+      "class_mean_iou_empty0": {
+        "Al": 0.9241812604108277,
+        "Al3Ni": 0.8093835728966073,
+        "Primary_Si": 0.8722178352221819,
+        "Eutectic_Si": 0.5879280116551306
+      },
+      "mean_gt_boundary_band_fraction": 0.46116250871080144,
+      "mean_error_fraction_in_gt_boundary_band": 0.8872335671360905,
+      "mean_gray_mean": 178.58465805053712,
+      "mean_gray_std": 50.19727973937988
+    },
+    "1278x909": {
+      "images": 24,
+      "image_mean_miou_empty0": 0.7940885861784347,
+      "class_mean_iou_empty0": {
+        "Al": 0.9305754269007606,
+        "Al3Ni": 0.809985966971348,
+        "Primary_Si": 0.869509420197416,
+        "Eutectic_Si": 0.5662835306442138
+      },
+      "mean_gt_boundary_band_fraction": 0.41750910876168473,
+      "mean_error_fraction_in_gt_boundary_band": 0.8635485023280655,
+      "mean_gray_mean": 163.00460815429688,
+      "mean_gray_std": 61.05349683761597
+    },
+    "1440x1024": {
+      "images": 9,
+      "image_mean_miou_empty0": 0.7979818719326158,
+      "class_mean_iou_empty0": {
+        "Al": 0.9452654621899907,
+        "Al3Ni": 0.8435714388768418,
+        "Primary_Si": 0.8657428501442663,
+        "Eutectic_Si": 0.5373477365193652
+      },
+      "mean_gt_boundary_band_fraction": 0.3275185667438272,
+      "mean_error_fraction_in_gt_boundary_band": 0.8409609856557707,
+      "mean_gray_mean": 183.18455335828992,
+      "mean_gray_std": 45.23489464653863
+    },
+    "675x480": {
+      "images": 17,
+      "image_mean_miou_empty0": 0.781712590254267,
+      "class_mean_iou_empty0": {
+        "Al": 0.9252324269896418,
+        "Al3Ni": 0.7360054610610075,
+        "Primary_Si": 0.8436399892393542,
+        "Eutectic_Si": 0.6219724837270642
+      },
+      "mean_gt_boundary_band_fraction": 0.5867757806826434,
+      "mean_error_fraction_in_gt_boundary_band": 0.9398361967914486,
+      "mean_gray_mean": 164.27379114487593,
+      "mean_gray_std": 68.49727136948529
+    }
+  },
+  "by_step": {
+    "step1": {
+      "images": 13,
+      "image_mean_miou_empty0": 0.7849132743289643,
+      "class_mean_iou_empty0": {
+        "Al": 0.9358964606651109,
+        "Al3Ni": 0.7939874486786009,
+        "Primary_Si": 0.7875122936152796,
+        "Eutectic_Si": 0.6222568943568654
+      },
+      "mean_gt_boundary_band_fraction": 0.4690460161863069,
+      "mean_error_fraction_in_gt_boundary_band": 0.8742619009604079,
+      "mean_gray_mean": 171.19658836951623,
+      "mean_gray_std": 61.934861990121696
+    },
+    "step2": {
+      "images": 18,
+      "image_mean_miou_empty0": 0.8272782565221977,
+      "class_mean_iou_empty0": {
+        "Al": 0.9463645507320015,
+        "Al3Ni": 0.8045119099062267,
+        "Primary_Si": 0.8901784744273312,
+        "Eutectic_Si": 0.6680580910232314
+      },
+      "mean_gt_boundary_band_fraction": 0.43513746782841056,
+      "mean_error_fraction_in_gt_boundary_band": 0.8954362488480362,
+      "mean_gray_mean": 171.26459418402777,
+      "mean_gray_std": 61.528102238972984
+    },
+    "step3": {
+      "images": 12,
+      "image_mean_miou_empty0": 0.8083500208291436,
+      "class_mean_iou_empty0": {
+        "Al": 0.9343864115570185,
+        "Al3Ni": 0.8118472949727683,
+        "Primary_Si": 0.9180289600300268,
+        "Eutectic_Si": 0.5691374167567613
+      },
+      "mean_gt_boundary_band_fraction": 0.4820385104707437,
+      "mean_error_fraction_in_gt_boundary_band": 0.9103770889797812,
+      "mean_gray_mean": 170.19152959187826,
+      "mean_gray_std": 58.76641432444254
+    },
+    "step4": {
+      "images": 27,
+      "image_mean_miou_empty0": 0.7667610710109791,
+      "class_mean_iou_empty0": {
+        "Al": 0.9125897419208129,
+        "Al3Ni": 0.7846796926802254,
+        "Primary_Si": 0.8581084585369676,
+        "Eutectic_Si": 0.51166639090591
+      },
+      "mean_gt_boundary_band_fraction": 0.46117738517827933,
+      "mean_error_fraction_in_gt_boundary_band": 0.8743673094609116,
+      "mean_gray_mean": 169.42601804380064,
+      "mean_gray_std": 52.70152466385453
+    }
+  },
+  "by_resolution_and_step": {
+    "1230x875__step1": {
+      "images": 4,
+      "image_mean_miou_empty0": 0.7625423312894541,
+      "class_mean_iou_empty0": {
+        "Al": 0.9033564448014115,
+        "Al3Ni": 0.7559066118925529,
+        "Primary_Si": 0.7905974414064854,
+        "Eutectic_Si": 0.6003088270573665
+      },
+      "mean_gt_boundary_band_fraction": 0.47635331010452964,
+      "mean_error_fraction_in_gt_boundary_band": 0.853255135123717,
+      "mean_gray_mean": 182.20014190673828,
+      "mean_gray_std": 48.99919891357422
+    },
+    "1230x875__step2": {
+      "images": 6,
+      "image_mean_miou_empty0": 0.8433122311914584,
+      "class_mean_iou_empty0": {
+        "Al": 0.956915463518253,
+        "Al3Ni": 0.8535354325480452,
+        "Primary_Si": 0.884706850249986,
+        "Eutectic_Si": 0.6780911784495488
+      },
+      "mean_gt_boundary_band_fraction": 0.38451691831204027,
+      "mean_error_fraction_in_gt_boundary_band": 0.8821244431871446,
+      "mean_gray_mean": 179.77620951334634,
+      "mean_gray_std": 52.75371170043945
+    },
+    "1230x875__step3": {
+      "images": 4,
+      "image_mean_miou_empty0": 0.8202680857158884,
+      "class_mean_iou_empty0": {
+        "Al": 0.9344417890448901,
+        "Al3Ni": 0.8306688913399785,
+        "Primary_Si": 0.9310820958890597,
+        "Eutectic_Si": 0.5848795665896251
+      },
+      "mean_gt_boundary_band_fraction": 0.5334724738675958,
+      "mean_error_fraction_in_gt_boundary_band": 0.9406526657568487,
+      "mean_gray_mean": 175.7784538269043,
+      "mean_gray_std": 54.24220943450928
+    },
+    "1230x875__step4": {
+      "images": 6,
+      "image_mean_miou_empty0": 0.7629063909589368,
+      "class_mean_iou_empty0": {
+        "Al": 0.8984899152869721,
+        "Al3Ni": 0.786692808285625,
+        "Primary_Si": 0.8748995756269241,
+        "Eutectic_Si": 0.49154326463622583
+      },
+      "mean_gt_boundary_band_fraction": 0.4794742547425475,
+      "mean_error_fraction_in_gt_boundary_band": 0.8793822466794466,
+      "mean_gray_mean": 176.85358683268228,
+      "mean_gray_std": 45.74294853210449
+    },
+    "1278x909__step1": {
+      "images": 3,
+      "image_mean_miou_empty0": 0.7849036286088683,
+      "class_mean_iou_empty0": {
+        "Al": 0.9570056747461407,
+        "Al3Ni": 0.825838747065004,
+        "Primary_Si": 0.8368430844765196,
+        "Eutectic_Si": 0.5199270081478091
+      },
+      "mean_gt_boundary_band_fraction": 0.32034147598380075,
+      "mean_error_fraction_in_gt_boundary_band": 0.7915851434232005,
+      "mean_gray_mean": 166.45747884114584,
+      "mean_gray_std": 69.63772837320964
+    },
+    "1278x909__step2": {
+      "images": 6,
+      "image_mean_miou_empty0": 0.8238039817530121,
+      "class_mean_iou_empty0": {
+        "Al": 0.9496091678160904,
+        "Al3Ni": 0.8164756495767947,
+        "Primary_Si": 0.8745558045705879,
+        "Eutectic_Si": 0.6545753050485754
+      },
+      "mean_gt_boundary_band_fraction": 0.36260690492627773,
+      "mean_error_fraction_in_gt_boundary_band": 0.8676504849480137,
+      "mean_gray_mean": 168.4539057413737,
+      "mean_gray_std": 60.401862462361656
+    },
+    "1278x909__step3": {
+      "images": 4,
+      "image_mean_miou_empty0": 0.8405327236517546,
+      "class_mean_iou_empty0": {
+        "Al": 0.9441194241991265,
+        "Al3Ni": 0.8670017689801162,
+        "Primary_Si": 0.9180547402106617,
+        "Eutectic_Si": 0.6329549612171135
+      },
+      "mean_gt_boundary_band_fraction": 0.40743861162329065,
+      "mean_error_fraction_in_gt_boundary_band": 0.8735856452359845,
+      "mean_gray_mean": 157.3971405029297,
+      "mean_gray_std": 66.43087196350098
+    },
+    "1278x909__step4": {
+      "images": 11,
+      "image_mean_miou_empty0": 0.7634963997573396,
+      "class_mean_iou_empty0": {
+        "Al": 0.908060047062435,
+        "Al3Ni": 0.7813896357032821,
+        "Primary_Si": 0.8580130039129322,
+        "Eutectic_Si": 0.5065229123507088
+      },
+      "mean_gt_boundary_band_fraction": 0.4776180278434729,
+      "mean_error_fraction_in_gt_boundary_band": 0.8772875577247227,
+      "mean_gray_mean": 161.12965115633878,
+      "mean_gray_std": 57.1123705777255
+    },
+    "1440x1024__step1": {
+      "images": 1,
+      "image_mean_miou_empty0": 0.876004705921026,
+      "class_mean_iou_empty0": {
+        "Al": 0.9556778043118186,
+        "Al3Ni": 0.9196937321937322,
+        "Primary_Si": 0.9256423666598871,
+        "Eutectic_Si": 0.703004920518666
+      },
+      "mean_gt_boundary_band_fraction": 0.2614691840277778,
+      "mean_error_fraction_in_gt_boundary_band": 0.8751943072299562,
+      "mean_gray_mean": 194.5240478515625,
+      "mean_gray_std": 44.290382385253906
+    },
+    "1440x1024__step3": {
+      "images": 2,
+      "image_mean_miou_empty0": 0.815736313995552,
+      "class_mean_iou_empty0": {
+        "Al": 0.9513297834459136,
+        "Al3Ni": 0.862643034529077,
+        "Primary_Si": 0.9196184817452135,
+        "Eutectic_Si": 0.5293539562620041
+      },
+      "mean_gt_boundary_band_fraction": 0.33662957085503475,
+      "mean_error_fraction_in_gt_boundary_band": 0.8881475665255179,
+      "mean_gray_mean": 191.79383850097656,
+      "mean_gray_std": 44.871681213378906
+    },
+    "1440x1024__step4": {
+      "images": 6,
+      "image_mean_miou_empty0": 0.779059918913569,
+      "class_mean_iou_empty0": {
+        "Al": 0.9415086314177116,
+        "Al3Ni": 0.8245271914399485,
+        "Primary_Si": 0.8378010535246805,
+        "Eutectic_Si": 0.5124027992719352
+      },
+      "mean_gt_boundary_band_fraction": 0.33548979582609956,
+      "mean_error_fraction_in_gt_boundary_band": 0.8195265717701573,
+      "mean_gray_mean": 178.42487589518228,
+      "mean_gray_std": 45.51338450113932
+    },
+    "675x480__step1": {
+      "images": 5,
+      "image_mean_miou_empty0": 0.7845975298742174,
+      "class_mean_iou_empty0": {
+        "Al": 0.945306676178111,
+        "Al3Ni": 0.7802000823725715,
+        "Primary_Si": 0.7278196862566496,
+        "Eutectic_Si": 0.6850636746895378
+      },
+      "mean_gt_boundary_band_fraction": 0.5939382716049384,
+      "mean_error_fraction_in_gt_boundary_band": 0.9404868868981755,
+      "mean_gray_mean": 160.57171936035155,
+      "mean_gray_std": 71.19056854248046
+    },
+    "675x480__step2": {
+      "images": 6,
+      "image_mean_miou_empty0": 0.8147185566221227,
+      "class_mean_iou_empty0": {
+        "Al": 0.9325690208616612,
+        "Al3Ni": 0.7435246475938398,
+        "Primary_Si": 0.91127276846142,
+        "Eutectic_Si": 0.67150778957157
+      },
+      "mean_gt_boundary_band_fraction": 0.5582885802469136,
+      "mean_error_fraction_in_gt_boundary_band": 0.9365338184089501,
+      "mean_gray_mean": 165.56366729736328,
+      "mean_gray_std": 71.42873255411784
+    },
+    "675x480__step3": {
+      "images": 2,
+      "image_mean_miou_empty0": 0.7127621922440248,
+      "class_mean_iou_empty0": {
+        "Al": 0.8978662594081634,
+        "Al3Ni": 0.6130994146673442,
+        "Primary_Si": 0.8902816062355052,
+        "Eutectic_Si": 0.44980148866508673
+      },
+      "mean_gt_boundary_band_fraction": 0.6737793209876544,
+      "mean_error_fraction_in_gt_boundary_band": 0.9456383453675029,
+      "mean_gray_mean": 163.004150390625,
+      "mean_gray_std": 66.38064193725586
+    },
+    "675x480__step4": {
+      "images": 4,
+      "image_mean_miou_empty0": 0.7630726651826661,
+      "class_mean_iou_empty0": {
+        "Al": 0.9028178084867654,
+        "Al3Ni": 0.7309364278191354,
+        "Primary_Si": 0.8636453906365612,
+        "Eutectic_Si": 0.5548910337882025
+      },
+      "mean_gt_boundary_band_fraction": 0.5770516975308642,
+      "mean_error_fraction_in_gt_boundary_band": 0.9410753274437603,
+      "mean_gray_mean": 167.60138702392578,
+      "mean_gray_std": 61.79177284240723
+    }
+  },
+  "group_bootstrap_subgroup_contrasts": {
+    "675x480_vs_other_resolutions": {
+      "images_selected": 17,
+      "images_other": 53,
+      "observed_delta_selected_minus_other_percentage_points": {
+        "image_mean_miou_empty0": -1.4674510058935164,
+        "Al": -0.5424641190447055,
+        "Al3Ni": -7.945638073401284,
+        "Primary_Si": -2.6251868128193245,
+        "Eutectic_Si": 5.24348498169126
+      },
+      "specimen_group_bootstrap_95ci_percentage_points": {
+        "image_mean_miou_empty0": [
+          -6.599724760102744,
+          3.3492484649593766
+        ],
+        "Al": [
+          -2.9340017439284334,
+          1.8698530032626814
+        ],
+        "Al3Ni": [
+          -16.328876784966635,
+          -0.09942116619734723
+        ],
+        "Primary_Si": [
+          -15.842465967418637,
+          6.59723269303278
+        ],
+        "Eutectic_Si": [
+          -1.7344821532198798,
+          12.074942106620117
+        ]
+      },
+      "bootstrap_draws": 20000,
+      "interpretation_guard": "descriptive subgroup contrast; not a test-set score or causal effect"
+    },
+    "step4_vs_other_steps": {
+      "images_selected": 27,
+      "images_other": 43,
+      "observed_delta_selected_minus_other_percentage_points": {
+        "image_mean_miou_empty0": -4.242686930590045,
+        "Al": -2.7267300881668066,
+        "Al3Ni": -1.869748757110301,
+        "Primary_Si": -0.8803631627007036,
+        "Eutectic_Si": -11.493905714382379
+      },
+      "specimen_group_bootstrap_95ci_percentage_points": {
+        "image_mean_miou_empty0": [
+          -7.895418791860203,
+          -0.6373545307869304
+        ],
+        "Al": [
+          -4.588715175661407,
+          -1.034736007045489
+        ],
+        "Al3Ni": [
+          -6.853046048247432,
+          3.1928253440673697
+        ],
+        "Primary_Si": [
+          -6.939203689383462,
+          5.791299329055107
+        ],
+        "Eutectic_Si": [
+          -18.633537233753966,
+          -4.540940196134024
+        ]
+      },
+      "bootstrap_draws": 20000,
+      "interpretation_guard": "descriptive subgroup contrast; not a test-set score or causal effect"
+    },
+    "top_boundary_density_tertile_vs_lower_two_thirds": {
+      "boundary_fraction_threshold": 0.5335189230973175,
+      "images_selected": 24,
+      "images_other": 46,
+      "observed_delta_selected_minus_other_percentage_points": {
+        "image_mean_miou_empty0": -8.83259598249303,
+        "Al": -4.787219330297332,
+        "Al3Ni": -13.223093597055946,
+        "Primary_Si": -6.135041630157434,
+        "Eutectic_Si": -11.185029372461408
+      },
+      "specimen_group_bootstrap_95ci_percentage_points": {
+        "image_mean_miou_empty0": [
+          -12.684985564126912,
+          -5.4638679776418435
+        ],
+        "Al": [
+          -6.815776173623317,
+          -3.0691584897430197
+        ],
+        "Al3Ni": [
+          -19.547200575802616,
+          -7.8993645319472625
+        ],
+        "Primary_Si": [
+          -15.959761767190201,
+          1.3043870017656718
+        ],
+        "Eutectic_Si": [
+          -18.06011685114282,
+          -4.773508587069537
+        ]
+      },
+      "bootstrap_draws": 20000,
+      "interpretation_guard": "descriptive subgroup contrast; not a test-set score or causal effect"
+    }
+  },
+  "correlation_across_images": {
+    "image_miou_vs_gt_boundary_fraction_pearson": -0.5061057657462888,
+    "image_miou_vs_gray_std_pearson": 0.05128584104128184,
+    "image_miou_vs_gray_mean_pearson": 0.1310873187057721
+  },
+  "boundary_pair_confusion_pixels": [
+    [
+      14090695,
+      621153,
+      54121,
+      179859
+    ],
+    [
+      1203014,
+      6656990,
+      95437,
+      519006
+    ],
+    [
+      101707,
+      125716,
+      1327762,
+      160580
+    ],
+    [
+      401560,
+      617983,
+      96302,
+      2893619
+    ]
+  ],
+  "boundary_pair_directional_errors": {
+    "Al_vs_Al3Ni": {
+      "Al_gt_interface_pixels": 5521416,
+      "Al_interface_pred_as_Al3Ni": 858265,
+      "Al3Ni_gt_interface_pixels": 5521416,
+      "Al3Ni_interface_pred_as_Al": 1728344,
+      "Al_to_Al3Ni_rate": 0.15544291536808674,
+      "Al3Ni_to_Al_rate": 0.31302549925598794,
+      "directional_rate_difference": -0.1575825838879012
+    },
+    "Al_vs_Primary_Si": {
+      "Al_gt_interface_pixels": 697702,
+      "Al_interface_pred_as_Primary_Si": 94381,
+      "Primary_Si_gt_interface_pixels": 697702,
+      "Primary_Si_interface_pred_as_Al": 157940,
+      "Al_to_Primary_Si_rate": 0.13527408549782,
+      "Primary_Si_to_Al_rate": 0.22637171743810394,
+      "directional_rate_difference": -0.09109763194028395
+    },
+    "Al_vs_Eutectic_Si": {
+      "Al_gt_interface_pixels": 2856217,
+      "Al_interface_pred_as_Eutectic_Si": 284071,
+      "Eutectic_Si_gt_interface_pixels": 2856217,
+      "Eutectic_Si_interface_pred_as_Al": 692266,
+      "Al_to_Eutectic_Si_rate": 0.09945707906647148,
+      "Eutectic_Si_to_Al_rate": 0.24237164053011379,
+      "directional_rate_difference": -0.1429145614636423
+    },
+    "Al3Ni_vs_Primary_Si": {
+      "Al3Ni_gt_interface_pixels": 413170,
+      "Al3Ni_interface_pred_as_Primary_Si": 97202,
+      "Primary_Si_gt_interface_pixels": 413170,
+      "Primary_Si_interface_pred_as_Al3Ni": 102364,
+      "Al3Ni_to_Primary_Si_rate": 0.2352590943195295,
+      "Primary_Si_to_Al3Ni_rate": 0.24775274100249292,
+      "directional_rate_difference": -0.012493646682963433
+    },
+    "Al3Ni_vs_Eutectic_Si": {
+      "Al3Ni_gt_interface_pixels": 739146,
+      "Al3Ni_interface_pred_as_Eutectic_Si": 147390,
+      "Eutectic_Si_gt_interface_pixels": 739146,
+      "Eutectic_Si_interface_pred_as_Al3Ni": 307880,
+      "Al3Ni_to_Eutectic_Si_rate": 0.1994058007484313,
+      "Eutectic_Si_to_Al3Ni_rate": 0.41653475767980885,
+      "directional_rate_difference": -0.21712895693137754
+    },
+    "Primary_Si_vs_Eutectic_Si": {
+      "Primary_Si_gt_interface_pixels": 457,
+      "Primary_Si_interface_pred_as_Eutectic_Si": 17,
+      "Eutectic_Si_gt_interface_pixels": 457,
+      "Eutectic_Si_interface_pred_as_Primary_Si": 110,
+      "Primary_Si_to_Eutectic_Si_rate": 0.037199124726477024,
+      "Eutectic_Si_to_Primary_Si_rate": 0.24070021881838075,
+      "directional_rate_difference": -0.20350109409190373
+    }
+  },
+  "full_confusion_pixels": [
+    [
+      38093313,
+      725256,
+      54325,
+      183794
+    ],
+    [
+      1338304,
+      15905866,
+      107432,
+      590774
+    ],
+    [
+      106092,
+      176569,
+      5871374,
+      274619
+    ],
+    [
+      409213,
+      665389,
+      221291,
+      3461277
+    ]
+  ],
+  "per_image": [
+    {
+      "image_id": "A118_step2_sample1",
+      "specimen_group": "A118",
+      "fold": 1,
+      "step": "step2",
+      "resolution": "1230x875",
+      "class_iou_empty0": [
+        0.956813160237878,
+        0.8491032547004314,
+        0.8800592902607027,
+        0.7137509928514694
+      ],
+      "image_miou_empty0": 0.8499316745126204,
+      "gt_boundary_band_fraction": 0.4411391405342625,
+      "wrong_fraction_in_gt_boundary_band": 0.9123784909736152,
+      "gray_mean": 200.0172576904297,
+      "gray_std": 42.85139846801758
+    },
+    {
+      "image_id": "A138_step4_sample3",
+      "specimen_group": "A138",
+      "fold": 1,
+      "step": "step4",
+      "resolution": "1230x875",
+      "class_iou_empty0": [
+        0.8637184762886434,
+        0.6378757820845414,
+        0.8589964228755755,
+        0.17494000252620942
+      ],
+      "image_miou_empty0": 0.6338826709437425,
+      "gt_boundary_band_fraction": 0.6309519163763067,
+      "wrong_fraction_in_gt_boundary_band": 0.9405754961310517,
+      "gray_mean": 195.28509521484375,
+      "gray_std": 35.539424896240234
+    },
+    {
+      "image_id": "A140_step4_sample2",
+      "specimen_group": "A140",
+      "fold": 1,
+      "step": "step4",
+      "resolution": "1440x1024",
+      "class_iou_empty0": [
+        0.9469371273294962,
+        0.8712026021687901,
+        0.891355216119597,
+        0.590664143462197
+      ],
+      "image_miou_empty0": 0.82503977227002,
+      "gt_boundary_band_fraction": 0.27033420138888886,
+      "wrong_fraction_in_gt_boundary_band": 0.8704963404883449,
+      "gray_mean": 194.64466857910156,
+      "gray_std": 42.88565444946289
+    },
+    {
+      "image_id": "A155_step3_sample2",
+      "specimen_group": "A155",
+      "fold": 1,
+      "step": "step3",
+      "resolution": "1278x909",
+      "class_iou_empty0": [
+        0.9625190793523161,
+        0.927887421787184,
+        0.9091672996900986,
+        0.6979099519016214
+      ],
+      "image_miou_empty0": 0.8743709381828051,
+      "gt_boundary_band_fraction": 0.2832989871757129,
+      "wrong_fraction_in_gt_boundary_band": 0.8508205209013349,
+      "gray_mean": 162.8574981689453,
+      "gray_std": 65.62471771240234
+    },
+    {
+      "image_id": "A164_step1_sample2",
+      "specimen_group": "A164",
+      "fold": 1,
+      "step": "step1",
+      "resolution": "1278x909",
+      "class_iou_empty0": [
+        0.9636564928280319,
+        0.9272047388020398,
+        0.6610849608823078,
+        0.29148133171586466
+      ],
+      "image_miou_empty0": 0.710856881057061,
+      "gt_boundary_band_fraction": 0.15662106116714958,
+      "wrong_fraction_in_gt_boundary_band": 0.6239423565641163,
+      "gray_mean": 171.0399169921875,
+      "gray_std": 61.51774978637695
+    },
+    {
+      "image_id": "A164_step4_sample1",
+      "specimen_group": "A164",
+      "fold": 1,
+      "step": "step4",
+      "resolution": "1278x909",
+      "class_iou_empty0": [
+        0.9452209024916117,
+        0.9009008505705387,
+        0.9229168918188696,
+        0.7257676436487851
+      ],
+      "image_miou_empty0": 0.8737015721324514,
+      "gt_boundary_band_fraction": 0.3149258587830614,
+      "wrong_fraction_in_gt_boundary_band": 0.8824053624704561,
+      "gray_mean": 151.55484008789062,
+      "gray_std": 62.89870834350586
+    },
+    {
+      "image_id": "A16_step4_sample4",
+      "specimen_group": "A16",
+      "fold": 1,
+      "step": "step4",
+      "resolution": "675x480",
+      "class_iou_empty0": [
+        0.9335109398027435,
+        0.6617411305499408,
+        0.9299268262433338,
+        0.5927085842768811
+      ],
+      "image_miou_empty0": 0.7794718702182248,
+      "gt_boundary_band_fraction": 0.49472222222222223,
+      "wrong_fraction_in_gt_boundary_band": 0.9766969682986479,
+      "gray_mean": 168.01011657714844,
+      "gray_std": 69.04503631591797
+    },
+    {
+      "image_id": "A200_step4_sample3",
+      "specimen_group": "A200",
+      "fold": 1,
+      "step": "step4",
+      "resolution": "1278x909",
+      "class_iou_empty0": [
+        0.9452920734261285,
+        0.847346613680848,
+        0.6103791875913801,
+        0.33619808427668196
+      ],
+      "image_miou_empty0": 0.6848039897437597,
+      "gt_boundary_band_fraction": 0.3129606387868834,
+      "wrong_fraction_in_gt_boundary_band": 0.7480278422273782,
+      "gray_mean": 179.42413330078125,
+      "gray_std": 43.782936096191406
+    },
+    {
+      "image_id": "A51_step4_sample4",
+      "specimen_group": "A51",
+      "fold": 1,
+      "step": "step4",
+      "resolution": "1278x909",
+      "class_iou_empty0": [
+        0.9316340997115155,
+        0.7321610246081545,
+        0.9318595392671821,
+        0.6972305273864933
+      ],
+      "image_miou_empty0": 0.8232212977433364,
+      "gt_boundary_band_fraction": 0.38033678172199065,
+      "wrong_fraction_in_gt_boundary_band": 0.9044179842540179,
+      "gray_mean": 167.67822265625,
+      "gray_std": 67.83270263671875
+    },
+    {
+      "image_id": "A57_step1_sample3",
+      "specimen_group": "A57",
+      "fold": 1,
+      "step": "step1",
+      "resolution": "675x480",
+      "class_iou_empty0": [
+        0.9316951645749079,
+        0.5198210513234746,
+        0.0,
+        0.7274958838497231
+      ],
+      "image_miou_empty0": 0.5447530249370264,
+      "gt_boundary_band_fraction": 0.7446327160493827,
+      "wrong_fraction_in_gt_boundary_band": 0.9528378478116466,
+      "gray_mean": 169.8242645263672,
+      "gray_std": 66.03746795654297
+    },
+    {
+      "image_id": "A64_step2_sample3",
+      "specimen_group": "A64",
+      "fold": 1,
+      "step": "step2",
+      "resolution": "675x480",
+      "class_iou_empty0": [
+        0.9454695775739569,
+        0.7457678986243063,
+        0.945241652479066,
+        0.5105882352941177
+      ],
+      "image_miou_empty0": 0.7867668409928618,
+      "gt_boundary_band_fraction": 0.6321543209876543,
+      "wrong_fraction_in_gt_boundary_band": 0.9742826582337348,
+      "gray_mean": 148.42190551757812,
+      "gray_std": 79.1656494140625
+    },
+    {
+      "image_id": "A69_step4_sample4",
+      "specimen_group": "A69",
+      "fold": 1,
+      "step": "step4",
+      "resolution": "675x480",
+      "class_iou_empty0": [
+        0.9325987295568104,
+        0.8004586616488298,
+        0.9398395193485909,
+        0.5367268041237113
+      ],
+      "image_miou_empty0": 0.8024059286694857,
+      "gt_boundary_band_fraction": 0.5602407407407407,
+      "wrong_fraction_in_gt_boundary_band": 0.974848994949995,
+      "gray_mean": 167.5181427001953,
+      "gray_std": 60.959102630615234
+    },
+    {
+      "image_id": "A7_step1_sample2",
+      "specimen_group": "A7",
+      "fold": 1,
+      "step": "step1",
+      "resolution": "1278x909",
+      "class_iou_empty0": [
+        0.9691269415612414,
+        0.770661402498652,
+        0.898367053424259,
+        0.6362192938987268
+      ],
+      "image_miou_empty0": 0.8185936728457198,
+      "gt_boundary_band_fraction": 0.33814868184784047,
+      "wrong_fraction_in_gt_boundary_band": 0.8219455281292157,
+      "gray_mean": 156.7369842529297,
+      "gray_std": 83.78299713134766
+    },
+    {
+      "image_id": "A7_step4_sample3",
+      "specimen_group": "A7",
+      "fold": 1,
+      "step": "step4",
+      "resolution": "1278x909",
+      "class_iou_empty0": [
+        0.8361341360485142,
+        0.5010014937533949,
+        0.8501131105749844,
+        0.3823390213761733
+      ],
+      "image_miou_empty0": 0.6423969404382667,
+      "gt_boundary_band_fraction": 0.6804249282518237,
+      "wrong_fraction_in_gt_boundary_band": 0.891237687366167,
+      "gray_mean": 162.8141326904297,
+      "gray_std": 63.33236312866211
+    },
+    {
+      "image_id": "A87_step2_sample2",
+      "specimen_group": "A87",
+      "fold": 1,
+      "step": "step2",
+      "resolution": "675x480",
+      "class_iou_empty0": [
+        0.9361525704809287,
+        0.7751133280531167,
+        0.968043323018329,
+        0.7237879494525506
+      ],
+      "image_miou_empty0": 0.8507742927512313,
+      "gt_boundary_band_fraction": 0.630466049382716,
+      "wrong_fraction_in_gt_boundary_band": 0.9908293067744798,
+      "gray_mean": 171.8759002685547,
+      "gray_std": 65.83776092529297
+    },
+    {
+      "image_id": "A8_step2_sample3",
+      "specimen_group": "A8",
+      "fold": 1,
+      "step": "step2",
+      "resolution": "675x480",
+      "class_iou_empty0": [
+        0.9055890998227872,
+        0.7375443733856375,
+        0.8291288261015809,
+        0.6710133951815213
+      ],
+      "image_miou_empty0": 0.7858189236228816,
+      "gt_boundary_band_fraction": 0.6561851851851852,
+      "wrong_fraction_in_gt_boundary_band": 0.944650441582957,
+      "gray_mean": 167.49313354492188,
+      "gray_std": 69.18878936767578
+    },
+    {
+      "image_id": "A8_step3_sample3",
+      "specimen_group": "A8",
+      "fold": 1,
+      "step": "step3",
+      "resolution": "675x480",
+      "class_iou_empty0": [
+        0.8844309168050175,
+        0.6882756453893282,
+        0.8093883357041252,
+        0.5762140524597071
+      ],
+      "image_miou_empty0": 0.7395772375895444,
+      "gt_boundary_band_fraction": 0.7033518518518519,
+      "wrong_fraction_in_gt_boundary_band": 0.9509798614118666,
+      "gray_mean": 152.92152404785156,
+      "gray_std": 71.64616394042969
+    },
+    {
+      "image_id": "A94_step4_sample2",
+      "specimen_group": "A94",
+      "fold": 1,
+      "step": "step4",
+      "resolution": "675x480",
+      "class_iou_empty0": [
+        0.9358018754508295,
+        0.8040787176638629,
+        0.6227804244261586,
+        0.5650312002936498
+      ],
+      "image_miou_empty0": 0.7319230544586252,
+      "gt_boundary_band_fraction": 0.6106697530864198,
+      "wrong_fraction_in_gt_boundary_band": 0.9026340545625587,
+      "gray_mean": 171.48757934570312,
+      "gray_std": 60.004825592041016
+    },
+    {
+      "image_id": "A106_step4_sample1",
+      "specimen_group": "A106",
+      "fold": 2,
+      "step": "step4",
+      "resolution": "1230x875",
+      "class_iou_empty0": [
+        0.9324751403201104,
+        0.8419454317952807,
+        0.7611697582756815,
+        0.5049490950226244
+      ],
+      "image_miou_empty0": 0.7601348563534243,
+      "gt_boundary_band_fraction": 0.5529542392566783,
+      "wrong_fraction_in_gt_boundary_band": 0.8935998015847115,
+      "gray_mean": 194.46800231933594,
+      "gray_std": 39.46958923339844
+    },
+    {
+      "image_id": "A111_step1_sample2",
+      "specimen_group": "A111",
+      "fold": 2,
+      "step": "step1",
+      "resolution": "1230x875",
+      "class_iou_empty0": [
+        0.9538095127866811,
+        0.792853732648572,
+        0.9371832005792904,
+        0.6600086626241087
+      ],
+      "image_miou_empty0": 0.8359637771596631,
+      "gt_boundary_band_fraction": 0.4539688734030197,
+      "wrong_fraction_in_gt_boundary_band": 0.957021626060772,
+      "gray_mean": 196.7819061279297,
+      "gray_std": 38.211143493652344
+    },
+    {
+      "image_id": "A111_step3_sample4",
+      "specimen_group": "A111",
+      "fold": 2,
+      "step": "step3",
+      "resolution": "1230x875",
+      "class_iou_empty0": [
+        0.9444724743337547,
+        0.8178789072810947,
+        0.979669094912749,
+        0.6471473461043387
+      ],
+      "image_miou_empty0": 0.8472919556579843,
+      "gt_boundary_band_fraction": 0.46752427409988384,
+      "wrong_fraction_in_gt_boundary_band": 0.9813899342986541,
+      "gray_mean": 179.91171264648438,
+      "gray_std": 48.2985954284668
+    },
+    {
+      "image_id": "A123_step1_sample1",
+      "specimen_group": "A123",
+      "fold": 2,
+      "step": "step1",
+      "resolution": "1230x875",
+      "class_iou_empty0": [
+        0.938395741804048,
+        0.7941696638020561,
+        0.8893362387429564,
+        0.5778437633468242
+      ],
+      "image_miou_empty0": 0.7999363519239712,
+      "gt_boundary_band_fraction": 0.49809059233449476,
+      "wrong_fraction_in_gt_boundary_band": 0.9149809149809149,
+      "gray_mean": 176.63201904296875,
+      "gray_std": 52.167724609375
+    },
+    {
+      "image_id": "A123_step4_sample2",
+      "specimen_group": "A123",
+      "fold": 2,
+      "step": "step4",
+      "resolution": "1230x875",
+      "class_iou_empty0": [
+        0.9425425304826248,
+        0.8747081054954782,
+        0.9384298466468299,
+        0.7277992111372914
+      ],
+      "image_miou_empty0": 0.870869923440556,
+      "gt_boundary_band_fraction": 0.3521802555168409,
+      "wrong_fraction_in_gt_boundary_band": 0.9429891869961722,
+      "gray_mean": 175.76231384277344,
+      "gray_std": 44.74517822265625
+    },
+    {
+      "image_id": "A139_step3_sample4",
+      "specimen_group": "A139",
+      "fold": 2,
+      "step": "step3",
+      "resolution": "1440x1024",
+      "class_iou_empty0": [
+        0.9406420984193461,
+        0.8109578994907831,
+        0.9501879585645042,
+        0.274906023030736
+      ],
+      "image_miou_empty0": 0.7441734948763424,
+      "gt_boundary_band_fraction": 0.3984015570746528,
+      "wrong_fraction_in_gt_boundary_band": 0.8989291598023065,
+      "gray_mean": 188.1425323486328,
+      "gray_std": 42.01981735229492
+    },
+    {
+      "image_id": "A139_step4_sample3",
+      "specimen_group": "A139",
+      "fold": 2,
+      "step": "step4",
+      "resolution": "1440x1024",
+      "class_iou_empty0": [
+        0.9520719496045946,
+        0.8165885714441657,
+        0.9680811533888228,
+        0.6066663533140397
+      ],
+      "image_miou_empty0": 0.8358520069379056,
+      "gt_boundary_band_fraction": 0.31176961263020836,
+      "wrong_fraction_in_gt_boundary_band": 0.9354227656276907,
+      "gray_mean": 190.3612823486328,
+      "gray_std": 41.58185958862305
+    },
+    {
+      "image_id": "A147_step4_sample4",
+      "specimen_group": "A147",
+      "fold": 2,
+      "step": "step4",
+      "resolution": "1278x909",
+      "class_iou_empty0": [
+        0.8521019450245348,
+        0.8225869755375526,
+        0.86616925806115,
+        0.2357861775889063
+      ],
+      "image_miou_empty0": 0.6941610890530359,
+      "gt_boundary_band_fraction": 0.6089040046414657,
+      "wrong_fraction_in_gt_boundary_band": 0.9080129689671144,
+      "gray_mean": 167.09169006347656,
+      "gray_std": 36.39014434814453
+    },
+    {
+      "image_id": "A152_step2_sample1",
+      "specimen_group": "A152",
+      "fold": 2,
+      "step": "step2",
+      "resolution": "1278x909",
+      "class_iou_empty0": [
+        0.9524174467998063,
+        0.8585934758423988,
+        0.8453173047876502,
+        0.6609053058610014
+      ],
+      "image_miou_empty0": 0.8293083833227142,
+      "gt_boundary_band_fraction": 0.3946864169985074,
+      "wrong_fraction_in_gt_boundary_band": 0.8685825355008674,
+      "gray_mean": 169.75746154785156,
+      "gray_std": 67.26191711425781
+    },
+    {
+      "image_id": "A15_step1_sample1",
+      "specimen_group": "A15",
+      "fold": 2,
+      "step": "step1",
+      "resolution": "675x480",
+      "class_iou_empty0": [
+        0.9647071628248018,
+        0.897861575556346,
+        0.9194337018927714,
+        0.707651528538611
+      ],
+      "image_miou_empty0": 0.8724134922031325,
+      "gt_boundary_band_fraction": 0.49291666666666667,
+      "wrong_fraction_in_gt_boundary_band": 0.897079586832132,
+      "gray_mean": 153.8725128173828,
+      "gray_std": 79.33089447021484
+    },
+    {
+      "image_id": "A167_step3_sample4",
+      "specimen_group": "A167",
+      "fold": 2,
+      "step": "step3",
+      "resolution": "1278x909",
+      "class_iou_empty0": [
+        0.920106641185599,
+        0.8548395883269917,
+        0.9050764188275603,
+        0.5154972974384416
+      ],
+      "image_miou_empty0": 0.7988799864446482,
+      "gt_boundary_band_fraction": 0.48825430273856807,
+      "wrong_fraction_in_gt_boundary_band": 0.8676991907684033,
+      "gray_mean": 154.68716430664062,
+      "gray_std": 58.27024841308594
+    },
+    {
+      "image_id": "A182_step4_sample3",
+      "specimen_group": "A182",
+      "fold": 2,
+      "step": "step4",
+      "resolution": "1440x1024",
+      "class_iou_empty0": [
+        0.9325543324485643,
+        0.8277096410453515,
+        0.612030870728823,
+        0.38755969768627996
+      ],
+      "image_miou_empty0": 0.6899636354772547,
+      "gt_boundary_band_fraction": 0.24956122504340278,
+      "wrong_fraction_in_gt_boundary_band": 0.633667311440018,
+      "gray_mean": 155.44497680664062,
+      "gray_std": 59.245765686035156
+    },
+    {
+      "image_id": "A21_step2_sample4",
+      "specimen_group": "A21",
+      "fold": 2,
+      "step": "step2",
+      "resolution": "1278x909",
+      "class_iou_empty0": [
+        0.9434321207527174,
+        0.7144003611375834,
+        0.8953338997451147,
+        0.7434642310216583
+      ],
+      "image_miou_empty0": 0.8241576531642685,
+      "gt_boundary_band_fraction": 0.30777858693537585,
+      "wrong_fraction_in_gt_boundary_band": 0.8504271579358287,
+      "gray_mean": 193.7410888671875,
+      "gray_std": 47.87957000732422
+    },
+    {
+      "image_id": "A2_step4_sample1",
+      "specimen_group": "A2",
+      "fold": 2,
+      "step": "step4",
+      "resolution": "1278x909",
+      "class_iou_empty0": [
+        0.8514471636255257,
+        0.6428759388603608,
+        0.8104574805135007,
+        0.44148583216718895
+      ],
+      "image_miou_empty0": 0.6865666037916441,
+      "gt_boundary_band_fraction": 0.6396029274288931,
+      "wrong_fraction_in_gt_boundary_band": 0.8655175550300164,
+      "gray_mean": 138.9048309326172,
+      "gray_std": 54.87346649169922
+    },
+    {
+      "image_id": "A39_step2_sample3",
+      "specimen_group": "A39",
+      "fold": 2,
+      "step": "step2",
+      "resolution": "1278x909",
+      "class_iou_empty0": [
+        0.9530388585391104,
+        0.8377916524261647,
+        0.9040592481484954,
+        0.7235669419852614
+      ],
+      "image_miou_empty0": 0.8546141752747579,
+      "gt_boundary_band_fraction": 0.38498341226923943,
+      "wrong_fraction_in_gt_boundary_band": 0.8957262598737539,
+      "gray_mean": 152.81748962402344,
+      "gray_std": 71.2806625366211
+    },
+    {
+      "image_id": "A49_step2_sample2",
+      "specimen_group": "A49",
+      "fold": 2,
+      "step": "step2",
+      "resolution": "1278x909",
+      "class_iou_empty0": [
+        0.952628852928863,
+        0.7283803974301509,
+        0.8943596621597129,
+        0.4486689576174112
+      ],
+      "image_miou_empty0": 0.7560094675340345,
+      "gt_boundary_band_fraction": 0.37782322833222287,
+      "wrong_fraction_in_gt_boundary_band": 0.8176573023099679,
+      "gray_mean": 139.04537963867188,
+      "gray_std": 71.66695404052734
+    },
+    {
+      "image_id": "A61_step2_sample2",
+      "specimen_group": "A61",
+      "fold": 2,
+      "step": "step2",
+      "resolution": "675x480",
+      "class_iou_empty0": [
+        0.8627242322894497,
+        0.33874568703064745,
+        0.872332228985284,
+        0.5771528674165591
+      ],
+      "image_miou_empty0": 0.662738753930485,
+      "gt_boundary_band_fraction": 0.7407592592592592,
+      "wrong_fraction_in_gt_boundary_band": 0.9626345788473718,
+      "gray_mean": 189.2265167236328,
+      "gray_std": 64.67083740234375
+    },
+    {
+      "image_id": "A78_step4_sample1",
+      "specimen_group": "A78",
+      "fold": 2,
+      "step": "step4",
+      "resolution": "675x480",
+      "class_iou_empty0": [
+        0.8093596891366784,
+        0.6574672014139079,
+        0.9620347925281619,
+        0.5250975464585675
+      ],
+      "image_miou_empty0": 0.7384898073843289,
+      "gt_boundary_band_fraction": 0.6425740740740741,
+      "wrong_fraction_in_gt_boundary_band": 0.9101212919638395,
+      "gray_mean": 163.38970947265625,
+      "gray_std": 57.15812683105469
+    },
+    {
+      "image_id": "A108_step2_sample2",
+      "specimen_group": "A108",
+      "fold": 3,
+      "step": "step2",
+      "resolution": "1230x875",
+      "class_iou_empty0": [
+        0.9652238617863019,
+        0.938597151903148,
+        0.939486055636068,
+        0.7598584256108525
+      ],
+      "image_miou_empty0": 0.9007913737340927,
+      "gt_boundary_band_fraction": 0.3204627177700348,
+      "wrong_fraction_in_gt_boundary_band": 0.8951631769797637,
+      "gray_mean": 188.54734802246094,
+      "gray_std": 46.725887298583984
+    },
+    {
+      "image_id": "A109_step1_sample3",
+      "specimen_group": "A109",
+      "fold": 3,
+      "step": "step1",
+      "resolution": "1230x875",
+      "class_iou_empty0": [
+        0.9601183567160151,
+        0.9177719633968553,
+        0.8833466239198008,
+        0.7290768869138898
+      ],
+      "image_miou_empty0": 0.8725784577366402,
+      "gt_boundary_band_fraction": 0.4052088269454123,
+      "wrong_fraction_in_gt_boundary_band": 0.861909891345073,
+      "gray_mean": 194.875732421875,
+      "gray_std": 43.68528747558594
+    },
+    {
+      "image_id": "A130_step1_sample1",
+      "specimen_group": "A130",
+      "fold": 3,
+      "step": "step1",
+      "resolution": "1440x1024",
+      "class_iou_empty0": [
+        0.9556778043118186,
+        0.9196937321937322,
+        0.9256423666598871,
+        0.703004920518666
+      ],
+      "image_miou_empty0": 0.876004705921026,
+      "gt_boundary_band_fraction": 0.2614691840277778,
+      "wrong_fraction_in_gt_boundary_band": 0.8751943072299562,
+      "gray_mean": 194.5240478515625,
+      "gray_std": 44.290382385253906
+    },
+    {
+      "image_id": "A137_step4_sample2",
+      "specimen_group": "A137",
+      "fold": 3,
+      "step": "step4",
+      "resolution": "1230x875",
+      "class_iou_empty0": [
+        0.9468810719852738,
+        0.8514837595769936,
+        0.9709202275047397,
+        0.6684232163545988
+      ],
+      "image_miou_empty0": 0.8594270688554015,
+      "gt_boundary_band_fraction": 0.38733844367015097,
+      "wrong_fraction_in_gt_boundary_band": 0.9794300745287154,
+      "gray_mean": 182.7095489501953,
+      "gray_std": 44.572513580322266
+    },
+    {
+      "image_id": "A153_step1_sample4",
+      "specimen_group": "A153",
+      "fold": 3,
+      "step": "step1",
+      "resolution": "1278x909",
+      "class_iou_empty0": [
+        0.9382335898491491,
+        0.7796500998943203,
+        0.9510772391229917,
+        0.6320803988288359
+      ],
+      "image_miou_empty0": 0.8252603319238243,
+      "gt_boundary_band_fraction": 0.46625468493641226,
+      "wrong_fraction_in_gt_boundary_band": 0.9288675455762695,
+      "gray_mean": 171.5955352783203,
+      "gray_std": 63.6124382019043
+    },
+    {
+      "image_id": "A154_step2_sample3",
+      "specimen_group": "A154",
+      "fold": 3,
+      "step": "step2",
+      "resolution": "1278x909",
+      "class_iou_empty0": [
+        0.945661697910922,
+        0.835856821801663,
+        0.8012769287803271,
+        0.6600944087524071
+      ],
+      "image_miou_empty0": 0.8107224643113298,
+      "gt_boundary_band_fraction": 0.4206707055682094,
+      "wrong_fraction_in_gt_boundary_band": 0.862363523999176,
+      "gray_mean": 167.81771850585938,
+      "gray_std": 64.84354400634766
+    },
+    {
+      "image_id": "A159_step4_sample4",
+      "specimen_group": "A159",
+      "fold": 3,
+      "step": "step4",
+      "resolution": "1278x909",
+      "class_iou_empty0": [
+        0.8965202135227993,
+        0.8067649757380274,
+        0.9249185251244254,
+        0.45034627940324007
+      ],
+      "image_miou_empty0": 0.7696374984471231,
+      "gt_boundary_band_fraction": 0.5743615832631777,
+      "wrong_fraction_in_gt_boundary_band": 0.8809708759723958,
+      "gray_mean": 154.82373046875,
+      "gray_std": 61.23252487182617
+    },
+    {
+      "image_id": "A187_step2_sample1",
+      "specimen_group": "A187",
+      "fold": 3,
+      "step": "step2",
+      "resolution": "1230x875",
+      "class_iou_empty0": [
+        0.9517707350824847,
+        0.8925221777800865,
+        0.9766986337234672,
+        0.6580981531438058
+      ],
+      "image_miou_empty0": 0.8697724249324611,
+      "gt_boundary_band_fraction": 0.3813732868757259,
+      "wrong_fraction_in_gt_boundary_band": 0.9366217983881177,
+      "gray_mean": 161.3909912109375,
+      "gray_std": 67.09507751464844
+    },
+    {
+      "image_id": "A187_step4_sample4",
+      "specimen_group": "A187",
+      "fold": 3,
+      "step": "step4",
+      "resolution": "1230x875",
+      "class_iou_empty0": [
+        0.8594307634661572,
+        0.7600239432099833,
+        0.9332710400824848,
+        0.4083653734125597
+      ],
+      "image_miou_empty0": 0.7402727800427963,
+      "gt_boundary_band_fraction": 0.43741881533101046,
+      "wrong_fraction_in_gt_boundary_band": 0.7019825678544009,
+      "gray_mean": 157.19236755371094,
+      "gray_std": 56.136962890625
+    },
+    {
+      "image_id": "A18_step2_sample1",
+      "specimen_group": "A18",
+      "fold": 3,
+      "step": "step2",
+      "resolution": "675x480",
+      "class_iou_empty0": [
+        0.9795232002506724,
+        0.9393736590358837,
+        0.9456811739202935,
+        0.7382803567345072
+      ],
+      "image_miou_empty0": 0.9007145974853392,
+      "gt_boundary_band_fraction": 0.2393858024691358,
+      "wrong_fraction_in_gt_boundary_band": 0.846978305785124,
+      "gray_mean": 152.55580139160156,
+      "gray_std": 78.38009643554688
+    },
+    {
+      "image_id": "A191_step3_sample1",
+      "specimen_group": "A191",
+      "fold": 3,
+      "step": "step3",
+      "resolution": "1440x1024",
+      "class_iou_empty0": [
+        0.962017468472481,
+        0.914328169567371,
+        0.8890490049259228,
+        0.7838018894932722
+      ],
+      "image_miou_empty0": 0.8872991331147617,
+      "gt_boundary_band_fraction": 0.27485758463541665,
+      "wrong_fraction_in_gt_boundary_band": 0.8773659732487291,
+      "gray_mean": 195.4451446533203,
+      "gray_std": 47.72354507446289
+    },
+    {
+      "image_id": "A191_step4_sample1",
+      "specimen_group": "A191",
+      "fold": 3,
+      "step": "step4",
+      "resolution": "1440x1024",
+      "class_iou_empty0": [
+        0.9450601923397743,
+        0.7990565328118117,
+        0.9101700812542214,
+        0.5974469507101086
+      ],
+      "image_miou_empty0": 0.812933439278979,
+      "gt_boundary_band_fraction": 0.42083672417534723,
+      "wrong_fraction_in_gt_boundary_band": 0.9253567056548262,
+      "gray_mean": 188.929443359375,
+      "gray_std": 43.24030685424805
+    },
+    {
+      "image_id": "A201_step3_sample1",
+      "specimen_group": "A201",
+      "fold": 3,
+      "step": "step3",
+      "resolution": "1230x875",
+      "class_iou_empty0": [
+        0.9272693032626536,
+        0.8345286985362477,
+        0.8733528099305992,
+        0.5769886678977588
+      ],
+      "image_miou_empty0": 0.8030348699068148,
+      "gt_boundary_band_fraction": 0.560160743321719,
+      "wrong_fraction_in_gt_boundary_band": 0.917165821942354,
+      "gray_mean": 163.2627716064453,
+      "gray_std": 61.59835433959961
+    },
+    {
+      "image_id": "A201_step3_sample4",
+      "specimen_group": "A201",
+      "fold": 3,
+      "step": "step3",
+      "resolution": "1230x875",
+      "class_iou_empty0": [
+        0.9196286822069815,
+        0.8103022524867554,
+        0.9298268674653547,
+        0.5286808744546111
+      ],
+      "image_miou_empty0": 0.7971096691534256,
+      "gt_boundary_band_fraction": 0.5714072009291522,
+      "wrong_fraction_in_gt_boundary_band": 0.9347378310989051,
+      "gray_mean": 169.2475128173828,
+      "gray_std": 59.700889587402344
+    },
+    {
+      "image_id": "A222_step2_sample2",
+      "specimen_group": "A222",
+      "fold": 3,
+      "step": "step2",
+      "resolution": "1230x875",
+      "class_iou_empty0": [
+        0.9533445658949907,
+        0.7898345788633814,
+        0.8275071823571417,
+        0.6504917020888571
+      ],
+      "image_miou_empty0": 0.8052945073010926,
+      "gt_boundary_band_fraction": 0.4337867595818815,
+      "wrong_fraction_in_gt_boundary_band": 0.890035304386342,
+      "gray_mean": 170.61968994140625,
+      "gray_std": 62.85255432128906
+    },
+    {
+      "image_id": "A55_step3_sample4",
+      "specimen_group": "A55",
+      "fold": 3,
+      "step": "step3",
+      "resolution": "1278x909",
+      "class_iou_empty0": [
+        0.9533007532610692,
+        0.8608964451313755,
+        0.9430798646859833,
+        0.6151943200653094
+      ],
+      "image_miou_empty0": 0.8431178457859343,
+      "gt_boundary_band_fraction": 0.4023019672859305,
+      "wrong_fraction_in_gt_boundary_band": 0.917222480740396,
+      "gray_mean": 157.42874145507812,
+      "gray_std": 69.1492919921875
+    },
+    {
+      "image_id": "A98_step2_sample4",
+      "specimen_group": "A98",
+      "fold": 3,
+      "step": "step2",
+      "resolution": "675x480",
+      "class_iou_empty0": [
+        0.9659554447521718,
+        0.924602939433448,
+        0.9072094062639667,
+        0.8082239333501641
+      ],
+      "image_miou_empty0": 0.9014979309499377,
+      "gt_boundary_band_fraction": 0.4507808641975309,
+      "wrong_fraction_in_gt_boundary_band": 0.8998276192300325,
+      "gray_mean": 163.80874633789062,
+      "gray_std": 71.32926177978516
+    },
+    {
+      "image_id": "A101_step3_sample3",
+      "specimen_group": "A101",
+      "fold": 4,
+      "step": "step3",
+      "resolution": "1230x875",
+      "class_iou_empty0": [
+        0.9463966963761704,
+        0.8599657070558162,
+        0.9414796112475358,
+        0.5867013779017921
+      ],
+      "image_miou_empty0": 0.8336358481453287,
+      "gt_boundary_band_fraction": 0.5347976771196283,
+      "wrong_fraction_in_gt_boundary_band": 0.9293170756874817,
+      "gray_mean": 190.6918182373047,
+      "gray_std": 47.37099838256836
+    },
+    {
+      "image_id": "A121_step2_sample2",
+      "specimen_group": "A121",
+      "fold": 4,
+      "step": "step2",
+      "resolution": "1230x875",
+      "class_iou_empty0": [
+        0.9594298011625254,
+        0.8703237061446016,
+        0.9235077085254975,
+        0.7122461610518216
+      ],
+      "image_miou_empty0": 0.8663768442211116,
+      "gt_boundary_band_fraction": 0.30385505226480836,
+      "wrong_fraction_in_gt_boundary_band": 0.8092369099843729,
+      "gray_mean": 177.00538635253906,
+      "gray_std": 53.29550552368164
+    },
+    {
+      "image_id": "A125_step2_sample1",
+      "specimen_group": "A125",
+      "fold": 4,
+      "step": "step2",
+      "resolution": "1230x875",
+      "class_iou_empty0": [
+        0.9549106569453364,
+        0.7808317258966228,
+        0.7609822309970385,
+        0.5741016359504866
+      ],
+      "image_miou_empty0": 0.7677065624473711,
+      "gt_boundary_band_fraction": 0.42648455284552844,
+      "wrong_fraction_in_gt_boundary_band": 0.8493109784106568,
+      "gray_mean": 181.0765838623047,
+      "gray_std": 43.701847076416016
+    },
+    {
+      "image_id": "A146_step2_sample1",
+      "specimen_group": "A146",
+      "fold": 4,
+      "step": "step2",
+      "resolution": "1278x909",
+      "class_iou_empty0": [
+        0.9504760299651233,
+        0.9238311888228079,
+        0.9069877838022267,
+        0.6907519850537133
+      ],
+      "image_miou_empty0": 0.8680117469109678,
+      "gt_boundary_band_fraction": 0.2896990794541113,
+      "wrong_fraction_in_gt_boundary_band": 0.911146130068489,
+      "gray_mean": 187.54429626464844,
+      "gray_std": 39.4785270690918
+    },
+    {
+      "image_id": "A150_step4_sample1",
+      "specimen_group": "A150",
+      "fold": 4,
+      "step": "step4",
+      "resolution": "1440x1024",
+      "class_iou_empty0": [
+        0.9577937127571051,
+        0.8206200063918184,
+        0.6680952897917954,
+        0.39595422937871566
+      ],
+      "image_miou_empty0": 0.7106158095798587,
+      "gt_boundary_band_fraction": 0.28043212890625,
+      "wrong_fraction_in_gt_boundary_band": 0.7019949685357312,
+      "gray_mean": 166.4549102783203,
+      "gray_std": 46.083839416503906
+    },
+    {
+      "image_id": "A156_step4_sample1",
+      "specimen_group": "A156",
+      "fold": 4,
+      "step": "step4",
+      "resolution": "1278x909",
+      "class_iou_empty0": [
+        0.9222053302310824,
+        0.7813609458424023,
+        0.8350219860754855,
+        0.4298612272195285
+      ],
+      "image_miou_empty0": 0.7421123723421247,
+      "gt_boundary_band_fraction": 0.5782816935840689,
+      "wrong_fraction_in_gt_boundary_band": 0.9011819605867082,
+      "gray_mean": 166.00885009765625,
+      "gray_std": 59.02218246459961
+    },
+    {
+      "image_id": "A156_step4_sample2",
+      "specimen_group": "A156",
+      "fold": 4,
+      "step": "step4",
+      "resolution": "1278x909",
+      "class_iou_empty0": [
+        0.9225442143500179,
+        0.8073640333465661,
+        0.8941448891829309,
+        0.5062086614882765
+      ],
+      "image_miou_empty0": 0.7825654495919478,
+      "gt_boundary_band_fraction": 0.5335189230973175,
+      "wrong_fraction_in_gt_boundary_band": 0.9129689042448174,
+      "gray_mean": 169.40626525878906,
+      "gray_std": 62.40632629394531
+    },
+    {
+      "image_id": "A166_step4_sample3",
+      "specimen_group": "A166",
+      "fold": 4,
+      "step": "step4",
+      "resolution": "1278x909",
+      "class_iou_empty0": [
+        0.9406694165451019,
+        0.8511136364340102,
+        0.8796684533586928,
+        0.6937524713325425
+      ],
+      "image_miou_empty0": 0.8413009944175869,
+      "gt_boundary_band_fraction": 0.30354686485862986,
+      "wrong_fraction_in_gt_boundary_band": 0.8561513233162993,
+      "gray_mean": 163.07501220703125,
+      "gray_std": 58.084861755371094
+    },
+    {
+      "image_id": "A181_step4_sample4",
+      "specimen_group": "A181",
+      "fold": 4,
+      "step": "step4",
+      "resolution": "1440x1024",
+      "class_iou_empty0": [
+        0.9146344740267348,
+        0.8119857947777526,
+        0.9770737098648228,
+        0.496125421080271
+      ],
+      "image_miou_empty0": 0.7999548499373954,
+      "gt_boundary_band_fraction": 0.4800048828125,
+      "wrong_fraction_in_gt_boundary_band": 0.8502213388743337,
+      "gray_mean": 174.71397399902344,
+      "gray_std": 40.04288101196289
+    },
+    {
+      "image_id": "A188_step4_sample1",
+      "specimen_group": "A188",
+      "fold": 4,
+      "step": "step4",
+      "resolution": "1278x909",
+      "class_iou_empty0": [
+        0.9448910227099527,
+        0.9018095043642489,
+        0.912493721473652,
+        0.6727761099699795
+      ],
+      "image_miou_empty0": 0.8579925896294583,
+      "gt_boundary_band_fraction": 0.32693410186089034,
+      "wrong_fraction_in_gt_boundary_band": 0.899270670536578,
+      "gray_mean": 151.6444549560547,
+      "gray_std": 58.379859924316406
+    },
+    {
+      "image_id": "A224_step1_sample2",
+      "specimen_group": "A224",
+      "fold": 4,
+      "step": "step1",
+      "resolution": "1230x875",
+      "class_iou_empty0": [
+        0.7611021678989021,
+        0.5188310877227282,
+        0.4525237023838941,
+        0.4343059953446432
+      ],
+      "image_miou_empty0": 0.5416907383375419,
+      "gt_boundary_band_fraction": 0.5481449477351916,
+      "wrong_fraction_in_gt_boundary_band": 0.6791081081081081,
+      "gray_mean": 160.5109100341797,
+      "gray_std": 61.932640075683594
+    },
+    {
+      "image_id": "A224_step4_sample2",
+      "specimen_group": "A224",
+      "fold": 4,
+      "step": "step4",
+      "resolution": "1230x875",
+      "class_iou_empty0": [
+        0.8458915091790224,
+        0.7541198275514727,
+        0.7866101583762337,
+        0.4647826893640707
+      ],
+      "image_miou_empty0": 0.7128510461176999,
+      "gt_boundary_band_fraction": 0.5160018583042973,
+      "wrong_fraction_in_gt_boundary_band": 0.8177163529816274,
+      "gray_mean": 155.70419311523438,
+      "gray_std": 53.994022369384766
+    },
+    {
+      "image_id": "A40_step3_sample4",
+      "specimen_group": "A40",
+      "fold": 4,
+      "step": "step3",
+      "resolution": "1278x909",
+      "class_iou_empty0": [
+        0.940551222997522,
+        0.8243836206749136,
+        0.9148953776390046,
+        0.7032182754630815
+      ],
+      "image_miou_empty0": 0.8457621241936304,
+      "gt_boundary_band_fraction": 0.4558991892929512,
+      "wrong_fraction_in_gt_boundary_band": 0.8586003885338039,
+      "gray_mean": 154.6151580810547,
+      "gray_std": 72.67922973632812
+    },
+    {
+      "image_id": "A66_step3_sample2",
+      "specimen_group": "A66",
+      "fold": 4,
+      "step": "step3",
+      "resolution": "675x480",
+      "class_iou_empty0": [
+        0.9113016020113093,
+        0.5379231839453602,
+        0.9711748767668854,
+        0.32338892487046633
+      ],
+      "image_miou_empty0": 0.6859471468985053,
+      "gt_boundary_band_fraction": 0.6442067901234568,
+      "wrong_fraction_in_gt_boundary_band": 0.9402968293231392,
+      "gray_mean": 173.08677673339844,
+      "gray_std": 61.11511993408203
+    },
+    {
+      "image_id": "A83_step1_sample2",
+      "specimen_group": "A83",
+      "fold": 4,
+      "step": "step1",
+      "resolution": "675x480",
+      "class_iou_empty0": [
+        0.9369298300802896,
+        0.7909934171154998,
+        0.9311798078036355,
+        0.6292811029653135
+      ],
+      "image_miou_empty0": 0.8220960394911845,
+      "gt_boundary_band_fraction": 0.6129969135802469,
+      "wrong_fraction_in_gt_boundary_band": 0.9460361751955753,
+      "gray_mean": 156.0330047607422,
+      "gray_std": 72.66230773925781
+    },
+    {
+      "image_id": "A89_step1_sample2",
+      "specimen_group": "A89",
+      "fold": 4,
+      "step": "step1",
+      "resolution": "675x480",
+      "class_iou_empty0": [
+        0.925542093494878,
+        0.7609037625700602,
+        0.9074917709019091,
+        0.5921133884200311
+      ],
+      "image_miou_empty0": 0.7965127538467196,
+      "gt_boundary_band_fraction": 0.7210030864197531,
+      "wrong_fraction_in_gt_boundary_band": 0.9729998851058941,
+      "gray_mean": 153.58998107910156,
+      "gray_std": 71.59119415283203
+    },
+    {
+      "image_id": "A96_step1_sample1",
+      "specimen_group": "A96",
+      "fold": 4,
+      "step": "step1",
+      "resolution": "675x480",
+      "class_iou_empty0": [
+        0.9676591299156779,
+        0.9314206052974772,
+        0.8809931506849316,
+        0.7687764696740101
+      ],
+      "image_miou_empty0": 0.8872123388930243,
+      "gt_boundary_band_fraction": 0.398141975308642,
+      "wrong_fraction_in_gt_boundary_band": 0.9334809395456296,
+      "gray_mean": 169.53883361816406,
+      "gray_std": 66.33097839355469
+    }
+  ],
+  "interpretation_guard": "Stratum means are descriptive; sample counts are small and are not independent of specimen groups. Pairwise rates use GT interface pixels; asymmetry may reflect class-direction bias but is not a signed geometric boundary displacement."
+}

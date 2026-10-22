@@ -1,0 +1,67 @@
+{
+  "status": "passed",
+  "execution": {
+    "mode": "DDP + SyncBatchNorm",
+    "world_size": 6,
+    "visible_physical_gpus": "0,1,2,3,4,5",
+    "global_batch_size": 8,
+    "local_batch_sizes": [
+      2,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "loss_reduction": "global_batch_statistics",
+    "variant": "baseline"
+  },
+  "data": "synthetic_only",
+  "backward_passes": 2,
+  "optimizer_updates": 0,
+  "parameters": 76964949,
+  "ranks": [
+    {
+      "rank": 0,
+      "local_batch_size": 2,
+      "loss": 1.5171258449554443,
+      "peak_gpu_memory_GiB": 4.522623062133789,
+      "wall_seconds": 5.828669717069715
+    },
+    {
+      "rank": 1,
+      "local_batch_size": 2,
+      "loss": 1.5171258449554443,
+      "peak_gpu_memory_GiB": 4.522623062133789,
+      "wall_seconds": 5.82232347689569
+    },
+    {
+      "rank": 2,
+      "local_batch_size": 1,
+      "loss": 1.5171258449554443,
+      "peak_gpu_memory_GiB": 2.56386661529541,
+      "wall_seconds": 5.826558738015592
+    },
+    {
+      "rank": 3,
+      "local_batch_size": 1,
+      "loss": 1.5171258449554443,
+      "peak_gpu_memory_GiB": 2.56386661529541,
+      "wall_seconds": 5.826873899903148
+    },
+    {
+      "rank": 4,
+      "local_batch_size": 1,
+      "loss": 1.5171258449554443,
+      "peak_gpu_memory_GiB": 2.56386661529541,
+      "wall_seconds": 5.8261700458824635
+    },
+    {
+      "rank": 5,
+      "local_batch_size": 1,
+      "loss": 1.5171258449554443,
+      "peak_gpu_memory_GiB": 2.56386661529541,
+      "wall_seconds": 5.826763312797993
+    }
+  ]
+}

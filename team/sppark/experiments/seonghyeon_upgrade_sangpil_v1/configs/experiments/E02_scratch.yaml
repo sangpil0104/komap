@@ -1,0 +1,14 @@
+inherit: ../resolved_legacy.yaml
+run:
+  name: E02_scratch
+  seed: 0
+model:
+  family: enhanced_b4_unet
+geometry:
+  profile: native_roi_v1
+sampling:
+  image_selection: uniform
+training:
+  augmentation: native_shared_d4_photo
+inference:
+  mode: dual_fov_native_tiles

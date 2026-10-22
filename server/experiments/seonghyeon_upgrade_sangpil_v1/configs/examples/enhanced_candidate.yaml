@@ -1,0 +1,13 @@
+inherit: ../experiments/E03b.yaml
+run:
+  name: candidate_unvalidated
+model:
+  new_branches:
+    texture: true
+    context: true
+sampling:
+  random: 0.5
+  mixed: 0.3
+  hard: 0.2
+loss:
+  native_enabled: true

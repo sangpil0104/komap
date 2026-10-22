@@ -1,0 +1,102 @@
+[
+  {
+    "id": "REPRO8_EN_norm0.1_weight0.5",
+    "contrast": "EN_norm0.1_weight0.5",
+    "change": {
+      "fresh_raw_image_reproduction": true
+    },
+    "recipe": {
+      "checkpoint": "/Data3/sppark/komap/experiments/HRNet_taeho_multigpu/outputs/runs/HRNet_taeho_no_gaussian_0928_ddp6_20260928T131839_853555Z/last.pt",
+      "target": "EN_norm0.1_weight0.5",
+      "nodes": {
+        "Y_gamma0.85_halo16": {
+          "arm": {
+            "id": "Y_gamma0.85_halo16",
+            "contrast": "M00_gamma",
+            "change": {
+              "halo": 16
+            },
+            "config": {
+              "patch": 640,
+              "scale": 2.0,
+              "overlap": 170,
+              "input_mode": "bicubic",
+              "input_antialias": false,
+              "restore": "bicubic",
+              "restore_antialias": false,
+              "restore_logits": false,
+              "window": "gaussian",
+              "sigma": 0.125,
+              "tta": "d4",
+              "tile_merge": "prob",
+              "tta_merge": "prob",
+              "halo": 16,
+              "precision": "fp32",
+              "gamma": 0.85,
+              "contrast": 1.0,
+              "sharpen": 0.0
+            }
+          },
+          "batch": 4
+        },
+        "Z_norm_decoder_0.1": {
+          "arm": {
+            "id": "Z_norm_decoder_0.1",
+            "contrast": "C640_d4_bicubic",
+            "change": {
+              "normalization_blend": {
+                "scope": "decoder",
+                "amount": 0.1
+              }
+            },
+            "forward_transform": {
+              "normalization_blend": {
+                "scope": "decoder",
+                "amount": 0.1
+              }
+            },
+            "config": {
+              "patch": 640,
+              "scale": 2.0,
+              "overlap": 170,
+              "input_mode": "bicubic",
+              "input_antialias": false,
+              "restore": "bicubic",
+              "restore_antialias": false,
+              "restore_logits": false,
+              "window": "gaussian",
+              "sigma": 0.125,
+              "tta": "d4",
+              "tile_merge": "prob",
+              "tta_merge": "prob",
+              "halo": 0,
+              "precision": "fp32",
+              "gamma": 1.0,
+              "contrast": 1.0,
+              "sharpen": 0.0
+            }
+          },
+          "batch": 4
+        },
+        "EN_norm0.1_weight0.5": {
+          "arm": {
+            "id": "EN_norm0.1_weight0.5",
+            "contrast": "Y_gamma0.85_halo16",
+            "change": {
+              "normalization_branch_weight": 0.5
+            },
+            "members": [
+              "Y_gamma0.85_halo16",
+              "Z_norm_decoder_0.1"
+            ],
+            "weights": [
+              0.5,
+              0.5
+            ]
+          },
+          "batch": 4
+        }
+      }
+    }
+  }
+]

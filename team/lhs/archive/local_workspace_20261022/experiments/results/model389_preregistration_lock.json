@@ -1,0 +1,27 @@
+{
+  "lock_type": "pre-score-inspection Model389 protocol hash lock",
+  "model": 389,
+  "locked_at_utc": "2026-10-02T13:50:29Z",
+  "locked_at_unix": 1790949029,
+  "artifacts_sha256": {
+    "experiments/model389_mass_preserving_sampler_preregistration.md": "471648b883ad5228c2d8a4bab73dfee192cb1425597b6b40c04a2e6142ce6dd0",
+    "experiments/model389_mass_preserving_sampler_audit.py": "8fc5ac78cb7704ec222ed904c0834503cd3a69b8a0f038c5445a5fb94eae43b0",
+    "experiments/model389_mass_preserving_sampler_audit_smoke.py": "991182d343d974bfad076fb35789c8d72470d5897aaccdc91e70cc581e2a51f1"
+  },
+  "pre_score_inspection_evidence": {
+    "checked_at_utc": "2026-10-02T13:50:29Z",
+    "model382_runner_pid": 972710,
+    "active_training": "seed1/fold4, epoch21/70",
+    "seed1_fold3_oof_archive_exists": true,
+    "seed1_fold3_oof_manifest_exists": true,
+    "seed1_fold3_oof_summary_exists": true,
+    "OOF_metrics_or_prediction_values_read": false,
+    "official_valid_or_test_read": false,
+    "synthetic_smoke_passed": true
+  },
+  "enforcement": {
+    "Model389 is distinct from and does not edit Model388": true,
+    "all OOF scoring remains CPU-only after Model382 completes": true,
+    "no new P100 training starts automatically from an E2 gate": true
+  }
+}

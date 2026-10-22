@@ -1,0 +1,71 @@
+[
+  {
+    "id": "V01_expandable_control",
+    "contrast": "G00_batch1_control",
+    "change": {
+      "allocator": "expandable segments"
+    },
+    "config": {
+      "patch": 512,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bilinear",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "flip4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "FR_full2",
+    "contrast": "A00_control",
+    "change": {
+      "context": "whole_image"
+    },
+    "config": {
+      "scale": 2.0,
+      "tta": "flip4",
+      "precision": "fp32"
+    },
+    "allocator": "expandable_segments:True",
+    "memory_fraction": 0.36
+  },
+  {
+    "id": "FR_full225",
+    "contrast": "FR_full2",
+    "change": {
+      "scale": 2.25
+    },
+    "config": {
+      "scale": 2.25,
+      "tta": "flip4",
+      "precision": "fp32"
+    },
+    "allocator": "expandable_segments:True",
+    "memory_fraction": 0.36
+  },
+  {
+    "id": "FR_full2_d4",
+    "contrast": "FR_full2",
+    "change": {
+      "tta": "d4"
+    },
+    "config": {
+      "scale": 2.0,
+      "tta": "d4",
+      "precision": "fp32"
+    },
+    "allocator": "expandable_segments:True",
+    "memory_fraction": 0.36
+  }
+]

@@ -1,0 +1,768 @@
+{
+  "model": 388,
+  "mode": "E2 held-out train-OOF component-size oracle headroom; not a sampler effect estimate",
+  "scope": "primary train-only folds3-4",
+  "folds": [
+    3,
+    4
+  ],
+  "seed_results": {
+    "1": {
+      "images": 34,
+      "groups": 29,
+      "baseline_imagewise_miou": 0.808420678392483,
+      "cells": {
+        "1:1_to_lt64": {
+          "class": "Al3Ni",
+          "area_bin": "1_to_lt64",
+          "component_count": 31329,
+          "groups_with_components": 29,
+          "fn_pixels": 232546,
+          "mean_imagewise_oracle_miou_gain": 0.014930856646645863,
+          "max_group_share_of_total_gain": 0.13941988591695675,
+          "per_fold": {
+            "3": {
+              "images": 17,
+              "groups": 14,
+              "mean_imagewise_oracle_gain": 0.013058295001255679
+            },
+            "4": {
+              "images": 17,
+              "groups": 15,
+              "mean_imagewise_oracle_gain": 0.01680341829203605
+            }
+          },
+          "group_bootstrap": {
+            "ci_95_two_sided": [
+              0.01145773342652077,
+              0.01928530064958242
+            ],
+            "ci_99_5_two_sided": [
+              0.010415479620801943,
+              0.021591930512145786
+            ],
+            "draws": 20000,
+            "seed": 1291,
+            "unit": "specimen group resampled within each held-out fold; all images retained"
+          }
+        },
+        "1:64_to_lt256": {
+          "class": "Al3Ni",
+          "area_bin": "64_to_lt256",
+          "component_count": 6263,
+          "groups_with_components": 29,
+          "fn_pixels": 169022,
+          "mean_imagewise_oracle_miou_gain": 0.009419113249461668,
+          "max_group_share_of_total_gain": 0.13209179906850962,
+          "per_fold": {
+            "3": {
+              "images": 17,
+              "groups": 14,
+              "mean_imagewise_oracle_gain": 0.007992825275313413
+            },
+            "4": {
+              "images": 17,
+              "groups": 15,
+              "mean_imagewise_oracle_gain": 0.010845401223609925
+            }
+          },
+          "group_bootstrap": {
+            "ci_95_two_sided": [
+              0.006845223877497192,
+              0.012335766471884536
+            ],
+            "ci_99_5_two_sided": [
+              0.005883958959218907,
+              0.013581070161866883
+            ],
+            "draws": 20000,
+            "seed": 1399,
+            "unit": "specimen group resampled within each held-out fold; all images retained"
+          }
+        },
+        "1:256_to_lt1024": {
+          "class": "Al3Ni",
+          "area_bin": "256_to_lt1024",
+          "component_count": 3107,
+          "groups_with_components": 29,
+          "fn_pixels": 175523,
+          "mean_imagewise_oracle_miou_gain": 0.008394957543772504,
+          "max_group_share_of_total_gain": 0.17556424930433626,
+          "per_fold": {
+            "3": {
+              "images": 17,
+              "groups": 14,
+              "mean_imagewise_oracle_gain": 0.0068142801873436855
+            },
+            "4": {
+              "images": 17,
+              "groups": 15,
+              "mean_imagewise_oracle_gain": 0.009975634900201324
+            }
+          },
+          "group_bootstrap": {
+            "ci_95_two_sided": [
+              0.005819667839067809,
+              0.01114205417352097
+            ],
+            "ci_99_5_two_sided": [
+              0.004937425437945012,
+              0.012220108794763557
+            ],
+            "draws": 20000,
+            "seed": 1492,
+            "unit": "specimen group resampled within each held-out fold; all images retained"
+          }
+        },
+        "1:1024_to_lt4096": {
+          "class": "Al3Ni",
+          "area_bin": "1024_to_lt4096",
+          "component_count": 1471,
+          "groups_with_components": 28,
+          "fn_pixels": 211661,
+          "mean_imagewise_oracle_miou_gain": 0.009249241168176344,
+          "max_group_share_of_total_gain": 0.23873592454484138,
+          "per_fold": {
+            "3": {
+              "images": 17,
+              "groups": 14,
+              "mean_imagewise_oracle_gain": 0.008986316010935332
+            },
+            "4": {
+              "images": 17,
+              "groups": 15,
+              "mean_imagewise_oracle_gain": 0.009512166325417359
+            }
+          },
+          "group_bootstrap": {
+            "ci_95_two_sided": [
+              0.006218549833170309,
+              0.013316661608656646
+            ],
+            "ci_99_5_two_sided": [
+              0.005415714837290901,
+              0.01533262560509787
+            ],
+            "draws": 20000,
+            "seed": 1546,
+            "unit": "specimen group resampled within each held-out fold; all images retained"
+          }
+        },
+        "1:4096_or_more": {
+          "class": "Al3Ni",
+          "area_bin": "4096_or_more",
+          "component_count": 379,
+          "groups_with_components": 26,
+          "fn_pixels": 223663,
+          "mean_imagewise_oracle_miou_gain": 0.009211743937278027,
+          "max_group_share_of_total_gain": 0.2808875369077862,
+          "per_fold": {
+            "3": {
+              "images": 17,
+              "groups": 14,
+              "mean_imagewise_oracle_gain": 0.006446665415656958
+            },
+            "4": {
+              "images": 17,
+              "groups": 15,
+              "mean_imagewise_oracle_gain": 0.011976822458899097
+            }
+          },
+          "group_bootstrap": {
+            "ci_95_two_sided": [
+              0.005413331981278191,
+              0.014129929108343233
+            ],
+            "ci_99_5_two_sided": [
+              0.004513959838120217,
+              0.016534696169558404
+            ],
+            "draws": 20000,
+            "seed": 1556,
+            "unit": "specimen group resampled within each held-out fold; all images retained"
+          }
+        },
+        "3:1_to_lt64": {
+          "class": "Eutectic_Si",
+          "area_bin": "1_to_lt64",
+          "component_count": 21443,
+          "groups_with_components": 29,
+          "fn_pixels": 182312,
+          "mean_imagewise_oracle_miou_gain": 0.02180829646705323,
+          "max_group_share_of_total_gain": 0.1181435195353642,
+          "per_fold": {
+            "3": {
+              "images": 17,
+              "groups": 14,
+              "mean_imagewise_oracle_gain": 0.019848429223999646
+            },
+            "4": {
+              "images": 17,
+              "groups": 15,
+              "mean_imagewise_oracle_gain": 0.023768163710106816
+            }
+          },
+          "group_bootstrap": {
+            "ci_95_two_sided": [
+              0.01622247242887908,
+              0.027630227900996014
+            ],
+            "ci_99_5_two_sided": [
+              0.014154277770734374,
+              0.030167199682378534
+            ],
+            "draws": 20000,
+            "seed": 1293,
+            "unit": "specimen group resampled within each held-out fold; all images retained"
+          }
+        },
+        "3:64_to_lt256": {
+          "class": "Eutectic_Si",
+          "area_bin": "64_to_lt256",
+          "component_count": 8419,
+          "groups_with_components": 29,
+          "fn_pixels": 221605,
+          "mean_imagewise_oracle_miou_gain": 0.020874387550343976,
+          "max_group_share_of_total_gain": 0.08270826211356158,
+          "per_fold": {
+            "3": {
+              "images": 17,
+              "groups": 14,
+              "mean_imagewise_oracle_gain": 0.020625439293123306
+            },
+            "4": {
+              "images": 17,
+              "groups": 15,
+              "mean_imagewise_oracle_gain": 0.021123335807564647
+            }
+          },
+          "group_bootstrap": {
+            "ci_95_two_sided": [
+              0.017600633183318334,
+              0.02397683734226671
+            ],
+            "ci_99_5_two_sided": [
+              0.016283652078693204,
+              0.025192241567960055
+            ],
+            "draws": 20000,
+            "seed": 1401,
+            "unit": "specimen group resampled within each held-out fold; all images retained"
+          }
+        },
+        "3:256_to_lt1024": {
+          "class": "Eutectic_Si",
+          "area_bin": "256_to_lt1024",
+          "component_count": 1788,
+          "groups_with_components": 28,
+          "fn_pixels": 177413,
+          "mean_imagewise_oracle_miou_gain": 0.018058903332942904,
+          "max_group_share_of_total_gain": 0.10651007355811165,
+          "per_fold": {
+            "3": {
+              "images": 17,
+              "groups": 14,
+              "mean_imagewise_oracle_gain": 0.014361679540604163
+            },
+            "4": {
+              "images": 17,
+              "groups": 15,
+              "mean_imagewise_oracle_gain": 0.021756127125281646
+            }
+          },
+          "group_bootstrap": {
+            "ci_95_two_sided": [
+              0.013311163869249496,
+              0.022962467670561048
+            ],
+            "ci_99_5_two_sided": [
+              0.011391582856329907,
+              0.025185694209893566
+            ],
+            "draws": 20000,
+            "seed": 1494,
+            "unit": "specimen group resampled within each held-out fold; all images retained"
+          }
+        },
+        "3:1024_to_lt4096": {
+          "class": "Eutectic_Si",
+          "area_bin": "1024_to_lt4096",
+          "component_count": 81,
+          "groups_with_components": 14,
+          "fn_pixels": 49452,
+          "mean_imagewise_oracle_miou_gain": 0.006810547063251437,
+          "max_group_share_of_total_gain": 0.3043043519603193,
+          "per_fold": {
+            "3": {
+              "images": 17,
+              "groups": 14,
+              "mean_imagewise_oracle_gain": 0.007730767524119262
+            },
+            "4": {
+              "images": 17,
+              "groups": 15,
+              "mean_imagewise_oracle_gain": 0.005890326602383611
+            }
+          },
+          "group_bootstrap": {
+            "ci_95_two_sided": [
+              0.0023266617011335243,
+              0.012695985757284155
+            ],
+            "ci_99_5_two_sided": [
+              0.0011181032936300502,
+              0.01563695784073653
+            ],
+            "draws": 20000,
+            "seed": 1548,
+            "unit": "specimen group resampled within each held-out fold; all images retained"
+          }
+        },
+        "3:4096_or_more": {
+          "class": "Eutectic_Si",
+          "area_bin": "4096_or_more",
+          "component_count": 0,
+          "groups_with_components": 0,
+          "fn_pixels": 0,
+          "mean_imagewise_oracle_miou_gain": 0.0,
+          "max_group_share_of_total_gain": null,
+          "per_fold": {
+            "3": {
+              "images": 17,
+              "groups": 14,
+              "mean_imagewise_oracle_gain": 0.0
+            },
+            "4": {
+              "images": 17,
+              "groups": 15,
+              "mean_imagewise_oracle_gain": 0.0
+            }
+          },
+          "group_bootstrap": {
+            "ci_95_two_sided": [
+              0.0,
+              0.0
+            ],
+            "ci_99_5_two_sided": [
+              0.0,
+              0.0
+            ],
+            "draws": 20000,
+            "seed": 1558,
+            "unit": "specimen group resampled within each held-out fold; all images retained"
+          }
+        }
+      }
+    },
+    "2": {
+      "images": 34,
+      "groups": 29,
+      "baseline_imagewise_miou": 0.8083085305278691,
+      "cells": {
+        "1:1_to_lt64": {
+          "class": "Al3Ni",
+          "area_bin": "1_to_lt64",
+          "component_count": 31329,
+          "groups_with_components": 29,
+          "fn_pixels": 244768,
+          "mean_imagewise_oracle_miou_gain": 0.015908171142471794,
+          "max_group_share_of_total_gain": 0.13804591929856894,
+          "per_fold": {
+            "3": {
+              "images": 17,
+              "groups": 14,
+              "mean_imagewise_oracle_gain": 0.014004821487500138
+            },
+            "4": {
+              "images": 17,
+              "groups": 15,
+              "mean_imagewise_oracle_gain": 0.017811520797443445
+            }
+          },
+          "group_bootstrap": {
+            "ci_95_two_sided": [
+              0.012129891526990396,
+              0.020554913887799207
+            ],
+            "ci_99_5_two_sided": [
+              0.010902909434825563,
+              0.02310526205823226
+            ],
+            "draws": 20000,
+            "seed": 1291,
+            "unit": "specimen group resampled within each held-out fold; all images retained"
+          }
+        },
+        "1:64_to_lt256": {
+          "class": "Al3Ni",
+          "area_bin": "64_to_lt256",
+          "component_count": 6263,
+          "groups_with_components": 29,
+          "fn_pixels": 175162,
+          "mean_imagewise_oracle_miou_gain": 0.009645686252574911,
+          "max_group_share_of_total_gain": 0.12384588960445754,
+          "per_fold": {
+            "3": {
+              "images": 17,
+              "groups": 14,
+              "mean_imagewise_oracle_gain": 0.008401871548606969
+            },
+            "4": {
+              "images": 17,
+              "groups": 15,
+              "mean_imagewise_oracle_gain": 0.010889500956542855
+            }
+          },
+          "group_bootstrap": {
+            "ci_95_two_sided": [
+              0.007033530090980583,
+              0.012559730803663016
+            ],
+            "ci_99_5_two_sided": [
+              0.005989380419141463,
+              0.01382679522615684
+            ],
+            "draws": 20000,
+            "seed": 1399,
+            "unit": "specimen group resampled within each held-out fold; all images retained"
+          }
+        },
+        "1:256_to_lt1024": {
+          "class": "Al3Ni",
+          "area_bin": "256_to_lt1024",
+          "component_count": 3107,
+          "groups_with_components": 29,
+          "fn_pixels": 180947,
+          "mean_imagewise_oracle_miou_gain": 0.008492733083906486,
+          "max_group_share_of_total_gain": 0.18890561977817533,
+          "per_fold": {
+            "3": {
+              "images": 17,
+              "groups": 14,
+              "mean_imagewise_oracle_gain": 0.006759412872656709
+            },
+            "4": {
+              "images": 17,
+              "groups": 15,
+              "mean_imagewise_oracle_gain": 0.010226053295156265
+            }
+          },
+          "group_bootstrap": {
+            "ci_95_two_sided": [
+              0.005840432238901757,
+              0.011431010829921
+            ],
+            "ci_99_5_two_sided": [
+              0.004965674383491372,
+              0.012558823180428995
+            ],
+            "draws": 20000,
+            "seed": 1492,
+            "unit": "specimen group resampled within each held-out fold; all images retained"
+          }
+        },
+        "1:1024_to_lt4096": {
+          "class": "Al3Ni",
+          "area_bin": "1024_to_lt4096",
+          "component_count": 1471,
+          "groups_with_components": 28,
+          "fn_pixels": 215715,
+          "mean_imagewise_oracle_miou_gain": 0.009298275631966868,
+          "max_group_share_of_total_gain": 0.25104245456162,
+          "per_fold": {
+            "3": {
+              "images": 17,
+              "groups": 14,
+              "mean_imagewise_oracle_gain": 0.008884857781324699
+            },
+            "4": {
+              "images": 17,
+              "groups": 15,
+              "mean_imagewise_oracle_gain": 0.009711693482609036
+            }
+          },
+          "group_bootstrap": {
+            "ci_95_two_sided": [
+              0.0061676241133698274,
+              0.013591852056133719
+            ],
+            "ci_99_5_two_sided": [
+              0.005376098115099479,
+              0.015678902499931605
+            ],
+            "draws": 20000,
+            "seed": 1546,
+            "unit": "specimen group resampled within each held-out fold; all images retained"
+          }
+        },
+        "1:4096_or_more": {
+          "class": "Al3Ni",
+          "area_bin": "4096_or_more",
+          "component_count": 379,
+          "groups_with_components": 26,
+          "fn_pixels": 220769,
+          "mean_imagewise_oracle_miou_gain": 0.00910788443750372,
+          "max_group_share_of_total_gain": 0.2783278575419902,
+          "per_fold": {
+            "3": {
+              "images": 17,
+              "groups": 14,
+              "mean_imagewise_oracle_gain": 0.006388681930674813
+            },
+            "4": {
+              "images": 17,
+              "groups": 15,
+              "mean_imagewise_oracle_gain": 0.011827086944332625
+            }
+          },
+          "group_bootstrap": {
+            "ci_95_two_sided": [
+              0.005367568252201452,
+              0.01390047570332096
+            ],
+            "ci_99_5_two_sided": [
+              0.0044642611057654,
+              0.01624876256388034
+            ],
+            "draws": 20000,
+            "seed": 1556,
+            "unit": "specimen group resampled within each held-out fold; all images retained"
+          }
+        },
+        "3:1_to_lt64": {
+          "class": "Eutectic_Si",
+          "area_bin": "1_to_lt64",
+          "component_count": 21443,
+          "groups_with_components": 29,
+          "fn_pixels": 174035,
+          "mean_imagewise_oracle_miou_gain": 0.020259986819051685,
+          "max_group_share_of_total_gain": 0.13793950419249193,
+          "per_fold": {
+            "3": {
+              "images": 17,
+              "groups": 14,
+              "mean_imagewise_oracle_gain": 0.01728928706235536
+            },
+            "4": {
+              "images": 17,
+              "groups": 15,
+              "mean_imagewise_oracle_gain": 0.02323068657574801
+            }
+          },
+          "group_bootstrap": {
+            "ci_95_two_sided": [
+              0.014899787598586879,
+              0.025941931911338905
+            ],
+            "ci_99_5_two_sided": [
+              0.013079002224312464,
+              0.02837862718646657
+            ],
+            "draws": 20000,
+            "seed": 1293,
+            "unit": "specimen group resampled within each held-out fold; all images retained"
+          }
+        },
+        "3:64_to_lt256": {
+          "class": "Eutectic_Si",
+          "area_bin": "64_to_lt256",
+          "component_count": 8419,
+          "groups_with_components": 29,
+          "fn_pixels": 216264,
+          "mean_imagewise_oracle_miou_gain": 0.019953233768286935,
+          "max_group_share_of_total_gain": 0.08391838121707851,
+          "per_fold": {
+            "3": {
+              "images": 17,
+              "groups": 14,
+              "mean_imagewise_oracle_gain": 0.018565685822609677
+            },
+            "4": {
+              "images": 17,
+              "groups": 15,
+              "mean_imagewise_oracle_gain": 0.021340781713964193
+            }
+          },
+          "group_bootstrap": {
+            "ci_95_two_sided": [
+              0.016888622111155955,
+              0.022943133775152863
+            ],
+            "ci_99_5_two_sided": [
+              0.01562744256460392,
+              0.024165066352305038
+            ],
+            "draws": 20000,
+            "seed": 1401,
+            "unit": "specimen group resampled within each held-out fold; all images retained"
+          }
+        },
+        "3:256_to_lt1024": {
+          "class": "Eutectic_Si",
+          "area_bin": "256_to_lt1024",
+          "component_count": 1788,
+          "groups_with_components": 28,
+          "fn_pixels": 165802,
+          "mean_imagewise_oracle_miou_gain": 0.016059869620555757,
+          "max_group_share_of_total_gain": 0.11595561399776663,
+          "per_fold": {
+            "3": {
+              "images": 17,
+              "groups": 14,
+              "mean_imagewise_oracle_gain": 0.012416109270660732
+            },
+            "4": {
+              "images": 17,
+              "groups": 15,
+              "mean_imagewise_oracle_gain": 0.019703629970450786
+            }
+          },
+          "group_bootstrap": {
+            "ci_95_two_sided": [
+              0.01172299278319486,
+              0.02071243552817121
+            ],
+            "ci_99_5_two_sided": [
+              0.010110501221898514,
+              0.022708861722257813
+            ],
+            "draws": 20000,
+            "seed": 1494,
+            "unit": "specimen group resampled within each held-out fold; all images retained"
+          }
+        },
+        "3:1024_to_lt4096": {
+          "class": "Eutectic_Si",
+          "area_bin": "1024_to_lt4096",
+          "component_count": 81,
+          "groups_with_components": 14,
+          "fn_pixels": 48717,
+          "mean_imagewise_oracle_miou_gain": 0.006743463527363932,
+          "max_group_share_of_total_gain": 0.3082699848695417,
+          "per_fold": {
+            "3": {
+              "images": 17,
+              "groups": 14,
+              "mean_imagewise_oracle_gain": 0.007995525980146367
+            },
+            "4": {
+              "images": 17,
+              "groups": 15,
+              "mean_imagewise_oracle_gain": 0.005491401074581498
+            }
+          },
+          "group_bootstrap": {
+            "ci_95_two_sided": [
+              0.0023281365923035827,
+              0.012447748793683544
+            ],
+            "ci_99_5_two_sided": [
+              0.0011220359367999577,
+              0.015283405234684582
+            ],
+            "draws": 20000,
+            "seed": 1548,
+            "unit": "specimen group resampled within each held-out fold; all images retained"
+          }
+        },
+        "3:4096_or_more": {
+          "class": "Eutectic_Si",
+          "area_bin": "4096_or_more",
+          "component_count": 0,
+          "groups_with_components": 0,
+          "fn_pixels": 0,
+          "mean_imagewise_oracle_miou_gain": 0.0,
+          "max_group_share_of_total_gain": null,
+          "per_fold": {
+            "3": {
+              "images": 17,
+              "groups": 14,
+              "mean_imagewise_oracle_gain": 0.0
+            },
+            "4": {
+              "images": 17,
+              "groups": 15,
+              "mean_imagewise_oracle_gain": 0.0
+            }
+          },
+          "group_bootstrap": {
+            "ci_95_two_sided": [
+              0.0,
+              0.0
+            ],
+            "ci_99_5_two_sided": [
+              0.0,
+              0.0
+            ],
+            "draws": 20000,
+            "seed": 1558,
+            "unit": "specimen group resampled within each held-out fold; all images retained"
+          }
+        }
+      }
+    }
+  },
+  "metric": "official image-wise mean of four class IoUs; empty union=0",
+  "official_valid_or_test_read": false,
+  "training_started": false,
+  "source_sha256": {
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold3/masks/A108_step2_sample2_mask.png": "b234c8d5b408dc6109d36fa070039c17879e7ba420cf68ee482ea65ec487fd49",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold3/masks/A109_step1_sample3_mask.png": "70d86b9d7f63363262a4ab24958f14fb869a6885f1c7c478ca18fd4796077f14",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold3/masks/A130_step1_sample1_mask.png": "5d79d43f9ad87dd5ed904f2570a3fc13381b53f9abc5054bab77ae977d90dfc6",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold3/masks/A137_step4_sample2_mask.png": "d545725253e515cfd4260b0add4ca07d48c22fad65dcd3c88dcae59df349c45f",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold3/masks/A153_step1_sample4_mask.png": "6c92d52bbd213f368e671bc09290557cfe43b2be644f67faf0c337ff6dab7a1f",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold3/masks/A154_step2_sample3_mask.png": "34646cb2086f58342c07ec136dc728113c1e314d9a70a2957ffa0d4405f2a8e2",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold3/masks/A159_step4_sample4_mask.png": "46e77b42cb87829a70e0c63c77ce90c7226959f8915403a702e5bee275eb369e",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold3/masks/A187_step2_sample1_mask.png": "8e7919ef66598d795f895b8fa920174ae0d7008fdaef6961ae530cbfff05df83",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold3/masks/A187_step4_sample4_mask.png": "f073400613b958b84cd4c545d506cc02ad5115ba639c387a54d764cf85cce741",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold3/masks/A18_step2_sample1_mask.png": "73ccc11a6c888b58d1b54a47800679ce97f65084469e7b66a06ceb43eb3a9a70",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold3/masks/A191_step3_sample1_mask.png": "5913ba6531e7818ac9d53e7903dacb0b7bcd0ba686b0f7b758107998f7d217e4",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold3/masks/A191_step4_sample1_mask.png": "d9bda68a64c6350a841cfdb29e1933433b9271341deed6bcf2e18f83ce91495b",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold3/masks/A201_step3_sample1_mask.png": "fc3140aa01b296849eec6b5a71a88ca5150b6cf303ffaa3febed3f750425dc9f",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold3/masks/A201_step3_sample4_mask.png": "849ec291195a451aca342fec455bc43ffe7dda6412efc7abbeb27a57f210d185",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold3/masks/A222_step2_sample2_mask.png": "8967c3ede7e0cd195cbe3d9a8a227ff4dc5d8c5c76e0d378aedbe428f9dcd19b",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold3/masks/A55_step3_sample4_mask.png": "2a67d465f32ec4d5d18f5cbe26707ec9413621c31cc92d215a5c5cfc49beffe3",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold3/masks/A98_step2_sample4_mask.png": "f3e103a443bc9c744b97f458848a474101188677acf72616bfd93a425242cc22",
+    "/workspace/komap_model1/outputs/model382_seed_count_control/seed1/fold3_oof/valid_probabilities.npz": "2dc0e0ee15b773b5201feb8fb5bafdd8b479e7289a99aadfc0ec82762b034c7a",
+    "/workspace/komap_model1/outputs/model382_seed_count_control/seed1/fold3_oof/model382_manifest.json": "42cbd76e98e6855511623836c0188bbce1585d773c222cf9964787e746dddd28",
+    "/workspace/komap_model1/outputs/model382_seed_count_control/seed1/fold3/last.pt": "f8f34a62620c28071252ee21341c6bd63bb9b2adf88122aa49556f45c65dfe16",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold4/masks/A101_step3_sample3_mask.png": "b9e9c4101788fe3829759072475ff1cd93ee8f0cc23f743aecafe177d96f5e15",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold4/masks/A121_step2_sample2_mask.png": "e30574993cca8e0b0cfd8ead910226dc597f8f811a31d0dbc854dc47f72d9364",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold4/masks/A125_step2_sample1_mask.png": "1ee9cc4da1916a27d8ad51684b009806e2f9503e0a24384ec65cd274080e3f83",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold4/masks/A146_step2_sample1_mask.png": "1119380aa7e90082b599359b65aafe25b57d7f113d0f69059a05a66fc66984c1",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold4/masks/A150_step4_sample1_mask.png": "613fa2873b806374a27353df97e9299c265596f275a384c83006d27ffd986b6b",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold4/masks/A156_step4_sample1_mask.png": "86d32434977ec5b898eed7bd6b07f62ba90a110fd58b07ab4ac9d0ae06c4849f",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold4/masks/A156_step4_sample2_mask.png": "c69294cb5bd5ff6aacb6b8a1cfad9d0156841c9f40fab2a0ca9233e5584ced6e",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold4/masks/A166_step4_sample3_mask.png": "eeaaca8cb0a415a76f4f1dc103810e24309d9ad4d25d7dff233838ff0bde9f5e",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold4/masks/A181_step4_sample4_mask.png": "165971724eb7cca69b23618aa41762a1f76eadc16462f9fea188afd4a00dfbae",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold4/masks/A188_step4_sample1_mask.png": "19797631b1e8644e23ab14b9896836f9311802f00326eae79a3933ac573b0af0",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold4/masks/A224_step1_sample2_mask.png": "cb664c26fa6f9271fe8877025c90c35c7ef2d78dfc64459efc1bc0dfd98d92ab",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold4/masks/A224_step4_sample2_mask.png": "d3d2b2cd031645c9e066bd80f009a71fde8acc04d030f681e252332534724df1",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold4/masks/A40_step3_sample4_mask.png": "802c3c94845250d4086c7fc23abb3d6cad3c143218e512947aa2fc7a0bcf65e6",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold4/masks/A66_step3_sample2_mask.png": "07f108e638c26f2760e58ee95838862ef73d06684a867fdea8cddb3a501e9462",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold4/masks/A83_step1_sample2_mask.png": "6911b34ee058ac03ce391d4401e626da9114d4be1974477a042393c25985e74e",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold4/masks/A89_step1_sample2_mask.png": "bb08649c239f2c6aa1cde29c9c7754c78cfb7b2947b5978b2e2bbbf300ab6f0c",
+    "/workspace/komap_model1/data_model322_group_cv/oof_fold4/masks/A96_step1_sample1_mask.png": "6cdb047587366c3160780416e6767e37ed0ca4165d41eb0f1e38b8ddf18e02bf",
+    "/workspace/komap_model1/outputs/model382_seed_count_control/seed1/fold4_oof/valid_probabilities.npz": "03c5ef1160710102814e4358c2a2e1d19578c9ef18065ce580cc9dc7902ff27f",
+    "/workspace/komap_model1/outputs/model382_seed_count_control/seed1/fold4_oof/model382_manifest.json": "ba14885d341907c060e651fe280ce6f8ff073fcb248a88a04331c8a2eef4a0c0",
+    "/workspace/komap_model1/outputs/model382_seed_count_control/seed1/fold4/last.pt": "59e9c24698166dfbd2a6e3c1d9db644e6148b38d75b84460684dae9e332cd1ec",
+    "/workspace/komap_model1/outputs/model382_seed_count_control/seed2/fold3_oof/valid_probabilities.npz": "38398fe4349cf3bb8a5a56e8525e569a963077b1d485c177bf64f6ab7209ed1f",
+    "/workspace/komap_model1/outputs/model382_seed_count_control/seed2/fold3_oof/model382_manifest.json": "53ce7a27b2a8669065d0c7f12590ef3dcc959aae7fbd31b448dfd662ee30308e",
+    "/workspace/komap_model1/outputs/model382_seed_count_control/seed2/fold3/last.pt": "5a682f17216fcb06dd47f3e47b1f9f718653cee44f194bdd2d5226a560e294b7",
+    "/workspace/komap_model1/outputs/model382_seed_count_control/seed2/fold4_oof/valid_probabilities.npz": "2fd219977e1ab6a1c566e66867170c9097086330d0b9f2e219e4ad1d088b73f1",
+    "/workspace/komap_model1/outputs/model382_seed_count_control/seed2/fold4_oof/model382_manifest.json": "ce97bfc791cb55518d924f8d2831e3103907b051f50d7488e3c13598fb892d4e",
+    "/workspace/komap_model1/outputs/model382_seed_count_control/seed2/fold4/last.pt": "7c1ec528ce78f78875991bbf5e9a42f86203a576113ce744556e2f2beca7f4cb"
+  },
+  "model382_lock_sha256": "ad0e888b51b70ad10e6af4b70f307ea7822876e8106fdcec82a93acb94b82ed5",
+  "model388_lock_sha256": "bf9b900a7895a5770cdeaccf8334741c6f525ea27a4be14f940e573e59819df9",
+  "interpretation_guard": "Oracle correction is an unattainable upper bound. OOF components were excluded from their model's training; no per-heldout-component crop exposure or causal association is estimated.",
+  "recovery": {
+    "type": "aggregation-shape compatibility shim",
+    "locked_evaluator_sha256": "ca6f13bf5ed8813efc881173d14facf21db4eb6b104ca5cc37358cd4cd14cb4e",
+    "correction": "The locked aggregator indexes each already-extracted cell summary as row['cells'][cell]. The shim adds that expected nested view to a shallow copy of each cell summary. Component labels, oracle predictions, metrics, bootstrap draws, thresholds, and gates are unchanged.",
+    "interpretation": "exploratory after partial train-OOF score exposure; not confirmatory",
+    "official_valid_or_test_read": false,
+    "training_started": false,
+    "recovery_code_sha256": "1d4c0ec6369cf1e7197404cb17245135ba7f98a1aa06312e3c3460d3e39e194f"
+  }
+}

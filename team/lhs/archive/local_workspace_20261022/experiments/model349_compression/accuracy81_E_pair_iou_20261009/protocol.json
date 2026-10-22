@@ -1,0 +1,16 @@
+{
+  "hypothesis": "Protect Primary/Ni predictions and optimize Eutectic IoU within Al/Eut pair",
+  "model": "Same 7713 parameter RF31 scalar bounded residual",
+  "training": "Same 4 folds x400 updates and seeds81900+fold; fixed last checkpoint",
+  "objective": ".2 masked pair BCE + .8 mean-per-crop soft Eutectic Jaccard + .05 residual squared",
+  "inference": "Only baseline top class Al/Eut eligible; choose Al/Eut pair; Primary/Ni prediction masks invariant",
+  "data": "Existing train70 base OOF features only; no valid/test",
+  "limitation": "Exploratory meta-OOF, base not nested retrained",
+  "gate": {
+    "gain_pp": 0.1,
+    "positive_folds": 3,
+    "worst_fold_min_pp": -0.1
+  },
+  "parent_context_candidate_reused": false,
+  "base_changed": false
+}

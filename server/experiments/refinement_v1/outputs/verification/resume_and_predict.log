@@ -1,0 +1,47 @@
+학습 70장의 오분류 위치 캐시 재사용
+Run: /Data3/sppark/komap/experiments/refinement_v1/outputs/smoke/e08_aspp_hard_weighted/seed2027/official
+Device: cuda:0, GPUs: 8, accumulation: 1
+Train: 70, validation: 20
+Optimizer updates:   0%|          | 0/3 [00:00<?, ?it/s]Optimizer updates:  33%|███▎      | 1/3 [00:01<00:02,  1.42s/it]Optimizer updates:  33%|███▎      | 1/3 [00:01<00:02,  1.42s/it, ETA=0h 00m, best=-1.00, loss=0.3251, stage=s0_patch512]
+Valid raw:   0%|          | 0/3 [00:00<?, ?it/s][A
+Valid raw:  33%|███▎      | 1/3 [00:00<00:01,  1.91it/s][A
+Valid raw:  67%|██████▋   | 2/3 [00:01<00:00,  1.66it/s][A
+Valid raw: 100%|██████████| 3/3 [00:01<00:00,  2.26it/s][A
+                                                        [A
+Valid ema:   0%|          | 0/3 [00:00<?, ?it/s][A
+Valid ema:  33%|███▎      | 1/3 [00:00<00:00,  3.24it/s][A
+Valid ema:  67%|██████▋   | 2/3 [00:00<00:00,  3.01it/s][A
+Valid ema: 100%|██████████| 3/3 [00:00<00:00,  4.18it/s][A
+                                                        [A                                                                                                                        Validation update 1: raw=78.181, EMA=78.471, best=78.471
+Optimizer updates:  33%|███▎      | 1/3 [00:03<00:02,  1.42s/it, ETA=0h 00m, best=-1.00, loss=0.3251, stage=s0_patch512]Optimizer updates:  67%|██████▋   | 2/3 [00:04<00:02,  2.48s/it, ETA=0h 00m, best=-1.00, loss=0.3251, stage=s0_patch512]Optimizer updates:  67%|██████▋   | 2/3 [00:04<00:02,  2.48s/it, ETA=0h 00m, best=78.47, loss=0.3237, stage=s1_patch768]
+Valid raw:   0%|          | 0/3 [00:00<?, ?it/s][A
+Valid raw:  33%|███▎      | 1/3 [00:00<00:00,  3.07it/s][A
+Valid raw:  67%|██████▋   | 2/3 [00:00<00:00,  3.01it/s][A
+Valid raw: 100%|██████████| 3/3 [00:00<00:00,  4.19it/s][A
+                                                        [A
+Valid ema:   0%|          | 0/3 [00:00<?, ?it/s][A
+Valid ema:  33%|███▎      | 1/3 [00:00<00:00,  3.78it/s][A
+Valid ema:  67%|██████▋   | 2/3 [00:00<00:00,  3.35it/s][A
+Valid ema: 100%|██████████| 3/3 [00:00<00:00,  4.48it/s][A
+                                                        [A                                                                                                                        Validation update 2: raw=78.422, EMA=78.472, best=78.472
+Optimizer updates:  67%|██████▋   | 2/3 [00:06<00:02,  2.48s/it, ETA=0h 00m, best=78.47, loss=0.3237, stage=s1_patch768]Optimizer updates:  67%|██████▋   | 2/3 [00:07<00:03,  3.71s/it, ETA=0h 00m, best=78.47, loss=0.3237, stage=s1_patch768]
+학습 70장의 오분류 위치 캐시 재사용
+Run: /Data3/sppark/komap/experiments/refinement_v1/outputs/smoke/e08_aspp_hard_weighted/seed2027/official
+Device: cuda:0, GPUs: 8, accumulation: 1
+Train: 70, validation: 20
+Optimizer updates:  67%|██████▋   | 2/3 [00:00<?, ?it/s]Optimizer updates: 100%|██████████| 3/3 [00:01<00:00,  1.98s/it]Optimizer updates: 100%|██████████| 3/3 [00:01<00:00,  1.98s/it, ETA=0h 00m, best=78.47, loss=0.2987, stage=s2_fullframe]
+Valid raw:   0%|          | 0/3 [00:00<?, ?it/s][A
+Valid raw:  33%|███▎      | 1/3 [00:00<00:01,  1.80it/s][A
+Valid raw:  67%|██████▋   | 2/3 [00:01<00:00,  1.56it/s][A
+Valid raw: 100%|██████████| 3/3 [00:01<00:00,  2.17it/s][A
+                                                        [A
+Valid ema:   0%|          | 0/3 [00:00<?, ?it/s][A
+Valid ema:  33%|███▎      | 1/3 [00:00<00:00,  3.06it/s][A
+Valid ema:  67%|██████▋   | 2/3 [00:00<00:00,  2.65it/s][A
+Valid ema: 100%|██████████| 3/3 [00:00<00:00,  3.50it/s][A
+                                                        [A                                                                                                                         Validation update 3: raw=78.458, EMA=78.472, best=78.472
+Optimizer updates: 100%|██████████| 3/3 [00:04<00:00,  1.98s/it, ETA=0h 00m, best=78.47, loss=0.2987, stage=s2_fullframe]Completed. Checkpoint: /Data3/sppark/komap/experiments/refinement_v1/outputs/smoke/e08_aspp_hard_weighted/seed2027/official/best.pt
+Optimizer updates: 100%|██████████| 3/3 [00:05<00:00,  5.74s/it, ETA=0h 00m, best=78.47, loss=0.2987, stage=s2_fullframe]
+Test masks e08_aspp_hard_weighted:   0%|          | 0/10 [00:00<?, ?image/s]Test masks e08_aspp_hard_weighted:  10%|█         | 1/10 [00:01<00:10,  1.19s/image]Test masks e08_aspp_hard_weighted:  20%|██        | 2/10 [00:02<00:08,  1.00s/image]Test masks e08_aspp_hard_weighted:  30%|███       | 3/10 [00:02<00:06,  1.08image/s]Test masks e08_aspp_hard_weighted:  40%|████      | 4/10 [00:04<00:07,  1.19s/image]Test masks e08_aspp_hard_weighted:  50%|█████     | 5/10 [00:05<00:05,  1.05s/image]Test masks e08_aspp_hard_weighted:  60%|██████    | 6/10 [00:06<00:04,  1.01s/image]Test masks e08_aspp_hard_weighted:  70%|███████   | 7/10 [00:06<00:02,  1.32image/s]Test masks e08_aspp_hard_weighted:  80%|████████  | 8/10 [00:07<00:01,  1.25image/s]Test masks e08_aspp_hard_weighted:  90%|█████████ | 9/10 [00:07<00:00,  1.62image/s]Test masks e08_aspp_hard_weighted: 100%|██████████| 10/10 [00:07<00:00,  2.05image/s]Test masks e08_aspp_hard_weighted: 100%|██████████| 10/10 [00:07<00:00,  1.29image/s]
+Test masks: /Data3/sppark/komap/experiments/refinement_v1/outputs/smoke_predictions/e08_aspp_hard_weighted/seed2026/d4/masks
+평가 완료 결과 재사용: e08_aspp_hard_weighted D4

@@ -1,0 +1,236 @@
+--- parent/timed_predict.py
++++ resume/timed_predict.py
+@@ -2,6 +2,7 @@
+ from pathlib import Path
+ import argparse, os, subprocess, time
+ from common import read, write, now, devices
++from prediction_checks import validate_prediction_inventory
+ 
+ SCOPE = ('Fresh end-to-end wall time: code/weight link preparation, Python startup, model loading, '
+          'image I/O and preprocessing, R inference/TTA/TENT, E inference, CPU F/postprocessing, '
+@@ -20,16 +21,20 @@
+     hardware=devices();t=time.perf_counter()
+     subprocess.run(command,env=env,check=True)
+     seconds=time.perf_counter()-t
+-    names={p.stem.removesuffix('_image') for p in images.glob('*_image.png')}
+-    for d in ['predicted_labels','predicted_masks']:
+-        actual={p.stem for p in (output/'fusion'/d).glob('*.png')}
+-        if actual!=names:raise ValueError(f'Incomplete prediction inventory: {d}')
+-    if not (output/'completion.json').is_file():raise RuntimeError('Missing prediction completion receipt')
+     row=dict(split=split,images=count,wall_seconds=seconds,seconds_per_image=seconds/count,
+              images_per_second=count/seconds,started_at=started,finished_at=now(),scope=SCOPE,
+              requested_physical_gpus=[3,4,5,6],gpu_uuids=gpus.split(','),hardware=hardware,
+              execution='R components across GPUs 3-6; E on first visible GPU (3); F on CPU',
+-             phase_times=read(output/'phase_timings.json'),command=command)
++             phase_times=[],command=command,inventory_verified=False)
++    # Persist the actual duration even if a later validation fails.
++    write(output/'inference_timing.json',row)
++    try:
++        row['inventory']=validate_prediction_inventory(images,output,count)
++        row['phase_times']=read(output/'phase_timings.json')
++        row['inventory_verified']=True
++    except Exception as error:
++        row['validation_error']=str(error);write(output/'inference_timing.json',row)
++        raise
+     write(output/'inference_timing.json',row)
+     print(f'INFERENCE {split}: {count} images, {seconds:.3f}s total, {seconds/count:.3f}s/image',flush=True)
+     return row
+--- parent/export_results.py
++++ resume/export_results.py
+@@ -6,6 +6,7 @@
+ from tqdm import tqdm
+ from common import ROOT, REPO, read, write, sha, now
+ from report_utils import allocate_result, class_ious, comparison
++from prediction_checks import validate_prediction_inventory
+ 
+ PALETTE=np.array([[25,76,153],[76,178,76],[153,127,76],[204,204,204]],dtype=np.uint8)
+ 
+@@ -80,8 +81,8 @@
+     for s,n in [('valid',20),('test',10)]:
+         t=timings[s]
+         if t['images']!=n or t['wall_seconds']<=0 or abs(t['seconds_per_image']-t['wall_seconds']/n)>1e-9:raise ValueError('Invalid timing')
+-        names={p.stem.removesuffix('_image') for p in (ROOT/f'data/{s}/images').glob('*_image.png')}
+-        if {p.stem for p in (run/f'pred_{s}/fusion/predicted_masks').glob('*.png')}!=names:raise ValueError('Missing prediction')
++        if not t.get('inventory_verified'):raise ValueError('Timing receipt has not passed output validation')
++        validate_prediction_inventory(ROOT/f'data/{s}/images',run/f'pred_{s}',n)
+     result=allocate_result(Path(results_root))
+     metrics=score_and_panels(ROOT/'data',run/'pred_valid/fusion/predicted_labels',result)
+     prior=read(run/'pred_valid/metrics.json')
+@@ -100,7 +101,7 @@
+     for name in ['preflight.json','environment.freeze.txt','pipeline_completion.json']:shutil.copy2(run/name,result/name)
+     lines=['# Model349 lite13 retuned — 전체 재학습 결과','',
+            f'valid20 image mIoU: **{metrics["image_miou"]*100:.6f}%**','',
+-           '최종 가중치 R7 + E5 + F1 = 13개. 선행/OOF를 포함한 학습 작업 33개를 완료했습니다.',
++           '최종 가중치 R7 + E5 + F1 = 13개. 원래 실행에서 완료한 학습 작업 33개를 재사용하고 재학습은 하지 않았습니다.',
+            'GPU 물리 3·4·5·6, conda komap. R 확률 결합과 E 비율은 GitHub retuned 설정을 고정했습니다.',
+            '지표: 이미지별 네 클래스 IoU 평균을 valid20에 대해 평균합니다. 빈 클래스 IoU=0이며 global mIoU는 계산하지 않습니다.',
+            '과거 R의 빈 클래스 제외 checkpoint 선택도 같은 지표로 통일했습니다. 원본과 다른 checkpoint가 선택될 수 있습니다.',
+@@ -113,12 +114,15 @@
+            '측정 범위: 준비, 프로세스 시작, 모델 로딩, 전처리, R(TTA/TENT)·E·F, 후처리, 확률/마스크 저장과 임시 폴더 정리까지입니다. 학습·정답 채점·보고서 그림 생성 시간은 제외했습니다.',
+            '별도 warm-up이나 저장 예측 재사용 없이 각 split을 한 번 측정했습니다. 장당 시간은 전체 시간을 이미지 수로 나눈 처리시간이며 단일 이미지 지연시간은 아닙니다.',
+            'R 구성요소는 GPU 3~6에 분배하며 E는 GPU 3, F는 CPU에서 실행합니다. R/E/F별 시간과 GPU UUID·이름은 inference_timing.json에 있습니다.',
+-           f'전체 학습·추론 파이프라인 경과시간(보고서 생성 제외): {completion["wall_seconds"]:.1f}초.','',
++           f'이번 재개 처리 경과시간(보고서 생성 제외): {completion["wall_seconds"]:.1f}초.',
++           f'원래 실행 경과시간: {completion["parent_attempt_wall_seconds"]:.1f}초. 합산 가동시간: {completion["total_active_wall_seconds"]:.1f}초(대기기간 제외, valid 재측정 포함).',
++           '원래 valid 추론은 완료됐지만 `_mask.png` 파일명 검사 오류로 전체 시간 저장 전에 중단됐습니다. 기존 출력은 보존하고 valid/test를 새로 추론해 실측 시간을 기록했습니다.',
++           f'학습 원본·원래 로그: `{read(run/"resume_provenance.json")["parent_run"]}`','',
+            '## 결과 파일','',
+            '`valid_mask_comparison/`: 20장, 좌상 원본 / 우상 정답색 오류(맞은 픽셀 흰색) / 좌하 예측 / 우하 정답. image mIoU와 100%−image mIoU를 표시합니다.',
+            '`selected_model/`: 새 13개 가중치, 코드, 설정, 해시 검증 추론 실행기.',
+            '`inference_timing.json`, `.csv`: 실측 추론시간. `source_snapshot/`: 실제 실행 소스.',
+-           f'모든 중간 모델과 상세 로그: `{run}`','',
++           f'이번 재개 출력과 상세 로그: `{run}`','',
+            '| 이미지 | image mIoU | 100%−image mIoU |','|---|---:|---:|',
+            *[f'| {r["image"]} | {r["image_miou"]*100:.6f}% | {(1-r["image_miou"])*100:.6f}% |' for r in metrics['images']],'']
+     (result/f'{result.name}.md').write_text('\n'.join(lines))
+--- parent/run.py
++++ resume/run.py
+@@ -1,84 +1,85 @@
+-"""Isolated nohup run, progress, immutable source snapshot and automatic result export."""
++"""Resume only inference/scoring/export; this executable has no training entrypoint."""
+ from pathlib import Path
+-import argparse, fcntl, os, shutil, signal, subprocess, sys, time
++from datetime import datetime
++from zoneinfo import ZoneInfo
++import argparse,fcntl,os,shutil,signal,subprocess,sys,time
+ from tqdm import tqdm
+-from common import ROOT, GPUS, now, read, write, devices
++from common import ROOT,GPUS,read,write,sha,now,devices
+ 
+-def heartbeat(run,bar):
+-    rows=[read(p) for p in (run/'stages').glob('*.json')]
+-    done=sum(r['status']=='done' for r in rows)
+-    # Two measured final inference stages are not training stages.
+-    done+=sum((run/f'pred_{s}/inference_timing.json').is_file() for s in ['valid','test'])
+-    bar.update(done-bar.n)
+-    active=[r for r in rows if r['status']=='running']
+-    bar.set_postfix_str(','.join(r['name'] for r in active) or 'preparing / final inference')
+-    for r in active:
+-        p=Path(r['log']);tail=''
+-        if p.exists():
+-            with p.open('rb') as stream:
+-                stream.seek(max(0,p.stat().st_size-2048));lines=stream.read().decode(errors='replace').replace('\r','\n').splitlines()
+-            if lines:tail=lines[-1][-240:]
+-        print(f"[active {r['name']}] {tail}",flush=True)
+-    return [r for r in rows if r['status']=='failed']
+-
+-def train(lock_held=False):
+-    lock=None
++def execute(lock_held=False):
+     if not lock_held:
+         lock=(ROOT/'.run.lock').open('w');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+     from preflight import check
+-    checked=check();hardware=devices()
++    report=check();hardware=devices()
+     busy=[i for i,r in hardware.items() if r['memory_used_mib']>800 or r['utilization_percent']>10]
+-    if busy:raise RuntimeError(f'GPUs currently busy: {busy}; no training started. Retry when available.')
+-    if os.environ.get('SMOKE')=='1':raise ValueError('This launcher is full training only; SMOKE is not supported.')
+-    run=ROOT/'outputs'/('retrain_'+time.strftime('%Y%m%d_%H%M%S')+'_'+str(time.time_ns()))
+-    run.mkdir(parents=True);(run/'logs').mkdir();snapshot=run/'implementation';snapshot.mkdir()
++    if busy:raise RuntimeError(f'Requested GPUs are busy: {busy}. No inference started.')
++    parent=Path(read(ROOT/'parent.json')['parent_run'])
++    name=datetime.now(ZoneInfo('Asia/Seoul')).strftime('resume_%Y%m%d_%H%M%S_%f')
++    run=ROOT/'outputs'/name;run.mkdir(parents=True);(run/'logs').mkdir();impl=run/'implementation';impl.mkdir()
+     for p in ROOT.iterdir():
+-        if p.is_file() and p.suffix in ['.py','.sh','.json','.md','.diff']:shutil.copy2(p,snapshot/p.name)
+-    shutil.copytree(ROOT/'source',snapshot/'source')
+-    (snapshot/'data').symlink_to(ROOT/'data',target_is_directory=True)
+-    write(run/'preflight.json',checked)
++        if p.is_file() and p.suffix in ['.py','.sh','.json','.md','.diff']:shutil.copy2(p,impl/p.name)
++    shutil.copytree(ROOT/'source',impl/'source');(impl/'data').symlink_to((ROOT/'data').resolve(),target_is_directory=True)
++    (run/'model').mkdir();(run/'model/weights').symlink_to(parent/'model/weights',target_is_directory=True)
++    shutil.copytree(parent/'stages',run/'stages')
++    write(run/'preflight.json',report);write(run/'resume_provenance.json',read(ROOT/'parent.json'))
++    shutil.copy2(ROOT/'checks/parent_audit.json',run/'parent_audit.json')
+     with (run/'environment.freeze.txt').open('w') as f:subprocess.run([sys.executable,'-m','pip','freeze'],stdout=f,check=True)
+-    write(ROOT/'latest_run.json',{'run':str(run),'started_at':now()})
+-    env=dict(os.environ,DATA=str(ROOT/'data'),OUT=str(run),PYTHON=sys.executable,SMOKE='0',PLAN_ONLY='0')
+-    gpu_list=','.join(hardware[i]['uuid'] for i in GPUS)
+-    env['CUDA_VISIBLE_DEVICES']=gpu_list
+-    start=time.perf_counter();child=None
+-    def stopped(sig,frame):raise KeyboardInterrupt(f'Signal {sig}')
+-    for sig in [signal.SIGTERM,signal.SIGINT]:signal.signal(sig,stopped)
+-    write(run/'status.json',dict(status='running',started_at=now(),physical_gpus=GPUS,hardware=hardware))
+-    print(f'RUN={run}\n33 training jobs; 51 total stages; physical GPUs={GPUS}',flush=True)
++    write(ROOT/'latest_run.json',dict(run=str(run),started_at=now()));write(run/'status.json',dict(status='running',reused_training=33,new_training=0,started_at=now()))
++    env=dict(os.environ,PYTHON=sys.executable);env['CUDA_VISIBLE_DEVICES']=','.join(hardware[i]['uuid'] for i in GPUS)
++    child=None;t0=time.perf_counter()
++    def stop(sig,frame):raise KeyboardInterrupt(f'Signal {sig}')
++    for s in [signal.SIGTERM,signal.SIGINT]:signal.signal(s,stop)
++    def call(command,name,estimate):
++        nonlocal child
++        log=run/'logs'/f'{name}.log';started=time.monotonic();last_line=None
++        print(f'START {name}; log={log}',flush=True)
++        with log.open('w') as stream:
++            child=subprocess.Popen(list(map(str,command)),cwd=impl,env=env,stdout=stream,stderr=subprocess.STDOUT,start_new_session=True)
++            while child.poll() is None:
++                elapsed=time.monotonic()-started
++                print(f'[{name}] elapsed={elapsed:.0f}s estimated_remaining={max(0,estimate-elapsed):.0f}s (estimate)',flush=True)
++                with log.open('rb') as f:
++                    f.seek(max(0,log.stat().st_size-1500));lines=f.read().decode(errors='replace').replace('\r','\n').splitlines()
++                if lines and lines[-1]!=last_line:print(lines[-1][-400:],flush=True);last_line=lines[-1]
++                time.sleep(10)
++        if child.returncode:
++            print(log.read_text(errors='replace')[-7000:],flush=True)
++            raise subprocess.CalledProcessError(child.returncode,command)
++        print(f'DONE {name}; elapsed={time.monotonic()-started:.1f}s',flush=True)
++    print(f'RUN={run}\nReuse all 33 completed training jobs / 13 weights; no retraining. GPUs={GPUS}',flush=True)
+     try:
+-        child=subprocess.Popen(['bash',str(snapshot/'source/run_retrain.sh'),gpu_list],env=env,cwd=snapshot/'source',start_new_session=True)
+-        with tqdm(total=51,desc='lite13 stages (ETA estimate)',unit='stage',mininterval=10,dynamic_ncols=True) as bar:
+-            while child.poll() is None:
+-                failed=heartbeat(run,bar)
+-                if failed:raise RuntimeError('Stage failed: '+','.join(r['name'] for r in failed))
+-                time.sleep(10)
+-            heartbeat(run,bar)
+-        if child.returncode:raise subprocess.CalledProcessError(child.returncode,child.args)
+-        if any(read(p)['status']!='done' for p in (run/'stages').glob('*.json')):raise RuntimeError('Incomplete stage receipts')
+-        write(run/'pipeline_completion.json',dict(ok=True,wall_seconds=time.perf_counter()-start,finished_at=now()))
+-        # Execute the exact exporter captured at launch.
+-        subprocess.run([sys.executable,'-B',str(snapshot/'export_results.py'),'--run',str(run)],check=True)
+-        write(run/'status.json',dict(status='complete',finished_at=now(),wall_seconds=time.perf_counter()-start,result=read(run/'result.json')['result']))
++        with tqdm(total=4,desc='Resume evaluation',unit='step',dynamic_ncols=True) as progress:
++            for split,estimate in [('valid',450),('test',250)]:
++                call([sys.executable,'-B',impl/'timed_predict.py','--source',impl/'source','--weights',run/'model/weights',
++                      '--images',ROOT/f'data/{split}/images','--output',run/f'pred_{split}','--gpus',env['CUDA_VISIBLE_DEVICES'],'--split',split],f'predict_{split}',estimate)
++                progress.update(1)
++            command=[sys.executable,'-B',impl/'source/tools/score_masks.py','--labels',run/'pred_valid/fusion/predicted_labels',
++                     '--gt',ROOT/'data/valid/masks','--output',run/'pred_valid/metrics.json']
++            start=time.perf_counter();call(command,'score_valid',5)
++            write(run/'stages/score_valid.json',dict(name='score_valid',status='done',returncode=0,command=list(map(str,command)),
++                  artifact=str(run/'pred_valid/metrics.json'),artifact_sha256=sha(run/'pred_valid/metrics.json'),wall_seconds=time.perf_counter()-start,finished_at=now()))
++            progress.update(1)
++            seconds=time.perf_counter()-t0;parent_seconds=read(parent/'status.json')['wall_seconds']
++            write(run/'pipeline_completion.json',dict(ok=True,wall_seconds=seconds,parent_attempt_wall_seconds=parent_seconds,
++                  total_active_wall_seconds=parent_seconds+seconds,reused_training_count=33,new_training_count=0,finished_at=now()))
++            call([sys.executable,'-B',impl/'export_results.py','--run',run],'export_results',60)
++            progress.update(1)
++        write(run/'status.json',dict(status='complete',finished_at=now(),result=read(run/'result.json')['result'],wall_seconds=time.perf_counter()-t0,reused_training=33,new_training=0))
+         print('COMPLETE '+read(run/'result.json')['result'],flush=True)
+-    except BaseException as e:
++    except BaseException as error:
+         if child is not None:
+             try:os.killpg(child.pid,signal.SIGTERM)
+             except ProcessLookupError:pass
+             try:child.wait(timeout=10)
+-            except subprocess.TimeoutExpired:
+-                os.killpg(child.pid,signal.SIGKILL);child.wait()
+-        write(run/'status.json',dict(status='stopped_or_failed',error=str(e),finished_at=now(),wall_seconds=time.perf_counter()-start))
++            except subprocess.TimeoutExpired:os.killpg(child.pid,signal.SIGKILL);child.wait()
++        write(run/'status.json',dict(status='stopped_or_failed',error=str(error),finished_at=now(),wall_seconds=time.perf_counter()-t0))
+         raise
+ 
+ def main():
+-    p=argparse.ArgumentParser();p.add_argument('action',choices=['check','plan','train']);p.add_argument('--execute',action='store_true');p.add_argument('--lock-held',action='store_true');a=p.parse_args()
+-    if a.action=='plan':print((ROOT/'plan.json').read_text());return
++    p=argparse.ArgumentParser();p.add_argument('action',choices=['check','plan','resume']);p.add_argument('--execute',action='store_true');p.add_argument('--lock-held',action='store_true');a=p.parse_args()
++    if a.action=='plan':print((ROOT/'parent.json').read_text());return
+     if a.action=='check' or not a.execute:
+         from preflight import check
+-        report=check();write(ROOT/'checks/preflight.json',report);print(report)
+-        if a.action=='train':print('Checks only. To start training yourself: ./start_nohup.sh')
+-        return
+-    train(a.lock_held)
++        result=check();write(ROOT/'checks/preflight.json',result);print(result);return
++    execute(a.lock_held)
+ if __name__=='__main__':main()

@@ -1,0 +1,477 @@
+{
+  "utc": "2026-10-08T01:33:16.137152+00:00",
+  "platform": "Linux-5.4.0-216-generic-x86_64-with-glibc2.35",
+  "gpu": "index, uuid, name, memory.used [MiB], utilization.gpu [%]\n0, GPU-cc2e4f3a-b098-db06-d993-3c46e4fa8b78, Tesla P100-PCIE-16GB, 1438 MiB, 0 %\n1, GPU-bab36a09-a44f-be2c-14e2-4a02d0f4936c, Tesla P100-PCIE-16GB, 15708 MiB, 0 %\n2, GPU-68abda1f-f314-326f-772e-c343f0037edd, Tesla P100-PCIE-16GB, 7596 MiB, 0 %\n3, GPU-0a792461-ebcc-18c6-a7a3-44687f582750, Tesla P100-PCIE-16GB, 6 MiB, 0 %\n4, GPU-0e81e88a-0423-52dd-92d2-482e981a9f42, Tesla P100-PCIE-16GB, 6750 MiB, 0 %\n5, GPU-61fdf434-3226-46e0-7b19-19cc93dc099b, Tesla P100-PCIE-16GB, 5522 MiB, 0 %\n6, GPU-9bf58859-5c8f-26af-b3ed-34c6a56167d9, Tesla P100-PCIE-16GB, 3336 MiB, 22 %\n7, GPU-635c653b-b025-7cca-2f0e-3b845c10c1a9, Tesla P100-PCIE-16GB, 348 MiB, 6 %\n",
+  "compute_apps": "gpu_uuid, pid, process_name, used_gpu_memory [MiB]\nGPU-cc2e4f3a-b098-db06-d993-3c46e4fa8b78, 2123683, [Not Found], 254 MiB\nGPU-cc2e4f3a-b098-db06-d993-3c46e4fa8b78, 532825, [Not Found], 358 MiB\nGPU-cc2e4f3a-b098-db06-d993-3c46e4fa8b78, 533295, [Not Found], 358 MiB\nGPU-cc2e4f3a-b098-db06-d993-3c46e4fa8b78, 533850, [Not Found], 462 MiB\nGPU-bab36a09-a44f-be2c-14e2-4a02d0f4936c, 467643, [Not Found], 15702 MiB\nGPU-68abda1f-f314-326f-772e-c343f0037edd, 1444048, [Not Found], 278 MiB\nGPU-68abda1f-f314-326f-772e-c343f0037edd, 2123683, [Not Found], 7312 MiB\nGPU-0e81e88a-0423-52dd-92d2-482e981a9f42, 566348, [Not Found], 6744 MiB\nGPU-61fdf434-3226-46e0-7b19-19cc93dc099b, 1601537, [Not Found], 5516 MiB\nGPU-9bf58859-5c8f-26af-b3ed-34c6a56167d9, 549152, [Not Found], 3328 MiB\nGPU-635c653b-b025-7cca-2f0e-3b845c10c1a9, 570000, [Not Found], 342 MiB\n",
+  "processes": "    PID    PPID COMMAND\n      1       0 /bin/sh -c service ssh start && tail -f /dev/null\n     50       1 sshd: /usr/sbin/sshd [listener] 0 of 10-100 startups\n     52       1 tail -f /dev/null\n1064459       1 bash -c while :; do date -u +%Y-%m-%dT%H:%M:%SZ; nvidia-smi -i 2 --query-gpu=memory.used,memory.free,utilization.gpu --format=csv,noheader,nounits; nvidia-smi -i 2 --query-compute-apps=pid,used_memory --format=csv,noheader,nounits; sleep 15; done\n2086844      50 sshd: root@notty\n2086856       1 bash -c cd /workspace/model349_compress/audit_20261008 && nohup /workspace/venv-komap/bin/python -B -u prepare_and_run.py > queue.log 2>&1 < /dev/null & echo $!\n2086857 2086856 /workspace/venv-komap/bin/python -B -u prepare_and_run.py\n2086945 2086857 /workspace/venv-komap/bin/python -B -u /workspace/model349_compress/audit_20261008/bundles/lite15/infer_lite.py --input /workspace/komap_model1/data/valid/images --gt /workspace/komap_model1/data/valid/masks --output /workspace/model349_compress/audit_20261008/runs/lite15 --gpus 7 --keep-probabilities\n2087199 1064459 sleep 15\n2087201 2086945 /workspace/venv-komap/bin/python -B -u /workspace/model349_compress/audit_20261008/bundles/lite15/infer_lite.py --_worker 329 --output /workspace/model349_compress/audit_20261008/runs/lite15\n2087217      50 sshd: root@notty\n2087230 2087217 bash -c /workspace/venv-komap/bin/python -B /workspace/model349_compress/audit_20261008/capture_audit.py; tail -4 /workspace/model349_compress/audit_20261008/lite15.log\n2087231 2087230 /workspace/venv-komap/bin/python -B /workspace/model349_compress/audit_20261008/capture_audit.py\n2087235 2087231 ps -eo pid,ppid,args\n",
+  "storage": "Filesystem      Size  Used Avail Use% Mounted on\n/dev/sdb1       7.4T  6.5T  557G  93% /workspace\n",
+  "memory": "               total        used        free      shared  buff/cache   available\nMem:           125Gi        94Gi       2.2Gi       351Mi        29Gi        30Gi\nSwap:          8.0Gi       8.0Gi          0B\n",
+  "preexisting_runs": {
+    "lite14_fp16_valid20": {
+      "exists": true,
+      "completion_exists": false,
+      "files": [
+        {
+          "path": "input_manifest.json",
+          "bytes": 8186
+        },
+        {
+          "path": "logs/269.log",
+          "bytes": 2562
+        },
+        {
+          "path": "logs/326.log",
+          "bytes": 2225
+        },
+        {
+          "path": "logs/329.log",
+          "bytes": 2225
+        },
+        {
+          "path": "logs/336.log",
+          "bytes": 2291
+        },
+        {
+          "path": "logs/base.log",
+          "bytes": 2970
+        },
+        {
+          "path": "predicted_labels/A117_step4_sample2.png",
+          "bytes": 95008
+        },
+        {
+          "path": "predicted_masks/A117_step4_sample2_mask.png",
+          "bytes": 125396
+        },
+        {
+          "path": "probabilities/269/A117_step4_sample2.npy",
+          "bytes": 8610128
+        },
+        {
+          "path": "probabilities/269/A11_step1_sample4.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/269/A11_step2_sample4.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/269/A125_step1_sample4.npy",
+          "bytes": 8610128
+        },
+        {
+          "path": "probabilities/269/A153_step3_sample3.npy",
+          "bytes": 9293744
+        },
+        {
+          "path": "probabilities/269/A170_step4_sample3.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/269/A181_step1_sample1.npy",
+          "bytes": 11796608
+        },
+        {
+          "path": "probabilities/269/A186_step2_sample2.npy",
+          "bytes": 9293744
+        },
+        {
+          "path": "probabilities/269/A191_step4_sample3.npy",
+          "bytes": 11796608
+        },
+        {
+          "path": "probabilities/269/A40_step3_sample3.npy",
+          "bytes": 9293744
+        },
+        {
+          "path": "probabilities/269/A42_step2_sample4.npy",
+          "bytes": 8610128
+        },
+        {
+          "path": "probabilities/269/A44_step4_sample3.npy",
+          "bytes": 9293744
+        },
+        {
+          "path": "probabilities/269/A55_step2_sample1.npy",
+          "bytes": 6839168
+        },
+        {
+          "path": "probabilities/269/A59_step3_sample1.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/269/A63_step1_sample4.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/269/A67_step1_sample1.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/269/A71_step2_sample1.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/269/A72_step4_sample4.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/269/A74_step3_sample4.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/269/A7_step1_sample4.npy",
+          "bytes": 9293744
+        },
+        {
+          "path": "probabilities/269/complete.json",
+          "bytes": 81
+        },
+        {
+          "path": "probabilities/326/A117_step4_sample2.npy",
+          "bytes": 8610128
+        },
+        {
+          "path": "probabilities/326/A11_step1_sample4.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/326/A11_step2_sample4.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/326/A125_step1_sample4.npy",
+          "bytes": 8610128
+        },
+        {
+          "path": "probabilities/326/A153_step3_sample3.npy",
+          "bytes": 9293744
+        },
+        {
+          "path": "probabilities/326/A170_step4_sample3.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/326/A181_step1_sample1.npy",
+          "bytes": 11796608
+        },
+        {
+          "path": "probabilities/326/A186_step2_sample2.npy",
+          "bytes": 9293744
+        },
+        {
+          "path": "probabilities/326/A191_step4_sample3.npy",
+          "bytes": 11796608
+        },
+        {
+          "path": "probabilities/326/A40_step3_sample3.npy",
+          "bytes": 9293744
+        },
+        {
+          "path": "probabilities/326/A42_step2_sample4.npy",
+          "bytes": 8610128
+        },
+        {
+          "path": "probabilities/326/A44_step4_sample3.npy",
+          "bytes": 9293744
+        },
+        {
+          "path": "probabilities/326/A55_step2_sample1.npy",
+          "bytes": 6839168
+        },
+        {
+          "path": "probabilities/326/A59_step3_sample1.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/326/A63_step1_sample4.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/326/A67_step1_sample1.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/326/A71_step2_sample1.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/326/A72_step4_sample4.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/326/A74_step3_sample4.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/326/A7_step1_sample4.npy",
+          "bytes": 9293744
+        },
+        {
+          "path": "probabilities/326/complete.json",
+          "bytes": 80
+        },
+        {
+          "path": "probabilities/329/A117_step4_sample2.npy",
+          "bytes": 8610128
+        },
+        {
+          "path": "probabilities/329/A11_step1_sample4.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/329/A11_step2_sample4.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/329/A125_step1_sample4.npy",
+          "bytes": 8610128
+        },
+        {
+          "path": "probabilities/329/A153_step3_sample3.npy",
+          "bytes": 9293744
+        },
+        {
+          "path": "probabilities/329/A170_step4_sample3.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/329/A181_step1_sample1.npy",
+          "bytes": 11796608
+        },
+        {
+          "path": "probabilities/329/A186_step2_sample2.npy",
+          "bytes": 9293744
+        },
+        {
+          "path": "probabilities/329/A191_step4_sample3.npy",
+          "bytes": 11796608
+        },
+        {
+          "path": "probabilities/329/A40_step3_sample3.npy",
+          "bytes": 9293744
+        },
+        {
+          "path": "probabilities/329/A42_step2_sample4.npy",
+          "bytes": 8610128
+        },
+        {
+          "path": "probabilities/329/A44_step4_sample3.npy",
+          "bytes": 9293744
+        },
+        {
+          "path": "probabilities/329/A55_step2_sample1.npy",
+          "bytes": 6839168
+        },
+        {
+          "path": "probabilities/329/A59_step3_sample1.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/329/A63_step1_sample4.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/329/A67_step1_sample1.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/329/A71_step2_sample1.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/329/A72_step4_sample4.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/329/A74_step3_sample4.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/329/A7_step1_sample4.npy",
+          "bytes": 9293744
+        },
+        {
+          "path": "probabilities/329/complete.json",
+          "bytes": 80
+        },
+        {
+          "path": "probabilities/336/A117_step4_sample2.npy",
+          "bytes": 8610128
+        },
+        {
+          "path": "probabilities/336/A11_step1_sample4.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/336/A11_step2_sample4.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/336/A125_step1_sample4.npy",
+          "bytes": 8610128
+        },
+        {
+          "path": "probabilities/336/A153_step3_sample3.npy",
+          "bytes": 9293744
+        },
+        {
+          "path": "probabilities/336/A170_step4_sample3.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/336/A181_step1_sample1.npy",
+          "bytes": 11796608
+        },
+        {
+          "path": "probabilities/336/A186_step2_sample2.npy",
+          "bytes": 9293744
+        },
+        {
+          "path": "probabilities/336/A191_step4_sample3.npy",
+          "bytes": 11796608
+        },
+        {
+          "path": "probabilities/336/A40_step3_sample3.npy",
+          "bytes": 9293744
+        },
+        {
+          "path": "probabilities/336/A42_step2_sample4.npy",
+          "bytes": 8610128
+        },
+        {
+          "path": "probabilities/336/A44_step4_sample3.npy",
+          "bytes": 9293744
+        },
+        {
+          "path": "probabilities/336/A55_step2_sample1.npy",
+          "bytes": 6839168
+        },
+        {
+          "path": "probabilities/336/A59_step3_sample1.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/336/A63_step1_sample4.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/336/A67_step1_sample1.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/336/A71_step2_sample1.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/336/A72_step4_sample4.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/336/A74_step3_sample4.npy",
+          "bytes": 2592128
+        },
+        {
+          "path": "probabilities/336/A7_step1_sample4.npy",
+          "bytes": 9293744
+        },
+        {
+          "path": "probabilities/336/complete.json",
+          "bytes": 81
+        },
+        {
+          "path": "probabilities/base/A117_step4_sample2.pkl",
+          "bytes": 25830593
+        },
+        {
+          "path": "probabilities/base/A11_step1_sample4.pkl",
+          "bytes": 7776593
+        },
+        {
+          "path": "probabilities/base/A11_step2_sample4.pkl",
+          "bytes": 7776593
+        },
+        {
+          "path": "probabilities/base/A125_step1_sample4.pkl",
+          "bytes": 25830593
+        },
+        {
+          "path": "probabilities/base/A153_step3_sample3.pkl",
+          "bytes": 27881441
+        },
+        {
+          "path": "probabilities/base/A170_step4_sample3.pkl",
+          "bytes": 7776593
+        },
+        {
+          "path": "probabilities/base/A181_step1_sample1.pkl",
+          "bytes": 35390033
+        },
+        {
+          "path": "probabilities/base/A186_step2_sample2.pkl",
+          "bytes": 27881441
+        },
+        {
+          "path": "probabilities/base/A191_step4_sample3.pkl",
+          "bytes": 35390033
+        },
+        {
+          "path": "probabilities/base/A40_step3_sample3.pkl",
+          "bytes": 27881441
+        },
+        {
+          "path": "probabilities/base/A42_step2_sample4.pkl",
+          "bytes": 25830593
+        },
+        {
+          "path": "probabilities/base/A44_step4_sample3.pkl",
+          "bytes": 27881441
+        },
+        {
+          "path": "probabilities/base/A55_step2_sample1.pkl",
+          "bytes": 20517713
+        },
+        {
+          "path": "probabilities/base/A59_step3_sample1.pkl",
+          "bytes": 7776593
+        },
+        {
+          "path": "probabilities/base/A63_step1_sample4.pkl",
+          "bytes": 7776593
+        },
+        {
+          "path": "probabilities/base/A67_step1_sample1.pkl",
+          "bytes": 7776593
+        },
+        {
+          "path": "probabilities/base/A71_step2_sample1.pkl",
+          "bytes": 7776593
+        },
+        {
+          "path": "probabilities/base/A72_step4_sample4.pkl",
+          "bytes": 7776593
+        },
+        {
+          "path": "probabilities/base/A74_step3_sample4.pkl",
+          "bytes": 7776593
+        },
+        {
+          "path": "probabilities/base/A7_step1_sample4.pkl",
+          "bytes": 27881441
+        },
+        {
+          "path": "probabilities/base/complete.json",
+          "bytes": 83
+        }
+      ]
+    },
+    "lite14_fp16_tent3_valid20": {
+      "exists": false,
+      "completion_exists": false
+    },
+    "lite12_fp16_fold326_13_valid20": {
+      "exists": false,
+      "completion_exists": false
+    }
+  }
+}

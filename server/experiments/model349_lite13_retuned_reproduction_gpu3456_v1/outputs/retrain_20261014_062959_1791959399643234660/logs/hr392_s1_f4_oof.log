@@ -1,0 +1,47 @@
+A101_step3_sample3: image mIoU zero=0.823480, skip=0.823480
+A121_step2_sample2: image mIoU zero=0.862055, skip=0.862055
+A125_step2_sample1: image mIoU zero=0.751071, skip=0.751071
+A146_step2_sample1: image mIoU zero=0.851170, skip=0.851170
+A150_step4_sample1: image mIoU zero=0.749681, skip=0.749681
+A156_step4_sample1: image mIoU zero=0.741467, skip=0.741467
+A156_step4_sample2: image mIoU zero=0.771416, skip=0.771416
+A166_step4_sample3: image mIoU zero=0.834547, skip=0.834547
+A181_step4_sample4: image mIoU zero=0.805434, skip=0.805434
+A188_step4_sample1: image mIoU zero=0.859669, skip=0.859669
+A224_step1_sample2: image mIoU zero=0.515126, skip=0.515126
+A224_step4_sample2: image mIoU zero=0.710444, skip=0.710444
+A40_step3_sample4: image mIoU zero=0.846715, skip=0.846715
+A66_step3_sample2: image mIoU zero=0.688203, skip=0.688203
+A83_step1_sample2: image mIoU zero=0.828569, skip=0.828569
+A89_step1_sample2: image mIoU zero=0.803630, skip=0.803630
+A96_step1_sample1: image mIoU zero=0.872614, skip=0.872614
+{
+  "model": "Model336 HRNet-W48 + SMP U-Net++",
+  "split": "valid",
+  "images": 17,
+  "class_order": [
+    "Al",
+    "Al3Ni",
+    "Primary_Si",
+    "Eutectic_Si"
+  ],
+  "inference": {
+    "patch_size": 512,
+    "base_input_scale": 2.0,
+    "target_width": 1278,
+    "scale_rule": "base_input_scale * target_width / native image width",
+    "overlap": 170,
+    "overlap_rule": "preserve overlap/native-tile ratio",
+    "tta": "4-way horizontal/vertical flips",
+    "tta_mode": "flip4",
+    "tta_enabled": true,
+    "downsample_antialias": false,
+    "batch_size": 2,
+    "device": "cuda:0"
+  },
+  "per_image_metrics": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/outputs/retrain_20261014_062959_1791959399643234660/E/model392/seed1/fold4_oof/valid_per_image.csv",
+  "probabilities": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/outputs/retrain_20261014_062959_1791959399643234660/E/model392/seed1/fold4_oof/valid_probabilities.npz",
+  "image_miou_empty_zero": 0.7832524544516635,
+  "image_miou_empty_skip": 0.7832524544516635,
+  "image_miou_empty_one": 0.7832524544516635
+}

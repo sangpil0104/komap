@@ -1,0 +1,947 @@
+{
+  "source_report": "/Data3/sppark/komap/results/model_results_0924_4",
+  "source_evaluation": "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S1_x2_seed2026_official_20260924T060537_447445Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T064229_941071Z",
+  "preserved_request": {
+    "run": "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S1_x2_seed2026_official_20260924T060537_447445Z",
+    "checkpoint": "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S1_x2_seed2026_official_20260924T060537_447445Z/checkpoints/update_008000.pt",
+    "checkpoint_sha256": "3c610157bf4fe5bf8604e882bae5fcccf7d26c5990c52c5fd93ae0a67b41a3d6",
+    "update": 8000,
+    "config": {
+      "seed": 2026,
+      "data": {
+        "manifest": "data/processed/manifest.csv",
+        "folds": "data/processed/folds.json",
+        "split": "official"
+      },
+      "model": {
+        "encoder": "efficientnet_b4",
+        "weights": "IMAGENET1K_V1",
+        "decoder_channels": [
+          256,
+          128,
+          64,
+          32,
+          16
+        ],
+        "freeze_encoder_bn_stats": true,
+        "checkpoint_encoder": true
+      },
+      "sampling": {
+        "core": 512,
+        "halo": 64
+      },
+      "augmentation": {
+        "d4": true,
+        "photometric_probability": 0.5,
+        "brightness": 0.04,
+        "contrast": [
+          0.9,
+          1.1
+        ],
+        "gamma": [
+          0.9,
+          1.1
+        ]
+      },
+      "loss": {
+        "ce": 1.0,
+        "dice": 1.0,
+        "boundary_weight": 0.0,
+        "boundary_radius": 2
+      },
+      "train": {
+        "updates": 8000,
+        "effective_batch": 8,
+        "encoder_lr": 0.0001,
+        "decoder_lr": 0.0003,
+        "weight_decay": 0.01,
+        "warmup": 250,
+        "min_lr_ratio": 0.01,
+        "precision": "bf16",
+        "workers": 2,
+        "cpu_threads": 4,
+        "checkpoint_every": 1000,
+        "log_every": 10
+      },
+      "evaluation": {
+        "empty_union": "one",
+        "checkpoint": "last",
+        "boundary_radii": [
+          1,
+          2,
+          4
+        ],
+        "border_widths": [
+          16,
+          32,
+          64
+        ]
+      },
+      "inference": {
+        "mode": "tiled",
+        "core": 512,
+        "halo": 64,
+        "overlap": 0.5,
+        "offset": 0,
+        "pad": 0,
+        "d4": false
+      },
+      "experiment": "S1",
+      "scale": 2
+    },
+    "split": "valid",
+    "completed": true
+  },
+  "generator": "/Data3/sppark/komap/results/model_results_0924_4/sources_at_creation/rebuild_single_unet_reports.py",
+  "generator_sha256": "6ce44b1baf04659bb3d8fa55d04848bdc8a52d335de3fe7ff91b70972e1fa9ef",
+  "training_started": false,
+  "inference_started": false,
+  "resized": false,
+  "layout": [
+    [
+      "Original image",
+      "GT colors only at wrong pixels; correct pixels white"
+    ],
+    [
+      "Predicted mask",
+      "Ground-truth mask"
+    ]
+  ],
+  "image_miou_definition": "mean over 20 images of the four-class IoU mean; empty union=1",
+  "inputs_sha256": {
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S0_x1_seed2026_migrate1to6_20260924T053853_286049Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T060511_484876Z/masks/A11_step1_sample4_mask.png": "74225850bdc4af57619bb2fcf10eecb4cb036dead2d12dfc0b72aa15fe27f9b6",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S1_x2_seed2026_official_20260924T060537_447445Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T064229_941071Z/masks/A71_step2_sample1_mask.png": "6c8fbab4f97e68c80b722d17158cd8b8c91a13042894c290bcf3ba18df8f398b",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S0_x1_seed2026_migrate1to6_20260924T053853_286049Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T060511_484876Z/per_image.csv": "61f4c98bda167a1bdad172a679e7b7d2bad531ef5ac0ffebfcefb1d6c6f60e38",
+    "/Data3/sppark/komap/dataset/valid/masks/A63_step1_sample4_mask.png": "6308e3dd66b1ee047b6aef79293961cfab9df611b2c81bbb0e58efcd3ce28d77",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S1_x2_seed2026_official_20260924T060537_447445Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T064229_941071Z/masks/A191_step4_sample3_mask.png": "07e1417263b0f11e9dace0eb47028fd0935e32a23427ce6b3f8dc2ef6b2df872",
+    "/Data3/sppark/komap/dataset/valid/images/A153_step3_sample3_image.png": "1c1410fcbd71747e6fe77a2898aa0a6c108ba1524b272efd1451d97516aeb32a",
+    "/Data3/sppark/komap/dataset/valid/masks/A11_step1_sample4_mask.png": "52c20e1e40f9f119261ba4079dc38feac5b22db567874e24668645f4ded8e8e0",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S1_x2_seed2026_official_20260924T060537_447445Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T064229_941071Z/masks/A153_step3_sample3_mask.png": "5a6aaa591577dc032496856d5653dc53db42ecd3596cf5fc795ec725a67b6bfb",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S0_x1_seed2026_migrate1to6_20260924T053853_286049Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T060511_484876Z/masks/A125_step1_sample4_mask.png": "49e1d649fc12981468210e0000eaae00fda2963250b0ebd9180bcfa992f33811",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S2_x3_seed2026_official_20260924T064256_050777Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T073544_853596Z/masks/A40_step3_sample3_mask.png": "2d986f3bde22452045ba7d279979ba1da8de2a642f7b73d63b3a9ab2123be75b",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S2_x3_seed2026_official_20260924T064256_050777Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T073544_853596Z/masks/A59_step3_sample1_mask.png": "cba5763ce1ba46eef089dad0fb111578097e16fa389a7ef23504974654c9fd63",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S2_x3_seed2026_official_20260924T064256_050777Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T073544_853596Z/masks/A72_step4_sample4_mask.png": "579bb7e874fc8bc1cfeb0823c9e5f91dd5313c8753365fa9b35ea9dc35bdbd81",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S1_x2_seed2026_official_20260924T060537_447445Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T064229_941071Z/masks/A40_step3_sample3_mask.png": "d85bd8695f3345eef4118ea870f61bd75a183ca19b4006c96b245d49166620a9",
+    "/Data3/sppark/komap/dataset/valid/masks/A125_step1_sample4_mask.png": "e2cee55adaa8171db1e788dd604acd80ba15d292a2d3dcad3064097712c0f42d",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S1_x2_seed2026_official_20260924T060537_447445Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T064229_941071Z/masks/A59_step3_sample1_mask.png": "c07ba7f25c51bb0b36ad82944b2d15347b8a5414ab0030feaf8c085aca91c5da",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S1_x2_seed2026_official_20260924T060537_447445Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T064229_941071Z/masks/A72_step4_sample4_mask.png": "37f41af6191fadd0caeb6cfb41dca74c0b55bd2e54721c6c3fc3b253a7b4f62e",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S2_x3_seed2026_official_20260924T064256_050777Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T073544_853596Z/masks/A11_step1_sample4_mask.png": "101f6d3769f62057bea7d5f0a51e1e4aa9e83797b1d1845ecd35b21dc93f81c0",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S1_x2_seed2026_official_20260924T060537_447445Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T064229_941071Z/masks/A11_step1_sample4_mask.png": "c4e4c59a80e5c4d90713b92344f6e4b6e74c65f8ea16683c3bed274d1f1514ba",
+    "/Data3/sppark/komap/dataset/valid/images/A40_step3_sample3_image.png": "7a57ae33d32de4836df06ce8518b09b7ab0c5399bbb7731eb65129aa882c4cd6",
+    "/Data3/sppark/komap/dataset/valid/images/A59_step3_sample1_image.png": "a23291122eb42e7533380f834275bee444b3875266ac3c622aedbbefa011d904",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S2_x3_seed2026_official_20260924T064256_050777Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T073544_853596Z/masks/A42_step2_sample4_mask.png": "1c3d168a82641f61e59bc8b7bef275c3c49e19809e8a60206348400321d130e8",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S2_x3_seed2026_official_20260924T064256_050777Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T073544_853596Z/masks/A125_step1_sample4_mask.png": "99e6257ebe359d2458fdecdddf1329b3773fc3c9e80947f837d1a93b0ca267fd",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S1_x2_seed2026_official_20260924T060537_447445Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T064229_941071Z/masks/A42_step2_sample4_mask.png": "b57bd127e974a206235e7965a46ccb1ac769e5df48cdf884ba1e3575a348da98",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S1_x2_seed2026_official_20260924T060537_447445Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T064229_941071Z/masks/A125_step1_sample4_mask.png": "512465796ae411833e26266a68b3df54520b3e7e0524023bfbbf5820734a7750",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S0_x1_seed2026_migrate1to6_20260924T053853_286049Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T060511_484876Z/masks/A74_step3_sample4_mask.png": "77e19f62fef8b143e156d79c6fa8ca7bb7f7cac9d871c852d3b372f9a289e2d5",
+    "/Data3/sppark/komap/dataset/valid/images/A74_step3_sample4_image.png": "7948fed4105460bd18c367aa1032f0309687f9299183b277003e15095efecb77",
+    "/Data3/sppark/komap/dataset/valid/masks/A74_step3_sample4_mask.png": "11dcd0c6d4c4ffd8b631ef05a935dab31e69d7c9a3fbfef93d338cb7986453f5",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S0_x1_seed2026_migrate1to6_20260924T053853_286049Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T060511_484876Z/summary.json": "fcf204da5d91d947861a994c2752c6127b4fef7520511e0cd424d75db929599b",
+    "/Data3/sppark/komap/dataset/valid/images/A191_step4_sample3_image.png": "7caaae85b73d874cec4b23781aacc13e58103c0b03ebcd0e0dc962ef442f52b9",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S0_x1_seed2026_migrate1to6_20260924T053853_286049Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T060511_484876Z/masks/A170_step4_sample3_mask.png": "0019175a6a6b782762a2a980d425aaf96d03ec09384a16c4d1c776843e9ebec0",
+    "/Data3/sppark/komap/dataset/valid/images/A11_step1_sample4_image.png": "93cbd8d9e435213146e9d4fe3b02430ce78fcdd36f4329bbaa100bf7eac6a1c3",
+    "/Data3/sppark/komap/dataset/valid/masks/A170_step4_sample3_mask.png": "33884be7948558721235c035a239d57b4fbf6917988b2af719c8c73314f05858",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S0_x1_seed2026_migrate1to6_20260924T053853_286049Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T060511_484876Z/masks/A11_step2_sample4_mask.png": "1b4d567e85270264f397f017df77cbd436c7b52ad054c739c6d21beffd5be600",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S2_x3_seed2026_official_20260924T064256_050777Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T073544_853596Z/masks/A74_step3_sample4_mask.png": "7ff9db4395abb7b1c137d7bedcf1514b425f10a864c29a05eca15c6dc5abc61a",
+    "/Data3/sppark/komap/dataset/valid/masks/A11_step2_sample4_mask.png": "2e4cb92fd7c60459a6f84048f1418160212674dd585ba858088779409790ff2a",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S1_x2_seed2026_official_20260924T060537_447445Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T064229_941071Z/masks/A74_step3_sample4_mask.png": "5a8a910032aa661a7f0c4de43326c58eca3c8de75f74033c750f1347b4b55b99",
+    "/Data3/sppark/komap/AGENTS.md": "3d47c16aea33a27fbb1f061173fadefedc49674ecac7af479457ea58d703d36d",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S0_x1_seed2026_migrate1to6_20260924T053853_286049Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T060511_484876Z/masks/A67_step1_sample1_mask.png": "519aff213f8c661fcdc029cb8124581e488f86708572d61e20d25f08aa237fcd",
+    "/Data3/sppark/komap/dataset/valid/images/A67_step1_sample1_image.png": "0d2291ef658b850cd9a46aa7ad05d3656228d9cb27dd6a910c0415b13a9295c6",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S2_x3_seed2026_official_20260924T064256_050777Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T073544_853596Z/masks/A170_step4_sample3_mask.png": "698f94c19caf461971ff09b62846adccd72ee6d53b491cd4c8222fd7291c3a50",
+    "/Data3/sppark/komap/dataset/valid/masks/A67_step1_sample1_mask.png": "6f66c94df93a5158f2f487c24cb1d422ad380d1614317bc4d34ee528f47d9e2a",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S2_x3_seed2026_official_20260924T064256_050777Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T073544_853596Z/masks/A117_step4_sample2_mask.png": "06dfd950d85dce4b80f5f60c03d0cefbfe006d71a3dc5f9ead9c24e80304b7c4",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S1_x2_seed2026_official_20260924T060537_447445Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T064229_941071Z/masks/A170_step4_sample3_mask.png": "6d82d748a2d6c0236e129950e50d79fed65502018e40acdfd44fdbfa987fa322",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S1_x2_seed2026_official_20260924T060537_447445Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T064229_941071Z/masks/A117_step4_sample2_mask.png": "812e9b9d7a7ee66269762d767231d7c6c6d782b3345d290facfb2358f8589096",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S0_x1_seed2026_migrate1to6_20260924T053853_286049Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T060511_484876Z/request.json": "e9d4e05b51614d88444d68f94d63e02d18dacda5d7e705323f7a17bbb018b4fd",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S2_x3_seed2026_official_20260924T064256_050777Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T073544_853596Z/masks/A63_step1_sample4_mask.png": "98f63ef309be5c6986153c0dff0093eb9ebbb59b3df3acdafd82203220e084f5",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S1_x2_seed2026_official_20260924T060537_447445Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T064229_941071Z/masks/A63_step1_sample4_mask.png": "214ca869ac40f52faa1d75950091d196adb868bd1bcf4c6ec9f0ee663048aafe",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S0_x1_seed2026_migrate1to6_20260924T053853_286049Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T060511_484876Z/masks/A55_step2_sample1_mask.png": "0036a21e2155297b98406703484f9a176a27d63b90baf6ef32b66c08a1b41c29",
+    "/Data3/sppark/komap/dataset/valid/images/A125_step1_sample4_image.png": "ca33ef43ad09a1f721eed16a86d9cf521fa3cd39be3518e55222643fa8ed6569",
+    "/Data3/sppark/komap/dataset/valid/masks/A55_step2_sample1_mask.png": "954430e32e9ec1c4fa44e2d70f87ba48be63b3c1bda817e173482a9b12c95bdc",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S0_x1_seed2026_migrate1to6_20260924T053853_286049Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T060511_484876Z/masks/A7_step1_sample4_mask.png": "648032ce6f5f15fa7bd3c3a40ae17b9b434ed7f249fa83681fbe9009062d84db",
+    "/Data3/sppark/komap/dataset/valid/masks/A7_step1_sample4_mask.png": "1a0e81af8032f6a985d906953c0b3d6e209aa69e3b0cec86e5f9bcd80a1de56a",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S2_x3_seed2026_official_20260924T064256_050777Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T073544_853596Z/masks/A55_step2_sample1_mask.png": "67923755368f95dd21125facd4f6ab03077eb88abb72ba0f99bc7529cdb409d0",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S1_x2_seed2026_official_20260924T060537_447445Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T064229_941071Z/masks/A55_step2_sample1_mask.png": "53adf05463d5ea26512c2a0aa04e04e9e9e8083d7aff97799b78fd9fdc7e92a0",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S2_x3_seed2026_official_20260924T064256_050777Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T073544_853596Z/masks/A7_step1_sample4_mask.png": "12adef170b52c377eb5198d42092ef2d8c540e413c39f447268946056629cedd",
+    "/Data3/sppark/komap/dataset/valid/images/A170_step4_sample3_image.png": "66007fd0f64ee0aaf5f14a0062dd1fb47d4cd82e54145397c6c7765456376b94",
+    "/Data3/sppark/komap/dataset/valid/images/A42_step2_sample4_image.png": "fb9ad5641210ed705bf0a83d2ba7d6a4e775cf2f2d6242cbc5a3c513e3c9cc40",
+    "/Data3/sppark/komap/dataset/valid/images/A11_step2_sample4_image.png": "695434cd5eaf15790dc47571aa030896bed6158b52da2cb640358715452092d5",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S0_x1_seed2026_migrate1to6_20260924T053853_286049Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T060511_484876Z/masks/A44_step4_sample3_mask.png": "02f7db894538038a831d5cfbff5cc501ecf6b1ee31e71845287e0dac2f709760",
+    "/Data3/sppark/komap/dataset/valid/masks/A44_step4_sample3_mask.png": "fc9112c9063ecb309199817719bef329631353e5677082bd300588afc0d20f44",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S2_x3_seed2026_official_20260924T064256_050777Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T073544_853596Z/masks/A11_step2_sample4_mask.png": "588b1ef843120a33f3a5bda5e2764381cd98f037257f38be56e03af723fcff8d",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S0_x1_seed2026_migrate1to6_20260924T053853_286049Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T060511_484876Z/masks/A186_step2_sample2_mask.png": "294e3badb6db037461343f7006cdb3ef5f166eeb4096dc2e2a6c44024bda6906",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S1_x2_seed2026_official_20260924T060537_447445Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T064229_941071Z/masks/A11_step2_sample4_mask.png": "2c029aae341c39232702271731ae2e37c3927a9339870c03bfd322af5ee45582",
+    "/Data3/sppark/komap/dataset/valid/masks/A186_step2_sample2_mask.png": "966df284a19574914e3b37e6e6337d6de6f55509bd0c3d4378902272250aa92c",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S2_x3_seed2026_official_20260924T064256_050777Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T073544_853596Z/masks/A67_step1_sample1_mask.png": "b99a0e951e03a5dfa20e30094f60c75702ce24a9ca8d8daf40ac71aed1a94fa2",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S1_x2_seed2026_official_20260924T060537_447445Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T064229_941071Z/masks/A67_step1_sample1_mask.png": "396fbe558726c7d67916007d7fa5600181591c08454bf4e785fb1362af8521e3",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S2_x3_seed2026_official_20260924T064256_050777Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T073544_853596Z/per_image.csv": "6f3613766ca80885c17e7614488501675d69bccbc6d28bf5c986715b1bc7d898",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S0_x1_seed2026_migrate1to6_20260924T053853_286049Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T060511_484876Z/masks/A71_step2_sample1_mask.png": "7240c2822e98ef86ce4ec86465e4fe3436925026a97f2184cb4cad59a166b6c1",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S0_x1_seed2026_migrate1to6_20260924T053853_286049Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T060511_484876Z/masks/A153_step3_sample3_mask.png": "334ed0e60bf655cf8d981cad1dd40d82a15a5af5f4d3b65f63ee5748ed8e07ad",
+    "/Data3/sppark/komap/dataset/valid/masks/A71_step2_sample1_mask.png": "3319f05cd9e2c676ddc76ae8acd10d9750cfe3d55b450e0fa4b0142c1318f333",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S1_x2_seed2026_official_20260924T060537_447445Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T064229_941071Z/per_image.csv": "505e183a7a8d05f67498e27a2e758979b652d260a82998915f35bca38f8465c3",
+    "/Data3/sppark/komap/dataset/valid/masks/A153_step3_sample3_mask.png": "cc8c59abc0d1a85994a42abb64f99f010a79db085844bb0a7f8468c1c9d2b188",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S0_x1_seed2026_migrate1to6_20260924T053853_286049Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T060511_484876Z/masks/A40_step3_sample3_mask.png": "a97a7fa3944ce7caf31d0d4560ec912a6f2a0dadfd4c10e49379fb24589ce69a",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S0_x1_seed2026_migrate1to6_20260924T053853_286049Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T060511_484876Z/masks/A59_step3_sample1_mask.png": "5ba6beb1d742b0366661cd78cad7536d38747840131ab919317597d25f04f953",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S0_x1_seed2026_migrate1to6_20260924T053853_286049Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T060511_484876Z/masks/A72_step4_sample4_mask.png": "a2957f1d14a375df0c279319d70bfd44f3d4f3bc1e151a515d16a7bea846b5aa",
+    "/Data3/sppark/komap/dataset/valid/masks/A40_step3_sample3_mask.png": "524d2ef250f9419d0f5144d3b740027c44d3ef036534148baafedac6c2e4f236",
+    "/Data3/sppark/komap/dataset/valid/images/A72_step4_sample4_image.png": "48f692d2ffc41abadd8f6e0f8cc379d922097f4a20b52f502976eb11417f9283",
+    "/Data3/sppark/komap/dataset/valid/masks/A59_step3_sample1_mask.png": "3e49bd7aa9998f3bdb361396f9d1bfe4028cf4417985c1b72171c1c31fccb024",
+    "/Data3/sppark/komap/dataset/valid/masks/A72_step4_sample4_mask.png": "cb0062143cd19b3fa8bd9ddf3b48b9ce2c6ba6c0994a26e0f8e4705dcf0af0cb",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S1_x2_seed2026_official_20260924T060537_447445Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T064229_941071Z/masks/A7_step1_sample4_mask.png": "bb2781b8119675c1d02d75ade5857c52fd7e232983aa26e53a2229c01ee65796",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S2_x3_seed2026_official_20260924T064256_050777Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T073544_853596Z/masks/A153_step3_sample3_mask.png": "82d446164701f4b30a334c71af6eb5ad68020b7d35cb6660f9e2468854ceb7bd",
+    "/Data3/sppark/komap/dataset/valid/images/A7_step1_sample4_image.png": "48f0925a9df4312a9cb3c5d64cb5519950339f93b791e9daef6e031fd2dc03e6",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S0_x1_seed2026_migrate1to6_20260924T053853_286049Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T060511_484876Z/masks/A42_step2_sample4_mask.png": "d740735b9722907e509d0d4bf5d36e48ba12b2c891361db6c4371a26e4ba3142",
+    "/Data3/sppark/komap/dataset/valid/masks/A42_step2_sample4_mask.png": "5357add176968a98f86bf6d06d4efdc3610c0a738aa87ce3486edf8e58222e70",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S2_x3_seed2026_official_20260924T064256_050777Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T073544_853596Z/summary.json": "be0c9a04fa0b17cd94146e8bf72f901e4c40eeab3344f1ccd8e48afa874d0263",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S1_x2_seed2026_official_20260924T060537_447445Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T064229_941071Z/summary.json": "fd6fa2e17e187ec323caa8f34bf95f206d7e2ed023ab9b3906c1110e7b60a223",
+    "/Data3/sppark/komap/dataset/valid/images/A71_step2_sample1_image.png": "3d4ca3ba899c17a5b7a447751a0a9bfe43ebda9341dc89885ee806ffb52eb1b8",
+    "/Data3/sppark/komap/dataset/valid/images/A55_step2_sample1_image.png": "b212f559e567e844547f83c0646bc2098d15dc174d0fd0383a080e9bfc6e2ded",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S2_x3_seed2026_official_20260924T064256_050777Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T073544_853596Z/masks/A44_step4_sample3_mask.png": "ef6898cf7206b07958e6f9c92ac47ee0d44b3a36613cfa47fb268d26dd1a0ed5",
+    "/Data3/sppark/komap/dataset/valid/images/A63_step1_sample4_image.png": "629ed6a2272ba535a08b63d924f9fadf3a47571779efc5f5e9b6cbf2ea5d85ba",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S1_x2_seed2026_official_20260924T060537_447445Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T064229_941071Z/masks/A44_step4_sample3_mask.png": "87b84f1455600fc0048bdb79d2ac8474568a104c1ab95c24cee83e37cd0b7084",
+    "/Data3/sppark/komap/spec.md": "0f5a4da43f0e421c4f5e3fbc02f470f3682f52ad167ebf273b13fe36e2f3829b",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S2_x3_seed2026_official_20260924T064256_050777Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T073544_853596Z/masks/A186_step2_sample2_mask.png": "b785a15edaf247dc354162e1386236411f2207b95ff5cbac2dbb8a0f533dee2c",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S0_x1_seed2026_migrate1to6_20260924T053853_286049Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T060511_484876Z/masks/A181_step1_sample1_mask.png": "22b374f2fb696463bdcfbb6e0ff02fc86b7d20f4f73763fd16646e48f012959d",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S1_x2_seed2026_official_20260924T060537_447445Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T064229_941071Z/masks/A186_step2_sample2_mask.png": "97b7cc99815ab84b7c1bd586bee287495c4645cb5098029ea0bc22ee9a4d7115",
+    "/Data3/sppark/komap/dataset/valid/masks/A181_step1_sample1_mask.png": "6b23c62acf404f39fa47acbe60b1b9dccde2202535d33a39a32560dea363f243",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S0_x1_seed2026_migrate1to6_20260924T053853_286049Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T060511_484876Z/masks/A117_step4_sample2_mask.png": "8506b07482477e4dcbd9f60d51e457c943b47e027914cd46a67d36748876f254",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S0_x1_seed2026_migrate1to6_20260924T053853_286049Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T060511_484876Z/masks/A191_step4_sample3_mask.png": "3a614157cfa4b43e75f21c8d3a15be14b8fa5d715d0ead77ceb9d9b4efd1c232",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S2_x3_seed2026_official_20260924T064256_050777Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T073544_853596Z/request.json": "1d445233c43eea23e74dc61cebdba2d55d3764607d5c5d25a4c92b3910054a79",
+    "/Data3/sppark/komap/dataset/valid/masks/A117_step4_sample2_mask.png": "7e1a9f47c17443ae1c4c6c914b5847f64622a449752683766f1e28851ad3843a",
+    "/Data3/sppark/komap/dataset/valid/images/A117_step4_sample2_image.png": "44cef6ab8394b7d08b48875cab895392b25a6916cb7e2ff72f8ecb92c5251e5a",
+    "/Data3/sppark/komap/dataset/valid/masks/A191_step4_sample3_mask.png": "7aaa8192d1be5a141078760cd3dcd716d358b7d020b261f84a72b5b5833eb787",
+    "/Data3/sppark/komap/dataset/valid/images/A186_step2_sample2_image.png": "bc7c27acec1b0a03f2cfc133cc191bbbff0cbb20cc422f204d378a37e26971f3",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S2_x3_seed2026_official_20260924T064256_050777Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T073544_853596Z/masks/A181_step1_sample1_mask.png": "21e7284bae20175d2d5bc95e61e81090eaeb84a39cfb1bb5e34cdb995d60c989",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S1_x2_seed2026_official_20260924T060537_447445Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T064229_941071Z/request.json": "86d2aeb4db0fcb66fa89c2c2959136dc5a63e78b72ba677bcc963d57eac308e8",
+    "/Data3/sppark/komap/dataset/valid/images/A181_step1_sample1_image.png": "70b0f50c810b7e7b555f5cc568adfc5702e37d1eba08231eb1319e3331f21ee4",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S1_x2_seed2026_official_20260924T060537_447445Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T064229_941071Z/masks/A181_step1_sample1_mask.png": "aa168650030e98fb071019d8a901b31da5f542d7a98b75bceb4fc65923e96f8f",
+    "/Data3/sppark/komap/dataset/valid/images/A44_step4_sample3_image.png": "90153ce08bc0995bac6a119b316995ebc865c5fad466d681210b08f5d8e9dc46",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S0_x1_seed2026_migrate1to6_20260924T053853_286049Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T060511_484876Z/masks/A63_step1_sample4_mask.png": "05be91d665f108cc3c5689c44585d17464d4d11bd22be43b9e208a21a4c90b29",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S2_x3_seed2026_official_20260924T064256_050777Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T073544_853596Z/masks/A71_step2_sample1_mask.png": "c662572d3e6f6adb554ce0764c6d600fdea04a1793a48fa8ea154c61729c0f28",
+    "/Data3/sppark/komap/experiments/single_unet_v3/outputs/runs/S2_x3_seed2026_official_20260924T064256_050777Z/evaluations/valid_tiled_pad0_halo64_off0_d40_20260924T073544_853596Z/masks/A191_step4_sample3_mask.png": "88bc121405dff8f916ca94cbb5798d6649eff65a9e1054988f0bbb8034f336a8",
+    "/Data3/sppark/komap/results/model_results_0924_4/sources_at_creation/suite_provenance.json": "f2c4f3f2275118bf7a7663df59577d8b8d866760fe44c1e034028427ef585ff3"
+  },
+  "images": [
+    {
+      "image_id": "A117_step4_sample2",
+      "image_miou": 86.60046331255833,
+      "file": "valid_mask_comparison/A117_step4_sample2.png",
+      "image_width": 1230,
+      "image_height": 875,
+      "error_pixels": 59964,
+      "panel_boxes": {
+        "Original image": [
+          14,
+          90,
+          1244,
+          965
+        ],
+        "Errors: GT color / correct: white": [
+          1260,
+          90,
+          2490,
+          965
+        ],
+        "Predicted mask": [
+          14,
+          1019,
+          1244,
+          1894
+        ],
+        "Ground-truth mask": [
+          1260,
+          1019,
+          2490,
+          1894
+        ]
+      },
+      "comparison_sha256": "7286402c6295b5781b47e6c098d17fd6864fa31255db85acbe212127255f5634",
+      "pixel_verification": "passed"
+    },
+    {
+      "image_id": "A11_step1_sample4",
+      "image_miou": 60.91736160701717,
+      "file": "valid_mask_comparison/A11_step1_sample4.png",
+      "image_width": 675,
+      "image_height": 480,
+      "error_pixels": 32192,
+      "panel_boxes": {
+        "Original image": [
+          14,
+          90,
+          689,
+          570
+        ],
+        "Errors: GT color / correct: white": [
+          705,
+          90,
+          1380,
+          570
+        ],
+        "Predicted mask": [
+          14,
+          624,
+          689,
+          1104
+        ],
+        "Ground-truth mask": [
+          705,
+          624,
+          1380,
+          1104
+        ]
+      },
+      "comparison_sha256": "fd1b688cb8d4528c4c1ff9229fe5cde696a5684931fea2d43b407bc6552c6f90",
+      "pixel_verification": "passed"
+    },
+    {
+      "image_id": "A11_step2_sample4",
+      "image_miou": 66.51169306382522,
+      "file": "valid_mask_comparison/A11_step2_sample4.png",
+      "image_width": 675,
+      "image_height": 480,
+      "error_pixels": 35962,
+      "panel_boxes": {
+        "Original image": [
+          14,
+          90,
+          689,
+          570
+        ],
+        "Errors: GT color / correct: white": [
+          705,
+          90,
+          1380,
+          570
+        ],
+        "Predicted mask": [
+          14,
+          624,
+          689,
+          1104
+        ],
+        "Ground-truth mask": [
+          705,
+          624,
+          1380,
+          1104
+        ]
+      },
+      "comparison_sha256": "83d28bb2010b9b66e8da8dc4fc3cd593719a397c1437b0906647014ca6cc6518",
+      "pixel_verification": "passed"
+    },
+    {
+      "image_id": "A125_step1_sample4",
+      "image_miou": 76.96723125153329,
+      "file": "valid_mask_comparison/A125_step1_sample4.png",
+      "image_width": 1230,
+      "image_height": 875,
+      "error_pixels": 99278,
+      "panel_boxes": {
+        "Original image": [
+          14,
+          90,
+          1244,
+          965
+        ],
+        "Errors: GT color / correct: white": [
+          1260,
+          90,
+          2490,
+          965
+        ],
+        "Predicted mask": [
+          14,
+          1019,
+          1244,
+          1894
+        ],
+        "Ground-truth mask": [
+          1260,
+          1019,
+          2490,
+          1894
+        ]
+      },
+      "comparison_sha256": "44b63ee687f970381cfa07f6f9e162cc905591e17a260f8646cb6a558762a905",
+      "pixel_verification": "passed"
+    },
+    {
+      "image_id": "A153_step3_sample3",
+      "image_miou": 63.944090414812095,
+      "file": "valid_mask_comparison/A153_step3_sample3.png",
+      "image_width": 1278,
+      "image_height": 909,
+      "error_pixels": 178659,
+      "panel_boxes": {
+        "Original image": [
+          14,
+          90,
+          1292,
+          999
+        ],
+        "Errors: GT color / correct: white": [
+          1308,
+          90,
+          2586,
+          999
+        ],
+        "Predicted mask": [
+          14,
+          1053,
+          1292,
+          1962
+        ],
+        "Ground-truth mask": [
+          1308,
+          1053,
+          2586,
+          1962
+        ]
+      },
+      "comparison_sha256": "1dc471f54e87ebcdc7951bd9b3962ce3b7e19093148fa4a46d19d24296805b51",
+      "pixel_verification": "passed"
+    },
+    {
+      "image_id": "A170_step4_sample3",
+      "image_miou": 78.23175759439816,
+      "file": "valid_mask_comparison/A170_step4_sample3.png",
+      "image_width": 675,
+      "image_height": 480,
+      "error_pixels": 25248,
+      "panel_boxes": {
+        "Original image": [
+          14,
+          90,
+          689,
+          570
+        ],
+        "Errors: GT color / correct: white": [
+          705,
+          90,
+          1380,
+          570
+        ],
+        "Predicted mask": [
+          14,
+          624,
+          689,
+          1104
+        ],
+        "Ground-truth mask": [
+          705,
+          624,
+          1380,
+          1104
+        ]
+      },
+      "comparison_sha256": "d77cd27c4bcfa31ba43c0ee2b53e8fc3f7eb28f34625ca53109ea0afa28ebcb3",
+      "pixel_verification": "passed"
+    },
+    {
+      "image_id": "A181_step1_sample1",
+      "image_miou": 75.82533668451008,
+      "file": "valid_mask_comparison/A181_step1_sample1.png",
+      "image_width": 1440,
+      "image_height": 1024,
+      "error_pixels": 109121,
+      "panel_boxes": {
+        "Original image": [
+          14,
+          90,
+          1454,
+          1114
+        ],
+        "Errors: GT color / correct: white": [
+          1470,
+          90,
+          2910,
+          1114
+        ],
+        "Predicted mask": [
+          14,
+          1168,
+          1454,
+          2192
+        ],
+        "Ground-truth mask": [
+          1470,
+          1168,
+          2910,
+          2192
+        ]
+      },
+      "comparison_sha256": "2dd06cc7d541d4c40e8edbdbc71e04abe210937412521ffb68c5103278c7e88e",
+      "pixel_verification": "passed"
+    },
+    {
+      "image_id": "A186_step2_sample2",
+      "image_miou": 80.42433851124339,
+      "file": "valid_mask_comparison/A186_step2_sample2.png",
+      "image_width": 1278,
+      "image_height": 909,
+      "error_pixels": 44876,
+      "panel_boxes": {
+        "Original image": [
+          14,
+          90,
+          1292,
+          999
+        ],
+        "Errors: GT color / correct: white": [
+          1308,
+          90,
+          2586,
+          999
+        ],
+        "Predicted mask": [
+          14,
+          1053,
+          1292,
+          1962
+        ],
+        "Ground-truth mask": [
+          1308,
+          1053,
+          2586,
+          1962
+        ]
+      },
+      "comparison_sha256": "fc714f909ae618519007ad6055dd118c29ae6cd378380456755a5ac1f5a81bc5",
+      "pixel_verification": "passed"
+    },
+    {
+      "image_id": "A191_step4_sample3",
+      "image_miou": 82.53235404442418,
+      "file": "valid_mask_comparison/A191_step4_sample3.png",
+      "image_width": 1440,
+      "image_height": 1024,
+      "error_pixels": 95104,
+      "panel_boxes": {
+        "Original image": [
+          14,
+          90,
+          1454,
+          1114
+        ],
+        "Errors: GT color / correct: white": [
+          1470,
+          90,
+          2910,
+          1114
+        ],
+        "Predicted mask": [
+          14,
+          1168,
+          1454,
+          2192
+        ],
+        "Ground-truth mask": [
+          1470,
+          1168,
+          2910,
+          2192
+        ]
+      },
+      "comparison_sha256": "2545dd2d07edc375ce805abeb2634085b85cd0be96a229325fb21b0c448fc964",
+      "pixel_verification": "passed"
+    },
+    {
+      "image_id": "A40_step3_sample3",
+      "image_miou": 77.75157189291735,
+      "file": "valid_mask_comparison/A40_step3_sample3.png",
+      "image_width": 1278,
+      "image_height": 909,
+      "error_pixels": 101842,
+      "panel_boxes": {
+        "Original image": [
+          14,
+          90,
+          1292,
+          999
+        ],
+        "Errors: GT color / correct: white": [
+          1308,
+          90,
+          2586,
+          999
+        ],
+        "Predicted mask": [
+          14,
+          1053,
+          1292,
+          1962
+        ],
+        "Ground-truth mask": [
+          1308,
+          1053,
+          2586,
+          1962
+        ]
+      },
+      "comparison_sha256": "989770d4ef54364c600019a792bcd50fac42ea3c6ea13b79813ec589d52c8477",
+      "pixel_verification": "passed"
+    },
+    {
+      "image_id": "A42_step2_sample4",
+      "image_miou": 66.16145190205611,
+      "file": "valid_mask_comparison/A42_step2_sample4.png",
+      "image_width": 1230,
+      "image_height": 875,
+      "error_pixels": 125276,
+      "panel_boxes": {
+        "Original image": [
+          14,
+          90,
+          1244,
+          965
+        ],
+        "Errors: GT color / correct: white": [
+          1260,
+          90,
+          2490,
+          965
+        ],
+        "Predicted mask": [
+          14,
+          1019,
+          1244,
+          1894
+        ],
+        "Ground-truth mask": [
+          1260,
+          1019,
+          2490,
+          1894
+        ]
+      },
+      "comparison_sha256": "25ac423d5143bf776befc495e9846fe06351e0913adf63252734577a1925ba3d",
+      "pixel_verification": "passed"
+    },
+    {
+      "image_id": "A44_step4_sample3",
+      "image_miou": 88.04380425376448,
+      "file": "valid_mask_comparison/A44_step4_sample3.png",
+      "image_width": 1278,
+      "image_height": 909,
+      "error_pixels": 41001,
+      "panel_boxes": {
+        "Original image": [
+          14,
+          90,
+          1292,
+          999
+        ],
+        "Errors: GT color / correct: white": [
+          1308,
+          90,
+          2586,
+          999
+        ],
+        "Predicted mask": [
+          14,
+          1053,
+          1292,
+          1962
+        ],
+        "Ground-truth mask": [
+          1308,
+          1053,
+          2586,
+          1962
+        ]
+      },
+      "comparison_sha256": "d2b008c690082b18502d980d1f3b07a248025fc048715163828ed8a65131ddfc",
+      "pixel_verification": "passed"
+    },
+    {
+      "image_id": "A55_step2_sample1",
+      "image_miou": 80.16345295196689,
+      "file": "valid_mask_comparison/A55_step2_sample1.png",
+      "image_width": 1096,
+      "image_height": 780,
+      "error_pixels": 60297,
+      "panel_boxes": {
+        "Original image": [
+          14,
+          90,
+          1110,
+          870
+        ],
+        "Errors: GT color / correct: white": [
+          1126,
+          90,
+          2222,
+          870
+        ],
+        "Predicted mask": [
+          14,
+          924,
+          1110,
+          1704
+        ],
+        "Ground-truth mask": [
+          1126,
+          924,
+          2222,
+          1704
+        ]
+      },
+      "comparison_sha256": "0b1e3a4c55181ae0a30a785ae8352ef7bfeb22471071f40c26b13e6d52749543",
+      "pixel_verification": "passed"
+    },
+    {
+      "image_id": "A59_step3_sample1",
+      "image_miou": 77.95055149004317,
+      "file": "valid_mask_comparison/A59_step3_sample1.png",
+      "image_width": 675,
+      "image_height": 480,
+      "error_pixels": 24834,
+      "panel_boxes": {
+        "Original image": [
+          14,
+          90,
+          689,
+          570
+        ],
+        "Errors: GT color / correct: white": [
+          705,
+          90,
+          1380,
+          570
+        ],
+        "Predicted mask": [
+          14,
+          624,
+          689,
+          1104
+        ],
+        "Ground-truth mask": [
+          705,
+          624,
+          1380,
+          1104
+        ]
+      },
+      "comparison_sha256": "a2b4148d555a2597801d464e60846a4801451c39e7de195a2d71076202d5cf72",
+      "pixel_verification": "passed"
+    },
+    {
+      "image_id": "A63_step1_sample4",
+      "image_miou": 68.97987791169204,
+      "file": "valid_mask_comparison/A63_step1_sample4.png",
+      "image_width": 675,
+      "image_height": 480,
+      "error_pixels": 33402,
+      "panel_boxes": {
+        "Original image": [
+          14,
+          90,
+          689,
+          570
+        ],
+        "Errors: GT color / correct: white": [
+          705,
+          90,
+          1380,
+          570
+        ],
+        "Predicted mask": [
+          14,
+          624,
+          689,
+          1104
+        ],
+        "Ground-truth mask": [
+          705,
+          624,
+          1380,
+          1104
+        ]
+      },
+      "comparison_sha256": "378b0d5fd8a9ce054bfc76f5c0e3b5087b6ca35c91ba01b578b3929e61ff0400",
+      "pixel_verification": "passed"
+    },
+    {
+      "image_id": "A67_step1_sample1",
+      "image_miou": 71.12838504049444,
+      "file": "valid_mask_comparison/A67_step1_sample1.png",
+      "image_width": 675,
+      "image_height": 480,
+      "error_pixels": 40798,
+      "panel_boxes": {
+        "Original image": [
+          14,
+          90,
+          689,
+          570
+        ],
+        "Errors: GT color / correct: white": [
+          705,
+          90,
+          1380,
+          570
+        ],
+        "Predicted mask": [
+          14,
+          624,
+          689,
+          1104
+        ],
+        "Ground-truth mask": [
+          705,
+          624,
+          1380,
+          1104
+        ]
+      },
+      "comparison_sha256": "3fef0cca9d17d0bb63fbf5bd6aecf4312c3fedceab876c18c6ed244f326d4631",
+      "pixel_verification": "passed"
+    },
+    {
+      "image_id": "A71_step2_sample1",
+      "image_miou": 55.853968203939544,
+      "file": "valid_mask_comparison/A71_step2_sample1.png",
+      "image_width": 675,
+      "image_height": 480,
+      "error_pixels": 78618,
+      "panel_boxes": {
+        "Original image": [
+          14,
+          90,
+          689,
+          570
+        ],
+        "Errors: GT color / correct: white": [
+          705,
+          90,
+          1380,
+          570
+        ],
+        "Predicted mask": [
+          14,
+          624,
+          689,
+          1104
+        ],
+        "Ground-truth mask": [
+          705,
+          624,
+          1380,
+          1104
+        ]
+      },
+      "comparison_sha256": "b0294eadaffbb9228040e35e0df013e7607f013b01d735a6f81f1767bd6af983",
+      "pixel_verification": "passed"
+    },
+    {
+      "image_id": "A72_step4_sample4",
+      "image_miou": 84.95463826005947,
+      "file": "valid_mask_comparison/A72_step4_sample4.png",
+      "image_width": 675,
+      "image_height": 480,
+      "error_pixels": 19882,
+      "panel_boxes": {
+        "Original image": [
+          14,
+          90,
+          689,
+          570
+        ],
+        "Errors: GT color / correct: white": [
+          705,
+          90,
+          1380,
+          570
+        ],
+        "Predicted mask": [
+          14,
+          624,
+          689,
+          1104
+        ],
+        "Ground-truth mask": [
+          705,
+          624,
+          1380,
+          1104
+        ]
+      },
+      "comparison_sha256": "0ce5121fcde798a5e15583f234dd3ef96a5b4d6617b446b1ee0c920d1bd1295c",
+      "pixel_verification": "passed"
+    },
+    {
+      "image_id": "A74_step3_sample4",
+      "image_miou": 49.817670324598275,
+      "file": "valid_mask_comparison/A74_step3_sample4.png",
+      "image_width": 675,
+      "image_height": 480,
+      "error_pixels": 84259,
+      "panel_boxes": {
+        "Original image": [
+          14,
+          90,
+          689,
+          570
+        ],
+        "Errors: GT color / correct: white": [
+          705,
+          90,
+          1380,
+          570
+        ],
+        "Predicted mask": [
+          14,
+          624,
+          689,
+          1104
+        ],
+        "Ground-truth mask": [
+          705,
+          624,
+          1380,
+          1104
+        ]
+      },
+      "comparison_sha256": "3e63b7a25acf9f40c919d374e839a93067a6fbdba0e75a598fc3a7d9c6be5b44",
+      "pixel_verification": "passed"
+    },
+    {
+      "image_id": "A7_step1_sample4",
+      "image_miou": 69.4515992240916,
+      "file": "valid_mask_comparison/A7_step1_sample4.png",
+      "image_width": 1278,
+      "image_height": 909,
+      "error_pixels": 99093,
+      "panel_boxes": {
+        "Original image": [
+          14,
+          90,
+          1292,
+          999
+        ],
+        "Errors: GT color / correct: white": [
+          1308,
+          90,
+          2586,
+          999
+        ],
+        "Predicted mask": [
+          14,
+          1053,
+          1292,
+          1962
+        ],
+        "Ground-truth mask": [
+          1308,
+          1053,
+          2586,
+          1962
+        ]
+      },
+      "comparison_sha256": "074be8610dc53ca95272fcb20156c9bc14b2ab1677380790b0de4036bb7b6baa",
+      "pixel_verification": "passed"
+    }
+  ]
+}

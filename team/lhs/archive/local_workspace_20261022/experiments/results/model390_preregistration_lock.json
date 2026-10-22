@@ -1,0 +1,42 @@
+{
+  "experiment": "Model390 per-item crop and augmentation RNG correction",
+  "locked_at_utc": "2026-10-02T21:40:55Z",
+  "status": "pre-score preregistration; Model390 training/OOF not started and Model382 OOF scores not inspected",
+  "protocol": {
+    "path": "experiments/model390_per_item_rng_preregistration.md",
+    "sha256": "5883861fa99748692ba953fec7287421bd4f0e2a783b9936dc2789a35c119b53"
+  },
+  "reference_oof_runner": {
+    "path": "/workspace/komap_model1/run_model382_seed_count_control_p100.sh",
+    "sha256": "753c1ae26cdd663aa104fa6143a725c325fb48fe7a2b7209a878c3120c101f69",
+    "inference": "evaluate_image_mean.py, held-out train fold via data_root/valid symlink, batch=2, patch=512, overlap=170, input_scale=2.0, flip4 TTA, antialias=false"
+  },
+  "candidate_source_sha256": {
+    "model336_hrnet_rng_candidate/train.py": "5221d9801b5ffb1c6afe07e354c5aded253fc9761019f07e22a197f03324b1e2",
+    "model336_hrnet_rng_candidate/komap_seg/dataset.py": "4c2fb091ba7287a97017ef83ff1da42e72b78d8a90c80b7fc580975b6073712a",
+    "model336_hrnet_rng_candidate/komap_seg/model.py": "f6f2790fc86ab5a13f6440ba812feba38db71915e22dc466521874494e12a3b4",
+    "model336_hrnet_rng_candidate/komap_seg/losses.py": "f1276925cfc9817a9c19b92df9de08aa71ecb47100a62bc3352f646f3e9733ea",
+    "model336_hrnet_rng_candidate/komap_seg/metrics.py": "be5e66f4acf98d0d9ab95a14a62c03ced6456dd8d72a042c0ee229468f57bc27",
+    "model336_hrnet_rng_candidate/komap_seg/inference.py": "bbffe98e11d1e71d823b93a44dbe6347e1c3de23d8d6aac000c944044d6d33eb",
+    "model336_hrnet_rng_candidate/komap_seg/checkpoint.py": "a3aea7f17d910fea8a75a8e9bde99284299014b99b4ae69e6cdf4a5528fd4965",
+    "model336_hrnet_rng_candidate/komap_seg/palette.py": "61c4bb59dcc4ac1a243f5d8c79f265201264f95737e8056fe602f77baa898525",
+    "model336_hrnet_rng_candidate/evaluate_image_mean.py": "73b27d759a4d6fe80fddc3e5612b2b29eb654702d2812e9315b578e19f8ffa57"
+  },
+  "synthetic_smoke": {
+    "path": "experiments/rng_per_item_candidate_smoke.py",
+    "sha256": "0c5b3fbe3eab328ec453b00219ba69437a2cbec55fb8754be3fa4c734019f375",
+    "environment": "P100 CPU execution, PyTorch 2.6.0+cu118, Albumentations 2.0.8, CUDA_VISIBLE_DEVICES empty",
+    "result": "passed legacy bitwise compatibility, 32-sample worker/batch/order-invariant per-item streams, 64-bit epoch replay/separation, independent H/V gates, unique seeds across all 14 augmentation-tree nodes, synthetic train.py epoch-boundary resume-index restoration, and RNG-mode mismatch rejection"
+  },
+  "analysis_source_sha256": {
+    "experiments/model390_per_item_rng_oof.py": "781bbd490ad8e41d778b200abbccee8809807b7021cfc15e22872f9263c69b16"
+  },
+  "analysis_smoke_sha256": {
+    "experiments/model390_per_item_rng_oof_smoke.py": "f169428e4a3b89f55bade644dff624ed4d1094b9ad3e2e003f709f707102305c"
+  },
+  "analysis_dependency_sha256": {
+    "experiments/model382_oof_ensemble_compare.py": "cd9f1e58047cabb164af4e72a88ca61069dd1a6230f791e10bc42cbd1937b37e",
+    "experiments/results/model382_e5_preregistration_lock.json": "ad0e888b51b70ad10e6af4b70f307ea7822876e8106fdcec82a93acb94b82ed5"
+  },
+  "scope": "temporary synthetic PNGs/checkpoints only; no KoMaP data, predictions, OOF scores, validation, or test artifacts accessed"
+}

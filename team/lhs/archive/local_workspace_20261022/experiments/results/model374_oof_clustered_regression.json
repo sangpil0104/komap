@@ -1,0 +1,270 @@
+{
+  "model": 374,
+  "scope": "70 training images, exactly-once grouped OOF; valid/test excluded",
+  "formula": "OLS with CR1 specimen-group-clustered covariance; categorical references step1, 1230x875, fold1",
+  "interpretation_guard": "Observational associations only. Boundary density, resolution, step, and specimen morphology are entangled; intervals do not establish causality or predict test mIoU.",
+  "outcomes": {
+    "image_miou_empty0": {
+      "n_images": 70,
+      "n_specimen_groups": 59,
+      "r_squared": 0.4512472712029326,
+      "design_rank": 11,
+      "design_columns": [
+        "intercept",
+        "gt_boundary_fraction",
+        "step2_vs_step1",
+        "step3_vs_step1",
+        "step4_vs_step1",
+        "resolution_1278x909_vs_1230x875",
+        "resolution_1440x1024_vs_1230x875",
+        "resolution_675x480_vs_1230x875",
+        "fold2_vs_fold1",
+        "fold3_vs_fold1",
+        "fold4_vs_fold1"
+      ],
+      "coefficients": {
+        "intercept": {
+          "estimate": 0.9203984031145166,
+          "cluster_robust_se": 0.048866293309843586,
+          "ci95": [
+            0.8225818894108333,
+            1.0182149168181998
+          ],
+          "t": 18.835036193119898,
+          "p_two_sided_descriptive": 2.1591580710344749e-26
+        },
+        "gt_boundary_fraction": {
+          "estimate": -0.37965123805341694,
+          "cluster_robust_se": 0.08162196530110241,
+          "ci95": [
+            -0.5430353530869294,
+            -0.2162671230199045
+          ],
+          "t": -4.651336642690338,
+          "p_two_sided_descriptive": 1.954692125468903e-05
+        },
+        "step2_vs_step1": {
+          "estimate": 0.025725324941531347,
+          "cluster_robust_se": 0.028734070596622974,
+          "ci95": [
+            -0.03179216656239238,
+            0.08324281644545507
+          ],
+          "t": 0.8952899609202869,
+          "p_two_sided_descriptive": 0.3743326991205967
+        },
+        "step3_vs_step1": {
+          "estimate": 0.03909213240503334,
+          "cluster_robust_se": 0.03107023665488525,
+          "ci95": [
+            -0.023101703543580647,
+            0.10128596835364734
+          ],
+          "t": 1.2581858593242092,
+          "p_two_sided_descriptive": 0.21336613188576523
+        },
+        "step4_vs_step1": {
+          "estimate": 0.0039651973599819715,
+          "cluster_robust_se": 0.030990732136533517,
+          "ci95": [
+            -0.0580694930041788,
+            0.06599988772414275
+          ],
+          "t": 0.12794784397195919,
+          "p_two_sided_descriptive": 0.898632851643918
+        },
+        "resolution_1278x909_vs_1230x875": {
+          "estimate": -0.006098557336767788,
+          "cluster_robust_se": 0.01884061272348494,
+          "ci95": [
+            -0.043812141237376784,
+            0.0316150265638412
+          ],
+          "t": -0.3236920914554917,
+          "p_two_sided_descriptive": 0.747335475550179
+        },
+        "resolution_1440x1024_vs_1230x875": {
+          "estimate": -0.04321013095255447,
+          "cluster_robust_se": 0.028577011432339733,
+          "ci95": [
+            -0.1004132343812872,
+            0.013992972476178256
+          ],
+          "t": -1.512059126786606,
+          "p_two_sided_descriptive": 0.13594876624906374
+        },
+        "resolution_675x480_vs_1230x875": {
+          "estimate": 0.05211976632685489,
+          "cluster_robust_se": 0.02936610066353473,
+          "ci95": [
+            -0.006662870812511587,
+            0.11090240346622136
+          ],
+          "t": 1.7748276124236835,
+          "p_two_sided_descriptive": 0.08117400338280983
+        },
+        "fold2_vs_fold1": {
+          "estimate": 0.02508765998615231,
+          "cluster_robust_se": 0.022367730149425464,
+          "ci95": [
+            -0.019686216534595166,
+            0.06986153650689979
+          ],
+          "t": 1.121600619220485,
+          "p_two_sided_descriptive": 0.26665446189842945
+        },
+        "fold3_vs_fold1": {
+          "estimate": 0.059560279804645316,
+          "cluster_robust_se": 0.021358651830830272,
+          "ci95": [
+            0.016806292997101714,
+            0.10231426661218893
+          ],
+          "t": 2.7885786179946375,
+          "p_two_sided_descriptive": 0.007148493486258121
+        },
+        "fold4_vs_fold1": {
+          "estimate": 0.025154296870754086,
+          "cluster_robust_se": 0.024674434902542265,
+          "ci95": [
+            -0.024236950885068206,
+            0.07454554462657638
+          ],
+          "t": 1.0194477389292664,
+          "p_two_sided_descriptive": 0.3122240784049162
+        }
+      }
+    },
+    "eutectic_iou_empty0": {
+      "n_images": 70,
+      "n_specimen_groups": 59,
+      "r_squared": 0.36280126247346745,
+      "design_rank": 11,
+      "design_columns": [
+        "intercept",
+        "gt_boundary_fraction",
+        "step2_vs_step1",
+        "step3_vs_step1",
+        "step4_vs_step1",
+        "resolution_1278x909_vs_1230x875",
+        "resolution_1440x1024_vs_1230x875",
+        "resolution_675x480_vs_1230x875",
+        "fold2_vs_fold1",
+        "fold3_vs_fold1",
+        "fold4_vs_fold1"
+      ],
+      "coefficients": {
+        "intercept": {
+          "estimate": 0.7817357473704876,
+          "cluster_robust_se": 0.11253503579662225,
+          "ci95": [
+            0.5564723986374789,
+            1.0069990961034962
+          ],
+          "t": 6.946598824416524,
+          "p_two_sided_descriptive": 3.6032454457404083e-09
+        },
+        "gt_boundary_fraction": {
+          "estimate": -0.4512524186438863,
+          "cluster_robust_se": 0.16076023943468437,
+          "ci95": [
+            -0.7730490006756684,
+            -0.12945583661210425
+          ],
+          "t": -2.8069902124475665,
+          "p_two_sided_descriptive": 0.006799125093006908
+        },
+        "step2_vs_step1": {
+          "estimate": 0.026933132408841765,
+          "cluster_robust_se": 0.047710773081212805,
+          "ci95": [
+            -0.06857035624990776,
+            0.12243662106759129
+          ],
+          "t": 0.5645084049046208,
+          "p_two_sided_descriptive": 0.5745849454209468
+        },
+        "step3_vs_step1": {
+          "estimate": -0.02300748921221281,
+          "cluster_robust_se": 0.055558450658984564,
+          "ci95": [
+            -0.1342198112883226,
+            0.08820483286389698
+          ],
+          "t": -0.4141132256086803,
+          "p_two_sided_descriptive": 0.680318662716675
+        },
+        "step4_vs_step1": {
+          "estimate": -0.07090125744081927,
+          "cluster_robust_se": 0.05535944175404129,
+          "ci95": [
+            -0.18171521991240353,
+            0.03991270503076498
+          ],
+          "t": -1.280743721293819,
+          "p_two_sided_descriptive": 0.20538154230917222
+        },
+        "resolution_1278x909_vs_1230x875": {
+          "estimate": -0.01435853932333903,
+          "cluster_robust_se": 0.035642154930072126,
+          "ci95": [
+            -0.08570406401947771,
+            0.056986985372799656
+          ],
+          "t": -0.40285272738165423,
+          "p_two_sided_descriptive": 0.6885376680973946
+        },
+        "resolution_1440x1024_vs_1230x875": {
+          "estimate": -0.07193768092847085,
+          "cluster_robust_se": 0.05817569765320084,
+          "ci95": [
+            -0.1883889920732299,
+            0.04451363021628822
+          ],
+          "t": -1.236558972739931,
+          "p_two_sided_descriptive": 0.22123484040877844
+        },
+        "resolution_675x480_vs_1230x875": {
+          "estimate": 0.10218030926753123,
+          "cluster_robust_se": 0.046747875052678634,
+          "ci95": [
+            0.008604270427947536,
+            0.19575634810711492
+          ],
+          "t": 2.1857744154656786,
+          "p_two_sided_descriptive": 0.03288276813822775
+        },
+        "fold2_vs_fold1": {
+          "estimate": 0.0060591447717848745,
+          "cluster_robust_se": 0.04491143308189953,
+          "ci95": [
+            -0.08384085606627216,
+            0.09595914560984191
+          ],
+          "t": 0.13491319149704148,
+          "p_two_sided_descriptive": 0.8931476195701169
+        },
+        "fold3_vs_fold1": {
+          "estimate": 0.0661342955170236,
+          "cluster_robust_se": 0.04755656124456739,
+          "ci95": [
+            -0.02906050461205066,
+            0.16132909564609788
+          ],
+          "t": 1.3906450295452855,
+          "p_two_sided_descriptive": 0.1696460305083284
+        },
+        "fold4_vs_fold1": {
+          "estimate": 0.016465570722217125,
+          "cluster_robust_se": 0.04658753581989396,
+          "ci95": [
+            -0.07678951427170705,
+            0.10972065571614131
+          ],
+          "t": 0.3534329608218073,
+          "p_two_sided_descriptive": 0.7250453256368417
+        }
+      }
+    }
+  }
+}

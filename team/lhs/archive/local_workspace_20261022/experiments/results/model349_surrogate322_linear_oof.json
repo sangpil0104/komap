@@ -1,0 +1,41 @@
+{
+  "method": "train-OOF ridge linear regression, input=326+329, target=322",
+  "train_images": 70,
+  "ridge": 0.001,
+  "crossfit_probability_mae": [
+    {
+      "fold": 1,
+      "images": 18,
+      "fit_samples": 520000,
+      "surrogate_mae": 0.012602077693574958,
+      "direct_326_mae": 0.010478298748946853
+    },
+    {
+      "fold": 2,
+      "images": 18,
+      "fit_samples": 518750,
+      "surrogate_mae": 0.013590008098011216,
+      "direct_326_mae": 0.010687893825686641
+    },
+    {
+      "fold": 3,
+      "images": 17,
+      "fit_samples": 528750,
+      "surrogate_mae": 0.010476741720648372,
+      "direct_326_mae": 0.008850396419053568
+    },
+    {
+      "fold": 4,
+      "images": 17,
+      "fit_samples": 528750,
+      "surrogate_mae": 0.013654665144927362,
+      "direct_326_mae": 0.013486152432639809
+    }
+  ],
+  "crossfit_mean_mae": {
+    "surrogate": 0.012595592299476266,
+    "direct_326": 0.010867325668888433
+  },
+  "preregistered_probability_gate_pass": false,
+  "valid_read": false
+}

@@ -1,0 +1,43 @@
+usage: hard_negative_finetune.py [-h] --data-dir DATA_DIR --checkpoint
+                                 CHECKPOINT --output-dir OUTPUT_DIR
+                                 [--patch-size PATCH_SIZE]
+                                 [--mine-stride MINE_STRIDE]
+                                 [--val-stride VAL_STRIDE]
+                                 [--tile-batch-size TILE_BATCH_SIZE]
+                                 [--base-patches-per-image BASE_PATCHES_PER_IMAGE]
+                                 [--centers-per-image CENTERS_PER_IMAGE]
+                                 [--hard-repeats HARD_REPEATS]
+                                 [--epochs EPOCHS] [--batch-size BATCH_SIZE]
+                                 [--num-workers NUM_WORKERS]
+                                 [--encoder-lr ENCODER_LR]
+                                 [--decoder-lr DECODER_LR]
+                                 [--weight-decay WEIGHT_DECAY]
+                                 [--eutectic-bias EUTECTIC_BIAS]
+                                 [--class-weights AL3NI PRIMARY AL EUTECTIC]
+                                 [--hard-class {0,1,2,3}] [--seed SEED]
+                                 [--no-amp]
+
+options:
+  -h, --help            show this help message and exit
+  --data-dir DATA_DIR
+  --checkpoint CHECKPOINT
+  --output-dir OUTPUT_DIR
+  --patch-size PATCH_SIZE
+  --mine-stride MINE_STRIDE
+  --val-stride VAL_STRIDE
+  --tile-batch-size TILE_BATCH_SIZE
+  --base-patches-per-image BASE_PATCHES_PER_IMAGE
+  --centers-per-image CENTERS_PER_IMAGE
+  --hard-repeats HARD_REPEATS
+  --epochs EPOCHS
+  --batch-size BATCH_SIZE
+  --num-workers NUM_WORKERS
+  --encoder-lr ENCODER_LR
+  --decoder-lr DECODER_LR
+  --weight-decay WEIGHT_DECAY
+  --eutectic-bias EUTECTIC_BIAS
+  --class-weights AL3NI PRIMARY AL EUTECTIC
+  --hard-class {0,1,2,3}
+                        class whose false negatives are mined for extra crops
+  --seed SEED
+  --no-amp

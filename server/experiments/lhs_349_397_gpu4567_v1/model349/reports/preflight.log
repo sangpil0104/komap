@@ -1,0 +1,36 @@
+{
+  "physical_gpus": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "max_concurrent_gpu_stages": 8,
+  "gpu_stages": 50,
+  "cpu_stages": 9,
+  "initial_assignment": {
+    "0": "train_model6",
+    "1": "train_model336",
+    "2": "train_model322_fold1",
+    "3": "train_model322_fold2",
+    "4": "train_model322_fold3",
+    "5": "train_model322_fold4",
+    "6": "train_model326_fold1",
+    "7": "train_model326_fold2"
+  },
+  "scheduling": "one independent model/fold per GPU; dependencies respected",
+  "training_started": false
+}
+Check train:   0%|          | 0/70 [00:00<?, ?image/s]Check train:   1%|▏         | 1/70 [00:00<00:14,  4.80image/s]Check train:   3%|▎         | 2/70 [00:00<00:12,  5.48image/s]Check train:   4%|▍         | 3/70 [00:00<00:11,  5.86image/s]Check train:   6%|▌         | 4/70 [00:00<00:10,  6.07image/s]Check train:   7%|▋         | 5/70 [00:00<00:10,  6.20image/s]Check train:   9%|▊         | 6/70 [00:00<00:10,  6.25image/s]Check train:  10%|█         | 7/70 [00:01<00:09,  6.33image/s]Check train:  11%|█▏        | 8/70 [00:01<00:09,  6.38image/s]Check train:  13%|█▎        | 9/70 [00:01<00:09,  6.37image/s]Check train:  14%|█▍        | 10/70 [00:01<00:09,  6.34image/s]Check train:  16%|█▌        | 11/70 [00:01<00:09,  6.32image/s]Check train:  17%|█▋        | 12/70 [00:02<00:10,  5.64image/s]Check train:  19%|█▊        | 13/70 [00:02<00:09,  5.82image/s]Check train:  20%|██        | 14/70 [00:02<00:09,  5.96image/s]Check train:  21%|██▏       | 15/70 [00:02<00:10,  5.45image/s]Check train:  23%|██▎       | 16/70 [00:02<00:10,  5.17image/s]Check train:  24%|██▍       | 17/70 [00:02<00:10,  5.19image/s]Check train:  26%|██▌       | 18/70 [00:03<00:08,  5.99image/s]Check train:  27%|██▋       | 19/70 [00:03<00:07,  6.75image/s]Check train:  29%|██▊       | 20/70 [00:03<00:07,  6.95image/s]Check train:  30%|███       | 21/70 [00:03<00:06,  7.50image/s]Check train:  31%|███▏      | 22/70 [00:03<00:06,  7.93image/s]Check train:  33%|███▎      | 23/70 [00:03<00:05,  8.10image/s]Check train:  34%|███▍      | 24/70 [00:03<00:05,  8.34image/s]Check train:  36%|███▌      | 25/70 [00:03<00:05,  8.49image/s]Check train:  37%|███▋      | 26/70 [00:03<00:05,  8.62image/s]Check train:  39%|███▊      | 27/70 [00:04<00:04,  8.74image/s]Check train:  41%|████▏     | 29/70 [00:04<00:03, 10.69image/s]Check train:  44%|████▍     | 31/70 [00:04<00:03, 10.19image/s]Check train:  47%|████▋     | 33/70 [00:04<00:03, 11.40image/s]Check train:  50%|█████     | 35/70 [00:04<00:03,  9.53image/s]Check train:  53%|█████▎    | 37/70 [00:05<00:03,  9.64image/s]Check train:  56%|█████▌    | 39/70 [00:05<00:02, 10.78image/s]Check train:  59%|█████▊    | 41/70 [00:05<00:03,  9.40image/s]Check train:  61%|██████▏   | 43/70 [00:05<00:02,  9.45image/s]Check train:  63%|██████▎   | 44/70 [00:05<00:02,  9.47image/s]Check train:  64%|██████▍   | 45/70 [00:05<00:02,  9.43image/s]Check train:  66%|██████▌   | 46/70 [00:05<00:02,  9.54image/s]Check train:  69%|██████▊   | 48/70 [00:06<00:02,  9.74image/s]Check train:  70%|███████   | 49/70 [00:06<00:02,  9.61image/s]Check train:  71%|███████▏  | 50/70 [00:06<00:02,  9.55image/s]Check train:  73%|███████▎  | 51/70 [00:06<00:02,  9.47image/s]Check train:  74%|███████▍  | 52/70 [00:06<00:01,  9.45image/s]Check train:  76%|███████▌  | 53/70 [00:06<00:01,  9.18image/s]Check train:  77%|███████▋  | 54/70 [00:06<00:01,  9.20image/s]Check train:  81%|████████▏ | 57/70 [00:06<00:00, 14.78image/s]Check train:  87%|████████▋ | 61/70 [00:07<00:00, 16.48image/s]Check train:  90%|█████████ | 63/70 [00:07<00:00, 15.65image/s]Check train:  96%|█████████▌| 67/70 [00:07<00:00, 19.97image/s]Check train: 100%|██████████| 70/70 [00:07<00:00,  9.32image/s]
+Check valid:   0%|          | 0/20 [00:00<?, ?image/s]Check valid:   5%|▌         | 1/20 [00:00<00:01,  9.75image/s]Check valid:  20%|██        | 4/20 [00:00<00:01, 15.04image/s]Check valid:  30%|███       | 6/20 [00:00<00:00, 14.59image/s]Check valid:  40%|████      | 8/20 [00:00<00:01, 11.26image/s]Check valid:  50%|█████     | 10/20 [00:00<00:00, 10.01image/s]Check valid:  60%|██████    | 12/20 [00:01<00:00,  9.99image/s]Check valid:  70%|███████   | 14/20 [00:01<00:00, 11.60image/s]Check valid:  85%|████████▌ | 17/20 [00:01<00:00, 15.42image/s]Check valid: 100%|██████████| 20/20 [00:01<00:00, 15.84image/s]Check valid: 100%|██████████| 20/20 [00:01<00:00, 13.33image/s]
+fold=1 train=52 heldout=18 heldout_groups=15
+fold=2 train=52 heldout=18 heldout_groups=15
+fold=3 train=53 heldout=17 heldout_groups=14
+fold=4 train=53 heldout=17 heldout_groups=15
+verified 70 images across 4 grouped folds; input data were symlinked, not copied
+PREFLIGHT OK: 8 GPUs, 59 stages, no training.
+CHECK_DIRECTORY=/Data3/sppark/komap/experiments/model349_train_route_v2/outputs/checks/model349_preflight_20260930T143751_597307Z

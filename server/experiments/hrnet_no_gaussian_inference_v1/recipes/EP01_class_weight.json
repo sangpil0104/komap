@@ -1,0 +1,99 @@
+{
+  "checkpoint": "/Data3/sppark/komap/experiments/HRNet_taeho_multigpu/outputs/runs/HRNet_taeho_no_gaussian_0928_ddp6_20260928T131839_853555Z/last.pt",
+  "target": "EP01_class_weight",
+  "nodes": {
+    "A00_control": {
+      "arm": {
+        "id": "A00_control",
+        "contrast": "original_saved_masks",
+        "change": {},
+        "config": {
+          "patch": 512,
+          "scale": 2.0,
+          "overlap": 170,
+          "input_mode": "bicubic",
+          "input_antialias": false,
+          "restore": "bilinear",
+          "restore_antialias": false,
+          "restore_logits": false,
+          "window": "gaussian",
+          "sigma": 0.125,
+          "tta": "flip4",
+          "tile_merge": "prob",
+          "tta_merge": "prob",
+          "halo": 0,
+          "precision": "fp32",
+          "gamma": 1.0,
+          "contrast": 1.0,
+          "sharpen": 0.0
+        }
+      },
+      "batch": 4,
+      "image_miou": 0.7891718674849928
+    },
+    "B03_transpose4": {
+      "arm": {
+        "id": "B03_transpose4",
+        "contrast": "A00_control",
+        "change": {
+          "tta": "transpose4"
+        },
+        "config": {
+          "patch": 512,
+          "scale": 2.0,
+          "overlap": 170,
+          "input_mode": "bicubic",
+          "input_antialias": false,
+          "restore": "bilinear",
+          "restore_antialias": false,
+          "restore_logits": false,
+          "window": "gaussian",
+          "sigma": 0.125,
+          "tta": "transpose4",
+          "tile_merge": "prob",
+          "tta_merge": "prob",
+          "halo": 0,
+          "precision": "fp32",
+          "gamma": 1.0,
+          "contrast": 1.0,
+          "sharpen": 0.0
+        }
+      },
+      "batch": 4,
+      "image_miou": 0.7882849150168858
+    },
+    "E_tta_0.4": {
+      "arm": {
+        "id": "E_tta_0.4",
+        "contrast": "B02_d4",
+        "change": {
+          "transpose_weight": 0.4
+        },
+        "members": [
+          "A00_control",
+          "B03_transpose4"
+        ],
+        "weights": [
+          0.6,
+          0.4
+        ]
+      },
+      "batch": 4,
+      "image_miou": 0.7900136649027255
+    },
+    "EP01_class_weight": {
+      "arm": {
+        "id": "EP01_class_weight",
+        "contrast": "E_tta_0.4",
+        "change": {
+          "kind": "class_weight",
+          "class": 1,
+          "weight": 1.2
+        },
+        "cache_source": "experiments/hrnet_no_gaussian_inference_v1/outputs/20260929T120807_746486Z/arms/E_tta_0.4/probs"
+      },
+      "batch": 4,
+      "image_miou": 0.7902533030327054
+    }
+  }
+}

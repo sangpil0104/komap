@@ -1,0 +1,20 @@
+Model397: CHECK (no training)
+test_comparison_zero_delta (__main__.Model397Smoke.test_comparison_zero_delta) ... ok
+test_fixed_fold_inventory (__main__.Model397Smoke.test_fixed_fold_inventory) ... ok
+test_group_bootstrap_is_reproducible_and_fold_stratified (__main__.Model397Smoke.test_group_bootstrap_is_reproducible_and_fold_stratified) ... ok
+test_group_step_parser (__main__.Model397Smoke.test_group_step_parser) ... ok
+test_official_empty_union_zero (__main__.Model397Smoke.test_official_empty_union_zero) ... ok
+test_oof_manifest_binds_checkpoint_and_probabilities (__main__.Model397Smoke.test_oof_manifest_binds_checkpoint_and_probabilities) ... ok
+test_perfect_four_class_iou (__main__.Model397Smoke.test_perfect_four_class_iou) ... ok
+test_saved_recipe_verifier (__main__.Model397Smoke.test_saved_recipe_verifier) ... ok
+test_synthetic_split_creation_and_idempotence (__main__.Model397Smoke.test_synthetic_split_creation_and_idempotence) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.521s
+
+OK
+Model397 CPU smoke OK; preparing real-data execution plan
+prepared 70 images / 59 groups into four fixed folds
+split manifest: /Data3/sppark/komap/experiments/lhs_349_397_gpu4567_v1/model397/outputs/preflight_20261006T005608_077615Z/splits/model397_split_manifest.json
+RUN_DIRECTORY=/Data3/sppark/komap/experiments/lhs_349_397_gpu4567_v1/model397/outputs/preflight_20261006T005608_077615Z
+Model397 CHECK OK: real 70-image splits, 12 training/OOF + 12 valid + 2 CPU tasks, GPU 4,5,6,7; no training

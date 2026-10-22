@@ -1,0 +1,16 @@
+{
+  "mode": "DDP + SyncBatchNorm",
+  "world_size": 6,
+  "visible_physical_gpus": "0,1,2,3,4,5",
+  "global_batch_size": 8,
+  "local_batch_sizes": [
+    2,
+    2,
+    1,
+    1,
+    1,
+    1
+  ],
+  "loss_reduction": "global_batch_statistics",
+  "variant": "no_gaussian"
+}

@@ -1,0 +1,18 @@
+usage: train_refiner.py [-h] --parent-package PARENT_PACKAGE --features
+                        FEATURES --out OUT [--device DEVICE]
+
+Train F (11,876-parameter residual refiner) on features from build_features.py. Never reads valid/test.
+
+    python train_refiner.py --parent-package PARENT/Model349_fusion805 --features FEATURES --out NEW_DIR [--device cuda]
+
+Same recipe as the published F (Model349_fusion805/refiner/train_residual.py, training_recipe.json): seed 81349,
+8 epochs x 140 minibatches (70 images x 16 random 256-px crops, batch 8), AdamW lr 1e-3 wd 1e-4, cosine,
+0.5 CE + 0.5 Dice + 0.05 |delta|^2, gray z-score input, last epoch kept (no selection). Writes NEW_DIR/epoch8.pt.
+The original GPU-sharing guard (nvidia-smi foreign-process check) and 20-minute cap are removed.
+
+options:
+  -h, --help            show this help message and exit
+  --parent-package PARENT_PACKAGE
+  --features FEATURES
+  --out OUT
+  --device DEVICE

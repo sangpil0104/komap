@@ -1,0 +1,613 @@
+{
+  "model": 374,
+  "scope": "training data only; exactly-once specimen-grouped OOF",
+  "metric_context": "official image-wise four-class mean IoU, empty union=0",
+  "images": 70,
+  "fold_image_counts": {
+    "1": 18,
+    "2": 18,
+    "3": 17,
+    "4": 17
+  },
+  "thickness_definition": "contiguous same-class GT run length along the interface normal",
+  "thickness_bins_pixels": [
+    "thin_le_2px",
+    "medium_3_to_5px",
+    "thick_ge_6px"
+  ],
+  "grouped_pair_interface_results": {
+    "groups": 59,
+    "bootstrap_draws": 20000,
+    "pairs": {
+      "Al_vs_Al3Ni": {
+        "groups_with_this_interface": 59,
+        "group_mean_left_minus_right_partner_swap_rate_percentage_points": -15.760219560126265,
+        "group_bootstrap_95ci_percentage_points": [
+          -19.61793372906303,
+          -12.143731881637496
+        ],
+        "fraction_groups_Al_side_rate_higher": 0.06779661016949153,
+        "thickness_stratified_side_rates": {
+          "Al": {
+            "thin_le_2px": {
+              "interface_samples": 582879,
+              "predicted_as_partner": 211895,
+              "any_wrong_class": 227731,
+              "partner_swap_rate": 0.36353171069810375,
+              "any_error_rate": 0.3907002997191527
+            },
+            "medium_3_to_5px": {
+              "interface_samples": 992787,
+              "predicted_as_partner": 145592,
+              "any_wrong_class": 152302,
+              "partner_swap_rate": 0.1466497848984727,
+              "any_error_rate": 0.15340853576849817
+            },
+            "thick_ge_6px": {
+              "interface_samples": 3945750,
+              "predicted_as_partner": 500778,
+              "any_wrong_class": 529866,
+              "partner_swap_rate": 0.12691579547614523,
+              "any_error_rate": 0.13428777798897548
+            },
+            "all_thicknesses": {
+              "interface_samples": 5521416,
+              "predicted_as_partner": 858265,
+              "partner_swap_rate": 0.15544291536808674,
+              "mean_group_partner_swap_rate": 0.14928735619208533
+            }
+          },
+          "Al3Ni": {
+            "thin_le_2px": {
+              "interface_samples": 1408084,
+              "predicted_as_partner": 589049,
+              "any_wrong_class": 709217,
+              "partner_swap_rate": 0.4183337073640493,
+              "any_error_rate": 0.5036752068768625
+            },
+            "medium_3_to_5px": {
+              "interface_samples": 1484326,
+              "predicted_as_partner": 468297,
+              "any_wrong_class": 605545,
+              "partner_swap_rate": 0.3154947093832487,
+              "any_error_rate": 0.40795957222335255
+            },
+            "thick_ge_6px": {
+              "interface_samples": 2629006,
+              "predicted_as_partner": 670998,
+              "any_wrong_class": 773535,
+              "partner_swap_rate": 0.2552287822850157,
+              "any_error_rate": 0.29423097550937505
+            },
+            "all_thicknesses": {
+              "interface_samples": 5521416,
+              "predicted_as_partner": 1728344,
+              "partner_swap_rate": 0.31302549925598794,
+              "mean_group_partner_swap_rate": 0.3068895517933479
+            }
+          }
+        },
+        "thickness_stratified_group_contrasts": {
+          "thin_le_2px": {
+            "groups_with_both_sides_in_bin": 59,
+            "mean_group_left_minus_right_partner_swap_rate_percentage_points": -8.47916947289161,
+            "group_bootstrap_95ci_percentage_points": [
+              -14.45836034909202,
+              -2.7518547581785704
+            ],
+            "fraction_groups_left_side_rate_higher": 0.4406779661016949
+          },
+          "medium_3_to_5px": {
+            "groups_with_both_sides_in_bin": 59,
+            "mean_group_left_minus_right_partner_swap_rate_percentage_points": -15.623760206236547,
+            "group_bootstrap_95ci_percentage_points": [
+              -19.71993115948623,
+              -11.517511937984935
+            ],
+            "fraction_groups_left_side_rate_higher": 0.0847457627118644
+          },
+          "thick_ge_6px": {
+            "groups_with_both_sides_in_bin": 59,
+            "mean_group_left_minus_right_partner_swap_rate_percentage_points": -12.746561789022218,
+            "group_bootstrap_95ci_percentage_points": [
+              -15.965325337803836,
+              -9.653326196681155
+            ],
+            "fraction_groups_left_side_rate_higher": 0.06779661016949153
+          }
+        }
+      },
+      "Al_vs_Primary_Si": {
+        "groups_with_this_interface": 58,
+        "group_mean_left_minus_right_partner_swap_rate_percentage_points": -7.9360069617912625,
+        "group_bootstrap_95ci_percentage_points": [
+          -10.501367395032043,
+          -5.4026217443603635
+        ],
+        "fraction_groups_Al_side_rate_higher": 0.2413793103448276,
+        "thickness_stratified_side_rates": {
+          "Al": {
+            "thin_le_2px": {
+              "interface_samples": 60707,
+              "predicted_as_partner": 18656,
+              "any_wrong_class": 26114,
+              "partner_swap_rate": 0.3073121715782364,
+              "any_error_rate": 0.43016456092378147
+            },
+            "medium_3_to_5px": {
+              "interface_samples": 97189,
+              "predicted_as_partner": 12819,
+              "any_wrong_class": 17479,
+              "partner_swap_rate": 0.13189764273734683,
+              "any_error_rate": 0.1798454557614545
+            },
+            "thick_ge_6px": {
+              "interface_samples": 539806,
+              "predicted_as_partner": 62906,
+              "any_wrong_class": 76680,
+              "partner_swap_rate": 0.11653445867589467,
+              "any_error_rate": 0.1420510331489461
+            },
+            "all_thicknesses": {
+              "interface_samples": 697702,
+              "predicted_as_partner": 94381,
+              "partner_swap_rate": 0.13527408549782,
+              "mean_group_partner_swap_rate": 0.13626073033241543
+            }
+          },
+          "Primary_Si": {
+            "thin_le_2px": {
+              "interface_samples": 82394,
+              "predicted_as_partner": 37814,
+              "any_wrong_class": 56275,
+              "partner_swap_rate": 0.45894118503774545,
+              "any_error_rate": 0.68299876204578
+            },
+            "medium_3_to_5px": {
+              "interface_samples": 111454,
+              "predicted_as_partner": 25923,
+              "any_wrong_class": 56265,
+              "partner_swap_rate": 0.23258922963733916,
+              "any_error_rate": 0.5048271035584188
+            },
+            "thick_ge_6px": {
+              "interface_samples": 503854,
+              "predicted_as_partner": 94203,
+              "any_wrong_class": 148539,
+              "partner_swap_rate": 0.18696487474546197,
+              "any_error_rate": 0.2948056381412076
+            },
+            "all_thicknesses": {
+              "interface_samples": 697702,
+              "predicted_as_partner": 157940,
+              "partner_swap_rate": 0.22637171743810394,
+              "mean_group_partner_swap_rate": 0.21562079995032807
+            }
+          }
+        },
+        "thickness_stratified_group_contrasts": {
+          "thin_le_2px": {
+            "groups_with_both_sides_in_bin": 58,
+            "mean_group_left_minus_right_partner_swap_rate_percentage_points": -13.614912613095436,
+            "group_bootstrap_95ci_percentage_points": [
+              -18.13752095897903,
+              -9.060393014135544
+            ],
+            "fraction_groups_left_side_rate_higher": 0.22413793103448276
+          },
+          "medium_3_to_5px": {
+            "groups_with_both_sides_in_bin": 58,
+            "mean_group_left_minus_right_partner_swap_rate_percentage_points": -7.673323093661058,
+            "group_bootstrap_95ci_percentage_points": [
+              -10.34809988794475,
+              -5.057396067514025
+            ],
+            "fraction_groups_left_side_rate_higher": 0.1724137931034483
+          },
+          "thick_ge_6px": {
+            "groups_with_both_sides_in_bin": 58,
+            "mean_group_left_minus_right_partner_swap_rate_percentage_points": -6.396892456265982,
+            "group_bootstrap_95ci_percentage_points": [
+              -8.904802990149296,
+              -3.97713242811167
+            ],
+            "fraction_groups_left_side_rate_higher": 0.29310344827586204
+          }
+        }
+      },
+      "Al_vs_Eutectic_Si": {
+        "groups_with_this_interface": 59,
+        "group_mean_left_minus_right_partner_swap_rate_percentage_points": -14.676055994822745,
+        "group_bootstrap_95ci_percentage_points": [
+          -16.850456592510053,
+          -12.600172620672371
+        ],
+        "fraction_groups_Al_side_rate_higher": 0.03389830508474576,
+        "thickness_stratified_side_rates": {
+          "Al": {
+            "thin_le_2px": {
+              "interface_samples": 238013,
+              "predicted_as_partner": 57108,
+              "any_wrong_class": 83779,
+              "partner_swap_rate": 0.23993647405813967,
+              "any_error_rate": 0.3519933785129384
+            },
+            "medium_3_to_5px": {
+              "interface_samples": 445714,
+              "predicted_as_partner": 38681,
+              "any_wrong_class": 55203,
+              "partner_swap_rate": 0.08678435050278878,
+              "any_error_rate": 0.12385296400831027
+            },
+            "thick_ge_6px": {
+              "interface_samples": 2172490,
+              "predicted_as_partner": 188282,
+              "any_wrong_class": 235344,
+              "partner_swap_rate": 0.08666645185938715,
+              "any_error_rate": 0.10832915226307141
+            },
+            "all_thicknesses": {
+              "interface_samples": 2856217,
+              "predicted_as_partner": 284071,
+              "partner_swap_rate": 0.09945707906647148,
+              "mean_group_partner_swap_rate": 0.09529224234352252
+            }
+          },
+          "Eutectic_Si": {
+            "thin_le_2px": {
+              "interface_samples": 788241,
+              "predicted_as_partner": 220726,
+              "any_wrong_class": 369124,
+              "partner_swap_rate": 0.28002349535230975,
+              "any_error_rate": 0.46828825194325086
+            },
+            "medium_3_to_5px": {
+              "interface_samples": 1143881,
+              "predicted_as_partner": 239064,
+              "any_wrong_class": 403048,
+              "partner_swap_rate": 0.2089937677083543,
+              "any_error_rate": 0.35235133724574497
+            },
+            "thick_ge_6px": {
+              "interface_samples": 924095,
+              "predicted_as_partner": 232476,
+              "any_wrong_class": 325112,
+              "partner_swap_rate": 0.2515715375583679,
+              "any_error_rate": 0.3518166422283423
+            },
+            "all_thicknesses": {
+              "interface_samples": 2856217,
+              "predicted_as_partner": 692266,
+              "partner_swap_rate": 0.24237164053011379,
+              "mean_group_partner_swap_rate": 0.24205280229174994
+            }
+          }
+        },
+        "thickness_stratified_group_contrasts": {
+          "thin_le_2px": {
+            "groups_with_both_sides_in_bin": 59,
+            "mean_group_left_minus_right_partner_swap_rate_percentage_points": -7.915553728264728,
+            "group_bootstrap_95ci_percentage_points": [
+              -11.690536720895036,
+              -4.348532095964825
+            ],
+            "fraction_groups_left_side_rate_higher": 0.3220338983050847
+          },
+          "medium_3_to_5px": {
+            "groups_with_both_sides_in_bin": 59,
+            "mean_group_left_minus_right_partner_swap_rate_percentage_points": -11.624191876272945,
+            "group_bootstrap_95ci_percentage_points": [
+              -13.821086613363683,
+              -9.509530571794615
+            ],
+            "fraction_groups_left_side_rate_higher": 0.06779661016949153
+          },
+          "thick_ge_6px": {
+            "groups_with_both_sides_in_bin": 59,
+            "mean_group_left_minus_right_partner_swap_rate_percentage_points": -16.277236586114437,
+            "group_bootstrap_95ci_percentage_points": [
+              -18.535769021734552,
+              -14.177956679930114
+            ],
+            "fraction_groups_left_side_rate_higher": 0.01694915254237288
+          }
+        }
+      },
+      "Al3Ni_vs_Primary_Si": {
+        "groups_with_this_interface": 58,
+        "group_mean_left_minus_right_partner_swap_rate_percentage_points": 3.910577266302309,
+        "group_bootstrap_95ci_percentage_points": [
+          -0.08874949460868121,
+          8.174161503635874
+        ],
+        "fraction_groups_Al3Ni_side_rate_higher": 0.5862068965517241,
+        "thickness_stratified_side_rates": {
+          "Al3Ni": {
+            "thin_le_2px": {
+              "interface_samples": 68500,
+              "predicted_as_partner": 26504,
+              "any_wrong_class": 47009,
+              "partner_swap_rate": 0.38691970802919706,
+              "any_error_rate": 0.6862627737226278
+            },
+            "medium_3_to_5px": {
+              "interface_samples": 82037,
+              "predicted_as_partner": 25785,
+              "any_wrong_class": 37076,
+              "partner_swap_rate": 0.31430939697941174,
+              "any_error_rate": 0.45194241622682446
+            },
+            "thick_ge_6px": {
+              "interface_samples": 262633,
+              "predicted_as_partner": 44913,
+              "any_wrong_class": 59277,
+              "partner_swap_rate": 0.17101049753839007,
+              "any_error_rate": 0.2257027867785084
+            },
+            "all_thicknesses": {
+              "interface_samples": 413170,
+              "predicted_as_partner": 97202,
+              "partner_swap_rate": 0.2352590943195295,
+              "mean_group_partner_swap_rate": 0.25753695316719316
+            }
+          },
+          "Primary_Si": {
+            "thin_le_2px": {
+              "interface_samples": 45043,
+              "predicted_as_partner": 23192,
+              "any_wrong_class": 30170,
+              "partner_swap_rate": 0.514885775814222,
+              "any_error_rate": 0.669804409120174
+            },
+            "medium_3_to_5px": {
+              "interface_samples": 59967,
+              "predicted_as_partner": 20158,
+              "any_wrong_class": 30245,
+              "partner_swap_rate": 0.33615155001917724,
+              "any_error_rate": 0.504360731735788
+            },
+            "thick_ge_6px": {
+              "interface_samples": 308160,
+              "predicted_as_partner": 59014,
+              "any_wrong_class": 79914,
+              "partner_swap_rate": 0.19150441329179646,
+              "any_error_rate": 0.25932632398753896
+            },
+            "all_thicknesses": {
+              "interface_samples": 413170,
+              "predicted_as_partner": 102364,
+              "partner_swap_rate": 0.24775274100249292,
+              "mean_group_partner_swap_rate": 0.21843118050417004
+            }
+          }
+        },
+        "thickness_stratified_group_contrasts": {
+          "thin_le_2px": {
+            "groups_with_both_sides_in_bin": 58,
+            "mean_group_left_minus_right_partner_swap_rate_percentage_points": -9.117477771884182,
+            "group_bootstrap_95ci_percentage_points": [
+              -13.512066275452288,
+              -4.612990982969695
+            ],
+            "fraction_groups_left_side_rate_higher": 0.25862068965517243
+          },
+          "medium_3_to_5px": {
+            "groups_with_both_sides_in_bin": 58,
+            "mean_group_left_minus_right_partner_swap_rate_percentage_points": 6.826294495354825,
+            "group_bootstrap_95ci_percentage_points": [
+              2.0713578707996545,
+              11.710208577523916
+            ],
+            "fraction_groups_left_side_rate_higher": 0.6379310344827587
+          },
+          "thick_ge_6px": {
+            "groups_with_both_sides_in_bin": 58,
+            "mean_group_left_minus_right_partner_swap_rate_percentage_points": 2.3959247655372726,
+            "group_bootstrap_95ci_percentage_points": [
+              -1.2064675357143726,
+              6.296574777594856
+            ],
+            "fraction_groups_left_side_rate_higher": 0.46551724137931033
+          }
+        }
+      },
+      "Al3Ni_vs_Eutectic_Si": {
+        "groups_with_this_interface": 59,
+        "group_mean_left_minus_right_partner_swap_rate_percentage_points": -19.786006753632783,
+        "group_bootstrap_95ci_percentage_points": [
+          -25.08188322015482,
+          -14.557264783438884
+        ],
+        "fraction_groups_Al3Ni_side_rate_higher": 0.1016949152542373,
+        "thickness_stratified_side_rates": {
+          "Al3Ni": {
+            "thin_le_2px": {
+              "interface_samples": 149257,
+              "predicted_as_partner": 45294,
+              "any_wrong_class": 93096,
+              "partner_swap_rate": 0.303463154156924,
+              "any_error_rate": 0.6237295403230669
+            },
+            "medium_3_to_5px": {
+              "interface_samples": 148920,
+              "predicted_as_partner": 42740,
+              "any_wrong_class": 65241,
+              "partner_swap_rate": 0.2869997313994091,
+              "any_error_rate": 0.43809427880741336
+            },
+            "thick_ge_6px": {
+              "interface_samples": 440969,
+              "predicted_as_partner": 59356,
+              "any_wrong_class": 87698,
+              "partner_swap_rate": 0.13460356623708242,
+              "any_error_rate": 0.19887565792606737
+            },
+            "all_thicknesses": {
+              "interface_samples": 739146,
+              "predicted_as_partner": 147390,
+              "partner_swap_rate": 0.1994058007484313,
+              "mean_group_partner_swap_rate": 0.21605236975381706
+            }
+          },
+          "Eutectic_Si": {
+            "thin_le_2px": {
+              "interface_samples": 198095,
+              "predicted_as_partner": 102059,
+              "any_wrong_class": 117882,
+              "partner_swap_rate": 0.5152023019258437,
+              "any_error_rate": 0.5950781190842778
+            },
+            "medium_3_to_5px": {
+              "interface_samples": 289393,
+              "predicted_as_partner": 121967,
+              "any_wrong_class": 134483,
+              "partner_swap_rate": 0.42145801729827603,
+              "any_error_rate": 0.46470716292377495
+            },
+            "thick_ge_6px": {
+              "interface_samples": 251658,
+              "predicted_as_partner": 83854,
+              "any_wrong_class": 104211,
+              "partner_swap_rate": 0.33320617663654645,
+              "any_error_rate": 0.41409770402689366
+            },
+            "all_thicknesses": {
+              "interface_samples": 739146,
+              "predicted_as_partner": 307880,
+              "partner_swap_rate": 0.41653475767980885,
+              "mean_group_partner_swap_rate": 0.4139124372901449
+            }
+          }
+        },
+        "thickness_stratified_group_contrasts": {
+          "thin_le_2px": {
+            "groups_with_both_sides_in_bin": 59,
+            "mean_group_left_minus_right_partner_swap_rate_percentage_points": -19.369309660432965,
+            "group_bootstrap_95ci_percentage_points": [
+              -24.873698101218956,
+              -13.909210142130853
+            ],
+            "fraction_groups_left_side_rate_higher": 0.15254237288135594
+          },
+          "medium_3_to_5px": {
+            "groups_with_both_sides_in_bin": 59,
+            "mean_group_left_minus_right_partner_swap_rate_percentage_points": -9.45032866056066,
+            "group_bootstrap_95ci_percentage_points": [
+              -15.69486655634822,
+              -3.392829448796446
+            ],
+            "fraction_groups_left_side_rate_higher": 0.423728813559322
+          },
+          "thick_ge_6px": {
+            "groups_with_both_sides_in_bin": 59,
+            "mean_group_left_minus_right_partner_swap_rate_percentage_points": -18.902009777353378,
+            "group_bootstrap_95ci_percentage_points": [
+              -23.38258834825307,
+              -14.51534420897646
+            ],
+            "fraction_groups_left_side_rate_higher": 0.0847457627118644
+          }
+        }
+      },
+      "Primary_Si_vs_Eutectic_Si": {
+        "groups_with_this_interface": 12,
+        "group_mean_left_minus_right_partner_swap_rate_percentage_points": -17.944114108444325,
+        "group_bootstrap_95ci_percentage_points": [
+          -38.095284111639245,
+          -0.7949448404082705
+        ],
+        "fraction_groups_Primary_Si_side_rate_higher": 0.25,
+        "thickness_stratified_side_rates": {
+          "Primary_Si": {
+            "thin_le_2px": {
+              "interface_samples": 66,
+              "predicted_as_partner": 3,
+              "any_wrong_class": 58,
+              "partner_swap_rate": 0.045454545454545456,
+              "any_error_rate": 0.8787878787878788
+            },
+            "medium_3_to_5px": {
+              "interface_samples": 62,
+              "predicted_as_partner": 3,
+              "any_wrong_class": 60,
+              "partner_swap_rate": 0.04838709677419355,
+              "any_error_rate": 0.967741935483871
+            },
+            "thick_ge_6px": {
+              "interface_samples": 329,
+              "predicted_as_partner": 11,
+              "any_wrong_class": 283,
+              "partner_swap_rate": 0.03343465045592705,
+              "any_error_rate": 0.8601823708206687
+            },
+            "all_thicknesses": {
+              "interface_samples": 457,
+              "predicted_as_partner": 17,
+              "partner_swap_rate": 0.037199124726477024,
+              "mean_group_partner_swap_rate": 0.039402702759400575
+            }
+          },
+          "Eutectic_Si": {
+            "thin_le_2px": {
+              "interface_samples": 138,
+              "predicted_as_partner": 4,
+              "any_wrong_class": 126,
+              "partner_swap_rate": 0.028985507246376812,
+              "any_error_rate": 0.9130434782608695
+            },
+            "medium_3_to_5px": {
+              "interface_samples": 159,
+              "predicted_as_partner": 17,
+              "any_wrong_class": 117,
+              "partner_swap_rate": 0.1069182389937107,
+              "any_error_rate": 0.7358490566037735
+            },
+            "thick_ge_6px": {
+              "interface_samples": 160,
+              "predicted_as_partner": 89,
+              "any_wrong_class": 127,
+              "partner_swap_rate": 0.55625,
+              "any_error_rate": 0.79375
+            },
+            "all_thicknesses": {
+              "interface_samples": 457,
+              "predicted_as_partner": 110,
+              "partner_swap_rate": 0.24070021881838075,
+              "mean_group_partner_swap_rate": 0.21884384384384384
+            }
+          }
+        },
+        "thickness_stratified_group_contrasts": {
+          "thin_le_2px": {
+            "groups_with_both_sides_in_bin": 7,
+            "mean_group_left_minus_right_partner_swap_rate_percentage_points": -3.0465367965367967,
+            "group_bootstrap_95ci_percentage_points": [
+              -11.904761904761905,
+              3.977272727272728
+            ],
+            "fraction_groups_left_side_rate_higher": 0.2857142857142857
+          },
+          "medium_3_to_5px": {
+            "groups_with_both_sides_in_bin": 7,
+            "mean_group_left_minus_right_partner_swap_rate_percentage_points": -1.1904761904761902,
+            "group_bootstrap_95ci_percentage_points": [
+              -20.634920634920633,
+              19.444444444444446
+            ],
+            "fraction_groups_left_side_rate_higher": 0.2857142857142857
+          },
+          "thick_ge_6px": {
+            "groups_with_both_sides_in_bin": 8,
+            "mean_group_left_minus_right_partner_swap_rate_percentage_points": -27.23091553304231,
+            "group_bootstrap_95ci_percentage_points": [
+              -57.93043874337804,
+              0.6626871850548034
+            ],
+            "fraction_groups_left_side_rate_higher": 0.375
+          }
+        }
+      }
+    },
+    "interpretation_guard": "Thickness is an axial pixel-run proxy, not physical width; bins pool interfaces across resolutions and groups. Pairwise rates are descriptive and do not prove annotation bias or geometric displacement."
+  }
+}

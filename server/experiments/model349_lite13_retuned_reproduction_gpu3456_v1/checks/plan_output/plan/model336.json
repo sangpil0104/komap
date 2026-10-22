@@ -1,0 +1,40 @@
+{
+  "name": "model336",
+  "artifact": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/checks/plan_output/R/model336_hrnet_best/last.pt",
+  "command": [
+    "/home/sppark/miniconda3/envs/komap/bin/python",
+    "-B",
+    "-u",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/source/training/train_route/experiments/model336_hrnet_best/train.py",
+    "--data-root",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/data",
+    "--output-dir",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/checks/plan_output/R/model336_hrnet_best",
+    "--batch-size",
+    "4",
+    "--accumulation-steps",
+    "2",
+    "--epochs",
+    "70",
+    "--samples-per-image",
+    "12",
+    "--lr",
+    "3e-4",
+    "--encoder-lr-mult",
+    "1.0",
+    "--weight-decay",
+    "1e-4",
+    "--boundary-head-weight",
+    "1.0",
+    "--seed",
+    "0",
+    "--val-every",
+    "0"
+  ],
+  "cwd": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/source",
+  "env": {
+    "CUDA_VISIBLE_DEVICES": null,
+    "PYTHONPATH": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/source/training/train_route/experiments:/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/source/training/train_route/experiments/historical_scripts",
+    "OMP_NUM_THREADS": null
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "model": "Model195 with class-balanced reliable-pixel TENT",
+  "adaptation": "per-image BN-affine entropy minimization; for each pseudo-class keep the lowest-entropy fraction and average class losses equally",
+  "steps": 20,
+  "lr": 5e-05,
+  "keep_fraction_per_pseudo_class": 0.75,
+  "patch_size": 768,
+  "stride": 576,
+  "split": "valid",
+  "metrics": {
+    "global_miou": 0.8420827924440457,
+    "global_iou": {
+      "Al3Ni": 0.8016388580807404,
+      "Primary Si": 0.9619328341528833,
+      "Al": 0.9327944508885885,
+      "Eutectic Si": 0.671965026653971
+    },
+    "image_mean_miou": 0.8420827924440457,
+    "image_mean_miou_exclude": 0.8420827924440457,
+    "image_scores": [
+      0.8420827924440457
+    ],
+    "image_scores_exclude": [
+      0.8420827924440457
+    ],
+    "confusion": [
+      [
+        197321,
+        347,
+        8555,
+        4848
+      ],
+      [
+        489,
+        68859,
+        332,
+        1
+      ],
+      [
+        15270,
+        272,
+        640924,
+        12760
+      ],
+      [
+        19317,
+        1284,
+        8988,
+        96683
+      ]
+    ]
+  },
+  "adaptation_history": {
+    "A117_step4_sample2_image": [
+      {
+        "selected_entropy": 0.07495000213384628,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07490911334753036,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.0748540461063385,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.0748026892542839,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07475129514932632,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.07469840347766876,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07465025037527084,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07460789382457733,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.07455813884735107,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07451631873846054,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07447509467601776,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07443350553512573,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07439004629850388,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.0743405744433403,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769473.0
+      },
+      {
+        "selected_entropy": 0.07429969310760498,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07426751405000687,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.07423242926597595,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.07419557869434357,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07416710257530212,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.07412910461425781,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      }
+    ]
+  },
+  "elapsed_seconds": 14.669535398483276
+}

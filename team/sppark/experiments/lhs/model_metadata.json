@@ -1,0 +1,44 @@
+{
+  "model_name": "lhs",
+  "model_created_date": "2026-09-29",
+  "model_date_tag": "0929",
+  "source_repository": "https://github.com/CNUKoMaP/lhs.git",
+  "source_commit": "aa970bef8d16b267c8d7bfbffe3ca1b4c4a4813f",
+  "source_directory": "source",
+  "upstream_clone_directory": "outputs/upstream",
+  "source_files_verified": 862,
+  "training_started": false,
+  "trained_weights_included": false,
+  "primary_metric": "image_miou",
+  "empty_union_policy": "zero",
+  "import_status": "configured_and_validated",
+  "metadata_scope": "initial_setup",
+  "configurations": {
+    "Model326": {
+      "status": "ready_to_train",
+      "config": "configs/model326.json",
+      "launcher": "start_nohup.sh",
+      "folds": 4,
+      "gpu_pool": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "default_training_gpus": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    "Model338": {
+      "status": "runtime_ready_missing_external_artifacts",
+      "config": "configs/model338.json",
+      "missing_artifact_count": 4,
+      "guide": "MISSING_ARTIFACTS.md"
+    }
+  }
+}

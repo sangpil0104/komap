@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "/Data3/sppark/komap/experiments/model364_reproduction_gpu4567_v1/checks/check_export.py", line 34, in <module>
+    np.testing.assert_allclose(mixed, expected)
+  File "/home/sppark/miniconda3/envs/komap/lib/python3.11/site-packages/numpy/testing/_private/utils.py", line 1768, in assert_allclose
+    assert_array_compare(compare, actual, desired, err_msg=str(err_msg),
+  File "/home/sppark/miniconda3/envs/komap/lib/python3.11/site-packages/numpy/testing/_private/utils.py", line 983, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Not equal to tolerance rtol=1e-07, atol=0
+
+Mismatched elements: 3 / 16 (18.8%)
+Mismatch at indices:
+ [1, 0, 0]: 0.039999997708946466 (ACTUAL), 0.04000000283122063 (DESIRED)
+ [2, 0, 0]: 0.039999997708946466 (ACTUAL), 0.04000000283122063 (DESIRED)
+ [3, 0, 0]: 0.039999997708946466 (ACTUAL), 0.04000000283122063 (DESIRED)
+Max absolute difference among violations: 5.12227416e-09
+Max relative difference among violations: 1.28056845e-07
+ ACTUAL: array([[[0.88, 0.25],
+        [0.25, 0.19]],
+...
+ DESIRED: array([[[0.88, 0.25],
+        [0.25, 0.19]],
+...

@@ -1,0 +1,22 @@
+{
+  "decision": "reject_p100_exh14_transfer",
+  "reason": "Independent fresh valid20 PNG scoring fell below both the matched fresh P100 original-route control and the release exh14 baseline.",
+  "metric": "image-wise four-class mean IoU over 20 validation images; empty union=0",
+  "p100_transfer_percent": 79.71915639973314,
+  "p100_original_matched_percent": 79.80778760741404,
+  "transfer_vs_matched_pp": -0.08863120768091148,
+  "release_exh14_percent": 80.23123131980381,
+  "transfer_vs_release_pp": -0.5120749200706709,
+  "historical_p100_cached_percent": 79.90951887388398,
+  "fresh_control_vs_historical_cached_pp": -0.10173126646994035,
+  "historical_reproduction_gap_unresolved": false,
+  "interpretation": "The two fresh configurations use the same executable, P100 checkpoint source, no-TTA implementation, and inputs; the transfer measures 0.0886312 percentage points lower. Historical cached P100 valid probabilities were generated with B4 D4 and HRNet flip4 TTA, while fresh control passed tta=False for both. Thus the fresh control is not a faithful full historical pipeline reproduction; the contribution of TTA to the 0.1017313 point gap is unquantified. Release-vs-P100 difference includes checkpoint differences and cannot be assigned to GPU alone.",
+  "independent_png_gt_scoring": true,
+  "test_used": false,
+  "independent_generalization_verified": false,
+  "base_changed": false,
+  "release_changed": false,
+  "goal_81_percent_achieved": false,
+  "historical_reproduction_configuration_mismatch_verified": true,
+  "historical_reproduction_gap_tta_contribution_unquantified": true
+}

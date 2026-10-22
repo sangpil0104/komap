@@ -1,0 +1,48 @@
+{
+  "model_name": "HRNet_taeho_multigpu",
+  "model_created_date": "2026-09-28",
+  "model_date_tag": "0928",
+  "source_repository": "https://github.com/CNUKoMaP/HRNet_best.git",
+  "source_commit": "97adcdf337ab78fb7ec1469fe48943ff9a6363ea",
+  "source_directory": "source",
+  "import_status": "ready",
+  "training_started": false,
+  "result_directory_convention": "../../results/model_results_0928_<next_unused_number>",
+  "source_branch": "main",
+  "architecture": "UnetPlusPlus",
+  "encoder": "tu-hrnet_w48",
+  "boundary_head": true,
+  "pretrained_segmentation_checkpoint_included": false,
+  "upstream_metric": "global_miou",
+  "project_primary_metric": "image_miou",
+  "empty_union_policy": "one",
+  "imagenet_initialization_prepared": true,
+  "local_environment": "Python 3.11 / torch 2.7.1+cu128; see environment.freeze.txt",
+  "validation_report": "VALIDATION_REPORT.md",
+  "execution_mode": "DDP + SyncBatchNorm",
+  "default_gpu_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "global_batch_size": 8,
+  "local_batch_sizes": [
+    2,
+    2,
+    1,
+    1,
+    1,
+    1
+  ],
+  "sequence": [
+    "baseline",
+    "no_gaussian"
+  ],
+  "tests_passed": 10,
+  "six_gpu_smoke_verified": true,
+  "distributed_loss_equivalence_verified": true,
+  "distributed_evaluation_verified": true
+}

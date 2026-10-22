@@ -1,0 +1,262 @@
+[
+  {
+    "id": "NF00_norm_refine",
+    "contrast": "ZN_combine_Y_gamma0.9_halo16_0.05",
+    "change": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.025
+      }
+    },
+    "forward_transform": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.025
+      }
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 16,
+      "precision": "fp32",
+      "gamma": 0.9,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "NF01_norm_refine",
+    "contrast": "ZN_combine_Y_gamma0.9_halo16_0.05",
+    "change": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.075
+      }
+    },
+    "forward_transform": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.075
+      }
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 16,
+      "precision": "fp32",
+      "gamma": 0.9,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "NF02_norm_refine",
+    "contrast": "ZN_combine_Y_gamma0.9_halo16_0.05",
+    "change": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.125
+      }
+    },
+    "forward_transform": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.125
+      }
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 16,
+      "precision": "fp32",
+      "gamma": 0.9,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "NF03_norm_refine",
+    "contrast": "ZN_combine_Y_gamma0.9_halo16_0.05",
+    "change": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.05,
+        "statistic": "mean"
+      }
+    },
+    "forward_transform": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.05,
+        "statistic": "mean"
+      }
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 16,
+      "precision": "fp32",
+      "gamma": 0.9,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "NF04_norm_refine",
+    "contrast": "ZN_combine_Y_gamma0.9_halo16_0.05",
+    "change": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.05,
+        "statistic": "variance"
+      }
+    },
+    "forward_transform": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.05,
+        "statistic": "variance"
+      }
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 16,
+      "precision": "fp32",
+      "gamma": 0.9,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "NF05_norm_refine",
+    "contrast": "ZN_combine_Y_gamma0.9_halo16_0.05",
+    "change": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.05,
+        "subset": "last"
+      }
+    },
+    "forward_transform": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.05,
+        "subset": "last"
+      }
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 16,
+      "precision": "fp32",
+      "gamma": 0.9,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "NF06_norm_refine",
+    "contrast": "ZN_combine_Y_gamma0.9_halo16_0.05",
+    "change": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.05,
+        "subset": "except_last"
+      }
+    },
+    "forward_transform": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.05,
+        "subset": "except_last"
+      }
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 16,
+      "precision": "fp32",
+      "gamma": 0.9,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  }
+]

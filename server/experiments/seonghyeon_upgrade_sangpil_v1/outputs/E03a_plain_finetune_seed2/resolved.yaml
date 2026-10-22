@@ -1,0 +1,321 @@
+schema_version: 1
+run:
+  name: E03a_plain_finetune
+  seed: 2
+  output_root: outputs
+paths:
+  dataset_root: /Data3/sppark/komap/dataset
+  dataset_manifest: manifests/dataset.jsonl
+  checkpoint_manifest: manifests/checkpoints.jsonl
+  legacy_source: /Data3/sppark/komap/experiments/seonghyeon_seed10_99_v1/outputs/20260926T082111_741695Z/source
+  legacy_checkpoint: /Data3/sppark/komap/experiments/seonghyeon_seed10_99_v1/outputs/20260926T082111_741695Z/seed_32/last.pt
+  encoder_weights: /Data3/sppark/komap/experiments/seonghyeon_seed10_v1/assets/efficientnet_b4_imagenet_encoder.pt
+classes:
+  names:
+  - Al
+  - Al3Ni
+  - PrimarySi
+  - EutecticSi
+  rgb:
+  - - 153
+    - 127
+    - 76
+  - - 25
+    - 76
+    - 153
+  - - 76
+    - 178
+    - 76
+  - - 204
+    - 204
+    - 204
+  ignore_index: 255
+model:
+  family: enhanced_b4_unet
+  encoder_name: efficientnet-b4
+  new_branches:
+    texture: false
+    context: false
+    residual_head: false
+  residual_last_layer_zero_init: true
+  texture_channels:
+  - 16
+  - 32
+  - 64
+  context_channels:
+  - 32
+  - 64
+  - 128
+  - 256
+  fusion_channels:
+  - 64
+  - 32
+  - 16
+  new_module_norm: groupnorm
+  new_module_gn_groups: 8
+geometry:
+  profile: native_roi_v1
+  target_width: 4000
+  detail_input_size: 1536
+  context_input_size: 768
+  context_factor: 2.0
+  align_corners: false
+  antialias: false
+  padding: reflect
+  mask_interpolation: nearest-exact
+  native_side_rounding: half_up
+  scale_jitter_enabled: false
+  legacy_resize_policy: opencv_linear_fx_fy; pad32_reflect; bf16; flip_then_rot90;
+    softmax_fp32; mean_D4; native_area_if_upscaled_else_bilinear
+relative_features:
+  sigma_native_px:
+  - 4.0
+  - 16.0
+  eps_std: 0.01
+  clip_z: 5.0
+  gaussian_truncate: 3.0
+  image_photometric_before_feature: true
+sampling:
+  image_selection: uniform
+  random: 1.0
+  mixed: 0.0
+  hard: 0.0
+  local_window_native_px: 41
+  hard_cache: null
+  allow_train_in_sample_mining: true
+  allow_validation_mining: false
+  missing_hard_policy: random_same_image
+  hard_warmup_updates: 500
+  hard_refresh_updates: 1000
+  hard_mining_d4: false
+training:
+  recipe: finetune_existing
+  initialize_from: /Data3/sppark/komap/experiments/seonghyeon_seed10_v1/outputs/20260926T054632_756879Z/seed_02/last.pt
+  batch_size: 2
+  accumulation: 1
+  total_optimizer_updates: 4000
+  warmup_updates: 300
+  learning_rate: 0.0003
+  weight_decay: 0.01
+  optimizer: AdamW
+  stage_a_updates: 500
+  stage_b_updates: 3500
+  stage_a_new_lr: 0.0003
+  stage_b_encoder_lr: 1.0e-05
+  stage_b_decoder_lr: 3.0e-05
+  stage_b_new_lr: 0.0001
+  stage_b_warmup_updates: 100
+  freeze_bn: false
+  validation_every_updates: 1000
+  checkpoint_every_updates: 1000
+  ema_enabled: false
+  ema_decay: 0.999
+  precision: bf16
+  grad_clip: 1.0
+  workers: 0
+  sample_rng: indexed_seed_step_micro_sample
+  train_ids: null
+  valid_ids: null
+  validation_enabled: true
+  augmentation: native_shared_d4_photo
+  native_blur_noise: false
+  save_results: true
+loss:
+  native_enabled: false
+  native_weight: 0.5
+  native_lovasz_weight: 0.5
+  native_lovasz_per_image: true
+  native_lovasz_classes: present
+  probability_eps: 1.0e-06
+  boundary_enabled: false
+evaluation:
+  primary_metric: image_miou
+  empty_union_policy: one
+  class_reduction: macro_four
+  image_reduction: equal_mean
+  native_resolution: true
+  d4: true
+inference:
+  mode: dual_fov_native_tiles
+  d4: true
+  probability_cache_dtype: float32
+  ensemble_accumulation_dtype: float64
+  temperature: 1.0
+  class_bias:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  native_overlap_fraction: 0.5
+  blend: gaussian
+  blend_weight_floor: 0.001
+ensemble:
+  fixed_member_ids:
+  - seed_00
+  - seed_01
+  - seed_02
+  - seed_03
+  - seed_04
+  - seed_05
+  - seed_06
+  - seed_07
+  - seed_08
+  - seed_09
+  - seed_10
+  - seed_11
+  - seed_12
+  - seed_13
+  - seed_14
+  - seed_15
+  - seed_16
+  - seed_17
+  - seed_18
+  - seed_19
+  - seed_20
+  - seed_21
+  - seed_22
+  - seed_23
+  - seed_24
+  - seed_25
+  - seed_26
+  - seed_27
+  - seed_28
+  - seed_29
+  - seed_30
+  - seed_31
+  - seed_32
+  - seed_33
+  - seed_34
+  - seed_35
+  - seed_36
+  - seed_37
+  - seed_38
+  - seed_39
+  - seed_40
+  - seed_41
+  - seed_42
+  - seed_43
+  - seed_44
+  - seed_45
+  - seed_46
+  - seed_47
+  - seed_48
+  - seed_49
+  - seed_50
+  - seed_51
+  - seed_52
+  - seed_53
+  - seed_54
+  - seed_55
+  - seed_56
+  - seed_57
+  - seed_58
+  - seed_59
+  - seed_60
+  - seed_61
+  - seed_62
+  - seed_63
+  - seed_64
+  - seed_65
+  - seed_66
+  - seed_67
+  - seed_68
+  - seed_69
+  - seed_70
+  - seed_71
+  - seed_72
+  - seed_73
+  - seed_74
+  - seed_75
+  - seed_76
+  - seed_77
+  - seed_78
+  - seed_79
+  - seed_80
+  - seed_81
+  - seed_82
+  - seed_83
+  - seed_84
+  - seed_85
+  - seed_86
+  - seed_87
+  - seed_88
+  - seed_89
+  - seed_90
+  - seed_91
+  - seed_92
+  - seed_93
+  - seed_94
+  - seed_95
+  - seed_96
+  - seed_97
+  - seed_98
+  - seed_99
+  weights: null
+  all_members_required: true
+  cache_root: outputs/probabilities
+  output: outputs/ensemble_uniform
+  selection: predeclared_equal_weight
+  k_curve:
+  - 1
+  - 3
+  - 5
+  - 10
+  - 20
+  - 50
+  - 100
+oof:
+  source_split: train
+  n_folds: 5
+  fold_seed: 2026
+  grouping_policy: image
+  teacher_config: configs/experiments/E02_scratch.yaml
+  teacher_seeds:
+  - 0
+  teacher_fixed_updates: 16000
+  strict_lineage: true
+  root: outputs/oof
+  fold_manifest: manifests/oof_folds.jsonl
+  deployment_teacher_manifest: null
+refiner:
+  input_channels: 8
+  channel_names:
+  - gray
+  - P_Al
+  - P_Al3Ni
+  - P_PrimarySi
+  - P_EutecticSi
+  - relative4
+  - relative16
+  - entropy
+  channels:
+  - 32
+  - 64
+  - 128
+  - 256
+  norm: groupnorm
+  zero_init_last: true
+  probability_eps: 1.0e-06
+  native_crop_size: 512
+  batch_size: 2
+  learning_rate: 0.0001
+  optimizer_updates: 4000
+  training_cache: outputs/oof/train/manifest.jsonl
+  validation_cache: null
+  checkpoint: null
+submission:
+  checkpoint: null
+  output: outputs/submission
+  filename_suffix: _mask.png
+execution:
+  dry_run: false
+  overwrite_existing_outputs: false
+  gpus:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  device: cuda:0
+  cpu_threads: 1

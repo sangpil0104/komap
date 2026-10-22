@@ -1,0 +1,15 @@
+{
+  "hypothesis": "Width-normalized low-pass and unsharp channels provide complementary fine texture cues for HRNet",
+  "arms": [
+    "original_RGB_control",
+    "gray_lowpass_unsharp_texture"
+  ],
+  "input_texture": "gray, Gaussian lowpass sigma=2*native_width/1230, clip(2gray-lowpass); uint8 RGB normalization unchanged",
+  "shared_initial_checkpoint": "/workspace/komap_model1/outputs/model392_widthnorm/seed1/fold1/last.pt",
+  "data": "/workspace/komap_model1/data_model382_seed1_fold1; train split only supervised, held train70 fold1 for evaluation; no official valid/test",
+  "shared_training": "4 epochs; samples/image12; patch512;width normalization;scale2;batch1 accumulate8;FP32;AdamW3e-5 encoder multiplier.2;weight_decay1e-4;CE+Dice+boundary;BN buffers frozen;seed819349;per_item RNG;workers0;last fixed checkpoint",
+  "pilot": "Matched control versus texture on same held fold; no recipe reselection",
+  "followup": "Other folds only if texture improves pilot at least0.1pp without rare-class collapse; pilot not evidence of full score",
+  "resources": "GPU3 idle checks + sibling locks + NVML PID registration; originals preserved",
+  "base_changed": false
+}

@@ -1,0 +1,37 @@
+usage: improve_model6.py [-h] --data-dir DATA_DIR --checkpoint CHECKPOINT
+                         --output-dir OUTPUT_DIR [--eval-only]
+                         [--predict-test] [--tta] [--select-tta] [--staged]
+                         [--freeze-epochs FREEZE_EPOCHS]
+                         [--finetune-epochs FINETUNE_EPOCHS] [--epochs EPOCHS]
+                         [--batch-size BATCH_SIZE] [--image-size IMAGE_SIZE]
+                         [--num-workers NUM_WORKERS] [--encoder-lr ENCODER_LR]
+                         [--decoder-lr DECODER_LR]
+                         [--weight-decay WEIGHT_DECAY] [--patience PATIENCE]
+                         [--seed SEED]
+                         [--loss-mode {standard,weighted,focal,boundary_lovasz}]
+                         [--aug-mode {base,safe_plus}] [--no-amp]
+
+options:
+  -h, --help            show this help message and exit
+  --data-dir DATA_DIR
+  --checkpoint CHECKPOINT
+  --output-dir OUTPUT_DIR
+  --eval-only
+  --predict-test
+  --tta
+  --select-tta
+  --staged
+  --freeze-epochs FREEZE_EPOCHS
+  --finetune-epochs FINETUNE_EPOCHS
+  --epochs EPOCHS
+  --batch-size BATCH_SIZE
+  --image-size IMAGE_SIZE
+  --num-workers NUM_WORKERS
+  --encoder-lr ENCODER_LR
+  --decoder-lr DECODER_LR
+  --weight-decay WEIGHT_DECAY
+  --patience PATIENCE
+  --seed SEED
+  --loss-mode {standard,weighted,focal,boundary_lovasz}
+  --aug-mode {base,safe_plus}
+  --no-amp

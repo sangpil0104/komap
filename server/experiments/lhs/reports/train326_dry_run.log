@@ -1,0 +1,39 @@
+Check train:   0%|          | 0/70 [00:00<?, ?image/s]Check train:   3%|▎         | 2/70 [00:00<00:04, 16.92image/s]Check train:   7%|▋         | 5/70 [00:00<00:03, 20.16image/s]Check train:  11%|█▏        | 8/70 [00:00<00:02, 21.07image/s]Check train:  16%|█▌        | 11/70 [00:00<00:02, 21.32image/s]Check train:  20%|██        | 14/70 [00:00<00:02, 19.66image/s]Check train:  23%|██▎       | 16/70 [00:00<00:02, 18.43image/s]Check train:  26%|██▌       | 18/70 [00:00<00:02, 18.38image/s]Check train:  29%|██▊       | 20/70 [00:01<00:02, 18.70image/s]Check train:  33%|███▎      | 23/70 [00:01<00:02, 19.53image/s]Check train:  37%|███▋      | 26/70 [00:01<00:02, 20.05image/s]Check train:  41%|████▏     | 29/70 [00:01<00:01, 22.48image/s]Check train:  46%|████▌     | 32/70 [00:01<00:01, 22.71image/s]Check train:  50%|█████     | 35/70 [00:01<00:01, 22.98image/s]Check train:  54%|█████▍    | 38/70 [00:01<00:01, 23.05image/s]Check train:  59%|█████▊    | 41/70 [00:01<00:01, 23.33image/s]Check train:  63%|██████▎   | 44/70 [00:02<00:01, 23.33image/s]Check train:  67%|██████▋   | 47/70 [00:02<00:00, 23.40image/s]Check train:  71%|███████▏  | 50/70 [00:02<00:00, 24.32image/s]Check train:  77%|███████▋  | 54/70 [00:02<00:00, 26.83image/s]Check train:  89%|████████▊ | 62/70 [00:02<00:00, 38.33image/s]Check train: 100%|██████████| 70/70 [00:02<00:00, 26.67image/s]
+Check valid:   0%|          | 0/20 [00:00<?, ?image/s]Check valid:  25%|██▌       | 5/20 [00:00<00:00, 45.79image/s]Check valid:  50%|█████     | 10/20 [00:00<00:00, 37.26image/s]Check valid:  75%|███████▌  | 15/20 [00:00<00:00, 42.15image/s]Check valid: 100%|██████████| 20/20 [00:00<00:00, 46.95image/s]
+Check test:   0%|          | 0/10 [00:00<?, ?image/s]Check test: 100%|██████████| 10/10 [00:00<00:00, 1696.93image/s]
+{
+  "training": "DRY RUN: no training",
+  "gpu_pool": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "concurrent_folds": 4,
+  "steps_per_fold": 16000,
+  "batch_per_fold": 2,
+  "folds": [
+    {
+      "fold": 1,
+      "train_images": 52,
+      "oof_images": 18
+    },
+    {
+      "fold": 2,
+      "train_images": 52,
+      "oof_images": 18
+    },
+    {
+      "fold": 3,
+      "train_images": 53,
+      "oof_images": 17
+    },
+    {
+      "fold": 4,
+      "train_images": 53,
+      "oof_images": 17
+    }
+  ]
+}

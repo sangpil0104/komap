@@ -1,0 +1,142 @@
+project: alphase
+experiment: m056_smooth_0p05
+seed: 2026
+data:
+  root: /Data3/sppark/komap/dataset
+  manifest: /Data3/sppark/komap/experiments/accuracy_v1/baseline/data/manifest.csv
+  folds: /Data3/sppark/komap/experiments/accuracy_v1/baseline/data/folds.json
+  classes:
+  - primary_si
+  - al3ni
+  - eutectic_si
+  - al
+  palette:
+  - - 76
+    - 178
+    - 76
+  - - 25
+    - 76
+    - 153
+  - - 204
+    - 204
+    - 204
+  - - 153
+    - 127
+    - 76
+  ignore_index: 255
+  image_channels:
+  - gray
+  - image_zscore
+  - image_cdf
+  pad_multiple: 32
+  image_pad_mode: reflect
+  mask_pad_value: 255
+model:
+  name: hundred_cnn
+  architecture: warm
+  adapter: none
+  variant: 1
+sampling:
+  sample_image_uniformly: true
+  core_sizes:
+  - 512
+  - 768
+  halo: 64
+  mix:
+    uniform: 0.6
+    eutectic_center: 0.25
+    error_or_boundary: 0.15
+augmentation:
+  d4: true
+  scales:
+  - 1.0
+  photometric_probability: 0.0
+  brightness_offset:
+  - -0.04
+  - 0.04
+  contrast_gain:
+  - 0.9
+  - 1.1
+  gamma:
+  - 0.9
+  - 1.1
+  gaussian_noise_std:
+  - 0.0
+  - 0.0
+  strong_blur: false
+  elastic: false
+  mixup: false
+  cutmix: false
+loss:
+  ce: 1.0
+  dice: 0.5
+  lovasz: 0.5
+  per_image: true
+  dice_classes: present
+  lovasz_classes: present
+  class_weights: null
+  auxiliary: 0.0
+  auxiliary_target: area_fraction
+  boundary: 0.0
+  float32_reductions: true
+  label_smoothing: 0.05
+train:
+  optimizer: adamw
+  new_weight_decay: 0.01
+  backbone_weight_decay: 0.05
+  norm_bias_weight_decay: 0.0
+  effective_batch_size: 8
+  micro_batch_size: 1
+  precision: bf16
+  gradient_clip_norm: 1.0
+  ema_decay: 0.99
+  eval_every_updates: 200
+  no_improvement_checks: 0
+  stages:
+  - max_updates: 1200
+    new_lr: 2.0e-06
+    mode: full_frame
+    warmup_updates: 25
+    name: s0_fullframe
+    policy: all
+  num_workers: 2
+  cpu_threads: 4
+  checkpoint_every_updates: 100
+  log_every_updates: 10
+evaluation:
+  primary_metric: image_mean_miou
+  empty_union: exclude
+  report_empty_policies:
+  - exclude
+  - one
+  - zero
+  restore_original_resolution: true
+  compute_on_all_pixels: true
+  validation_tta: false
+inference:
+  mode: full_frame
+  local_core_size: 768
+  halo: 64
+  overlap_fraction: 0.5
+  tile_weight: gaussian
+  d4: false
+  scales:
+  - 1.0
+  probability_dtype: float32
+  refiner_enabled: false
+  class_logit_bias:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  output_mode: RGBA
+hundred:
+  parent: baseline
+  parent_checkpoint: /Data3/sppark/komap/experiments/accuracy_v1/baseline/run/best.pt
+  parent_sha256: 0e5932333e92f76ef8570dc7f2178967db2ec5656ed9d9adbb52380d2b65ab62
+  source_sha256: 14a3d76afa08d1a36ba6ddbca0e8a69de4794b58f60b9d82ee56fce1b53c1f3a
+  hard: false
+  mining_folder: /Data3/sppark/komap/experiments/refinement_v1/outputs/mining
+  group: explore80
+  description: '손실 탐색: smooth_0.05'
+  smoke: false

@@ -1,0 +1,37 @@
+{
+  "model": "Model336 HRNet-W48 + SMP U-Net++",
+  "split": "valid",
+  "images": 17,
+  "class_order": [
+    "Al",
+    "Al3Ni",
+    "Primary_Si",
+    "Eutectic_Si"
+  ],
+  "inference": {
+    "patch_size": 512,
+    "base_input_scale": 2.0,
+    "target_width": 1278,
+    "scale_rule": "base_input_scale * target_width / native image width",
+    "overlap": 170,
+    "overlap_rule": "preserve overlap/native-tile ratio",
+    "tta": "4-way horizontal/vertical flips",
+    "tta_mode": "flip4",
+    "tta_enabled": true,
+    "downsample_antialias": false,
+    "batch_size": 2,
+    "device": "cuda:0"
+  },
+  "per_image_metrics": "/workspace/model349_compress/accuracy81_HR_warmstart_fold4_20261009/original_eval/valid_per_image.csv",
+  "probabilities": "/workspace/model349_compress/accuracy81_HR_warmstart_fold4_20261009/original_eval/valid_probabilities.npz",
+  "image_miou_empty_zero": 0.7888786206608475,
+  "image_miou_empty_skip": 0.7888786206608475,
+  "image_miou_empty_one": 0.7888786206608475,
+  "pooled_global_miou_diagnostic_only": 0.782341522860247,
+  "pooled_global_iou_by_class": {
+    "Al": 0.9235837404277175,
+    "Al3Ni": 0.8136637374558849,
+    "Primary_Si": 0.8274328280350737,
+    "Eutectic_Si": 0.5646857855223119
+  }
+}

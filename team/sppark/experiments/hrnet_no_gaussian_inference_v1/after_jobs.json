@@ -1,0 +1,80 @@
+[
+  {
+    "id": "full_image_allocator_retry",
+    "script": "parallel_expandable.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/full_retry_plan.json",
+      "--batch",
+      "1",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "full_image_allocator_retry.log"
+  },
+  {
+    "id": "learned_boundary_head",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/boundary_head_plan.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "learned_boundary_head.log"
+  },
+  {
+    "id": "core_factors",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/core_factor_plan.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "core_factors.log"
+  },
+  {
+    "id": "resampling",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/resampling_plan.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "resampling.log"
+  },
+  {
+    "id": "fine_scale",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/fine_scale_plan.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "fine_scale.log"
+  },
+  {
+    "id": "illumination",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/illumination_plan.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "illumination.log"
+  }
+]

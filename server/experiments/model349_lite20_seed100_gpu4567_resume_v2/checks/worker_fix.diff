@@ -1,0 +1,16 @@
+--- original/worker.py
++++ resume_v2/worker.py
+@@ -18,9 +18,11 @@
+     return [sys.executable,'-B','-u',*argv]
+ 
+ def call(command,attempt,name):
++    # Persist exactly the string argv subprocess receives (Paths and fold IDs).
++    command=list(map(str,command))
+     write_json(attempt/(name+'_command.json'),command)
+-    print('COMMAND:',' '.join(map(str,command)),flush=True)
+-    subprocess.run(list(map(str,command)),check=True,cwd=attempt,env=environment(ROOT))
++    print('COMMAND:',' '.join(command),flush=True)
++    subprocess.run(command,check=True,cwd=attempt,env=environment(ROOT))
+ 
+ def expert_view(destination,weights):
+     destination.mkdir()

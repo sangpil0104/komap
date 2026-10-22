@@ -1,0 +1,59 @@
+[
+  {
+    "id": "fresh_reproduction_EN",
+    "script": "parallel_reproduce_expandable.py",
+    "args": [
+      "--id",
+      "EN_norm0.1_weight0.5"
+    ],
+    "log": "fresh_reproduction_EN.log"
+  },
+  {
+    "id": "fresh_reproduction_ZN",
+    "script": "parallel_reproduce_expandable.py",
+    "args": [
+      "--id",
+      "ZN_combine_Y_gamma0.9_halo16_0.05"
+    ],
+    "log": "fresh_reproduction_ZN.log"
+  },
+  {
+    "id": "normalization_refinement",
+    "script": "parallel_expandable.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/normalization_refine_plan.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "normalization_refinement.log"
+  },
+  {
+    "id": "full_norm_phase",
+    "script": "parallel_expandable.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/full_norm_phase_plan.json",
+      "--batch",
+      "1",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "full_norm_phase.log"
+  },
+  {
+    "id": "model_phase_parity",
+    "script": "parallel_expandable.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/model_phase_parity_plan.json",
+      "--batch",
+      "1",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "model_phase_parity.log"
+  }
+]

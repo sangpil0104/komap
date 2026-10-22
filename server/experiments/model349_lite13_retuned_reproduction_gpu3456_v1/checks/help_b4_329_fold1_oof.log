@@ -1,0 +1,18 @@
+usage: predict.py [-h] [--data DATA] [--split SPLIT] --runs RUNS [RUNS ...]
+                  --out OUT [--no_tta] [--device DEVICE] [--weights WEIGHTS]
+                  [--scales SCALES] [--save_probs]
+
+options:
+  -h, --help            show this help message and exit
+  --data DATA
+  --split SPLIT
+  --runs RUNS [RUNS ...]
+                        run dirs containing args.json and last.pt
+  --out OUT
+  --no_tta
+  --device DEVICE
+  --weights WEIGHTS     last.pt or ema.pt
+  --scales SCALES       multi-scale TTA, e.g. 0.9,1,1.1 (multiplies each run's
+                        scale)
+  --save_probs          save per-image class probabilities to
+                        probabilities.npz

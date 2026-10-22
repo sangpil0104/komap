@@ -1,0 +1,361 @@
+# Python/shell source 전체 목록
+
+보관 source: **326개** (Python 275개, shell 51개).
+
+이 목록은 2026-09-30 실험 작업공간 source 감사 후 추가된 tracked 코드 39개와 2026-10-02 valid/test 원본 영상 유사도 감사 코드를 포함한다. 여러 모델 번호가 route/configuration 변형으로 같은 구현을 공유한다. 번호와 실험의 연결은 [전체 결과 기록](../docs/model_results.md)을 확인한다. 데이터, checkpoint, probability cache는 의도적으로 제외했다.
+
+## Historical experiment and helper scripts
+
+- `experiments/historical_scripts/a71_area_search.py`
+- `experiments/historical_scripts/absent_policy_audit.py`
+- `experiments/historical_scripts/adabn_domain_adapt.py`
+- `experiments/historical_scripts/adaptive_prior_grid.py`
+- `experiments/historical_scripts/adaptive_route_search.py`
+- `experiments/historical_scripts/advanced_inference.py`
+- `experiments/historical_scripts/advanced_predict.py`
+- `experiments/historical_scripts/advanced_single_sweep.py`
+- `experiments/historical_scripts/al3ni_hard_addition.py`
+- `experiments/historical_scripts/al_refiner.py`
+- `experiments/historical_scripts/area_postprocess_search.py`
+- `experiments/historical_scripts/aspp768_addition.py`
+- `experiments/historical_scripts/aspp768_class_search.py`
+- `experiments/historical_scripts/aspp_boundary_finetune.py`
+- `experiments/historical_scripts/audit_current.py`
+- `experiments/historical_scripts/audit_model139.py`
+- `experiments/historical_scripts/audit_model162.py`
+- `experiments/historical_scripts/audit_model197_per_image.py`
+- `experiments/historical_scripts/bias_search_current.py`
+- `experiments/historical_scripts/boundary_finetune.py`
+- `experiments/historical_scripts/boundary_source_search.py`
+- `experiments/historical_scripts/calibrate_al.py`
+- `experiments/historical_scripts/calibration_search_768.py`
+- `experiments/historical_scripts/class_bias_search.py`
+- `experiments/historical_scripts/component_postprocess_search.py`
+- `experiments/historical_scripts/conditional_beta_search.py`
+- `experiments/historical_scripts/conditional_threshold_search.py`
+- `experiments/historical_scripts/corrected_mapping_search.py`
+- `experiments/historical_scripts/current_aspp_ensemble.py`
+- `experiments/historical_scripts/deep_supervision_aspp.py`
+- `experiments/historical_scripts/dense_overlap_search.py`
+- `experiments/historical_scripts/distill_branch_search.py`
+- `experiments/historical_scripts/distill_teacher_student.py`
+- `experiments/historical_scripts/domain_tent_search.py`
+- `experiments/historical_scripts/encoder_structure_search.py`
+- `experiments/historical_scripts/ensemble_calibrate.py`
+- `experiments/historical_scripts/ensemble_model6.py`
+- `experiments/historical_scripts/ensemble_refinements.py`
+- `experiments/historical_scripts/ensemble_with_aspp.py`
+- `experiments/historical_scripts/eutectic_route_search.py`
+- `experiments/historical_scripts/evaluate_corrected_ensemble.py`
+- `experiments/historical_scripts/export_model326_error_maps.py`
+- `experiments/historical_scripts/export_representation_probs.py`
+- `experiments/historical_scripts/final_calibration_fine.py`
+- `experiments/historical_scripts/fine_class_weight_search.py`
+- `experiments/historical_scripts/finetuned_aspp_addition.py`
+- `experiments/historical_scripts/fusion_mode_search.py`
+- `experiments/historical_scripts/generate_adaptive_prior_test.py`
+- `experiments/historical_scripts/generate_aspp768_test.py`
+- `experiments/historical_scripts/generate_model117_robust.py`
+- `experiments/historical_scripts/generate_pairwise_test.py`
+- `experiments/historical_scripts/generate_restart_masks.py`
+- `experiments/historical_scripts/generate_style_pair_route_test.py`
+- `experiments/historical_scripts/generate_style_test.py`
+- `experiments/historical_scripts/generate_tent_pair_route_test.py`
+- `experiments/historical_scripts/generate_tent_style_test.py`
+- `experiments/historical_scripts/generate_valid_error_audit.py`
+- `experiments/historical_scripts/global_calibration_refine.py`
+- `experiments/historical_scripts/global_class_search.py`
+- `experiments/historical_scripts/global_morphology_refine.py`
+- `experiments/historical_scripts/global_tent_search.py`
+- `experiments/historical_scripts/group_clean_calibration.py`
+- `experiments/historical_scripts/hard_case_route_search.py`
+- `experiments/historical_scripts/hard_case_transfer.py`
+- `experiments/historical_scripts/hard_negative_finetune.py`
+- `experiments/historical_scripts/hard_source_combo_validate.py`
+- `experiments/historical_scripts/hard_source_search.py`
+- `experiments/historical_scripts/high_source_search.py`
+- `experiments/historical_scripts/highres1024_search.py`
+- `experiments/historical_scripts/highres_al3ni_addition.py`
+- `experiments/historical_scripts/highres_finetune.py`
+- `experiments/historical_scripts/improve_five_causes.py`
+- `experiments/historical_scripts/improve_model6.py`
+- `experiments/historical_scripts/intensity_prior_sweep.py`
+- `experiments/historical_scripts/joint_route_search.py`
+- `experiments/historical_scripts/make_grouped_protocol.py`
+- `experiments/historical_scripts/mask_ensemble_search.py`
+- `experiments/historical_scripts/model178_tta_mode_search.py`
+- `experiments/historical_scripts/model179_specimen_prior_search.py`
+- `experiments/historical_scripts/model180_spatial_refine.py`
+- `experiments/historical_scripts/model181_raw_zcdf_aspp.py`
+- `experiments/historical_scripts/model182_zcdf_blend.py`
+- `experiments/historical_scripts/model183_metric_calibration.py`
+- `experiments/historical_scripts/model184_edge_refine.py`
+- `experiments/historical_scripts/model185_class_edge_refine.py`
+- `experiments/historical_scripts/model187_schedule_branch_blend.py`
+- `experiments/historical_scripts/model188_gamma_refine.py`
+- `experiments/historical_scripts/model189_branch_calibration.py`
+- `experiments/historical_scripts/model190_prior_refine.py`
+- `experiments/historical_scripts/model191_rare_branch_blend.py`
+- `experiments/historical_scripts/model194_multistage_team_schedule.py`
+- `experiments/historical_scripts/model197_native_narrow_blend.py`
+- `experiments/historical_scripts/model198_a71_primary_suppression.py`
+- `experiments/historical_scripts/model198_branch_fusion_search.py`
+- `experiments/historical_scripts/model198_fast_branch_search.py`
+- `experiments/historical_scripts/model1_unet_resnet34.py`
+- `experiments/historical_scripts/model201_gradient_representation.py`
+- `experiments/historical_scripts/model202_texture_blend_search.py`
+- `experiments/historical_scripts/model203_conditional_calibration.py`
+- `experiments/historical_scripts/model207_imagewise_iou_finetune.py`
+- `experiments/historical_scripts/model209_rare_boundary_finetune.py`
+- `experiments/historical_scripts/model211_test_time_distill.py`
+- `experiments/historical_scripts/model213_depth3_route_tree.py`
+- `experiments/historical_scripts/model214_rare_branch_probe.py`
+- `experiments/historical_scripts/model215_rich_feature_route.py`
+- `experiments/historical_scripts/model216_pixel_refiner_native.py`
+- `experiments/historical_scripts/model217_native_tent.py`
+- `experiments/historical_scripts/model219_tent_branch_fusion.py`
+- `experiments/historical_scripts/model227_tent_probability_soup.py`
+- `experiments/historical_scripts/model229_global_tent.py`
+- `experiments/historical_scripts/model230_global_adabn.py`
+- `experiments/historical_scripts/model231_d4_tent.py`
+- `experiments/historical_scripts/model232_d4_marginal_tent.py`
+- `experiments/historical_scripts/model235_native_branch_probe.py`
+- `experiments/historical_scripts/model236_matssl_inspired_ssl.py`
+- `experiments/historical_scripts/model237_transfer_ssl_encoder.py`
+- `experiments/historical_scripts/model238_matssl_branch_probe.py`
+- `experiments/historical_scripts/model239_native_stem_finetune.py`
+- `experiments/historical_scripts/model240_native_stem_branch_probe.py`
+- `experiments/historical_scripts/model241_classwise_stem_tent_probe.py`
+- `experiments/historical_scripts/model242_ema_continuation.py`
+- `experiments/historical_scripts/model243_classwise_ema_tent_probe.py`
+- `experiments/historical_scripts/model244_supervised_distillation.py`
+- `experiments/historical_scripts/model245_classwise_distill_tent_probe.py`
+- `experiments/historical_scripts/model246_grouped_route_cv.py`
+- `experiments/historical_scripts/model248_best_route_error_audit.py`
+- `experiments/historical_scripts/model249_eutectic_cldice_finetune.py`
+- `experiments/historical_scripts/model250_cldice_branch_probe.py`
+- `experiments/historical_scripts/model252_cldice_calibration_search.py`
+- `experiments/historical_scripts/model253_highres_scale_finetune.py`
+- `experiments/historical_scripts/model254_highres_route_probe.py`
+- `experiments/historical_scripts/model258_fullstats_route_probe.py`
+- `experiments/historical_scripts/model262_seed_ensemble_probe.py`
+- `experiments/historical_scripts/model271_confidence_gated_highres.py`
+- `experiments/historical_scripts/model287_region_oracle_diagnostic.py`
+- `experiments/historical_scripts/model288_region_classifier_cv.py`
+- `experiments/historical_scripts/model290_scale_oracle_vs_null.py`
+- `experiments/historical_scripts/model291_hierarchical_heads.py`
+- `experiments/historical_scripts/model292_cross_specimen_component_copy.py`
+- `experiments/historical_scripts/model293_train_fitted_region_corrector.py`
+- `experiments/historical_scripts/model294_decoder_region_probe.py`
+- `experiments/historical_scripts/model295_within_image_anchor_diagnostic.py`
+- `experiments/historical_scripts/model296_region_train_valid_shift_audit.py`
+- `experiments/historical_scripts/model297_train_only_oof_branch.py`
+- `experiments/historical_scripts/model298_oof_region_corrector.py`
+- `experiments/historical_scripts/model300_rotation_consistency_pilot.py`
+- `experiments/historical_scripts/model301_boundary_enhanced_finetune.py`
+- `experiments/historical_scripts/model302_boundary_oof_finetune.py`
+- `experiments/historical_scripts/model307_expected_iou_decoder.py`
+- `experiments/historical_scripts/model308_dinov2_dense_fusion_oof.py`
+- `experiments/historical_scripts/model310_dinov2_1024_scale_probe.py`
+- `experiments/historical_scripts/model311_eutectic_oof_hard_mining.py`
+- `experiments/historical_scripts/model315_model257_whole_image.py`
+- `experiments/historical_scripts/model316_reliable_pixel_tent.py`
+- `experiments/historical_scripts/model320_global_context_gate.py`
+- `experiments/historical_scripts/model322_fold1_oof_audit.py`
+- `experiments/historical_scripts/model323_model270_branch_route_probe.py`
+- `experiments/historical_scripts/model324_gap_oracle_audit.py`
+- `experiments/historical_scripts/model325_model270_error_audit.py`
+- `experiments/historical_scripts/model330_train_prior_correction.py`
+- `experiments/historical_scripts/model332_eutectic_oof_error_geometry.py`
+- `experiments/historical_scripts/model335_exhaustive_b4_route_search.py`
+- `experiments/historical_scripts/model337_hrnet_model270_routes.py`
+- `experiments/historical_scripts/model338_fine_gamma_route_search.py`
+- `experiments/historical_scripts/morphology_search.py`
+- `experiments/historical_scripts/multi_style_search.py`
+- `experiments/historical_scripts/narrow_eutectic_search.py`
+- `experiments/historical_scripts/oof_hard_negative.py`
+- `experiments/historical_scripts/overlap_stride_search.py`
+- `experiments/historical_scripts/pairwise_addition.py`
+- `experiments/historical_scripts/pairwise_margin_finetune.py`
+- `experiments/historical_scripts/per_image_bias_oracle.py`
+- `experiments/historical_scripts/pixel_refiner_768.py`
+- `experiments/historical_scripts/prior_representation_search.py`
+- `experiments/historical_scripts/prior_route_beta_search.py`
+- `experiments/historical_scripts/probability_postprocess.py`
+- `experiments/historical_scripts/pseudo_domain_adapt_search.py`
+- `experiments/historical_scripts/recompute_miou_policy.py`
+- `experiments/historical_scripts/recompute_miou_recorded_results.py`
+- `experiments/historical_scripts/rect_context_finetune.py`
+- `experiments/historical_scripts/research_model6.py`
+- `experiments/historical_scripts/resnet34_refinements.py`
+- `experiments/historical_scripts/restart_audit.py`
+- `experiments/historical_scripts/restart_ensemble.py`
+- `experiments/historical_scripts/route_small_search.py`
+- `experiments/historical_scripts/route_upper_bound.py`
+- `experiments/historical_scripts/route_weight_search.py`
+- `experiments/historical_scripts/scse_addition.py`
+- `experiments/historical_scripts/seed456_addition.py`
+- `experiments/historical_scripts/soft_boundary_clahe.py`
+- `experiments/historical_scripts/style_pair_route_search.py`
+- `experiments/historical_scripts/style_tta_search.py`
+- `experiments/historical_scripts/tent_adaptive_prior_search.py`
+- `experiments/historical_scripts/tent_consistency_search.py`
+- `experiments/historical_scripts/tent_dual_domain_search.py`
+- `experiments/historical_scripts/tent_dynamic_bias_search.py`
+- `experiments/historical_scripts/tent_dynamic_pair_search.py`
+- `experiments/historical_scripts/tent_dynamic_weight_search.py`
+- `experiments/historical_scripts/tent_hyper_search.py`
+- `experiments/historical_scripts/tent_pair_route_search.py`
+- `experiments/historical_scripts/tent_postprocess_search.py`
+- `experiments/historical_scripts/tent_route_criterion_search.py`
+- `experiments/historical_scripts/tent_spatial_smoothing_search.py`
+- `experiments/historical_scripts/tent_style_search.py`
+- `experiments/historical_scripts/three_ensemble.py`
+- `experiments/historical_scripts/train_models_2_to_6.py`
+- `experiments/historical_scripts/train_models_72_74.py`
+- `experiments/historical_scripts/train_stronger_models.py`
+- `experiments/historical_scripts/visual_audit.py`
+- `experiments/historical_scripts/zchannel_finetune.py`
+
+## Model322 EfficientNet-B4 code
+
+- `experiments/model322_team_b4/KoMaP/aggregate_oof.py`
+- `experiments/model322_team_b4/KoMaP/baseline_otsu.py`
+- `experiments/model322_team_b4/KoMaP/common.py`
+- `experiments/model322_team_b4/KoMaP/compare_green.py`
+- `experiments/model322_team_b4/KoMaP/evaluate_group_cv.py`
+- `experiments/model322_team_b4/KoMaP/predict.py`
+- `experiments/model322_team_b4/KoMaP/prepare_group_cv.py`
+- `experiments/model322_team_b4/KoMaP/queue_group_cv.sh`
+- `experiments/model322_team_b4/KoMaP/queue_round1.sh`
+- `experiments/model322_team_b4/KoMaP/queue_round2.sh`
+- `experiments/model322_team_b4/KoMaP/queue_round3.sh`
+- `experiments/model322_team_b4/KoMaP/queue_round3b.sh`
+- `experiments/model322_team_b4/KoMaP/queue_round4.sh`
+- `experiments/model322_team_b4/KoMaP/queue_round5.sh`
+- `experiments/model322_team_b4/KoMaP/queue_round6.sh`
+- `experiments/model322_team_b4/KoMaP/queue_round7.sh`
+- `experiments/model322_team_b4/KoMaP/queue_round7b.sh`
+- `experiments/model322_team_b4/KoMaP/recalib_bn.py`
+- `experiments/model322_team_b4/KoMaP/run_group_cv.sh`
+- `experiments/model322_team_b4/KoMaP/run_seeds.sh`
+- `experiments/model322_team_b4/KoMaP/summarize.py`
+- `experiments/model322_team_b4/KoMaP/train.py`
+
+## Model326/329/333 full-stat code
+
+- `experiments/model326_hybrid_fullstats/KoMaP/aggregate_oof.py`
+- `experiments/model326_hybrid_fullstats/KoMaP/common.py`
+- `experiments/model326_hybrid_fullstats/KoMaP/evaluate_group_cv.py`
+- `experiments/model326_hybrid_fullstats/KoMaP/imagewise_lovasz.py`
+- `experiments/model326_hybrid_fullstats/KoMaP/predict.py`
+- `experiments/model326_hybrid_fullstats/KoMaP/prepare_group_cv.py`
+- `experiments/model326_hybrid_fullstats/KoMaP/train.py`
+
+## Standalone audit and route-search modules
+
+- `experiments/model333_partial_oof_audit.py`
+- `experiments/model339_grouped_cv_parent_audit.py`
+- `experiments/model339_joint_gamma_route_search.py`
+- `experiments/model340_partial_oof_metric_audit.py`
+- `experiments/model341_model329_joint_route_search.py`
+- `experiments/model342_oof_fitted_b4_blend.py`
+- `experiments/model343_model342_into_341_route.py`
+- `experiments/model344_model333_control_blend_search.py`
+- `experiments/model345_model344_into_341_route.py`
+- `experiments/model346_model336_into_341_route.py`
+- `experiments/model350_model346_fine_gamma.py`
+
+## Model336/347 HRNet entrypoints
+
+- `experiments/model336_hrnet_best/evaluate_image_mean.py`
+- `experiments/model336_hrnet_best/predict.py`
+- `experiments/model336_hrnet_best/queue_model336_after333.sh`
+- `experiments/model336_hrnet_best/train.py`
+
+## Model336/347 HRNet package modules
+
+- `experiments/model336_hrnet_best/komap_seg/__init__.py`
+- `experiments/model336_hrnet_best/komap_seg/checkpoint.py`
+- `experiments/model336_hrnet_best/komap_seg/dataset.py`
+- `experiments/model336_hrnet_best/komap_seg/inference.py`
+- `experiments/model336_hrnet_best/komap_seg/losses.py`
+- `experiments/model336_hrnet_best/komap_seg/metrics.py`
+- `experiments/model336_hrnet_best/komap_seg/model.py`
+- `experiments/model336_hrnet_best/komap_seg/palette.py`
+
+## Recovered legacy runners
+
+- `experiments/runners/legacy/queue_model326_after325.sh`
+- `experiments/runners/legacy/run_effv2_recovery.sh`
+- `experiments/runners/legacy/run_model326_metric_aligned_group_oof.sh`
+- `experiments/runners/legacy/run_stronger_sequence.sh`
+
+## Current/recent experiment runners
+
+- `experiments/runners/queue_model328_after326.sh`
+- `experiments/runners/queue_model333_after328.sh`
+- `experiments/runners/queue_model341_after329.sh`
+- `experiments/runners/queue_model342_after341.sh`
+- `experiments/runners/queue_model346_after336_and345.sh`
+- `experiments/runners/queue_model347_weighted_hrnet_after346.sh`
+- `experiments/runners/queue_model348_weighted_hrnet_route_after347.sh`
+- `experiments/runners/queue_model349_after348.sh`
+- `experiments/runners/queue_model350_after349.sh`
+- `experiments/runners/queue_model351_d4_tta_after_headroom.sh`
+- `experiments/runners/queue_model352_d4_hrnet_route_after350.sh`
+- `experiments/runners/queue_model353_d4_into_349.sh`
+- `experiments/runners/run_model325_team_b4_fusion_after322.sh`
+- `experiments/runners/run_model326_hybrid_fullstats_group_oof.sh`
+- `experiments/runners/run_model328_width4000_uniform_group_oof.sh`
+- `experiments/runners/run_model329_hybrid_width4000_uniform_group_oof.sh`
+- `experiments/runners/run_model333_b4_lovasz_group_oof.sh`
+- `experiments/runners/run_model343_model342_into_341_route.sh`
+- `experiments/runners/run_model344_model333_control_blend.sh`
+- `experiments/runners/run_model345_model344_into_341_route.sh`
+
+## 2026-10-02 추가된 분석 코드
+
+- `experiments/valid_test_group_similarity_audit.py`
+
+## 2026-09-30 이후 추가된 tracked source
+
+- `experiments/build_model183_entries.py`
+- `experiments/model354_model349_bias_audit.py`
+- `experiments/model355_model349_spatial_audit.py`
+- `experiments/model358_model355_cleanup_audit.py`
+- `experiments/model359_hrnet_tta_swap_into_355.py`
+- `experiments/model360_boundary_tolerance_audit.py`
+- `experiments/model360_entropy_gated_d4_into_355.py`
+- `experiments/model363_model361_into_360_fixed.py`
+- `experiments/model364_model361_entropy_into_360.py`
+- `experiments/model368_model329_oof_class_boundary_geometry.py`
+- `experiments/model369_boundary_source_distribution_audit.py`
+- `experiments/model370_eutectic_component_separability_audit.py`
+- `experiments/model371_eutectic_context_feature_audit.py`
+- `experiments/model372_antialias_paired_compare.py`
+- `experiments/model374_aggregate_hrnet_oof.py`
+- `experiments/model374_fold1_futility_gate.py`
+- `experiments/model374_intensity_anchor_screen.py`
+- `experiments/model374_oof_pair_audit.py`
+- `experiments/model374_phase_pair_component_audit.py`
+- `experiments/model374_pred_boundary_oof_audit.py`
+- `experiments/model375_hrnet_b4_oof_blend.py`
+- `experiments/model376_bagged_hrnet_one_shot_eval.py`
+- `experiments/model376_bagged_hrnet_predict_only.py`
+- `experiments/model377_hrnet_seed_bagging_one_shot_eval.py`
+- `experiments/model377_hrnet_seed_bagging_predict_only.py`
+- `experiments/run_model349_pipeline.sh`
+- `experiments/runners/queue_model362_after361.sh`
+- `experiments/runners/queue_model363_after362.sh`
+- `experiments/runners/queue_model364_after363.sh`
+- `experiments/runners/queue_model365_model361_d4_after364.sh`
+- `experiments/runners/queue_model366_model361_d4_gate_after365.sh`
+- `experiments/runners/queue_model372_scale3_antialias_after366.sh`
+- `experiments/runners/queue_model373_antialias_route_after372.sh`
+- `experiments/runners/recover_model361_valid_overlap85.sh`
+- `experiments/runners/run_model360_boundary_tolerance_audit.sh`
+- `experiments/runners/run_model361_scale3_hrnet_finetune.sh`
+- `experiments/runners/run_model374_hrnet_group_oof.sh`
+- `experiments/runners/run_model377_hrnet_full_train_seeds.sh`
+- `experiments/setup_model349_environment.sh`

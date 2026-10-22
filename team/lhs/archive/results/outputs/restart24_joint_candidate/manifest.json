@@ -1,0 +1,78 @@
+{
+  "params": {
+    "data_dir": "/workspace/komap_model1/data",
+    "old_checkpoint": "/workspace/komap_model1/outputs/restart08_highres640/best.pt",
+    "new_checkpoint": "/workspace/komap_model1/outputs/restart19_al3ni_weighted/best.pt",
+    "output_dir": "/workspace/komap_model1/outputs/restart24_joint_candidate",
+    "model_weight": 0.6,
+    "alpha": 0.07,
+    "eutectic_scale": 1.0,
+    "al_bias": 0.1,
+    "eutectic_bias": -0.5,
+    "no_amp": false
+  },
+  "metrics": {
+    "global_miou": 0.7947278271750159,
+    "global_iou": {
+      "Al3Ni": 0.7742216190915907,
+      "Primary Si": 0.8808321527385966,
+      "Al": 0.9345444477280255,
+      "Eutectic Si": 0.5893130891418507
+    },
+    "image_mean_miou": 0.7628435192034543,
+    "image_scores": [
+      0.8511425650227928,
+      0.670872024450882,
+      0.7143091313110566,
+      0.7691804908608487,
+      0.6934088114493241,
+      0.8466808733721851,
+      0.7745654898437093,
+      0.7700460808703953,
+      0.8121583410002008,
+      0.8009439757169632,
+      0.8163136246077596,
+      0.8808672702559959,
+      0.7976806121323149,
+      0.8050468858827993,
+      0.8025995486509322,
+      0.7312133512332414,
+      0.3730375249540132,
+      0.8526456571232324,
+      0.7145458545753837,
+      0.7796122707550549
+    ],
+    "confusion": [
+      [
+        2924489,
+        23539,
+        152206,
+        233452
+      ],
+      [
+        24165,
+        1494049,
+        20119,
+        64020
+      ],
+      [
+        282268,
+        20749,
+        9221408,
+        90411
+      ],
+      [
+        137209,
+        49538,
+        80115,
+        939523
+      ]
+    ]
+  },
+  "class_order": [
+    "Al3Ni",
+    "Primary Si",
+    "Al",
+    "Eutectic Si"
+  ]
+}

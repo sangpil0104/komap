@@ -1,0 +1,51 @@
+HRNet inference:   0%|          | 0/20 [00:00<?, ?it/s]A117_step4_sample2: image mIoU zero=0.870088, skip=0.870088
+A11_step1_sample4: image mIoU zero=0.693085, skip=0.693085
+A11_step2_sample4: image mIoU zero=0.778801, skip=0.778801
+HRNet inference:  15%|█▌        | 3/20 [00:18<01:46,  6.27s/it]A125_step1_sample4: image mIoU zero=0.792250, skip=0.792250
+HRNet inference:  15%|█▌        | 3/20 [00:30<01:46,  6.27s/it]A153_step3_sample3: image mIoU zero=0.726177, skip=0.726177
+A170_step4_sample3: image mIoU zero=0.881170, skip=0.881170
+HRNet inference:  30%|███       | 6/20 [00:37<01:27,  6.27s/it]A181_step1_sample1: image mIoU zero=0.776285, skip=0.776285
+HRNet inference:  30%|███       | 6/20 [00:50<01:27,  6.27s/it]A186_step2_sample2: image mIoU zero=0.828718, skip=0.828718
+A191_step4_sample3: image mIoU zero=0.827338, skip=0.827338
+HRNet inference:  45%|████▌     | 9/20 [00:56<01:09,  6.35s/it]A40_step3_sample3: image mIoU zero=0.826506, skip=0.826506
+A42_step2_sample4: image mIoU zero=0.812209, skip=0.812209
+HRNet inference:  45%|████▌     | 9/20 [01:10<01:09,  6.35s/it]A44_step4_sample3: image mIoU zero=0.893484, skip=0.893484
+HRNet inference:  60%|██████    | 12/20 [01:16<00:50,  6.37s/it]A55_step2_sample1: image mIoU zero=0.819403, skip=0.819403
+A59_step3_sample1: image mIoU zero=0.826819, skip=0.826819
+HRNet inference:  60%|██████    | 12/20 [01:30<00:50,  6.37s/it]A63_step1_sample4: image mIoU zero=0.834246, skip=0.834246
+HRNet inference:  75%|███████▌  | 15/20 [01:34<00:31,  6.31s/it]A67_step1_sample1: image mIoU zero=0.763847, skip=0.763847
+A71_step2_sample1: image mIoU zero=0.367035, skip=0.367035
+HRNet inference:  75%|███████▌  | 15/20 [01:50<00:31,  6.31s/it]A72_step4_sample4: image mIoU zero=0.852872, skip=0.852872
+HRNet inference:  90%|█████████ | 18/20 [01:53<00:12,  6.26s/it]A74_step3_sample4: image mIoU zero=0.683198, skip=0.683198
+A7_step1_sample4: image mIoU zero=0.777079, skip=0.777079
+HRNet inference: 100%|██████████| 20/20 [02:05<00:00,  6.29s/it]
+{
+  "model": "Model336 HRNet-W48 + SMP U-Net++",
+  "split": "valid",
+  "images": 20,
+  "class_order": [
+    "Al",
+    "Al3Ni",
+    "Primary_Si",
+    "Eutectic_Si"
+  ],
+  "inference": {
+    "patch_size": 512,
+    "base_input_scale": 2.0,
+    "target_width": 1278,
+    "scale_rule": "base_input_scale * target_width / native image width",
+    "overlap": 170,
+    "overlap_rule": "preserve overlap/native-tile ratio",
+    "tta": "4-way horizontal/vertical flips",
+    "tta_mode": "flip4",
+    "tta_enabled": true,
+    "downsample_antialias": false,
+    "batch_size": 2,
+    "device": "cuda:0"
+  },
+  "per_image_metrics": "/Data3/sppark/komap/experiments/lhs_349_397_gpu4567_v1/model397/outputs/run_20261006T050601_265645Z/valid/hr_s1_f4/valid_per_image.csv",
+  "probabilities": "/Data3/sppark/komap/experiments/lhs_349_397_gpu4567_v1/model397/outputs/run_20261006T050601_265645Z/valid/hr_s1_f4/valid_probabilities.npz",
+  "image_miou_empty_zero": 0.78153051241062,
+  "image_miou_empty_skip": 0.78153051241062,
+  "image_miou_empty_one": 0.78153051241062
+}

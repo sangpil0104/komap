@@ -1,0 +1,23 @@
+{
+  "model": "Model336 HRNet-W48 + SMP U-Net++",
+  "split": "valid",
+  "images": 20,
+  "class_order": [
+    "Al",
+    "Al3Ni",
+    "Primary_Si",
+    "Eutectic_Si"
+  ],
+  "inference": {
+    "patch_size": 512,
+    "input_scale": 2.0,
+    "overlap": 170,
+    "tta": "8-way dihedral rotations and flips",
+    "downsample_antialias": false
+  },
+  "per_image_metrics": "/Data3/sppark/komap/experiments/model364_reproduction_gpu4567_v1/outputs/runs/model364_train_20261006T075724_689269Z/outputs/model351_model336_d4_tta/valid_eval_d4/valid_per_image.csv",
+  "probabilities": "/Data3/sppark/komap/experiments/model364_reproduction_gpu4567_v1/outputs/runs/model364_train_20261006T075724_689269Z/outputs/model351_model336_d4_tta/valid_eval_d4/valid_probabilities.npz",
+  "image_miou_empty_zero": 0.7862254209081555,
+  "image_miou_empty_skip": 0.7862254209081555,
+  "image_miou_empty_one": 0.7862254209081555
+}

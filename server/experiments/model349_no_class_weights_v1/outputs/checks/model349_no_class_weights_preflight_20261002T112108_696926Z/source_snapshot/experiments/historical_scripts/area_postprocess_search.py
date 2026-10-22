@@ -1,0 +1,132 @@
+#!/usr/bin/env python3
+"""Search label-free class-area suppression on the current best route."""
+
+from __future__ import annotations
+
+import argparse
+import gc
+import itertools
+import json
+from pathlib import Path
+
+import numpy as np
+import torch
+from PIL import Image
+
+from advanced_inference import predict_probabilities
+from aspp768_addition import MATRIX, cleanup_primary
+from encoder_structure_search import build_model
+from improve_five_causes import collect_split, decode_mask
+from restart_ensemble import metrics
+from style_tta_search import predict_array, transform_image
+from tent_style_search import adapt_model
+
+
+def load_aspp(path, device):
+    model = build_model("aspp", pretrained=False, checkpoint=None).to(device)
+    model.load_state_dict(torch.load(path, map_location="cpu")["model"])
+    model.eval()
+    return model
+
+
+def main(args):
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    amp = device.type == "cuda"
+    data_dir = Path(args.data_dir)
+    train_values = []
+    for p, _ in collect_split(data_dir, "train"):
+        g = np.asarray(Image.open(p).convert("L"), dtype=np.float32)
+        train_values.append((float(g.mean()), float(g.std())))
+    train_mean = float(np.mean([x[0] for x in train_values]))
+    train_std = float(np.mean([x[1] for x in train_values]))
+    pair = load_aspp(args.pair_checkpoint, device)
+    items = []
+    for image_path, mask_path in collect_split(data_dir, "valid"):
+        loaded = np.load(Path(args.cache_dir) / f"{image_path.stem}.npz")
+        raw = np.asarray(Image.open(image_path).convert("RGB"), dtype=np.uint8)
+        gray = raw[..., 0].astype(np.float32)
+        pair_value = predict_probabilities(pair, image_path, 768, 576, device, amp, 1, "d4", "gaussian")
+        adapted = adapt_model(args.high_checkpoint, raw, device, amp, 5, 1e-5)
+        raw_high = predict_array(adapted, raw, 768, 576, device, amp, 1, "d4", "gaussian")
+        style_high = predict_array(
+            adapted, transform_image(raw, "standardize", train_mean, train_std),
+            768, 576, device, amp, 1, "d4", "gaussian",
+        )
+        mean = float(gray.mean())
+        high_weight = .75 if mean < 165.0 else .55
+        high = .25 * raw_high + .75 * style_high if float(gray.std()) >= 50.0 else raw_high
+        base = MATRIX * (1.0 - high_weight - .15)
+        mixed = np.asarray([
+            sum(base[c, m] * loaded[f"p{m}"].astype(np.float32)[c] for m in range(3))
+            + high_weight * high[c] + .15 * pair_value[c]
+            for c in range(4)
+        ], dtype=np.float32)
+        mixed /= np.maximum(mixed.sum(0, keepdims=True), 1e-7)
+        z = (gray - mean) / max(float(gray.std()), 1e-5)
+        stats = []
+        for cid in range(4):
+            weights = np.maximum(mixed[cid], 1e-7) ** 2.0
+            wm = float((weights * z).sum() / weights.sum())
+            ws = float(np.sqrt((weights * (z - wm) ** 2).sum() / weights.sum()))
+            stats.append((wm, max(ws, .15)))
+        adaptive = np.asarray([-0.5 * ((z - m) / s) ** 2 - np.log(s) for m, s in stats], dtype=np.float32)
+        beta = 3.0 if mean < 160.0 else 7.0
+        prior = loaded["prior"].astype(np.float32)
+        prior[0] += beta * (adaptive[0] - prior[0])
+        logits = np.log(np.maximum(mixed, 1e-7)) + .09 * prior
+        logits[2] += .40; logits[3] += -1.0 if mean < 165.0 else -.30
+        base_pred = cleanup_primary(logits.argmax(0).astype(np.uint8), logits, 128)
+        items.append({"logits": logits, "prediction": base_pred,
+                      "target": decode_mask(Image.open(mask_path).convert("RGB")),
+                      "name": image_path.name})
+        del adapted, raw_high, style_high
+        gc.collect()
+        if device.type == "cuda": torch.cuda.empty_cache()
+        print(f"cached {image_path.name}", flush=True)
+
+    def apply_thresholds(thresholds):
+        predictions, targets = [], []
+        for item in items:
+            pred = item["prediction"].copy(); logits = item["logits"]
+            for cid, threshold in enumerate(thresholds):
+                if threshold <= 0: continue
+                mask = pred == cid
+                if float(mask.mean()) <= threshold:
+                    alternative = logits.copy(); alternative[cid] = -np.inf
+                    pred[mask] = alternative[:, mask].argmax(axis=0).astype(np.uint8)
+            predictions.append(pred); targets.append(item["target"])
+        return metrics(predictions, targets)
+
+    records = []
+    grids = {
+        0: (0.0, .0002, .0005, .001, .002, .005, .01),
+        1: (0.0, .0005, .001, .002, .005, .01, .02, .05),
+        2: (0.0, .0005, .001, .002, .005, .01, .02),
+        3: (0.0, .0002, .0005, .001, .002, .005, .01, .02),
+    }
+    for cid, values in grids.items():
+        for threshold in values:
+            setting = [0.0] * 4; setting[cid] = threshold
+            records.append({"stage": "single", "class_id": cid, "threshold": threshold,
+                            **apply_thresholds(setting)})
+    singles = sorted(records, key=lambda x: x["image_mean_miou"], reverse=True)[:8]
+    candidate_values = {cid: {0.0} for cid in range(4)}
+    for row in singles:
+        candidate_values[row["class_id"]].add(row["threshold"])
+    for values in itertools.product(*(sorted(candidate_values[cid]) for cid in range(4))):
+        records.append({"stage": "joint", "thresholds": list(values),
+                        **apply_thresholds(values)})
+    baseline = apply_thresholds([0.0] * 4)
+    best = max(records, key=lambda x: x["image_mean_miou"])
+    out = Path(args.output_json); out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps({"baseline": baseline, "best": best, "records": records},
+                              ensure_ascii=False, indent=2), encoding="utf-8")
+    print(json.dumps({"baseline": baseline, "best": best}, ensure_ascii=False), flush=True)
+
+
+if __name__ == "__main__":
+    p = argparse.ArgumentParser()
+    p.add_argument("--data-dir", required=True); p.add_argument("--cache-dir", required=True)
+    p.add_argument("--pair-checkpoint", required=True); p.add_argument("--high-checkpoint", required=True)
+    p.add_argument("--output-json", required=True)
+    main(p.parse_args())

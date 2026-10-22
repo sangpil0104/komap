@@ -1,0 +1,80 @@
+{
+  "inspection_window_utc": [
+    "2026-10-03T01:53:29Z",
+    "2026-10-03T01:54:33Z"
+  ],
+  "remote": "gdrive3",
+  "folder": "KoMaP/model374_fold34_retry_20261001",
+  "method": "rclone lsf metadata listing only; no Drive file content was downloaded or opened",
+  "colab_session_status": "komap374b not found by the configured Colab CLI",
+  "root_entries": ["fold3/", "fold4/", "source/"],
+  "folds": {
+    "fold3": {
+      "completion_file": {
+        "name": "complete.json",
+        "size_bytes": 1218,
+        "drive_md5": "1614cba4890d07eb4e8bbbb71de9b341",
+        "modified_at_utc": "2026-10-01T15:08:56Z"
+      },
+      "checkpoint_snapshot_directories": [
+        "checkpoints/snapshot_epoch_0065/",
+        "checkpoints/snapshot_epoch_0070/"
+      ],
+      "epoch_0070_checkpoint_pair": [
+        {
+          "name": "last.pt",
+          "size_bytes": 308935373,
+          "drive_md5": "0591b7f7ffa3549642839704846c0b80",
+          "modified_at_utc": "2026-10-01T15:05:12Z"
+        },
+        {
+          "name": "train_state.pt",
+          "size_bytes": 925553264,
+          "drive_md5": "0c6aa14d41f2a62d7526a4a415a230ed",
+          "modified_at_utc": "2026-10-01T15:05:14Z"
+        }
+      ],
+      "oof_directory_entries": [
+        {"name": "drive_manifest.json", "size_bytes": 674, "drive_md5": "9a8fcc8f3e3f0c2fabd09f2b64009b27"},
+        {"name": "inference_manifest.json", "size_bytes": 940, "drive_md5": "3e860a46f38618d3f2e30af5883e11ec"},
+        {"name": "valid_per_image.csv", "size_bytes": 2768, "drive_md5": "cc3221d6c86edb402ce8bfb3eb3962f4"},
+        {"name": "valid_probabilities.npz", "size_bytes": 105901992, "drive_md5": "7817633a47f5568636533e712baa3c6b"},
+        {"name": "valid_summary.json", "size_bytes": 937, "drive_md5": "f51b24c36772264b57e2a3b66cf0b399"}
+      ]
+    },
+    "fold4": {
+      "completion_file": {
+        "name": "complete.json",
+        "size_bytes": 1219,
+        "drive_md5": "5e2ee754fcfe5c241e865cf7cf7067e6",
+        "modified_at_utc": "2026-10-01T15:56:06Z"
+      },
+      "checkpoint_snapshot_directories": [
+        "checkpoints/snapshot_epoch_0065/",
+        "checkpoints/snapshot_epoch_0070/"
+      ],
+      "epoch_0070_checkpoint_pair": [
+        {
+          "name": "last.pt",
+          "size_bytes": 308935373,
+          "drive_md5": "b5a63c13d3f6729e6e798b7ca673f2b2",
+          "modified_at_utc": "2026-10-01T15:52:45Z"
+        },
+        {
+          "name": "train_state.pt",
+          "size_bytes": 925553264,
+          "drive_md5": "1b6b019b65138617c9ac83be5f51941f",
+          "modified_at_utc": "2026-10-01T15:52:46Z"
+        }
+      ],
+      "oof_directory_entries": [
+        {"name": "drive_manifest.json", "size_bytes": 674, "drive_md5": "359e777e33a7c50bdbf926e511504c14"},
+        {"name": "inference_manifest.json", "size_bytes": 940, "drive_md5": "e9df89baf7d5ede51539640f792468bf"},
+        {"name": "valid_per_image.csv", "size_bytes": 2761, "drive_md5": "e8a991c30dd202f78970721606628e51"},
+        {"name": "valid_probabilities.npz", "size_bytes": 100954402, "drive_md5": "9bbb6d78b9f3e948bc84f57b71640778"},
+        {"name": "valid_summary.json", "size_bytes": 937, "drive_md5": "c97ace988e15a1d37671f623ee9eab9e"}
+      ]
+    }
+  },
+  "interpretation_limit": "This proves checkpoint snapshots and files with valid_* names are present at this exact Drive path. It does not establish the contents of any archive, and no train-fold OOF probability archive was found by filename in either listed oof/ directory."
+}

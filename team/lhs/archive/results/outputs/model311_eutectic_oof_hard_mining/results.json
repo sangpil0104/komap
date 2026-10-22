@@ -1,0 +1,153 @@
+{
+  "model": 311,
+  "parent_model_id": 303,
+  "method": "Model303 fold checkpoint fine-tuning with cross-fitted train-OOF Eutectic FN/FP crop mining",
+  "metric": "per-image mean of four class IoUs; empty union is 0",
+  "train_images": 70,
+  "valid_images": 20,
+  "random_crops_per_image_per_epoch": 6,
+  "hard_crops_per_image_per_epoch": 2,
+  "validation_masks_used_for_training_selection_or_fold_decisions": false,
+  "hard_mining_maps": "Model303 train-only grouped-OOF probabilities; per-image fold model excluded that specimen",
+  "oof": {
+    "baseline_image_mean_miou": 0.7750956402616517,
+    "candidate_image_mean_miou": 0.7750293620010935,
+    "delta_pp": -0.00662782605581764,
+    "positive_images": 35,
+    "group_bootstrap_95ci_delta_pp": [
+      -0.1420597272020084,
+      0.12197776702200505
+    ],
+    "per_class_mean_iou_baseline": [
+      0.7865894930833086,
+      0.8450087649058661,
+      0.9180371503173728,
+      0.5507471527400589
+    ],
+    "per_class_mean_iou_candidate": [
+      0.7869449625326693,
+      0.8450448998716849,
+      0.9182688976643706,
+      0.5498586879356495
+    ],
+    "per_class_delta_pp": [
+      0.035546944936071245,
+      0.0036134965818779285,
+      0.023174734699782373,
+      -0.08884648044094057
+    ]
+  },
+  "valid_secondary": {
+    "baseline_image_mean_miou": 0.750472040179293,
+    "candidate_image_mean_miou": 0.7507781562906677,
+    "delta_pp": 0.030611611137451866,
+    "positive_images": 12
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "train_image_count": 52,
+      "heldout_image_count": 18,
+      "random_crop_count_per_epoch": 312,
+      "oof_hard_crop_count_per_epoch": 104,
+      "epoch_history": [
+        {
+          "epoch": 1,
+          "train_loss": 0.45057255459519535
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.44181816931813955
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.4370686130311627
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.432350858902702
+        }
+      ],
+      "elapsed_seconds": 960.1106557846069
+    },
+    {
+      "fold": 2,
+      "train_image_count": 52,
+      "heldout_image_count": 18,
+      "random_crop_count_per_epoch": 312,
+      "oof_hard_crop_count_per_epoch": 104,
+      "epoch_history": [
+        {
+          "epoch": 1,
+          "train_loss": 0.44980917863834363
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.4414628749856582
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.4355080689375217
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.43502470585875785
+        }
+      ],
+      "elapsed_seconds": 930.072915315628
+    },
+    {
+      "fold": 3,
+      "train_image_count": 53,
+      "heldout_image_count": 17,
+      "random_crop_count_per_epoch": 318,
+      "oof_hard_crop_count_per_epoch": 106,
+      "epoch_history": [
+        {
+          "epoch": 1,
+          "train_loss": 0.48747938955729864
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.474099671362706
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.4701425424724255
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.4639737092942562
+        }
+      ],
+      "elapsed_seconds": 937.2243509292603
+    },
+    {
+      "fold": 4,
+      "train_image_count": 53,
+      "heldout_image_count": 17,
+      "random_crop_count_per_epoch": 318,
+      "oof_hard_crop_count_per_epoch": 106,
+      "epoch_history": [
+        {
+          "epoch": 1,
+          "train_loss": 0.4423819987700795
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.4290300595029345
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.42551542692027
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.4313315753385706
+        }
+      ],
+      "elapsed_seconds": 932.2809898853302
+    }
+  ],
+  "elapsed_seconds": 3871.399779319763
+}

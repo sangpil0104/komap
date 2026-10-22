@@ -1,0 +1,1203 @@
+[
+  {
+    "id": "train_model257",
+    "serial_index": 19,
+    "kind": "gpu",
+    "priority": 2,
+    "deps": [],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/historical_scripts/model253_highres_scale_finetune.py",
+      "--data-dir",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/data",
+      "--checkpoint",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model242_native_stem_ema/best_ema.pt",
+      "--output-dir",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model257_full_image_stats_1x",
+      "--scale",
+      "1",
+      "--patch-size",
+      "1024",
+      "--patches-per-image",
+      "8",
+      "--batch-size",
+      "2",
+      "--epochs",
+      "4",
+      "--scheduler-epochs",
+      "4",
+      "--encoder-lr",
+      "5e-6",
+      "--decoder-lr",
+      "1.5e-5",
+      "--native-lr",
+      "1e-4",
+      "--weight-decay",
+      "1e-4",
+      "--val-stride",
+      "576",
+      "--tta",
+      "d4",
+      "--selection-metric",
+      "image_mean_miou",
+      "--seed",
+      "257",
+      "--global-representation",
+      "--num-workers",
+      "4"
+    ],
+    "requires": [
+      "{run}/outputs/model242_native_stem_ema/best_ema.pt"
+    ],
+    "produces": [
+      "{run}/outputs/model257_full_image_stats_1x/best.pt"
+    ]
+  },
+  {
+    "id": "train_model269",
+    "serial_index": 20,
+    "kind": "gpu",
+    "priority": 2,
+    "deps": [
+      "train_model257"
+    ],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/historical_scripts/model253_highres_scale_finetune.py",
+      "--data-dir",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/data",
+      "--checkpoint",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model257_full_image_stats_1x/best.pt",
+      "--output-dir",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model269_fullstats_1x_extended",
+      "--scale",
+      "1",
+      "--patch-size",
+      "1024",
+      "--patches-per-image",
+      "8",
+      "--batch-size",
+      "2",
+      "--epochs",
+      "4",
+      "--scheduler-epochs",
+      "4",
+      "--encoder-lr",
+      "2.5e-6",
+      "--decoder-lr",
+      "7.5e-6",
+      "--native-lr",
+      "5e-5",
+      "--weight-decay",
+      "1e-4",
+      "--val-stride",
+      "576",
+      "--tta",
+      "d4",
+      "--selection-metric",
+      "image_mean_miou",
+      "--seed",
+      "269",
+      "--global-representation",
+      "--num-workers",
+      "4"
+    ],
+    "requires": [
+      "{run}/outputs/model257_full_image_stats_1x/best.pt"
+    ],
+    "produces": [
+      "{run}/outputs/model269_fullstats_1x_extended/valid_probs.npz"
+    ]
+  },
+  {
+    "id": "train_model322_fold3",
+    "serial_index": 25,
+    "kind": "gpu",
+    "priority": 100,
+    "deps": [],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model322_team_b4/KoMaP/train.py",
+      "--data",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/data_model322_group_cv",
+      "--train_splits",
+      "train_fold3",
+      "--out",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model322_team_b4_group_oof/fold3",
+      "--arch",
+      "unet",
+      "--encoder",
+      "efficientnet-b4",
+      "--norm",
+      "imagenet",
+      "--input",
+      "gray3",
+      "--crop",
+      "1536",
+      "--scale",
+      "3",
+      "--target_width",
+      "0",
+      "--sample",
+      "area",
+      "--bs",
+      "2",
+      "--iters",
+      "16000",
+      "--lr",
+      "3e-4",
+      "--wd",
+      "1e-2",
+      "--dice_w",
+      "1",
+      "--cldice_w",
+      "0",
+      "--seed",
+      "0",
+      "--workers",
+      "4",
+      "--no_valid_eval"
+    ],
+    "requires": [],
+    "produces": [
+      "{run}/outputs/model322_team_b4_group_oof/fold3/last.pt",
+      "{run}/outputs/model322_team_b4_group_oof/fold3"
+    ]
+  },
+  {
+    "id": "oof_model322_fold3",
+    "serial_index": 26,
+    "kind": "gpu",
+    "priority": 2,
+    "deps": [
+      "train_model322_fold3"
+    ],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model322_team_b4/KoMaP/predict.py",
+      "--data",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/data_model322_group_cv",
+      "--split",
+      "oof_fold3",
+      "--runs",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model322_team_b4_group_oof/fold3",
+      "--out",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model322_team_b4_group_oof/fold3_oof",
+      "--save_probs"
+    ],
+    "requires": [
+      "{run}/outputs/model322_team_b4_group_oof/fold3"
+    ],
+    "produces": [
+      "{run}/outputs/model322_team_b4_group_oof/fold3_oof/probabilities.npz"
+    ]
+  },
+  {
+    "id": "train_model322_fold4",
+    "serial_index": 27,
+    "kind": "gpu",
+    "priority": 100,
+    "deps": [],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model322_team_b4/KoMaP/train.py",
+      "--data",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/data_model322_group_cv",
+      "--train_splits",
+      "train_fold4",
+      "--out",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model322_team_b4_group_oof/fold4",
+      "--arch",
+      "unet",
+      "--encoder",
+      "efficientnet-b4",
+      "--norm",
+      "imagenet",
+      "--input",
+      "gray3",
+      "--crop",
+      "1536",
+      "--scale",
+      "3",
+      "--target_width",
+      "0",
+      "--sample",
+      "area",
+      "--bs",
+      "2",
+      "--iters",
+      "16000",
+      "--lr",
+      "3e-4",
+      "--wd",
+      "1e-2",
+      "--dice_w",
+      "1",
+      "--cldice_w",
+      "0",
+      "--seed",
+      "0",
+      "--workers",
+      "4",
+      "--no_valid_eval"
+    ],
+    "requires": [],
+    "produces": [
+      "{run}/outputs/model322_team_b4_group_oof/fold4/last.pt",
+      "{run}/outputs/model322_team_b4_group_oof/fold4"
+    ]
+  },
+  {
+    "id": "oof_model322_fold4",
+    "serial_index": 28,
+    "kind": "gpu",
+    "priority": 2,
+    "deps": [
+      "train_model322_fold4"
+    ],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model322_team_b4/KoMaP/predict.py",
+      "--data",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/data_model322_group_cv",
+      "--split",
+      "oof_fold4",
+      "--runs",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model322_team_b4_group_oof/fold4",
+      "--out",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model322_team_b4_group_oof/fold4_oof",
+      "--save_probs"
+    ],
+    "requires": [
+      "{run}/outputs/model322_team_b4_group_oof/fold4"
+    ],
+    "produces": [
+      "{run}/outputs/model322_team_b4_group_oof/fold4_oof/probabilities.npz"
+    ]
+  },
+  {
+    "id": "aggregate_model322",
+    "serial_index": 29,
+    "kind": "cpu",
+    "priority": 2,
+    "deps": [
+      "oof_model322_fold3",
+      "oof_model322_fold4"
+    ],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model322_team_b4/KoMaP/aggregate_oof.py",
+      "--runs",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model322_team_b4_group_oof",
+      "--folds",
+      "4",
+      "--expected-images",
+      "70"
+    ],
+    "requires": [],
+    "produces": [
+      "{run}/outputs/model322_team_b4_group_oof/train_oof_probs.npz"
+    ]
+  },
+  {
+    "id": "valid_model322",
+    "serial_index": 30,
+    "kind": "gpu",
+    "priority": 2,
+    "deps": [
+      "aggregate_model322"
+    ],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model322_team_b4/KoMaP/predict.py",
+      "--data",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/data",
+      "--split",
+      "valid",
+      "--runs",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model322_team_b4_group_oof/fold1",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model322_team_b4_group_oof/fold2",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model322_team_b4_group_oof/fold3",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model322_team_b4_group_oof/fold4",
+      "--out",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model322_team_b4_group_oof/valid_ensemble",
+      "--save_probs"
+    ],
+    "requires": [
+      "{run}/outputs/model322_team_b4_group_oof/fold1",
+      "{run}/outputs/model322_team_b4_group_oof/fold2",
+      "{run}/outputs/model322_team_b4_group_oof/fold3",
+      "{run}/outputs/model322_team_b4_group_oof/fold4"
+    ],
+    "produces": [
+      "{run}/outputs/model322_team_b4_group_oof/valid_ensemble/probabilities.npz"
+    ]
+  },
+  {
+    "id": "train_model326_fold1",
+    "serial_index": 31,
+    "kind": "gpu",
+    "priority": 100,
+    "deps": [],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model326_hybrid_fullstats/KoMaP/train.py",
+      "--data",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/data_model322_group_cv",
+      "--train_splits",
+      "train_fold1",
+      "--out",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model326_hybrid_fullstats_group_oof/fold1",
+      "--arch",
+      "unet",
+      "--encoder",
+      "efficientnet-b4",
+      "--norm",
+      "image_global",
+      "--input",
+      "zcdf3",
+      "--crop",
+      "1536",
+      "--scale",
+      "3",
+      "--target_width",
+      "0",
+      "--sample",
+      "area",
+      "--bs",
+      "2",
+      "--iters",
+      "16000",
+      "--lr",
+      "3e-4",
+      "--wd",
+      "1e-2",
+      "--dice_w",
+      "1",
+      "--cldice_w",
+      "0",
+      "--seed",
+      "0",
+      "--workers",
+      "4",
+      "--no_valid_eval"
+    ],
+    "requires": [],
+    "produces": [
+      "{run}/outputs/model326_hybrid_fullstats_group_oof/fold1/last.pt",
+      "{run}/outputs/model326_hybrid_fullstats_group_oof/fold1"
+    ]
+  },
+  {
+    "id": "oof_model326_fold1",
+    "serial_index": 32,
+    "kind": "gpu",
+    "priority": 2,
+    "deps": [
+      "train_model326_fold1"
+    ],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model326_hybrid_fullstats/KoMaP/predict.py",
+      "--data",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/data_model322_group_cv",
+      "--split",
+      "oof_fold1",
+      "--runs",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model326_hybrid_fullstats_group_oof/fold1",
+      "--out",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model326_hybrid_fullstats_group_oof/fold1_oof",
+      "--save_probs"
+    ],
+    "requires": [
+      "{run}/outputs/model326_hybrid_fullstats_group_oof/fold1"
+    ],
+    "produces": [
+      "{run}/outputs/model326_hybrid_fullstats_group_oof/fold1_oof/probabilities.npz"
+    ]
+  },
+  {
+    "id": "train_model326_fold2",
+    "serial_index": 33,
+    "kind": "gpu",
+    "priority": 100,
+    "deps": [],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model326_hybrid_fullstats/KoMaP/train.py",
+      "--data",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/data_model322_group_cv",
+      "--train_splits",
+      "train_fold2",
+      "--out",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model326_hybrid_fullstats_group_oof/fold2",
+      "--arch",
+      "unet",
+      "--encoder",
+      "efficientnet-b4",
+      "--norm",
+      "image_global",
+      "--input",
+      "zcdf3",
+      "--crop",
+      "1536",
+      "--scale",
+      "3",
+      "--target_width",
+      "0",
+      "--sample",
+      "area",
+      "--bs",
+      "2",
+      "--iters",
+      "16000",
+      "--lr",
+      "3e-4",
+      "--wd",
+      "1e-2",
+      "--dice_w",
+      "1",
+      "--cldice_w",
+      "0",
+      "--seed",
+      "0",
+      "--workers",
+      "4",
+      "--no_valid_eval"
+    ],
+    "requires": [],
+    "produces": [
+      "{run}/outputs/model326_hybrid_fullstats_group_oof/fold2/last.pt",
+      "{run}/outputs/model326_hybrid_fullstats_group_oof/fold2"
+    ]
+  },
+  {
+    "id": "oof_model326_fold2",
+    "serial_index": 34,
+    "kind": "gpu",
+    "priority": 2,
+    "deps": [
+      "train_model326_fold2"
+    ],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model326_hybrid_fullstats/KoMaP/predict.py",
+      "--data",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/data_model322_group_cv",
+      "--split",
+      "oof_fold2",
+      "--runs",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model326_hybrid_fullstats_group_oof/fold2",
+      "--out",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model326_hybrid_fullstats_group_oof/fold2_oof",
+      "--save_probs"
+    ],
+    "requires": [
+      "{run}/outputs/model326_hybrid_fullstats_group_oof/fold2"
+    ],
+    "produces": [
+      "{run}/outputs/model326_hybrid_fullstats_group_oof/fold2_oof/probabilities.npz"
+    ]
+  },
+  {
+    "id": "train_model326_fold3",
+    "serial_index": 35,
+    "kind": "gpu",
+    "priority": 100,
+    "deps": [],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model326_hybrid_fullstats/KoMaP/train.py",
+      "--data",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/data_model322_group_cv",
+      "--train_splits",
+      "train_fold3",
+      "--out",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model326_hybrid_fullstats_group_oof/fold3",
+      "--arch",
+      "unet",
+      "--encoder",
+      "efficientnet-b4",
+      "--norm",
+      "image_global",
+      "--input",
+      "zcdf3",
+      "--crop",
+      "1536",
+      "--scale",
+      "3",
+      "--target_width",
+      "0",
+      "--sample",
+      "area",
+      "--bs",
+      "2",
+      "--iters",
+      "16000",
+      "--lr",
+      "3e-4",
+      "--wd",
+      "1e-2",
+      "--dice_w",
+      "1",
+      "--cldice_w",
+      "0",
+      "--seed",
+      "0",
+      "--workers",
+      "4",
+      "--no_valid_eval"
+    ],
+    "requires": [],
+    "produces": [
+      "{run}/outputs/model326_hybrid_fullstats_group_oof/fold3/last.pt",
+      "{run}/outputs/model326_hybrid_fullstats_group_oof/fold3"
+    ]
+  },
+  {
+    "id": "oof_model326_fold3",
+    "serial_index": 36,
+    "kind": "gpu",
+    "priority": 2,
+    "deps": [
+      "train_model326_fold3"
+    ],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model326_hybrid_fullstats/KoMaP/predict.py",
+      "--data",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/data_model322_group_cv",
+      "--split",
+      "oof_fold3",
+      "--runs",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model326_hybrid_fullstats_group_oof/fold3",
+      "--out",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model326_hybrid_fullstats_group_oof/fold3_oof",
+      "--save_probs"
+    ],
+    "requires": [
+      "{run}/outputs/model326_hybrid_fullstats_group_oof/fold3"
+    ],
+    "produces": [
+      "{run}/outputs/model326_hybrid_fullstats_group_oof/fold3_oof/probabilities.npz"
+    ]
+  },
+  {
+    "id": "train_model326_fold4",
+    "serial_index": 37,
+    "kind": "gpu",
+    "priority": 100,
+    "deps": [],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model326_hybrid_fullstats/KoMaP/train.py",
+      "--data",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/data_model322_group_cv",
+      "--train_splits",
+      "train_fold4",
+      "--out",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model326_hybrid_fullstats_group_oof/fold4",
+      "--arch",
+      "unet",
+      "--encoder",
+      "efficientnet-b4",
+      "--norm",
+      "image_global",
+      "--input",
+      "zcdf3",
+      "--crop",
+      "1536",
+      "--scale",
+      "3",
+      "--target_width",
+      "0",
+      "--sample",
+      "area",
+      "--bs",
+      "2",
+      "--iters",
+      "16000",
+      "--lr",
+      "3e-4",
+      "--wd",
+      "1e-2",
+      "--dice_w",
+      "1",
+      "--cldice_w",
+      "0",
+      "--seed",
+      "0",
+      "--workers",
+      "4",
+      "--no_valid_eval"
+    ],
+    "requires": [],
+    "produces": [
+      "{run}/outputs/model326_hybrid_fullstats_group_oof/fold4/last.pt",
+      "{run}/outputs/model326_hybrid_fullstats_group_oof/fold4"
+    ]
+  },
+  {
+    "id": "oof_model326_fold4",
+    "serial_index": 38,
+    "kind": "gpu",
+    "priority": 2,
+    "deps": [
+      "train_model326_fold4"
+    ],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model326_hybrid_fullstats/KoMaP/predict.py",
+      "--data",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/data_model322_group_cv",
+      "--split",
+      "oof_fold4",
+      "--runs",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model326_hybrid_fullstats_group_oof/fold4",
+      "--out",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model326_hybrid_fullstats_group_oof/fold4_oof",
+      "--save_probs"
+    ],
+    "requires": [
+      "{run}/outputs/model326_hybrid_fullstats_group_oof/fold4"
+    ],
+    "produces": [
+      "{run}/outputs/model326_hybrid_fullstats_group_oof/fold4_oof/probabilities.npz"
+    ]
+  },
+  {
+    "id": "aggregate_model326",
+    "serial_index": 39,
+    "kind": "cpu",
+    "priority": 2,
+    "deps": [
+      "oof_model326_fold1",
+      "oof_model326_fold2",
+      "oof_model326_fold3",
+      "oof_model326_fold4"
+    ],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model326_hybrid_fullstats/KoMaP/aggregate_oof.py",
+      "--runs",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model326_hybrid_fullstats_group_oof",
+      "--folds",
+      "4",
+      "--expected-images",
+      "70"
+    ],
+    "requires": [],
+    "produces": [
+      "{run}/outputs/model326_hybrid_fullstats_group_oof/train_oof_probs.npz"
+    ]
+  },
+  {
+    "id": "valid_model326",
+    "serial_index": 40,
+    "kind": "gpu",
+    "priority": 2,
+    "deps": [
+      "aggregate_model326"
+    ],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model326_hybrid_fullstats/KoMaP/predict.py",
+      "--data",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/data",
+      "--split",
+      "valid",
+      "--runs",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model326_hybrid_fullstats_group_oof/fold1",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model326_hybrid_fullstats_group_oof/fold2",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model326_hybrid_fullstats_group_oof/fold3",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model326_hybrid_fullstats_group_oof/fold4",
+      "--out",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model326_hybrid_fullstats_group_oof/valid_ensemble",
+      "--save_probs"
+    ],
+    "requires": [
+      "{run}/outputs/model326_hybrid_fullstats_group_oof/fold1",
+      "{run}/outputs/model326_hybrid_fullstats_group_oof/fold2",
+      "{run}/outputs/model326_hybrid_fullstats_group_oof/fold3",
+      "{run}/outputs/model326_hybrid_fullstats_group_oof/fold4"
+    ],
+    "produces": [
+      "{run}/outputs/model326_hybrid_fullstats_group_oof/valid_ensemble/probabilities.npz"
+    ]
+  },
+  {
+    "id": "train_model329_fold1",
+    "serial_index": 41,
+    "kind": "gpu",
+    "priority": 100,
+    "deps": [],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model326_hybrid_fullstats/KoMaP/train.py",
+      "--data",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/data_model322_group_cv",
+      "--train_splits",
+      "train_fold1",
+      "--out",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model329_fullstats_width4000_uniform_group_oof/fold1",
+      "--arch",
+      "unet",
+      "--encoder",
+      "efficientnet-b4",
+      "--norm",
+      "image_global",
+      "--input",
+      "zcdf3",
+      "--crop",
+      "1536",
+      "--scale",
+      "1",
+      "--target_width",
+      "4000",
+      "--sample",
+      "uniform",
+      "--bs",
+      "2",
+      "--iters",
+      "16000",
+      "--lr",
+      "3e-4",
+      "--wd",
+      "1e-2",
+      "--dice_w",
+      "1",
+      "--cldice_w",
+      "0",
+      "--seed",
+      "0",
+      "--workers",
+      "4",
+      "--no_valid_eval"
+    ],
+    "requires": [],
+    "produces": [
+      "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold1/last.pt",
+      "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold1"
+    ]
+  },
+  {
+    "id": "oof_model329_fold1",
+    "serial_index": 42,
+    "kind": "gpu",
+    "priority": 2,
+    "deps": [
+      "train_model329_fold1"
+    ],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model326_hybrid_fullstats/KoMaP/predict.py",
+      "--data",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/data_model322_group_cv",
+      "--split",
+      "oof_fold1",
+      "--runs",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model329_fullstats_width4000_uniform_group_oof/fold1",
+      "--out",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model329_fullstats_width4000_uniform_group_oof/fold1_oof",
+      "--save_probs"
+    ],
+    "requires": [
+      "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold1"
+    ],
+    "produces": [
+      "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold1_oof/probabilities.npz"
+    ]
+  },
+  {
+    "id": "train_model329_fold2",
+    "serial_index": 43,
+    "kind": "gpu",
+    "priority": 100,
+    "deps": [],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model326_hybrid_fullstats/KoMaP/train.py",
+      "--data",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/data_model322_group_cv",
+      "--train_splits",
+      "train_fold2",
+      "--out",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model329_fullstats_width4000_uniform_group_oof/fold2",
+      "--arch",
+      "unet",
+      "--encoder",
+      "efficientnet-b4",
+      "--norm",
+      "image_global",
+      "--input",
+      "zcdf3",
+      "--crop",
+      "1536",
+      "--scale",
+      "1",
+      "--target_width",
+      "4000",
+      "--sample",
+      "uniform",
+      "--bs",
+      "2",
+      "--iters",
+      "16000",
+      "--lr",
+      "3e-4",
+      "--wd",
+      "1e-2",
+      "--dice_w",
+      "1",
+      "--cldice_w",
+      "0",
+      "--seed",
+      "0",
+      "--workers",
+      "4",
+      "--no_valid_eval"
+    ],
+    "requires": [],
+    "produces": [
+      "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold2/last.pt",
+      "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold2"
+    ]
+  },
+  {
+    "id": "oof_model329_fold2",
+    "serial_index": 44,
+    "kind": "gpu",
+    "priority": 2,
+    "deps": [
+      "train_model329_fold2"
+    ],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model326_hybrid_fullstats/KoMaP/predict.py",
+      "--data",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/data_model322_group_cv",
+      "--split",
+      "oof_fold2",
+      "--runs",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model329_fullstats_width4000_uniform_group_oof/fold2",
+      "--out",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model329_fullstats_width4000_uniform_group_oof/fold2_oof",
+      "--save_probs"
+    ],
+    "requires": [
+      "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold2"
+    ],
+    "produces": [
+      "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold2_oof/probabilities.npz"
+    ]
+  },
+  {
+    "id": "train_model329_fold3",
+    "serial_index": 45,
+    "kind": "gpu",
+    "priority": 100,
+    "deps": [],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model326_hybrid_fullstats/KoMaP/train.py",
+      "--data",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/data_model322_group_cv",
+      "--train_splits",
+      "train_fold3",
+      "--out",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model329_fullstats_width4000_uniform_group_oof/fold3",
+      "--arch",
+      "unet",
+      "--encoder",
+      "efficientnet-b4",
+      "--norm",
+      "image_global",
+      "--input",
+      "zcdf3",
+      "--crop",
+      "1536",
+      "--scale",
+      "1",
+      "--target_width",
+      "4000",
+      "--sample",
+      "uniform",
+      "--bs",
+      "2",
+      "--iters",
+      "16000",
+      "--lr",
+      "3e-4",
+      "--wd",
+      "1e-2",
+      "--dice_w",
+      "1",
+      "--cldice_w",
+      "0",
+      "--seed",
+      "0",
+      "--workers",
+      "4",
+      "--no_valid_eval"
+    ],
+    "requires": [],
+    "produces": [
+      "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold3/last.pt",
+      "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold3"
+    ]
+  },
+  {
+    "id": "oof_model329_fold3",
+    "serial_index": 46,
+    "kind": "gpu",
+    "priority": 2,
+    "deps": [
+      "train_model329_fold3"
+    ],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model326_hybrid_fullstats/KoMaP/predict.py",
+      "--data",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/data_model322_group_cv",
+      "--split",
+      "oof_fold3",
+      "--runs",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model329_fullstats_width4000_uniform_group_oof/fold3",
+      "--out",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model329_fullstats_width4000_uniform_group_oof/fold3_oof",
+      "--save_probs"
+    ],
+    "requires": [
+      "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold3"
+    ],
+    "produces": [
+      "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold3_oof/probabilities.npz"
+    ]
+  },
+  {
+    "id": "train_model329_fold4",
+    "serial_index": 47,
+    "kind": "gpu",
+    "priority": 100,
+    "deps": [],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model326_hybrid_fullstats/KoMaP/train.py",
+      "--data",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/data_model322_group_cv",
+      "--train_splits",
+      "train_fold4",
+      "--out",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model329_fullstats_width4000_uniform_group_oof/fold4",
+      "--arch",
+      "unet",
+      "--encoder",
+      "efficientnet-b4",
+      "--norm",
+      "image_global",
+      "--input",
+      "zcdf3",
+      "--crop",
+      "1536",
+      "--scale",
+      "1",
+      "--target_width",
+      "4000",
+      "--sample",
+      "uniform",
+      "--bs",
+      "2",
+      "--iters",
+      "16000",
+      "--lr",
+      "3e-4",
+      "--wd",
+      "1e-2",
+      "--dice_w",
+      "1",
+      "--cldice_w",
+      "0",
+      "--seed",
+      "0",
+      "--workers",
+      "4",
+      "--no_valid_eval"
+    ],
+    "requires": [],
+    "produces": [
+      "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold4/last.pt",
+      "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold4"
+    ]
+  },
+  {
+    "id": "oof_model329_fold4",
+    "serial_index": 48,
+    "kind": "gpu",
+    "priority": 2,
+    "deps": [
+      "train_model329_fold4"
+    ],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model326_hybrid_fullstats/KoMaP/predict.py",
+      "--data",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/data_model322_group_cv",
+      "--split",
+      "oof_fold4",
+      "--runs",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model329_fullstats_width4000_uniform_group_oof/fold4",
+      "--out",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model329_fullstats_width4000_uniform_group_oof/fold4_oof",
+      "--save_probs"
+    ],
+    "requires": [
+      "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold4"
+    ],
+    "produces": [
+      "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold4_oof/probabilities.npz"
+    ]
+  },
+  {
+    "id": "aggregate_model329",
+    "serial_index": 49,
+    "kind": "cpu",
+    "priority": 2,
+    "deps": [
+      "oof_model329_fold1",
+      "oof_model329_fold2",
+      "oof_model329_fold3",
+      "oof_model329_fold4"
+    ],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model326_hybrid_fullstats/KoMaP/aggregate_oof.py",
+      "--runs",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model329_fullstats_width4000_uniform_group_oof",
+      "--folds",
+      "4",
+      "--expected-images",
+      "70"
+    ],
+    "requires": [],
+    "produces": [
+      "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/train_oof_probs.npz"
+    ]
+  },
+  {
+    "id": "valid_model329",
+    "serial_index": 50,
+    "kind": "gpu",
+    "priority": 2,
+    "deps": [
+      "aggregate_model329"
+    ],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model326_hybrid_fullstats/KoMaP/predict.py",
+      "--data",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/data",
+      "--split",
+      "valid",
+      "--runs",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model329_fullstats_width4000_uniform_group_oof/fold1",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model329_fullstats_width4000_uniform_group_oof/fold2",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model329_fullstats_width4000_uniform_group_oof/fold3",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model329_fullstats_width4000_uniform_group_oof/fold4",
+      "--out",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model329_fullstats_width4000_uniform_group_oof/valid_ensemble",
+      "--save_probs"
+    ],
+    "requires": [
+      "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold1",
+      "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold2",
+      "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold3",
+      "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold4"
+    ],
+    "produces": [
+      "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/valid_ensemble/probabilities.npz"
+    ]
+  },
+  {
+    "id": "evaluate_model347",
+    "serial_index": 54,
+    "kind": "gpu",
+    "priority": 1,
+    "deps": [],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model336_hrnet_best/evaluate_image_mean.py",
+      "--checkpoint",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model347_hrnet_inverse_ce_finetune/last.pt",
+      "--data-root",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/data",
+      "--split",
+      "valid",
+      "--output-dir",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model347_hrnet_inverse_ce_finetune/valid_eval",
+      "--device",
+      "cuda:0",
+      "--batch-size",
+      "2"
+    ],
+    "requires": [
+      "{run}/outputs/model347_hrnet_inverse_ce_finetune/last.pt"
+    ],
+    "produces": [
+      "{run}/outputs/model347_hrnet_inverse_ce_finetune/valid_eval/valid_probabilities.npz"
+    ]
+  },
+  {
+    "id": "evaluate_model361",
+    "serial_index": 56,
+    "kind": "gpu",
+    "priority": 0,
+    "deps": [],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/model336_hrnet_best/evaluate_image_mean.py",
+      "--checkpoint",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model361_hrnet_scale3_finetune/last.pt",
+      "--data-root",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/data",
+      "--split",
+      "valid",
+      "--output-dir",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/outputs/model361_hrnet_scale3_finetune/valid_eval",
+      "--device",
+      "cuda:0",
+      "--patch-size",
+      "512",
+      "--overlap",
+      "114",
+      "--input-scale",
+      "3.0",
+      "--batch-size",
+      "2",
+      "--tta-mode",
+      "flip4"
+    ],
+    "requires": [
+      "{run}/outputs/model361_hrnet_scale3_finetune/last.pt"
+    ],
+    "produces": [
+      "{run}/outputs/model361_hrnet_scale3_finetune/valid_eval/valid_probabilities.npz"
+    ]
+  },
+  {
+    "id": "export_model364",
+    "serial_index": 58,
+    "kind": "cpu",
+    "priority": 2,
+    "deps": [
+      "train_model257",
+      "train_model269",
+      "train_model322_fold3",
+      "oof_model322_fold3",
+      "train_model322_fold4",
+      "oof_model322_fold4",
+      "aggregate_model322",
+      "valid_model322",
+      "train_model326_fold1",
+      "oof_model326_fold1",
+      "train_model326_fold2",
+      "oof_model326_fold2",
+      "train_model326_fold3",
+      "oof_model326_fold3",
+      "train_model326_fold4",
+      "oof_model326_fold4",
+      "aggregate_model326",
+      "valid_model326",
+      "train_model329_fold1",
+      "oof_model329_fold1",
+      "train_model329_fold2",
+      "oof_model329_fold2",
+      "train_model329_fold3",
+      "oof_model329_fold3",
+      "train_model329_fold4",
+      "oof_model329_fold4",
+      "aggregate_model329",
+      "valid_model329",
+      "evaluate_model347",
+      "evaluate_model361"
+    ],
+    "argv": [
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z/source_snapshot/experiments/export_model364_fixed.py",
+      "--root",
+      "/Data3/sppark/komap/experiments/model364_resume_gpu4567_v1/outputs/runs/model364_resume_20261006T101418_491448Z"
+    ],
+    "requires": [],
+    "produces": [
+      "{run}/result_path.txt"
+    ]
+  }
+]

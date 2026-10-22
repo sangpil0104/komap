@@ -1,0 +1,129 @@
+{
+  "model": 384,
+  "status": "train-only screening; not a confirmatory or valid/test estimate",
+  "metric": "image-wise mean of four class IoUs; empty union=0",
+  "class_order": [
+    "Al",
+    "Al3Ni",
+    "Primary Si",
+    "Eutectic Si"
+  ],
+  "data": {
+    "images": 70,
+    "specimen_groups": 59,
+    "base_oof_folds": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "model322_oof": "/workspace/komap_model1/outputs/model322_team_b4_group_oof/train_oof_probs.npz",
+    "model329_oof": "/workspace/komap_model1/outputs/model329_fullstats_width4000_uniform_group_oof/train_oof_probs.npz"
+  },
+  "global_baseline": "fixed equal-probability mean of Model322 and Model329 (lambda=0)",
+  "router": {
+    "candidate_experts": [
+      "Model322",
+      "Model329"
+    ],
+    "feature_names": [
+      "predicted_present_count",
+      "eutectic_area_fraction",
+      "normalized_entropy"
+    ],
+    "threshold_quantiles": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "shrinkage_lambdas": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "max_depth": 1
+  },
+  "leakage_warning": "The outer-heldout group can appear in base-model training for inner-router OOF predictions. Thus the outer score is not an unbiased generalization estimate and must not select a final model. A pass only prioritizes later confirmation; a fail deprioritizes this small router.",
+  "screen_gate": {
+    "delta_at_least_pp": 0.3,
+    "group_bootstrap_ci_lower_gt_zero": true,
+    "positive_outer_folds_at_least": 3,
+    "screen_pass": false
+  },
+  "global_oof_image_mean_miou": 79.28842913884073,
+  "routed_oof_image_mean_miou": 79.27837465485197,
+  "delta_pp": -0.010054483988741283,
+  "delta_group_bootstrap_95ci_pp": [
+    -0.21603407194935406,
+    0.16207944161347426
+  ],
+  "positive_images": 36,
+  "positive_outer_folds": 3,
+  "outer_folds": [
+    {
+      "outer_base_fold": 1,
+      "images": 18,
+      "groups": 15,
+      "inner_selected_setting": {
+        "lambda": 0.25,
+        "feature": 2,
+        "q": 0.25,
+        "329_when_low": false,
+        "feature_name": "normalized_entropy"
+      },
+      "inner_selected_train_group_cv_miou": 80.20236474207336,
+      "outer_global_blend_miou": 76.94889692437754,
+      "outer_routed_miou": 77.05638661697367,
+      "outer_delta_pp": 0.10748969259612995
+    },
+    {
+      "outer_base_fold": 2,
+      "images": 18,
+      "groups": 15,
+      "inner_selected_setting": {
+        "lambda": 0.25,
+        "feature": 2,
+        "q": 0.25,
+        "329_when_low": false,
+        "feature_name": "normalized_entropy"
+      },
+      "inner_selected_train_group_cv_miou": 79.69522935235456,
+      "outer_global_blend_miou": 78.32753025274982,
+      "outer_routed_miou": 78.47002835057788,
+      "outer_delta_pp": 0.14249809782805878
+    },
+    {
+      "outer_base_fold": 3,
+      "images": 17,
+      "groups": 14,
+      "inner_selected_setting": {
+        "lambda": 0.5,
+        "feature": 0,
+        "q": 0.25,
+        "329_when_low": true,
+        "feature_name": "predicted_present_count"
+      },
+      "inner_selected_train_group_cv_miou": 78.0017483661323,
+      "outer_global_blend_miou": 83.7011404700917,
+      "outer_routed_miou": 83.31733154003358,
+      "outer_delta_pp": -0.383808930058116
+    },
+    {
+      "outer_base_fold": 4,
+      "images": 17,
+      "groups": 15,
+      "inner_selected_setting": {
+        "lambda": 0.5,
+        "feature": 2,
+        "q": 0.25,
+        "329_when_low": false,
+        "feature_name": "normalized_entropy"
+      },
+      "inner_selected_train_group_cv_miou": 79.68971123226281,
+      "outer_global_blend_miou": 78.37029191405873,
+      "outer_routed_miou": 78.44800707312585,
+      "outer_delta_pp": 0.07771515906711546
+    }
+  ],
+  "seed": 384
+}

@@ -1,0 +1,78 @@
+{
+  "config_hash": "776f57ab0ae0ef641760d9afcc1dba9080416844fcaf79e4075f2162099ca337",
+  "environment": {
+    "python": "3.11.16",
+    "torch": "2.7.1+cu128",
+    "torchvision": "0.22.1+cu128",
+    "cuda": "12.8",
+    "cudnn": 90701,
+    "code_commit": null,
+    "backbone_commit": "6876159a11b4df116f30f667f8c9888617df0751",
+    "gpus": [
+      "NVIDIA GeForce RTX 4090",
+      "NVIDIA GeForce RTX 4090",
+      "NVIDIA GeForce RTX 4090",
+      "NVIDIA GeForce RTX 4090",
+      "NVIDIA GeForce RTX 4090",
+      "NVIDIA GeForce RTX 4090",
+      "NVIDIA GeForce RTX 4090",
+      "NVIDIA GeForce RTX 4090"
+    ],
+    "cuda_visible_devices": null
+  },
+  "world_size": 1,
+  "effective_batch": 8,
+  "stages": [
+    {
+      "name": "s0_patch512",
+      "updates": 2500,
+      "seconds_per_update": 0.5027638852596283,
+      "median_seconds": 0.48084256052970886,
+      "measured_update_seconds": [
+        0.5642685294151306,
+        0.4409078061580658,
+        0.6083999276161194,
+        0.48084256052970886,
+        0.4194006025791168
+      ],
+      "peak_gpu_memory_gb": 2.3318986892700195
+    },
+    {
+      "name": "s1_patch768",
+      "updates": 1500,
+      "seconds_per_update": 0.8972305059432983,
+      "median_seconds": 0.8927361369132996,
+      "measured_update_seconds": [
+        0.9112981557846069,
+        0.8900600075721741,
+        0.9001175165176392,
+        0.891940712928772,
+        0.8927361369132996
+      ],
+      "peak_gpu_memory_gb": 4.29742956161499
+    },
+    {
+      "name": "s2_fullframe",
+      "updates": 500,
+      "seconds_per_update": 1.1990864276885986,
+      "median_seconds": 1.2121676206588745,
+      "measured_update_seconds": [
+        1.2780511379241943,
+        1.319027066230774,
+        1.2121676206588745,
+        1.0254323482513428,
+        1.1607539653778076
+      ],
+      "peak_gpu_memory_gb": 7.622514247894287
+    }
+  ],
+  "validation_seconds": 10.087551773525774,
+  "validation_checks": 18,
+  "estimated_training_seconds": 3202.2986859083176,
+  "estimated_total_seconds": 3383.8746178317815,
+  "planning_range_hours": [
+    0.7519721372959516,
+    1.2219547231059211
+  ],
+  "note": "Short sampled benchmark. Range is a planning margin, not a statistical confidence interval; checkpoint I/O and competing jobs may add time. No benchmark weights are retained."
+}

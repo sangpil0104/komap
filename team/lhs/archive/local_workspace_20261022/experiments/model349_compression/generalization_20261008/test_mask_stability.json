@@ -1,0 +1,3049 @@
+{
+  "scope": "Frozen 12/10 raw-image test10 predictions compared with existing models; agreement is not accuracy.",
+  "independent_generalization_verified": false,
+  "class_order": [
+    "Al3Ni",
+    "Primary Si",
+    "Al",
+    "Eutectic Si"
+  ],
+  "runs": {
+    "fp16_12": {
+      "model": "Model349",
+      "images": 10,
+      "elapsed_seconds": 429.0352710299194,
+      "training_started": false,
+      "tent_steps": 5,
+      "gpus": [
+        "7"
+      ],
+      "opencv_threads": 2,
+      "fusion_seconds": 23.648108151741326,
+      "inference_sha256": "a9762b0f95cba6969c21cfc68888d4a7a4206e9813d11449fcb7407629d85cc9",
+      "tent": "Per-image BN adaptation; checkpoint files never modified",
+      "mean_image_miou": null
+    },
+    "fp16_10": {
+      "model": "Model349",
+      "images": 10,
+      "elapsed_seconds": 332.79455936094746,
+      "training_started": false,
+      "tent_steps": 5,
+      "gpus": [
+        "7"
+      ],
+      "opencv_threads": 2,
+      "fusion_seconds": 24.074551193974912,
+      "inference_sha256": "a9762b0f95cba6969c21cfc68888d4a7a4206e9813d11449fcb7407629d85cc9",
+      "tent": "Per-image BN adaptation; checkpoint files never modified",
+      "mean_image_miou": null
+    }
+  },
+  "comparisons": {
+    "fp16_12_vs_lite15": {
+      "summaries": {
+        "all_test10": {
+          "images": 10,
+          "changed_pixels": 10313,
+          "total_pixels": 9074964,
+          "pixel_weighted_agreement": 0.9988635767590924,
+          "image_mean_agreement": 0.9988813551789375,
+          "worst_image_agreement": "A51_step3_sample3",
+          "worst_agreement": 0.9984230034897074,
+          "class_mask_dice_agreement_only": [
+            0.9982350040430276,
+            0.999329884499953,
+            0.9995139876061293,
+            0.9951268688154556
+          ],
+          "transition_counts": [
+            [
+              2607294,
+              167,
+              2112,
+              2582
+            ],
+            [
+              237,
+              961130,
+              51,
+              569
+            ],
+            [
+              2372,
+              76,
+              4955283,
+              123
+            ],
+            [
+              1750,
+              189,
+              85,
+              540944
+            ]
+          ]
+        },
+        "train_valid_specimen_unseen": {
+          "images": 6,
+          "changed_pixels": 6643,
+          "total_pixels": 6103560,
+          "pixel_weighted_agreement": 0.9989116187929667,
+          "image_mean_agreement": 0.9988520373183514,
+          "worst_image_agreement": "A107_step1_sample3",
+          "worst_agreement": 0.998496631823461,
+          "class_mask_dice_agreement_only": [
+            0.9985025016287469,
+            0.9990057487995044,
+            0.999575367601013,
+            0.9944771481567631
+          ],
+          "transition_counts": [
+            [
+              1894323,
+              125,
+              1104,
+              2270
+            ],
+            [
+              133,
+              537056,
+              28,
+              569
+            ],
+            [
+              1504,
+              45,
+              3332056,
+              77
+            ],
+            [
+              546,
+              169,
+              73,
+              333482
+            ]
+          ]
+        },
+        "train_or_valid_specimen_seen": {
+          "images": 4,
+          "changed_pixels": 3670,
+          "total_pixels": 2971404,
+          "pixel_weighted_agreement": 0.9987648936327743,
+          "image_mean_agreement": 0.9989253319698168,
+          "worst_image_agreement": "A51_step3_sample3",
+          "worst_agreement": 0.9984230034897074,
+          "class_mask_dice_agreement_only": [
+            0.9975249741164619,
+            0.9997406785734493,
+            0.9993880143157858,
+            0.9961730345387234
+          ],
+          "transition_counts": [
+            [
+              712971,
+              42,
+              1008,
+              312
+            ],
+            [
+              104,
+              424074,
+              23,
+              0
+            ],
+            [
+              868,
+              31,
+              1623227,
+              46
+            ],
+            [
+              1204,
+              20,
+              12,
+              207462
+            ]
+          ]
+        }
+      },
+      "per_image": [
+        {
+          "image": "A107_step1_sample3",
+          "specimen": "A107",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 1618,
+          "total_pixels": 1076250,
+          "agreement": 0.998496631823461,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              364474,
+              38,
+              294,
+              1074
+            ],
+            [
+              4,
+              104388,
+              1,
+              3
+            ],
+            [
+              156,
+              3,
+              560200,
+              0
+            ],
+            [
+              13,
+              0,
+              32,
+              45570
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.3399581881533101,
+            0.09699976771196284,
+            0.520658768873403,
+            0.042383275261324044
+          ],
+          "candidate_class_area_fraction": [
+            0.338812543554007,
+            0.09703042973286875,
+            0.5208148664343786,
+            0.04334216027874564
+          ]
+        },
+        {
+          "image": "A122_step4_sample1",
+          "specimen": "A122",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 1057,
+          "total_pixels": 1076250,
+          "agreement": 0.9990178861788618,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              313991,
+              28,
+              87,
+              163
+            ],
+            [
+              24,
+              96910,
+              6,
+              198
+            ],
+            [
+              155,
+              15,
+              602443,
+              19
+            ],
+            [
+              203,
+              152,
+              7,
+              61849
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.29200371660859464,
+            0.09025598141695702,
+            0.5599368176538908,
+            0.05780348432055749
+          ],
+          "candidate_class_area_fraction": [
+            0.29210034843205573,
+            0.0902253193960511,
+            0.5598541231126597,
+            0.05782020905923345
+          ]
+        },
+        {
+          "image": "A124_step4_sample3",
+          "specimen": "A124",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 1465,
+          "total_pixels": 1076250,
+          "agreement": 0.9986387921022067,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              390052,
+              19,
+              129,
+              134
+            ],
+            [
+              51,
+              85520,
+              6,
+              210
+            ],
+            [
+              759,
+              15,
+              529549,
+              15
+            ],
+            [
+              100,
+              15,
+              12,
+              69664
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.36267967479674795,
+            0.07970917537746806,
+            0.49276469221835073,
+            0.06484645760743321
+          ],
+          "candidate_class_area_fraction": [
+            0.36326318234610916,
+            0.07950662020905923,
+            0.49216817653890826,
+            0.06506202090592335
+          ]
+        },
+        {
+          "image": "A127_step3_sample2",
+          "specimen": "A127",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 1026,
+          "total_pixels": 1474560,
+          "agreement": 0.99930419921875,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              519613,
+              31,
+              203,
+              477
+            ],
+            [
+              17,
+              128058,
+              2,
+              2
+            ],
+            [
+              211,
+              8,
+              744184,
+              13
+            ],
+            [
+              51,
+              2,
+              9,
+              81679
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.35286729600694444,
+            0.086859130859375,
+            0.5048394097222222,
+            0.055434163411458334
+          ],
+          "candidate_class_area_fraction": [
+            0.35257432725694443,
+            0.08687269422743056,
+            0.5048272026909723,
+            0.055725775824652775
+          ]
+        },
+        {
+          "image": "A133_step4_sample1",
+          "specimen": "A133",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 1026,
+          "total_pixels": 1076250,
+          "agreement": 0.9990466898954704,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              246979,
+              8,
+              335,
+              411
+            ],
+            [
+              26,
+              87654,
+              7,
+              0
+            ],
+            [
+              130,
+              2,
+              696184,
+              12
+            ],
+            [
+              84,
+              0,
+              11,
+              44407
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.23018164924506387,
+            0.08147456445993032,
+            0.6469946573751452,
+            0.041349128919860624
+          ],
+          "candidate_class_area_fraction": [
+            0.2297040650406504,
+            0.08145319396051104,
+            0.647188850174216,
+            0.04165389082462253
+          ]
+        },
+        {
+          "image": "A167_step3_sample3",
+          "specimen": "A167",
+          "train_specimen_seen": true,
+          "valid_specimen_seen": false,
+          "changed_pixels": 1326,
+          "total_pixels": 1161702,
+          "agreement": 0.9988585713031397,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              478478,
+              18,
+              432,
+              196
+            ],
+            [
+              32,
+              116149,
+              1,
+              0
+            ],
+            [
+              390,
+              12,
+              512432,
+              8
+            ],
+            [
+              230,
+              3,
+              4,
+              53317
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.4124327925750321,
+            0.10001015751027371,
+            0.4414574477792067,
+            0.046099602135487416
+          ],
+          "candidate_class_area_fraction": [
+            0.41243795741076456,
+            0.10001015751027371,
+            0.4414806895400025,
+            0.04607119553895922
+          ]
+        },
+        {
+          "image": "A38_step2_sample2",
+          "specimen": "A38",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 451,
+          "total_pixels": 324000,
+          "agreement": 0.998608024691358,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              59214,
+              1,
+              56,
+              11
+            ],
+            [
+              11,
+              34526,
+              6,
+              156
+            ],
+            [
+              93,
+              2,
+              199496,
+              18
+            ],
+            [
+              95,
+              0,
+              2,
+              30313
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.18296913580246912,
+            0.10709567901234568,
+            0.6160771604938272,
+            0.09385802469135802
+          ],
+          "candidate_class_area_fraction": [
+            0.18337345679012346,
+            0.10657098765432099,
+            0.6159259259259259,
+            0.09412962962962963
+          ]
+        },
+        {
+          "image": "A51_step3_sample3",
+          "specimen": "A51",
+          "train_specimen_seen": true,
+          "valid_specimen_seen": false,
+          "changed_pixels": 1832,
+          "total_pixels": 1161702,
+          "agreement": 0.9984230034897074,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              126327,
+              20,
+              449,
+              71
+            ],
+            [
+              62,
+              233925,
+              18,
+              0
+            ],
+            [
+              321,
+              6,
+              705823,
+              17
+            ],
+            [
+              854,
+              13,
+              1,
+              93795
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.10920786914372188,
+            0.20143289759335872,
+            0.6078727591068966,
+            0.0814864741560228
+          ],
+          "candidate_class_area_fraction": [
+            0.10980785089463563,
+            0.20139760454918731,
+            0.6079794990453662,
+            0.08081504551081087
+          ]
+        },
+        {
+          "image": "A63_step2_sample3",
+          "specimen": "A63",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": true,
+          "changed_pixels": 252,
+          "total_pixels": 324000,
+          "agreement": 0.9992222222222222,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              55390,
+              2,
+              50,
+              34
+            ],
+            [
+              6,
+              34615,
+              2,
+              0
+            ],
+            [
+              86,
+              2,
+              200606,
+              11
+            ],
+            [
+              53,
+              0,
+              6,
+              33137
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.17122222222222222,
+            0.10686111111111112,
+            0.6194598765432099,
+            0.10245679012345679
+          ],
+          "candidate_class_area_fraction": [
+            0.17140432098765432,
+            0.10684876543209877,
+            0.6193333333333333,
+            0.10241358024691358
+          ]
+        },
+        {
+          "image": "A87_step1_sample4",
+          "specimen": "A87",
+          "train_specimen_seen": true,
+          "valid_specimen_seen": false,
+          "changed_pixels": 260,
+          "total_pixels": 324000,
+          "agreement": 0.9991975308641975,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              52776,
+              2,
+              77,
+              11
+            ],
+            [
+              4,
+              39385,
+              2,
+              0
+            ],
+            [
+              71,
+              11,
+              204366,
+              10
+            ],
+            [
+              67,
+              4,
+              1,
+              27213
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.16316666666666665,
+            0.12157716049382716,
+            0.6310432098765432,
+            0.08421296296296296
+          ],
+          "candidate_class_area_fraction": [
+            0.16332716049382717,
+            0.12161111111111111,
+            0.6310061728395062,
+            0.08405555555555555
+          ]
+        }
+      ],
+      "ground_truth_available": false,
+      "accuracy_or_miou_claimed": false
+    },
+    "fp16_12_vs_lite14": {
+      "summaries": {
+        "all_test10": {
+          "images": 10,
+          "changed_pixels": 10314,
+          "total_pixels": 9074964,
+          "pixel_weighted_agreement": 0.9988634665658178,
+          "image_mean_agreement": 0.9988813056258525,
+          "worst_image_agreement": "A51_step3_sample3",
+          "worst_agreement": 0.9984238642956628,
+          "class_mask_dice_agreement_only": [
+            0.998235004718778,
+            0.999329884499953,
+            0.9995140884104943,
+            0.9951241049131473
+          ],
+          "transition_counts": [
+            [
+              2607295,
+              167,
+              2112,
+              2583
+            ],
+            [
+              237,
+              961130,
+              51,
+              569
+            ],
+            [
+              2370,
+              76,
+              4955283,
+              124
+            ],
+            [
+              1751,
+              189,
+              85,
+              540942
+            ]
+          ]
+        },
+        "train_valid_specimen_unseen": {
+          "images": 6,
+          "changed_pixels": 6644,
+          "total_pixels": 6103560,
+          "pixel_weighted_agreement": 0.9989114549541579,
+          "image_mean_agreement": 0.9988523256655092,
+          "worst_image_agreement": "A107_step1_sample3",
+          "worst_agreement": 0.998496631823461,
+          "class_mask_dice_agreement_only": [
+            0.9985022392616775,
+            0.9990057487995044,
+            0.9995753674736284,
+            0.9944756488689618
+          ],
+          "transition_counts": [
+            [
+              1894324,
+              125,
+              1105,
+              2271
+            ],
+            [
+              133,
+              537056,
+              28,
+              569
+            ],
+            [
+              1503,
+              45,
+              3332055,
+              77
+            ],
+            [
+              546,
+              169,
+              73,
+              333481
+            ]
+          ]
+        },
+        "train_or_valid_specimen_seen": {
+          "images": 4,
+          "changed_pixels": 3670,
+          "total_pixels": 2971404,
+          "pixel_weighted_agreement": 0.9987648936327743,
+          "image_mean_agreement": 0.9989247755663673,
+          "worst_image_agreement": "A51_step3_sample3",
+          "worst_agreement": 0.9984238642956628,
+          "class_mask_dice_agreement_only": [
+            0.9975256719406161,
+            0.9997406785734493,
+            0.999388322343966,
+            0.9961682328254722
+          ],
+          "transition_counts": [
+            [
+              712971,
+              42,
+              1007,
+              312
+            ],
+            [
+              104,
+              424074,
+              23,
+              0
+            ],
+            [
+              867,
+              31,
+              1623228,
+              47
+            ],
+            [
+              1205,
+              20,
+              12,
+              207461
+            ]
+          ]
+        }
+      },
+      "per_image": [
+        {
+          "image": "A107_step1_sample3",
+          "specimen": "A107",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 1618,
+          "total_pixels": 1076250,
+          "agreement": 0.998496631823461,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              364474,
+              38,
+              294,
+              1074
+            ],
+            [
+              4,
+              104388,
+              1,
+              3
+            ],
+            [
+              156,
+              3,
+              560200,
+              0
+            ],
+            [
+              13,
+              0,
+              32,
+              45570
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.3399581881533101,
+            0.09699976771196284,
+            0.520658768873403,
+            0.042383275261324044
+          ],
+          "candidate_class_area_fraction": [
+            0.338812543554007,
+            0.09703042973286875,
+            0.5208148664343786,
+            0.04334216027874564
+          ]
+        },
+        {
+          "image": "A122_step4_sample1",
+          "specimen": "A122",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 1057,
+          "total_pixels": 1076250,
+          "agreement": 0.9990178861788618,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              313991,
+              28,
+              87,
+              163
+            ],
+            [
+              24,
+              96910,
+              6,
+              198
+            ],
+            [
+              155,
+              15,
+              602443,
+              19
+            ],
+            [
+              203,
+              152,
+              7,
+              61849
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.29200371660859464,
+            0.09025598141695702,
+            0.5599368176538908,
+            0.05780348432055749
+          ],
+          "candidate_class_area_fraction": [
+            0.29210034843205573,
+            0.0902253193960511,
+            0.5598541231126597,
+            0.05782020905923345
+          ]
+        },
+        {
+          "image": "A124_step4_sample3",
+          "specimen": "A124",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 1465,
+          "total_pixels": 1076250,
+          "agreement": 0.9986387921022067,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              390052,
+              19,
+              129,
+              134
+            ],
+            [
+              51,
+              85520,
+              6,
+              210
+            ],
+            [
+              759,
+              15,
+              529549,
+              15
+            ],
+            [
+              100,
+              15,
+              12,
+              69664
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.36267967479674795,
+            0.07970917537746806,
+            0.49276469221835073,
+            0.06484645760743321
+          ],
+          "candidate_class_area_fraction": [
+            0.36326318234610916,
+            0.07950662020905923,
+            0.49216817653890826,
+            0.06506202090592335
+          ]
+        },
+        {
+          "image": "A127_step3_sample2",
+          "specimen": "A127",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 1028,
+          "total_pixels": 1474560,
+          "agreement": 0.9993028428819445,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              519613,
+              31,
+              204,
+              478
+            ],
+            [
+              17,
+              128058,
+              2,
+              2
+            ],
+            [
+              211,
+              8,
+              744183,
+              13
+            ],
+            [
+              51,
+              2,
+              9,
+              81678
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.35286865234375,
+            0.086859130859375,
+            0.5048387315538194,
+            0.05543348524305555
+          ],
+          "candidate_class_area_fraction": [
+            0.35257432725694443,
+            0.08687269422743056,
+            0.5048272026909723,
+            0.055725775824652775
+          ]
+        },
+        {
+          "image": "A133_step4_sample1",
+          "specimen": "A133",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 1026,
+          "total_pixels": 1076250,
+          "agreement": 0.9990466898954704,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              246979,
+              8,
+              335,
+              411
+            ],
+            [
+              26,
+              87654,
+              7,
+              0
+            ],
+            [
+              130,
+              2,
+              696184,
+              12
+            ],
+            [
+              84,
+              0,
+              11,
+              44407
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.23018164924506387,
+            0.08147456445993032,
+            0.6469946573751452,
+            0.041349128919860624
+          ],
+          "candidate_class_area_fraction": [
+            0.2297040650406504,
+            0.08145319396051104,
+            0.647188850174216,
+            0.04165389082462253
+          ]
+        },
+        {
+          "image": "A167_step3_sample3",
+          "specimen": "A167",
+          "train_specimen_seen": true,
+          "valid_specimen_seen": false,
+          "changed_pixels": 1326,
+          "total_pixels": 1161702,
+          "agreement": 0.9988585713031397,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              478478,
+              18,
+              432,
+              196
+            ],
+            [
+              32,
+              116149,
+              1,
+              0
+            ],
+            [
+              390,
+              12,
+              512432,
+              8
+            ],
+            [
+              230,
+              3,
+              4,
+              53317
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.4124327925750321,
+            0.10001015751027371,
+            0.4414574477792067,
+            0.046099602135487416
+          ],
+          "candidate_class_area_fraction": [
+            0.41243795741076456,
+            0.10001015751027371,
+            0.4414806895400025,
+            0.04607119553895922
+          ]
+        },
+        {
+          "image": "A38_step2_sample2",
+          "specimen": "A38",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 450,
+          "total_pixels": 324000,
+          "agreement": 0.9986111111111111,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              59215,
+              1,
+              56,
+              11
+            ],
+            [
+              11,
+              34526,
+              6,
+              156
+            ],
+            [
+              92,
+              2,
+              199496,
+              18
+            ],
+            [
+              95,
+              0,
+              2,
+              30313
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.18297222222222223,
+            0.10709567901234568,
+            0.6160740740740741,
+            0.09385802469135802
+          ],
+          "candidate_class_area_fraction": [
+            0.18337345679012346,
+            0.10657098765432099,
+            0.6159259259259259,
+            0.09412962962962963
+          ]
+        },
+        {
+          "image": "A51_step3_sample3",
+          "specimen": "A51",
+          "train_specimen_seen": true,
+          "valid_specimen_seen": false,
+          "changed_pixels": 1831,
+          "total_pixels": 1161702,
+          "agreement": 0.9984238642956628,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              126327,
+              20,
+              448,
+              71
+            ],
+            [
+              62,
+              233925,
+              18,
+              0
+            ],
+            [
+              320,
+              6,
+              705824,
+              17
+            ],
+            [
+              855,
+              13,
+              1,
+              93795
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.10920700833776649,
+            0.20143289759335872,
+            0.6078727591068966,
+            0.0814873349619782
+          ],
+          "candidate_class_area_fraction": [
+            0.10980785089463563,
+            0.20139760454918731,
+            0.6079794990453662,
+            0.08081504551081087
+          ]
+        },
+        {
+          "image": "A63_step2_sample3",
+          "specimen": "A63",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": true,
+          "changed_pixels": 253,
+          "total_pixels": 324000,
+          "agreement": 0.9992191358024691,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              55390,
+              2,
+              50,
+              34
+            ],
+            [
+              6,
+              34615,
+              2,
+              0
+            ],
+            [
+              86,
+              2,
+              200606,
+              12
+            ],
+            [
+              53,
+              0,
+              6,
+              33136
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.17122222222222222,
+            0.10686111111111112,
+            0.619462962962963,
+            0.1024537037037037
+          ],
+          "candidate_class_area_fraction": [
+            0.17140432098765432,
+            0.10684876543209877,
+            0.6193333333333333,
+            0.10241358024691358
+          ]
+        },
+        {
+          "image": "A87_step1_sample4",
+          "specimen": "A87",
+          "train_specimen_seen": true,
+          "valid_specimen_seen": false,
+          "changed_pixels": 260,
+          "total_pixels": 324000,
+          "agreement": 0.9991975308641975,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              52776,
+              2,
+              77,
+              11
+            ],
+            [
+              4,
+              39385,
+              2,
+              0
+            ],
+            [
+              71,
+              11,
+              204366,
+              10
+            ],
+            [
+              67,
+              4,
+              1,
+              27213
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.16316666666666665,
+            0.12157716049382716,
+            0.6310432098765432,
+            0.08421296296296296
+          ],
+          "candidate_class_area_fraction": [
+            0.16332716049382717,
+            0.12161111111111111,
+            0.6310061728395062,
+            0.08405555555555555
+          ]
+        }
+      ],
+      "ground_truth_available": false,
+      "accuracy_or_miou_claimed": false
+    },
+    "fp16_10_vs_lite15": {
+      "summaries": {
+        "all_test10": {
+          "images": 10,
+          "changed_pixels": 24250,
+          "total_pixels": 9074964,
+          "pixel_weighted_agreement": 0.9973278130910492,
+          "image_mean_agreement": 0.9971235293665707,
+          "worst_image_agreement": "A51_step3_sample3",
+          "worst_agreement": 0.9960730032314655,
+          "class_mask_dice_agreement_only": [
+            0.9958744236665005,
+            0.9983087001627889,
+            0.9984604871308,
+            0.9922502421799319
+          ],
+          "transition_counts": [
+            [
+              2601102,
+              649,
+              6631,
+              3773
+            ],
+            [
+              471,
+              960355,
+              144,
+              1017
+            ],
+            [
+              7267,
+              656,
+              4949456,
+              475
+            ],
+            [
+              2760,
+              317,
+              90,
+              539801
+            ]
+          ]
+        },
+        "train_valid_specimen_unseen": {
+          "images": 6,
+          "changed_pixels": 13383,
+          "total_pixels": 6103560,
+          "pixel_weighted_agreement": 0.9978073452214773,
+          "image_mean_agreement": 0.9975928736632459,
+          "worst_image_agreement": "A38_step2_sample2",
+          "worst_agreement": 0.9963487654320987,
+          "class_mask_dice_agreement_only": [
+            0.9969341216995292,
+            0.9980880252350911,
+            0.9987975617708025,
+            0.9924416841344093
+          ],
+          "transition_counts": [
+            [
+              1891356,
+              337,
+              4225,
+              1904
+            ],
+            [
+              324,
+              536636,
+              98,
+              728
+            ],
+            [
+              3062,
+              278,
+              3330050,
+              292
+            ],
+            [
+              1781,
+              291,
+              63,
+              332135
+            ]
+          ]
+        },
+        "train_or_valid_specimen_seen": {
+          "images": 4,
+          "changed_pixels": 10867,
+          "total_pixels": 2971404,
+          "pixel_weighted_agreement": 0.9963428062962828,
+          "image_mean_agreement": 0.9964195129215582,
+          "worst_image_agreement": "A51_step3_sample3",
+          "worst_agreement": 0.9960730032314655,
+          "class_mask_dice_agreement_only": [
+            0.9930614729153987,
+            0.9985883229087619,
+            0.9977680613741533,
+            0.9919442089299149
+          ],
+          "transition_counts": [
+            [
+              709746,
+              312,
+              2406,
+              1869
+            ],
+            [
+              147,
+              423719,
+              46,
+              289
+            ],
+            [
+              4205,
+              378,
+              1619406,
+              183
+            ],
+            [
+              979,
+              26,
+              27,
+              207666
+            ]
+          ]
+        }
+      },
+      "per_image": [
+        {
+          "image": "A107_step1_sample3",
+          "specimen": "A107",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 1976,
+          "total_pixels": 1076250,
+          "agreement": 0.9981639953542393,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              365049,
+              43,
+              428,
+              360
+            ],
+            [
+              29,
+              104358,
+              8,
+              1
+            ],
+            [
+              507,
+              37,
+              559786,
+              29
+            ],
+            [
+              521,
+              7,
+              6,
+              45081
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.3399581881533101,
+            0.09699976771196284,
+            0.520658768873403,
+            0.042383275261324044
+          ],
+          "candidate_class_area_fraction": [
+            0.34016817653890824,
+            0.09704529616724739,
+            0.520537049941928,
+            0.04224947735191638
+          ]
+        },
+        {
+          "image": "A122_step4_sample1",
+          "specimen": "A122",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 2248,
+          "total_pixels": 1076250,
+          "agreement": 0.9979112659698025,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              313566,
+              98,
+              214,
+              391
+            ],
+            [
+              45,
+              96886,
+              14,
+              193
+            ],
+            [
+              650,
+              105,
+              601823,
+              54
+            ],
+            [
+              269,
+              202,
+              13,
+              61727
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.29200371660859464,
+            0.09025598141695702,
+            0.5599368176538908,
+            0.05780348432055749
+          ],
+          "candidate_class_area_fraction": [
+            0.29224622531939604,
+            0.09039814169570268,
+            0.5594090592334495,
+            0.0579465737514518
+          ]
+        },
+        {
+          "image": "A124_step4_sample3",
+          "specimen": "A124",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 3402,
+          "total_pixels": 1076250,
+          "agreement": 0.9968390243902439,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              388263,
+              119,
+              1578,
+              374
+            ],
+            [
+              61,
+              85202,
+              31,
+              493
+            ],
+            [
+              497,
+              61,
+              529753,
+              27
+            ],
+            [
+              96,
+              50,
+              15,
+              69630
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.36267967479674795,
+            0.07970917537746806,
+            0.49276469221835073,
+            0.06484645760743321
+          ],
+          "candidate_class_area_fraction": [
+            0.3613630662020906,
+            0.07937932636469222,
+            0.49373008130081303,
+            0.06552752613240419
+          ]
+        },
+        {
+          "image": "A127_step3_sample2",
+          "specimen": "A127",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 2168,
+          "total_pixels": 1474560,
+          "agreement": 0.9985297309027777,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              519295,
+              50,
+              793,
+              186
+            ],
+            [
+              77,
+              127944,
+              19,
+              39
+            ],
+            [
+              428,
+              28,
+              743881,
+              79
+            ],
+            [
+              460,
+              2,
+              7,
+              81272
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.35286729600694444,
+            0.086859130859375,
+            0.5048394097222222,
+            0.055434163411458334
+          ],
+          "candidate_class_area_fraction": [
+            0.3528238932291667,
+            0.08682183159722222,
+            0.5050320095486112,
+            0.055322265625
+          ]
+        },
+        {
+          "image": "A133_step4_sample1",
+          "specimen": "A133",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 2406,
+          "total_pixels": 1076250,
+          "agreement": 0.9977644599303136,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              246251,
+              7,
+              1107,
+              368
+            ],
+            [
+              97,
+              87564,
+              26,
+              0
+            ],
+            [
+              369,
+              8,
+              695878,
+              73
+            ],
+            [
+              346,
+              0,
+              5,
+              44151
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.23018164924506387,
+            0.08147456445993032,
+            0.6469946573751452,
+            0.041349128919860624
+          ],
+          "candidate_class_area_fraction": [
+            0.22955911730545878,
+            0.08137421602787456,
+            0.6476339140534263,
+            0.04143275261324042
+          ]
+        },
+        {
+          "image": "A167_step3_sample3",
+          "specimen": "A167",
+          "train_specimen_seen": true,
+          "valid_specimen_seen": false,
+          "changed_pixels": 4073,
+          "total_pixels": 1161702,
+          "agreement": 0.9964939373436561,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              476294,
+              171,
+              2017,
+              642
+            ],
+            [
+              37,
+              115881,
+              28,
+              236
+            ],
+            [
+              702,
+              36,
+              512093,
+              11
+            ],
+            [
+              183,
+              1,
+              9,
+              53361
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.4124327925750321,
+            0.10001015751027371,
+            0.4414574477792067,
+            0.046099602135487416
+          ],
+          "candidate_class_area_fraction": [
+            0.4107903748121291,
+            0.09993010255642153,
+            0.4425807995510036,
+            0.04669872308044576
+          ]
+        },
+        {
+          "image": "A38_step2_sample2",
+          "specimen": "A38",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 1183,
+          "total_pixels": 324000,
+          "agreement": 0.9963487654320987,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              58932,
+              20,
+              105,
+              225
+            ],
+            [
+              15,
+              34682,
+              0,
+              2
+            ],
+            [
+              611,
+              39,
+              198929,
+              30
+            ],
+            [
+              89,
+              30,
+              17,
+              30274
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.18296913580246912,
+            0.10709567901234568,
+            0.6160771604938272,
+            0.09385802469135802
+          ],
+          "candidate_class_area_fraction": [
+            0.1840956790123457,
+            0.1073179012345679,
+            0.6143549382716049,
+            0.09423148148148149
+          ]
+        },
+        {
+          "image": "A51_step3_sample3",
+          "specimen": "A51",
+          "train_specimen_seen": true,
+          "valid_specimen_seen": false,
+          "changed_pixels": 4562,
+          "total_pixels": 1161702,
+          "agreement": 0.9960730032314655,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              125533,
+              107,
+              196,
+              1031
+            ],
+            [
+              76,
+              233911,
+              8,
+              10
+            ],
+            [
+              2423,
+              244,
+              703447,
+              53
+            ],
+            [
+              403,
+              7,
+              4,
+              94249
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.10920786914372188,
+            0.20143289759335872,
+            0.6078727591068966,
+            0.0814864741560228
+          ],
+          "candidate_class_area_fraction": [
+            0.11055761288178896,
+            0.2016601503655843,
+            0.605710414546932,
+            0.08207182220569474
+          ]
+        },
+        {
+          "image": "A63_step2_sample3",
+          "specimen": "A63",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": true,
+          "changed_pixels": 1047,
+          "total_pixels": 324000,
+          "agreement": 0.9967685185185186,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              55229,
+              10,
+              120,
+              117
+            ],
+            [
+              21,
+              34597,
+              3,
+              2
+            ],
+            [
+              432,
+              32,
+              200158,
+              83
+            ],
+            [
+              219,
+              0,
+              8,
+              32969
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.17122222222222222,
+            0.10686111111111112,
+            0.6194598765432099,
+            0.10245679012345679
+          ],
+          "candidate_class_area_fraction": [
+            0.17253395061728394,
+            0.10691049382716049,
+            0.618175925925926,
+            0.10237962962962963
+          ]
+        },
+        {
+          "image": "A87_step1_sample4",
+          "specimen": "A87",
+          "train_specimen_seen": true,
+          "valid_specimen_seen": false,
+          "changed_pixels": 1185,
+          "total_pixels": 324000,
+          "agreement": 0.9963425925925926,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              52690,
+              24,
+              73,
+              79
+            ],
+            [
+              13,
+              39330,
+              7,
+              41
+            ],
+            [
+              648,
+              66,
+              203708,
+              36
+            ],
+            [
+              174,
+              18,
+              6,
+              27087
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.16316666666666665,
+            0.12157716049382716,
+            0.6310432098765432,
+            0.08421296296296296
+          ],
+          "candidate_class_area_fraction": [
+            0.1652006172839506,
+            0.12172222222222222,
+            0.6289938271604938,
+            0.08408333333333333
+          ]
+        }
+      ],
+      "ground_truth_available": false,
+      "accuracy_or_miou_claimed": false
+    },
+    "fp16_10_vs_lite14": {
+      "summaries": {
+        "all_test10": {
+          "images": 10,
+          "changed_pixels": 24253,
+          "total_pixels": 9074964,
+          "pixel_weighted_agreement": 0.9973274825112254,
+          "image_mean_agreement": 0.9971228260020247,
+          "worst_image_agreement": "A51_step3_sample3",
+          "worst_agreement": 0.9960721424255101,
+          "class_mask_dice_agreement_only": [
+            0.9958740423798427,
+            0.9983087001627889,
+            0.9984603861098262,
+            0.992247477787898
+          ],
+          "transition_counts": [
+            [
+              2601102,
+              649,
+              6632,
+              3774
+            ],
+            [
+              471,
+              960355,
+              144,
+              1017
+            ],
+            [
+              7266,
+              656,
+              4949455,
+              476
+            ],
+            [
+              2761,
+              317,
+              90,
+              539799
+            ]
+          ]
+        },
+        "train_valid_specimen_unseen": {
+          "images": 6,
+          "changed_pixels": 13384,
+          "total_pixels": 6103560,
+          "pixel_weighted_agreement": 0.9978071813826684,
+          "image_mean_agreement": 0.9975923592599538,
+          "worst_image_agreement": "A38_step2_sample2",
+          "worst_agreement": 0.9963456790123457,
+          "class_mask_dice_agreement_only": [
+            0.9969338605736743,
+            0.9980880252350911,
+            0.9987975614101494,
+            0.9924401788062056
+          ],
+          "transition_counts": [
+            [
+              1891357,
+              337,
+              4226,
+              1905
+            ],
+            [
+              324,
+              536636,
+              98,
+              728
+            ],
+            [
+              3061,
+              278,
+              3330049,
+              292
+            ],
+            [
+              1781,
+              291,
+              63,
+              332134
+            ]
+          ]
+        },
+        "train_or_valid_specimen_seen": {
+          "images": 4,
+          "changed_pixels": 10869,
+          "total_pixels": 2971404,
+          "pixel_weighted_agreement": 0.9963421332137938,
+          "image_mean_agreement": 0.996418526115131,
+          "worst_image_agreement": "A51_step3_sample3",
+          "worst_agreement": 0.9960721424255101,
+          "class_mask_dice_agreement_only": [
+            0.9930607684714452,
+            0.9985883229087619,
+            0.9977677539957697,
+            0.991939432297202
+          ],
+          "transition_counts": [
+            [
+              709745,
+              312,
+              2406,
+              1869
+            ],
+            [
+              147,
+              423719,
+              46,
+              289
+            ],
+            [
+              4205,
+              378,
+              1619406,
+              184
+            ],
+            [
+              980,
+              26,
+              27,
+              207665
+            ]
+          ]
+        }
+      },
+      "per_image": [
+        {
+          "image": "A107_step1_sample3",
+          "specimen": "A107",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 1976,
+          "total_pixels": 1076250,
+          "agreement": 0.9981639953542393,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              365049,
+              43,
+              428,
+              360
+            ],
+            [
+              29,
+              104358,
+              8,
+              1
+            ],
+            [
+              507,
+              37,
+              559786,
+              29
+            ],
+            [
+              521,
+              7,
+              6,
+              45081
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.3399581881533101,
+            0.09699976771196284,
+            0.520658768873403,
+            0.042383275261324044
+          ],
+          "candidate_class_area_fraction": [
+            0.34016817653890824,
+            0.09704529616724739,
+            0.520537049941928,
+            0.04224947735191638
+          ]
+        },
+        {
+          "image": "A122_step4_sample1",
+          "specimen": "A122",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 2248,
+          "total_pixels": 1076250,
+          "agreement": 0.9979112659698025,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              313566,
+              98,
+              214,
+              391
+            ],
+            [
+              45,
+              96886,
+              14,
+              193
+            ],
+            [
+              650,
+              105,
+              601823,
+              54
+            ],
+            [
+              269,
+              202,
+              13,
+              61727
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.29200371660859464,
+            0.09025598141695702,
+            0.5599368176538908,
+            0.05780348432055749
+          ],
+          "candidate_class_area_fraction": [
+            0.29224622531939604,
+            0.09039814169570268,
+            0.5594090592334495,
+            0.0579465737514518
+          ]
+        },
+        {
+          "image": "A124_step4_sample3",
+          "specimen": "A124",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 3402,
+          "total_pixels": 1076250,
+          "agreement": 0.9968390243902439,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              388263,
+              119,
+              1578,
+              374
+            ],
+            [
+              61,
+              85202,
+              31,
+              493
+            ],
+            [
+              497,
+              61,
+              529753,
+              27
+            ],
+            [
+              96,
+              50,
+              15,
+              69630
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.36267967479674795,
+            0.07970917537746806,
+            0.49276469221835073,
+            0.06484645760743321
+          ],
+          "candidate_class_area_fraction": [
+            0.3613630662020906,
+            0.07937932636469222,
+            0.49373008130081303,
+            0.06552752613240419
+          ]
+        },
+        {
+          "image": "A127_step3_sample2",
+          "specimen": "A127",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 2168,
+          "total_pixels": 1474560,
+          "agreement": 0.9985297309027777,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              519296,
+              50,
+              793,
+              187
+            ],
+            [
+              77,
+              127944,
+              19,
+              39
+            ],
+            [
+              427,
+              28,
+              743881,
+              79
+            ],
+            [
+              460,
+              2,
+              7,
+              81271
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.35286865234375,
+            0.086859130859375,
+            0.5048387315538194,
+            0.05543348524305555
+          ],
+          "candidate_class_area_fraction": [
+            0.3528238932291667,
+            0.08682183159722222,
+            0.5050320095486112,
+            0.055322265625
+          ]
+        },
+        {
+          "image": "A133_step4_sample1",
+          "specimen": "A133",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 2406,
+          "total_pixels": 1076250,
+          "agreement": 0.9977644599303136,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              246251,
+              7,
+              1107,
+              368
+            ],
+            [
+              97,
+              87564,
+              26,
+              0
+            ],
+            [
+              369,
+              8,
+              695878,
+              73
+            ],
+            [
+              346,
+              0,
+              5,
+              44151
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.23018164924506387,
+            0.08147456445993032,
+            0.6469946573751452,
+            0.041349128919860624
+          ],
+          "candidate_class_area_fraction": [
+            0.22955911730545878,
+            0.08137421602787456,
+            0.6476339140534263,
+            0.04143275261324042
+          ]
+        },
+        {
+          "image": "A167_step3_sample3",
+          "specimen": "A167",
+          "train_specimen_seen": true,
+          "valid_specimen_seen": false,
+          "changed_pixels": 4073,
+          "total_pixels": 1161702,
+          "agreement": 0.9964939373436561,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              476294,
+              171,
+              2017,
+              642
+            ],
+            [
+              37,
+              115881,
+              28,
+              236
+            ],
+            [
+              702,
+              36,
+              512093,
+              11
+            ],
+            [
+              183,
+              1,
+              9,
+              53361
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.4124327925750321,
+            0.10001015751027371,
+            0.4414574477792067,
+            0.046099602135487416
+          ],
+          "candidate_class_area_fraction": [
+            0.4107903748121291,
+            0.09993010255642153,
+            0.4425807995510036,
+            0.04669872308044576
+          ]
+        },
+        {
+          "image": "A38_step2_sample2",
+          "specimen": "A38",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 1184,
+          "total_pixels": 324000,
+          "agreement": 0.9963456790123457,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              58932,
+              20,
+              106,
+              225
+            ],
+            [
+              15,
+              34682,
+              0,
+              2
+            ],
+            [
+              611,
+              39,
+              198928,
+              30
+            ],
+            [
+              89,
+              30,
+              17,
+              30274
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.18297222222222223,
+            0.10709567901234568,
+            0.6160740740740741,
+            0.09385802469135802
+          ],
+          "candidate_class_area_fraction": [
+            0.1840956790123457,
+            0.1073179012345679,
+            0.6143549382716049,
+            0.09423148148148149
+          ]
+        },
+        {
+          "image": "A51_step3_sample3",
+          "specimen": "A51",
+          "train_specimen_seen": true,
+          "valid_specimen_seen": false,
+          "changed_pixels": 4563,
+          "total_pixels": 1161702,
+          "agreement": 0.9960721424255101,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              125532,
+              107,
+              196,
+              1031
+            ],
+            [
+              76,
+              233911,
+              8,
+              10
+            ],
+            [
+              2423,
+              244,
+              703447,
+              53
+            ],
+            [
+              404,
+              7,
+              4,
+              94249
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.10920700833776649,
+            0.20143289759335872,
+            0.6078727591068966,
+            0.0814873349619782
+          ],
+          "candidate_class_area_fraction": [
+            0.11055761288178896,
+            0.2016601503655843,
+            0.605710414546932,
+            0.08207182220569474
+          ]
+        },
+        {
+          "image": "A63_step2_sample3",
+          "specimen": "A63",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": true,
+          "changed_pixels": 1048,
+          "total_pixels": 324000,
+          "agreement": 0.9967654320987654,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              55229,
+              10,
+              120,
+              117
+            ],
+            [
+              21,
+              34597,
+              3,
+              2
+            ],
+            [
+              432,
+              32,
+              200158,
+              84
+            ],
+            [
+              219,
+              0,
+              8,
+              32968
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.17122222222222222,
+            0.10686111111111112,
+            0.619462962962963,
+            0.1024537037037037
+          ],
+          "candidate_class_area_fraction": [
+            0.17253395061728394,
+            0.10691049382716049,
+            0.618175925925926,
+            0.10237962962962963
+          ]
+        },
+        {
+          "image": "A87_step1_sample4",
+          "specimen": "A87",
+          "train_specimen_seen": true,
+          "valid_specimen_seen": false,
+          "changed_pixels": 1185,
+          "total_pixels": 324000,
+          "agreement": 0.9963425925925926,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              52690,
+              24,
+              73,
+              79
+            ],
+            [
+              13,
+              39330,
+              7,
+              41
+            ],
+            [
+              648,
+              66,
+              203708,
+              36
+            ],
+            [
+              174,
+              18,
+              6,
+              27087
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.16316666666666665,
+            0.12157716049382716,
+            0.6310432098765432,
+            0.08421296296296296
+          ],
+          "candidate_class_area_fraction": [
+            0.1652006172839506,
+            0.12172222222222222,
+            0.6289938271604938,
+            0.08408333333333333
+          ]
+        }
+      ],
+      "ground_truth_available": false,
+      "accuracy_or_miou_claimed": false
+    },
+    "fp16_10_vs_fp16_12": {
+      "summaries": {
+        "all_test10": {
+          "images": 10,
+          "changed_pixels": 28198,
+          "total_pixels": 9074964,
+          "pixel_weighted_agreement": 0.9968927700429445,
+          "image_mean_agreement": 0.9967144998716678,
+          "worst_image_agreement": "A51_step3_sample3",
+          "worst_agreement": 0.995144193605589,
+          "class_mask_dice_agreement_only": [
+            0.9951331095774989,
+            0.9982079905840224,
+            0.9983049978958733,
+            0.9901550008996736
+          ],
+          "transition_counts": [
+            [
+              2598916,
+              741,
+              7522,
+              4474
+            ],
+            [
+              493,
+              960046,
+              165,
+              858
+            ],
+            [
+              7900,
+              653,
+              4948524,
+              454
+            ],
+            [
+              4291,
+              537,
+              110,
+              539280
+            ]
+          ]
+        },
+        "train_valid_specimen_unseen": {
+          "images": 6,
+          "changed_pixels": 15804,
+          "total_pixels": 6103560,
+          "pixel_weighted_agreement": 0.9974106914653088,
+          "image_mean_agreement": 0.9971632462253894,
+          "worst_image_agreement": "A38_step2_sample2",
+          "worst_agreement": 0.9957006172839507,
+          "class_mask_dice_agreement_only": [
+            0.9963156095036447,
+            0.9979859284776689,
+            0.9986632565936935,
+            0.9902376473847171
+          ],
+          "transition_counts": [
+            [
+              1889527,
+              367,
+              4856,
+              1756
+            ],
+            [
+              346,
+              536386,
+              109,
+              554
+            ],
+            [
+              3298,
+              273,
+              3329392,
+              298
+            ],
+            [
+              3352,
+              516,
+              79,
+              332451
+            ]
+          ]
+        },
+        "train_or_valid_specimen_seen": {
+          "images": 4,
+          "changed_pixels": 12394,
+          "total_pixels": 2971404,
+          "pixel_weighted_agreement": 0.9958289078159684,
+          "image_mean_agreement": 0.9960413803410858,
+          "worst_image_agreement": "A51_step3_sample3",
+          "worst_agreement": 0.995144193605589,
+          "class_mask_dice_agreement_only": [
+            0.9919970578035329,
+            0.9984892800158378,
+            0.9975691240868042,
+            0.9900221862158262
+          ],
+          "transition_counts": [
+            [
+              709389,
+              374,
+              2666,
+              2718
+            ],
+            [
+              147,
+              423660,
+              56,
+              304
+            ],
+            [
+              4602,
+              380,
+              1619132,
+              156
+            ],
+            [
+              939,
+              21,
+              31,
+              206829
+            ]
+          ]
+        }
+      },
+      "per_image": [
+        {
+          "image": "A107_step1_sample3",
+          "specimen": "A107",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 2934,
+          "total_pixels": 1076250,
+          "agreement": 0.9972738675958188,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              363965,
+              33,
+              461,
+              188
+            ],
+            [
+              56,
+              104364,
+              8,
+              1
+            ],
+            [
+              680,
+              38,
+              559757,
+              52
+            ],
+            [
+              1405,
+              10,
+              2,
+              45230
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.338812543554007,
+            0.09703042973286875,
+            0.5208148664343786,
+            0.04334216027874564
+          ],
+          "candidate_class_area_fraction": [
+            0.34016817653890824,
+            0.09704529616724739,
+            0.520537049941928,
+            0.04224947735191638
+          ]
+        },
+        {
+          "image": "A122_step4_sample1",
+          "specimen": "A122",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 2073,
+          "total_pixels": 1076250,
+          "agreement": 0.9980738675958188,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              313554,
+              101,
+              259,
+              459
+            ],
+            [
+              52,
+              97016,
+              17,
+              20
+            ],
+            [
+              627,
+              99,
+              601769,
+              48
+            ],
+            [
+              297,
+              75,
+              19,
+              61838
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.29210034843205573,
+            0.0902253193960511,
+            0.5598541231126597,
+            0.05782020905923345
+          ],
+          "candidate_class_area_fraction": [
+            0.29224622531939604,
+            0.09039814169570268,
+            0.5594090592334495,
+            0.0579465737514518
+          ]
+        },
+        {
+          "image": "A124_step4_sample3",
+          "specimen": "A124",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 4100,
+          "total_pixels": 1076250,
+          "agreement": 0.9961904761904762,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              388333,
+              142,
+              2104,
+              383
+            ],
+            [
+              52,
+              84985,
+              39,
+              493
+            ],
+            [
+              393,
+              61,
+              529213,
+              29
+            ],
+            [
+              139,
+              244,
+              21,
+              69619
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.36326318234610916,
+            0.07950662020905923,
+            0.49216817653890826,
+            0.06506202090592335
+          ],
+          "candidate_class_area_fraction": [
+            0.3613630662020906,
+            0.07937932636469222,
+            0.49373008130081303,
+            0.06552752613240419
+          ]
+        },
+        {
+          "image": "A127_step3_sample2",
+          "specimen": "A127",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 2665,
+          "total_pixels": 1474560,
+          "agreement": 0.9981926812065972,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              518828,
+              43,
+              880,
+              141
+            ],
+            [
+              83,
+              127956,
+              22,
+              38
+            ],
+            [
+              508,
+              24,
+              743790,
+              76
+            ],
+            [
+              841,
+              1,
+              8,
+              81321
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.35257432725694443,
+            0.08687269422743056,
+            0.5048272026909723,
+            0.055725775824652775
+          ],
+          "candidate_class_area_fraction": [
+            0.3528238932291667,
+            0.08682183159722222,
+            0.5050320095486112,
+            0.055322265625
+          ]
+        },
+        {
+          "image": "A133_step4_sample1",
+          "specimen": "A133",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 2639,
+          "total_pixels": 1076250,
+          "agreement": 0.9975479674796748,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              245874,
+              18,
+              1037,
+              290
+            ],
+            [
+              90,
+              87551,
+              23,
+              0
+            ],
+            [
+              506,
+              9,
+              695953,
+              69
+            ],
+            [
+              593,
+              1,
+              3,
+              44233
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.2297040650406504,
+            0.08145319396051104,
+            0.647188850174216,
+            0.04165389082462253
+          ],
+          "candidate_class_area_fraction": [
+            0.22955911730545878,
+            0.08137421602787456,
+            0.6476339140534263,
+            0.04143275261324042
+          ]
+        },
+        {
+          "image": "A167_step3_sample3",
+          "specimen": "A167",
+          "train_specimen_seen": true,
+          "valid_specimen_seen": false,
+          "changed_pixels": 4432,
+          "total_pixels": 1161702,
+          "agreement": 0.9961849080056675,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              476116,
+              189,
+              2094,
+              731
+            ],
+            [
+              41,
+              115871,
+              32,
+              238
+            ],
+            [
+              822,
+              29,
+              512010,
+              8
+            ],
+            [
+              237,
+              0,
+              11,
+              53273
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.41243795741076456,
+            0.10001015751027371,
+            0.4414806895400025,
+            0.04607119553895922
+          ],
+          "candidate_class_area_fraction": [
+            0.4107903748121291,
+            0.09993010255642153,
+            0.4425807995510036,
+            0.04669872308044576
+          ]
+        },
+        {
+          "image": "A38_step2_sample2",
+          "specimen": "A38",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": false,
+          "changed_pixels": 1393,
+          "total_pixels": 324000,
+          "agreement": 0.9957006172839507,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              58973,
+              30,
+              115,
+              295
+            ],
+            [
+              13,
+              34514,
+              0,
+              2
+            ],
+            [
+              584,
+              42,
+              198910,
+              24
+            ],
+            [
+              77,
+              185,
+              26,
+              30210
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.18337345679012346,
+            0.10657098765432099,
+            0.6159259259259259,
+            0.09412962962962963
+          ],
+          "candidate_class_area_fraction": [
+            0.1840956790123457,
+            0.1073179012345679,
+            0.6143549382716049,
+            0.09423148148148149
+          ]
+        },
+        {
+          "image": "A51_step3_sample3",
+          "specimen": "A51",
+          "train_specimen_seen": true,
+          "valid_specimen_seen": false,
+          "changed_pixels": 5641,
+          "total_pixels": 1161702,
+          "agreement": 0.995144193605589,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              125346,
+              148,
+              351,
+              1719
+            ],
+            [
+              75,
+              233859,
+              9,
+              21
+            ],
+            [
+              2703,
+              257,
+              703292,
+              39
+            ],
+            [
+              311,
+              5,
+              3,
+              93564
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.10980785089463563,
+            0.20139760454918731,
+            0.6079794990453662,
+            0.08081504551081087
+          ],
+          "candidate_class_area_fraction": [
+            0.11055761288178896,
+            0.2016601503655843,
+            0.605710414546932,
+            0.08207182220569474
+          ]
+        },
+        {
+          "image": "A63_step2_sample3",
+          "specimen": "A63",
+          "train_specimen_seen": false,
+          "valid_specimen_seen": true,
+          "changed_pixels": 1073,
+          "total_pixels": 324000,
+          "agreement": 0.9966882716049382,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              55244,
+              13,
+              132,
+              146
+            ],
+            [
+              20,
+              34592,
+              5,
+              2
+            ],
+            [
+              408,
+              34,
+              200145,
+              77
+            ],
+            [
+              229,
+              0,
+              7,
+              32946
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.17140432098765432,
+            0.10684876543209877,
+            0.6193333333333333,
+            0.10241358024691358
+          ],
+          "candidate_class_area_fraction": [
+            0.17253395061728394,
+            0.10691049382716049,
+            0.618175925925926,
+            0.10237962962962963
+          ]
+        },
+        {
+          "image": "A87_step1_sample4",
+          "specimen": "A87",
+          "train_specimen_seen": true,
+          "valid_specimen_seen": false,
+          "changed_pixels": 1248,
+          "total_pixels": 324000,
+          "agreement": 0.9961481481481481,
+          "transition_counts_reference_rows_candidate_columns": [
+            [
+              52683,
+              24,
+              89,
+              122
+            ],
+            [
+              11,
+              39338,
+              10,
+              43
+            ],
+            [
+              669,
+              60,
+              203685,
+              32
+            ],
+            [
+              162,
+              16,
+              10,
+              27046
+            ]
+          ],
+          "reference_class_area_fraction": [
+            0.16332716049382717,
+            0.12161111111111111,
+            0.6310061728395062,
+            0.08405555555555555
+          ],
+          "candidate_class_area_fraction": [
+            0.1652006172839506,
+            0.12172222222222222,
+            0.6289938271604938,
+            0.08408333333333333
+          ]
+        }
+      ],
+      "ground_truth_available": false,
+      "accuracy_or_miou_claimed": false
+    }
+  }
+}

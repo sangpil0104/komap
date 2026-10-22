@@ -1,0 +1,452 @@
+[
+  {
+    "id": "N00_resampling_control",
+    "engine": "resampling_v2",
+    "contrast": "C640_d4_bicubic",
+    "change": {
+      "engine": "equivalent implementation"
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0,
+      "input_align_corners": false,
+      "restore_align_corners": false
+    }
+  },
+  {
+    "id": "N01_resampling",
+    "engine": "resampling_v2",
+    "contrast": "N00_resampling_control",
+    "change": {
+      "input_mode": "pillow_bicubic"
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "pillow_bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0,
+      "input_align_corners": false,
+      "restore_align_corners": false
+    }
+  },
+  {
+    "id": "N02_resampling",
+    "engine": "resampling_v2",
+    "contrast": "N00_resampling_control",
+    "change": {
+      "input_mode": "pillow_lanczos"
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "pillow_lanczos",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0,
+      "input_align_corners": false,
+      "restore_align_corners": false
+    }
+  },
+  {
+    "id": "N03_resampling",
+    "engine": "resampling_v2",
+    "contrast": "N00_resampling_control",
+    "change": {
+      "input_mode": "opencv_cubic"
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "opencv_cubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0,
+      "input_align_corners": false,
+      "restore_align_corners": false
+    }
+  },
+  {
+    "id": "N04_resampling",
+    "engine": "resampling_v2",
+    "contrast": "N00_resampling_control",
+    "change": {
+      "input_mode": "opencv_lanczos4"
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "opencv_lanczos4",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0,
+      "input_align_corners": false,
+      "restore_align_corners": false
+    }
+  },
+  {
+    "id": "N05_resampling",
+    "engine": "resampling_v2",
+    "contrast": "N00_resampling_control",
+    "change": {
+      "restore": "pillow_bicubic"
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "pillow_bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0,
+      "input_align_corners": false,
+      "restore_align_corners": false
+    }
+  },
+  {
+    "id": "N06_resampling",
+    "engine": "resampling_v2",
+    "contrast": "N00_resampling_control",
+    "change": {
+      "restore": "pillow_lanczos"
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "pillow_lanczos",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0,
+      "input_align_corners": false,
+      "restore_align_corners": false
+    }
+  },
+  {
+    "id": "N07_resampling",
+    "engine": "resampling_v2",
+    "contrast": "N00_resampling_control",
+    "change": {
+      "restore": "opencv_cubic"
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "opencv_cubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0,
+      "input_align_corners": false,
+      "restore_align_corners": false
+    }
+  },
+  {
+    "id": "N08_resampling",
+    "engine": "resampling_v2",
+    "contrast": "N00_resampling_control",
+    "change": {
+      "restore": "opencv_lanczos4"
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "opencv_lanczos4",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0,
+      "input_align_corners": false,
+      "restore_align_corners": false
+    }
+  },
+  {
+    "id": "N09_resampling",
+    "engine": "resampling_v2",
+    "contrast": "N00_resampling_control",
+    "change": {
+      "restore": "nearest"
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "nearest",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0,
+      "input_align_corners": false,
+      "restore_align_corners": false
+    }
+  },
+  {
+    "id": "N10_resampling",
+    "engine": "resampling_v2",
+    "contrast": "N00_resampling_control",
+    "change": {
+      "restore": "nearest-exact"
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "nearest-exact",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0,
+      "input_align_corners": false,
+      "restore_align_corners": false
+    }
+  },
+  {
+    "id": "N11_resampling",
+    "engine": "resampling_v2",
+    "contrast": "N00_resampling_control",
+    "change": {
+      "input_align_corners": true
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0,
+      "input_align_corners": true,
+      "restore_align_corners": false
+    }
+  },
+  {
+    "id": "N12_resampling",
+    "engine": "resampling_v2",
+    "contrast": "N00_resampling_control",
+    "change": {
+      "restore_align_corners": true
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0,
+      "input_align_corners": false,
+      "restore_align_corners": true
+    }
+  },
+  {
+    "id": "N13_resampling",
+    "engine": "resampling_v2",
+    "contrast": "N00_resampling_control",
+    "change": {
+      "restore": "bilinear"
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bilinear",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0,
+      "input_align_corners": false,
+      "restore_align_corners": false
+    }
+  },
+  {
+    "id": "N14_resampling",
+    "engine": "resampling_v2",
+    "contrast": "N13_resampling",
+    "change": {
+      "restore_align_corners": true
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bilinear",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0,
+      "input_align_corners": false,
+      "restore_align_corners": true
+    }
+  }
+]

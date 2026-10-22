@@ -1,0 +1,459 @@
+{
+  "b4_valid_archive_sha256": "80ebfddad10abb1bb5f1d7af8472f477fd5b6435b3c7fef0bfa51e21e1314b05",
+  "config": {
+    "argmax_after_probability_average": true,
+    "base_input_scale": 2.0,
+    "base_overlap": 170,
+    "batch_size": 2,
+    "candidate": "0.50*Model329_B4_4fold + 0.25*Model392_seed1_4fold + 0.25*Model392_seed2_4fold",
+    "family_weights": {
+      "Model329_B4": 0.5,
+      "Model392_seed1": 0.25,
+      "Model392_seed2": 0.25
+    },
+    "folds_per_seed": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "metric": "image-wise 4-class mIoU; empty-union=0",
+    "patch_size": 512,
+    "per_checkpoint_preprocessing": "read and enforce saved preprocessing_config",
+    "stitching": "Gaussian probability stitching at native resolution",
+    "tta": "flip4"
+  },
+  "experiment": "Model401 one-shot Model397 blend valid evaluation",
+  "hrnet_checkpoint_sha256": {
+    "1": {
+      "1": "e29a33dedd88f05818b5b74d4cdd8d02fe20d032f2b528f1a09f49bfc8058a1c",
+      "2": "bf6940a08c49f4ac7b53c4e34f9addab684ecb79e568e52a94a765196b24933d",
+      "3": "dfe9a7c204cd378f479e451a679e4300b319d25896b447d7c2e5f2c06f804682",
+      "4": "21730a77b389909a242cc2e3bf87201a225906c9c768c4152ffc1091b75bf055"
+    },
+    "2": {
+      "1": "481f22f71ee279891033259dc2c6842e7497a6a07347dd13f9ea2bdf359c49bd",
+      "2": "99b86281803e5c625a14cd79527f63c818fb98597b01c8e6e73ed5f495d776a0",
+      "3": "a72464bedbfcf2762cd67a359c644770c05efd17d76d1ee7162a5a8424a32429",
+      "4": "64ab449e4a9c8b015aced5870603b83d8ee6a2e0d7c2b24ec2841d4cbe10ee44"
+    }
+  },
+  "hrnet_seed1_mean_maps": [
+    {
+      "image_id": "A117_step4_sample2",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed1_mean_valid/A117_step4_sample2.npz",
+      "sha256": "300320d2b6ecf8dbd7b17e4176cacb0afa0ec968a8783bec1cf7eb5c60d0f25f",
+      "shape": [
+        875,
+        1230
+      ]
+    },
+    {
+      "image_id": "A11_step1_sample4",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed1_mean_valid/A11_step1_sample4.npz",
+      "sha256": "395c7dcb6385d65ee1771328f6759c00a63c94a233fa6aef188b9d459077e158",
+      "shape": [
+        480,
+        675
+      ]
+    },
+    {
+      "image_id": "A11_step2_sample4",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed1_mean_valid/A11_step2_sample4.npz",
+      "sha256": "2be9d39d10da5123c38e43f49885c765a85f49e4842f09e414c628d1094c49ee",
+      "shape": [
+        480,
+        675
+      ]
+    },
+    {
+      "image_id": "A125_step1_sample4",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed1_mean_valid/A125_step1_sample4.npz",
+      "sha256": "b68b84245526119151c61ef6be4079fa6bd2e58365c1de35eb11692f70817541",
+      "shape": [
+        875,
+        1230
+      ]
+    },
+    {
+      "image_id": "A153_step3_sample3",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed1_mean_valid/A153_step3_sample3.npz",
+      "sha256": "80129a4d72671808b854ab2a9e4d0e9fbf59277e5c6d0a59310f0e627712a0a7",
+      "shape": [
+        909,
+        1278
+      ]
+    },
+    {
+      "image_id": "A170_step4_sample3",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed1_mean_valid/A170_step4_sample3.npz",
+      "sha256": "6c607ab3b418e08f985e3a6eda4fd7ffa6233e63f003561943944cbae0e6425b",
+      "shape": [
+        480,
+        675
+      ]
+    },
+    {
+      "image_id": "A181_step1_sample1",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed1_mean_valid/A181_step1_sample1.npz",
+      "sha256": "338a940c6307ad12cfa945eea6a43d2dc8c755c6c20acbe2bcc1e9f999976d2c",
+      "shape": [
+        1024,
+        1440
+      ]
+    },
+    {
+      "image_id": "A186_step2_sample2",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed1_mean_valid/A186_step2_sample2.npz",
+      "sha256": "4d57b1acfb7f7cde925d943aa10179e98a3767f66dde3bbf29a00f9229ec3ea5",
+      "shape": [
+        909,
+        1278
+      ]
+    },
+    {
+      "image_id": "A191_step4_sample3",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed1_mean_valid/A191_step4_sample3.npz",
+      "sha256": "a3bda2fe5cc7483d49ff8b74754045641650fa3352e956cb47f3fd74146a2a11",
+      "shape": [
+        1024,
+        1440
+      ]
+    },
+    {
+      "image_id": "A40_step3_sample3",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed1_mean_valid/A40_step3_sample3.npz",
+      "sha256": "84ba7be862de361ea0abcd1f5320a3048ff2eb727656023d1bfe0d9db551cee7",
+      "shape": [
+        909,
+        1278
+      ]
+    },
+    {
+      "image_id": "A42_step2_sample4",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed1_mean_valid/A42_step2_sample4.npz",
+      "sha256": "c1636124f12e7da0820235ad87bfb25aa1d853e02725833694b67a25ace90fc3",
+      "shape": [
+        875,
+        1230
+      ]
+    },
+    {
+      "image_id": "A44_step4_sample3",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed1_mean_valid/A44_step4_sample3.npz",
+      "sha256": "c5a1e447f21ce35fe36e2b9be33e51ceab2c37994bbdeff2ea59205f944bdbee",
+      "shape": [
+        909,
+        1278
+      ]
+    },
+    {
+      "image_id": "A55_step2_sample1",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed1_mean_valid/A55_step2_sample1.npz",
+      "sha256": "60f90a004a6c42618ffdcb01c281d1c9a339341ddce2229288837f9de2e7fc74",
+      "shape": [
+        780,
+        1096
+      ]
+    },
+    {
+      "image_id": "A59_step3_sample1",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed1_mean_valid/A59_step3_sample1.npz",
+      "sha256": "3a50d80f9babd45224aea04f4ab717ae3955fd086f1ca9d95dd244ec85ce433e",
+      "shape": [
+        480,
+        675
+      ]
+    },
+    {
+      "image_id": "A63_step1_sample4",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed1_mean_valid/A63_step1_sample4.npz",
+      "sha256": "79ec098766198732250f5a08ed186a0f9576cd790fa4975b214cc12eb0fe805b",
+      "shape": [
+        480,
+        675
+      ]
+    },
+    {
+      "image_id": "A67_step1_sample1",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed1_mean_valid/A67_step1_sample1.npz",
+      "sha256": "0809fa3c8a1019baa7d6dcbcdb1a86b4d2d6b335ca5d0ea17fe7dbed11d313b2",
+      "shape": [
+        480,
+        675
+      ]
+    },
+    {
+      "image_id": "A71_step2_sample1",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed1_mean_valid/A71_step2_sample1.npz",
+      "sha256": "81b482bf0206a88476f3cc73bbe52154db7249c09a732e6c5d0ec91fbde2d833",
+      "shape": [
+        480,
+        675
+      ]
+    },
+    {
+      "image_id": "A72_step4_sample4",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed1_mean_valid/A72_step4_sample4.npz",
+      "sha256": "f8f99c371e4ffffce7c88bee54d70197ed6e1082ed9bd9ff20dd251f631101a4",
+      "shape": [
+        480,
+        675
+      ]
+    },
+    {
+      "image_id": "A74_step3_sample4",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed1_mean_valid/A74_step3_sample4.npz",
+      "sha256": "d7e10e5a37754d5892915eea15aadc71663f791978f58afa4f2e0326c4a8fefa",
+      "shape": [
+        480,
+        675
+      ]
+    },
+    {
+      "image_id": "A7_step1_sample4",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed1_mean_valid/A7_step1_sample4.npz",
+      "sha256": "a3ab16e09d60d0bcac8e635c19596596868661a030a5772a9ba453ecb5d88f88",
+      "shape": [
+        909,
+        1278
+      ]
+    }
+  ],
+  "hrnet_seed2_mean_maps": [
+    {
+      "image_id": "A117_step4_sample2",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed2_mean_valid/A117_step4_sample2.npz",
+      "sha256": "87483fe7bcc60de34ba9384cab41a7b39d724b06e53ccd15193937aa9d6e9f4c",
+      "shape": [
+        875,
+        1230
+      ]
+    },
+    {
+      "image_id": "A11_step1_sample4",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed2_mean_valid/A11_step1_sample4.npz",
+      "sha256": "e104eb709ccddef860c661a989f1312665188762c41744753ddedaaf8f095870",
+      "shape": [
+        480,
+        675
+      ]
+    },
+    {
+      "image_id": "A11_step2_sample4",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed2_mean_valid/A11_step2_sample4.npz",
+      "sha256": "b5d7b2bfd8dfae79405e7494d203918268aa3cc39a3ba2ae831230323b05eca8",
+      "shape": [
+        480,
+        675
+      ]
+    },
+    {
+      "image_id": "A125_step1_sample4",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed2_mean_valid/A125_step1_sample4.npz",
+      "sha256": "6a2ecf94fd6c71c1545fda65cd5483470b467cca0970f4c0a7b6bbbd365ea957",
+      "shape": [
+        875,
+        1230
+      ]
+    },
+    {
+      "image_id": "A153_step3_sample3",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed2_mean_valid/A153_step3_sample3.npz",
+      "sha256": "b631091917fbbfeb8977d9352a7b23ddcc61934c1eadab18cb9538c9f5505cae",
+      "shape": [
+        909,
+        1278
+      ]
+    },
+    {
+      "image_id": "A170_step4_sample3",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed2_mean_valid/A170_step4_sample3.npz",
+      "sha256": "2f665cf1813626456cf7a4e6faf1ea5efa21de06b57679a0ea51988a465614f1",
+      "shape": [
+        480,
+        675
+      ]
+    },
+    {
+      "image_id": "A181_step1_sample1",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed2_mean_valid/A181_step1_sample1.npz",
+      "sha256": "c23fb1b461a6f5b85fa265042372406159fdf6519817735c56d3cd4671e36344",
+      "shape": [
+        1024,
+        1440
+      ]
+    },
+    {
+      "image_id": "A186_step2_sample2",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed2_mean_valid/A186_step2_sample2.npz",
+      "sha256": "27793758ab0e8edba3dd3156cf14cf31705f0d047ea9951857a77134df210dee",
+      "shape": [
+        909,
+        1278
+      ]
+    },
+    {
+      "image_id": "A191_step4_sample3",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed2_mean_valid/A191_step4_sample3.npz",
+      "sha256": "df58e4906e7e32882c2d77a76553f067ed6d1f8008dfbc118a3545fb5c79a913",
+      "shape": [
+        1024,
+        1440
+      ]
+    },
+    {
+      "image_id": "A40_step3_sample3",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed2_mean_valid/A40_step3_sample3.npz",
+      "sha256": "5354865355f6c3b48cd74aad04cb94f94309a413362a8c8b60001aa36f3b56fc",
+      "shape": [
+        909,
+        1278
+      ]
+    },
+    {
+      "image_id": "A42_step2_sample4",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed2_mean_valid/A42_step2_sample4.npz",
+      "sha256": "5e72546db546ee599566317814a7de54230aca1bb1efa7515d6ff796d0585c8b",
+      "shape": [
+        875,
+        1230
+      ]
+    },
+    {
+      "image_id": "A44_step4_sample3",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed2_mean_valid/A44_step4_sample3.npz",
+      "sha256": "72a5721bd20044f1d3b54fe215c5672309c421e8d96f8535fc6e98a789c9d8b7",
+      "shape": [
+        909,
+        1278
+      ]
+    },
+    {
+      "image_id": "A55_step2_sample1",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed2_mean_valid/A55_step2_sample1.npz",
+      "sha256": "e4daea77f075f6e28efa39b08e0dc8b421721c031d2625e18795c8cdb7dbc8f8",
+      "shape": [
+        780,
+        1096
+      ]
+    },
+    {
+      "image_id": "A59_step3_sample1",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed2_mean_valid/A59_step3_sample1.npz",
+      "sha256": "2a45068df5c610f484b0c71700d0e1e49eb335d3ee8ead0917746c00d515c8f8",
+      "shape": [
+        480,
+        675
+      ]
+    },
+    {
+      "image_id": "A63_step1_sample4",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed2_mean_valid/A63_step1_sample4.npz",
+      "sha256": "3dd524ce496de2bddc4663ccc42448bb3d076a62f67beea1885d82fac648467a",
+      "shape": [
+        480,
+        675
+      ]
+    },
+    {
+      "image_id": "A67_step1_sample1",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed2_mean_valid/A67_step1_sample1.npz",
+      "sha256": "6d44fcb1f3583710482c1a79c9d144e05582ba9181f089e7d3c5538f86a4fb10",
+      "shape": [
+        480,
+        675
+      ]
+    },
+    {
+      "image_id": "A71_step2_sample1",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed2_mean_valid/A71_step2_sample1.npz",
+      "sha256": "a2141758f81e2ab7f110bab67ce24aaa85fb1dd92c7ecd5ea2fe156fd31bf131",
+      "shape": [
+        480,
+        675
+      ]
+    },
+    {
+      "image_id": "A72_step4_sample4",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed2_mean_valid/A72_step4_sample4.npz",
+      "sha256": "302baca5ebc2a8a2f19eec443439d312941ed1e333f95fae9017dedede1eb0e0",
+      "shape": [
+        480,
+        675
+      ]
+    },
+    {
+      "image_id": "A74_step3_sample4",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed2_mean_valid/A74_step3_sample4.npz",
+      "sha256": "cf787ce6c956d400866e8ce269f00af0beb90665b48556cad57e6575a2024402",
+      "shape": [
+        480,
+        675
+      ]
+    },
+    {
+      "image_id": "A7_step1_sample4",
+      "path": "outputs/model401_model397_blend_valid_once/hrnet_seed2_mean_valid/A7_step1_sample4.npz",
+      "sha256": "85d9d2323f851da1d5cdcc8d363c2d63b961b530aa7923c408b914c7e573b9cf",
+      "shape": [
+        909,
+        1278
+      ]
+    }
+  ],
+  "image_ids": [
+    "A117_step4_sample2",
+    "A11_step1_sample4",
+    "A11_step2_sample4",
+    "A125_step1_sample4",
+    "A153_step3_sample3",
+    "A170_step4_sample3",
+    "A181_step1_sample1",
+    "A186_step2_sample2",
+    "A191_step4_sample3",
+    "A40_step3_sample3",
+    "A42_step2_sample4",
+    "A44_step4_sample3",
+    "A55_step2_sample1",
+    "A59_step3_sample1",
+    "A63_step1_sample4",
+    "A67_step1_sample1",
+    "A71_step2_sample1",
+    "A72_step4_sample4",
+    "A74_step3_sample4",
+    "A7_step1_sample4"
+  ],
+  "inference_claim_sha256": "5acff1665121e56eb2569e4e9e85abc683502d9cd4b8d5f80b6a71f783632f76",
+  "lock_sha256": "21e3e87f0c9f8150934c5b7854c859716b7a98708af8c79418d786987d51b78e",
+  "recovery": {
+    "newly_inferred_images": [
+      "A11_step1_sample4",
+      "A11_step2_sample4",
+      "A125_step1_sample4",
+      "A153_step3_sample3",
+      "A170_step4_sample3",
+      "A181_step1_sample1",
+      "A186_step2_sample2",
+      "A191_step4_sample3",
+      "A40_step3_sample3",
+      "A42_step2_sample4",
+      "A44_step4_sample3",
+      "A55_step2_sample1",
+      "A59_step3_sample1",
+      "A63_step1_sample4",
+      "A67_step1_sample1",
+      "A71_step2_sample1",
+      "A72_step4_sample4",
+      "A74_step3_sample4",
+      "A7_step1_sample4"
+    ],
+    "preserved_first_image": "A117_step4_sample2",
+    "recovery_claim_sha256": "5c5d3375d43b68cc094c64ef92dd260667fae588711e3679ed6a91b66a88929f",
+    "recovery_lock_sha256": "8ebf6238925973e91bf249730a2ec712d96fb4e14feacd73997a7f4d25bdaeb3"
+  },
+  "status": "INFERENCE_COMPLETE_NOT_SCORED",
+  "test_inputs_excluded": true,
+  "valid_masks_decoded_during_inference": false,
+  "valid_score_computed": false
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "REPRO8_ZN_combine_Y_gamma0.9_halo16_0.05",
+    "contrast": "ZN_combine_Y_gamma0.9_halo16_0.05",
+    "change": {
+      "fresh_raw_image_reproduction": true
+    },
+    "recipe": {
+      "checkpoint": "/Data3/sppark/komap/experiments/HRNet_taeho_multigpu/outputs/runs/HRNet_taeho_no_gaussian_0928_ddp6_20260928T131839_853555Z/last.pt",
+      "target": "ZN_combine_Y_gamma0.9_halo16_0.05",
+      "nodes": {
+        "ZN_combine_Y_gamma0.9_halo16_0.05": {
+          "arm": {
+            "id": "ZN_combine_Y_gamma0.9_halo16_0.05",
+            "contrast": "Y_gamma0.9_halo16",
+            "change": {
+              "normalization_blend": {
+                "scope": "decoder",
+                "amount": 0.05
+              }
+            },
+            "forward_transform": {
+              "normalization_blend": {
+                "scope": "decoder",
+                "amount": 0.05
+              }
+            },
+            "config": {
+              "patch": 640,
+              "scale": 2.0,
+              "overlap": 170,
+              "input_mode": "bicubic",
+              "input_antialias": false,
+              "restore": "bicubic",
+              "restore_antialias": false,
+              "restore_logits": false,
+              "window": "gaussian",
+              "sigma": 0.125,
+              "tta": "d4",
+              "tile_merge": "prob",
+              "tta_merge": "prob",
+              "halo": 16,
+              "precision": "fp32",
+              "gamma": 0.9,
+              "contrast": 1.0,
+              "sharpen": 0.0
+            }
+          },
+          "batch": 4
+        }
+      }
+    }
+  }
+]

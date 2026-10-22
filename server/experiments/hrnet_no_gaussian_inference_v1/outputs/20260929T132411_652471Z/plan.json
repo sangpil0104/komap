@@ -1,0 +1,446 @@
+[
+  {
+    "id": "I00_percentile",
+    "contrast": "C640_d4_bicubic",
+    "change": {
+      "input_transform": {
+        "kind": "percentile",
+        "percentile": 0.5,
+        "strength": 0.5
+      }
+    },
+    "input_transform": {
+      "kind": "percentile",
+      "percentile": 0.5,
+      "strength": 0.5
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "I01_percentile",
+    "contrast": "C640_d4_bicubic",
+    "change": {
+      "input_transform": {
+        "kind": "percentile",
+        "percentile": 1,
+        "strength": 0.5
+      }
+    },
+    "input_transform": {
+      "kind": "percentile",
+      "percentile": 1,
+      "strength": 0.5
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "I02_percentile",
+    "contrast": "C640_d4_bicubic",
+    "change": {
+      "input_transform": {
+        "kind": "percentile",
+        "percentile": 2,
+        "strength": 0.5
+      }
+    },
+    "input_transform": {
+      "kind": "percentile",
+      "percentile": 2,
+      "strength": 0.5
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "I03_clahe",
+    "contrast": "C640_d4_bicubic",
+    "change": {
+      "input_transform": {
+        "kind": "clahe",
+        "clip": 1.0,
+        "grid": 8,
+        "strength": 0.25
+      }
+    },
+    "input_transform": {
+      "kind": "clahe",
+      "clip": 1.0,
+      "grid": 8,
+      "strength": 0.25
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "I04_clahe",
+    "contrast": "C640_d4_bicubic",
+    "change": {
+      "input_transform": {
+        "kind": "clahe",
+        "clip": 1.0,
+        "grid": 8,
+        "strength": 0.5
+      }
+    },
+    "input_transform": {
+      "kind": "clahe",
+      "clip": 1.0,
+      "grid": 8,
+      "strength": 0.5
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "I05_clahe",
+    "contrast": "C640_d4_bicubic",
+    "change": {
+      "input_transform": {
+        "kind": "clahe",
+        "clip": 2.0,
+        "grid": 8,
+        "strength": 0.25
+      }
+    },
+    "input_transform": {
+      "kind": "clahe",
+      "clip": 2.0,
+      "grid": 8,
+      "strength": 0.25
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "I06_clahe",
+    "contrast": "C640_d4_bicubic",
+    "change": {
+      "input_transform": {
+        "kind": "clahe",
+        "clip": 2.0,
+        "grid": 8,
+        "strength": 0.5
+      }
+    },
+    "input_transform": {
+      "kind": "clahe",
+      "clip": 2.0,
+      "grid": 8,
+      "strength": 0.5
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "I07_clahe",
+    "contrast": "C640_d4_bicubic",
+    "change": {
+      "input_transform": {
+        "kind": "clahe",
+        "clip": 4.0,
+        "grid": 8,
+        "strength": 0.25
+      }
+    },
+    "input_transform": {
+      "kind": "clahe",
+      "clip": 4.0,
+      "grid": 8,
+      "strength": 0.25
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "I08_clahe",
+    "contrast": "C640_d4_bicubic",
+    "change": {
+      "input_transform": {
+        "kind": "clahe",
+        "clip": 4.0,
+        "grid": 8,
+        "strength": 0.5
+      }
+    },
+    "input_transform": {
+      "kind": "clahe",
+      "clip": 4.0,
+      "grid": 8,
+      "strength": 0.5
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "I09_illumination",
+    "contrast": "C640_d4_bicubic",
+    "change": {
+      "input_transform": {
+        "kind": "illumination",
+        "sigma": 32,
+        "strength": 0.5
+      }
+    },
+    "input_transform": {
+      "kind": "illumination",
+      "sigma": 32,
+      "strength": 0.5
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "I10_illumination",
+    "contrast": "C640_d4_bicubic",
+    "change": {
+      "input_transform": {
+        "kind": "illumination",
+        "sigma": 64,
+        "strength": 0.5
+      }
+    },
+    "input_transform": {
+      "kind": "illumination",
+      "sigma": 64,
+      "strength": 0.5
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "I11_illumination",
+    "contrast": "C640_d4_bicubic",
+    "change": {
+      "input_transform": {
+        "kind": "illumination",
+        "sigma": 128,
+        "strength": 0.5
+      }
+    },
+    "input_transform": {
+      "kind": "illumination",
+      "sigma": 128,
+      "strength": 0.5
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  }
+]

@@ -1,0 +1,3590 @@
+{
+  "model": 368,
+  "audit": "Model329 grouped train OOF only; no validation/test files read",
+  "image_count": 70,
+  "specimen_group_count": 59,
+  "class_order": [
+    "Al",
+    "Al3Ni",
+    "Primary_Si",
+    "Eutectic_Si"
+  ],
+  "boundary_band": "per-class GT inner boundary dilated 2px; 8-connectivity",
+  "empty_union_policy": "IoU=0 in the source Model329 OOF audit",
+  "classwise": {
+    "Al": {
+      "signed_area_error_per_boundary_pixel_mean": 0.09456881910734372,
+      "signed_area_error_per_boundary_pixel_group_bootstrap_95ci": [
+        0.06124996414746641,
+        0.13388725034911478
+      ],
+      "signed_area_error_per_boundary_pixel_pooled": 0.09429969593800422,
+      "gt_fraction_in_band_pooled": 0.5793664071054873,
+      "fn_fraction_in_band_pooled": 0.9604216908023173,
+      "fp_fraction_in_band_pooled": 0.9227803027304787,
+      "pixel_totals": {
+        "gt_pixels": 39056688,
+        "pred_pixels": 39916346,
+        "gt_boundary_pixels": 9116233,
+        "fn_pixels": 1010124,
+        "fp_pixels": 1869782
+      }
+    },
+    "Al3Ni": {
+      "signed_area_error_per_boundary_pixel_mean": -0.09479297157935374,
+      "signed_area_error_per_boundary_pixel_group_bootstrap_95ci": [
+        -0.1450499196665569,
+        -0.045497838534607045
+      ],
+      "signed_area_error_per_boundary_pixel_pooled": -0.11179254963217236,
+      "gt_fraction_in_band_pooled": 0.6434887999225967,
+      "fn_fraction_in_band_pooled": 0.9686864673115965,
+      "fp_fraction_in_band_pooled": 0.7038667655336288,
+      "pixel_totals": {
+        "gt_pixels": 17942376,
+        "pred_pixels": 17290317,
+        "gt_boundary_pixels": 5832759,
+        "fn_pixels": 2076195,
+        "fp_pixels": 1424136
+      }
+    },
+    "Primary_Si": {
+      "signed_area_error_per_boundary_pixel_mean": -0.002344462218053806,
+      "signed_area_error_per_boundary_pixel_group_bootstrap_95ci": [
+        -0.13823689296395908,
+        0.13846877214488834
+      ],
+      "signed_area_error_per_boundary_pixel_pooled": -0.08016007547792335,
+      "gt_fraction_in_band_pooled": 0.41274363187068397,
+      "fn_fraction_in_band_pooled": 0.8532815260169947,
+      "fp_fraction_in_band_pooled": 0.34790839807586954,
+      "pixel_totals": {
+        "gt_pixels": 6428654,
+        "pred_pixels": 6342162,
+        "gt_boundary_pixels": 1078991,
+        "fn_pixels": 519103,
+        "fp_pixels": 432611
+      }
+    },
+    "Eutectic_Si": {
+      "signed_area_error_per_boundary_pixel_mean": 0.08387609161393544,
+      "signed_area_error_per_boundary_pixel_group_bootstrap_95ci": [
+        -0.12041184906000472,
+        0.32535141825007585
+      ],
+      "signed_area_error_per_boundary_pixel_pooled": -0.04006378076354969,
+      "gt_fraction_in_band_pooled": 0.957091295875489,
+      "fn_fraction_in_band_pooled": 0.9358328116678657,
+      "fp_fraction_in_band_pooled": 0.3761146658345089,
+      "pixel_totals": {
+        "gt_pixels": 4757170,
+        "pred_pixels": 4636063,
+        "gt_boundary_pixels": 3022855,
+        "fn_pixels": 1284348,
+        "fp_pixels": 1163241
+      }
+    }
+  },
+  "per_image": [
+    {
+      "image": "A101_step3_sample3",
+      "specimen_group": "A101",
+      "classes": {
+        "Al": {
+          "gt_pixels": 637003,
+          "pred_pixels": 643243,
+          "gt_boundary_pixels": 196598,
+          "signed_area_error_per_boundary_pixel": 0.031739895624574,
+          "gt_fraction_in_band": 0.7492743362276159,
+          "fn_pixels": 18889,
+          "fn_fraction_in_band": 0.9629943353274393,
+          "fp_pixels": 25129,
+          "fp_fraction_in_band": 0.9448048071948745
+        },
+        "Al3Ni": {
+          "gt_pixels": 324404,
+          "pred_pixels": 313491,
+          "gt_boundary_pixels": 124888,
+          "signed_area_error_per_boundary_pixel": -0.08738229453590417,
+          "gt_fraction_in_band": 0.7719756846401401,
+          "fn_pixels": 31960,
+          "fn_fraction_in_band": 0.97869211514393,
+          "fp_pixels": 21047,
+          "fp_fraction_in_band": 0.7799211289019813
+        },
+        "Primary_Si": {
+          "gt_pixels": 55876,
+          "pred_pixels": 56790,
+          "gt_boundary_pixels": 8836,
+          "signed_area_error_per_boundary_pixel": 0.10344047080126755,
+          "gt_fraction_in_band": 0.41212685231584223,
+          "fn_pixels": 1348,
+          "fn_fraction_in_band": 0.9740356083086054,
+          "fp_pixels": 2262,
+          "fp_fraction_in_band": 0.5747126436781609
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 58967,
+          "pred_pixels": 62726,
+          "gt_boundary_pixels": 48570,
+          "signed_area_error_per_boundary_pixel": 0.07739345274861026,
+          "gt_fraction_in_band": 0.9936744280699374,
+          "fn_pixels": 13996,
+          "fn_fraction_in_band": 0.9821377536438982,
+          "fp_pixels": 17755,
+          "fp_fraction_in_band": 0.3925091523514503
+        }
+      }
+    },
+    {
+      "image": "A106_step4_sample1",
+      "specimen_group": "A106",
+      "classes": {
+        "Al": {
+          "gt_pixels": 624416,
+          "pred_pixels": 627449,
+          "gt_boundary_pixels": 185452,
+          "signed_area_error_per_boundary_pixel": 0.016354636240105257,
+          "gt_fraction_in_band": 0.7513468585045867,
+          "fn_pixels": 22719,
+          "fn_fraction_in_band": 0.9819534310489018,
+          "fp_pixels": 25752,
+          "fp_fraction_in_band": 0.9607797452625039
+        },
+        "Al3Ni": {
+          "gt_pixels": 329431,
+          "pred_pixels": 334396,
+          "gt_boundary_pixels": 134924,
+          "signed_area_error_per_boundary_pixel": 0.036798493966974,
+          "gt_fraction_in_band": 0.8433602180729803,
+          "fn_pixels": 27366,
+          "fn_fraction_in_band": 0.965066140466272,
+          "fp_pixels": 32331,
+          "fp_fraction_in_band": 0.7553740991617952
+        },
+        "Primary_Si": {
+          "gt_pixels": 67695,
+          "pred_pixels": 66001,
+          "gt_boundary_pixels": 20096,
+          "signed_area_error_per_boundary_pixel": -0.0842953821656051,
+          "gt_fraction_in_band": 0.6964325282517173,
+          "fn_pixels": 9582,
+          "fn_fraction_in_band": 0.9269463577541223,
+          "fp_pixels": 7888,
+          "fp_fraction_in_band": 0.3370943204868154
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 54708,
+          "pred_pixels": 48404,
+          "gt_boundary_pixels": 38987,
+          "signed_area_error_per_boundary_pixel": -0.16169492394900864,
+          "gt_fraction_in_band": 0.9827264751041895,
+          "fn_pixels": 20538,
+          "fn_fraction_in_band": 0.972879540364203,
+          "fp_pixels": 14234,
+          "fp_fraction_in_band": 0.28874525783335675
+        }
+      }
+    },
+    {
+      "image": "A108_step2_sample2",
+      "specimen_group": "A108",
+      "classes": {
+        "Al": {
+          "gt_pixels": 567011,
+          "pred_pixels": 565904,
+          "gt_boundary_pixels": 105656,
+          "signed_area_error_per_boundary_pixel": -0.010477398349360187,
+          "gt_fraction_in_band": 0.5093428522550709,
+          "fn_pixels": 13056,
+          "fn_fraction_in_band": 0.9845281862745098,
+          "fp_pixels": 11949,
+          "fp_fraction_in_band": 0.929701230228471
+        },
+        "Al3Ni": {
+          "gt_pixels": 350102,
+          "pred_pixels": 348454,
+          "gt_boundary_pixels": 56232,
+          "signed_area_error_per_boundary_pixel": -0.02930715606771945,
+          "gt_fraction_in_band": 0.3841566172144118,
+          "fn_pixels": 12709,
+          "fn_fraction_in_band": 0.9733259894562908,
+          "fp_pixels": 11061,
+          "fp_fraction_in_band": 0.8110478256938793
+        },
+        "Primary_Si": {
+          "gt_pixels": 81981,
+          "pred_pixels": 82006,
+          "gt_boundary_pixels": 10355,
+          "signed_area_error_per_boundary_pixel": 0.0024142926122646064,
+          "gt_fraction_in_band": 0.3218062721850185,
+          "fn_pixels": 3360,
+          "fn_fraction_in_band": 0.8401785714285714,
+          "fp_pixels": 3385,
+          "fp_fraction_in_band": 0.3701624815361891
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 77156,
+          "pred_pixels": 79886,
+          "gt_boundary_pixels": 48365,
+          "signed_area_error_per_boundary_pixel": 0.05644577690478652,
+          "gt_fraction_in_band": 0.9664057234693348,
+          "fn_pixels": 11226,
+          "fn_fraction_in_band": 0.9304293604133262,
+          "fp_pixels": 13956,
+          "fp_fraction_in_band": 0.5921467469188879
+        }
+      }
+    },
+    {
+      "image": "A109_step1_sample3",
+      "specimen_group": "A109",
+      "classes": {
+        "Al": {
+          "gt_pixels": 588593,
+          "pred_pixels": 589745,
+          "gt_boundary_pixels": 127096,
+          "signed_area_error_per_boundary_pixel": 0.009064014603134638,
+          "gt_fraction_in_band": 0.5709548023846699,
+          "fn_pixels": 14008,
+          "fn_fraction_in_band": 0.9939320388349514,
+          "fp_pixels": 15160,
+          "fp_fraction_in_band": 0.9271108179419525
+        },
+        "Al3Ni": {
+          "gt_pixels": 352370,
+          "pred_pixels": 349658,
+          "gt_boundary_pixels": 88031,
+          "signed_area_error_per_boundary_pixel": -0.030807329236291762,
+          "gt_fraction_in_band": 0.616462808979198,
+          "fn_pixels": 17816,
+          "fn_fraction_in_band": 0.9799618320610687,
+          "fp_pixels": 15104,
+          "fp_fraction_in_band": 0.8434189618644068
+        },
+        "Primary_Si": {
+          "gt_pixels": 55342,
+          "pred_pixels": 61268,
+          "gt_boundary_pixels": 8819,
+          "signed_area_error_per_boundary_pixel": 0.6719582719129154,
+          "gt_fraction_in_band": 0.44212352282172673,
+          "fn_pixels": 1110,
+          "fn_fraction_in_band": 0.9468468468468468,
+          "fp_pixels": 7036,
+          "fp_fraction_in_band": 0.1435474701534963
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 79945,
+          "pred_pixels": 75579,
+          "gt_boundary_pixels": 52706,
+          "signed_area_error_per_boundary_pixel": -0.08283686866770387,
+          "gt_fraction_in_band": 0.9525048470823692,
+          "fn_pixels": 16426,
+          "fn_fraction_in_band": 0.8122488737367588,
+          "fp_pixels": 12060,
+          "fp_fraction_in_band": 0.6296849087893864
+        }
+      }
+    },
+    {
+      "image": "A111_step1_sample2",
+      "specimen_group": "A111",
+      "classes": {
+        "Al": {
+          "gt_pixels": 754913,
+          "pred_pixels": 757653,
+          "gt_boundary_pixels": 171048,
+          "signed_area_error_per_boundary_pixel": 0.016018895280856836,
+          "gt_fraction_in_band": 0.6121168929399812,
+          "fn_pixels": 19552,
+          "fn_fraction_in_band": 0.94189852700491,
+          "fp_pixels": 22292,
+          "fp_fraction_in_band": 0.9819217656558407
+        },
+        "Al3Ni": {
+          "gt_pixels": 193841,
+          "pred_pixels": 210325,
+          "gt_boundary_pixels": 66380,
+          "signed_area_error_per_boundary_pixel": 0.24832780958119915,
+          "gt_fraction_in_band": 0.6012659860401051,
+          "fn_pixels": 15529,
+          "fn_fraction_in_band": 0.99291647884603,
+          "fp_pixels": 32013,
+          "fp_fraction_in_band": 0.4204541904851154
+        },
+        "Primary_Si": {
+          "gt_pixels": 16461,
+          "pred_pixels": 15667,
+          "gt_boundary_pixels": 1811,
+          "signed_area_error_per_boundary_pixel": -0.4384318056322474,
+          "gt_fraction_in_band": 0.29275256667274163,
+          "fn_pixels": 982,
+          "fn_fraction_in_band": 0.7932790224032586,
+          "fp_pixels": 188,
+          "fp_fraction_in_band": 0.9680851063829787
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 111035,
+          "pred_pixels": 92605,
+          "gt_boundary_pixels": 81117,
+          "signed_area_error_per_boundary_pixel": -0.22720268254496592,
+          "gt_fraction_in_band": 0.9925609042193902,
+          "fn_pixels": 30444,
+          "fn_fraction_in_band": 0.9984561818420706,
+          "fp_pixels": 12014,
+          "fp_fraction_in_band": 0.7079240885633428
+        }
+      }
+    },
+    {
+      "image": "A111_step3_sample4",
+      "specimen_group": "A111",
+      "classes": {
+        "Al": {
+          "gt_pixels": 680349,
+          "pred_pixels": 691127,
+          "gt_boundary_pixels": 174391,
+          "signed_area_error_per_boundary_pixel": 0.0618036481240431,
+          "gt_fraction_in_band": 0.6548639007333001,
+          "fn_pixels": 17013,
+          "fn_fraction_in_band": 0.9585611003350379,
+          "fp_pixels": 27791,
+          "fp_fraction_in_band": 0.9914720592997733
+        },
+        "Al3Ni": {
+          "gt_pixels": 232067,
+          "pred_pixels": 236723,
+          "gt_boundary_pixels": 79948,
+          "signed_area_error_per_boundary_pixel": 0.05823785460549357,
+          "gt_fraction_in_band": 0.6272628163418323,
+          "fn_pixels": 20696,
+          "fn_fraction_in_band": 0.997825666795516,
+          "fp_pixels": 25352,
+          "fp_fraction_in_band": 0.5223256547806879
+        },
+        "Primary_Si": {
+          "gt_pixels": 65668,
+          "pred_pixels": 65616,
+          "gt_boundary_pixels": 4384,
+          "signed_area_error_per_boundary_pixel": -0.011861313868613138,
+          "gt_fraction_in_band": 0.18566120484863252,
+          "fn_pixels": 708,
+          "fn_fraction_in_band": 1.0,
+          "fp_pixels": 656,
+          "fp_fraction_in_band": 0.864329268292683
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 98166,
+          "pred_pixels": 82784,
+          "gt_boundary_pixels": 70456,
+          "signed_area_error_per_boundary_pixel": -0.21832065402520723,
+          "gt_fraction_in_band": 0.9899761628262331,
+          "fn_pixels": 25868,
+          "fn_fraction_in_band": 0.9986856347610948,
+          "fp_pixels": 10486,
+          "fp_fraction_in_band": 0.6649818806027084
+        }
+      }
+    },
+    {
+      "image": "A118_step2_sample1",
+      "specimen_group": "A118",
+      "classes": {
+        "Al": {
+          "gt_pixels": 702184,
+          "pred_pixels": 705651,
+          "gt_boundary_pixels": 150812,
+          "signed_area_error_per_boundary_pixel": 0.02298888682598202,
+          "gt_fraction_in_band": 0.5700357740990966,
+          "fn_pixels": 15215,
+          "fn_fraction_in_band": 0.9952021031876438,
+          "fp_pixels": 18682,
+          "fp_fraction_in_band": 0.9444920244085215
+        },
+        "Al3Ni": {
+          "gt_pixels": 228997,
+          "pred_pixels": 223305,
+          "gt_boundary_pixels": 83506,
+          "signed_area_error_per_boundary_pixel": -0.0681627667472996,
+          "gt_fraction_in_band": 0.7922199854146561,
+          "fn_pixels": 20016,
+          "fn_fraction_in_band": 0.9891586730615508,
+          "fp_pixels": 14324,
+          "fp_fraction_in_band": 0.8052918179279531
+        },
+        "Primary_Si": {
+          "gt_pixels": 53544,
+          "pred_pixels": 55213,
+          "gt_boundary_pixels": 8860,
+          "signed_area_error_per_boundary_pixel": 0.18837471783295712,
+          "gt_fraction_in_band": 0.4223815927088002,
+          "fn_pixels": 2600,
+          "fn_fraction_in_band": 0.8361538461538461,
+          "fp_pixels": 4269,
+          "fp_fraction_in_band": 0.27360037479503396
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 91525,
+          "pred_pixels": 92081,
+          "gt_boundary_pixels": 62919,
+          "signed_area_error_per_boundary_pixel": 0.008836758371874951,
+          "gt_fraction_in_band": 0.9770663753072931,
+          "fn_pixels": 15130,
+          "fn_fraction_in_band": 0.9405155320555189,
+          "fp_pixels": 15686,
+          "fp_fraction_in_band": 0.5918653576437588
+        }
+      }
+    },
+    {
+      "image": "A121_step2_sample2",
+      "specimen_group": "A121",
+      "classes": {
+        "Al": {
+          "gt_pixels": 590950,
+          "pred_pixels": 612301,
+          "gt_boundary_pixels": 94277,
+          "signed_area_error_per_boundary_pixel": 0.22647093140426616,
+          "gt_fraction_in_band": 0.43564768592943565,
+          "fn_pixels": 5560,
+          "fn_fraction_in_band": 0.9847122302158273,
+          "fp_pixels": 26911,
+          "fp_fraction_in_band": 0.8707963286388466
+        },
+        "Al3Ni": {
+          "gt_pixels": 299219,
+          "pred_pixels": 311219,
+          "gt_boundary_pixels": 49656,
+          "signed_area_error_per_boundary_pixel": 0.2416626389560174,
+          "gt_fraction_in_band": 0.372997704022806,
+          "fn_pixels": 21217,
+          "fn_fraction_in_band": 0.9359475891973418,
+          "fp_pixels": 33217,
+          "fp_fraction_in_band": 0.4945359303970858
+        },
+        "Primary_Si": {
+          "gt_pixels": 86145,
+          "pred_pixels": 85274,
+          "gt_boundary_pixels": 6834,
+          "signed_area_error_per_boundary_pixel": -0.12745098039215685,
+          "gt_fraction_in_band": 0.2092054094840095,
+          "fn_pixels": 2361,
+          "fn_fraction_in_band": 0.8991952562473529,
+          "fp_pixels": 1490,
+          "fp_fraction_in_band": 0.9067114093959732
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 99936,
+          "pred_pixels": 67456,
+          "gt_boundary_pixels": 59696,
+          "signed_area_error_per_boundary_pixel": -0.5440900562851783,
+          "gt_fraction_in_band": 0.9635066442523215,
+          "fn_pixels": 37989,
+          "fn_fraction_in_band": 0.9884966700887099,
+          "fp_pixels": 5509,
+          "fp_fraction_in_band": 0.6618261027409693
+        }
+      }
+    },
+    {
+      "image": "A123_step1_sample1",
+      "specimen_group": "A123",
+      "classes": {
+        "Al": {
+          "gt_pixels": 526456,
+          "pred_pixels": 533097,
+          "gt_boundary_pixels": 149472,
+          "signed_area_error_per_boundary_pixel": 0.04442972596874331,
+          "gt_fraction_in_band": 0.685515978543316,
+          "fn_pixels": 16710,
+          "fn_fraction_in_band": 0.9728904847396769,
+          "fp_pixels": 23351,
+          "fp_fraction_in_band": 0.9132799451843604
+        },
+        "Al3Ni": {
+          "gt_pixels": 326676,
+          "pred_pixels": 291591,
+          "gt_boundary_pixels": 109054,
+          "signed_area_error_per_boundary_pixel": -0.32172134905643074,
+          "gt_fraction_in_band": 0.6879783026607403,
+          "fn_pixels": 57110,
+          "fn_fraction_in_band": 0.974557870775696,
+          "fp_pixels": 22025,
+          "fp_fraction_in_band": 0.798955732122588
+        },
+        "Primary_Si": {
+          "gt_pixels": 111524,
+          "pred_pixels": 112514,
+          "gt_boundary_pixels": 18378,
+          "signed_area_error_per_boundary_pixel": 0.05386875612144956,
+          "gt_fraction_in_band": 0.3802410243535024,
+          "fn_pixels": 7313,
+          "fn_fraction_in_band": 0.8859565157937919,
+          "fp_pixels": 8303,
+          "fp_fraction_in_band": 0.5164398410213176
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 111594,
+          "pred_pixels": 139048,
+          "gt_boundary_pixels": 82624,
+          "signed_area_error_per_boundary_pixel": 0.33227633617350893,
+          "gt_fraction_in_band": 0.9894080326899296,
+          "fn_pixels": 22847,
+          "fn_fraction_in_band": 0.9850308574429903,
+          "fp_pixels": 50301,
+          "fp_fraction_in_band": 0.43072702331961593
+        }
+      }
+    },
+    {
+      "image": "A123_step4_sample2",
+      "specimen_group": "A123",
+      "classes": {
+        "Al": {
+          "gt_pixels": 628677,
+          "pred_pixels": 635495,
+          "gt_boundary_pixels": 110009,
+          "signed_area_error_per_boundary_pixel": 0.06197674735703442,
+          "gt_fraction_in_band": 0.47198640955530424,
+          "fn_pixels": 15463,
+          "fn_fraction_in_band": 0.9879712862963203,
+          "fp_pixels": 22281,
+          "fp_fraction_in_band": 0.9541313226515865
+        },
+        "Al3Ni": {
+          "gt_pixels": 315653,
+          "pred_pixels": 316913,
+          "gt_boundary_pixels": 64234,
+          "signed_area_error_per_boundary_pixel": 0.01961577980508765,
+          "gt_fraction_in_band": 0.4873104326586473,
+          "fn_pixels": 19654,
+          "fn_fraction_in_band": 0.9574641294392999,
+          "fp_pixels": 20914,
+          "fp_fraction_in_band": 0.6528162953045806
+        },
+        "Primary_Si": {
+          "gt_pixels": 25044,
+          "pred_pixels": 26078,
+          "gt_boundary_pixels": 2754,
+          "signed_area_error_per_boundary_pixel": 0.3754538852578068,
+          "gt_fraction_in_band": 0.29911356013416385,
+          "fn_pixels": 424,
+          "fn_fraction_in_band": 1.0,
+          "fp_pixels": 1458,
+          "fp_fraction_in_band": 0.355281207133059
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 106876,
+          "pred_pixels": 97764,
+          "gt_boundary_pixels": 64031,
+          "signed_area_error_per_boundary_pixel": -0.14230607049710298,
+          "gt_fraction_in_band": 0.9723604925334032,
+          "fn_pixels": 21190,
+          "fn_fraction_in_band": 0.99079754601227,
+          "fp_pixels": 12078,
+          "fp_fraction_in_band": 0.7719821162444114
+        }
+      }
+    },
+    {
+      "image": "A125_step2_sample1",
+      "specimen_group": "A125",
+      "classes": {
+        "Al": {
+          "gt_pixels": 641322,
+          "pred_pixels": 667000,
+          "gt_boundary_pixels": 140284,
+          "signed_area_error_per_boundary_pixel": 0.18304296997519318,
+          "gt_fraction_in_band": 0.565876424011651,
+          "fn_pixels": 6933,
+          "fn_fraction_in_band": 0.9762007788836001,
+          "fp_pixels": 32611,
+          "fp_fraction_in_band": 0.9032535034190917
+        },
+        "Al3Ni": {
+          "gt_pixels": 266596,
+          "pred_pixels": 298047,
+          "gt_boundary_pixels": 72705,
+          "signed_area_error_per_boundary_pixel": 0.43258372876693485,
+          "gt_fraction_in_band": 0.5210130684631428,
+          "fn_pixels": 25463,
+          "fn_fraction_in_band": 0.8955739700742253,
+          "fp_pixels": 56914,
+          "fp_fraction_in_band": 0.3929964507853955
+        },
+        "Primary_Si": {
+          "gt_pixels": 26069,
+          "pred_pixels": 26784,
+          "gt_boundary_pixels": 3561,
+          "signed_area_error_per_boundary_pixel": 0.20078629598427408,
+          "gt_fraction_in_band": 0.34903525259887225,
+          "fn_pixels": 2066,
+          "fn_fraction_in_band": 0.8484995159728945,
+          "fp_pixels": 2781,
+          "fp_fraction_in_band": 0.2434376123696512
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 142263,
+          "pred_pixels": 84419,
+          "gt_boundary_pixels": 82459,
+          "signed_area_error_per_boundary_pixel": -0.7014880122242569,
+          "gt_fraction_in_band": 0.9505352762137731,
+          "fn_pixels": 68174,
+          "fn_fraction_in_band": 0.956288321060815,
+          "fp_pixels": 10330,
+          "fp_fraction_in_band": 0.572216844143272
+        }
+      }
+    },
+    {
+      "image": "A130_step1_sample1",
+      "specimen_group": "A130",
+      "classes": {
+        "Al": {
+          "gt_pixels": 726514,
+          "pred_pixels": 731226,
+          "gt_boundary_pixels": 102317,
+          "signed_area_error_per_boundary_pixel": 0.046052953077201246,
+          "gt_fraction_in_band": 0.3862706018053334,
+          "fn_pixels": 15208,
+          "fn_fraction_in_band": 0.9967780115728564,
+          "fp_pixels": 19920,
+          "fp_fraction_in_band": 0.9722389558232932
+        },
+        "Al3Ni": {
+          "gt_pixels": 463658,
+          "pred_pixels": 450710,
+          "gt_boundary_pixels": 76426,
+          "signed_area_error_per_boundary_pixel": -0.1694187841833931,
+          "gt_fraction_in_band": 0.40697238050459605,
+          "fn_pixels": 24823,
+          "fn_fraction_in_band": 0.9824759295814366,
+          "fp_pixels": 11875,
+          "fp_fraction_in_band": 0.9384421052631579
+        },
+        "Primary_Si": {
+          "gt_pixels": 199140,
+          "pred_pixels": 203185,
+          "gt_boundary_pixels": 21824,
+          "signed_area_error_per_boundary_pixel": 0.18534640762463342,
+          "gt_fraction_in_band": 0.28709952797027216,
+          "fn_pixels": 7799,
+          "fn_fraction_in_band": 0.7753558148480575,
+          "fp_pixels": 11844,
+          "fp_fraction_in_band": 0.36119554204660587
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 85248,
+          "pred_pixels": 89439,
+          "gt_boundary_pixels": 42939,
+          "signed_area_error_per_boundary_pixel": 0.09760357716760987,
+          "gt_fraction_in_band": 0.9066605668168168,
+          "fn_pixels": 15120,
+          "fn_fraction_in_band": 0.846494708994709,
+          "fp_pixels": 19311,
+          "fp_fraction_in_band": 0.5418155455439905
+        }
+      }
+    },
+    {
+      "image": "A137_step4_sample2",
+      "specimen_group": "A137",
+      "classes": {
+        "Al": {
+          "gt_pixels": 622723,
+          "pred_pixels": 637054,
+          "gt_boundary_pixels": 125653,
+          "signed_area_error_per_boundary_pixel": 0.1140521913523752,
+          "gt_fraction_in_band": 0.5344960761044638,
+          "fn_pixels": 11345,
+          "fn_fraction_in_band": 0.9958572058175408,
+          "fp_pixels": 25676,
+          "fp_fraction_in_band": 0.9888222464558343
+        },
+        "Al3Ni": {
+          "gt_pixels": 252041,
+          "pred_pixels": 242437,
+          "gt_boundary_pixels": 68731,
+          "signed_area_error_per_boundary_pixel": -0.13973316261948757,
+          "gt_fraction_in_band": 0.6013783471736741,
+          "fn_pixels": 22121,
+          "fn_fraction_in_band": 0.9893314045477148,
+          "fp_pixels": 12517,
+          "fp_fraction_in_band": 0.7199808260765359
+        },
+        "Primary_Si": {
+          "gt_pixels": 101610,
+          "pred_pixels": 101029,
+          "gt_boundary_pixels": 9608,
+          "signed_area_error_per_boundary_pixel": -0.06047044129891757,
+          "gt_fraction_in_band": 0.26282846176557423,
+          "fn_pixels": 1836,
+          "fn_fraction_in_band": 0.9863834422657952,
+          "fp_pixels": 1255,
+          "fp_fraction_in_band": 0.9697211155378486
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 99876,
+          "pred_pixels": 95730,
+          "gt_boundary_pixels": 63995,
+          "signed_area_error_per_boundary_pixel": -0.06478631143058051,
+          "gt_fraction_in_band": 0.989196603788698,
+          "fn_pixels": 17658,
+          "fn_fraction_in_band": 0.9980178955714124,
+          "fp_pixels": 13512,
+          "fp_fraction_in_band": 0.6681468324452339
+        }
+      }
+    },
+    {
+      "image": "A138_step4_sample3",
+      "specimen_group": "A138",
+      "classes": {
+        "Al": {
+          "gt_pixels": 659923,
+          "pred_pixels": 673981,
+          "gt_boundary_pixels": 229514,
+          "signed_area_error_per_boundary_pixel": 0.06125116550624363,
+          "gt_fraction_in_band": 0.8104551591625083,
+          "fn_pixels": 28922,
+          "fn_fraction_in_band": 0.9382822764677409,
+          "fp_pixels": 42980,
+          "fp_fraction_in_band": 0.9850162866449511
+        },
+        "Al3Ni": {
+          "gt_pixels": 287664,
+          "pred_pixels": 283874,
+          "gt_boundary_pixels": 178754,
+          "signed_area_error_per_boundary_pixel": -0.021202322745225283,
+          "gt_fraction_in_band": 0.9815618221258134,
+          "fn_pixels": 42390,
+          "fn_fraction_in_band": 0.9961547534795943,
+          "fp_pixels": 38600,
+          "fp_fraction_in_band": 0.7798445595854923
+        },
+        "Primary_Si": {
+          "gt_pixels": 108367,
+          "pred_pixels": 101661,
+          "gt_boundary_pixels": 25402,
+          "signed_area_error_per_boundary_pixel": -0.2639949610266908,
+          "gt_fraction_in_band": 0.5770945029390866,
+          "fn_pixels": 11597,
+          "fn_fraction_in_band": 0.9270500991635768,
+          "fp_pixels": 4891,
+          "fp_fraction_in_band": 0.662850132897158
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 20296,
+          "pred_pixels": 16734,
+          "gt_boundary_pixels": 14982,
+          "signed_area_error_per_boundary_pixel": -0.23775196902950207,
+          "gt_fraction_in_band": 0.9847260543949546,
+          "fn_pixels": 11256,
+          "fn_fraction_in_band": 0.9864960909737029,
+          "fp_pixels": 7694,
+          "fp_fraction_in_band": 0.1658435144268261
+        }
+      }
+    },
+    {
+      "image": "A139_step3_sample4",
+      "specimen_group": "A139",
+      "classes": {
+        "Al": {
+          "gt_pixels": 913289,
+          "pred_pixels": 929058,
+          "gt_boundary_pixels": 194773,
+          "signed_area_error_per_boundary_pixel": 0.0809609134736334,
+          "gt_fraction_in_band": 0.5630725871000307,
+          "fn_pixels": 22526,
+          "fn_fraction_in_band": 0.9596022374145432,
+          "fp_pixels": 38295,
+          "fp_fraction_in_band": 0.9761326543935239
+        },
+        "Al3Ni": {
+          "gt_pixels": 459135,
+          "pred_pixels": 395197,
+          "gt_boundary_pixels": 163953,
+          "signed_area_error_per_boundary_pixel": -0.3899776155361597,
+          "gt_fraction_in_band": 0.6780336937937643,
+          "fn_pixels": 84435,
+          "fn_fraction_in_band": 0.9790489725824599,
+          "fp_pixels": 20497,
+          "fp_fraction_in_band": 0.9019368688100697
+        },
+        "Primary_Si": {
+          "gt_pixels": 80724,
+          "pred_pixels": 82106,
+          "gt_boundary_pixels": 8287,
+          "signed_area_error_per_boundary_pixel": 0.16676722577531072,
+          "gt_fraction_in_band": 0.275469501015807,
+          "fn_pixels": 2333,
+          "fn_fraction_in_band": 0.8118302614659237,
+          "fp_pixels": 3715,
+          "fp_fraction_in_band": 0.6282637954239569
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 21412,
+          "pred_pixels": 68199,
+          "gt_boundary_pixels": 12735,
+          "signed_area_error_per_boundary_pixel": 3.673890851982725,
+          "gt_fraction_in_band": 0.9787969362974033,
+          "fn_pixels": 4045,
+          "fn_fraction_in_band": 0.9933250927070457,
+          "fp_pixels": 50832,
+          "fp_fraction_in_band": 0.0626377085300598
+        }
+      }
+    },
+    {
+      "image": "A139_step4_sample3",
+      "specimen_group": "A139",
+      "classes": {
+        "Al": {
+          "gt_pixels": 913097,
+          "pred_pixels": 921095,
+          "gt_boundary_pixels": 146317,
+          "signed_area_error_per_boundary_pixel": 0.054662137687350065,
+          "gt_fraction_in_band": 0.4421720802937694,
+          "fn_pixels": 20259,
+          "fn_fraction_in_band": 0.9838096648403178,
+          "fp_pixels": 28257,
+          "fp_fraction_in_band": 0.9751919878260255
+        },
+        "Al3Ni": {
+          "gt_pixels": 353188,
+          "pred_pixels": 304775,
+          "gt_boundary_pixels": 88532,
+          "signed_area_error_per_boundary_pixel": -0.5468418199069263,
+          "gt_fraction_in_band": 0.47420920303068054,
+          "fn_pixels": 60370,
+          "fn_fraction_in_band": 0.9872287560046381,
+          "fp_pixels": 11957,
+          "fp_fraction_in_band": 0.9066655515597558
+        },
+        "Primary_Si": {
+          "gt_pixels": 105065,
+          "pred_pixels": 104980,
+          "gt_boundary_pixels": 4647,
+          "signed_area_error_per_boundary_pixel": -0.018291370776845277,
+          "gt_fraction_in_band": 0.12510350735259126,
+          "fn_pixels": 915,
+          "fn_fraction_in_band": 0.9639344262295082,
+          "fp_pixels": 830,
+          "fp_fraction_in_band": 0.7795180722891566
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 103210,
+          "pred_pixels": 143710,
+          "gt_boundary_pixels": 54309,
+          "signed_area_error_per_boundary_pixel": 0.7457327514776556,
+          "gt_fraction_in_band": 0.9580660788683267,
+          "fn_pixels": 11293,
+          "fn_fraction_in_band": 0.9986717435579563,
+          "fp_pixels": 51793,
+          "fp_fraction_in_band": 0.22004904137624776
+        }
+      }
+    },
+    {
+      "image": "A140_step4_sample2",
+      "specimen_group": "A140",
+      "classes": {
+        "Al": {
+          "gt_pixels": 829400,
+          "pred_pixels": 854755,
+          "gt_boundary_pixels": 117584,
+          "signed_area_error_per_boundary_pixel": 0.21563307933052117,
+          "gt_fraction_in_band": 0.3888847359537015,
+          "fn_pixels": 9272,
+          "fn_fraction_in_band": 0.9995685936151855,
+          "fp_pixels": 34627,
+          "fp_fraction_in_band": 0.9844918705056748
+        },
+        "Al3Ni": {
+          "gt_pixels": 394693,
+          "pred_pixels": 376575,
+          "gt_boundary_pixels": 66933,
+          "signed_area_error_per_boundary_pixel": -0.270688599046808,
+          "gt_fraction_in_band": 0.39884669857332156,
+          "fn_pixels": 27097,
+          "fn_fraction_in_band": 0.9914012621323394,
+          "fp_pixels": 8979,
+          "fp_fraction_in_band": 0.8028733711994654
+        },
+        "Primary_Si": {
+          "gt_pixels": 149596,
+          "pred_pixels": 144911,
+          "gt_boundary_pixels": 18029,
+          "signed_area_error_per_boundary_pixel": -0.25985911586887794,
+          "gt_fraction_in_band": 0.3096673707853151,
+          "fn_pixels": 9486,
+          "fn_fraction_in_band": 0.8653805608264812,
+          "fp_pixels": 4801,
+          "fp_fraction_in_band": 0.2959800041657988
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 100871,
+          "pred_pixels": 98319,
+          "gt_boundary_pixels": 47860,
+          "signed_area_error_per_boundary_pixel": -0.05332218972001672,
+          "gt_fraction_in_band": 0.9125715022157013,
+          "fn_pixels": 17885,
+          "fn_fraction_in_band": 0.9045009784735812,
+          "fp_pixels": 15333,
+          "fp_fraction_in_band": 0.41400900019565645
+        }
+      }
+    },
+    {
+      "image": "A146_step2_sample1",
+      "specimen_group": "A146",
+      "classes": {
+        "Al": {
+          "gt_pixels": 563064,
+          "pred_pixels": 572873,
+          "gt_boundary_pixels": 98103,
+          "signed_area_error_per_boundary_pixel": 0.09998674862134695,
+          "gt_fraction_in_band": 0.4667657673017632,
+          "fn_pixels": 11132,
+          "fn_fraction_in_band": 0.9930830039525692,
+          "fp_pixels": 20941,
+          "fp_fraction_in_band": 0.9529630867675851
+        },
+        "Al3Ni": {
+          "gt_pixels": 392332,
+          "pred_pixels": 384670,
+          "gt_boundary_pixels": 54181,
+          "signed_area_error_per_boundary_pixel": -0.14141488713755745,
+          "gt_fraction_in_band": 0.3286196384694595,
+          "fn_pixels": 18068,
+          "fn_fraction_in_band": 0.9786362630064201,
+          "fp_pixels": 10406,
+          "fp_fraction_in_band": 0.7181433788199116
+        },
+        "Primary_Si": {
+          "gt_pixels": 128532,
+          "pred_pixels": 130472,
+          "gt_boundary_pixels": 18039,
+          "signed_area_error_per_boundary_pixel": 0.10754476412217973,
+          "gt_fraction_in_band": 0.3482401269722715,
+          "fn_pixels": 5002,
+          "fn_fraction_in_band": 0.9826069572171131,
+          "fp_pixels": 6942,
+          "fp_fraction_in_band": 0.41933160472486314
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 77774,
+          "pred_pixels": 73687,
+          "gt_boundary_pixels": 42583,
+          "signed_area_error_per_boundary_pixel": -0.09597726792381936,
+          "gt_fraction_in_band": 0.949674698485355,
+          "fn_pixels": 14660,
+          "fn_fraction_in_band": 0.9376534788540245,
+          "fp_pixels": 10573,
+          "fp_fraction_in_band": 0.6520382105362716
+        }
+      }
+    },
+    {
+      "image": "A147_step4_sample4",
+      "specimen_group": "A147",
+      "classes": {
+        "Al": {
+          "gt_pixels": 477469,
+          "pred_pixels": 515556,
+          "gt_boundary_pixels": 190504,
+          "signed_area_error_per_boundary_pixel": 0.19992756057615588,
+          "gt_fraction_in_band": 0.8468759228347809,
+          "fn_pixels": 22038,
+          "fn_fraction_in_band": 0.9798983573827026,
+          "fp_pixels": 60125,
+          "fp_fraction_in_band": 0.9033846153846153
+        },
+        "Al3Ni": {
+          "gt_pixels": 503120,
+          "pred_pixels": 471219,
+          "gt_boundary_pixels": 206823,
+          "signed_area_error_per_boundary_pixel": -0.15424300005318559,
+          "gt_fraction_in_band": 0.8636369057083797,
+          "fn_pixels": 69983,
+          "fn_fraction_in_band": 0.9625337581984196,
+          "fp_pixels": 38082,
+          "fp_fraction_in_band": 0.8595924583792868
+        },
+        "Primary_Si": {
+          "gt_pixels": 161166,
+          "pred_pixels": 166418,
+          "gt_boundary_pixels": 42480,
+          "signed_area_error_per_boundary_pixel": 0.12363465160075329,
+          "gt_fraction_in_band": 0.6700172492957571,
+          "fn_pixels": 10290,
+          "fn_fraction_in_band": 0.8726919339164237,
+          "fp_pixels": 15542,
+          "fp_fraction_in_band": 0.7617423754986489
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 19947,
+          "pred_pixels": 8509,
+          "gt_boundary_pixels": 14485,
+          "signed_area_error_per_boundary_pixel": -0.7896444597859855,
+          "gt_fraction_in_band": 0.9705218829899233,
+          "fn_pixels": 14728,
+          "fn_fraction_in_band": 0.9645573058120587,
+          "fp_pixels": 3290,
+          "fp_fraction_in_band": 0.20516717325227962
+        }
+      }
+    },
+    {
+      "image": "A150_step4_sample1",
+      "specimen_group": "A150",
+      "classes": {
+        "Al": {
+          "gt_pixels": 694259,
+          "pred_pixels": 723131,
+          "gt_boundary_pixels": 92387,
+          "signed_area_error_per_boundary_pixel": 0.3125115005357897,
+          "gt_fraction_in_band": 0.3610828235572027,
+          "fn_pixels": 4999,
+          "fn_fraction_in_band": 0.9997999599919984,
+          "fp_pixels": 33871,
+          "fp_fraction_in_band": 0.9011839036343775
+        },
+        "Al3Ni": {
+          "gt_pixels": 476441,
+          "pred_pixels": 500828,
+          "gt_boundary_pixels": 79146,
+          "signed_area_error_per_boundary_pixel": 0.3081267530892275,
+          "gt_fraction_in_band": 0.40929936760270424,
+          "fn_pixels": 30539,
+          "fn_fraction_in_band": 0.943809554995252,
+          "fp_pixels": 54926,
+          "fp_fraction_in_band": 0.6901285365764848
+        },
+        "Primary_Si": {
+          "gt_pixels": 190876,
+          "pred_pixels": 179903,
+          "gt_boundary_pixels": 36325,
+          "signed_area_error_per_boundary_pixel": -0.30207845836200964,
+          "gt_fraction_in_band": 0.4456348624237725,
+          "fn_pixels": 32180,
+          "fn_fraction_in_band": 0.862616532007458,
+          "fp_pixels": 21207,
+          "fp_fraction_in_band": 0.18126090441835244
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 112984,
+          "pred_pixels": 70698,
+          "gt_boundary_pixels": 53870,
+          "signed_area_error_per_boundary_pixel": -0.7849638017449415,
+          "gt_fraction_in_band": 0.8727076400198258,
+          "fn_pixels": 61829,
+          "fn_fraction_in_band": 0.9049636901777484,
+          "fp_pixels": 19543,
+          "fp_fraction_in_band": 0.16374149311774036
+        }
+      }
+    },
+    {
+      "image": "A152_step2_sample1",
+      "specimen_group": "A152",
+      "classes": {
+        "Al": {
+          "gt_pixels": 709829,
+          "pred_pixels": 719881,
+          "gt_boundary_pixels": 147351,
+          "signed_area_error_per_boundary_pixel": 0.06821806434974992,
+          "gt_fraction_in_band": 0.5565988428198905,
+          "fn_pixels": 14477,
+          "fn_fraction_in_band": 0.9746494439455688,
+          "fp_pixels": 24529,
+          "fp_fraction_in_band": 0.9717477271800725
+        },
+        "Al3Ni": {
+          "gt_pixels": 251229,
+          "pred_pixels": 244241,
+          "gt_boundary_pixels": 70741,
+          "signed_area_error_per_boundary_pixel": -0.09878288404178623,
+          "gt_fraction_in_band": 0.5915320285476597,
+          "fn_pixels": 22950,
+          "fn_fraction_in_band": 0.9825708061002179,
+          "fp_pixels": 15962,
+          "fp_fraction_in_band": 0.5386543039719334
+        },
+        "Primary_Si": {
+          "gt_pixels": 123584,
+          "pred_pixels": 116977,
+          "gt_boundary_pixels": 24972,
+          "signed_area_error_per_boundary_pixel": -0.2645763254845427,
+          "gt_fraction_in_band": 0.490298096841015,
+          "fn_pixels": 13873,
+          "fn_fraction_in_band": 0.8060981763137028,
+          "fp_pixels": 7266,
+          "fp_fraction_in_band": 0.43903110377098814
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 77060,
+          "pred_pixels": 80603,
+          "gt_boundary_pixels": 51737,
+          "signed_area_error_per_boundary_pixel": 0.06848097106519511,
+          "gt_fraction_in_band": 0.9815468466130288,
+          "fn_pixels": 15527,
+          "fn_fraction_in_band": 0.9620016745024795,
+          "fp_pixels": 19070,
+          "fp_fraction_in_band": 0.3954902988987939
+        }
+      }
+    },
+    {
+      "image": "A153_step1_sample4",
+      "specimen_group": "A153",
+      "classes": {
+        "Al": {
+          "gt_pixels": 744842,
+          "pred_pixels": 754706,
+          "gt_boundary_pixels": 187146,
+          "signed_area_error_per_boundary_pixel": 0.05270751178224488,
+          "gt_fraction_in_band": 0.6301041026150512,
+          "fn_pixels": 21459,
+          "fn_fraction_in_band": 0.9558693322149214,
+          "fp_pixels": 31323,
+          "fp_fraction_in_band": 0.970724387830029
+        },
+        "Al3Ni": {
+          "gt_pixels": 236012,
+          "pred_pixels": 223970,
+          "gt_boundary_pixels": 91562,
+          "signed_area_error_per_boundary_pixel": -0.13151744173347021,
+          "gt_fraction_in_band": 0.6661695168042303,
+          "fn_pixels": 34244,
+          "fn_fraction_in_band": 0.9810185725966593,
+          "fp_pixels": 22202,
+          "fp_fraction_in_band": 0.6127826321952977
+        },
+        "Primary_Si": {
+          "gt_pixels": 77589,
+          "pred_pixels": 74723,
+          "gt_boundary_pixels": 6983,
+          "signed_area_error_per_boundary_pixel": -0.4104253186309609,
+          "gt_fraction_in_band": 0.22938818646973153,
+          "fn_pixels": 3818,
+          "fn_fraction_in_band": 0.8478260869565217,
+          "fp_pixels": 952,
+          "fp_fraction_in_band": 0.875
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 103259,
+          "pred_pixels": 108303,
+          "gt_boundary_pixels": 77179,
+          "signed_area_error_per_boundary_pixel": 0.06535456536104381,
+          "gt_fraction_in_band": 0.9913131058793907,
+          "fn_pixels": 22238,
+          "fn_fraction_in_band": 0.9967173306952064,
+          "fp_pixels": 27282,
+          "fp_fraction_in_band": 0.5135254013635364
+        }
+      }
+    },
+    {
+      "image": "A154_step2_sample3",
+      "specimen_group": "A154",
+      "classes": {
+        "Al": {
+          "gt_pixels": 722252,
+          "pred_pixels": 722369,
+          "gt_boundary_pixels": 153065,
+          "signed_area_error_per_boundary_pixel": 0.0007643811452650834,
+          "gt_fraction_in_band": 0.5630680150418413,
+          "fn_pixels": 22818,
+          "fn_fraction_in_band": 0.9454378122534841,
+          "fp_pixels": 22935,
+          "fp_fraction_in_band": 0.971135818617833
+        },
+        "Al3Ni": {
+          "gt_pixels": 229615,
+          "pred_pixels": 227374,
+          "gt_boundary_pixels": 73832,
+          "signed_area_error_per_boundary_pixel": -0.030352692599414886,
+          "gt_fraction_in_band": 0.6649086514382772,
+          "fn_pixels": 22711,
+          "fn_fraction_in_band": 0.9810664435735987,
+          "fp_pixels": 20470,
+          "fp_fraction_in_band": 0.7036150464093796
+        },
+        "Primary_Si": {
+          "gt_pixels": 114098,
+          "pred_pixels": 119003,
+          "gt_boundary_pixels": 27840,
+          "signed_area_error_per_boundary_pixel": 0.17618534482758622,
+          "gt_fraction_in_band": 0.5683973426352784,
+          "fn_pixels": 10997,
+          "fn_fraction_in_band": 0.9307083750113667,
+          "fp_pixels": 15902,
+          "fp_fraction_in_band": 0.239089422714124
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 95737,
+          "pred_pixels": 92956,
+          "gt_boundary_pixels": 57874,
+          "signed_area_error_per_boundary_pixel": -0.0480526661367799,
+          "gt_fraction_in_band": 0.9623760928376699,
+          "fn_pixels": 23229,
+          "fn_fraction_in_band": 0.9226828533298893,
+          "fp_pixels": 20448,
+          "fp_fraction_in_band": 0.4763302034428795
+        }
+      }
+    },
+    {
+      "image": "A155_step3_sample2",
+      "specimen_group": "A155",
+      "classes": {
+        "Al": {
+          "gt_pixels": 549183,
+          "pred_pixels": 552846,
+          "gt_boundary_pixels": 82006,
+          "signed_area_error_per_boundary_pixel": 0.04466746335633978,
+          "gt_fraction_in_band": 0.4000742921758321,
+          "fn_pixels": 9742,
+          "fn_fraction_in_band": 0.9945596386778895,
+          "fp_pixels": 13405,
+          "fp_fraction_in_band": 0.9560611712047743
+        },
+        "Al3Ni": {
+          "gt_pixels": 403339,
+          "pred_pixels": 400394,
+          "gt_boundary_pixels": 71090,
+          "signed_area_error_per_boundary_pixel": -0.0414263609509073,
+          "gt_fraction_in_band": 0.44877881880998366,
+          "fn_pixels": 17028,
+          "fn_fraction_in_band": 0.952783650458069,
+          "fp_pixels": 14083,
+          "fp_fraction_in_band": 0.866576723709437
+        },
+        "Primary_Si": {
+          "gt_pixels": 142138,
+          "pred_pixels": 139020,
+          "gt_boundary_pixels": 18269,
+          "signed_area_error_per_boundary_pixel": -0.1706716295363731,
+          "gt_fraction_in_band": 0.33800954002448325,
+          "fn_pixels": 9655,
+          "fn_fraction_in_band": 0.7770067322630761,
+          "fp_pixels": 6537,
+          "fp_fraction_in_band": 0.52929478353985
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 67042,
+          "pred_pixels": 69442,
+          "gt_boundary_pixels": 34297,
+          "signed_area_error_per_boundary_pixel": 0.06997696591538619,
+          "gt_fraction_in_band": 0.9270457325258793,
+          "fn_pixels": 12253,
+          "fn_fraction_in_band": 0.9636823635028157,
+          "fp_pixels": 14653,
+          "fp_fraction_in_band": 0.3243021906776769
+        }
+      }
+    },
+    {
+      "image": "A156_step4_sample1",
+      "specimen_group": "A156",
+      "classes": {
+        "Al": {
+          "gt_pixels": 720705,
+          "pred_pixels": 740133,
+          "gt_boundary_pixels": 219667,
+          "signed_area_error_per_boundary_pixel": 0.08844296139156087,
+          "gt_fraction_in_band": 0.7505109580202718,
+          "fn_pixels": 21892,
+          "fn_fraction_in_band": 0.9658322674949753,
+          "fp_pixels": 41320,
+          "fp_fraction_in_band": 0.9732575024201355
+        },
+        "Al3Ni": {
+          "gt_pixels": 293372,
+          "pred_pixels": 285351,
+          "gt_boundary_pixels": 160801,
+          "signed_area_error_per_boundary_pixel": -0.049881530587496344,
+          "gt_fraction_in_band": 0.9582748183194033,
+          "fn_pixels": 40620,
+          "fn_fraction_in_band": 0.9942392909896602,
+          "fp_pixels": 32599,
+          "fp_fraction_in_band": 0.7425994662412957
+        },
+        "Primary_Si": {
+          "gt_pixels": 96922,
+          "pred_pixels": 103695,
+          "gt_boundary_pixels": 21705,
+          "signed_area_error_per_boundary_pixel": 0.3120479152269062,
+          "gt_fraction_in_band": 0.5499886506675471,
+          "fn_pixels": 5769,
+          "fn_fraction_in_band": 0.9679320506153579,
+          "fp_pixels": 12542,
+          "fp_fraction_in_band": 0.22045925689682666
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 50703,
+          "pred_pixels": 32523,
+          "gt_boundary_pixels": 35476,
+          "signed_area_error_per_boundary_pixel": -0.5124591272973278,
+          "gt_fraction_in_band": 0.9610082243654222,
+          "fn_pixels": 26405,
+          "fn_fraction_in_band": 0.9350880515053968,
+          "fp_pixels": 8225,
+          "fp_fraction_in_band": 0.36498480243161097
+        }
+      }
+    },
+    {
+      "image": "A156_step4_sample2",
+      "specimen_group": "A156",
+      "classes": {
+        "Al": {
+          "gt_pixels": 692727,
+          "pred_pixels": 720324,
+          "gt_boundary_pixels": 202031,
+          "signed_area_error_per_boundary_pixel": 0.13659784884497925,
+          "gt_fraction_in_band": 0.7149858457949524,
+          "fn_pixels": 17433,
+          "fn_fraction_in_band": 0.9531922216485975,
+          "fp_pixels": 45030,
+          "fp_fraction_in_band": 0.9562735953808572
+        },
+        "Al3Ni": {
+          "gt_pixels": 314244,
+          "pred_pixels": 292318,
+          "gt_boundary_pixels": 142023,
+          "signed_area_error_per_boundary_pixel": -0.15438344493497533,
+          "gt_fraction_in_band": 0.8554180827637122,
+          "fn_pixels": 45488,
+          "fn_fraction_in_band": 0.9835121350685895,
+          "fp_pixels": 23562,
+          "fp_fraction_in_band": 0.7437399202105085
+        },
+        "Primary_Si": {
+          "gt_pixels": 108883,
+          "pred_pixels": 110149,
+          "gt_boundary_pixels": 25150,
+          "signed_area_error_per_boundary_pixel": 0.050337972166998014,
+          "gt_fraction_in_band": 0.5589853328802477,
+          "fn_pixels": 6311,
+          "fn_fraction_in_band": 0.9755981619394708,
+          "fp_pixels": 7577,
+          "fp_fraction_in_band": 0.40820905371519073
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 45848,
+          "pred_pixels": 38911,
+          "gt_boundary_pixels": 34712,
+          "signed_area_error_per_boundary_pixel": -0.1998444342014289,
+          "gt_fraction_in_band": 0.9769673704414588,
+          "fn_pixels": 18643,
+          "fn_fraction_in_band": 0.9522072627795956,
+          "fp_pixels": 11706,
+          "fp_fraction_in_band": 0.3177003246198531
+        }
+      }
+    },
+    {
+      "image": "A159_step4_sample4",
+      "specimen_group": "A159",
+      "classes": {
+        "Al": {
+          "gt_pixels": 605985,
+          "pred_pixels": 624943,
+          "gt_boundary_pixels": 210955,
+          "signed_area_error_per_boundary_pixel": 0.08986750728828423,
+          "gt_fraction_in_band": 0.7789285213330363,
+          "fn_pixels": 26350,
+          "fn_fraction_in_band": 0.9369639468690703,
+          "fp_pixels": 45308,
+          "fp_fraction_in_band": 0.9458153085547806
+        },
+        "Al3Ni": {
+          "gt_pixels": 383846,
+          "pred_pixels": 365411,
+          "gt_boundary_pixels": 183701,
+          "signed_area_error_per_boundary_pixel": -0.10035329148997556,
+          "gt_fraction_in_band": 0.8959426436643863,
+          "fn_pixels": 51533,
+          "fn_fraction_in_band": 0.9861836105020084,
+          "fp_pixels": 33098,
+          "fp_fraction_in_band": 0.8005317541845429
+        },
+        "Primary_Si": {
+          "gt_pixels": 147048,
+          "pred_pixels": 148956,
+          "gt_boundary_pixels": 24170,
+          "signed_area_error_per_boundary_pixel": 0.07894083574679354,
+          "gt_fraction_in_band": 0.4432974266906044,
+          "fn_pixels": 5259,
+          "fn_fraction_in_band": 0.7718197375926983,
+          "fp_pixels": 7167,
+          "fp_fraction_in_band": 0.6873168689828381
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 24823,
+          "pred_pixels": 22392,
+          "gt_boundary_pixels": 18909,
+          "signed_area_error_per_boundary_pixel": -0.1285631180919139,
+          "gt_fraction_in_band": 0.9767554284333079,
+          "fn_pixels": 10446,
+          "fn_fraction_in_band": 0.9498372582806816,
+          "fp_pixels": 8015,
+          "fp_fraction_in_band": 0.3109170305676856
+        }
+      }
+    },
+    {
+      "image": "A15_step1_sample1",
+      "specimen_group": "A15",
+      "classes": {
+        "Al": {
+          "gt_pixels": 170583,
+          "pred_pixels": 171778,
+          "gt_boundary_pixels": 47796,
+          "signed_area_error_per_boundary_pixel": 0.02500209222529082,
+          "gt_fraction_in_band": 0.6906139533247745,
+          "fn_pixels": 2706,
+          "fn_fraction_in_band": 0.9974131559497413,
+          "fp_pixels": 3901,
+          "fp_fraction_in_band": 0.9028454242501922
+        },
+        "Al3Ni": {
+          "gt_pixels": 72027,
+          "pred_pixels": 71920,
+          "gt_boundary_pixels": 27676,
+          "signed_area_error_per_boundary_pixel": -0.0038661656308715134,
+          "gt_fraction_in_band": 0.8293417746122982,
+          "fn_pixels": 3995,
+          "fn_fraction_in_band": 0.9944931163954943,
+          "fp_pixels": 3888,
+          "fp_fraction_in_band": 0.8616255144032922
+        },
+        "Primary_Si": {
+          "gt_pixels": 56150,
+          "pred_pixels": 57167,
+          "gt_boundary_pixels": 11320,
+          "signed_area_error_per_boundary_pixel": 0.08984098939929329,
+          "gt_fraction_in_band": 0.4968121104185218,
+          "fn_pixels": 1929,
+          "fn_fraction_in_band": 0.9569725246241576,
+          "fp_pixels": 2946,
+          "fp_fraction_in_band": 0.32450780719619826
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 25240,
+          "pred_pixels": 23135,
+          "gt_boundary_pixels": 18656,
+          "signed_area_error_per_boundary_pixel": -0.11283233276157804,
+          "gt_fraction_in_band": 0.9826862123613312,
+          "fn_pixels": 5318,
+          "fn_fraction_in_band": 0.9328694998119594,
+          "fp_pixels": 3213,
+          "fp_fraction_in_band": 0.6181139122315593
+        }
+      }
+    },
+    {
+      "image": "A164_step1_sample2",
+      "specimen_group": "A164",
+      "classes": {
+        "Al": {
+          "gt_pixels": 701587,
+          "pred_pixels": 718818,
+          "gt_boundary_pixels": 51050,
+          "signed_area_error_per_boundary_pixel": 0.3375318315377081,
+          "gt_fraction_in_band": 0.20559103860248265,
+          "fn_pixels": 4157,
+          "fn_fraction_in_band": 0.9995188838104402,
+          "fp_pixels": 21388,
+          "fp_fraction_in_band": 0.951748644099495
+        },
+        "Al3Ni": {
+          "gt_pixels": 318638,
+          "pred_pixels": 303446,
+          "gt_boundary_pixels": 33348,
+          "signed_area_error_per_boundary_pixel": -0.4555595537963296,
+          "gt_fraction_in_band": 0.26569335735223043,
+          "fn_pixels": 19380,
+          "fn_fraction_in_band": 0.9747162022703818,
+          "fp_pixels": 4188,
+          "fp_fraction_in_band": 0.6320439350525311
+        },
+        "Primary_Si": {
+          "gt_pixels": 119663,
+          "pred_pixels": 69980,
+          "gt_boundary_pixels": 20233,
+          "signed_area_error_per_boundary_pixel": -2.455542924924628,
+          "gt_fraction_in_band": 0.44881040923259485,
+          "fn_pixels": 53472,
+          "fn_fraction_in_band": 0.6331538001196888,
+          "fp_pixels": 3789,
+          "fp_fraction_in_band": 0.2905779889152811
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 21814,
+          "pred_pixels": 69458,
+          "gt_boundary_pixels": 8624,
+          "signed_area_error_per_boundary_pixel": 5.524582560296846,
+          "gt_fraction_in_band": 0.8599064820757312,
+          "fn_pixels": 5371,
+          "fn_fraction_in_band": 0.7572146713833551,
+          "fp_pixels": 53015,
+          "fp_fraction_in_band": 0.028407054607186646
+        }
+      }
+    },
+    {
+      "image": "A164_step4_sample1",
+      "specimen_group": "A164",
+      "classes": {
+        "Al": {
+          "gt_pixels": 607471,
+          "pred_pixels": 623687,
+          "gt_boundary_pixels": 102064,
+          "signed_area_error_per_boundary_pixel": 0.15888070230443643,
+          "gt_fraction_in_band": 0.4588548259916934,
+          "fn_pixels": 9711,
+          "fn_fraction_in_band": 0.998661311914324,
+          "fp_pixels": 25927,
+          "fp_fraction_in_band": 0.9576117560843908
+        },
+        "Al3Ni": {
+          "gt_pixels": 342720,
+          "pred_pixels": 331696,
+          "gt_boundary_pixels": 68131,
+          "signed_area_error_per_boundary_pixel": -0.16180593268849716,
+          "gt_fraction_in_band": 0.4821107609710551,
+          "fn_pixels": 23066,
+          "fn_fraction_in_band": 0.9660539321945721,
+          "fp_pixels": 12042,
+          "fp_fraction_in_band": 0.7629961800365388
+        },
+        "Primary_Si": {
+          "gt_pixels": 142983,
+          "pred_pixels": 138724,
+          "gt_boundary_pixels": 19785,
+          "signed_area_error_per_boundary_pixel": -0.21526408895628002,
+          "gt_fraction_in_band": 0.3623997258415336,
+          "fn_pixels": 9006,
+          "fn_fraction_in_band": 0.7723739729069509,
+          "fp_pixels": 4747,
+          "fp_fraction_in_band": 0.4360648830840531
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 68528,
+          "pred_pixels": 67595,
+          "gt_boundary_pixels": 38831,
+          "signed_area_error_per_boundary_pixel": -0.02402719476706755,
+          "gt_fraction_in_band": 0.9625262666355359,
+          "fn_pixels": 12618,
+          "fn_fraction_in_band": 0.9240767158028214,
+          "fp_pixels": 11685,
+          "fp_fraction_in_band": 0.4671801454856654
+        }
+      }
+    },
+    {
+      "image": "A166_step4_sample3",
+      "specimen_group": "A166",
+      "classes": {
+        "Al": {
+          "gt_pixels": 689897,
+          "pred_pixels": 703973,
+          "gt_boundary_pixels": 97544,
+          "signed_area_error_per_boundary_pixel": 0.1443041089149512,
+          "gt_fraction_in_band": 0.3890305364423965,
+          "fn_pixels": 13556,
+          "fn_fraction_in_band": 0.9922543523163175,
+          "fp_pixels": 27632,
+          "fp_fraction_in_band": 0.9556673422119282
+        },
+        "Al3Ni": {
+          "gt_pixels": 302084,
+          "pred_pixels": 290940,
+          "gt_boundary_pixels": 71877,
+          "signed_area_error_per_boundary_pixel": -0.15504264229169276,
+          "gt_fraction_in_band": 0.5479105149561049,
+          "fn_pixels": 28420,
+          "fn_fraction_in_band": 0.9634764250527798,
+          "fp_pixels": 17276,
+          "fp_fraction_in_band": 0.772111599907386
+        },
+        "Primary_Si": {
+          "gt_pixels": 87959,
+          "pred_pixels": 96169,
+          "gt_boundary_pixels": 11540,
+          "signed_area_error_per_boundary_pixel": 0.7114384748700173,
+          "gt_fraction_in_band": 0.3459339010220671,
+          "fn_pixels": 3819,
+          "fn_fraction_in_band": 0.8284891332809636,
+          "fp_pixels": 12029,
+          "fp_fraction_in_band": 0.17657328123701055
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 81762,
+          "pred_pixels": 70620,
+          "gt_boundary_pixels": 39357,
+          "signed_area_error_per_boundary_pixel": -0.2831008461010748,
+          "gt_fraction_in_band": 0.9318142902570876,
+          "fn_pixels": 22393,
+          "fn_fraction_in_band": 0.8991649176081812,
+          "fp_pixels": 11251,
+          "fp_fraction_in_band": 0.5856368322815749
+        }
+      }
+    },
+    {
+      "image": "A167_step3_sample4",
+      "specimen_group": "A167",
+      "classes": {
+        "Al": {
+          "gt_pixels": 525841,
+          "pred_pixels": 506172,
+          "gt_boundary_pixels": 161804,
+          "signed_area_error_per_boundary_pixel": -0.12156065363031816,
+          "gt_fraction_in_band": 0.7132346089407254,
+          "fn_pixels": 36127,
+          "fn_fraction_in_band": 0.9555457137321117,
+          "fp_pixels": 16458,
+          "fp_fraction_in_band": 0.9116539069145704
+        },
+        "Al3Ni": {
+          "gt_pixels": 442298,
+          "pred_pixels": 442997,
+          "gt_boundary_pixels": 136127,
+          "signed_area_error_per_boundary_pixel": 0.005134910781843425,
+          "gt_fraction_in_band": 0.6921283840306761,
+          "fn_pixels": 39207,
+          "fn_fraction_in_band": 0.9299104751702502,
+          "fp_pixels": 39906,
+          "fp_fraction_in_band": 0.7920613441587732
+        },
+        "Primary_Si": {
+          "gt_pixels": 134279,
+          "pred_pixels": 138766,
+          "gt_boundary_pixels": 25574,
+          "signed_area_error_per_boundary_pixel": 0.17545163056228982,
+          "gt_fraction_in_band": 0.4954907319834077,
+          "fn_pixels": 4659,
+          "fn_fraction_in_band": 0.8656364026615153,
+          "fp_pixels": 9146,
+          "fp_fraction_in_band": 0.6672862453531598
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 59284,
+          "pred_pixels": 73767,
+          "gt_boundary_pixels": 43394,
+          "signed_area_error_per_boundary_pixel": 0.3337558187767894,
+          "gt_fraction_in_band": 0.9852911409486539,
+          "fn_pixels": 14965,
+          "fn_fraction_in_band": 0.9783494821249582,
+          "fp_pixels": 29448,
+          "fp_fraction_in_band": 0.35343656615050256
+        }
+      }
+    },
+    {
+      "image": "A16_step4_sample4",
+      "specimen_group": "A16",
+      "classes": {
+        "Al": {
+          "gt_pixels": 215900,
+          "pred_pixels": 221508,
+          "gt_boundary_pixels": 58804,
+          "signed_area_error_per_boundary_pixel": 0.09536766206380519,
+          "gt_fraction_in_band": 0.6288744789254285,
+          "fn_pixels": 3514,
+          "fn_fraction_in_band": 0.9985771200910644,
+          "fp_pixels": 9122,
+          "fp_fraction_in_band": 0.9946283709712782
+        },
+        "Al3Ni": {
+          "gt_pixels": 37735,
+          "pred_pixels": 34952,
+          "gt_boundary_pixels": 26034,
+          "signed_area_error_per_boundary_pixel": -0.10689867096873319,
+          "gt_fraction_in_band": 0.9715383596130913,
+          "fn_pixels": 7422,
+          "fn_fraction_in_band": 0.998652654271086,
+          "fp_pixels": 4639,
+          "fp_fraction_in_band": 0.7924121577926277
+        },
+        "Primary_Si": {
+          "gt_pixels": 47524,
+          "pred_pixels": 44704,
+          "gt_boundary_pixels": 8221,
+          "signed_area_error_per_boundary_pixel": -0.3430239630215302,
+          "gt_fraction_in_band": 0.421281878629745,
+          "fn_pixels": 3629,
+          "fn_fraction_in_band": 0.8710388536786994,
+          "fp_pixels": 809,
+          "fp_fraction_in_band": 0.6971569839307787
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 22841,
+          "pred_pixels": 22836,
+          "gt_boundary_pixels": 18644,
+          "signed_area_error_per_boundary_pixel": -0.000268182793391976,
+          "gt_fraction_in_band": 0.9971542401821286,
+          "fn_pixels": 5081,
+          "fn_fraction_in_band": 0.9994095650462508,
+          "fp_pixels": 5076,
+          "fp_fraction_in_band": 0.40563435776201734
+        }
+      }
+    },
+    {
+      "image": "A181_step4_sample4",
+      "specimen_group": "A181",
+      "classes": {
+        "Al": {
+          "gt_pixels": 893932,
+          "pred_pixels": 933861,
+          "gt_boundary_pixels": 250192,
+          "signed_area_error_per_boundary_pixel": 0.15959343224403658,
+          "gt_fraction_in_band": 0.7261368873695091,
+          "fn_pixels": 19655,
+          "fn_fraction_in_band": 0.9099465784787586,
+          "fp_pixels": 59584,
+          "fp_fraction_in_band": 0.9567837003222341
+        },
+        "Al3Ni": {
+          "gt_pixels": 493868,
+          "pred_pixels": 448171,
+          "gt_boundary_pixels": 173817,
+          "signed_area_error_per_boundary_pixel": -0.262902938147592,
+          "gt_fraction_in_band": 0.5504406035620855,
+          "fn_pixels": 70416,
+          "fn_fraction_in_band": 0.9808282208588958,
+          "fp_pixels": 24719,
+          "fp_fraction_in_band": 0.7251506937982928
+        },
+        "Primary_Si": {
+          "gt_pixels": 34894,
+          "pred_pixels": 34873,
+          "gt_boundary_pixels": 2505,
+          "signed_area_error_per_boundary_pixel": -0.008383233532934131,
+          "gt_fraction_in_band": 0.19312775835387172,
+          "fn_pixels": 497,
+          "fn_fraction_in_band": 0.9919517102615694,
+          "fp_pixels": 476,
+          "fp_fraction_in_band": 0.9390756302521008
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 51866,
+          "pred_pixels": 57655,
+          "gt_boundary_pixels": 36515,
+          "signed_area_error_per_boundary_pixel": 0.15853758729289333,
+          "gt_fraction_in_band": 0.9928469517603054,
+          "fn_pixels": 15469,
+          "fn_fraction_in_band": 0.9990303187019199,
+          "fp_pixels": 21258,
+          "fp_fraction_in_band": 0.19404459497600904
+        }
+      }
+    },
+    {
+      "image": "A182_step4_sample3",
+      "specimen_group": "A182",
+      "classes": {
+        "Al": {
+          "gt_pixels": 876865,
+          "pred_pixels": 884422,
+          "gt_boundary_pixels": 104390,
+          "signed_area_error_per_boundary_pixel": 0.07239199157007377,
+          "gt_fraction_in_band": 0.32793531501428386,
+          "fn_pixels": 20811,
+          "fn_fraction_in_band": 0.9934649944740762,
+          "fp_pixels": 28368,
+          "fp_fraction_in_band": 0.9705654258319233
+        },
+        "Al3Ni": {
+          "gt_pixels": 381876,
+          "pred_pixels": 378257,
+          "gt_boundary_pixels": 75883,
+          "signed_area_error_per_boundary_pixel": -0.04769184138739902,
+          "gt_fraction_in_band": 0.4707994218018414,
+          "fn_pixels": 31038,
+          "fn_fraction_in_band": 0.96294864359817,
+          "fp_pixels": 27419,
+          "fp_fraction_in_band": 0.7101644844815639
+        },
+        "Primary_Si": {
+          "gt_pixels": 104376,
+          "pred_pixels": 141401,
+          "gt_boundary_pixels": 12132,
+          "signed_area_error_per_boundary_pixel": 3.0518463567424994,
+          "gt_fraction_in_band": 0.31229401394956696,
+          "fn_pixels": 11320,
+          "fn_fraction_in_band": 0.6424911660777385,
+          "fp_pixels": 48345,
+          "fp_fraction_in_band": 0.04565104974661289
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 111443,
+          "pred_pixels": 70480,
+          "gt_boundary_pixels": 36078,
+          "signed_area_error_per_boundary_pixel": -1.1354010754476411,
+          "gt_fraction_in_band": 0.7131717559649328,
+          "fn_pixels": 58397,
+          "fn_fraction_in_band": 0.5422710070722812,
+          "fp_pixels": 17434,
+          "fp_fraction_in_band": 0.31541814844556615
+        }
+      }
+    },
+    {
+      "image": "A187_step2_sample1",
+      "specimen_group": "A187",
+      "classes": {
+        "Al": {
+          "gt_pixels": 578289,
+          "pred_pixels": 581118,
+          "gt_boundary_pixels": 133475,
+          "signed_area_error_per_boundary_pixel": 0.021194980333395768,
+          "gt_fraction_in_band": 0.5856794785998004,
+          "fn_pixels": 15214,
+          "fn_fraction_in_band": 0.9785723675561983,
+          "fp_pixels": 18043,
+          "fp_fraction_in_band": 0.9321066341517485
+        },
+        "Al3Ni": {
+          "gt_pixels": 335223,
+          "pred_pixels": 325829,
+          "gt_boundary_pixels": 79531,
+          "signed_area_error_per_boundary_pixel": -0.118117463630534,
+          "gt_fraction_in_band": 0.5055351213968016,
+          "fn_pixels": 23328,
+          "fn_fraction_in_band": 0.977409122085048,
+          "fp_pixels": 13934,
+          "fp_fraction_in_band": 0.7547007320223913
+        },
+        "Primary_Si": {
+          "gt_pixels": 101848,
+          "pred_pixels": 101803,
+          "gt_boundary_pixels": 8530,
+          "signed_area_error_per_boundary_pixel": -0.005275498241500586,
+          "gt_fraction_in_band": 0.22871337679679524,
+          "fn_pixels": 1849,
+          "fn_fraction_in_band": 0.7847485127095727,
+          "fp_pixels": 1804,
+          "fp_fraction_in_band": 0.6607538802660754
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 60890,
+          "pred_pixels": 67500,
+          "gt_boundary_pixels": 45427,
+          "signed_area_error_per_boundary_pixel": 0.14550817795584123,
+          "gt_fraction_in_band": 0.9904582033174577,
+          "fn_pixels": 10403,
+          "fn_fraction_in_band": 0.9622224358358166,
+          "fp_pixels": 17013,
+          "fp_fraction_in_band": 0.4923881737494857
+        }
+      }
+    },
+    {
+      "image": "A187_step4_sample4",
+      "specimen_group": "A187",
+      "classes": {
+        "Al": {
+          "gt_pixels": 628540,
+          "pred_pixels": 585163,
+          "gt_boundary_pixels": 163853,
+          "signed_area_error_per_boundary_pixel": -0.264731191983058,
+          "gt_fraction_in_band": 0.6406115760333472,
+          "fn_pixels": 62863,
+          "fn_fraction_in_band": 0.7857245120341059,
+          "fp_pixels": 19486,
+          "fp_fraction_in_band": 0.9644360053371651
+        },
+        "Al3Ni": {
+          "gt_pixels": 366893,
+          "pred_pixels": 395216,
+          "gt_boundary_pixels": 122229,
+          "signed_area_error_per_boundary_pixel": 0.2317207863927546,
+          "gt_fraction_in_band": 0.6032548999299523,
+          "fn_pixels": 33729,
+          "fn_fraction_in_band": 0.985294553648196,
+          "fp_pixels": 62052,
+          "fp_fraction_in_band": 0.6444756011087475
+        },
+        "Primary_Si": {
+          "gt_pixels": 59188,
+          "pred_pixels": 60400,
+          "gt_boundary_pixels": 6962,
+          "signed_area_error_per_boundary_pixel": 0.17408790577420283,
+          "gt_fraction_in_band": 0.3130702169358654,
+          "fn_pixels": 1227,
+          "fn_fraction_in_band": 0.7791361043194784,
+          "fp_pixels": 2439,
+          "fp_fraction_in_band": 0.5703157031570316
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 21629,
+          "pred_pixels": 35471,
+          "gt_boundary_pixels": 17230,
+          "signed_area_error_per_boundary_pixel": 0.8033662217063262,
+          "gt_fraction_in_band": 0.9938046141754127,
+          "fn_pixels": 5651,
+          "fn_fraction_in_band": 0.9923907273049017,
+          "fp_pixels": 19493,
+          "fp_fraction_in_band": 0.2153593597701739
+        }
+      }
+    },
+    {
+      "image": "A188_step4_sample1",
+      "specimen_group": "A188",
+      "classes": {
+        "Al": {
+          "gt_pixels": 637283,
+          "pred_pixels": 645821,
+          "gt_boundary_pixels": 110904,
+          "signed_area_error_per_boundary_pixel": 0.0769855009738152,
+          "gt_fraction_in_band": 0.4587412499627324,
+          "fn_pixels": 14024,
+          "fn_fraction_in_band": 0.9813177410154021,
+          "fp_pixels": 22562,
+          "fp_fraction_in_band": 0.9312560943178796
+        },
+        "Al3Ni": {
+          "gt_pixels": 373031,
+          "pred_pixels": 368890,
+          "gt_boundary_pixels": 73609,
+          "signed_area_error_per_boundary_pixel": -0.05625670773954272,
+          "gt_fraction_in_band": 0.47482112746661803,
+          "fn_pixels": 20876,
+          "fn_fraction_in_band": 0.9690074726959188,
+          "fp_pixels": 16735,
+          "fp_fraction_in_band": 0.8307738273080371
+        },
+        "Primary_Si": {
+          "gt_pixels": 88961,
+          "pred_pixels": 86674,
+          "gt_boundary_pixels": 14534,
+          "signed_area_error_per_boundary_pixel": -0.1573551671941654,
+          "gt_fraction_in_band": 0.4106968222029878,
+          "fn_pixels": 4990,
+          "fn_fraction_in_band": 0.9200400801603207,
+          "fp_pixels": 2703,
+          "fp_fraction_in_band": 0.48834628190899
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 62427,
+          "pred_pixels": 60317,
+          "gt_boundary_pixels": 41477,
+          "signed_area_error_per_boundary_pixel": -0.050871567374689584,
+          "gt_fraction_in_band": 0.9883543979367901,
+          "fn_pixels": 13402,
+          "fn_fraction_in_band": 0.9750037307864498,
+          "fp_pixels": 11292,
+          "fp_fraction_in_band": 0.5058448459086079
+        }
+      }
+    },
+    {
+      "image": "A18_step2_sample1",
+      "specimen_group": "A18",
+      "classes": {
+        "Al": {
+          "gt_pixels": 188838,
+          "pred_pixels": 190321,
+          "gt_boundary_pixels": 23114,
+          "signed_area_error_per_boundary_pixel": 0.06416024919961928,
+          "gt_fraction_in_band": 0.33339158432095234,
+          "fn_pixels": 1246,
+          "fn_fraction_in_band": 0.9983948635634029,
+          "fp_pixels": 2729,
+          "fp_fraction_in_band": 0.971051667277391
+        },
+        "Al3Ni": {
+          "gt_pixels": 49276,
+          "pred_pixels": 48966,
+          "gt_boundary_pixels": 9511,
+          "signed_area_error_per_boundary_pixel": -0.032593838713069076,
+          "gt_fraction_in_band": 0.4619084341261466,
+          "fn_pixels": 1667,
+          "fn_fraction_in_band": 0.9934013197360528,
+          "fp_pixels": 1357,
+          "fp_fraction_in_band": 0.8820928518791452
+        },
+        "Primary_Si": {
+          "gt_pixels": 69095,
+          "pred_pixels": 74933,
+          "gt_boundary_pixels": 9204,
+          "signed_area_error_per_boundary_pixel": 0.6342894393741851,
+          "gt_fraction_in_band": 0.35231203415587237,
+          "fn_pixels": 1068,
+          "fn_fraction_in_band": 1.0,
+          "fp_pixels": 6906,
+          "fp_fraction_in_band": 0.06878077034462786
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 16791,
+          "pred_pixels": 9780,
+          "gt_boundary_pixels": 7817,
+          "signed_area_error_per_boundary_pixel": -0.896891390559038,
+          "gt_fraction_in_band": 0.9070930855815615,
+          "fn_pixels": 7799,
+          "fn_fraction_in_band": 0.8557507372740095,
+          "fp_pixels": 788,
+          "fp_fraction_in_band": 0.6852791878172588
+        }
+      }
+    },
+    {
+      "image": "A191_step3_sample1",
+      "specimen_group": "A191",
+      "classes": {
+        "Al": {
+          "gt_pixels": 929204,
+          "pred_pixels": 948854,
+          "gt_boundary_pixels": 122632,
+          "signed_area_error_per_boundary_pixel": 0.16023550133733447,
+          "gt_fraction_in_band": 0.3741105290119285,
+          "fn_pixels": 9901,
+          "fn_fraction_in_band": 0.9995960004039995,
+          "fp_pixels": 29551,
+          "fp_fraction_in_band": 0.9836892152549829
+        },
+        "Al3Ni": {
+          "gt_pixels": 286728,
+          "pred_pixels": 275611,
+          "gt_boundary_pixels": 49261,
+          "signed_area_error_per_boundary_pixel": -0.2256754836483222,
+          "gt_fraction_in_band": 0.3903699673558215,
+          "fn_pixels": 19055,
+          "fn_fraction_in_band": 0.9944371556022041,
+          "fp_pixels": 7938,
+          "fp_fraction_in_band": 0.5964978584026203
+        },
+        "Primary_Si": {
+          "gt_pixels": 98512,
+          "pred_pixels": 96805,
+          "gt_boundary_pixels": 6483,
+          "signed_area_error_per_boundary_pixel": -0.26330402591392876,
+          "gt_fraction_in_band": 0.17956188078609714,
+          "fn_pixels": 3854,
+          "fn_fraction_in_band": 0.8518422418266736,
+          "fp_pixels": 2147,
+          "fp_fraction_in_band": 0.24825337680484397
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 160116,
+          "pred_pixels": 153290,
+          "gt_boundary_pixels": 75414,
+          "signed_area_error_per_boundary_pixel": -0.0905136977219084,
+          "gt_fraction_in_band": 0.9168165579954533,
+          "fn_pixels": 21329,
+          "fn_fraction_in_band": 0.9653054526700736,
+          "fp_pixels": 14503,
+          "fp_fraction_in_band": 0.6061504516306971
+        }
+      }
+    },
+    {
+      "image": "A191_step4_sample1",
+      "specimen_group": "A191",
+      "classes": {
+        "Al": {
+          "gt_pixels": 962332,
+          "pred_pixels": 989781,
+          "gt_boundary_pixels": 201945,
+          "signed_area_error_per_boundary_pixel": 0.13592314739161654,
+          "gt_fraction_in_band": 0.5420499370279696,
+          "fn_pixels": 17561,
+          "fn_fraction_in_band": 0.9849666875462673,
+          "fp_pixels": 45010,
+          "fp_fraction_in_band": 0.9530770939791158
+        },
+        "Al3Ni": {
+          "gt_pixels": 332550,
+          "pred_pixels": 293484,
+          "gt_boundary_pixels": 112926,
+          "signed_area_error_per_boundary_pixel": -0.3459433611391531,
+          "gt_fraction_in_band": 0.6415005262366561,
+          "fn_pixels": 55222,
+          "fn_fraction_in_band": 0.9920683785447829,
+          "fp_pixels": 16156,
+          "fp_fraction_in_band": 0.7339688041594454
+        },
+        "Primary_Si": {
+          "gt_pixels": 45393,
+          "pred_pixels": 48603,
+          "gt_boundary_pixels": 3498,
+          "signed_area_error_per_boundary_pixel": 0.9176672384219554,
+          "gt_fraction_in_band": 0.202740510651422,
+          "fn_pixels": 913,
+          "fn_fraction_in_band": 1.0,
+          "fp_pixels": 4123,
+          "fp_fraction_in_band": 0.11156924569488237
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 134285,
+          "pred_pixels": 142692,
+          "gt_boundary_pixels": 83537,
+          "signed_area_error_per_boundary_pixel": 0.10063804062870345,
+          "gt_fraction_in_band": 0.9681572774323267,
+          "fn_pixels": 26444,
+          "fn_fraction_in_band": 0.9399863863258207,
+          "fp_pixels": 34851,
+          "fp_fraction_in_band": 0.40021807121746866
+        }
+      }
+    },
+    {
+      "image": "A200_step4_sample3",
+      "specimen_group": "A200",
+      "classes": {
+        "Al": {
+          "gt_pixels": 675262,
+          "pred_pixels": 702300,
+          "gt_boundary_pixels": 100713,
+          "signed_area_error_per_boundary_pixel": 0.2684658385709888,
+          "gt_fraction_in_band": 0.40689984035826093,
+          "fn_pixels": 7973,
+          "fn_fraction_in_band": 0.9979932271416029,
+          "fp_pixels": 35011,
+          "fp_fraction_in_band": 0.9636971237611036
+        },
+        "Al3Ni": {
+          "gt_pixels": 322342,
+          "pred_pixels": 309250,
+          "gt_boundary_pixels": 77405,
+          "signed_area_error_per_boundary_pixel": -0.16913636070021315,
+          "gt_fraction_in_band": 0.5855147638222757,
+          "fn_pixels": 33915,
+          "fn_fraction_in_band": 0.9670057496682883,
+          "fp_pixels": 20823,
+          "fp_fraction_in_band": 0.48811410459587956
+        },
+        "Primary_Si": {
+          "gt_pixels": 122799,
+          "pred_pixels": 82441,
+          "gt_boundary_pixels": 25483,
+          "signed_area_error_per_boundary_pixel": -1.5837224816544362,
+          "gt_fraction_in_band": 0.5078705852653523,
+          "fn_pixels": 43724,
+          "fn_fraction_in_band": 0.8200988015735066,
+          "fp_pixels": 3366,
+          "fp_fraction_in_band": 0.39512774806892453
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 41299,
+          "pred_pixels": 67711,
+          "gt_boundary_pixels": 21662,
+          "signed_area_error_per_boundary_pixel": 1.2192779983381037,
+          "gt_fraction_in_band": 0.9544056756822199,
+          "fn_pixels": 12687,
+          "fn_fraction_in_band": 0.8993457870260897,
+          "fp_pixels": 39099,
+          "fp_fraction_in_band": 0.07762346863091128
+        }
+      }
+    },
+    {
+      "image": "A201_step3_sample1",
+      "specimen_group": "A201",
+      "classes": {
+        "Al": {
+          "gt_pixels": 588266,
+          "pred_pixels": 599205,
+          "gt_boundary_pixels": 193206,
+          "signed_area_error_per_boundary_pixel": 0.05661832448267652,
+          "gt_fraction_in_band": 0.7634607473489884,
+          "fn_pixels": 20168,
+          "fn_fraction_in_band": 0.978431178103927,
+          "fp_pixels": 31107,
+          "fp_fraction_in_band": 0.9472787475487833
+        },
+        "Al3Ni": {
+          "gt_pixels": 330749,
+          "pred_pixels": 326898,
+          "gt_boundary_pixels": 125836,
+          "signed_area_error_per_boundary_pixel": -0.030603324962649798,
+          "gt_fraction_in_band": 0.7883742656818312,
+          "fn_pixels": 33041,
+          "fn_fraction_in_band": 0.97790623770467,
+          "fp_pixels": 29190,
+          "fp_fraction_in_band": 0.732408359027064
+        },
+        "Primary_Si": {
+          "gt_pixels": 74672,
+          "pred_pixels": 78167,
+          "gt_boundary_pixels": 14285,
+          "signed_area_error_per_boundary_pixel": 0.24466223311165558,
+          "gt_fraction_in_band": 0.48546978787229483,
+          "fn_pixels": 4255,
+          "fn_fraction_in_band": 0.8918918918918919,
+          "fp_pixels": 7750,
+          "fp_fraction_in_band": 0.2765161290322581
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 82563,
+          "pred_pixels": 71980,
+          "gt_boundary_pixels": 64202,
+          "signed_area_error_per_boundary_pixel": -0.16483910158562037,
+          "gt_fraction_in_band": 0.980790426704456,
+          "fn_pixels": 27965,
+          "fn_fraction_in_band": 0.95029501162167,
+          "fp_pixels": 17382,
+          "fp_fraction_in_band": 0.4858474283741802
+        }
+      }
+    },
+    {
+      "image": "A201_step3_sample4",
+      "specimen_group": "A201",
+      "classes": {
+        "Al": {
+          "gt_pixels": 626699,
+          "pred_pixels": 640020,
+          "gt_boundary_pixels": 211144,
+          "signed_area_error_per_boundary_pixel": 0.06308964498162392,
+          "gt_fraction_in_band": 0.7657216622333848,
+          "fn_pixels": 22479,
+          "fn_fraction_in_band": 0.9586280528493261,
+          "fp_pixels": 35800,
+          "fp_fraction_in_band": 0.9493016759776536
+        },
+        "Al3Ni": {
+          "gt_pixels": 327570,
+          "pred_pixels": 321507,
+          "gt_boundary_pixels": 134242,
+          "signed_area_error_per_boundary_pixel": -0.04516470255210739,
+          "gt_fraction_in_band": 0.7907836492963336,
+          "fn_pixels": 37541,
+          "fn_fraction_in_band": 0.9772515383181055,
+          "fp_pixels": 31478,
+          "fp_fraction_in_band": 0.678156172564966
+        },
+        "Primary_Si": {
+          "gt_pixels": 51988,
+          "pred_pixels": 51384,
+          "gt_boundary_pixels": 9331,
+          "signed_area_error_per_boundary_pixel": -0.06473046833136856,
+          "gt_fraction_in_band": 0.455201200276987,
+          "fn_pixels": 2168,
+          "fn_fraction_in_band": 0.9285055350553506,
+          "fp_pixels": 1564,
+          "fp_fraction_in_band": 0.8139386189258312
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 69993,
+          "pred_pixels": 63339,
+          "gt_boundary_pixels": 58417,
+          "signed_area_error_per_boundary_pixel": -0.11390519882910796,
+          "gt_fraction_in_band": 0.9985855728429985,
+          "fn_pixels": 23970,
+          "fn_fraction_in_band": 0.9992490613266584,
+          "fp_pixels": 17316,
+          "fp_fraction_in_band": 0.4481404481404481
+        }
+      }
+    },
+    {
+      "image": "A21_step2_sample4",
+      "specimen_group": "A21",
+      "classes": {
+        "Al": {
+          "gt_pixels": 776861,
+          "pred_pixels": 784086,
+          "gt_boundary_pixels": 107892,
+          "signed_area_error_per_boundary_pixel": 0.06696511326140955,
+          "gt_fraction_in_band": 0.3780637720261411,
+          "fn_pixels": 16247,
+          "fn_fraction_in_band": 0.991444574382963,
+          "fp_pixels": 23472,
+          "fp_fraction_in_band": 0.9678766189502386
+        },
+        "Al3Ni": {
+          "gt_pixels": 110850,
+          "pred_pixels": 103077,
+          "gt_boundary_pixels": 42571,
+          "signed_area_error_per_boundary_pixel": -0.18258908646731342,
+          "gt_fraction_in_band": 0.7703022101939558,
+          "fn_pixels": 16567,
+          "fn_fraction_in_band": 0.9878070863765317,
+          "fp_pixels": 8794,
+          "fp_fraction_in_band": 0.7009324539458722
+        },
+        "Primary_Si": {
+          "gt_pixels": 137837,
+          "pred_pixels": 143268,
+          "gt_boundary_pixels": 13424,
+          "signed_area_error_per_boundary_pixel": 0.4045738974970203,
+          "gt_fraction_in_band": 0.246095025283487,
+          "fn_pixels": 4539,
+          "fn_fraction_in_band": 0.9735624586913417,
+          "fp_pixels": 9970,
+          "fp_fraction_in_band": 0.20030090270812437
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 136154,
+          "pred_pixels": 131271,
+          "gt_boundary_pixels": 63499,
+          "signed_area_error_per_boundary_pixel": -0.07689884880076851,
+          "gt_fraction_in_band": 0.8927905166208852,
+          "fn_pixels": 20855,
+          "fn_fraction_in_band": 0.835626947974107,
+          "fp_pixels": 15972,
+          "fp_fraction_in_band": 0.8109191084397696
+        }
+      }
+    },
+    {
+      "image": "A222_step2_sample2",
+      "specimen_group": "A222",
+      "classes": {
+        "Al": {
+          "gt_pixels": 616592,
+          "pred_pixels": 618150,
+          "gt_boundary_pixels": 124380,
+          "signed_area_error_per_boundary_pixel": 0.012526129602830036,
+          "gt_fraction_in_band": 0.5367147157277422,
+          "fn_pixels": 15642,
+          "fn_fraction_in_band": 0.984209180411712,
+          "fp_pixels": 17200,
+          "fp_fraction_in_band": 0.8920348837209302
+        },
+        "Al3Ni": {
+          "gt_pixels": 227575,
+          "pred_pixels": 236121,
+          "gt_boundary_pixels": 73797,
+          "signed_area_error_per_boundary_pixel": 0.11580416548098162,
+          "gt_fraction_in_band": 0.7202153136328683,
+          "fn_pixels": 23662,
+          "fn_fraction_in_band": 0.9682190854534697,
+          "fp_pixels": 32208,
+          "fp_fraction_in_band": 0.7312468951813215
+        },
+        "Primary_Si": {
+          "gt_pixels": 113784,
+          "pred_pixels": 107734,
+          "gt_boundary_pixels": 27201,
+          "signed_area_error_per_boundary_pixel": -0.22241829344509392,
+          "gt_fraction_in_band": 0.5118382197848556,
+          "fn_pixels": 14825,
+          "fn_fraction_in_band": 0.9470489038785834,
+          "fp_pixels": 8775,
+          "fp_fraction_in_band": 0.4038746438746439
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 118299,
+          "pred_pixels": 114245,
+          "gt_boundary_pixels": 80163,
+          "signed_area_error_per_boundary_pixel": -0.050571959632249294,
+          "gt_fraction_in_band": 0.983989720961293,
+          "fn_pixels": 30750,
+          "fn_fraction_in_band": 0.9879674796747967,
+          "fp_pixels": 26696,
+          "fp_fraction_in_band": 0.4165043452202577
+        }
+      }
+    },
+    {
+      "image": "A224_step1_sample2",
+      "specimen_group": "A224",
+      "classes": {
+        "Al": {
+          "gt_pixels": 481982,
+          "pred_pixels": 569326,
+          "gt_boundary_pixels": 131696,
+          "signed_area_error_per_boundary_pixel": 0.6632243955776941,
+          "gt_fraction_in_band": 0.689998796635559,
+          "fn_pixels": 11618,
+          "fn_fraction_in_band": 0.9424169392322258,
+          "fp_pixels": 98962,
+          "fp_fraction_in_band": 0.6057981851619814
+        },
+        "Al3Ni": {
+          "gt_pixels": 328404,
+          "pred_pixels": 261821,
+          "gt_boundary_pixels": 121117,
+          "signed_area_error_per_boundary_pixel": -0.5497411593748194,
+          "gt_fraction_in_band": 0.7939306463989476,
+          "fn_pixels": 102286,
+          "fn_fraction_in_band": 0.8930058854584205,
+          "fp_pixels": 35703,
+          "fp_fraction_in_band": 0.7659300338907095
+        },
+        "Primary_Si": {
+          "gt_pixels": 145767,
+          "pred_pixels": 119587,
+          "gt_boundary_pixels": 57384,
+          "signed_area_error_per_boundary_pixel": -0.4562247316325108,
+          "gt_fraction_in_band": 0.7731448132979344,
+          "fn_pixels": 50170,
+          "fn_fraction_in_band": 0.9203906717161651,
+          "fp_pixels": 23990,
+          "fp_fraction_in_band": 0.25919132972071696
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 120097,
+          "pred_pixels": 125516,
+          "gt_boundary_pixels": 77259,
+          "signed_area_error_per_boundary_pixel": 0.0701406955823917,
+          "gt_fraction_in_band": 0.9666935893486098,
+          "fn_pixels": 44324,
+          "fn_fraction_in_band": 0.9604503203681978,
+          "fp_pixels": 49743,
+          "fp_fraction_in_band": 0.21832217598456063
+        }
+      }
+    },
+    {
+      "image": "A224_step4_sample2",
+      "specimen_group": "A224",
+      "classes": {
+        "Al": {
+          "gt_pixels": 487068,
+          "pred_pixels": 556249,
+          "gt_boundary_pixels": 144885,
+          "signed_area_error_per_boundary_pixel": 0.47748904303413053,
+          "gt_fraction_in_band": 0.7236689743526571,
+          "fn_pixels": 9844,
+          "fn_fraction_in_band": 0.9787687931735067,
+          "fp_pixels": 79025,
+          "fp_fraction_in_band": 0.8270926921860171
+        },
+        "Al3Ni": {
+          "gt_pixels": 415905,
+          "pred_pixels": 336623,
+          "gt_boundary_pixels": 149721,
+          "signed_area_error_per_boundary_pixel": -0.5295315954341743,
+          "gt_fraction_in_band": 0.7358892054675947,
+          "fn_pixels": 97095,
+          "fn_fraction_in_band": 0.8952263247335084,
+          "fp_pixels": 17813,
+          "fp_fraction_in_band": 0.8851962050188065
+        },
+        "Primary_Si": {
+          "gt_pixels": 113189,
+          "pred_pixels": 117772,
+          "gt_boundary_pixels": 28458,
+          "signed_area_error_per_boundary_pixel": 0.16104434605383372,
+          "gt_fraction_in_band": 0.6059069344194223,
+          "fn_pixels": 12450,
+          "fn_fraction_in_band": 0.8806425702811245,
+          "fp_pixels": 17033,
+          "fp_fraction_in_band": 0.35196383490870664
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 60088,
+          "pred_pixels": 65606,
+          "gt_boundary_pixels": 36846,
+          "signed_area_error_per_boundary_pixel": 0.1497584541062802,
+          "gt_fraction_in_band": 0.948874983357742,
+          "fn_pixels": 20641,
+          "fn_fraction_in_band": 0.9398284966813624,
+          "fp_pixels": 26159,
+          "fp_fraction_in_band": 0.2918689552352919
+        }
+      }
+    },
+    {
+      "image": "A2_step4_sample1",
+      "specimen_group": "A2",
+      "classes": {
+        "Al": {
+          "gt_pixels": 543819,
+          "pred_pixels": 616451,
+          "gt_boundary_pixels": 210116,
+          "signed_area_error_per_boundary_pixel": 0.3456757219821432,
+          "gt_fraction_in_band": 0.83296096679226,
+          "fn_pixels": 20009,
+          "fn_fraction_in_band": 0.9692638312759259,
+          "fp_pixels": 92641,
+          "fp_fraction_in_band": 0.8268045465830464
+        },
+        "Al3Ni": {
+          "gt_pixels": 313417,
+          "pred_pixels": 282129,
+          "gt_boundary_pixels": 170934,
+          "signed_area_error_per_boundary_pixel": -0.1830414077948214,
+          "gt_fraction_in_band": 0.9315257308952609,
+          "fn_pixels": 89463,
+          "fn_fraction_in_band": 0.9622301957233717,
+          "fp_pixels": 58175,
+          "fp_fraction_in_band": 0.632522561237645
+        },
+        "Primary_Si": {
+          "gt_pixels": 173252,
+          "pred_pixels": 156236,
+          "gt_boundary_pixels": 37244,
+          "signed_area_error_per_boundary_pixel": -0.45687896036945547,
+          "gt_fraction_in_band": 0.5002077898090642,
+          "fn_pixels": 26431,
+          "fn_fraction_in_band": 0.9216450380235329,
+          "fp_pixels": 9415,
+          "fp_fraction_in_band": 0.5688794476898567
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 131214,
+          "pred_pixels": 106886,
+          "gt_boundary_pixels": 77788,
+          "signed_area_error_per_boundary_pixel": -0.3127474674757032,
+          "gt_fraction_in_band": 0.9679759781730608,
+          "fn_pixels": 53967,
+          "fn_fraction_in_band": 0.9688698649174495,
+          "fp_pixels": 29639,
+          "fp_fraction_in_band": 0.41614089544181654
+        }
+      }
+    },
+    {
+      "image": "A39_step2_sample3",
+      "specimen_group": "A39",
+      "classes": {
+        "Al": {
+          "gt_pixels": 701233,
+          "pred_pixels": 695645,
+          "gt_boundary_pixels": 129183,
+          "signed_area_error_per_boundary_pixel": -0.04325646563402305,
+          "gt_fraction_in_band": 0.4968334348212363,
+          "fn_pixels": 22596,
+          "fn_fraction_in_band": 0.9670295627544698,
+          "fp_pixels": 17008,
+          "fp_fraction_in_band": 0.9531396989651929
+        },
+        "Al3Ni": {
+          "gt_pixels": 219707,
+          "pred_pixels": 223620,
+          "gt_boundary_pixels": 75625,
+          "signed_area_error_per_boundary_pixel": 0.05174214876033058,
+          "gt_fraction_in_band": 0.756857997241781,
+          "fn_pixels": 19405,
+          "fn_fraction_in_band": 0.9818088121618139,
+          "fp_pixels": 23318,
+          "fp_fraction_in_band": 0.7848443262715499
+        },
+        "Primary_Si": {
+          "gt_pixels": 153192,
+          "pred_pixels": 151528,
+          "gt_boundary_pixels": 25559,
+          "signed_area_error_per_boundary_pixel": -0.06510426855510779,
+          "gt_fraction_in_band": 0.4103608543527077,
+          "fn_pixels": 8591,
+          "fn_fraction_in_band": 0.919217786055174,
+          "fp_pixels": 6927,
+          "fp_fraction_in_band": 0.5103219286848564
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 87570,
+          "pred_pixels": 90909,
+          "gt_boundary_pixels": 52018,
+          "signed_area_error_per_boundary_pixel": 0.06418931908185628,
+          "gt_fraction_in_band": 0.9668836359483841,
+          "fn_pixels": 13496,
+          "fn_fraction_in_band": 0.9590248962655602,
+          "fp_pixels": 16835,
+          "fp_fraction_in_band": 0.5098307098307099
+        }
+      }
+    },
+    {
+      "image": "A40_step3_sample4",
+      "specimen_group": "A40",
+      "classes": {
+        "Al": {
+          "gt_pixels": 625902,
+          "pred_pixels": 633523,
+          "gt_boundary_pixels": 145733,
+          "signed_area_error_per_boundary_pixel": 0.05229426416803332,
+          "gt_fraction_in_band": 0.6163936207265674,
+          "fn_pixels": 15043,
+          "fn_fraction_in_band": 0.9919563916771921,
+          "fp_pixels": 22664,
+          "fp_fraction_in_band": 0.9104306388986939
+        },
+        "Al3Ni": {
+          "gt_pixels": 276434,
+          "pred_pixels": 268194,
+          "gt_boundary_pixels": 108630,
+          "signed_area_error_per_boundary_pixel": -0.07585381570468563,
+          "gt_fraction_in_band": 0.8544896792724483,
+          "fn_pixels": 28678,
+          "fn_fraction_in_band": 0.9734291094218565,
+          "fp_pixels": 20438,
+          "fp_fraction_in_band": 0.8167139641843625
+        },
+        "Primary_Si": {
+          "gt_pixels": 175226,
+          "pred_pixels": 170773,
+          "gt_boundary_pixels": 28603,
+          "signed_area_error_per_boundary_pixel": -0.15568297031779882,
+          "gt_fraction_in_band": 0.41080090854096996,
+          "fn_pixels": 11071,
+          "fn_fraction_in_band": 0.888898925119682,
+          "fp_pixels": 6618,
+          "fp_fraction_in_band": 0.5229676639468117
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 84140,
+          "pred_pixels": 89212,
+          "gt_boundary_pixels": 52151,
+          "signed_area_error_per_boundary_pixel": 0.09725604494640563,
+          "gt_fraction_in_band": 0.9716900404088424,
+          "fn_pixels": 14657,
+          "fn_fraction_in_band": 0.961656546360101,
+          "fp_pixels": 19729,
+          "fp_fraction_in_band": 0.42870900704546605
+        }
+      }
+    },
+    {
+      "image": "A49_step2_sample2",
+      "specimen_group": "A49",
+      "classes": {
+        "Al": {
+          "gt_pixels": 591154,
+          "pred_pixels": 596494,
+          "gt_boundary_pixels": 125428,
+          "signed_area_error_per_boundary_pixel": 0.04257422585068725,
+          "gt_fraction_in_band": 0.5561461142105103,
+          "fn_pixels": 12788,
+          "fn_fraction_in_band": 0.9846731310603691,
+          "fp_pixels": 18128,
+          "fp_fraction_in_band": 0.9696050308914387
+        },
+        "Al3Ni": {
+          "gt_pixels": 248714,
+          "pred_pixels": 220156,
+          "gt_boundary_pixels": 85935,
+          "signed_area_error_per_boundary_pixel": -0.33232094024553444,
+          "gt_fraction_in_band": 0.7489887983788609,
+          "fn_pixels": 47389,
+          "fn_fraction_in_band": 0.9678828420097491,
+          "fp_pixels": 18831,
+          "fp_fraction_in_band": 0.7994795815410759
+        },
+        "Primary_Si": {
+          "gt_pixels": 250825,
+          "pred_pixels": 261042,
+          "gt_boundary_pixels": 25138,
+          "signed_area_error_per_boundary_pixel": 0.40643647068183625,
+          "gt_fraction_in_band": 0.26343865244692516,
+          "fn_pixels": 5938,
+          "fn_fraction_in_band": 0.9642977433479286,
+          "fp_pixels": 16155,
+          "fp_fraction_in_band": 0.2865366759517177
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 71009,
+          "pred_pixels": 84010,
+          "gt_boundary_pixels": 40724,
+          "signed_area_error_per_boundary_pixel": 0.31924663589038405,
+          "gt_fraction_in_band": 0.929769465842358,
+          "fn_pixels": 20164,
+          "fn_fraction_in_band": 0.8708589565562388,
+          "fp_pixels": 33165,
+          "fp_fraction_in_band": 0.24770088949193428
+        }
+      }
+    },
+    {
+      "image": "A51_step4_sample4",
+      "specimen_group": "A51",
+      "classes": {
+        "Al": {
+          "gt_pixels": 745408,
+          "pred_pixels": 773520,
+          "gt_boundary_pixels": 136143,
+          "signed_area_error_per_boundary_pixel": 0.20648876548922823,
+          "gt_fraction_in_band": 0.4531343908302567,
+          "fn_pixels": 12240,
+          "fn_fraction_in_band": 0.9892156862745098,
+          "fp_pixels": 40352,
+          "fp_fraction_in_band": 0.949345757335448
+        },
+        "Al3Ni": {
+          "gt_pixels": 182984,
+          "pred_pixels": 168686,
+          "gt_boundary_pixels": 78161,
+          "signed_area_error_per_boundary_pixel": -0.18293010580724403,
+          "gt_fraction_in_band": 0.8194650898439207,
+          "fn_pixels": 31833,
+          "fn_fraction_in_band": 0.9829736437030754,
+          "fp_pixels": 17535,
+          "fp_fraction_in_band": 0.6236099230111206
+        },
+        "Primary_Si": {
+          "gt_pixels": 124401,
+          "pred_pixels": 120145,
+          "gt_boundary_pixels": 10261,
+          "signed_area_error_per_boundary_pixel": -0.41477438846116366,
+          "gt_fraction_in_band": 0.21149347674054067,
+          "fn_pixels": 5219,
+          "fn_fraction_in_band": 0.879287219773903,
+          "fp_pixels": 963,
+          "fp_fraction_in_band": 0.8234683281412254
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 108909,
+          "pred_pixels": 99351,
+          "gt_boundary_pixels": 60025,
+          "signed_area_error_per_boundary_pixel": -0.15923365264473135,
+          "gt_fraction_in_band": 0.9514365203977633,
+          "fn_pixels": 23200,
+          "fn_fraction_in_band": 0.9846551724137931,
+          "fp_pixels": 13642,
+          "fp_fraction_in_band": 0.6002785515320335
+        }
+      }
+    },
+    {
+      "image": "A55_step3_sample4",
+      "specimen_group": "A55",
+      "classes": {
+        "Al": {
+          "gt_pixels": 661930,
+          "pred_pixels": 666586,
+          "gt_boundary_pixels": 148157,
+          "signed_area_error_per_boundary_pixel": 0.03142612228919322,
+          "gt_fraction_in_band": 0.5749716737419365,
+          "fn_pixels": 15904,
+          "fn_fraction_in_band": 0.9446680080482898,
+          "fp_pixels": 20560,
+          "fp_fraction_in_band": 0.9470330739299611
+        },
+        "Al3Ni": {
+          "gt_pixels": 308959,
+          "pred_pixels": 309964,
+          "gt_boundary_pixels": 90390,
+          "signed_area_error_per_boundary_pixel": 0.011118486558247594,
+          "gt_fraction_in_band": 0.5927388423706705,
+          "fn_pixels": 22936,
+          "fn_fraction_in_band": 0.9863969305894663,
+          "fp_pixels": 23941,
+          "fp_fraction_in_band": 0.6630884257132117
+        },
+        "Primary_Si": {
+          "gt_pixels": 124661,
+          "pred_pixels": 125949,
+          "gt_boundary_pixels": 17021,
+          "signed_area_error_per_boundary_pixel": 0.07567122965748194,
+          "gt_fraction_in_band": 0.37143934349957086,
+          "fn_pixels": 3162,
+          "fn_fraction_in_band": 0.8327008222643896,
+          "fp_pixels": 4450,
+          "fp_fraction_in_band": 0.5759550561797753
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 66152,
+          "pred_pixels": 59203,
+          "gt_boundary_pixels": 48612,
+          "signed_area_error_per_boundary_pixel": -0.14294824323212377,
+          "gt_fraction_in_band": 0.9887229411053332,
+          "fn_pixels": 19413,
+          "fn_fraction_in_band": 0.9806830474424355,
+          "fp_pixels": 12464,
+          "fp_fraction_in_band": 0.5119544287548139
+        }
+      }
+    },
+    {
+      "image": "A57_step1_sample3",
+      "specimen_group": "A57",
+      "classes": {
+        "Al": {
+          "gt_pixels": 235190,
+          "pred_pixels": 234112,
+          "gt_boundary_pixels": 101482,
+          "signed_area_error_per_boundary_pixel": -0.010622573461303483,
+          "gt_fraction_in_band": 0.876976061907394,
+          "fn_pixels": 9476,
+          "fn_fraction_in_band": 0.9715069649641199,
+          "fp_pixels": 8398,
+          "fp_fraction_in_band": 0.9894022386282448
+        },
+        "Al3Ni": {
+          "gt_pixels": 30420,
+          "pred_pixels": 33563,
+          "gt_boundary_pixels": 22979,
+          "signed_area_error_per_boundary_pixel": 0.136777057313199,
+          "gt_fraction_in_band": 0.9620973044049967,
+          "fn_pixels": 8391,
+          "fn_fraction_in_band": 0.995113812418067,
+          "fp_pixels": 11534,
+          "fp_fraction_in_band": 0.5849661869256112
+        },
+        "Primary_Si": {
+          "gt_pixels": 0,
+          "pred_pixels": 0,
+          "gt_boundary_pixels": 0,
+          "signed_area_error_per_boundary_pixel": 0.0,
+          "gt_fraction_in_band": 0.0,
+          "fn_pixels": 0,
+          "fn_fraction_in_band": 0.0,
+          "fp_pixels": 0,
+          "fp_fraction_in_band": 0.0
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 58390,
+          "pred_pixels": 56325,
+          "gt_boundary_pixels": 50427,
+          "signed_area_error_per_boundary_pixel": -0.04095028456977413,
+          "gt_fraction_in_band": 0.9991265627675971,
+          "fn_pixels": 10804,
+          "fn_fraction_in_band": 0.999537208441318,
+          "fp_pixels": 8739,
+          "fp_fraction_in_band": 0.7924247625586451
+        }
+      }
+    },
+    {
+      "image": "A61_step2_sample2",
+      "specimen_group": "A61",
+      "classes": {
+        "Al": {
+          "gt_pixels": 218235,
+          "pred_pixels": 238210,
+          "gt_boundary_pixels": 96608,
+          "signed_area_error_per_boundary_pixel": 0.2067634150380921,
+          "gt_fraction_in_band": 0.8683391756592664,
+          "fn_pixels": 4889,
+          "fn_fraction_in_band": 0.9977500511352014,
+          "fp_pixels": 24864,
+          "fp_fraction_in_band": 0.9523809523809523
+        },
+        "Al3Ni": {
+          "gt_pixels": 43854,
+          "pred_pixels": 30061,
+          "gt_boundary_pixels": 34756,
+          "signed_area_error_per_boundary_pixel": -0.39685234204166187,
+          "gt_fraction_in_band": 0.9940940393122634,
+          "fn_pixels": 21845,
+          "fn_fraction_in_band": 0.9977111467154955,
+          "fp_pixels": 8052,
+          "fp_fraction_in_band": 0.6777198211624441
+        },
+        "Primary_Si": {
+          "gt_pixels": 12305,
+          "pred_pixels": 11043,
+          "gt_boundary_pixels": 2956,
+          "signed_area_error_per_boundary_pixel": -0.42692828146143436,
+          "gt_fraction_in_band": 0.5313287281592849,
+          "fn_pixels": 1495,
+          "fn_fraction_in_band": 0.9806020066889632,
+          "fp_pixels": 233,
+          "fp_fraction_in_band": 0.7296137339055794
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 49606,
+          "pred_pixels": 44686,
+          "gt_boundary_pixels": 44336,
+          "signed_area_error_per_boundary_pixel": -0.11097076867556839,
+          "gt_fraction_in_band": 0.9985687215256219,
+          "fn_pixels": 13724,
+          "fn_fraction_in_band": 0.9996356747303993,
+          "fp_pixels": 8804,
+          "fp_fraction_in_band": 0.7553384825079509
+        }
+      }
+    },
+    {
+      "image": "A64_step2_sample3",
+      "specimen_group": "A64",
+      "classes": {
+        "Al": {
+          "gt_pixels": 187628,
+          "pred_pixels": 192727,
+          "gt_boundary_pixels": 75308,
+          "signed_area_error_per_boundary_pixel": 0.06770860997503585,
+          "gt_fraction_in_band": 0.8465634127102565,
+          "fn_pixels": 3234,
+          "fn_fraction_in_band": 0.9978354978354979,
+          "fp_pixels": 8333,
+          "fp_fraction_in_band": 0.9806792271690867
+        },
+        "Al3Ni": {
+          "gt_pixels": 60852,
+          "pred_pixels": 68443,
+          "gt_boundary_pixels": 42324,
+          "signed_area_error_per_boundary_pixel": 0.17935450335507042,
+          "gt_fraction_in_band": 0.993328074672977,
+          "fn_pixels": 6311,
+          "fn_fraction_in_band": 0.9992077325305023,
+          "fp_pixels": 13902,
+          "fp_fraction_in_band": 0.702129190044598
+        },
+        "Primary_Si": {
+          "gt_pixels": 56129,
+          "pred_pixels": 54701,
+          "gt_boundary_pixels": 9487,
+          "signed_area_error_per_boundary_pixel": -0.15052176662801728,
+          "gt_fraction_in_band": 0.42217035756917104,
+          "fn_pixels": 2052,
+          "fn_fraction_in_band": 0.9946393762183235,
+          "fp_pixels": 624,
+          "fp_fraction_in_band": 0.8717948717948718
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 19391,
+          "pred_pixels": 8129,
+          "gt_boundary_pixels": 18150,
+          "signed_area_error_per_boundary_pixel": -0.620495867768595,
+          "gt_fraction_in_band": 0.999948429683874,
+          "fn_pixels": 12158,
+          "fn_fraction_in_band": 1.0,
+          "fp_pixels": 896,
+          "fp_fraction_in_band": 0.48995535714285715
+        }
+      }
+    },
+    {
+      "image": "A66_step3_sample2",
+      "specimen_group": "A66",
+      "classes": {
+        "Al": {
+          "gt_pixels": 227974,
+          "pred_pixels": 214721,
+          "gt_boundary_pixels": 89501,
+          "signed_area_error_per_boundary_pixel": -0.14807655780382342,
+          "gt_fraction_in_band": 0.8385649240702887,
+          "fn_pixels": 17979,
+          "fn_fraction_in_band": 0.9780855442460649,
+          "fp_pixels": 4726,
+          "fp_fraction_in_band": 0.9807448159119763
+        },
+        "Al3Ni": {
+          "gt_pixels": 56928,
+          "pred_pixels": 47246,
+          "gt_boundary_pixels": 48124,
+          "signed_area_error_per_boundary_pixel": -0.20118859612667275,
+          "gt_fraction_in_band": 0.9975583192804947,
+          "fn_pixels": 24170,
+          "fn_fraction_in_band": 0.9997103847745139,
+          "fp_pixels": 14488,
+          "fp_fraction_in_band": 0.881695196024296
+        },
+        "Primary_Si": {
+          "gt_pixels": 30050,
+          "pred_pixels": 30756,
+          "gt_boundary_pixels": 4177,
+          "signed_area_error_per_boundary_pixel": 0.16902082834570265,
+          "gt_fraction_in_band": 0.3637603993344426,
+          "fn_pixels": 211,
+          "fn_fraction_in_band": 1.0,
+          "fp_pixels": 917,
+          "fp_fraction_in_band": 0.4612868047982552
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 9048,
+          "pred_pixels": 31277,
+          "gt_boundary_pixels": 8111,
+          "signed_area_error_per_boundary_pixel": 2.7405991862902233,
+          "gt_fraction_in_band": 0.999447391688771,
+          "fn_pixels": 800,
+          "fn_fraction_in_band": 1.0,
+          "fp_pixels": 23029,
+          "fp_fraction_in_band": 0.194580746015893
+        }
+      }
+    },
+    {
+      "image": "A69_step4_sample4",
+      "specimen_group": "A69",
+      "classes": {
+        "Al": {
+          "gt_pixels": 208191,
+          "pred_pixels": 217248,
+          "gt_boundary_pixels": 69185,
+          "signed_area_error_per_boundary_pixel": 0.13090987930909878,
+          "gt_fraction_in_band": 0.725521276135856,
+          "fn_pixels": 2536,
+          "fn_fraction_in_band": 0.9964511041009464,
+          "fp_pixels": 11593,
+          "fp_fraction_in_band": 0.9861985681014406
+        },
+        "Al3Ni": {
+          "gt_pixels": 76636,
+          "pred_pixels": 76589,
+          "gt_boundary_pixels": 40293,
+          "signed_area_error_per_boundary_pixel": -0.0011664557119102574,
+          "gt_fraction_in_band": 0.8759851766793674,
+          "fn_pixels": 9319,
+          "fn_fraction_in_band": 0.9954930786565082,
+          "fp_pixels": 9272,
+          "fp_fraction_in_band": 0.5333261432269197
+        },
+        "Primary_Si": {
+          "gt_pixels": 24728,
+          "pred_pixels": 24179,
+          "gt_boundary_pixels": 4349,
+          "signed_area_error_per_boundary_pixel": -0.1262359163025983,
+          "gt_fraction_in_band": 0.4608540925266904,
+          "fn_pixels": 980,
+          "fn_fraction_in_band": 0.9142857142857143,
+          "fp_pixels": 431,
+          "fp_fraction_in_band": 0.8190255220417634
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 14445,
+          "pred_pixels": 5984,
+          "gt_boundary_pixels": 12823,
+          "signed_area_error_per_boundary_pixel": -0.6598299929813616,
+          "gt_fraction_in_band": 0.9959847698165455,
+          "fn_pixels": 8852,
+          "fn_fraction_in_band": 0.9994351558969724,
+          "fp_pixels": 391,
+          "fp_fraction_in_band": 0.6547314578005116
+        }
+      }
+    },
+    {
+      "image": "A78_step4_sample1",
+      "specimen_group": "A78",
+      "classes": {
+        "Al": {
+          "gt_pixels": 170744,
+          "pred_pixels": 188945,
+          "gt_boundary_pixels": 88403,
+          "signed_area_error_per_boundary_pixel": 0.2058866780539122,
+          "gt_fraction_in_band": 0.8324274937918755,
+          "fn_pixels": 5654,
+          "fn_fraction_in_band": 0.9977007428369296,
+          "fp_pixels": 23855,
+          "fp_fraction_in_band": 0.910920142527772
+        },
+        "Al3Ni": {
+          "gt_pixels": 112297,
+          "pred_pixels": 95952,
+          "gt_boundary_pixels": 57188,
+          "signed_area_error_per_boundary_pixel": -0.28581170875008743,
+          "gt_fraction_in_band": 0.7732708798988397,
+          "fn_pixels": 23423,
+          "fn_fraction_in_band": 0.9557699696879136,
+          "fp_pixels": 7078,
+          "fp_fraction_in_band": 0.8728454365640012
+        },
+        "Primary_Si": {
+          "gt_pixels": 27754,
+          "pred_pixels": 27586,
+          "gt_boundary_pixels": 3044,
+          "signed_area_error_per_boundary_pixel": -0.05519053876478318,
+          "gt_fraction_in_band": 0.27621243784679683,
+          "fn_pixels": 559,
+          "fn_fraction_in_band": 1.0,
+          "fp_pixels": 391,
+          "fp_fraction_in_band": 0.7365728900255755
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 13205,
+          "pred_pixels": 11517,
+          "gt_boundary_pixels": 12335,
+          "signed_area_error_per_boundary_pixel": -0.13684637211187678,
+          "gt_fraction_in_band": 1.0,
+          "fn_pixels": 4266,
+          "fn_fraction_in_band": 1.0,
+          "fp_pixels": 2578,
+          "fp_fraction_in_band": 0.6233514352211016
+        }
+      }
+    },
+    {
+      "image": "A7_step1_sample2",
+      "specimen_group": "A7",
+      "classes": {
+        "Al": {
+          "gt_pixels": 747550,
+          "pred_pixels": 754199,
+          "gt_boundary_pixels": 123398,
+          "signed_area_error_per_boundary_pixel": 0.05388255887453605,
+          "gt_fraction_in_band": 0.46690388602769045,
+          "fn_pixels": 9212,
+          "fn_fraction_in_band": 0.9892531480677378,
+          "fp_pixels": 15861,
+          "fp_fraction_in_band": 0.9322867410629847
+        },
+        "Al3Ni": {
+          "gt_pixels": 102123,
+          "pred_pixels": 96157,
+          "gt_boundary_pixels": 43419,
+          "signed_area_error_per_boundary_pixel": -0.13740528340127595,
+          "gt_fraction_in_band": 0.7834376193413825,
+          "fn_pixels": 15177,
+          "fn_fraction_in_band": 0.9925545232918231,
+          "fp_pixels": 9211,
+          "fp_fraction_in_band": 0.7054608620128108
+        },
+        "Primary_Si": {
+          "gt_pixels": 236283,
+          "pred_pixels": 221664,
+          "gt_boundary_pixels": 40203,
+          "signed_area_error_per_boundary_pixel": -0.3636295798820984,
+          "gt_fraction_in_band": 0.41988632275703286,
+          "fn_pixels": 20751,
+          "fn_fraction_in_band": 0.8172136282588791,
+          "fp_pixels": 6132,
+          "fp_fraction_in_band": 0.39905414220482716
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 75746,
+          "pred_pixels": 89682,
+          "gt_boundary_pixels": 40806,
+          "signed_area_error_per_boundary_pixel": 0.3415184041562515,
+          "gt_fraction_in_band": 0.9325640957938373,
+          "fn_pixels": 11798,
+          "fn_fraction_in_band": 0.9146465502627564,
+          "fp_pixels": 25734,
+          "fp_fraction_in_band": 0.21380275122406156
+        }
+      }
+    },
+    {
+      "image": "A7_step4_sample3",
+      "specimen_group": "A7",
+      "classes": {
+        "Al": {
+          "gt_pixels": 700742,
+          "pred_pixels": 723697,
+          "gt_boundary_pixels": 276173,
+          "signed_area_error_per_boundary_pixel": 0.08311819040963454,
+          "gt_fraction_in_band": 0.8710880752117042,
+          "fn_pixels": 40233,
+          "fn_fraction_in_band": 0.9566027887554992,
+          "fp_pixels": 63188,
+          "fp_fraction_in_band": 0.9616857631195797
+        },
+        "Al3Ni": {
+          "gt_pixels": 258033,
+          "pred_pixels": 256123,
+          "gt_boundary_pixels": 181935,
+          "signed_area_error_per_boundary_pixel": -0.010498254871245226,
+          "gt_fraction_in_band": 0.9819596718249216,
+          "fn_pixels": 61310,
+          "fn_fraction_in_band": 0.9891208611971946,
+          "fp_pixels": 59400,
+          "fp_fraction_in_band": 0.6574242424242425
+        },
+        "Primary_Si": {
+          "gt_pixels": 136540,
+          "pred_pixels": 138348,
+          "gt_boundary_pixels": 32774,
+          "signed_area_error_per_boundary_pixel": 0.05516568011228413,
+          "gt_fraction_in_band": 0.5800498022557492,
+          "fn_pixels": 11340,
+          "fn_fraction_in_band": 0.9404761904761905,
+          "fp_pixels": 13148,
+          "fp_fraction_in_band": 0.46858837846060236
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 66387,
+          "pred_pixels": 43534,
+          "gt_boundary_pixels": 47864,
+          "signed_area_error_per_boundary_pixel": -0.4774569613906067,
+          "gt_fraction_in_band": 0.9728109419012758,
+          "fn_pixels": 36209,
+          "fn_fraction_in_band": 0.9544312187577674,
+          "fp_pixels": 13356,
+          "fp_fraction_in_band": 0.35160227613057804
+        }
+      }
+    },
+    {
+      "image": "A83_step1_sample2",
+      "specimen_group": "A83",
+      "classes": {
+        "Al": {
+          "gt_pixels": 201125,
+          "pred_pixels": 200928,
+          "gt_boundary_pixels": 77428,
+          "signed_area_error_per_boundary_pixel": -0.0025442992199204424,
+          "gt_fraction_in_band": 0.8276246115599751,
+          "fn_pixels": 6592,
+          "fn_fraction_in_band": 0.9790655339805825,
+          "fp_pixels": 6395,
+          "fp_fraction_in_band": 0.9942142298670836
+        },
+        "Al3Ni": {
+          "gt_pixels": 58688,
+          "pred_pixels": 60209,
+          "gt_boundary_pixels": 31014,
+          "signed_area_error_per_boundary_pixel": 0.049042367962855486,
+          "gt_fraction_in_band": 0.9057899400218102,
+          "fn_pixels": 5870,
+          "fn_fraction_in_band": 0.9986371379897785,
+          "fp_pixels": 7391,
+          "fp_fraction_in_band": 0.7035583818157218
+        },
+        "Primary_Si": {
+          "gt_pixels": 41308,
+          "pred_pixels": 42086,
+          "gt_boundary_pixels": 8410,
+          "signed_area_error_per_boundary_pixel": 0.0925089179548157,
+          "gt_fraction_in_band": 0.5127820276943933,
+          "fn_pixels": 1043,
+          "fn_fraction_in_band": 0.987535953978907,
+          "fp_pixels": 1821,
+          "fp_fraction_in_band": 0.33388248215266336
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 22879,
+          "pred_pixels": 20777,
+          "gt_boundary_pixels": 21100,
+          "signed_area_error_per_boundary_pixel": -0.09962085308056871,
+          "gt_fraction_in_band": 0.9986450456750732,
+          "fn_pixels": 6064,
+          "fn_fraction_in_band": 0.9950527704485488,
+          "fp_pixels": 3962,
+          "fp_fraction_in_band": 0.7241292276627965
+        }
+      }
+    },
+    {
+      "image": "A87_step2_sample2",
+      "specimen_group": "A87",
+      "classes": {
+        "Al": {
+          "gt_pixels": 213984,
+          "pred_pixels": 217308,
+          "gt_boundary_pixels": 79680,
+          "signed_area_error_per_boundary_pixel": 0.041716867469879515,
+          "gt_fraction_in_band": 0.7642534021235232,
+          "fn_pixels": 5657,
+          "fn_fraction_in_band": 0.998585822874315,
+          "fp_pixels": 8981,
+          "fp_fraction_in_band": 0.9783988419997773
+        },
+        "Al3Ni": {
+          "gt_pixels": 53492,
+          "pred_pixels": 51435,
+          "gt_boundary_pixels": 29518,
+          "signed_area_error_per_boundary_pixel": -0.06968629310928924,
+          "gt_fraction_in_band": 0.9268862633664847,
+          "fn_pixels": 7361,
+          "fn_fraction_in_band": 0.9944301046053525,
+          "fp_pixels": 5304,
+          "fp_fraction_in_band": 0.735105580693816
+        },
+        "Primary_Si": {
+          "gt_pixels": 16647,
+          "pred_pixels": 16128,
+          "gt_boundary_pixels": 2410,
+          "signed_area_error_per_boundary_pixel": -0.2153526970954357,
+          "gt_fraction_in_band": 0.37334054183937043,
+          "fn_pixels": 802,
+          "fn_fraction_in_band": 0.6384039900249376,
+          "fp_pixels": 283,
+          "fp_fraction_in_band": 0.6855123674911661
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 39877,
+          "pred_pixels": 39129,
+          "gt_boundary_pixels": 35351,
+          "signed_area_error_per_boundary_pixel": -0.021159231704902266,
+          "gt_fraction_in_band": 0.9991223010758081,
+          "fn_pixels": 7000,
+          "fn_fraction_in_band": 0.9987142857142857,
+          "fp_pixels": 6252,
+          "fp_fraction_in_band": 0.7789507357645553
+        }
+      }
+    },
+    {
+      "image": "A89_step1_sample2",
+      "specimen_group": "A89",
+      "classes": {
+        "Al": {
+          "gt_pixels": 184561,
+          "pred_pixels": 188746,
+          "gt_boundary_pixels": 83627,
+          "signed_area_error_per_boundary_pixel": 0.050043646190823535,
+          "gt_fraction_in_band": 0.8787880429776606,
+          "fn_pixels": 5254,
+          "fn_fraction_in_band": 0.9986676817662733,
+          "fp_pixels": 9439,
+          "fp_fraction_in_band": 0.953278949041212
+        },
+        "Al3Ni": {
+          "gt_pixels": 73838,
+          "pred_pixels": 76497,
+          "gt_boundary_pixels": 45941,
+          "signed_area_error_per_boundary_pixel": 0.0578785834004484,
+          "gt_fraction_in_band": 0.9721823451339419,
+          "fn_pixels": 8729,
+          "fn_fraction_in_band": 0.983159582999198,
+          "fp_pixels": 11388,
+          "fp_fraction_in_band": 0.7910080786793116
+        },
+        "Primary_Si": {
+          "gt_pixels": 36350,
+          "pred_pixels": 35349,
+          "gt_boundary_pixels": 11984,
+          "signed_area_error_per_boundary_pixel": -0.08352803738317757,
+          "gt_fraction_in_band": 0.74646492434663,
+          "fn_pixels": 2401,
+          "fn_fraction_in_band": 0.9233652644731362,
+          "fp_pixels": 1400,
+          "fp_fraction_in_band": 0.5592857142857143
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 29251,
+          "pred_pixels": 23408,
+          "gt_boundary_pixels": 26485,
+          "signed_area_error_per_boundary_pixel": -0.22061544270341704,
+          "gt_fraction_in_band": 0.998564151652935,
+          "fn_pixels": 9749,
+          "fn_fraction_in_band": 0.9973330598010053,
+          "fp_pixels": 3906,
+          "fp_fraction_in_band": 0.6794674859190988
+        }
+      }
+    },
+    {
+      "image": "A8_step2_sample3",
+      "specimen_group": "A8",
+      "classes": {
+        "Al": {
+          "gt_pixels": 175694,
+          "pred_pixels": 181370,
+          "gt_boundary_pixels": 70865,
+          "signed_area_error_per_boundary_pixel": 0.08009595710153108,
+          "gt_fraction_in_band": 0.8538880098352818,
+          "fn_pixels": 5501,
+          "fn_fraction_in_band": 0.9858207598618433,
+          "fp_pixels": 11177,
+          "fp_fraction_in_band": 0.9718171244519996
+        },
+        "Al3Ni": {
+          "gt_pixels": 65720,
+          "pred_pixels": 61121,
+          "gt_boundary_pixels": 36457,
+          "signed_area_error_per_boundary_pixel": -0.12614861343500564,
+          "gt_fraction_in_band": 0.9152921485088253,
+          "fn_pixels": 10942,
+          "fn_fraction_in_band": 0.9967099250594041,
+          "fp_pixels": 6343,
+          "fp_fraction_in_band": 0.736717641494561
+        },
+        "Primary_Si": {
+          "gt_pixels": 47300,
+          "pred_pixels": 49766,
+          "gt_boundary_pixels": 14435,
+          "signed_area_error_per_boundary_pixel": 0.17083477658468998,
+          "gt_fraction_in_band": 0.6483720930232558,
+          "fn_pixels": 4046,
+          "fn_fraction_in_band": 0.9913494809688581,
+          "fp_pixels": 6512,
+          "fp_fraction_in_band": 0.2936117936117936
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 35286,
+          "pred_pixels": 31743,
+          "gt_boundary_pixels": 25797,
+          "signed_area_error_per_boundary_pixel": -0.13734155134317944,
+          "gt_fraction_in_band": 0.9894008955393073,
+          "fn_pixels": 9420,
+          "fn_fraction_in_band": 0.9792993630573248,
+          "fp_pixels": 5877,
+          "fp_fraction_in_band": 0.6134082014633316
+        }
+      }
+    },
+    {
+      "image": "A8_step3_sample3",
+      "specimen_group": "A8",
+      "classes": {
+        "Al": {
+          "gt_pixels": 158871,
+          "pred_pixels": 168236,
+          "gt_boundary_pixels": 72961,
+          "signed_area_error_per_boundary_pixel": 0.12835624511725444,
+          "gt_fraction_in_band": 0.9035947403868547,
+          "fn_pixels": 4747,
+          "fn_fraction_in_band": 0.996208131451443,
+          "fp_pixels": 14112,
+          "fp_fraction_in_band": 0.9500425170068028
+        },
+        "Al3Ni": {
+          "gt_pixels": 68110,
+          "pred_pixels": 60244,
+          "gt_boundary_pixels": 45345,
+          "signed_area_error_per_boundary_pixel": -0.17347006285147204,
+          "gt_fraction_in_band": 0.9795331082073117,
+          "fn_pixels": 14613,
+          "fn_fraction_in_band": 0.9993841100390064,
+          "fp_pixels": 6747,
+          "fp_fraction_in_band": 0.7827182451459909
+        },
+        "Primary_Si": {
+          "gt_pixels": 64545,
+          "pred_pixels": 68674,
+          "gt_boundary_pixels": 19804,
+          "signed_area_error_per_boundary_pixel": 0.2084932336901636,
+          "gt_fraction_in_band": 0.6491440080563947,
+          "fn_pixels": 4629,
+          "fn_fraction_in_band": 0.983149708360337,
+          "fp_pixels": 8758,
+          "fp_fraction_in_band": 0.3335236355332268
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 32474,
+          "pred_pixels": 26846,
+          "gt_boundary_pixels": 23149,
+          "signed_area_error_per_boundary_pixel": -0.2431206531599637,
+          "gt_fraction_in_band": 0.9918088316807292,
+          "fn_pixels": 10638,
+          "fn_fraction_in_band": 0.9820454972739237,
+          "fp_pixels": 5010,
+          "fp_fraction_in_band": 0.580439121756487
+        }
+      }
+    },
+    {
+      "image": "A94_step4_sample2",
+      "specimen_group": "A94",
+      "classes": {
+        "Al": {
+          "gt_pixels": 210339,
+          "pred_pixels": 216363,
+          "gt_boundary_pixels": 69998,
+          "signed_area_error_per_boundary_pixel": 0.0860596017029058,
+          "gt_fraction_in_band": 0.7723294301104408,
+          "fn_pixels": 3455,
+          "fn_fraction_in_band": 0.9904486251808973,
+          "fp_pixels": 9479,
+          "fp_fraction_in_band": 0.9981010655132397
+        },
+        "Al3Ni": {
+          "gt_pixels": 68206,
+          "pred_pixels": 65914,
+          "gt_boundary_pixels": 36244,
+          "signed_area_error_per_boundary_pixel": -0.06323805319501159,
+          "gt_fraction_in_band": 0.9288185790106442,
+          "fn_pixels": 7537,
+          "fn_fraction_in_band": 1.0,
+          "fp_pixels": 5245,
+          "fp_fraction_in_band": 0.7445185891325071
+        },
+        "Primary_Si": {
+          "gt_pixels": 20364,
+          "pred_pixels": 17983,
+          "gt_boundary_pixels": 7109,
+          "signed_area_error_per_boundary_pixel": -0.3349275566183711,
+          "gt_fraction_in_band": 0.7651247299155373,
+          "fn_pixels": 3474,
+          "fn_fraction_in_band": 0.9565342544617156,
+          "fp_pixels": 1093,
+          "fp_fraction_in_band": 0.28636779505946935
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 25091,
+          "pred_pixels": 23740,
+          "gt_boundary_pixels": 21253,
+          "signed_area_error_per_boundary_pixel": -0.06356749635345599,
+          "gt_fraction_in_band": 0.9993224662229485,
+          "fn_pixels": 5752,
+          "fn_fraction_in_band": 0.997913769123783,
+          "fp_pixels": 4401,
+          "fp_fraction_in_band": 0.44467166553056126
+        }
+      }
+    },
+    {
+      "image": "A96_step1_sample1",
+      "specimen_group": "A96",
+      "classes": {
+        "Al": {
+          "gt_pixels": 196236,
+          "pred_pixels": 198170,
+          "gt_boundary_pixels": 45893,
+          "signed_area_error_per_boundary_pixel": 0.04214150306146907,
+          "gt_fraction_in_band": 0.588755376179702,
+          "fn_pixels": 2577,
+          "fn_fraction_in_band": 0.9992239037640668,
+          "fp_pixels": 4511,
+          "fp_fraction_in_band": 0.9771669252937264
+        },
+        "Al3Ni": {
+          "gt_pixels": 86671,
+          "pred_pixels": 83969,
+          "gt_boundary_pixels": 19620,
+          "signed_area_error_per_boundary_pixel": -0.13771661569826707,
+          "gt_fraction_in_band": 0.4691534654036529,
+          "fn_pixels": 4297,
+          "fn_fraction_in_band": 0.9953455899464743,
+          "fp_pixels": 1595,
+          "fp_fraction_in_band": 0.8438871473354232
+        },
+        "Primary_Si": {
+          "gt_pixels": 17191,
+          "pred_pixels": 18128,
+          "gt_boundary_pixels": 3278,
+          "signed_area_error_per_boundary_pixel": 0.28584502745576573,
+          "gt_fraction_in_band": 0.4582048746437089,
+          "fn_pixels": 837,
+          "fn_fraction_in_band": 0.8339307048984468,
+          "fp_pixels": 1774,
+          "fp_fraction_in_band": 0.16967305524239007
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 23902,
+          "pred_pixels": 23733,
+          "gt_boundary_pixels": 17994,
+          "signed_area_error_per_boundary_pixel": -0.009392019562076248,
+          "gt_fraction_in_band": 0.9858589239394193,
+          "fn_pixels": 3278,
+          "fn_fraction_in_band": 0.9353264185478951,
+          "fp_pixels": 3109,
+          "fp_fraction_in_band": 0.7185590221936314
+        }
+      }
+    },
+    {
+      "image": "A98_step2_sample4",
+      "specimen_group": "A98",
+      "classes": {
+        "Al": {
+          "gt_pixels": 203751,
+          "pred_pixels": 201938,
+          "gt_boundary_pixels": 53012,
+          "signed_area_error_per_boundary_pixel": -0.03419980381800347,
+          "gt_fraction_in_band": 0.6516139798086881,
+          "fn_pixels": 4541,
+          "fn_fraction_in_band": 0.9647654701607575,
+          "fp_pixels": 2728,
+          "fp_fraction_in_band": 0.9842375366568915
+        },
+        "Al3Ni": {
+          "gt_pixels": 64666,
+          "pred_pixels": 64907,
+          "gt_boundary_pixels": 16491,
+          "signed_area_error_per_boundary_pixel": 0.014614031896185799,
+          "gt_fraction_in_band": 0.5519902267033681,
+          "fn_pixels": 2332,
+          "fn_fraction_in_band": 0.9965694682675815,
+          "fp_pixels": 2573,
+          "fp_fraction_in_band": 0.8254955305091333
+        },
+        "Primary_Si": {
+          "gt_pixels": 28055,
+          "pred_pixels": 28344,
+          "gt_boundary_pixels": 6240,
+          "signed_area_error_per_boundary_pixel": 0.046314102564102566,
+          "gt_fraction_in_band": 0.5238281946177152,
+          "fn_pixels": 734,
+          "fn_fraction_in_band": 1.0,
+          "fp_pixels": 1023,
+          "fp_fraction_in_band": 0.5239491691104594
+        },
+        "Eutectic_Si": {
+          "gt_pixels": 27528,
+          "pred_pixels": 28811,
+          "gt_boundary_pixels": 22635,
+          "signed_area_error_per_boundary_pixel": 0.05668212944554893,
+          "gt_fraction_in_band": 0.9967306015693113,
+          "fn_pixels": 2064,
+          "fn_fraction_in_band": 0.9631782945736435,
+          "fp_pixels": 3347,
+          "fp_fraction_in_band": 0.8150582611293696
+        }
+      }
+    }
+  ]
+}

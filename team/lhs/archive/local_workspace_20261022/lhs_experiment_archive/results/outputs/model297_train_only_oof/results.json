@@ -1,0 +1,306 @@
+{
+  "model": 297,
+  "method": "train-only specimen-group OOF ResNet34 U-Net++/ASPP branch",
+  "metric": "per-image mean of four class IoUs; empty union is 0",
+  "train_image_count": 70,
+  "train_specimen_group_count": 59,
+  "valid_image_count": 20,
+  "fold_count": 4,
+  "fold_epochs": 8,
+  "validation_masks_used_for_training_or_selection": false,
+  "folds": [
+    {
+      "fold": 1,
+      "train_image_count": 52,
+      "heldout_image_count": 18,
+      "train_specimen_group_count": 44,
+      "heldout_specimen_groups": [
+        "A118",
+        "A138",
+        "A140",
+        "A155",
+        "A16",
+        "A164",
+        "A200",
+        "A51",
+        "A57",
+        "A64",
+        "A69",
+        "A7",
+        "A8",
+        "A87",
+        "A94"
+      ],
+      "heldout_train_image_mean_miou": 0.753544978321687,
+      "epoch_history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.0150659445386667,
+          "seconds": 83.82135725021362
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.7119072102583371,
+          "seconds": 65.81575798988342
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.5917154077727061,
+          "seconds": 65.69466972351074
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.5313751680346636,
+          "seconds": 65.55856394767761
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.488533631253701,
+          "seconds": 65.42293310165405
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.47490400763658375,
+          "seconds": 65.37346315383911
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.4523852579295635,
+          "seconds": 65.60141158103943
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.4474413452240137,
+          "seconds": 65.51726198196411
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "train_image_count": 52,
+      "heldout_image_count": 18,
+      "train_specimen_group_count": 44,
+      "heldout_specimen_groups": [
+        "A106",
+        "A111",
+        "A123",
+        "A139",
+        "A147",
+        "A15",
+        "A152",
+        "A167",
+        "A182",
+        "A2",
+        "A21",
+        "A39",
+        "A49",
+        "A61",
+        "A78"
+      ],
+      "heldout_train_image_mean_miou": 0.7629157726409109,
+      "epoch_history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.1853256128155267,
+          "seconds": 65.60040783882141
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.7816442744090006,
+          "seconds": 65.28614640235901
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.622567104605528,
+          "seconds": 65.18945527076721
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.5305214644624636,
+          "seconds": 65.07648229598999
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.49159107672480434,
+          "seconds": 65.13132643699646
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.469782622387776,
+          "seconds": 65.31863284111023
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.45766251591535717,
+          "seconds": 65.53639054298401
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.45461476708833987,
+          "seconds": 64.94897937774658
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "train_image_count": 53,
+      "heldout_image_count": 17,
+      "train_specimen_group_count": 45,
+      "heldout_specimen_groups": [
+        "A108",
+        "A109",
+        "A130",
+        "A137",
+        "A153",
+        "A154",
+        "A159",
+        "A18",
+        "A187",
+        "A191",
+        "A201",
+        "A222",
+        "A55",
+        "A98"
+      ],
+      "heldout_train_image_mean_miou": 0.8109040089390857,
+      "epoch_history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.1246786196276826,
+          "seconds": 66.91949772834778
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.779259334195335,
+          "seconds": 66.60694026947021
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.636603351752713,
+          "seconds": 66.35186195373535
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.5652803325990461,
+          "seconds": 67.44291138648987
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.5227236078595215,
+          "seconds": 68.34174919128418
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.5067809159463307,
+          "seconds": 68.46530294418335
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.4881801908870913,
+          "seconds": 68.432692527771
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.488696463265509,
+          "seconds": 59.787800312042236
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "train_image_count": 53,
+      "heldout_image_count": 17,
+      "train_specimen_group_count": 44,
+      "heldout_specimen_groups": [
+        "A101",
+        "A121",
+        "A125",
+        "A146",
+        "A150",
+        "A156",
+        "A166",
+        "A181",
+        "A188",
+        "A224",
+        "A40",
+        "A66",
+        "A83",
+        "A89",
+        "A96"
+      ],
+      "heldout_train_image_mean_miou": 0.7633417693596952,
+      "epoch_history": [
+        {
+          "epoch": 1,
+          "train_loss": 0.9408991539253378,
+          "seconds": 66.73207354545593
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.6500697875360273,
+          "seconds": 66.82451701164246
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.5529787664143544,
+          "seconds": 66.76649236679077
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.5074651826102778,
+          "seconds": 66.44761991500854
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.4818787524160349,
+          "seconds": 66.78743052482605
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.450152243645686,
+          "seconds": 66.53134942054749
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.44001312581998,
+          "seconds": 66.64804363250732
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.43610915935264444,
+          "seconds": 66.5979835987091
+        }
+      ]
+    }
+  ],
+  "train_oof_image_mean_miou": 0.7722638821200862,
+  "valid_fold_ensemble_image_mean_miou": 0.7425459240078258,
+  "valid_image_scores": [
+    0.8575033551964525,
+    0.6316718679777165,
+    0.6568397392550005,
+    0.7713331472000684,
+    0.6264441619281789,
+    0.8427200057408097,
+    0.7425546407428192,
+    0.7782602543568902,
+    0.7745367687407165,
+    0.7915589446296429,
+    0.8147960203633589,
+    0.8686030470017665,
+    0.7938233679468208,
+    0.7914939267678671,
+    0.785669359138709,
+    0.7259959368593656,
+    0.3358494032806927,
+    0.8421789208176265,
+    0.6568440921796969,
+    0.7622415200323163
+  ],
+  "elapsed_seconds": 2726.2017047405243,
+  "artifacts": {
+    "train_oof_probs": "outputs/model297_train_only_oof/train_oof_probs.npz",
+    "valid_fold_ensemble_probs": "outputs/model297_train_only_oof/valid_fold_ensemble_probs.npz"
+  },
+  "train_oof_aggregation": "image-count-weighted mean of specimen-group fold image means"
+}

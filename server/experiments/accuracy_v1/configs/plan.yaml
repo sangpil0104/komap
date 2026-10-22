@@ -1,0 +1,23 @@
+baseline_checkpoint: baseline/run/best.pt
+experiments:
+  fullframe:
+    config: configs/fullframe.yaml
+    description: '4500 updates: 2000 patch512 + 1000 patch768 + 1500 full frame'
+  boundary:
+    config: configs/boundary.yaml
+    description: Baseline schedule + boundary auxiliary loss 0.05
+  seed2027:
+    config: configs/seed2027.yaml
+    description: Baseline configuration, seed 2027
+  seed2028:
+    config: configs/seed2028.yaml
+    description: Baseline configuration, seed 2028
+  dino_large:
+    config: configs/dino_large.yaml
+    description: DINOv3-L + native CNN, last 4/8 blocks fine-tuned, official weights
+      required
+default_suite:
+- fullframe
+- boundary
+- seed2027
+- seed2028

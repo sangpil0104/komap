@@ -1,0 +1,1802 @@
+{
+  "audit": "diagnostic only; validation GT was not used to tune a model or route",
+  "metric": "per-image mean of four class IoUs; empty union is 0",
+  "route": {
+    "stage": "model270_reference",
+    "primary_source": "195",
+    "primary_gamma": 0.75,
+    "al3ni_source": "217",
+    "al3ni_gamma": 0.4,
+    "eutectic_source": "269",
+    "eutectic_gamma": 0.5,
+    "prior_scale": 1.25,
+    "beta_scale": 0.8,
+    "al_delta": 0.0,
+    "eut_delta": 0.15,
+    "gaussian_blend": 0.5,
+    "eut_edge_blend": 0.25,
+    "cleanup_threshold": 128
+  },
+  "image_count": 20,
+  "specimen_group_count": 19,
+  "image_mean_miou": 0.787209255349963,
+  "class_image_mean_iou": {
+    "Al3Ni": 0.7515076999144095,
+    "Primary Si": 0.8603625244749769,
+    "Al": 0.937434932487301,
+    "Eutectic Si": 0.5995318645231655
+  },
+  "class_global_iou": {
+    "Al3Ni": 0.7948809134432778,
+    "Primary Si": 0.8966814705521883,
+    "Al": 0.9418887518455923,
+    "Eutectic Si": 0.6220462525030647
+  },
+  "gt_present_pred_absent_count_by_class": {
+    "Al3Ni": 0,
+    "Primary Si": 0,
+    "Al": 0,
+    "Eutectic Si": 0
+  },
+  "single_class_oracle_upper_bounds": {
+    "Al3Ni": {
+      "oracle_image_mean_miou": 0.9170571155649684,
+      "delta_pp": 12.984786021500538,
+      "oracle_class_image_mean_iou": [
+        1.0,
+        0.8868735300266314,
+        0.9779730873784281,
+        0.803381844854815
+      ]
+    },
+    "Primary Si": {
+      "oracle_image_mean_miou": 0.8280314835248245,
+      "delta_pp": 4.082222817486148,
+      "oracle_class_image_mean_iou": [
+        0.7632776749584633,
+        0.95,
+        0.9414103493632281,
+        0.6574379097776069
+      ]
+    },
+    "Al": {
+      "oracle_image_mean_miou": 0.8598670535610413,
+      "delta_pp": 7.265779821107832,
+      "oracle_class_image_mean_iou": [
+        0.8669183876105079,
+        0.8794961108593006,
+        1.0,
+        0.6930537157743573
+      ]
+    },
+    "Eutectic Si": {
+      "oracle_image_mean_miou": 0.9276084349459961,
+      "delta_pp": 14.03991795960331,
+      "oracle_class_image_mean_iou": [
+        0.854283863316043,
+        0.9017378273470074,
+        0.9544120491209341,
+        1.0
+      ]
+    }
+  },
+  "boundary_tolerance_diagnostics": {
+    "1": {
+      "ignored_boundary_pixels_px": 1,
+      "image_mean_miou_on_remaining_pixels": 0.8721105533978637,
+      "delta_pp_vs_full_image_metric": 8.490129804790069,
+      "per_class_image_mean_iou": [
+        0.905113415859035,
+        0.9193583006061308,
+        0.991469661033055,
+        0.672500836093234
+      ]
+    },
+    "2": {
+      "ignored_boundary_pixels_px": 2,
+      "image_mean_miou_on_remaining_pixels": 0.8459389611834384,
+      "delta_pp_vs_full_image_metric": 5.872970583347536,
+      "per_class_image_mean_iou": [
+        0.9014171805061106,
+        0.9270659489700934,
+        0.9923809281286318,
+        0.5628917871289177
+      ]
+    },
+    "3": {
+      "ignored_boundary_pixels_px": 3,
+      "image_mean_miou_on_remaining_pixels": 0.811610827399449,
+      "delta_pp_vs_full_image_metric": 2.440157204948601,
+      "per_class_image_mean_iou": [
+        0.8831169554282473,
+        0.9322480357926907,
+        0.9931663448975915,
+        0.43791197347926614
+      ]
+    }
+  },
+  "lowest_scoring_images": [
+    {
+      "image": "A71_step2_sample1_image.png",
+      "specimen_group": "A71",
+      "image_mean_miou": 0.46613231059671567,
+      "class_iou": {
+        "Al3Ni": 0.4590113642426506,
+        "Primary Si": 0.0,
+        "Al": 0.9012149521545391,
+        "Eutectic Si": 0.504302925989673
+      },
+      "gt_pixels": {
+        "Al3Ni": 55029,
+        "Primary Si": 0,
+        "Al": 244748,
+        "Eutectic Si": 24223
+      },
+      "pred_pixels": {
+        "Al3Ni": 54356,
+        "Primary Si": 0,
+        "Al": 232687,
+        "Eutectic Si": 36957
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 25.98190598697624,
+        "Primary Si": 0.0,
+        "Al": 9.262659716237287,
+        "Eutectic Si": 18.32335937474823
+      },
+      "confusion": [
+        [
+          34413,
+          0,
+          5212,
+          15404
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          17391,
+          0,
+          226314,
+          1043
+        ],
+        [
+          2552,
+          0,
+          1161,
+          20510
+        ]
+      ]
+    },
+    {
+      "image": "A153_step3_sample3_image.png",
+      "specimen_group": "A153",
+      "image_mean_miou": 0.7265498042568721,
+      "class_iou": {
+        "Al3Ni": 0.7462380735401737,
+        "Primary Si": 0.9281586568618292,
+        "Al": 0.894644371593372,
+        "Eutectic Si": 0.33715811503211374
+      },
+      "gt_pixels": {
+        "Al3Ni": 294177,
+        "Primary Si": 71170,
+        "Al": 785951,
+        "Eutectic Si": 10404
+      },
+      "pred_pixels": {
+        "Al3Ni": 338162,
+        "Primary Si": 73305,
+        "Al": 742110,
+        "Eutectic Si": 8125
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 21.390935607403993,
+        "Primary Si": 3.409430572010008,
+        "Al": 10.39238106824827,
+        "Eutectic Si": 17.30846755745049
+      },
+      "confusion": [
+        [
+          270224,
+          1918,
+          19487,
+          2548
+        ],
+        [
+          995,
+          69546,
+          384,
+          245
+        ],
+        [
+          62575,
+          1171,
+          721545,
+          660
+        ],
+        [
+          4368,
+          670,
+          694,
+          4672
+        ]
+      ]
+    },
+    {
+      "image": "A74_step3_sample4_image.png",
+      "specimen_group": "A74",
+      "image_mean_miou": 0.7418372125218359,
+      "class_iou": {
+        "Al3Ni": 0.7468531165780957,
+        "Primary Si": 0.8747499262077334,
+        "Al": 0.9232657866776426,
+        "Eutectic Si": 0.42248002062387213
+      },
+      "gt_pixels": {
+        "Al3Ni": 78410,
+        "Primary Si": 27363,
+        "Al": 201591,
+        "Eutectic Si": 16636
+      },
+      "pred_pixels": {
+        "Al3Ni": 82987,
+        "Primary Si": 29800,
+        "Al": 200260,
+        "Eutectic Si": 10953
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 18.761925055827334,
+        "Primary Si": 5.613179090335596,
+        "Al": 7.9650317567589894,
+        "Eutectic Si": 17.668923762340803
+      },
+      "confusion": [
+        [
+          69004,
+          1457,
+          5565,
+          2384
+        ],
+        [
+          467,
+          26672,
+          127,
+          97
+        ],
+        [
+          8199,
+          205,
+          192909,
+          278
+        ],
+        [
+          5317,
+          1466,
+          1659,
+          8194
+        ]
+      ]
+    },
+    {
+      "image": "A67_step1_sample1_image.png",
+      "specimen_group": "A67",
+      "image_mean_miou": 0.7443240865883962,
+      "class_iou": {
+        "Al3Ni": 0.5623856369005562,
+        "Primary Si": 0.9066666666666666,
+        "Al": 0.8882807044956275,
+        "Eutectic Si": 0.6199633382907342
+      },
+      "gt_pixels": {
+        "Al3Ni": 48192,
+        "Primary Si": 42205,
+        "Al": 188677,
+        "Eutectic Si": 44926
+      },
+      "pred_pixels": {
+        "Al3Ni": 38047,
+        "Primary Si": 39162,
+        "Al": 198041,
+        "Eutectic Si": 48750
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 16.851732411836018,
+        "Primary Si": 3.279849912896937,
+        "Al": 12.451070454569102,
+        "Eutectic Si": 16.219702616596788
+      },
+      "confusion": [
+        [
+          31042,
+          241,
+          10041,
+          6868
+        ],
+        [
+          474,
+          38692,
+          978,
+          2061
+        ],
+        [
+          2580,
+          207,
+          181919,
+          3971
+        ],
+        [
+          3951,
+          22,
+          5103,
+          35850
+        ]
+      ]
+    },
+    {
+      "image": "A11_step2_sample4_image.png",
+      "specimen_group": "A11",
+      "image_mean_miou": 0.745314650331419,
+      "class_iou": {
+        "Al3Ni": 0.607918823964497,
+        "Primary Si": 0.8909499262626672,
+        "Al": 0.918424311520846,
+        "Eutectic Si": 0.5639655395776655
+      },
+      "gt_pixels": {
+        "Al3Ni": 34520,
+        "Primary Si": 73118,
+        "Al": 193706,
+        "Eutectic Si": 22656
+      },
+      "pred_pixels": {
+        "Al3Ni": 35045,
+        "Primary Si": 66644,
+        "Al": 196678,
+        "Eutectic Si": 25633
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 15.563542468787016,
+        "Primary Si": 5.55889786291015,
+        "Al": 10.86167313912233,
+        "Eutectic Si": 15.505437510521913
+      },
+      "confusion": [
+        [
+          26301,
+          324,
+          5084,
+          2811
+        ],
+        [
+          1098,
+          65851,
+          2501,
+          3668
+        ],
+        [
+          4604,
+          469,
+          186892,
+          1741
+        ],
+        [
+          3042,
+          0,
+          2201,
+          17413
+        ]
+      ]
+    },
+    {
+      "image": "A11_step1_sample4_image.png",
+      "specimen_group": "A11",
+      "image_mean_miou": 0.7526776319233303,
+      "class_iou": {
+        "Al3Ni": 0.4805562264932197,
+        "Primary Si": 0.9474747474747475,
+        "Al": 0.9596556491249493,
+        "Eutectic Si": 0.6230239046004048
+      },
+      "gt_pixels": {
+        "Al3Ni": 24442,
+        "Primary Si": 48670,
+        "Al": 224376,
+        "Eutectic Si": 26512
+      },
+      "pred_pixels": {
+        "Al3Ni": 18466,
+        "Primary Si": 47730,
+        "Al": 224975,
+        "Eutectic Si": 32829
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 19.428418246770896,
+        "Primary Si": 2.285070404564715,
+        "Al": 6.904111668727553,
+        "Eutectic Si": 18.276798186579423
+      },
+      "confusion": [
+        [
+          13927,
+          254,
+          2320,
+          7941
+        ],
+        [
+          150,
+          46900,
+          677,
+          943
+        ],
+        [
+          2825,
+          335,
+          220050,
+          1166
+        ],
+        [
+          1564,
+          241,
+          1928,
+          22779
+        ]
+      ]
+    },
+    {
+      "image": "A125_step1_sample4_image.png",
+      "specimen_group": "A125",
+      "image_mean_miou": 0.7808569554885236,
+      "class_iou": {
+        "Al3Ni": 0.7700106036131564,
+        "Primary Si": 0.7959064571261828,
+        "Al": 0.9390816097419236,
+        "Eutectic Si": 0.6184291514728322
+      },
+      "gt_pixels": {
+        "Al3Ni": 268100,
+        "Primary Si": 66646,
+        "Al": 589177,
+        "Eutectic Si": 152327
+      },
+      "pred_pixels": {
+        "Al3Ni": 267730,
+        "Primary Si": 62600,
+        "Al": 585348,
+        "Eutectic Si": 160572
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 13.620496462093568,
+        "Primary Si": 6.33888399394118,
+        "Al": 5.237166673264781,
+        "Eutectic Si": 16.88876269620988
+      },
+      "confusion": [
+        [
+          233103,
+          1883,
+          7455,
+          25659
+        ],
+        [
+          2844,
+          57279,
+          844,
+          5679
+        ],
+        [
+          10023,
+          671,
+          568813,
+          9670
+        ],
+        [
+          21760,
+          2767,
+          8236,
+          119564
+        ]
+      ]
+    },
+    {
+      "image": "A181_step1_sample1_image.png",
+      "specimen_group": "A181",
+      "image_mean_miou": 0.7930989400543967,
+      "class_iou": {
+        "Al3Ni": 0.7919287609814929,
+        "Primary Si": 0.8671629796976635,
+        "Al": 0.9589385346059851,
+        "Eutectic Si": 0.5543654849324456
+      },
+      "gt_pixels": {
+        "Al3Ni": 399326,
+        "Primary Si": 60237,
+        "Al": 891147,
+        "Eutectic Si": 123850
+      },
+      "pred_pixels": {
+        "Al3Ni": 379233,
+        "Primary Si": 62908,
+        "Al": 893160,
+        "Eutectic Si": 139259
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 16.25467644952171,
+        "Primary Si": 3.946381189591175,
+        "Al": 4.005277419831721,
+        "Eutectic Si": 15.707135503973468
+      },
+      "confusion": [
+        [
+          344078,
+          3554,
+          14530,
+          37164
+        ],
+        [
+          2059,
+          57192,
+          264,
+          722
+        ],
+        [
+          9652,
+          507,
+          873453,
+          7535
+        ],
+        [
+          23444,
+          1655,
+          4913,
+          93838
+        ]
+      ]
+    },
+    {
+      "image": "A55_step2_sample1_image.png",
+      "specimen_group": "A55",
+      "image_mean_miou": 0.8028232447739224,
+      "class_iou": {
+        "Al3Ni": 0.7811413021238286,
+        "Primary Si": 0.8961405534573039,
+        "Al": 0.9428540335186687,
+        "Eutectic Si": 0.5911570899958886
+      },
+      "gt_pixels": {
+        "Al3Ni": 176050,
+        "Primary Si": 119140,
+        "Al": 490978,
+        "Eutectic Si": 68712
+      },
+      "pred_pixels": {
+        "Al3Ni": 172156,
+        "Primary Si": 117322,
+        "Al": 490921,
+        "Eutectic Si": 74481
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 12.93507507454147,
+        "Primary Si": 4.091592505358599,
+        "Al": 6.448956577680331,
+        "Eutectic Si": 14.062175789985199
+      },
+      "confusion": [
+        [
+          152710,
+          3797,
+          7236,
+          12307
+        ],
+        [
+          3089,
+          111755,
+          1578,
+          2718
+        ],
+        [
+          6723,
+          1490,
+          476509,
+          6256
+        ],
+        [
+          9634,
+          280,
+          5598,
+          53200
+        ]
+      ]
+    },
+    {
+      "image": "A186_step2_sample2_image.png",
+      "specimen_group": "A186",
+      "image_mean_miou": 0.8049932953535537,
+      "class_iou": {
+        "Al3Ni": 0.9475788499131671,
+        "Primary Si": 0.8570045252958226,
+        "Al": 0.9698903186547339,
+        "Eutectic Si": 0.44549948755049135
+      },
+      "gt_pixels": {
+        "Al3Ni": 334102,
+        "Primary Si": 146253,
+        "Al": 657388,
+        "Eutectic Si": 23959
+      },
+      "pred_pixels": {
+        "Al3Ni": 326433,
+        "Primary Si": 141410,
+        "Al": 669865,
+        "Eutectic Si": 23994
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 3.9096531411125235,
+        "Primary Si": 12.66657798934735,
+        "Al": 4.319156488621911,
+        "Eutectic Si": 16.22011258886038
+      },
+      "confusion": [
+        [
+          321378,
+          2118,
+          9324,
+          1282
+        ],
+        [
+          895,
+          132756,
+          4830,
+          7772
+        ],
+        [
+          2537,
+          1207,
+          653483,
+          161
+        ],
+        [
+          1623,
+          5329,
+          2228,
+          14779
+        ]
+      ]
+    }
+  ],
+  "all_images": [
+    {
+      "image": "A117_step4_sample2_image.png",
+      "specimen_group": "A117",
+      "image_mean_miou": 0.8556430861934231,
+      "class_iou": {
+        "Al3Ni": 0.8205241384085441,
+        "Primary Si": 0.9566527359315774,
+        "Al": 0.9374748166653235,
+        "Eutectic Si": 0.7079206537682475
+      },
+      "gt_pixels": {
+        "Al3Ni": 211071,
+        "Primary Si": 69681,
+        "Al": 669226,
+        "Eutectic Si": 126272
+      },
+      "pred_pixels": {
+        "Al3Ni": 209623,
+        "Primary Si": 71243,
+        "Al": 677133,
+        "Eutectic Si": 118251
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 8.730125836454572,
+        "Primary Si": 1.454829875164998,
+        "Al": 7.491132042905802,
+        "Eutectic Si": 10.455999366856139
+      },
+      "confusion": [
+        [
+          189610,
+          833,
+          13957,
+          6671
+        ],
+        [
+          257,
+          68901,
+          319,
+          204
+        ],
+        [
+          7447,
+          301,
+          651455,
+          10023
+        ],
+        [
+          12309,
+          1208,
+          11402,
+          101353
+        ]
+      ]
+    },
+    {
+      "image": "A11_step1_sample4_image.png",
+      "specimen_group": "A11",
+      "image_mean_miou": 0.7526776319233303,
+      "class_iou": {
+        "Al3Ni": 0.4805562264932197,
+        "Primary Si": 0.9474747474747475,
+        "Al": 0.9596556491249493,
+        "Eutectic Si": 0.6230239046004048
+      },
+      "gt_pixels": {
+        "Al3Ni": 24442,
+        "Primary Si": 48670,
+        "Al": 224376,
+        "Eutectic Si": 26512
+      },
+      "pred_pixels": {
+        "Al3Ni": 18466,
+        "Primary Si": 47730,
+        "Al": 224975,
+        "Eutectic Si": 32829
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 19.428418246770896,
+        "Primary Si": 2.285070404564715,
+        "Al": 6.904111668727553,
+        "Eutectic Si": 18.276798186579423
+      },
+      "confusion": [
+        [
+          13927,
+          254,
+          2320,
+          7941
+        ],
+        [
+          150,
+          46900,
+          677,
+          943
+        ],
+        [
+          2825,
+          335,
+          220050,
+          1166
+        ],
+        [
+          1564,
+          241,
+          1928,
+          22779
+        ]
+      ]
+    },
+    {
+      "image": "A11_step2_sample4_image.png",
+      "specimen_group": "A11",
+      "image_mean_miou": 0.745314650331419,
+      "class_iou": {
+        "Al3Ni": 0.607918823964497,
+        "Primary Si": 0.8909499262626672,
+        "Al": 0.918424311520846,
+        "Eutectic Si": 0.5639655395776655
+      },
+      "gt_pixels": {
+        "Al3Ni": 34520,
+        "Primary Si": 73118,
+        "Al": 193706,
+        "Eutectic Si": 22656
+      },
+      "pred_pixels": {
+        "Al3Ni": 35045,
+        "Primary Si": 66644,
+        "Al": 196678,
+        "Eutectic Si": 25633
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 15.563542468787016,
+        "Primary Si": 5.55889786291015,
+        "Al": 10.86167313912233,
+        "Eutectic Si": 15.505437510521913
+      },
+      "confusion": [
+        [
+          26301,
+          324,
+          5084,
+          2811
+        ],
+        [
+          1098,
+          65851,
+          2501,
+          3668
+        ],
+        [
+          4604,
+          469,
+          186892,
+          1741
+        ],
+        [
+          3042,
+          0,
+          2201,
+          17413
+        ]
+      ]
+    },
+    {
+      "image": "A125_step1_sample4_image.png",
+      "specimen_group": "A125",
+      "image_mean_miou": 0.7808569554885236,
+      "class_iou": {
+        "Al3Ni": 0.7700106036131564,
+        "Primary Si": 0.7959064571261828,
+        "Al": 0.9390816097419236,
+        "Eutectic Si": 0.6184291514728322
+      },
+      "gt_pixels": {
+        "Al3Ni": 268100,
+        "Primary Si": 66646,
+        "Al": 589177,
+        "Eutectic Si": 152327
+      },
+      "pred_pixels": {
+        "Al3Ni": 267730,
+        "Primary Si": 62600,
+        "Al": 585348,
+        "Eutectic Si": 160572
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 13.620496462093568,
+        "Primary Si": 6.33888399394118,
+        "Al": 5.237166673264781,
+        "Eutectic Si": 16.88876269620988
+      },
+      "confusion": [
+        [
+          233103,
+          1883,
+          7455,
+          25659
+        ],
+        [
+          2844,
+          57279,
+          844,
+          5679
+        ],
+        [
+          10023,
+          671,
+          568813,
+          9670
+        ],
+        [
+          21760,
+          2767,
+          8236,
+          119564
+        ]
+      ]
+    },
+    {
+      "image": "A153_step3_sample3_image.png",
+      "specimen_group": "A153",
+      "image_mean_miou": 0.7265498042568721,
+      "class_iou": {
+        "Al3Ni": 0.7462380735401737,
+        "Primary Si": 0.9281586568618292,
+        "Al": 0.894644371593372,
+        "Eutectic Si": 0.33715811503211374
+      },
+      "gt_pixels": {
+        "Al3Ni": 294177,
+        "Primary Si": 71170,
+        "Al": 785951,
+        "Eutectic Si": 10404
+      },
+      "pred_pixels": {
+        "Al3Ni": 338162,
+        "Primary Si": 73305,
+        "Al": 742110,
+        "Eutectic Si": 8125
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 21.390935607403993,
+        "Primary Si": 3.409430572010008,
+        "Al": 10.39238106824827,
+        "Eutectic Si": 17.30846755745049
+      },
+      "confusion": [
+        [
+          270224,
+          1918,
+          19487,
+          2548
+        ],
+        [
+          995,
+          69546,
+          384,
+          245
+        ],
+        [
+          62575,
+          1171,
+          721545,
+          660
+        ],
+        [
+          4368,
+          670,
+          694,
+          4672
+        ]
+      ]
+    },
+    {
+      "image": "A170_step4_sample3_image.png",
+      "specimen_group": "A170",
+      "image_mean_miou": 0.8700405210884525,
+      "class_iou": {
+        "Al3Ni": 0.9107967509354751,
+        "Primary Si": 0.9179832513165846,
+        "Al": 0.9350525310410697,
+        "Eutectic Si": 0.7163295510606809
+      },
+      "gt_pixels": {
+        "Al3Ni": 105727,
+        "Primary Si": 34018,
+        "Al": 162243,
+        "Eutectic Si": 22012
+      },
+      "pred_pixels": {
+        "Al3Ni": 103639,
+        "Primary Si": 32630,
+        "Al": 167995,
+        "Eutectic Si": 19736
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 5.8799885179009586,
+        "Primary Si": 3.2565672608437346,
+        "Al": 7.333792071702073,
+        "Eutectic Si": 8.896162813343478
+      },
+      "confusion": [
+        [
+          99796,
+          543,
+          4573,
+          815
+        ],
+        [
+          356,
+          31899,
+          633,
+          1130
+        ],
+        [
+          2133,
+          166,
+          159577,
+          367
+        ],
+        [
+          1354,
+          22,
+          3212,
+          17424
+        ]
+      ]
+    },
+    {
+      "image": "A181_step1_sample1_image.png",
+      "specimen_group": "A181",
+      "image_mean_miou": 0.7930989400543967,
+      "class_iou": {
+        "Al3Ni": 0.7919287609814929,
+        "Primary Si": 0.8671629796976635,
+        "Al": 0.9589385346059851,
+        "Eutectic Si": 0.5543654849324456
+      },
+      "gt_pixels": {
+        "Al3Ni": 399326,
+        "Primary Si": 60237,
+        "Al": 891147,
+        "Eutectic Si": 123850
+      },
+      "pred_pixels": {
+        "Al3Ni": 379233,
+        "Primary Si": 62908,
+        "Al": 893160,
+        "Eutectic Si": 139259
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 16.25467644952171,
+        "Primary Si": 3.946381189591175,
+        "Al": 4.005277419831721,
+        "Eutectic Si": 15.707135503973468
+      },
+      "confusion": [
+        [
+          344078,
+          3554,
+          14530,
+          37164
+        ],
+        [
+          2059,
+          57192,
+          264,
+          722
+        ],
+        [
+          9652,
+          507,
+          873453,
+          7535
+        ],
+        [
+          23444,
+          1655,
+          4913,
+          93838
+        ]
+      ]
+    },
+    {
+      "image": "A186_step2_sample2_image.png",
+      "specimen_group": "A186",
+      "image_mean_miou": 0.8049932953535537,
+      "class_iou": {
+        "Al3Ni": 0.9475788499131671,
+        "Primary Si": 0.8570045252958226,
+        "Al": 0.9698903186547339,
+        "Eutectic Si": 0.44549948755049135
+      },
+      "gt_pixels": {
+        "Al3Ni": 334102,
+        "Primary Si": 146253,
+        "Al": 657388,
+        "Eutectic Si": 23959
+      },
+      "pred_pixels": {
+        "Al3Ni": 326433,
+        "Primary Si": 141410,
+        "Al": 669865,
+        "Eutectic Si": 23994
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 3.9096531411125235,
+        "Primary Si": 12.66657798934735,
+        "Al": 4.319156488621911,
+        "Eutectic Si": 16.22011258886038
+      },
+      "confusion": [
+        [
+          321378,
+          2118,
+          9324,
+          1282
+        ],
+        [
+          895,
+          132756,
+          4830,
+          7772
+        ],
+        [
+          2537,
+          1207,
+          653483,
+          161
+        ],
+        [
+          1623,
+          5329,
+          2228,
+          14779
+        ]
+      ]
+    },
+    {
+      "image": "A191_step4_sample3_image.png",
+      "specimen_group": "A191",
+      "image_mean_miou": 0.8080535088681499,
+      "class_iou": {
+        "Al3Ni": 0.7733785016548594,
+        "Primary Si": 0.9658901401186281,
+        "Al": 0.935997048574863,
+        "Eutectic Si": 0.556948345124249
+      },
+      "gt_pixels": {
+        "Al3Ni": 379909,
+        "Primary Si": 56696,
+        "Al": 947478,
+        "Eutectic Si": 90477
+      },
+      "pred_pixels": {
+        "Al3Ni": 325752,
+        "Primary Si": 57650,
+        "Al": 962658,
+        "Eutectic Si": 128500
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 13.891934569673548,
+        "Primary Si": 0.9505296386180473,
+        "Al": 7.178243975698562,
+        "Eutectic Si": 14.316745659217645
+      },
+      "confusion": [
+        [
+          307742,
+          867,
+          31711,
+          39589
+        ],
+        [
+          137,
+          56181,
+          361,
+          17
+        ],
+        [
+          12893,
+          529,
+          923494,
+          10562
+        ],
+        [
+          4980,
+          73,
+          7092,
+          78332
+        ]
+      ]
+    },
+    {
+      "image": "A40_step3_sample3_image.png",
+      "specimen_group": "A40",
+      "image_mean_miou": 0.8099252670611273,
+      "class_iou": {
+        "Al3Ni": 0.7987295967334426,
+        "Primary Si": 0.8902866864624391,
+        "Al": 0.9367214001468145,
+        "Eutectic Si": 0.613963384901813
+      },
+      "gt_pixels": {
+        "Al3Ni": 256400,
+        "Primary Si": 178338,
+        "Al": 631584,
+        "Eutectic Si": 95380
+      },
+      "pred_pixels": {
+        "Al3Ni": 273986,
+        "Primary Si": 179429,
+        "Al": 621620,
+        "Eutectic Si": 86667
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 11.974208149596944,
+        "Primary Si": 5.401962700920182,
+        "Al": 5.941966002105092,
+        "Eutectic Si": 13.2500277931762
+      },
+      "confusion": [
+        [
+          235519,
+          3073,
+          8198,
+          9610
+        ],
+        [
+          3043,
+          168501,
+          2112,
+          4682
+        ],
+        [
+          20409,
+          1923,
+          606129,
+          3123
+        ],
+        [
+          15015,
+          5932,
+          5181,
+          69252
+        ]
+      ]
+    },
+    {
+      "image": "A42_step2_sample4_image.png",
+      "specimen_group": "A42",
+      "image_mean_miou": 0.8249167987586693,
+      "class_iou": {
+        "Al3Ni": 0.8494318181818182,
+        "Primary Si": 0.8160838266092918,
+        "Al": 0.96076109866721,
+        "Eutectic Si": 0.6733904515763572
+      },
+      "gt_pixels": {
+        "Al3Ni": 139572,
+        "Primary Si": 128602,
+        "Al": 707342,
+        "Eutectic Si": 100734
+      },
+      "pred_pixels": {
+        "Al3Ni": 129942,
+        "Primary Si": 141081,
+        "Al": 716898,
+        "Eutectic Si": 88329
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 5.2777384099016995,
+        "Primary Si": 9.851358438579572,
+        "Al": 6.035488155077395,
+        "Eutectic Si": 13.0478387939171
+      },
+      "confusion": [
+        [
+          123786,
+          803,
+          11632,
+          3351
+        ],
+        [
+          198,
+          121186,
+          2166,
+          5052
+        ],
+        [
+          4636,
+          992,
+          697869,
+          3845
+        ],
+        [
+          1322,
+          18100,
+          5231,
+          76081
+        ]
+      ]
+    },
+    {
+      "image": "A44_step4_sample3_image.png",
+      "specimen_group": "A44",
+      "image_mean_miou": 0.889004177503022,
+      "class_iou": {
+        "Al3Ni": 0.9103901581162914,
+        "Primary Si": 0.938278241491878,
+        "Al": 0.9666635043827749,
+        "Eutectic Si": 0.7406848060211433
+      },
+      "gt_pixels": {
+        "Al3Ni": 242796,
+        "Primary Si": 198029,
+        "Al": 650697,
+        "Eutectic Si": 70180
+      },
+      "pred_pixels": {
+        "Al3Ni": 237350,
+        "Primary Si": 198597,
+        "Al": 655319,
+        "Eutectic Si": 70436
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 5.096830803110564,
+        "Primary Si": 3.8022271694107213,
+        "Al": 4.356794948057163,
+        "Eutectic Si": 8.267596798707233
+      },
+      "confusion": [
+        [
+          228812,
+          1794,
+          7340,
+          4850
+        ],
+        [
+          992,
+          191998,
+          1806,
+          3233
+        ],
+        [
+          4844,
+          1395,
+          641939,
+          2519
+        ],
+        [
+          2702,
+          3410,
+          4234,
+          59834
+        ]
+      ]
+    },
+    {
+      "image": "A55_step2_sample1_image.png",
+      "specimen_group": "A55",
+      "image_mean_miou": 0.8028232447739224,
+      "class_iou": {
+        "Al3Ni": 0.7811413021238286,
+        "Primary Si": 0.8961405534573039,
+        "Al": 0.9428540335186687,
+        "Eutectic Si": 0.5911570899958886
+      },
+      "gt_pixels": {
+        "Al3Ni": 176050,
+        "Primary Si": 119140,
+        "Al": 490978,
+        "Eutectic Si": 68712
+      },
+      "pred_pixels": {
+        "Al3Ni": 172156,
+        "Primary Si": 117322,
+        "Al": 490921,
+        "Eutectic Si": 74481
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 12.93507507454147,
+        "Primary Si": 4.091592505358599,
+        "Al": 6.448956577680331,
+        "Eutectic Si": 14.062175789985199
+      },
+      "confusion": [
+        [
+          152710,
+          3797,
+          7236,
+          12307
+        ],
+        [
+          3089,
+          111755,
+          1578,
+          2718
+        ],
+        [
+          6723,
+          1490,
+          476509,
+          6256
+        ],
+        [
+          9634,
+          280,
+          5598,
+          53200
+        ]
+      ]
+    },
+    {
+      "image": "A59_step3_sample1_image.png",
+      "specimen_group": "A59",
+      "image_mean_miou": 0.8224061239421536,
+      "class_iou": {
+        "Al3Ni": 0.791324827247082,
+        "Primary Si": 0.9518842530282638,
+        "Al": 0.9420965714426561,
+        "Eutectic Si": 0.6043188440506126
+      },
+      "gt_pixels": {
+        "Al3Ni": 70635,
+        "Primary Si": 37678,
+        "Al": 196393,
+        "Eutectic Si": 19294
+      },
+      "pred_pixels": {
+        "Al3Ni": 67795,
+        "Primary Si": 37735,
+        "Al": 197571,
+        "Eutectic Si": 20899
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 12.941782373226829,
+        "Primary Si": 1.7714196815069139,
+        "Al": 6.910107655303244,
+        "Eutectic Si": 12.454096243684665
+      },
+      "confusion": [
+        [
+          61152,
+          775,
+          4580,
+          4128
+        ],
+        [
+          462,
+          36777,
+          188,
+          251
+        ],
+        [
+          3721,
+          183,
+          191109,
+          1380
+        ],
+        [
+          2460,
+          0,
+          1694,
+          15140
+        ]
+      ]
+    },
+    {
+      "image": "A63_step1_sample4_image.png",
+      "specimen_group": "A63",
+      "image_mean_miou": 0.8323958107021929,
+      "class_iou": {
+        "Al3Ni": 0.7961066544013203,
+        "Primary Si": 0.9720922538872347,
+        "Al": 0.9348323891637877,
+        "Eutectic Si": 0.6265519453564286
+      },
+      "gt_pixels": {
+        "Al3Ni": 67532,
+        "Primary Si": 41745,
+        "Al": 193763,
+        "Eutectic Si": 20960
+      },
+      "pred_pixels": {
+        "Al3Ni": 65238,
+        "Primary Si": 41710,
+        "Al": 194910,
+        "Eutectic Si": 22142
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 11.371001542381443,
+        "Primary Si": 1.0227646737697604,
+        "Al": 7.991917540948568,
+        "Eutectic Si": 11.805834901740852
+      },
+      "confusion": [
+        [
+          58849,
+          278,
+          4751,
+          3654
+        ],
+        [
+          185,
+          41137,
+          225,
+          198
+        ],
+        [
+          3990,
+          295,
+          187791,
+          1687
+        ],
+        [
+          2214,
+          0,
+          2143,
+          16603
+        ]
+      ]
+    },
+    {
+      "image": "A67_step1_sample1_image.png",
+      "specimen_group": "A67",
+      "image_mean_miou": 0.7443240865883962,
+      "class_iou": {
+        "Al3Ni": 0.5623856369005562,
+        "Primary Si": 0.9066666666666666,
+        "Al": 0.8882807044956275,
+        "Eutectic Si": 0.6199633382907342
+      },
+      "gt_pixels": {
+        "Al3Ni": 48192,
+        "Primary Si": 42205,
+        "Al": 188677,
+        "Eutectic Si": 44926
+      },
+      "pred_pixels": {
+        "Al3Ni": 38047,
+        "Primary Si": 39162,
+        "Al": 198041,
+        "Eutectic Si": 48750
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 16.851732411836018,
+        "Primary Si": 3.279849912896937,
+        "Al": 12.451070454569102,
+        "Eutectic Si": 16.219702616596788
+      },
+      "confusion": [
+        [
+          31042,
+          241,
+          10041,
+          6868
+        ],
+        [
+          474,
+          38692,
+          978,
+          2061
+        ],
+        [
+          2580,
+          207,
+          181919,
+          3971
+        ],
+        [
+          3951,
+          22,
+          5103,
+          35850
+        ]
+      ]
+    },
+    {
+      "image": "A71_step2_sample1_image.png",
+      "specimen_group": "A71",
+      "image_mean_miou": 0.46613231059671567,
+      "class_iou": {
+        "Al3Ni": 0.4590113642426506,
+        "Primary Si": 0.0,
+        "Al": 0.9012149521545391,
+        "Eutectic Si": 0.504302925989673
+      },
+      "gt_pixels": {
+        "Al3Ni": 55029,
+        "Primary Si": 0,
+        "Al": 244748,
+        "Eutectic Si": 24223
+      },
+      "pred_pixels": {
+        "Al3Ni": 54356,
+        "Primary Si": 0,
+        "Al": 232687,
+        "Eutectic Si": 36957
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 25.98190598697624,
+        "Primary Si": 0.0,
+        "Al": 9.262659716237287,
+        "Eutectic Si": 18.32335937474823
+      },
+      "confusion": [
+        [
+          34413,
+          0,
+          5212,
+          15404
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          17391,
+          0,
+          226314,
+          1043
+        ],
+        [
+          2552,
+          0,
+          1161,
+          20510
+        ]
+      ]
+    },
+    {
+      "image": "A72_step4_sample4_image.png",
+      "specimen_group": "A72",
+      "image_mean_miou": 0.8613976140214069,
+      "class_iou": {
+        "Al3Ni": 0.7772098616957306,
+        "Primary Si": 0.9320790816326531,
+        "Al": 0.9413547829555274,
+        "Eutectic Si": 0.7949467298017164
+      },
+      "gt_pixels": {
+        "Al3Ni": 46591,
+        "Primary Si": 12263,
+        "Al": 216706,
+        "Eutectic Si": 48440
+      },
+      "pred_pixels": {
+        "Al3Ni": 42074,
+        "Primary Si": 11973,
+        "Al": 221351,
+        "Eutectic Si": 48602
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 8.343636621741679,
+        "Primary Si": 1.977474359161091,
+        "Al": 7.99055944253948,
+        "Eutectic Si": 8.848946492950683
+      },
+      "confusion": [
+        [
+          38775,
+          56,
+          5505,
+          2255
+        ],
+        [
+          50,
+          11692,
+          142,
+          379
+        ],
+        [
+          1225,
+          79,
+          212412,
+          2990
+        ],
+        [
+          2024,
+          146,
+          3292,
+          42978
+        ]
+      ]
+    },
+    {
+      "image": "A74_step3_sample4_image.png",
+      "specimen_group": "A74",
+      "image_mean_miou": 0.7418372125218359,
+      "class_iou": {
+        "Al3Ni": 0.7468531165780957,
+        "Primary Si": 0.8747499262077334,
+        "Al": 0.9232657866776426,
+        "Eutectic Si": 0.42248002062387213
+      },
+      "gt_pixels": {
+        "Al3Ni": 78410,
+        "Primary Si": 27363,
+        "Al": 201591,
+        "Eutectic Si": 16636
+      },
+      "pred_pixels": {
+        "Al3Ni": 82987,
+        "Primary Si": 29800,
+        "Al": 200260,
+        "Eutectic Si": 10953
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 18.761925055827334,
+        "Primary Si": 5.613179090335596,
+        "Al": 7.9650317567589894,
+        "Eutectic Si": 17.668923762340803
+      },
+      "confusion": [
+        [
+          69004,
+          1457,
+          5565,
+          2384
+        ],
+        [
+          467,
+          26672,
+          127,
+          97
+        ],
+        [
+          8199,
+          205,
+          192909,
+          278
+        ],
+        [
+          5317,
+          1466,
+          1659,
+          8194
+        ]
+      ]
+    },
+    {
+      "image": "A7_step1_sample4_image.png",
+      "specimen_group": "A7",
+      "image_mean_miou": 0.8117940669716986,
+      "class_iou": {
+        "Al3Ni": 0.7086389325627842,
+        "Primary Si": 0.9018055799703674,
+        "Al": 0.9614942346177059,
+        "Eutectic Si": 0.6752375207359372
+      },
+      "gt_pixels": {
+        "Al3Ni": 101105,
+        "Primary Si": 190501,
+        "Al": 771665,
+        "Eutectic Si": 98431
+      },
+      "pred_pixels": {
+        "Al3Ni": 99942,
+        "Primary Si": 188158,
+        "Al": 772080,
+        "Eutectic Si": 101522
+      },
+      "gt_present_pred_absent": [],
+      "single_class_oracle_delta_pp": {
+        "Al3Ni": 11.4901127011519,
+        "Primary Si": 4.965459030792118,
+        "Al": 6.2381096247569605,
+        "Eutectic Si": 13.274234741205593
+      },
+      "confusion": [
+        [
+          83382,
+          1537,
+          5821,
+          10365
+        ],
+        [
+          1747,
+          179554,
+          3358,
+          5842
+        ],
+        [
+          6954,
+          3271,
+          756720,
+          4720
+        ],
+        [
+          7859,
+          3796,
+          6181,
+          80595
+        ]
+      ]
+    }
+  ]
+}

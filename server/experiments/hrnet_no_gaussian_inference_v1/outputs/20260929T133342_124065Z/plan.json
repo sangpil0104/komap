@@ -1,0 +1,58 @@
+[
+  {
+    "id": "REPRO8_GP05_sharpen",
+    "contrast": "GP05_sharpen",
+    "change": {
+      "fresh_raw_image_reproduction": true
+    },
+    "recipe": {
+      "checkpoint": "/Data3/sppark/komap/experiments/HRNet_taeho_multigpu/outputs/runs/HRNet_taeho_no_gaussian_0928_ddp6_20260928T131839_853555Z/last.pt",
+      "target": "GP05_sharpen",
+      "nodes": {
+        "M01_gamma": {
+          "arm": {
+            "id": "M01_gamma",
+            "contrast": "C640_d4_bicubic",
+            "change": {
+              "gamma": 0.9
+            },
+            "config": {
+              "patch": 640,
+              "scale": 2.0,
+              "overlap": 170,
+              "input_mode": "bicubic",
+              "input_antialias": false,
+              "restore": "bicubic",
+              "restore_antialias": false,
+              "restore_logits": false,
+              "window": "gaussian",
+              "sigma": 0.125,
+              "tta": "d4",
+              "tile_merge": "prob",
+              "tta_merge": "prob",
+              "halo": 0,
+              "precision": "fp32",
+              "gamma": 0.9,
+              "contrast": 1.0,
+              "sharpen": 0.0
+            }
+          },
+          "batch": 4
+        },
+        "GP05_sharpen": {
+          "arm": {
+            "id": "GP05_sharpen",
+            "contrast": "M01_gamma",
+            "change": {
+              "kind": "sharpen",
+              "amount": 0.25,
+              "sigma": 1.0
+            },
+            "cache_source": "experiments/hrnet_no_gaussian_inference_v1/outputs/20260929T131503_450078Z/arms/M01_gamma/probs"
+          },
+          "batch": 4
+        }
+      }
+    }
+  }
+]

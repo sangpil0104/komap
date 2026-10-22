@@ -1,0 +1,104 @@
+{
+  "scope": "Read-only audit of existing completed result records; no inference/training/GT access and no score recomputation. OOF and official valid scores are different evaluations.",
+  "items": [
+    {
+      "source": "/Users/hyunseok/orca/workspaces/KoMaP/gurnard/experiments/results/model400_model396_d2_valid_once.json",
+      "sha256": "697e6d0b83be50ba59edce48a22c34184a8abe37f77515724688a3190ae8f2d7",
+      "experiment": "Model400 Model396-D2 four-fold valid ensemble",
+      "scope": "official_valid20_development",
+      "candidate_miou_percent": 79.32272512117606,
+      "gate_pass": null,
+      "status": "DESCRIPTIVE_SELECTION_CONDITIONAL_VALID_RESULT",
+      "independent_confirmation": false,
+      "official_valid_used": true,
+      "test_used": false,
+      "gain_vs_own_control_pp": null,
+      "failed_checks": []
+    },
+    {
+      "source": "/Users/hyunseok/orca/workspaces/KoMaP/gurnard/experiments/results/model401_model397_blend_valid_once.json",
+      "sha256": "7a165024ab090c5a64eb032dbfd7af323f37d5dda032c20753881c89f5c0a58f",
+      "experiment": "Model401 one-shot Model397 blend valid evaluation",
+      "scope": "official_valid20_development",
+      "candidate_miou_percent": 79.4181708850679,
+      "gate_pass": null,
+      "status": "DESCRIPTIVE_SELECTION_CONDITIONAL_VALID_RESULT",
+      "independent_confirmation": false,
+      "official_valid_used": true,
+      "test_used": false,
+      "gain_vs_own_control_pp": null,
+      "failed_checks": []
+    },
+    {
+      "source": "/Users/hyunseok/orca/workspaces/KoMaP/gurnard/experiments/results/model405_small_component_fixed_blend_oof.json",
+      "sha256": "e83a71b28630ce4e9e32e40169efc9a8ce33813e559a8319e6abb43cab443cf1",
+      "experiment": "Model405 fixed Model404 small-component branch swap",
+      "scope": "train70_group_oof_development",
+      "candidate_miou_percent": 79.9700230082554,
+      "gate_pass": null,
+      "status": "NO_GO",
+      "independent_confirmation": false,
+      "official_valid_used": false,
+      "test_used": false,
+      "gain_vs_own_control_pp": -0.015838999822012895,
+      "failed_checks": []
+    },
+    {
+      "source": "/Users/hyunseok/orca/workspaces/KoMaP/gurnard/experiments/results/model406_component_hardnegative_oof_v3.json",
+      "sha256": "9cf5f30011d60cce645653f38dd4e48b0d964f2cdebb00d6950bd2605bd5b33e",
+      "experiment": "Model406 v3 small-component recall with hard-negative island suppression",
+      "scope": "train70_group_oof_development",
+      "candidate_miou_percent": 79.03106796536265,
+      "gate_pass": false,
+      "status": "NO_GO",
+      "independent_confirmation": false,
+      "official_valid_used": false,
+      "test_used": false,
+      "gain_vs_own_control_pp": 0.019846543696952653,
+      "failed_checks": [
+        "candidate_vs_matched_control_gain_ge_0_20pp",
+        "unmatched_tiny_pred_components_non_increasing_both_targets"
+      ]
+    },
+    {
+      "source": "/Users/hyunseok/orca/workspaces/KoMaP/gurnard/experiments/results/model407_component_fp_oof_recovered.json",
+      "sha256": "3a75a5f64ec1ffab86e30c40ab3c64af92ac650d59b0a77f3fb6a15f472dcbc3",
+      "experiment": "Model407 GT-component recall plus prediction-component FP suppression",
+      "scope": "train70_group_oof_development",
+      "candidate_miou_percent": 78.9243856753134,
+      "gate_pass": false,
+      "status": "NO_GO",
+      "independent_confirmation": false,
+      "official_valid_used": false,
+      "test_used": false,
+      "gain_vs_own_control_pp": -0.08683574635229847,
+      "failed_checks": [
+        "candidate_vs_matched_control_gain_ge_0_20pp",
+        "candidate_vs_control_group_ci_lower_gt_zero",
+        "candidate_vs_control_positive_at_least_3_folds",
+        "tiny_and_small_medium_component_hit_rates_safe",
+        "targeted_class_iou_delta_nonnegative",
+        "all_class_delta_ge_minus_0_50pp_and_targeted_classes_nonnegative",
+        "candidate_vs_model392_parent_point_delta_nonnegative"
+      ]
+    },
+    {
+      "source": "/Users/hyunseok/orca/workspaces/KoMaP/gurnard/experiments/results/model408_tiny_confusion_oof.json",
+      "sha256": "3a7dfdfaf5be12651fd756bd8a488bb0ee4fdfdda9faee194c3b8abab94b8899",
+      "experiment": "Model408 tiny-GT confusion hinge fine-tuning",
+      "scope": "train70_group_oof_development",
+      "candidate_miou_percent": 79.04011277299338,
+      "gate_pass": false,
+      "status": "NO_GO",
+      "independent_confirmation": false,
+      "official_valid_used": false,
+      "test_used": false,
+      "gain_vs_own_control_pp": 0.028891351327675535,
+      "failed_checks": [
+        "candidate_vs_matched_control_gain_ge_0_20pp",
+        "unmatched_tiny_pred_components_non_increasing_both_targets"
+      ]
+    }
+  ],
+  "decision": "No recorded new valid81% model found in these completed records. Do not repeat Model400/401 inference or promote failed Model405-408 OOF gates. Continue fixed HRcontext experiment."
+}

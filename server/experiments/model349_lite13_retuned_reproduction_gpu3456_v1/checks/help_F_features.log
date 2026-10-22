@@ -1,0 +1,25 @@
+usage: build_features.py [-h] --model397-output MODEL397_OUTPUT --train TRAIN
+                         --palette-config PALETTE_CONFIG --out OUT
+                         [--b4-dir B4_DIR]
+
+Build F (residual refiner) training features from train70 E OOF probabilities. Never reads valid/test.
+
+    python build_features.py --model397-output OUT --train DATA/train --palette-config PARENT/Model349_exh14/configs/model349_lite.yaml         --out FEATURES [--b4-dir model329]
+
+OUT is the model397 OOF layout written by model397_reproduction_bundle/scripts/run_model397_oof.sh:
+    OUT/<b4-dir>/fold{1..4}_oof/probabilities.npz            (B4, team channel order, one key per image)
+    OUT/model392/seed{1,2}/fold{1..4}_oof/valid_probabilities.npz  (HRNet, team channel order)
+Each train image appears in exactly one fold's OOF archive. Per image (same arithmetic as the original
+accuracy81_oof_refiner_20261009/prepare_oof.py):
+    E_team = 0.5*B4 + 0.25*HR_seed1 + 0.25*HR_seed2 ; logits = log(max(E_team[[1,2,0,3]], 1e-7))  (route order)
+    gray   = L(image)/255 (the trainer applies the z-score transform) ; target = GT mask decoded with the palette
+Writes FEATURES/<name>.npz (logits, gray, target) and FEATURES/manifest.json for train_refiner.py.
+
+options:
+  -h, --help            show this help message and exit
+  --model397-output MODEL397_OUTPUT
+  --train TRAIN         folder with images/ and masks/ of the 70 train images
+  --palette-config PALETTE_CONFIG
+  --out OUT
+  --b4-dir B4_DIR       B4 OOF family folder (e.g. model329_ws for the warm-
+                        started folds)

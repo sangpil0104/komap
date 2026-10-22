@@ -1,0 +1,123 @@
+{
+ "time": 1791859923.3765502,
+ "configs": 181,
+ "control_R6_exact": true,
+ "best_R9": {
+  "steps": [
+   {
+    "donor": "HRNet_ZCDF_train70",
+    "alpha": 0.25,
+    "classes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "donor": "ResNet_highres",
+    "alpha": 0.25,
+    "classes": [
+     0
+    ]
+   },
+   {
+    "donor": "B4gray",
+    "alpha": 0.5,
+    "classes": [
+     1
+    ]
+   },
+   {
+    "donor": "HRNet",
+    "alpha": 0.25,
+    "classes": [
+     1
+    ]
+   },
+   {
+    "donor": "ResNet_native",
+    "alpha": 0.1,
+    "classes": [
+     1
+    ]
+   }
+  ],
+  "summary": {
+   "percent": 79.54481569308116,
+   "delta_pp": -1.0836457915094573,
+   "worst_image_delta_pp": -12.872995805283443,
+   "worst_image": "A71_step2_sample1",
+   "worst_class_delta_pp": -28.839224580194923,
+   "mean_class_delta_pp": [
+    -2.6025210090381625,
+    -0.4396745299913579,
+    -0.19975139438279724,
+    -1.0926362326254933
+   ],
+   "better": 6,
+   "worse": 14,
+   "fixed_pixels": 83815,
+   "new_error_pixels": 137222,
+   "pass_mean_local": false
+  },
+  "checkpoint_count": 9,
+  "members": [
+   "N3",
+   "R269",
+   "R322f3",
+   "R329f1",
+   "R329f2",
+   "R329f3",
+   "R329f4",
+   "R347",
+   "Rrestart61"
+  ]
+ },
+ "paired_summary": {
+  "R9_raw": {
+   "percent": 79.54481569308116,
+   "delta_pp": -1.0836457915094573,
+   "worst_image_delta_pp": -12.872995805283443,
+   "worst_image": "A71_step2_sample1",
+   "worst_class_delta_pp": -28.839224580194923,
+   "mean_class_delta_pp": [
+    -2.6025210090381625,
+    -0.4396745299913579,
+    -0.19975139438279724,
+    -1.0926362326254933
+   ],
+   "better": 6,
+   "worse": 14,
+   "fixed_pixels": 83815,
+   "new_error_pixels": 137222,
+   "pass_mean_local": false,
+   "delta_vs_existing_R_pp": -0.25449320230127626,
+   "fixed_existing_E_F_percent": 79.78303749429243
+  },
+  "R9_existing_postprocessing": {
+   "percent": 79.3365849078778,
+   "delta_pp": -1.2918765767128038,
+   "worst_image_delta_pp": -5.130265246304044,
+   "worst_image": "A71_step2_sample1",
+   "worst_class_delta_pp": -11.754391957083143,
+   "mean_class_delta_pp": [
+    -1.6600420267443117,
+    -0.37008267099970016,
+    -0.33358253614800154,
+    -2.803799072959194
+   ],
+   "better": 0,
+   "worse": 20,
+   "fixed_pixels": 121803,
+   "new_error_pixels": 179405,
+   "pass_mean_local": false,
+   "delta_vs_existing_R_pp": -0.4627239875046314,
+   "fixed_existing_E_F_percent": 79.71541381160918
+  }
+ },
+ "beam_width_per_count": 2,
+ "selection_uses_valid20": true,
+ "global_optimum_claimed": false,
+ "release_replaced": false
+}

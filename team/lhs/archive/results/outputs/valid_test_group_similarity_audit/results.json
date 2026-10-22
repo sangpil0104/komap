@@ -1,0 +1,295 @@
+{
+  "scope": "raw input images from train/valid/test ZIPs only; no masks or test labels read",
+  "counts": {
+    "train": 70,
+    "valid": 20,
+    "test": 10
+  },
+  "specimen_groups": {
+    "train": 59,
+    "valid": 19,
+    "test": 10
+  },
+  "group_overlap": {
+    "valid_test": [
+      "A63"
+    ],
+    "train_test": [
+      "A167",
+      "A51",
+      "A87"
+    ]
+  },
+  "shared_group_images": {
+    "A63": {
+      "valid_images": [
+        "A63_step1_sample4"
+      ],
+      "test_images": [
+        "A63_step2_sample3"
+      ]
+    }
+  },
+  "exact_image_hash_duplicates_valid_test": [],
+  "step_counts": {
+    "valid": {
+      "step1": 6,
+      "step2": 5,
+      "step3": 4,
+      "step4": 5
+    },
+    "test": {
+      "step1": 2,
+      "step2": 2,
+      "step3": 3,
+      "step4": 3
+    }
+  },
+  "resolution_counts": {
+    "valid": {
+      "1096x780": 1,
+      "1230x875": 3,
+      "1278x909": 5,
+      "1440x1024": 2,
+      "675x480": 9
+    },
+    "test": {
+      "1230x875": 4,
+      "1278x909": 2,
+      "1440x1024": 1,
+      "675x480": 3
+    }
+  },
+  "group_bootstrap_feature_differences_including_overlap": {
+    "gray_mean": {
+      "test_minus_valid": 8.048834991455067,
+      "group_bootstrap_95ci": [
+        -1.992756337617584,
+        17.914809945759004
+      ]
+    },
+    "gray_std": {
+      "test_minus_valid": -10.121497344970706,
+      "group_bootstrap_95ci": [
+        -19.366310256656856,
+        -0.320890856793066
+      ]
+    },
+    "gray_p10": {
+      "test_minus_valid": 21.94999999999999,
+      "group_bootstrap_95ci": [
+        -5.0,
+        48.001428571428455
+      ]
+    },
+    "gray_p90": {
+      "test_minus_valid": 1.3499999999999943,
+      "group_bootstrap_95ci": [
+        -1.9002380952381002,
+        4.849999999999994
+      ]
+    },
+    "gray_entropy_16bin": {
+      "test_minus_valid": -0.10010538893288201,
+      "group_bootstrap_95ci": [
+        -0.2881639868011704,
+        0.09503042939091846
+      ]
+    },
+    "dark_fraction_lt32": {
+      "test_minus_valid": -0.031433237579177306,
+      "group_bootstrap_95ci": [
+        -0.059711704790455844,
+        -0.00048114584839475385
+      ]
+    },
+    "bright_fraction_ge224": {
+      "test_minus_valid": 0.004221462010799926,
+      "group_bootstrap_95ci": [
+        -0.05933870294806317,
+        0.07011861275465434
+      ]
+    },
+    "gradient_mean_over_std": {
+      "test_minus_valid": 0.15025716423988333,
+      "group_bootstrap_95ci": [
+        -0.1469766070654517,
+        0.46520977839827493
+      ]
+    },
+    "gradient_p90_over_std": {
+      "test_minus_valid": 0.019476151466369274,
+      "group_bootstrap_95ci": [
+        -0.3827444813126018,
+        0.44123109936714133
+      ]
+    },
+    "laplacian_variance_over_std2": {
+      "test_minus_valid": 1.0051451623439789,
+      "group_bootstrap_95ci": [
+        -0.6027828418581108,
+        2.5780549450218677
+      ]
+    },
+    "neighbor_difference_lag1_over_std": {
+      "test_minus_valid": 0.027297571301460266,
+      "group_bootstrap_95ci": [
+        -0.012832373818826142,
+        0.0685003019285792
+      ]
+    },
+    "neighbor_difference_lag4_over_std": {
+      "test_minus_valid": 0.029971945285797164,
+      "group_bootstrap_95ci": [
+        -0.04355013920145749,
+        0.11120066583156585
+      ]
+    },
+    "neighbor_difference_lag16_over_std": {
+      "test_minus_valid": -0.010900083184242293,
+      "group_bootstrap_95ci": [
+        -0.07039024660760598,
+        0.050054950810091134
+      ]
+    },
+    "gradient_anisotropy": {
+      "test_minus_valid": 0.015206677987592149,
+      "group_bootstrap_95ci": [
+        -0.02108034281958229,
+        0.05508172651265841
+      ]
+    },
+    "local_std_mean_over_std": {
+      "test_minus_valid": 0.015082855522632665,
+      "group_bootstrap_95ci": [
+        -0.03657360173761842,
+        0.07020532008848686
+      ]
+    }
+  },
+  "group_bootstrap_feature_differences_excluding_overlap": {
+    "gray_mean": {
+      "test_minus_valid": 8.128188640750636,
+      "group_bootstrap_95ci": [
+        -2.3645320513095056,
+        18.484566843579376
+      ]
+    },
+    "gray_std": {
+      "test_minus_valid": -10.448445727253521,
+      "group_bootstrap_95ci": [
+        -20.217324242954366,
+        0.1899349332552828
+      ]
+    },
+    "gray_p10": {
+      "test_minus_valid": 22.707602339181285,
+      "group_bootstrap_95ci": [
+        -6.824979114452807,
+        50.65119047619044
+      ]
+    },
+    "gray_p90": {
+      "test_minus_valid": 1.3508771929824377,
+      "group_bootstrap_95ci": [
+        -2.1287719298245653,
+        5.0
+      ]
+    },
+    "gray_entropy_16bin": {
+      "test_minus_valid": -0.10332263094865102,
+      "group_bootstrap_95ci": [
+        -0.30127161306330474,
+        0.09914705038177675
+      ]
+    },
+    "dark_fraction_lt32": {
+      "test_minus_valid": -0.03204565076377089,
+      "group_bootstrap_95ci": [
+        -0.06081429722657723,
+        0.001292000512938806
+      ]
+    },
+    "bright_fraction_ge224": {
+      "test_minus_valid": 0.0015087411866491207,
+      "group_bootstrap_95ci": [
+        -0.06543685733174916,
+        0.07008349820373967
+      ]
+    },
+    "gradient_mean_over_std": {
+      "test_minus_valid": 0.1651886827067326,
+      "group_bootstrap_95ci": [
+        -0.16296995340732073,
+        0.5035699181258678
+      ]
+    },
+    "gradient_p90_over_std": {
+      "test_minus_valid": -0.00010807751214958472,
+      "group_bootstrap_95ci": [
+        -0.43408948116832347,
+        0.44919951308540407
+      ]
+    },
+    "laplacian_variance_over_std2": {
+      "test_minus_valid": 1.1961170295525712,
+      "group_bootstrap_95ci": [
+        -0.5607791538998396,
+        2.868861742345553
+      ]
+    },
+    "neighbor_difference_lag1_over_std": {
+      "test_minus_valid": 0.030441609478136233,
+      "group_bootstrap_95ci": [
+        -0.013537753196923335,
+        0.074319140219854
+      ]
+    },
+    "neighbor_difference_lag4_over_std": {
+      "test_minus_valid": 0.031330178355612914,
+      "group_bootstrap_95ci": [
+        -0.049723779526021784,
+        0.11842835258844998
+      ]
+    },
+    "neighbor_difference_lag16_over_std": {
+      "test_minus_valid": -0.015456409482230815,
+      "group_bootstrap_95ci": [
+        -0.07986899564018501,
+        0.05109657111049399
+      ]
+    },
+    "gradient_anisotropy": {
+      "test_minus_valid": 0.012187417794869787,
+      "group_bootstrap_95ci": [
+        -0.025484830689972045,
+        0.05442589204309853
+      ]
+    },
+    "local_std_mean_over_std": {
+      "test_minus_valid": 0.016580562145389277,
+      "group_bootstrap_95ci": [
+        -0.040738508884103346,
+        0.07618497585649023
+      ]
+    }
+  },
+  "group_disjoint_centroid_permutation": {
+    "overlap_groups_removed_from_both_splits": [
+      "A63"
+    ],
+    "valid_disjoint_groups": 18,
+    "test_disjoint_groups": 9,
+    "robust_scaled_centroid_distance": 0.5408096923042576,
+    "group_permutation_p_value": 0.3572321383930803,
+    "draws": 20000
+  },
+  "a71_raw_feature_similarity": {
+    "test_images_where_A71_is_among_three_nearest_valid": 1,
+    "test_images_total": 10,
+    "nearest_test_image": "A167_step3_sample3",
+    "distance_to_nearest_test": 1.0624352173451868,
+    "valid_rank_for_nearest_test_image": 2
+  },
+  "interpretation_guard": "Group-aware intervals and centroid permutation have low power at 18-19 valid versus 9-10 test groups. Failure to reject a centroid difference is not evidence of distributional equivalence or similar mIoU."
+}

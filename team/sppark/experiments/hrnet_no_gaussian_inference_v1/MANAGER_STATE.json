@@ -1,0 +1,63 @@
+{
+  "deadline_utc": "2026-09-29T16:30:00+00:00",
+  "remaining_account_quota_stop_percent": 8,
+  "quota_observable": false,
+  "active_queue": {
+    "pid": 2368540,
+    "session": 18993,
+    "jobs": "after_later_jobs.json",
+    "live": "checks/fourth_queue.live.json"
+  },
+  "waiting_queue": {
+    "session": 42838,
+    "wait_pid": 2368540,
+    "jobs": "fifth_jobs.json",
+    "live": "checks/fifth_queue.live.json",
+    "pid": 2393576
+  },
+  "last_reproduction": "checks/reproduction8_GP05_sharpen.json",
+  "reproduction_exact": true,
+  "audited_reports": [
+    "audit_all.json",
+    "audit_increment_1301.json",
+    "audit_increment_1322.json",
+    "audit_increment_1341.json"
+  ],
+  "original_training_do_not_stop": {
+    "suite": "experiments/seed32_boundary_ablation_v1/outputs/20260929T111902_645014Z",
+    "root_pid": 2212945
+  },
+  "note": "Continue inference ablations until time or user quota notification. Manual reproduction bypass flag is only for later user-run reproduction, never active search.",
+  "updated_utc": "2026-09-29T13:58:57.390007+00:00",
+  "queues": [
+    {
+      "pid": 2368357,
+      "name": "fourth_queue"
+    },
+    {
+      "pid": 2368540,
+      "name": "fourth_queue"
+    },
+    {
+      "pid": 2393376,
+      "name": "fifth_queue"
+    },
+    {
+      "pid": 2393576,
+      "name": "fifth_queue"
+    }
+  ],
+  "known_best_single": "ZN_combine_Y_gamma0.9_halo16_0.05",
+  "known_best_single_score": 0.795404664621114,
+  "cpu_jobs": [
+    {
+      "session": 62105,
+      "log": "checks/global_local_norm_mix.log"
+    },
+    {
+      "session": 69688,
+      "log": "checks/ensemble_best_post.log"
+    }
+  ],
+  "current_source_note": "New engine support includes resampling_v2, full_v2, canvas_v1, normalization_blend, input_transform, and aggregation rules. Source versions preserved; trained vendor untouched."
+}

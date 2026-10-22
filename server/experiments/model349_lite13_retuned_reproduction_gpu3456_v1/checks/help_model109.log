@@ -1,0 +1,78 @@
+usage: encoder_structure_search.py [-h] --candidate
+                                   {aspp,highres,gated,bnfreeze,bngn,convnext,hrnet,effb4,resnet50,resnet50pp}
+                                   --data-dir DATA_DIR --output-dir OUTPUT_DIR
+                                   [--checkpoint CHECKPOINT]
+                                   [--split-manifest SPLIT_MANIFEST]
+                                   [--selection-metric {image_mean_miou,image_miou_compat}]
+                                   [--patch-size PATCH_SIZE] [--scale SCALE]
+                                   [--sampling-mode {class_focused,uniform_area,area_weighted}]
+                                   [--metallography-augmentation]
+                                   [--warmup-updates WARMUP_UPDATES]
+                                   [--eval-every EVAL_EVERY]
+                                   [--skip-test-inference]
+                                   [--val-stride VAL_STRIDE]
+                                   [--inference-mode {tiles,whole-image}]
+                                   [--tile-batch-size TILE_BATCH_SIZE]
+                                   [--patches-per-image PATCHES_PER_IMAGE]
+                                   [--epochs EPOCHS] [--batch-size BATCH_SIZE]
+                                   [--num-workers NUM_WORKERS] [--lr LR]
+                                   [--encoder-lr ENCODER_LR]
+                                   [--decoder-lr DECODER_LR]
+                                   [--weight-decay WEIGHT_DECAY]
+                                   [--eval-bias EVAL_BIAS] [--tta {legacy,d4}]
+                                   [--blend {uniform,gaussian}] [--seed SEED]
+                                   [--no-amp] [--pretrained]
+                                   [--eval-only-checkpoint EVAL_ONLY_CHECKPOINT]
+                                   [--class-weights CLASS_WEIGHTS CLASS_WEIGHTS CLASS_WEIGHTS CLASS_WEIGHTS]
+                                   [--loss-mode {ce,focal}]
+                                   [--focal-gamma FOCAL_GAMMA]
+
+options:
+  -h, --help            show this help message and exit
+  --candidate {aspp,highres,gated,bnfreeze,bngn,convnext,hrnet,effb4,resnet50,resnet50pp}
+  --data-dir DATA_DIR
+  --output-dir OUTPUT_DIR
+  --checkpoint CHECKPOINT
+  --split-manifest SPLIT_MANIFEST
+  --selection-metric {image_mean_miou,image_miou_compat}
+  --patch-size PATCH_SIZE
+  --scale SCALE         magnify the image before patch sampling and tiled
+                        inference
+  --sampling-mode {class_focused,uniform_area,area_weighted}
+  --metallography-augmentation
+                        add random affine, gamma/contrast, blur, and noise
+                        transforms
+  --warmup-updates WARMUP_UPDATES
+                        linear LR warm-up steps before cosine decay; 0 keeps
+                        epoch cosine
+  --eval-every EVAL_EVERY
+                        validate every N epochs (the final epoch is always
+                        evaluated)
+  --skip-test-inference
+                        do not run test inference after validation/model
+                        selection
+  --val-stride VAL_STRIDE
+  --inference-mode {tiles,whole-image}
+                        use overlapping tiles or one reflect-padded whole-
+                        image forward per D4 view
+  --tile-batch-size TILE_BATCH_SIZE
+  --patches-per-image PATCHES_PER_IMAGE
+  --epochs EPOCHS
+  --batch-size BATCH_SIZE
+  --num-workers NUM_WORKERS
+  --lr LR
+  --encoder-lr ENCODER_LR
+                        optional encoder LR; must be paired with --decoder-lr
+  --decoder-lr DECODER_LR
+                        optional decoder LR; must be paired with --encoder-lr
+  --weight-decay WEIGHT_DECAY
+  --eval-bias EVAL_BIAS
+  --tta {legacy,d4}
+  --blend {uniform,gaussian}
+  --seed SEED
+  --no-amp
+  --pretrained
+  --eval-only-checkpoint EVAL_ONLY_CHECKPOINT
+  --class-weights CLASS_WEIGHTS CLASS_WEIGHTS CLASS_WEIGHTS CLASS_WEIGHTS
+  --loss-mode {ce,focal}
+  --focal-gamma FOCAL_GAMMA

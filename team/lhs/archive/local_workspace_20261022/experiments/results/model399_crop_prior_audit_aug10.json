@@ -1,0 +1,1245 @@
+{
+  "model": 399,
+  "analysis": "Model392 train-only effective class-prior audit",
+  "class_order": [
+    "Al",
+    "Al3Ni",
+    "Primary_Si",
+    "Eutectic_Si"
+  ],
+  "training_data_only": true,
+  "official_valid_or_test_read": false,
+  "oof_data_or_predictions_read": false,
+  "gpu_used": false,
+  "training_started": false,
+  "configuration": {
+    "patch_size": 512,
+    "input_scale": 2.0,
+    "samples_per_image": 12,
+    "positive_sample_probability": 0.5,
+    "minority_classes": [
+      "Al3Ni",
+      "Eutectic_Si"
+    ],
+    "native_crop_epochs": 70,
+    "post_resize_augmentation_probe_epochs": 10,
+    "augmentation": "the exact build_train_transform from model336_hrnet_widthnorm_candidate",
+    "crop_rng": "independent deterministic per-image Monte Carlo; locked crop rule and seed-specific coordinate cap",
+    "source_prior_views": [
+      "pooled source pixels",
+      "mean per-image source prior"
+    ]
+  },
+  "folds": {
+    "1": {
+      "fold": 1,
+      "images": 52,
+      "specimen_groups": 44,
+      "target_width_from_outer_training_images": 1230,
+      "source_mask_prior_pooled_pixels": [
+        0.567155139416391,
+        0.2719414382539601,
+        0.0894436729976572,
+        0.07145974933199173
+      ],
+      "source_mask_prior_mean_per_image": [
+        0.5708634508324469,
+        0.264726866207376,
+        0.09209302483526921,
+        0.07231665812490778
+      ],
+      "source_mask_pixel_counts": [
+        30532181,
+        14639672,
+        4815103,
+        3846958
+      ],
+      "native_crop_epochs_simulated": 70,
+      "augmentation_probe_epochs": 10,
+      "seeds": {
+        "1": {
+          "arms": {
+            "model392_rare_centered": {
+              "positive_sample_probability": 0.5,
+              "native_crop_expected_share": [
+                0.5705368342302545,
+                0.26733814129547245,
+                0.08986272181359051,
+                0.07226230266068252
+              ],
+              "native_crop_draws": 43680,
+              "draws": 6240,
+              "after_resize_before_augmentation": [
+                0.5713727119641426,
+                0.26749274669549405,
+                0.0892492074232835,
+                0.07188533391707982
+              ],
+              "after_full_training_augmentation": [
+                0.5713366563503559,
+                0.2676467834374843,
+                0.08911743897658128,
+                0.07189912123557848
+              ],
+              "augmentation_class_pixel_ratio_vs_resize": [
+                0.9999368965072505,
+                1.0005758539021832,
+                0.9985235897269398,
+                1.0001917959860152
+              ],
+              "native_crop_over_source_pooled_prior": [
+                1.0059625569422563,
+                0.983072469616827,
+                1.0046850582259104,
+                1.011230844443104
+              ],
+              "after_resize_over_source_pooled_prior": [
+                1.007436364857932,
+                0.9836409942264426,
+                0.9978258319693694,
+                1.0059555846342378
+              ],
+              "after_augmentation_over_source_pooled_prior": [
+                1.0073727921045867,
+                0.9842074277313151,
+                0.9963526316603248,
+                1.0061485228774802
+              ],
+              "after_augmentation_over_source_image_mean_prior": [
+                1.0008289294352597,
+                1.011029924056975,
+                0.967689346027992,
+                0.9942262695739048
+              ]
+            },
+            "uniform_crop": {
+              "positive_sample_probability": 0.0,
+              "native_crop_expected_share": [
+                0.5695504772225221,
+                0.26414472207378725,
+                0.09651471035432334,
+                0.06979009034936737
+              ],
+              "native_crop_draws": 43680,
+              "draws": 6240,
+              "after_resize_before_augmentation": [
+                0.5696541498868893,
+                0.2647428463666867,
+                0.09557530207511707,
+                0.0700277016713069
+              ],
+              "after_full_training_augmentation": [
+                0.5696803624813374,
+                0.264770158743247,
+                0.09548077216515174,
+                0.07006870661026392
+              ],
+              "augmentation_class_pixel_ratio_vs_resize": [
+                1.0000460149275718,
+                1.000103165682983,
+                0.9990109378896754,
+                1.0005855531165293
+              ],
+              "native_crop_over_source_pooled_prior": [
+                1.004223426078085,
+                0.9713294294895518,
+                1.079055757882968,
+                0.9766349728590935
+              ],
+              "after_resize_over_source_pooled_prior": [
+                1.004406220268179,
+                0.9735288894054065,
+                1.0685529660395372,
+                0.9799600799880819
+              ],
+              "after_augmentation_over_source_pooled_prior": [
+                1.0044524379476574,
+                0.9736293241781857,
+                1.0674961007879527,
+                0.9805338986669933
+              ],
+              "after_augmentation_over_source_image_mean_prior": [
+                0.9979275458090996,
+                1.000163536616027,
+                1.0367861446178182,
+                0.9689151632150765
+              ]
+            }
+          }
+        },
+        "2": {
+          "arms": {
+            "model392_rare_centered": {
+              "positive_sample_probability": 0.5,
+              "native_crop_expected_share": [
+                0.5708561563904915,
+                0.26722863712514844,
+                0.08974869507466006,
+                0.07216651140970007
+              ],
+              "native_crop_draws": 43680,
+              "draws": 6240,
+              "after_resize_before_augmentation": [
+                0.5710910350848467,
+                0.26744939180520866,
+                0.08937045794266921,
+                0.07208911516727545
+              ],
+              "after_full_training_augmentation": [
+                0.5709626277287801,
+                0.2676202621215429,
+                0.08936512103447547,
+                0.07205198911520151
+              ],
+              "augmentation_class_pixel_ratio_vs_resize": [
+                0.9997751543130992,
+                1.0006388884086852,
+                0.9999402833070726,
+                0.9994849978115588
+              ],
+              "native_crop_over_source_pooled_prior": [
+                1.0065255813037486,
+                0.982669794059078,
+                1.0034102141244898,
+                1.0098903520417462
+              ],
+              "after_resize_over_source_pooled_prior": [
+                1.006939716128652,
+                0.983481566922668,
+                0.999181439530218,
+                1.0088072773997538
+              ],
+              "after_augmentation_over_source_pooled_prior": [
+                1.0067133100765113,
+                0.9841099018959304,
+                0.999121771719015,
+                1.0082877394441774
+              ],
+              "after_augmentation_over_source_image_mean_prior": [
+                1.0001737313821522,
+                1.0109297403607698,
+                0.9703788228731409,
+                0.9963401377142024
+              ]
+            },
+            "uniform_crop": {
+              "positive_sample_probability": 0.0,
+              "native_crop_expected_share": [
+                0.5694583984027477,
+                0.2645042528058514,
+                0.09631699480348622,
+                0.06972035398791473
+              ],
+              "native_crop_draws": 43680,
+              "draws": 6240,
+              "after_resize_before_augmentation": [
+                0.5708320972247002,
+                0.2642470170290042,
+                0.0948076205375867,
+                0.07011326520870893
+              ],
+              "after_full_training_augmentation": [
+                0.5708860984215369,
+                0.2641774898920304,
+                0.09482275522672214,
+                0.07011365645971053
+              ],
+              "augmentation_class_pixel_ratio_vs_resize": [
+                1.0000946008416474,
+                0.9997368858208674,
+                1.0001596357871827,
+                1.0000055802707295
+              ],
+              "native_crop_over_source_pooled_prior": [
+                1.0040610739924296,
+                0.9726515182979826,
+                1.0768452543983638,
+                0.9756590897626017
+              ],
+              "after_resize_over_source_pooled_prior": [
+                1.0064831605195235,
+                0.9717055948723406,
+                1.0599701170598173,
+                0.9811574468722634
+              ],
+              "after_augmentation_over_source_pooled_prior": [
+                1.0065783746736126,
+                0.9714499253523873,
+                1.060139326223844,
+                0.9811629219964453
+              ],
+              "after_augmentation_over_source_image_mean_prior": [
+                1.0000396725154799,
+                0.9979247428747361,
+                1.02964101131802,
+                0.9695367329973662
+              ]
+            }
+          }
+        }
+      },
+      "training_mask_sha256": {
+        "train_fold1/masks/A101_step3_sample3_mask.png": "b9e9c4101788fe3829759072475ff1cd93ee8f0cc23f743aecafe177d96f5e15",
+        "train_fold1/masks/A106_step4_sample1_mask.png": "eb81fb8de655ce3c30c292dcafd1a2616ebdd46e20cf911421c5838adf71321a",
+        "train_fold1/masks/A108_step2_sample2_mask.png": "b234c8d5b408dc6109d36fa070039c17879e7ba420cf68ee482ea65ec487fd49",
+        "train_fold1/masks/A109_step1_sample3_mask.png": "70d86b9d7f63363262a4ab24958f14fb869a6885f1c7c478ca18fd4796077f14",
+        "train_fold1/masks/A111_step1_sample2_mask.png": "9b814afc3d72a7458773f032711b69dce9fd1177d5076e7d884f0f1639938a58",
+        "train_fold1/masks/A111_step3_sample4_mask.png": "c08a4f2fa8d5c7375cb4fa9d802f92d41af644b7019dec969b90091cf2bdc87d",
+        "train_fold1/masks/A121_step2_sample2_mask.png": "e30574993cca8e0b0cfd8ead910226dc597f8f811a31d0dbc854dc47f72d9364",
+        "train_fold1/masks/A123_step1_sample1_mask.png": "7dd29738ab4f39a05322820460077daaaeea6c9af864356c8fdc8e35a7a91d6b",
+        "train_fold1/masks/A123_step4_sample2_mask.png": "fc15bf9cb29d0e1d1021c7748f2c9704e4f8c721e76a59a12bc98be5ff368eb5",
+        "train_fold1/masks/A125_step2_sample1_mask.png": "1ee9cc4da1916a27d8ad51684b009806e2f9503e0a24384ec65cd274080e3f83",
+        "train_fold1/masks/A130_step1_sample1_mask.png": "5d79d43f9ad87dd5ed904f2570a3fc13381b53f9abc5054bab77ae977d90dfc6",
+        "train_fold1/masks/A137_step4_sample2_mask.png": "d545725253e515cfd4260b0add4ca07d48c22fad65dcd3c88dcae59df349c45f",
+        "train_fold1/masks/A139_step3_sample4_mask.png": "f3cfa487959925b6a4d5073a4fbd25754f3f0353d1980fef0206308c0e7611b1",
+        "train_fold1/masks/A139_step4_sample3_mask.png": "6dcaafd00ad6757984f6d9accb691aba5d1d7d67f3d6647602cb41e751ab4d1d",
+        "train_fold1/masks/A146_step2_sample1_mask.png": "1119380aa7e90082b599359b65aafe25b57d7f113d0f69059a05a66fc66984c1",
+        "train_fold1/masks/A147_step4_sample4_mask.png": "9a09feaf5e664f077bcc848c9ac3391c092becd1f7d9889195f7010f20403d27",
+        "train_fold1/masks/A150_step4_sample1_mask.png": "613fa2873b806374a27353df97e9299c265596f275a384c83006d27ffd986b6b",
+        "train_fold1/masks/A152_step2_sample1_mask.png": "d857d184ddff3b3ed5739e1d6cda84f8dd9b11a7e64de3636230cb0354f48031",
+        "train_fold1/masks/A153_step1_sample4_mask.png": "6c92d52bbd213f368e671bc09290557cfe43b2be644f67faf0c337ff6dab7a1f",
+        "train_fold1/masks/A154_step2_sample3_mask.png": "34646cb2086f58342c07ec136dc728113c1e314d9a70a2957ffa0d4405f2a8e2",
+        "train_fold1/masks/A156_step4_sample1_mask.png": "86d32434977ec5b898eed7bd6b07f62ba90a110fd58b07ab4ac9d0ae06c4849f",
+        "train_fold1/masks/A156_step4_sample2_mask.png": "c69294cb5bd5ff6aacb6b8a1cfad9d0156841c9f40fab2a0ca9233e5584ced6e",
+        "train_fold1/masks/A159_step4_sample4_mask.png": "46e77b42cb87829a70e0c63c77ce90c7226959f8915403a702e5bee275eb369e",
+        "train_fold1/masks/A15_step1_sample1_mask.png": "d5883f84db9158a9a7d6b8edac9a6b9f41be7897f2acfaa00a07db54719a1547",
+        "train_fold1/masks/A166_step4_sample3_mask.png": "eeaaca8cb0a415a76f4f1dc103810e24309d9ad4d25d7dff233838ff0bde9f5e",
+        "train_fold1/masks/A167_step3_sample4_mask.png": "ab6e88bd0cf86995078d1979898728c0e5af2dd4ad29e041c62403091077fb56",
+        "train_fold1/masks/A181_step4_sample4_mask.png": "165971724eb7cca69b23618aa41762a1f76eadc16462f9fea188afd4a00dfbae",
+        "train_fold1/masks/A182_step4_sample3_mask.png": "2eb4a49d5ffee6f948c34b47d42cba2086eb3e617662d66b3ed323f8e9463973",
+        "train_fold1/masks/A187_step2_sample1_mask.png": "8e7919ef66598d795f895b8fa920174ae0d7008fdaef6961ae530cbfff05df83",
+        "train_fold1/masks/A187_step4_sample4_mask.png": "f073400613b958b84cd4c545d506cc02ad5115ba639c387a54d764cf85cce741",
+        "train_fold1/masks/A188_step4_sample1_mask.png": "19797631b1e8644e23ab14b9896836f9311802f00326eae79a3933ac573b0af0",
+        "train_fold1/masks/A18_step2_sample1_mask.png": "73ccc11a6c888b58d1b54a47800679ce97f65084469e7b66a06ceb43eb3a9a70",
+        "train_fold1/masks/A191_step3_sample1_mask.png": "5913ba6531e7818ac9d53e7903dacb0b7bcd0ba686b0f7b758107998f7d217e4",
+        "train_fold1/masks/A191_step4_sample1_mask.png": "d9bda68a64c6350a841cfdb29e1933433b9271341deed6bcf2e18f83ce91495b",
+        "train_fold1/masks/A201_step3_sample1_mask.png": "fc3140aa01b296849eec6b5a71a88ca5150b6cf303ffaa3febed3f750425dc9f",
+        "train_fold1/masks/A201_step3_sample4_mask.png": "849ec291195a451aca342fec455bc43ffe7dda6412efc7abbeb27a57f210d185",
+        "train_fold1/masks/A21_step2_sample4_mask.png": "03b8dbaa0e5669708bd40cb5a43f347787b36e565f9a668df94ddb82cfdef50f",
+        "train_fold1/masks/A222_step2_sample2_mask.png": "8967c3ede7e0cd195cbe3d9a8a227ff4dc5d8c5c76e0d378aedbe428f9dcd19b",
+        "train_fold1/masks/A224_step1_sample2_mask.png": "cb664c26fa6f9271fe8877025c90c35c7ef2d78dfc64459efc1bc0dfd98d92ab",
+        "train_fold1/masks/A224_step4_sample2_mask.png": "d3d2b2cd031645c9e066bd80f009a71fde8acc04d030f681e252332534724df1",
+        "train_fold1/masks/A2_step4_sample1_mask.png": "8b94b37c197d94d16063ab98e53824da06aef8ba6117105aea06780f869371f5",
+        "train_fold1/masks/A39_step2_sample3_mask.png": "eb863ec019f70ec40778ac29287eed77bcea9798936fbcd697f1f0e15a8fbeeb",
+        "train_fold1/masks/A40_step3_sample4_mask.png": "802c3c94845250d4086c7fc23abb3d6cad3c143218e512947aa2fc7a0bcf65e6",
+        "train_fold1/masks/A49_step2_sample2_mask.png": "d0980e1c2ebcfd9777f8555e535c3fbf1ca2f8d4dbbc2072e2e6467c2bea362e",
+        "train_fold1/masks/A55_step3_sample4_mask.png": "2a67d465f32ec4d5d18f5cbe26707ec9413621c31cc92d215a5c5cfc49beffe3",
+        "train_fold1/masks/A61_step2_sample2_mask.png": "3a0abeb32bfe1fc8cae1d0008295b7bb3a6118d463e6827142f13f0f96b2870f",
+        "train_fold1/masks/A66_step3_sample2_mask.png": "07f108e638c26f2760e58ee95838862ef73d06684a867fdea8cddb3a501e9462",
+        "train_fold1/masks/A78_step4_sample1_mask.png": "37aea64a589c4c1c7b1d8959ddf69b9546d7c759c1207b1a7fc19e1138c4312b",
+        "train_fold1/masks/A83_step1_sample2_mask.png": "6911b34ee058ac03ce391d4401e626da9114d4be1974477a042393c25985e74e",
+        "train_fold1/masks/A89_step1_sample2_mask.png": "bb08649c239f2c6aa1cde29c9c7754c78cfb7b2947b5978b2e2bbbf300ab6f0c",
+        "train_fold1/masks/A96_step1_sample1_mask.png": "6cdb047587366c3160780416e6767e37ed0ca4165d41eb0f1e38b8ddf18e02bf",
+        "train_fold1/masks/A98_step2_sample4_mask.png": "f3e103a443bc9c744b97f458848a474101188677acf72616bfd93a425242cc22"
+      }
+    },
+    "2": {
+      "fold": 2,
+      "images": 52,
+      "specimen_groups": 44,
+      "target_width_from_outer_training_images": 1278,
+      "source_mask_prior_pooled_pixels": [
+        0.5733588922032783,
+        0.2644894951388549,
+        0.09379310157284541,
+        0.06835851108502135
+      ],
+      "source_mask_prior_mean_per_image": [
+        0.5820571149462028,
+        0.24975229910783095,
+        0.0969704663495348,
+        0.07122011959643136
+      ],
+      "source_mask_pixel_counts": [
+        28252858,
+        13032996,
+        4621753,
+        3368437
+      ],
+      "native_crop_epochs_simulated": 70,
+      "augmentation_probe_epochs": 10,
+      "seeds": {
+        "1": {
+          "arms": {
+            "model392_rare_centered": {
+              "positive_sample_probability": 0.5,
+              "native_crop_expected_share": [
+                0.5836014494894107,
+                0.25299491283814896,
+                0.09193891453903649,
+                0.07146472313340407
+              ],
+              "native_crop_draws": 43680,
+              "draws": 6240,
+              "after_resize_before_augmentation": [
+                0.5838414883002256,
+                0.2528800071814121,
+                0.09182101213015043,
+                0.07145749238821177
+              ],
+              "after_full_training_augmentation": [
+                0.5838678904068776,
+                0.25283412138621014,
+                0.09184345832237831,
+                0.071454529884534
+              ],
+              "augmentation_class_pixel_ratio_vs_resize": [
+                1.000045221360902,
+                0.9998185471611084,
+                1.000244455944311,
+                0.9999585417346908
+              ],
+              "native_crop_over_source_pooled_prior": [
+                1.0178641291264756,
+                0.9565404958912589,
+                0.9802310937295442,
+                1.0454400190858364
+              ],
+              "after_resize_over_source_pooled_prior": [
+                1.0182827828075802,
+                0.9561060527135572,
+                0.9789740459626091,
+                1.0453342422765182
+              ],
+              "after_augmentation_over_source_pooled_prior": [
+                1.0183288309408018,
+                0.9559325645560109,
+                0.979213361987471,
+                1.0452909045321652
+              ],
+              "after_augmentation_over_source_image_mean_prior": [
+                1.0031109927431128,
+                1.0123395151491623,
+                0.947128149217351,
+                1.0032913492624125
+              ]
+            },
+            "uniform_crop": {
+              "positive_sample_probability": 0.0,
+              "native_crop_expected_share": [
+                0.5825369566758086,
+                0.24945002044595407,
+                0.09894826090366454,
+                0.0690647619745728
+              ],
+              "native_crop_draws": 43680,
+              "draws": 6240,
+              "after_resize_before_augmentation": [
+                0.5831739101654444,
+                0.2483505707520705,
+                0.09912300415528126,
+                0.06935251492720385
+              ],
+              "after_full_training_augmentation": [
+                0.5831399997075398,
+                0.2483677809055035,
+                0.09918824220315003,
+                0.06930397718380658
+              ],
+              "augmentation_class_pixel_ratio_vs_resize": [
+                0.9999418518947548,
+                1.000069297821144,
+                1.0006581524483114,
+                0.999300130017661
+              ],
+              "native_crop_over_source_pooled_prior": [
+                1.0160075383801257,
+                0.9431377239197904,
+                1.0549630969055366,
+                1.0103315721530717
+              ],
+              "after_resize_over_source_pooled_prior": [
+                1.0171184542450356,
+                0.9389808492079749,
+                1.0568261683754676,
+                1.0145410399730064
+              ],
+              "after_augmentation_over_source_pooled_prior": [
+                1.0170593107341113,
+                0.9390459185349209,
+                1.0575217211056234,
+                1.0138309931532783
+              ],
+              "after_augmentation_over_source_image_mean_prior": [
+                1.001860444161802,
+                0.9944564346063149,
+                1.022870632029562,
+                0.9730954901019179
+              ]
+            }
+          }
+        },
+        "2": {
+          "arms": {
+            "model392_rare_centered": {
+              "positive_sample_probability": 0.5,
+              "native_crop_expected_share": [
+                0.5840833924048647,
+                0.2526563512700908,
+                0.09166648675440965,
+                0.07159376957063478
+              ],
+              "native_crop_draws": 43680,
+              "draws": 6240,
+              "after_resize_before_augmentation": [
+                0.5836438111769847,
+                0.25425411187685454,
+                0.09054518112769494,
+                0.07155689581846579
+              ],
+              "after_full_training_augmentation": [
+                0.5837633304106884,
+                0.25421059131622314,
+                0.09050928873893542,
+                0.07151678953415308
+              ],
+              "augmentation_class_pixel_ratio_vs_resize": [
+                1.0002047811206336,
+                0.9998288304550509,
+                0.9996035969191016,
+                0.9994395189470704
+              ],
+              "native_crop_over_source_pooled_prior": [
+                1.0187046897631165,
+                0.955260439124239,
+                0.9773265327324302,
+                1.047327807968046
+              ],
+              "after_resize_over_source_pooled_prior": [
+                1.0179380124971709,
+                0.9613013618683538,
+                0.965371435737969,
+                1.046788390833534
+              ],
+              "after_augmentation_over_source_pooled_prior": [
+                1.0181464669841056,
+                0.9611368163516838,
+                0.9649887595266312,
+                1.046201685774045
+              ],
+              "after_augmentation_over_source_image_mean_prior": [
+                1.0029313540212343,
+                1.0178508555249268,
+                0.9333696345513103,
+                1.0041655355172499
+              ]
+            },
+            "uniform_crop": {
+              "positive_sample_probability": 0.0,
+              "native_crop_expected_share": [
+                0.5826286258988782,
+                0.249199001175987,
+                0.09897975526450382,
+                0.06919261766063087
+              ],
+              "native_crop_draws": 43680,
+              "draws": 6240,
+              "after_resize_before_augmentation": [
+                0.5848637996575772,
+                0.2492383871323023,
+                0.09665954968868158,
+                0.06923826352143898
+              ],
+              "after_full_training_augmentation": [
+                0.5848555778845762,
+                0.24916730660658618,
+                0.09672401073651436,
+                0.06925310477232322
+              ],
+              "augmentation_class_pixel_ratio_vs_resize": [
+                0.9999859424142753,
+                0.9997148090768281,
+                1.0006668875247235,
+                1.000214350420265
+              ],
+              "native_crop_over_source_pooled_prior": [
+                1.016167419432493,
+                0.942188653069792,
+                1.0552988823770812,
+                1.0122019418265575
+              ],
+              "after_resize_over_source_pooled_prior": [
+                1.0200658045261815,
+                0.9423375661912551,
+                1.0305613959637523,
+                1.0128696840006277
+              ],
+              "after_augmentation_over_source_pooled_prior": [
+                1.0200514648636894,
+                0.9420688200708135,
+                1.0312486645021823,
+                1.013086793043067
+              ],
+              "after_augmentation_over_source_image_mean_prior": [
+                1.004807883739437,
+                0.997657709244982,
+                0.9974584466559945,
+                0.9723811917860539
+              ]
+            }
+          }
+        }
+      },
+      "training_mask_sha256": {
+        "train_fold2/masks/A101_step3_sample3_mask.png": "b9e9c4101788fe3829759072475ff1cd93ee8f0cc23f743aecafe177d96f5e15",
+        "train_fold2/masks/A108_step2_sample2_mask.png": "b234c8d5b408dc6109d36fa070039c17879e7ba420cf68ee482ea65ec487fd49",
+        "train_fold2/masks/A109_step1_sample3_mask.png": "70d86b9d7f63363262a4ab24958f14fb869a6885f1c7c478ca18fd4796077f14",
+        "train_fold2/masks/A118_step2_sample1_mask.png": "d09e568203a119414bcd19459cefbe96dd595b288850c0b60d15960aa4b24dab",
+        "train_fold2/masks/A121_step2_sample2_mask.png": "e30574993cca8e0b0cfd8ead910226dc597f8f811a31d0dbc854dc47f72d9364",
+        "train_fold2/masks/A125_step2_sample1_mask.png": "1ee9cc4da1916a27d8ad51684b009806e2f9503e0a24384ec65cd274080e3f83",
+        "train_fold2/masks/A130_step1_sample1_mask.png": "5d79d43f9ad87dd5ed904f2570a3fc13381b53f9abc5054bab77ae977d90dfc6",
+        "train_fold2/masks/A137_step4_sample2_mask.png": "d545725253e515cfd4260b0add4ca07d48c22fad65dcd3c88dcae59df349c45f",
+        "train_fold2/masks/A138_step4_sample3_mask.png": "7c92d33645a3cbed978eaa6fe42a29b8b635979b134197529ec0c027af61a3f9",
+        "train_fold2/masks/A140_step4_sample2_mask.png": "516b5863fa4b60097320be56dd66010d64550df4aaf1e750f8d7c7ddce6c4a8c",
+        "train_fold2/masks/A146_step2_sample1_mask.png": "1119380aa7e90082b599359b65aafe25b57d7f113d0f69059a05a66fc66984c1",
+        "train_fold2/masks/A150_step4_sample1_mask.png": "613fa2873b806374a27353df97e9299c265596f275a384c83006d27ffd986b6b",
+        "train_fold2/masks/A153_step1_sample4_mask.png": "6c92d52bbd213f368e671bc09290557cfe43b2be644f67faf0c337ff6dab7a1f",
+        "train_fold2/masks/A154_step2_sample3_mask.png": "34646cb2086f58342c07ec136dc728113c1e314d9a70a2957ffa0d4405f2a8e2",
+        "train_fold2/masks/A155_step3_sample2_mask.png": "f28bb39cec5b5fc63a58cba89f29618fa01521bfc372c572007f1125b8855e7e",
+        "train_fold2/masks/A156_step4_sample1_mask.png": "86d32434977ec5b898eed7bd6b07f62ba90a110fd58b07ab4ac9d0ae06c4849f",
+        "train_fold2/masks/A156_step4_sample2_mask.png": "c69294cb5bd5ff6aacb6b8a1cfad9d0156841c9f40fab2a0ca9233e5584ced6e",
+        "train_fold2/masks/A159_step4_sample4_mask.png": "46e77b42cb87829a70e0c63c77ce90c7226959f8915403a702e5bee275eb369e",
+        "train_fold2/masks/A164_step1_sample2_mask.png": "73dc24306039e0c85289949ae80478bed121bd0fb07c856e96c13ff771a07a0c",
+        "train_fold2/masks/A164_step4_sample1_mask.png": "4bab8ff4491a95316b8da42f250e54a6192b9a3c3b27801316fceaf54c1c9183",
+        "train_fold2/masks/A166_step4_sample3_mask.png": "eeaaca8cb0a415a76f4f1dc103810e24309d9ad4d25d7dff233838ff0bde9f5e",
+        "train_fold2/masks/A16_step4_sample4_mask.png": "28326fe36f95a2e1b80adcdddc2eb99cacefb40d69a964d0889e0d75fafdcdda",
+        "train_fold2/masks/A181_step4_sample4_mask.png": "165971724eb7cca69b23618aa41762a1f76eadc16462f9fea188afd4a00dfbae",
+        "train_fold2/masks/A187_step2_sample1_mask.png": "8e7919ef66598d795f895b8fa920174ae0d7008fdaef6961ae530cbfff05df83",
+        "train_fold2/masks/A187_step4_sample4_mask.png": "f073400613b958b84cd4c545d506cc02ad5115ba639c387a54d764cf85cce741",
+        "train_fold2/masks/A188_step4_sample1_mask.png": "19797631b1e8644e23ab14b9896836f9311802f00326eae79a3933ac573b0af0",
+        "train_fold2/masks/A18_step2_sample1_mask.png": "73ccc11a6c888b58d1b54a47800679ce97f65084469e7b66a06ceb43eb3a9a70",
+        "train_fold2/masks/A191_step3_sample1_mask.png": "5913ba6531e7818ac9d53e7903dacb0b7bcd0ba686b0f7b758107998f7d217e4",
+        "train_fold2/masks/A191_step4_sample1_mask.png": "d9bda68a64c6350a841cfdb29e1933433b9271341deed6bcf2e18f83ce91495b",
+        "train_fold2/masks/A200_step4_sample3_mask.png": "9cec89f1bef0ff472a8db56878c22154337b68bd8893d6f5844ab5639709493c",
+        "train_fold2/masks/A201_step3_sample1_mask.png": "fc3140aa01b296849eec6b5a71a88ca5150b6cf303ffaa3febed3f750425dc9f",
+        "train_fold2/masks/A201_step3_sample4_mask.png": "849ec291195a451aca342fec455bc43ffe7dda6412efc7abbeb27a57f210d185",
+        "train_fold2/masks/A222_step2_sample2_mask.png": "8967c3ede7e0cd195cbe3d9a8a227ff4dc5d8c5c76e0d378aedbe428f9dcd19b",
+        "train_fold2/masks/A224_step1_sample2_mask.png": "cb664c26fa6f9271fe8877025c90c35c7ef2d78dfc64459efc1bc0dfd98d92ab",
+        "train_fold2/masks/A224_step4_sample2_mask.png": "d3d2b2cd031645c9e066bd80f009a71fde8acc04d030f681e252332534724df1",
+        "train_fold2/masks/A40_step3_sample4_mask.png": "802c3c94845250d4086c7fc23abb3d6cad3c143218e512947aa2fc7a0bcf65e6",
+        "train_fold2/masks/A51_step4_sample4_mask.png": "55d3ef786a53d42402e868880fe51e70b1d96a7222be78830b47265ac4c27fa2",
+        "train_fold2/masks/A55_step3_sample4_mask.png": "2a67d465f32ec4d5d18f5cbe26707ec9413621c31cc92d215a5c5cfc49beffe3",
+        "train_fold2/masks/A57_step1_sample3_mask.png": "61e363c0ee6f6644aceb9411fcb1105235ed89b3e7ac9a0675f26f23142ecf6c",
+        "train_fold2/masks/A64_step2_sample3_mask.png": "ac69845b829833c9f2636889eac7def92346962d67e8c1737517032046dc089b",
+        "train_fold2/masks/A66_step3_sample2_mask.png": "07f108e638c26f2760e58ee95838862ef73d06684a867fdea8cddb3a501e9462",
+        "train_fold2/masks/A69_step4_sample4_mask.png": "80d41898b4dadfcf15d596c6409f916003a50f94583f20cb0b2b5460e4d9e40f",
+        "train_fold2/masks/A7_step1_sample2_mask.png": "c484ec29f51bda56a6a1e922918ecec65bb40d6a4cdec00b01cf86d070356d89",
+        "train_fold2/masks/A7_step4_sample3_mask.png": "24b2b53b8bb634e1761d4e045f5308047c326237aca8299fe23e488394f264cc",
+        "train_fold2/masks/A83_step1_sample2_mask.png": "6911b34ee058ac03ce391d4401e626da9114d4be1974477a042393c25985e74e",
+        "train_fold2/masks/A87_step2_sample2_mask.png": "83e34acf5aa99c63134d2e7c3d59525f8f27dafc0cb7f3d9cd7443dd1021b548",
+        "train_fold2/masks/A89_step1_sample2_mask.png": "bb08649c239f2c6aa1cde29c9c7754c78cfb7b2947b5978b2e2bbbf300ab6f0c",
+        "train_fold2/masks/A8_step2_sample3_mask.png": "d1b41d050d8baadd9d838266b9f228c7f9d70fa5860e19653472d3fa09b69088",
+        "train_fold2/masks/A8_step3_sample3_mask.png": "b1aea239f2433c7fc91d9b2edce293994da2ad97154ba978a848ae8d71aeae1c",
+        "train_fold2/masks/A94_step4_sample2_mask.png": "44c99de80ead70a3cb3b05b5e8bf9cbda01e1415d4f02c9087b3092f30d7a0fd",
+        "train_fold2/masks/A96_step1_sample1_mask.png": "6cdb047587366c3160780416e6767e37ed0ca4165d41eb0f1e38b8ddf18e02bf",
+        "train_fold2/masks/A98_step2_sample4_mask.png": "f3e103a443bc9c744b97f458848a474101188677acf72616bfd93a425242cc22"
+      }
+    },
+    "3": {
+      "fold": 3,
+      "images": 53,
+      "specimen_groups": 45,
+      "target_width_from_outer_training_images": 1278,
+      "source_mask_prior_pooled_pixels": [
+        0.5715279683250295,
+        0.2616422966760536,
+        0.09797438242632842,
+        0.06885535257258847
+      ],
+      "source_mask_prior_mean_per_image": [
+        0.5796490667412169,
+        0.2481648531067847,
+        0.09909688937633877,
+        0.07308919077565956
+      ],
+      "source_mask_pixel_counts": [
+        28494327,
+        13044543,
+        4884650,
+        3432880
+      ],
+      "native_crop_epochs_simulated": 70,
+      "augmentation_probe_epochs": 10,
+      "seeds": {
+        "1": {
+          "arms": {
+            "model392_rare_centered": {
+              "positive_sample_probability": 0.5,
+              "native_crop_expected_share": [
+                0.5818470395122093,
+                0.2510835615790972,
+                0.09419044095915477,
+                0.07287895794953882
+              ],
+              "native_crop_draws": 44520,
+              "draws": 6360,
+              "after_resize_before_augmentation": [
+                0.5837768890572794,
+                0.2497695227089168,
+                0.09348730771046765,
+                0.07296628052333616
+              ],
+              "after_full_training_augmentation": [
+                0.5837844308817162,
+                0.24975452902931838,
+                0.09351601330739147,
+                0.07294502678157398
+              ],
+              "augmentation_class_pixel_ratio_vs_resize": [
+                1.0000129190185123,
+                0.9999399699393432,
+                1.0003070534132048,
+                0.9997087183064597
+              ],
+              "native_crop_over_source_pooled_prior": [
+                1.0180552339676776,
+                0.9596443876578968,
+                0.9613782565047657,
+                1.0584356223099518
+              ],
+              "after_resize_over_source_pooled_prior": [
+                1.0214318833217344,
+                0.9546221153155646,
+                0.9542015514184556,
+                1.0597038254420945
+              ],
+              "after_augmentation_over_source_pooled_prior": [
+                1.021445079219144,
+                0.954564809292078,
+                0.9544945422617039,
+                1.0593951531171684
+              ],
+              "after_augmentation_over_source_image_mean_prior": [
+                1.0071342548065303,
+                1.0064057254789809,
+                0.9436826311696536,
+                0.9980275606754482
+              ]
+            },
+            "uniform_crop": {
+              "positive_sample_probability": 0.0,
+              "native_crop_expected_share": [
+                0.5812960661093614,
+                0.24717096882043943,
+                0.1011205359879067,
+                0.0704124290822925
+              ],
+              "native_crop_draws": 44520,
+              "draws": 6360,
+              "after_resize_before_augmentation": [
+                0.5821890848987508,
+                0.24610263656520243,
+                0.10137118453499656,
+                0.07033709400105026
+              ],
+              "after_full_training_augmentation": [
+                0.5822053675381642,
+                0.24610285848941443,
+                0.10138866196638384,
+                0.07030311200603749
+              ],
+              "augmentation_class_pixel_ratio_vs_resize": [
+                1.0000279679572082,
+                1.0000009017547113,
+                1.000172410251172,
+                0.9995168695054097
+              ],
+              "native_crop_over_source_pooled_prior": [
+                1.0170911982014792,
+                0.9446904111473554,
+                1.0321120019709644,
+                1.0226137322884599
+              ],
+              "after_resize_over_source_pooled_prior": [
+                1.0186537092925927,
+                0.940607232438067,
+                1.0346703089577765,
+                1.02151962589836
+              ],
+              "after_augmentation_over_source_pooled_prior": [
+                1.018682198955944,
+                0.9406080806350704,
+                1.034848696725624,
+                1.021026098616266
+              ],
+              "after_augmentation_over_source_image_mean_prior": [
+                1.0044100835205667,
+                0.9916910287997833,
+                1.0231265845423425,
+                0.961881110735325
+              ]
+            }
+          }
+        },
+        "2": {
+          "arms": {
+            "model392_rare_centered": {
+              "positive_sample_probability": 0.5,
+              "native_crop_expected_share": [
+                0.5818361519246537,
+                0.25056339213741885,
+                0.09461142224531428,
+                0.07298903369261318
+              ],
+              "native_crop_draws": 44520,
+              "draws": 6360,
+              "after_resize_before_augmentation": [
+                0.5811206061885043,
+                0.24932920707846587,
+                0.09623526747121751,
+                0.07331491926181241
+              ],
+              "after_full_training_augmentation": [
+                0.5811208173164032,
+                0.24944627749844916,
+                0.09613024033840348,
+                0.07330266484674418
+              ],
+              "augmentation_class_pixel_ratio_vs_resize": [
+                1.0000003633116719,
+                1.0004695415405,
+                0.9989086419607506,
+                0.9998328523690455
+              ],
+              "native_crop_over_source_pooled_prior": [
+                1.018036184003093,
+                0.9576562938050042,
+                0.9656751071276933,
+                1.060034274251474
+              ],
+              "after_resize_over_source_pooled_prior": [
+                1.016784196741216,
+                0.9529392236881604,
+                0.9822492889259228,
+                1.0647671752827434
+              ],
+              "after_augmentation_over_source_pooled_prior": [
+                1.0167845661507824,
+                0.9533866682392539,
+                0.9811773032679064,
+                1.0645892019718768
+              ],
+              "after_augmentation_over_source_image_mean_prior": [
+                1.002539037254835,
+                1.0051636014351841,
+                0.9700631467182699,
+                1.0029207338160284
+              ]
+            },
+            "uniform_crop": {
+              "positive_sample_probability": 0.0,
+              "native_crop_expected_share": [
+                0.5804867898128258,
+                0.24740559211808502,
+                0.10182385489429005,
+                0.07028376317479933
+              ],
+              "native_crop_draws": 44520,
+              "draws": 6360,
+              "after_resize_before_augmentation": [
+                0.5801703039205299,
+                0.24641039806341974,
+                0.10313490321801144,
+                0.07028439479803889
+              ],
+              "after_full_training_augmentation": [
+                0.5801477684164947,
+                0.2464194435743416,
+                0.10317322892962762,
+                0.0702595590795361
+              ],
+              "augmentation_class_pixel_ratio_vs_resize": [
+                0.9999611570880431,
+                1.0000367091283198,
+                1.0003716075782334,
+                0.9996466396477603
+              ],
+              "native_crop_over_source_pooled_prior": [
+                1.0156752109858276,
+                0.9455871442085856,
+                1.0392906020189128,
+                1.0207450916863
+              ],
+              "after_resize_over_source_pooled_prior": [
+                1.0151214569968088,
+                0.9417835005802105,
+                1.0526721441246487,
+                1.0207542648764145
+              ],
+              "after_augmentation_over_source_pooled_prior": [
+                1.015082026723429,
+                0.9418180726315828,
+                1.0530633250708006,
+                1.0203935707898277
+              ],
+              "after_augmentation_over_source_image_mean_prior": [
+                1.000860351036329,
+                0.9929667335620163,
+                1.0411348890862577,
+                0.9612852233539053
+              ]
+            }
+          }
+        }
+      },
+      "training_mask_sha256": {
+        "train_fold3/masks/A101_step3_sample3_mask.png": "b9e9c4101788fe3829759072475ff1cd93ee8f0cc23f743aecafe177d96f5e15",
+        "train_fold3/masks/A106_step4_sample1_mask.png": "eb81fb8de655ce3c30c292dcafd1a2616ebdd46e20cf911421c5838adf71321a",
+        "train_fold3/masks/A111_step1_sample2_mask.png": "9b814afc3d72a7458773f032711b69dce9fd1177d5076e7d884f0f1639938a58",
+        "train_fold3/masks/A111_step3_sample4_mask.png": "c08a4f2fa8d5c7375cb4fa9d802f92d41af644b7019dec969b90091cf2bdc87d",
+        "train_fold3/masks/A118_step2_sample1_mask.png": "d09e568203a119414bcd19459cefbe96dd595b288850c0b60d15960aa4b24dab",
+        "train_fold3/masks/A121_step2_sample2_mask.png": "e30574993cca8e0b0cfd8ead910226dc597f8f811a31d0dbc854dc47f72d9364",
+        "train_fold3/masks/A123_step1_sample1_mask.png": "7dd29738ab4f39a05322820460077daaaeea6c9af864356c8fdc8e35a7a91d6b",
+        "train_fold3/masks/A123_step4_sample2_mask.png": "fc15bf9cb29d0e1d1021c7748f2c9704e4f8c721e76a59a12bc98be5ff368eb5",
+        "train_fold3/masks/A125_step2_sample1_mask.png": "1ee9cc4da1916a27d8ad51684b009806e2f9503e0a24384ec65cd274080e3f83",
+        "train_fold3/masks/A138_step4_sample3_mask.png": "7c92d33645a3cbed978eaa6fe42a29b8b635979b134197529ec0c027af61a3f9",
+        "train_fold3/masks/A139_step3_sample4_mask.png": "f3cfa487959925b6a4d5073a4fbd25754f3f0353d1980fef0206308c0e7611b1",
+        "train_fold3/masks/A139_step4_sample3_mask.png": "6dcaafd00ad6757984f6d9accb691aba5d1d7d67f3d6647602cb41e751ab4d1d",
+        "train_fold3/masks/A140_step4_sample2_mask.png": "516b5863fa4b60097320be56dd66010d64550df4aaf1e750f8d7c7ddce6c4a8c",
+        "train_fold3/masks/A146_step2_sample1_mask.png": "1119380aa7e90082b599359b65aafe25b57d7f113d0f69059a05a66fc66984c1",
+        "train_fold3/masks/A147_step4_sample4_mask.png": "9a09feaf5e664f077bcc848c9ac3391c092becd1f7d9889195f7010f20403d27",
+        "train_fold3/masks/A150_step4_sample1_mask.png": "613fa2873b806374a27353df97e9299c265596f275a384c83006d27ffd986b6b",
+        "train_fold3/masks/A152_step2_sample1_mask.png": "d857d184ddff3b3ed5739e1d6cda84f8dd9b11a7e64de3636230cb0354f48031",
+        "train_fold3/masks/A155_step3_sample2_mask.png": "f28bb39cec5b5fc63a58cba89f29618fa01521bfc372c572007f1125b8855e7e",
+        "train_fold3/masks/A156_step4_sample1_mask.png": "86d32434977ec5b898eed7bd6b07f62ba90a110fd58b07ab4ac9d0ae06c4849f",
+        "train_fold3/masks/A156_step4_sample2_mask.png": "c69294cb5bd5ff6aacb6b8a1cfad9d0156841c9f40fab2a0ca9233e5584ced6e",
+        "train_fold3/masks/A15_step1_sample1_mask.png": "d5883f84db9158a9a7d6b8edac9a6b9f41be7897f2acfaa00a07db54719a1547",
+        "train_fold3/masks/A164_step1_sample2_mask.png": "73dc24306039e0c85289949ae80478bed121bd0fb07c856e96c13ff771a07a0c",
+        "train_fold3/masks/A164_step4_sample1_mask.png": "4bab8ff4491a95316b8da42f250e54a6192b9a3c3b27801316fceaf54c1c9183",
+        "train_fold3/masks/A166_step4_sample3_mask.png": "eeaaca8cb0a415a76f4f1dc103810e24309d9ad4d25d7dff233838ff0bde9f5e",
+        "train_fold3/masks/A167_step3_sample4_mask.png": "ab6e88bd0cf86995078d1979898728c0e5af2dd4ad29e041c62403091077fb56",
+        "train_fold3/masks/A16_step4_sample4_mask.png": "28326fe36f95a2e1b80adcdddc2eb99cacefb40d69a964d0889e0d75fafdcdda",
+        "train_fold3/masks/A181_step4_sample4_mask.png": "165971724eb7cca69b23618aa41762a1f76eadc16462f9fea188afd4a00dfbae",
+        "train_fold3/masks/A182_step4_sample3_mask.png": "2eb4a49d5ffee6f948c34b47d42cba2086eb3e617662d66b3ed323f8e9463973",
+        "train_fold3/masks/A188_step4_sample1_mask.png": "19797631b1e8644e23ab14b9896836f9311802f00326eae79a3933ac573b0af0",
+        "train_fold3/masks/A200_step4_sample3_mask.png": "9cec89f1bef0ff472a8db56878c22154337b68bd8893d6f5844ab5639709493c",
+        "train_fold3/masks/A21_step2_sample4_mask.png": "03b8dbaa0e5669708bd40cb5a43f347787b36e565f9a668df94ddb82cfdef50f",
+        "train_fold3/masks/A224_step1_sample2_mask.png": "cb664c26fa6f9271fe8877025c90c35c7ef2d78dfc64459efc1bc0dfd98d92ab",
+        "train_fold3/masks/A224_step4_sample2_mask.png": "d3d2b2cd031645c9e066bd80f009a71fde8acc04d030f681e252332534724df1",
+        "train_fold3/masks/A2_step4_sample1_mask.png": "8b94b37c197d94d16063ab98e53824da06aef8ba6117105aea06780f869371f5",
+        "train_fold3/masks/A39_step2_sample3_mask.png": "eb863ec019f70ec40778ac29287eed77bcea9798936fbcd697f1f0e15a8fbeeb",
+        "train_fold3/masks/A40_step3_sample4_mask.png": "802c3c94845250d4086c7fc23abb3d6cad3c143218e512947aa2fc7a0bcf65e6",
+        "train_fold3/masks/A49_step2_sample2_mask.png": "d0980e1c2ebcfd9777f8555e535c3fbf1ca2f8d4dbbc2072e2e6467c2bea362e",
+        "train_fold3/masks/A51_step4_sample4_mask.png": "55d3ef786a53d42402e868880fe51e70b1d96a7222be78830b47265ac4c27fa2",
+        "train_fold3/masks/A57_step1_sample3_mask.png": "61e363c0ee6f6644aceb9411fcb1105235ed89b3e7ac9a0675f26f23142ecf6c",
+        "train_fold3/masks/A61_step2_sample2_mask.png": "3a0abeb32bfe1fc8cae1d0008295b7bb3a6118d463e6827142f13f0f96b2870f",
+        "train_fold3/masks/A64_step2_sample3_mask.png": "ac69845b829833c9f2636889eac7def92346962d67e8c1737517032046dc089b",
+        "train_fold3/masks/A66_step3_sample2_mask.png": "07f108e638c26f2760e58ee95838862ef73d06684a867fdea8cddb3a501e9462",
+        "train_fold3/masks/A69_step4_sample4_mask.png": "80d41898b4dadfcf15d596c6409f916003a50f94583f20cb0b2b5460e4d9e40f",
+        "train_fold3/masks/A78_step4_sample1_mask.png": "37aea64a589c4c1c7b1d8959ddf69b9546d7c759c1207b1a7fc19e1138c4312b",
+        "train_fold3/masks/A7_step1_sample2_mask.png": "c484ec29f51bda56a6a1e922918ecec65bb40d6a4cdec00b01cf86d070356d89",
+        "train_fold3/masks/A7_step4_sample3_mask.png": "24b2b53b8bb634e1761d4e045f5308047c326237aca8299fe23e488394f264cc",
+        "train_fold3/masks/A83_step1_sample2_mask.png": "6911b34ee058ac03ce391d4401e626da9114d4be1974477a042393c25985e74e",
+        "train_fold3/masks/A87_step2_sample2_mask.png": "83e34acf5aa99c63134d2e7c3d59525f8f27dafc0cb7f3d9cd7443dd1021b548",
+        "train_fold3/masks/A89_step1_sample2_mask.png": "bb08649c239f2c6aa1cde29c9c7754c78cfb7b2947b5978b2e2bbbf300ab6f0c",
+        "train_fold3/masks/A8_step2_sample3_mask.png": "d1b41d050d8baadd9d838266b9f228c7f9d70fa5860e19653472d3fa09b69088",
+        "train_fold3/masks/A8_step3_sample3_mask.png": "b1aea239f2433c7fc91d9b2edce293994da2ad97154ba978a848ae8d71aeae1c",
+        "train_fold3/masks/A94_step4_sample2_mask.png": "44c99de80ead70a3cb3b05b5e8bf9cbda01e1415d4f02c9087b3092f30d7a0fd",
+        "train_fold3/masks/A96_step1_sample1_mask.png": "6cdb047587366c3160780416e6767e37ed0ca4165d41eb0f1e38b8ddf18e02bf"
+      }
+    },
+    "4": {
+      "fold": 4,
+      "images": 53,
+      "specimen_groups": 44,
+      "target_width_from_outer_training_images": 1278,
+      "source_mask_prior_pooled_pixels": [
+        0.5794084031369435,
+        0.2541257509017644,
+        0.09623219649817538,
+        0.07023364946311669
+      ],
+      "source_mask_prior_mean_per_image": [
+        0.5838068897029283,
+        0.24319892269342766,
+        0.09909883137707712,
+        0.07389535622656673
+      ],
+      "source_mask_pixel_counts": [
+        29890698,
+        13109917,
+        4964456,
+        3623235
+      ],
+      "native_crop_epochs_simulated": 70,
+      "augmentation_probe_epochs": 10,
+      "seeds": {
+        "1": {
+          "arms": {
+            "model392_rare_centered": {
+              "positive_sample_probability": 0.5,
+              "native_crop_expected_share": [
+                0.5854591690574936,
+                0.24582978573217595,
+                0.09449052811786955,
+                0.07422051709246098
+              ],
+              "native_crop_draws": 44520,
+              "draws": 6360,
+              "after_resize_before_augmentation": [
+                0.5856146302613072,
+                0.24576325566513732,
+                0.09452628609519334,
+                0.07409582797836207
+              ],
+              "after_full_training_augmentation": [
+                0.5856246972233994,
+                0.24580461873948198,
+                0.09445724847181788,
+                0.07411343556530071
+              ],
+              "augmentation_class_pixel_ratio_vs_resize": [
+                1.0000171904210926,
+                1.000168304550787,
+                0.9992696462938793,
+                1.0002376326362636
+              ],
+              "native_crop_over_source_pooled_prior": [
+                1.010443006845933,
+                0.9673548818246468,
+                0.9819013963758081,
+                1.0567657762314915
+              ],
+              "after_resize_over_source_pooled_prior": [
+                1.0107113170792188,
+                0.9670930820392942,
+                0.9822729765602473,
+                1.0549904290147076
+              ],
+              "after_augmentation_over_source_pooled_prior": [
+                1.0107286916323626,
+                0.967255848206036,
+                0.9815555698513942,
+                1.0552411291715875
+              ],
+              "after_augmentation_over_source_image_mean_prior": [
+                1.0031137137168697,
+                1.010714258176789,
+                0.9531620823297328,
+                1.002951191385631
+              ]
+            },
+            "uniform_crop": {
+              "positive_sample_probability": 0.0,
+              "native_crop_expected_share": [
+                0.5831241845978054,
+                0.24254833108322704,
+                0.10282450747112525,
+                0.07150297684784251
+              ],
+              "native_crop_draws": 44520,
+              "draws": 6360,
+              "after_resize_before_augmentation": [
+                0.5819281296160236,
+                0.24166990496077628,
+                0.10484852400965661,
+                0.07155344141354351
+              ],
+              "after_full_training_augmentation": [
+                0.5820396693247669,
+                0.2416089027932605,
+                0.10478824459531771,
+                0.07156318328665487
+              ],
+              "augmentation_class_pixel_ratio_vs_resize": [
+                1.000191672653489,
+                0.9997475806202445,
+                0.9994250809450275,
+                1.0001361482120064
+              ],
+              "native_crop_over_source_pooled_prior": [
+                1.00641306104769,
+                0.9544421618924688,
+                1.0685042138997094,
+                1.0180729236545285
+              ],
+              "after_resize_over_source_pooled_prior": [
+                1.0043487917424707,
+                0.9509855026624079,
+                1.0895368475938778,
+                1.0187914476965905
+              ],
+              "after_augmentation_over_source_pooled_prior": [
+                1.0045412979404122,
+                0.9507454554916692,
+                1.0889104520991013,
+                1.0189301543306017
+              ],
+              "after_augmentation_over_source_image_mean_prior": [
+                0.9969729367547193,
+                0.9934620602650798,
+                1.0574115066664311,
+                0.9684395196260871
+              ]
+            }
+          }
+        },
+        "2": {
+          "arms": {
+            "model392_rare_centered": {
+              "positive_sample_probability": 0.5,
+              "native_crop_expected_share": [
+                0.5858036951800174,
+                0.24510710004697098,
+                0.09501874408685082,
+                0.0740704606861608
+              ],
+              "native_crop_draws": 44520,
+              "draws": 6360,
+              "after_resize_before_augmentation": [
+                0.5843970856576596,
+                0.24470931958852324,
+                0.0974147784634956,
+                0.07347881629032159
+              ],
+              "after_full_training_augmentation": [
+                0.5842824066210093,
+                0.24483890953303883,
+                0.09739759433194527,
+                0.07348108951400661
+              ],
+              "augmentation_class_pixel_ratio_vs_resize": [
+                0.9998037652146721,
+                1.0005295668539862,
+                0.9998235983100165,
+                1.0000309371299076
+              ],
+              "native_crop_over_source_pooled_prior": [
+                1.0110376239081957,
+                0.9645110705121744,
+                0.9873903697984534,
+                1.0546292447049759
+              ],
+              "after_resize_over_source_pooled_prior": [
+                1.0086099588713369,
+                0.9629457806624201,
+                1.0122888389577873,
+                1.046205299767444
+              ],
+              "after_augmentation_over_source_pooled_prior": [
+                1.0084120345125782,
+                0.9634557248300447,
+                1.0121102694958437,
+                1.046237666356713
+              ],
+              "after_augmentation_over_source_image_mean_prior": [
+                1.0008145106309434,
+                1.0067433968105135,
+                0.9828329252576296,
+                0.994393873529888
+              ]
+            },
+            "uniform_crop": {
+              "positive_sample_probability": 0.0,
+              "native_crop_expected_share": [
+                0.5832931346955774,
+                0.24227509537681471,
+                0.10300736076740133,
+                0.0714244091602066
+              ],
+              "native_crop_draws": 44520,
+              "draws": 6360,
+              "after_resize_before_augmentation": [
+                0.584101358449684,
+                0.2429301657766666,
+                0.10156657740754901,
+                0.07140189836610038
+              ],
+              "after_full_training_augmentation": [
+                0.584110350578836,
+                0.24291219051529025,
+                0.10156820345224825,
+                0.07140925545362556
+              ],
+              "augmentation_class_pixel_ratio_vs_resize": [
+                1.000015394809517,
+                0.9999260064664309,
+                1.0000160096435338,
+                1.0001030377019875
+              ],
+              "native_crop_over_source_pooled_prior": [
+                1.0067046517406406,
+                0.9533669630767535,
+                1.070404339875526,
+                1.0169542620409502
+              ],
+              "after_resize_over_source_pooled_prior": [
+                1.008099563774589,
+                0.9559447042050232,
+                1.0554323927280904,
+                1.016633749091982
+              ],
+              "after_augmentation_over_source_pooled_prior": [
+                1.0081150832753476,
+                0.9558739704784623,
+                1.055449289824472,
+                1.0167385006972511
+              ],
+              "after_augmentation_over_source_image_mean_prior": [
+                1.0005197966678026,
+                0.9988209973343556,
+                1.024918276440365,
+                0.966356468120694
+              ]
+            }
+          }
+        }
+      },
+      "training_mask_sha256": {
+        "train_fold4/masks/A106_step4_sample1_mask.png": "eb81fb8de655ce3c30c292dcafd1a2616ebdd46e20cf911421c5838adf71321a",
+        "train_fold4/masks/A108_step2_sample2_mask.png": "b234c8d5b408dc6109d36fa070039c17879e7ba420cf68ee482ea65ec487fd49",
+        "train_fold4/masks/A109_step1_sample3_mask.png": "70d86b9d7f63363262a4ab24958f14fb869a6885f1c7c478ca18fd4796077f14",
+        "train_fold4/masks/A111_step1_sample2_mask.png": "9b814afc3d72a7458773f032711b69dce9fd1177d5076e7d884f0f1639938a58",
+        "train_fold4/masks/A111_step3_sample4_mask.png": "c08a4f2fa8d5c7375cb4fa9d802f92d41af644b7019dec969b90091cf2bdc87d",
+        "train_fold4/masks/A118_step2_sample1_mask.png": "d09e568203a119414bcd19459cefbe96dd595b288850c0b60d15960aa4b24dab",
+        "train_fold4/masks/A123_step1_sample1_mask.png": "7dd29738ab4f39a05322820460077daaaeea6c9af864356c8fdc8e35a7a91d6b",
+        "train_fold4/masks/A123_step4_sample2_mask.png": "fc15bf9cb29d0e1d1021c7748f2c9704e4f8c721e76a59a12bc98be5ff368eb5",
+        "train_fold4/masks/A130_step1_sample1_mask.png": "5d79d43f9ad87dd5ed904f2570a3fc13381b53f9abc5054bab77ae977d90dfc6",
+        "train_fold4/masks/A137_step4_sample2_mask.png": "d545725253e515cfd4260b0add4ca07d48c22fad65dcd3c88dcae59df349c45f",
+        "train_fold4/masks/A138_step4_sample3_mask.png": "7c92d33645a3cbed978eaa6fe42a29b8b635979b134197529ec0c027af61a3f9",
+        "train_fold4/masks/A139_step3_sample4_mask.png": "f3cfa487959925b6a4d5073a4fbd25754f3f0353d1980fef0206308c0e7611b1",
+        "train_fold4/masks/A139_step4_sample3_mask.png": "6dcaafd00ad6757984f6d9accb691aba5d1d7d67f3d6647602cb41e751ab4d1d",
+        "train_fold4/masks/A140_step4_sample2_mask.png": "516b5863fa4b60097320be56dd66010d64550df4aaf1e750f8d7c7ddce6c4a8c",
+        "train_fold4/masks/A147_step4_sample4_mask.png": "9a09feaf5e664f077bcc848c9ac3391c092becd1f7d9889195f7010f20403d27",
+        "train_fold4/masks/A152_step2_sample1_mask.png": "d857d184ddff3b3ed5739e1d6cda84f8dd9b11a7e64de3636230cb0354f48031",
+        "train_fold4/masks/A153_step1_sample4_mask.png": "6c92d52bbd213f368e671bc09290557cfe43b2be644f67faf0c337ff6dab7a1f",
+        "train_fold4/masks/A154_step2_sample3_mask.png": "34646cb2086f58342c07ec136dc728113c1e314d9a70a2957ffa0d4405f2a8e2",
+        "train_fold4/masks/A155_step3_sample2_mask.png": "f28bb39cec5b5fc63a58cba89f29618fa01521bfc372c572007f1125b8855e7e",
+        "train_fold4/masks/A159_step4_sample4_mask.png": "46e77b42cb87829a70e0c63c77ce90c7226959f8915403a702e5bee275eb369e",
+        "train_fold4/masks/A15_step1_sample1_mask.png": "d5883f84db9158a9a7d6b8edac9a6b9f41be7897f2acfaa00a07db54719a1547",
+        "train_fold4/masks/A164_step1_sample2_mask.png": "73dc24306039e0c85289949ae80478bed121bd0fb07c856e96c13ff771a07a0c",
+        "train_fold4/masks/A164_step4_sample1_mask.png": "4bab8ff4491a95316b8da42f250e54a6192b9a3c3b27801316fceaf54c1c9183",
+        "train_fold4/masks/A167_step3_sample4_mask.png": "ab6e88bd0cf86995078d1979898728c0e5af2dd4ad29e041c62403091077fb56",
+        "train_fold4/masks/A16_step4_sample4_mask.png": "28326fe36f95a2e1b80adcdddc2eb99cacefb40d69a964d0889e0d75fafdcdda",
+        "train_fold4/masks/A182_step4_sample3_mask.png": "2eb4a49d5ffee6f948c34b47d42cba2086eb3e617662d66b3ed323f8e9463973",
+        "train_fold4/masks/A187_step2_sample1_mask.png": "8e7919ef66598d795f895b8fa920174ae0d7008fdaef6961ae530cbfff05df83",
+        "train_fold4/masks/A187_step4_sample4_mask.png": "f073400613b958b84cd4c545d506cc02ad5115ba639c387a54d764cf85cce741",
+        "train_fold4/masks/A18_step2_sample1_mask.png": "73ccc11a6c888b58d1b54a47800679ce97f65084469e7b66a06ceb43eb3a9a70",
+        "train_fold4/masks/A191_step3_sample1_mask.png": "5913ba6531e7818ac9d53e7903dacb0b7bcd0ba686b0f7b758107998f7d217e4",
+        "train_fold4/masks/A191_step4_sample1_mask.png": "d9bda68a64c6350a841cfdb29e1933433b9271341deed6bcf2e18f83ce91495b",
+        "train_fold4/masks/A200_step4_sample3_mask.png": "9cec89f1bef0ff472a8db56878c22154337b68bd8893d6f5844ab5639709493c",
+        "train_fold4/masks/A201_step3_sample1_mask.png": "fc3140aa01b296849eec6b5a71a88ca5150b6cf303ffaa3febed3f750425dc9f",
+        "train_fold4/masks/A201_step3_sample4_mask.png": "849ec291195a451aca342fec455bc43ffe7dda6412efc7abbeb27a57f210d185",
+        "train_fold4/masks/A21_step2_sample4_mask.png": "03b8dbaa0e5669708bd40cb5a43f347787b36e565f9a668df94ddb82cfdef50f",
+        "train_fold4/masks/A222_step2_sample2_mask.png": "8967c3ede7e0cd195cbe3d9a8a227ff4dc5d8c5c76e0d378aedbe428f9dcd19b",
+        "train_fold4/masks/A2_step4_sample1_mask.png": "8b94b37c197d94d16063ab98e53824da06aef8ba6117105aea06780f869371f5",
+        "train_fold4/masks/A39_step2_sample3_mask.png": "eb863ec019f70ec40778ac29287eed77bcea9798936fbcd697f1f0e15a8fbeeb",
+        "train_fold4/masks/A49_step2_sample2_mask.png": "d0980e1c2ebcfd9777f8555e535c3fbf1ca2f8d4dbbc2072e2e6467c2bea362e",
+        "train_fold4/masks/A51_step4_sample4_mask.png": "55d3ef786a53d42402e868880fe51e70b1d96a7222be78830b47265ac4c27fa2",
+        "train_fold4/masks/A55_step3_sample4_mask.png": "2a67d465f32ec4d5d18f5cbe26707ec9413621c31cc92d215a5c5cfc49beffe3",
+        "train_fold4/masks/A57_step1_sample3_mask.png": "61e363c0ee6f6644aceb9411fcb1105235ed89b3e7ac9a0675f26f23142ecf6c",
+        "train_fold4/masks/A61_step2_sample2_mask.png": "3a0abeb32bfe1fc8cae1d0008295b7bb3a6118d463e6827142f13f0f96b2870f",
+        "train_fold4/masks/A64_step2_sample3_mask.png": "ac69845b829833c9f2636889eac7def92346962d67e8c1737517032046dc089b",
+        "train_fold4/masks/A69_step4_sample4_mask.png": "80d41898b4dadfcf15d596c6409f916003a50f94583f20cb0b2b5460e4d9e40f",
+        "train_fold4/masks/A78_step4_sample1_mask.png": "37aea64a589c4c1c7b1d8959ddf69b9546d7c759c1207b1a7fc19e1138c4312b",
+        "train_fold4/masks/A7_step1_sample2_mask.png": "c484ec29f51bda56a6a1e922918ecec65bb40d6a4cdec00b01cf86d070356d89",
+        "train_fold4/masks/A7_step4_sample3_mask.png": "24b2b53b8bb634e1761d4e045f5308047c326237aca8299fe23e488394f264cc",
+        "train_fold4/masks/A87_step2_sample2_mask.png": "83e34acf5aa99c63134d2e7c3d59525f8f27dafc0cb7f3d9cd7443dd1021b548",
+        "train_fold4/masks/A8_step2_sample3_mask.png": "d1b41d050d8baadd9d838266b9f228c7f9d70fa5860e19653472d3fa09b69088",
+        "train_fold4/masks/A8_step3_sample3_mask.png": "b1aea239f2433c7fc91d9b2edce293994da2ad97154ba978a848ae8d71aeae1c",
+        "train_fold4/masks/A94_step4_sample2_mask.png": "44c99de80ead70a3cb3b05b5e8bf9cbda01e1415d4f02c9087b3092f30d7a0fd",
+        "train_fold4/masks/A98_step2_sample4_mask.png": "f3e103a443bc9c744b97f458848a474101188677acf72616bfd93a425242cc22"
+      }
+    }
+  }
+}

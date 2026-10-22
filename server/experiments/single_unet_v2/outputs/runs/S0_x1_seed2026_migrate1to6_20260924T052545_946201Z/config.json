@@ -1,0 +1,83 @@
+{
+  "seed": 2026,
+  "data": {
+    "manifest": "data/processed/manifest.csv",
+    "folds": "data/processed/folds.json",
+    "split": "official"
+  },
+  "model": {
+    "encoder": "efficientnet_b4",
+    "weights": "IMAGENET1K_V1",
+    "decoder_channels": [
+      256,
+      128,
+      64,
+      32,
+      16
+    ],
+    "freeze_encoder_bn_stats": true,
+    "checkpoint_encoder": true
+  },
+  "sampling": {
+    "core": 512,
+    "halo": 64
+  },
+  "augmentation": {
+    "d4": true,
+    "photometric_probability": 0.5,
+    "brightness": 0.04,
+    "contrast": [
+      0.9,
+      1.1
+    ],
+    "gamma": [
+      0.9,
+      1.1
+    ]
+  },
+  "loss": {
+    "ce": 1.0,
+    "dice": 1.0,
+    "boundary_weight": 0.0,
+    "boundary_radius": 2
+  },
+  "train": {
+    "updates": 8000,
+    "effective_batch": 8,
+    "encoder_lr": 0.0001,
+    "decoder_lr": 0.0003,
+    "weight_decay": 0.01,
+    "warmup": 250,
+    "min_lr_ratio": 0.01,
+    "precision": "bf16",
+    "workers": 2,
+    "cpu_threads": 4,
+    "checkpoint_every": 1000,
+    "log_every": 10
+  },
+  "evaluation": {
+    "empty_union": "one",
+    "checkpoint": "last",
+    "boundary_radii": [
+      1,
+      2,
+      4
+    ],
+    "border_widths": [
+      16,
+      32,
+      64
+    ]
+  },
+  "inference": {
+    "mode": "tiled",
+    "core": 512,
+    "halo": 64,
+    "overlap": 0.5,
+    "offset": 0,
+    "pad": 0,
+    "d4": false
+  },
+  "experiment": "S0",
+  "scale": 1
+}

@@ -1,0 +1,29 @@
+{
+  "model": "Model336 HRNet-W48 + SMP U-Net++",
+  "split": "valid",
+  "images": 20,
+  "class_order": [
+    "Al",
+    "Al3Ni",
+    "Primary_Si",
+    "Eutectic_Si"
+  ],
+  "inference": {
+    "patch_size": 512,
+    "input_scale": 3.0,
+    "overlap": 85,
+    "tta": "8-way dihedral rotations and flips"
+  },
+  "per_image_metrics": "/workspace/komap_model1/outputs/model365_model361_scale3_d4/valid_eval/valid_per_image.csv",
+  "probabilities": "/workspace/komap_model1/outputs/model365_model361_scale3_d4/valid_eval/valid_probabilities.npz",
+  "image_miou_empty_zero": 0.7770752443223833,
+  "image_miou_empty_skip": 0.7832751369931825,
+  "image_miou_empty_one": 0.7895752443223832,
+  "pooled_global_miou_diagnostic_only": 0.8087662297950771,
+  "pooled_global_iou_by_class": {
+    "Al": 0.945321805248784,
+    "Al3Ni": 0.7926898551789099,
+    "Primary_Si": 0.8887161853225799,
+    "Eutectic_Si": 0.6083370734300347
+  }
+}

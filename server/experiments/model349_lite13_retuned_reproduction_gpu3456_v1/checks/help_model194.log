@@ -1,0 +1,46 @@
+usage: model194_multistage_team_schedule.py [-h] --data-dir DATA_DIR
+                                            --checkpoint CHECKPOINT
+                                            --output-dir OUTPUT_DIR
+                                            [--tile-batch-size TILE_BATCH_SIZE]
+                                            [--eval-patch-size EVAL_PATCH_SIZE]
+                                            [--eval-stride EVAL_STRIDE]
+                                            [--stage0-epochs STAGE0_EPOCHS]
+                                            [--stage1-epochs STAGE1_EPOCHS]
+                                            [--stage2-epochs STAGE2_EPOCHS]
+                                            [--stage0-patches STAGE0_PATCHES]
+                                            [--stage1-patches STAGE1_PATCHES]
+                                            [--stage2-patches STAGE2_PATCHES]
+                                            [--stage0-batch STAGE0_BATCH]
+                                            [--stage1-batch STAGE1_BATCH]
+                                            [--stage2-batch STAGE2_BATCH]
+                                            [--encoder-lr ENCODER_LR]
+                                            [--decoder-lr DECODER_LR]
+                                            [--weight-decay WEIGHT_DECAY]
+                                            [--num-workers NUM_WORKERS]
+                                            [--selection-metric {image_mean_miou,image_mean_miou_exclude}]
+                                            [--seed SEED] [--no-amp]
+
+options:
+  -h, --help            show this help message and exit
+  --data-dir DATA_DIR
+  --checkpoint CHECKPOINT
+  --output-dir OUTPUT_DIR
+  --tile-batch-size TILE_BATCH_SIZE
+  --eval-patch-size EVAL_PATCH_SIZE
+  --eval-stride EVAL_STRIDE
+  --stage0-epochs STAGE0_EPOCHS
+  --stage1-epochs STAGE1_EPOCHS
+  --stage2-epochs STAGE2_EPOCHS
+  --stage0-patches STAGE0_PATCHES
+  --stage1-patches STAGE1_PATCHES
+  --stage2-patches STAGE2_PATCHES
+  --stage0-batch STAGE0_BATCH
+  --stage1-batch STAGE1_BATCH
+  --stage2-batch STAGE2_BATCH
+  --encoder-lr ENCODER_LR
+  --decoder-lr DECODER_LR
+  --weight-decay WEIGHT_DECAY
+  --num-workers NUM_WORKERS
+  --selection-metric {image_mean_miou,image_mean_miou_exclude}
+  --seed SEED
+  --no-amp

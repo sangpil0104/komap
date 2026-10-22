@@ -1,0 +1,449 @@
+{
+  "model": 385,
+  "stage": "Stage 0; training-free feasibility screen for a separate prototype-loss experiment",
+  "scope": "Model374 train-only grouped OOF folds 1-2; official valid/test excluded",
+  "metric": "Step4 GT Eutectic false-negative pixel fraction at least K native pixels from any 4-neighbor GT phase boundary",
+  "boundary_distance_native_pixels_k": 8.0,
+  "images_total_oof": 36,
+  "specimen_groups_total_oof": 30,
+  "step4_images": 16,
+  "step4_groups": 16,
+  "eutectic_fn_pixels": 352640,
+  "interior_fn_pixels": 19404,
+  "interior_fn_fraction": 0.05502495462794919,
+  "group_bootstrap_95ci": [
+    0.003338587334007066,
+    0.1357511935744203
+  ],
+  "bootstrap_draws": 20000,
+  "bootstrap_seed": 385,
+  "per_fold": {
+    "1": {
+      "step4_images": 9,
+      "step4_groups": 9,
+      "eutectic_fn_pixels": 152982,
+      "interior_fn_fraction": 0.014217358904969212
+    },
+    "2": {
+      "step4_images": 7,
+      "step4_groups": 7,
+      "eutectic_fn_pixels": 199658,
+      "interior_fn_fraction": 0.08629256027807551
+    }
+  },
+  "fn_destination_counts_by_zone_and_class_id": {
+    "interior": [
+      3,
+      915,
+      18486,
+      0
+    ],
+    "near_boundary": [
+      96784,
+      180418,
+      56034,
+      0
+    ]
+  },
+  "precommitted_screen_rule": "prototype feasibility screen passes iff pooled interior_fn_fraction >= 0.40; this is not authorization to train",
+  "prototype_feasibility_screen_passed": false,
+  "fold_image_counts": {
+    "1": {
+      "all_oof_images": 18,
+      "step4_images": 9,
+      "step4_groups": 9
+    },
+    "2": {
+      "all_oof_images": 18,
+      "step4_images": 7,
+      "step4_groups": 7
+    }
+  },
+  "interpretation_guard": "Two folds only; pixel-level error share is a feasibility diagnostic, not a generalization estimate or causal attribution. A pass only justifies drafting/running a separately preregistered grouped-OOF experiment when compute and model checkpoints are available.",
+  "per_image": [
+    {
+      "image_id": "A138_step4_sample3",
+      "specimen_group": "A138",
+      "fold": 1,
+      "counts": {
+        "eutectic_gt_pixels": 20296,
+        "eutectic_false_negative_pixels": 16141,
+        "interior_fn_pixels_distance_ge_k": 15,
+        "near_boundary_fn_pixels_distance_lt_k": 16126,
+        "interior_fn_fraction": 0.0009293104516448795,
+        "interior_fn_prediction_counts_by_class": [
+          0,
+          0,
+          15,
+          0
+        ],
+        "near_fn_prediction_counts_by_class": [
+          3279,
+          12386,
+          461,
+          0
+        ]
+      }
+    },
+    {
+      "image_id": "A140_step4_sample2",
+      "specimen_group": "A140",
+      "fold": 1,
+      "counts": {
+        "eutectic_gt_pixels": 100871,
+        "eutectic_false_negative_pixels": 35325,
+        "interior_fn_pixels_distance_ge_k": 368,
+        "near_boundary_fn_pixels_distance_lt_k": 34957,
+        "interior_fn_fraction": 0.010417551309271054,
+        "interior_fn_prediction_counts_by_class": [
+          0,
+          5,
+          363,
+          0
+        ],
+        "near_fn_prediction_counts_by_class": [
+          11718,
+          20765,
+          2474,
+          0
+        ]
+      }
+    },
+    {
+      "image_id": "A164_step4_sample1",
+      "specimen_group": "A164",
+      "fold": 1,
+      "counts": {
+        "eutectic_gt_pixels": 68528,
+        "eutectic_false_negative_pixels": 10312,
+        "interior_fn_pixels_distance_ge_k": 646,
+        "near_boundary_fn_pixels_distance_lt_k": 9666,
+        "interior_fn_fraction": 0.0626454615981381,
+        "interior_fn_prediction_counts_by_class": [
+          0,
+          0,
+          646,
+          0
+        ],
+        "near_fn_prediction_counts_by_class": [
+          5327,
+          2436,
+          1903,
+          0
+        ]
+      }
+    },
+    {
+      "image_id": "A16_step4_sample4",
+      "specimen_group": "A16",
+      "fold": 1,
+      "counts": {
+        "eutectic_gt_pixels": 22841,
+        "eutectic_false_negative_pixels": 8079,
+        "interior_fn_pixels_distance_ge_k": 0,
+        "near_boundary_fn_pixels_distance_lt_k": 8079,
+        "interior_fn_fraction": 0.0,
+        "interior_fn_prediction_counts_by_class": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "near_fn_prediction_counts_by_class": [
+          3857,
+          3904,
+          318,
+          0
+        ]
+      }
+    },
+    {
+      "image_id": "A200_step4_sample3",
+      "specimen_group": "A200",
+      "fold": 1,
+      "counts": {
+        "eutectic_gt_pixels": 41299,
+        "eutectic_false_negative_pixels": 14659,
+        "interior_fn_pixels_distance_ge_k": 795,
+        "near_boundary_fn_pixels_distance_lt_k": 13864,
+        "interior_fn_fraction": 0.05423289446756259,
+        "interior_fn_prediction_counts_by_class": [
+          0,
+          454,
+          341,
+          0
+        ],
+        "near_fn_prediction_counts_by_class": [
+          3414,
+          9126,
+          1324,
+          0
+        ]
+      }
+    },
+    {
+      "image_id": "A51_step4_sample4",
+      "specimen_group": "A51",
+      "fold": 1,
+      "counts": {
+        "eutectic_gt_pixels": 108909,
+        "eutectic_false_negative_pixels": 18428,
+        "interior_fn_pixels_distance_ge_k": 3,
+        "near_boundary_fn_pixels_distance_lt_k": 18425,
+        "interior_fn_fraction": 0.00016279574560451487,
+        "interior_fn_prediction_counts_by_class": [
+          3,
+          0,
+          0,
+          0
+        ],
+        "near_fn_prediction_counts_by_class": [
+          12027,
+          6159,
+          239,
+          0
+        ]
+      }
+    },
+    {
+      "image_id": "A69_step4_sample4",
+      "specimen_group": "A69",
+      "fold": 1,
+      "counts": {
+        "eutectic_gt_pixels": 14445,
+        "eutectic_false_negative_pixels": 6115,
+        "interior_fn_pixels_distance_ge_k": 0,
+        "near_boundary_fn_pixels_distance_lt_k": 6115,
+        "interior_fn_fraction": 0.0,
+        "interior_fn_prediction_counts_by_class": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "near_fn_prediction_counts_by_class": [
+          2564,
+          3442,
+          109,
+          0
+        ]
+      }
+    },
+    {
+      "image_id": "A7_step4_sample3",
+      "specimen_group": "A7",
+      "fold": 1,
+      "counts": {
+        "eutectic_gt_pixels": 66387,
+        "eutectic_false_negative_pixels": 37304,
+        "interior_fn_pixels_distance_ge_k": 348,
+        "near_boundary_fn_pixels_distance_lt_k": 36956,
+        "interior_fn_fraction": 0.009328758310100793,
+        "interior_fn_prediction_counts_by_class": [
+          0,
+          1,
+          347,
+          0
+        ],
+        "near_fn_prediction_counts_by_class": [
+          10512,
+          21948,
+          4496,
+          0
+        ]
+      }
+    },
+    {
+      "image_id": "A94_step4_sample2",
+      "specimen_group": "A94",
+      "fold": 1,
+      "counts": {
+        "eutectic_gt_pixels": 25091,
+        "eutectic_false_negative_pixels": 6619,
+        "interior_fn_pixels_distance_ge_k": 0,
+        "near_boundary_fn_pixels_distance_lt_k": 6619,
+        "interior_fn_fraction": 0.0,
+        "interior_fn_prediction_counts_by_class": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "near_fn_prediction_counts_by_class": [
+          3399,
+          3043,
+          177,
+          0
+        ]
+      }
+    },
+    {
+      "image_id": "A106_step4_sample1",
+      "specimen_group": "A106",
+      "fold": 2,
+      "counts": {
+        "eutectic_gt_pixels": 54708,
+        "eutectic_false_negative_pixels": 18998,
+        "interior_fn_pixels_distance_ge_k": 0,
+        "near_boundary_fn_pixels_distance_lt_k": 18998,
+        "interior_fn_fraction": 0.0,
+        "interior_fn_prediction_counts_by_class": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "near_fn_prediction_counts_by_class": [
+          4498,
+          12069,
+          2431,
+          0
+        ]
+      }
+    },
+    {
+      "image_id": "A123_step4_sample2",
+      "specimen_group": "A123",
+      "fold": 2,
+      "counts": {
+        "eutectic_gt_pixels": 106876,
+        "eutectic_false_negative_pixels": 22551,
+        "interior_fn_pixels_distance_ge_k": 0,
+        "near_boundary_fn_pixels_distance_lt_k": 22551,
+        "interior_fn_fraction": 0.0,
+        "interior_fn_prediction_counts_by_class": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "near_fn_prediction_counts_by_class": [
+          8362,
+          13373,
+          816,
+          0
+        ]
+      }
+    },
+    {
+      "image_id": "A139_step4_sample3",
+      "specimen_group": "A139",
+      "fold": 2,
+      "counts": {
+        "eutectic_gt_pixels": 103210,
+        "eutectic_false_negative_pixels": 12861,
+        "interior_fn_pixels_distance_ge_k": 0,
+        "near_boundary_fn_pixels_distance_lt_k": 12861,
+        "interior_fn_fraction": 0.0,
+        "interior_fn_prediction_counts_by_class": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "near_fn_prediction_counts_by_class": [
+          8650,
+          2592,
+          1619,
+          0
+        ]
+      }
+    },
+    {
+      "image_id": "A147_step4_sample4",
+      "specimen_group": "A147",
+      "fold": 2,
+      "counts": {
+        "eutectic_gt_pixels": 19947,
+        "eutectic_false_negative_pixels": 14676,
+        "interior_fn_pixels_distance_ge_k": 106,
+        "near_boundary_fn_pixels_distance_lt_k": 14570,
+        "interior_fn_fraction": 0.007222676478604524,
+        "interior_fn_prediction_counts_by_class": [
+          0,
+          0,
+          106,
+          0
+        ],
+        "near_fn_prediction_counts_by_class": [
+          1398,
+          10688,
+          2484,
+          0
+        ]
+      }
+    },
+    {
+      "image_id": "A182_step4_sample3",
+      "specimen_group": "A182",
+      "fold": 2,
+      "counts": {
+        "eutectic_gt_pixels": 111443,
+        "eutectic_false_negative_pixels": 61292,
+        "interior_fn_pixels_distance_ge_k": 17123,
+        "near_boundary_fn_pixels_distance_lt_k": 44169,
+        "interior_fn_fraction": 0.2793676173073158,
+        "interior_fn_prediction_counts_by_class": [
+          0,
+          455,
+          16668,
+          0
+        ],
+        "near_fn_prediction_counts_by_class": [
+          4192,
+          6357,
+          33620,
+          0
+        ]
+      }
+    },
+    {
+      "image_id": "A2_step4_sample1",
+      "specimen_group": "A2",
+      "fold": 2,
+      "counts": {
+        "eutectic_gt_pixels": 131214,
+        "eutectic_false_negative_pixels": 64015,
+        "interior_fn_pixels_distance_ge_k": 0,
+        "near_boundary_fn_pixels_distance_lt_k": 64015,
+        "interior_fn_fraction": 0.0,
+        "interior_fn_prediction_counts_by_class": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "near_fn_prediction_counts_by_class": [
+          11203,
+          49315,
+          3497,
+          0
+        ]
+      }
+    },
+    {
+      "image_id": "A78_step4_sample1",
+      "specimen_group": "A78",
+      "fold": 2,
+      "counts": {
+        "eutectic_gt_pixels": 13205,
+        "eutectic_false_negative_pixels": 5265,
+        "interior_fn_pixels_distance_ge_k": 0,
+        "near_boundary_fn_pixels_distance_lt_k": 5265,
+        "interior_fn_fraction": 0.0,
+        "interior_fn_prediction_counts_by_class": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "near_fn_prediction_counts_by_class": [
+          2384,
+          2815,
+          66,
+          0
+        ]
+      }
+    }
+  ]
+}

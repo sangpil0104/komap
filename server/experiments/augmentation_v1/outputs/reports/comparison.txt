@@ -1,0 +1,13 @@
+공식 검증 20장. 변화량은 동일 추론(plain/D4)의 기존 seed2026 모델 대비.
+common_images는 정답에 모든 클래스가 있는 이미지의 민감도 분석이며 공식 지표를 대체하지 않음.
+다른 seed 후보는 seed 효과가 섞임; 동일 seed 대조 실험/group CV로 확인.
+
+experiment  seed inference      miou  delta_matched_baseline_pp  improved_images  delta_common_images_pp
+photo_mild  2026        d4 78.720305                   0.033825                8                0.041999
+  baseline  2026        d4 78.686480                   0.000000                0                0.000000
+photo_mild  2026     plain 78.544541                   0.071666               12                0.077849
+  baseline  2026     plain 78.472875                   0.000000                0                0.000000
+noise_mild  2026        d4 77.776520                  -0.909960                5               -0.723217
+noise_mild  2026     plain 77.592100                  -0.880775                4               -0.707559
+scale_mild  2026        d4 77.577785                  -1.108694                4               -0.928285
+scale_mild  2026     plain 77.421453                  -1.051422                2               -0.878373

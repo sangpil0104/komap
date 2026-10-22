@@ -1,0 +1,120 @@
+{
+  "route": {
+    "base": {
+      "primary_source": "326",
+      "primary_gamma": 1.0,
+      "al3ni_source": "b4mean",
+      "al3ni_gamma": 0.6,
+      "al_source": "322",
+      "al_gamma": 0.7,
+      "eutectic_source": "269",
+      "eutectic_gamma": 0.8,
+      "prior_scale": 1.25,
+      "beta_scale": 0.8,
+      "al_delta": 0.0,
+      "eut_delta": 0.15,
+      "gaussian_blend": 0.5,
+      "eut_edge_blend": 0.25,
+      "cleanup_threshold": 128
+    },
+    "gamma329": [
+      0.0,
+      0.5,
+      0.25,
+      0.25
+    ],
+    "gamma336": [
+      0.0,
+      0.0,
+      1.0,
+      0.25
+    ],
+    "gamma347": [
+      0.0,
+      0.0,
+      0.25,
+      0.0
+    ]
+  },
+  "inference": {
+    "device": "cuda",
+    "threads": 2,
+    "probability_storage_dtype": "float16",
+    "weight_storage_dtype": "float32",
+    "b4_folds": 4,
+    "b4_fold_ids": {
+      "322": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "326": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "329": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "active_components": [
+      "322",
+      "326",
+      "329",
+      "base",
+      "336",
+      "347",
+      "269"
+    ],
+    "b4_tta": "d4",
+    "native": {
+      "patch": 1024,
+      "stride": 576,
+      "scale": 1.0,
+      "tta": "d4"
+    },
+    "hrnet": {
+      "patch": 512,
+      "overlap": 170,
+      "batch_size": 2,
+      "input_scale": 2.0,
+      "tta": "flip4"
+    },
+    "tent": {
+      "steps": 5,
+      "lr": 1e-05
+    },
+    "ema_pruned": false
+  },
+  "checkpoint_count": 20,
+  "checkpoint_bytes": 2276848381,
+  "checkpoint_sha256": {
+    "weights/model322_team_b4_group_oof/fold1/last.pt": "e11082cf66be2dc9deb5b20c73470c384f9b3d8ebc99457f8c8e3c4aa8a5c73c",
+    "weights/model322_team_b4_group_oof/fold2/last.pt": "71a36467de9c0d056fb9fbabea5aaaf434daa14e8167efb904d3067d7089bbb7",
+    "weights/model322_team_b4_group_oof/fold3/last.pt": "8ca20754d29b5269476167713060aa2452724f77998e2a6061cd2e7cfe967aba",
+    "weights/model322_team_b4_group_oof/fold4/last.pt": "857f3f8f5679365c3c287312e8bdf1d8fc72fec9e3afa06d9b81d27ae67227d0",
+    "weights/model326_hybrid_fullstats_group_oof/fold1/last.pt": "80198f55bdd2f888587744974ad41cc974462a996dfaf67d3a3e8eeb24c7be96",
+    "weights/model326_hybrid_fullstats_group_oof/fold2/last.pt": "d51293c9922d39f189dbc32122beb64e38e4c24d0927f4d4ab73e5729097a778",
+    "weights/model326_hybrid_fullstats_group_oof/fold3/last.pt": "427e2c05db48d19e089d02689d836a8c45788bab8aca5ab58b256ba39369791d",
+    "weights/model326_hybrid_fullstats_group_oof/fold4/last.pt": "cdd10aee518c5117d90b560deb3abbb8305c7dcb4d05665acf7c00f0ec87952f",
+    "weights/model329_fullstats_width4000_uniform_group_oof/fold1/last.pt": "2466fef573bb580c15e15cedc631c36d5ec048c5cc891015263e635a11ce02a2",
+    "weights/model329_fullstats_width4000_uniform_group_oof/fold2/last.pt": "95f9538f70aa348e959abb89c493b19c936de12b68fc72558f34ecf80d0b9036",
+    "weights/model329_fullstats_width4000_uniform_group_oof/fold3/last.pt": "9fb7960618625fbefaa7d99916398de4b4c72e63bde7b64c8b231b5270ffe97e",
+    "weights/model329_fullstats_width4000_uniform_group_oof/fold4/last.pt": "43dd3815b6604b3f0b7fa3efda54faed6f34bc22a8a060b8e8c41ea735e2332a",
+    "weights/model336_hrnet_best/last.pt": "287a0c57b0d4e14fbeefd4cd915f7845c4a07176325ef147e0a38446c7acadf1",
+    "weights/model347_hrnet_inverse_ce_finetune/last.pt": "f2769e5c10cce26778ed55b62a4b984892cff74ab0d781661d4dfb9c28ea88c4",
+    "weights/model269_fullstats_1x_extended/best.pt": "fa2d93a8e1de09d219bbce6f856bc43e72c15bdfd9b7cf6bbd13b74b3cfb1e53",
+    "weights/restart51_aspp_768_finetune/best.pt": "77a5ce54ceea27ee9bb297a5839281699b4d6806346fb14d7071b74c42d93e40",
+    "weights/model109_aspp_native/best.pt": "716d43e68ae1d966a76ed448a7bd71a51b8e2c809beb7c1fd341f3bb0f1c273b",
+    "weights/restart59_aspp768_seed456/best.pt": "767a8e7ff908005cf6460fddff0f7d897be00ea6af979be6d2df6c72cec3ae15",
+    "weights/restart61_pairwise_margin/best.pt": "892651761feb7e0a792fc3bbd0107ffee533bb4d2b2b8696b95e12680a25894e",
+    "weights/model123_ema/best.pt": "be64385e656d884a8965951450ecab7a6d730ebfc9290e669ef85093b70a45a7"
+  },
+  "original_p100_cached_image_miou_percent": 79.90951887388398,
+  "control_inference_sha256": "4841ae2d9acecf2abddaa96b96e95251d43385ad8fb3fb75f24abb4579f53fb3"
+}

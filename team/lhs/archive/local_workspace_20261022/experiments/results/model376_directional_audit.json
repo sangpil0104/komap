@@ -1,0 +1,396 @@
+{
+  "scope": "complete 70-image train-only grouped OOF; no official valid/test images or masks",
+  "folds": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "images_by_fold": {
+    "1": 18,
+    "2": 18,
+    "3": 17,
+    "4": 17
+  },
+  "images": 70,
+  "specimen_groups": 59,
+  "metric": "per-specimen-group mean directed partner-swap rate on axial GT interfaces",
+  "bootstrap": {
+    "unit": "specimen group",
+    "draws": 20000,
+    "seed_base": 37600
+  },
+  "class_pairs": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      3
+    ]
+  ],
+  "results": {
+    "Model374": {
+      "Al_vs_Al3Ni": {
+        "combined_folds": {
+          "groups_with_both_sides": 59,
+          "interface_pixels": {
+            "Al": 5521416,
+            "Al3Ni": 5521416
+          },
+          "group_mean_partner_swap_rate_pct": {
+            "Al": 14.928735619208533,
+            "Al3Ni": 30.688955179334794
+          },
+          "left_minus_right_delta_pp": -15.760219560126265,
+          "group_bootstrap_95ci_delta_pp": [
+            -19.553087824441157,
+            -12.092075488400928
+          ],
+          "fraction_groups_delta_negative": 0.9322033898305084
+        },
+        "per_fold": {
+          "1": {
+            "groups_with_both_sides": 15,
+            "interface_pixels": {
+              "Al": 1159215,
+              "Al3Ni": 1159215
+            },
+            "group_mean_partner_swap_rate_pct": {
+              "Al": 11.958173660686448,
+              "Al3Ni": 36.54228009115472
+            },
+            "left_minus_right_delta_pp": -24.584106430468278,
+            "group_bootstrap_95ci_delta_pp": [
+              -30.984874156899117,
+              -18.483769007046398
+            ],
+            "fraction_groups_delta_negative": 1.0
+          },
+          "2": {
+            "groups_with_both_sides": 15,
+            "interface_pixels": {
+              "Al": 1577964,
+              "Al3Ni": 1577964
+            },
+            "group_mean_partner_swap_rate_pct": {
+              "Al": 17.283011371205408,
+              "Al3Ni": 31.643164708861438
+            },
+            "left_minus_right_delta_pp": -14.360153337656026,
+            "group_bootstrap_95ci_delta_pp": [
+              -25.384291035760327,
+              -3.9395513481612356
+            ],
+            "fraction_groups_delta_negative": 0.8666666666666667
+          },
+          "3": {
+            "groups_with_both_sides": 14,
+            "interface_pixels": {
+              "Al": 1382900,
+              "Al3Ni": 1382900
+            },
+            "group_mean_partner_swap_rate_pct": {
+              "Al": 15.291149696584355,
+              "Al3Ni": 26.11399609537003
+            },
+            "left_minus_right_delta_pp": -10.822846398785678,
+            "group_bootstrap_95ci_delta_pp": [
+              -13.756356806519802,
+              -7.88953751332313
+            ],
+            "fraction_groups_delta_negative": 0.9285714285714286
+          },
+          "4": {
+            "groups_with_both_sides": 15,
+            "interface_pixels": {
+              "Al": 1401337,
+              "Al3Ni": 1401337
+            },
+            "group_mean_partner_swap_rate_pct": {
+              "Al": 15.206768686849651,
+              "Al3Ni": 28.151382549688687
+            },
+            "left_minus_right_delta_pp": -12.944613862839038,
+            "group_bootstrap_95ci_delta_pp": [
+              -18.046670466192303,
+              -8.069719226046166
+            ],
+            "fraction_groups_delta_negative": 0.9333333333333333
+          }
+        }
+      },
+      "Al3Ni_vs_Eutectic_Si": {
+        "combined_folds": {
+          "groups_with_both_sides": 59,
+          "interface_pixels": {
+            "Al3Ni": 739146,
+            "Eutectic_Si": 739146
+          },
+          "group_mean_partner_swap_rate_pct": {
+            "Al3Ni": 21.605236975381708,
+            "Eutectic_Si": 41.39124372901449
+          },
+          "left_minus_right_delta_pp": -19.786006753632783,
+          "group_bootstrap_95ci_delta_pp": [
+            -25.129679909662435,
+            -14.635683081942657
+          ],
+          "fraction_groups_delta_negative": 0.8983050847457628
+        },
+        "per_fold": {
+          "1": {
+            "groups_with_both_sides": 15,
+            "interface_pixels": {
+              "Al3Ni": 133862,
+              "Eutectic_Si": 133862
+            },
+            "group_mean_partner_swap_rate_pct": {
+              "Al3Ni": 21.27516939635841,
+              "Eutectic_Si": 42.69927234692311
+            },
+            "left_minus_right_delta_pp": -21.424102950564706,
+            "group_bootstrap_95ci_delta_pp": [
+              -34.15700618475596,
+              -9.367776953263228
+            ],
+            "fraction_groups_delta_negative": 0.8666666666666667
+          },
+          "2": {
+            "groups_with_both_sides": 15,
+            "interface_pixels": {
+              "Al3Ni": 219728,
+              "Eutectic_Si": 219728
+            },
+            "group_mean_partner_swap_rate_pct": {
+              "Al3Ni": 20.072087789090517,
+              "Eutectic_Si": 41.751407929207076
+            },
+            "left_minus_right_delta_pp": -21.679320140116555,
+            "group_bootstrap_95ci_delta_pp": [
+              -32.60651750262221,
+              -11.445777458163482
+            ],
+            "fraction_groups_delta_negative": 0.8666666666666667
+          },
+          "3": {
+            "groups_with_both_sides": 14,
+            "interface_pixels": {
+              "Al3Ni": 160446,
+              "Eutectic_Si": 160446
+            },
+            "group_mean_partner_swap_rate_pct": {
+              "Al3Ni": 22.820564977968306,
+              "Eutectic_Si": 38.3755129220087
+            },
+            "left_minus_right_delta_pp": -15.554947944040395,
+            "group_bootstrap_95ci_delta_pp": [
+              -22.05838734192909,
+              -8.982756773849406
+            ],
+            "fraction_groups_delta_negative": 0.9285714285714286
+          },
+          "4": {
+            "groups_with_both_sides": 15,
+            "interface_pixels": {
+              "Al3Ni": 225110,
+              "Eutectic_Si": 225110
+            },
+            "group_mean_partner_swap_rate_pct": {
+              "Al3Ni": 22.33414760494869,
+              "Eutectic_Si": 42.537732997452004
+            },
+            "left_minus_right_delta_pp": -20.203585392503314,
+            "group_bootstrap_95ci_delta_pp": [
+              -30.62120122394794,
+              -8.84329195540627
+            ],
+            "fraction_groups_delta_negative": 0.9333333333333333
+          }
+        }
+      }
+    },
+    "Model376": {
+      "Al_vs_Al3Ni": {
+        "combined_folds": {
+          "groups_with_both_sides": 59,
+          "interface_pixels": {
+            "Al": 5521416,
+            "Al3Ni": 5521416
+          },
+          "group_mean_partner_swap_rate_pct": {
+            "Al": 15.185673446785634,
+            "Al3Ni": 29.449467301794996
+          },
+          "left_minus_right_delta_pp": -14.263793855009354,
+          "group_bootstrap_95ci_delta_pp": [
+            -17.97645642284981,
+            -10.890221238572328
+          ],
+          "fraction_groups_delta_negative": 0.9491525423728814
+        },
+        "per_fold": {
+          "1": {
+            "groups_with_both_sides": 15,
+            "interface_pixels": {
+              "Al": 1159215,
+              "Al3Ni": 1159215
+            },
+            "group_mean_partner_swap_rate_pct": {
+              "Al": 12.813604115912183,
+              "Al3Ni": 33.24514049266416
+            },
+            "left_minus_right_delta_pp": -20.431536376751982,
+            "group_bootstrap_95ci_delta_pp": [
+              -25.975210083316327,
+              -15.287028873188358
+            ],
+            "fraction_groups_delta_negative": 1.0
+          },
+          "2": {
+            "groups_with_both_sides": 15,
+            "interface_pixels": {
+              "Al": 1577964,
+              "Al3Ni": 1577964
+            },
+            "group_mean_partner_swap_rate_pct": {
+              "Al": 15.982964014109891,
+              "Al3Ni": 32.247393556282425
+            },
+            "left_minus_right_delta_pp": -16.26442954217254,
+            "group_bootstrap_95ci_delta_pp": [
+              -27.643546197057255,
+              -6.526181681932333
+            ],
+            "fraction_groups_delta_negative": 0.8666666666666667
+          },
+          "3": {
+            "groups_with_both_sides": 14,
+            "interface_pixels": {
+              "Al": 1382900,
+              "Al3Ni": 1382900
+            },
+            "group_mean_partner_swap_rate_pct": {
+              "Al": 15.762775373607532,
+              "Al3Ni": 25.309901308114064
+            },
+            "left_minus_right_delta_pp": -9.547125934506532,
+            "group_bootstrap_95ci_delta_pp": [
+              -11.882192192335658,
+              -7.129147580608574
+            ],
+            "fraction_groups_delta_negative": 1.0
+          },
+          "4": {
+            "groups_with_both_sides": 15,
+            "interface_pixels": {
+              "Al": 1401337,
+              "Al3Ni": 1401337
+            },
+            "group_mean_partner_swap_rate_pct": {
+              "Al": 16.22182374530105,
+              "Al3Ni": 26.719462783873894
+            },
+            "left_minus_right_delta_pp": -10.497639038572839,
+            "group_bootstrap_95ci_delta_pp": [
+              -15.587854634456535,
+              -5.650719870689207
+            ],
+            "fraction_groups_delta_negative": 0.9333333333333333
+          }
+        }
+      },
+      "Al3Ni_vs_Eutectic_Si": {
+        "combined_folds": {
+          "groups_with_both_sides": 59,
+          "interface_pixels": {
+            "Al3Ni": 739146,
+            "Eutectic_Si": 739146
+          },
+          "group_mean_partner_swap_rate_pct": {
+            "Al3Ni": 22.243874123480094,
+            "Eutectic_Si": 38.90892123937574
+          },
+          "left_minus_right_delta_pp": -16.66504711589565,
+          "group_bootstrap_95ci_delta_pp": [
+            -21.693746677376666,
+            -11.829948514537035
+          ],
+          "fraction_groups_delta_negative": 0.864406779661017
+        },
+        "per_fold": {
+          "1": {
+            "groups_with_both_sides": 15,
+            "interface_pixels": {
+              "Al3Ni": 133862,
+              "Eutectic_Si": 133862
+            },
+            "group_mean_partner_swap_rate_pct": {
+              "Al3Ni": 21.701271760295345,
+              "Eutectic_Si": 40.51950861594614
+            },
+            "left_minus_right_delta_pp": -18.818236855650795,
+            "group_bootstrap_95ci_delta_pp": [
+              -30.842423975903298,
+              -7.556570028236715
+            ],
+            "fraction_groups_delta_negative": 0.8
+          },
+          "2": {
+            "groups_with_both_sides": 15,
+            "interface_pixels": {
+              "Al3Ni": 219728,
+              "Eutectic_Si": 219728
+            },
+            "group_mean_partner_swap_rate_pct": {
+              "Al3Ni": 20.908455513416264,
+              "Eutectic_Si": 39.37827503202473
+            },
+            "left_minus_right_delta_pp": -18.469819518608457,
+            "group_bootstrap_95ci_delta_pp": [
+              -29.14560899779735,
+              -8.963572027655928
+            ],
+            "fraction_groups_delta_negative": 0.8666666666666667
+          },
+          "3": {
+            "groups_with_both_sides": 14,
+            "interface_pixels": {
+              "Al3Ni": 160446,
+              "Eutectic_Si": 160446
+            },
+            "group_mean_partner_swap_rate_pct": {
+              "Al3Ni": 23.622806085352966,
+              "Eutectic_Si": 36.20021081468672
+            },
+            "left_minus_right_delta_pp": -12.577404729333756,
+            "group_bootstrap_95ci_delta_pp": [
+              -19.315809920444046,
+              -6.13340320712443
+            ],
+            "fraction_groups_delta_negative": 0.8571428571428571
+          },
+          "4": {
+            "groups_with_both_sides": 15,
+            "interface_pixels": {
+              "Al3Ni": 225110,
+              "Eutectic_Si": 225110
+            },
+            "group_mean_partner_swap_rate_pct": {
+              "Al3Ni": 22.834891932313976,
+              "Eutectic_Si": 39.357109799866116
+            },
+            "left_minus_right_delta_pp": -16.52221786755214,
+            "group_bootstrap_95ci_delta_pp": [
+              -25.91419070244215,
+              -6.341180411342242
+            ],
+            "fraction_groups_delta_negative": 0.9333333333333333
+          }
+        }
+      }
+    }
+  },
+  "interpretation_guard": "The pair/direction was motivated by prior Model374 OOF, so this same-data comparison is selection-conditional, not an unbiased confirmation or evidence to tune loss weight. Pixel-run interface counts are not physical widths."
+}

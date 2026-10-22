@@ -1,0 +1,2134 @@
+{
+  "model": "Model195 with class-balanced reliable-pixel TENT",
+  "adaptation": "per-image BN-affine entropy minimization; for each pseudo-class keep the lowest-entropy fraction and average class losses equally",
+  "steps": 20,
+  "lr": 5e-05,
+  "keep_fraction_per_pseudo_class": 0.75,
+  "patch_size": 768,
+  "stride": 576,
+  "split": "valid",
+  "metrics": {
+    "global_miou": 0.7932844802176011,
+    "global_iou": {
+      "Al3Ni": 0.7769573401597984,
+      "Primary Si": 0.8756781105530246,
+      "Al": 0.9346878985833431,
+      "Eutectic Si": 0.585814571574238
+    },
+    "image_mean_miou": 0.7661114377761583,
+    "image_mean_miou_exclude": 0.7661114377761583,
+    "image_scores": [
+      0.8420839711311382,
+      0.6959105724313105,
+      0.7186505973969967,
+      0.7753467676219289,
+      0.6863069673064925,
+      0.8622466117835625,
+      0.7878032099494395,
+      0.7589377132759909,
+      0.8035665894328672,
+      0.8147695439355054,
+      0.8411035917784879,
+      0.8730639955003211,
+      0.7944382355938483,
+      0.8089527042005469,
+      0.8133284474759941,
+      0.7367353104219821,
+      0.343253304441073,
+      0.8585636416032552,
+      0.7143709154852381,
+      0.7927960647571887
+    ],
+    "image_scores_exclude": [
+      0.8420839711311382,
+      0.6959105724313105,
+      0.7186505973969967,
+      0.7753467676219289,
+      0.6863069673064925,
+      0.8622466117835625,
+      0.7878032099494395,
+      0.7589377132759909,
+      0.8035665894328672,
+      0.8147695439355054,
+      0.8411035917784879,
+      0.8730639955003211,
+      0.7944382355938483,
+      0.8089527042005469,
+      0.8133284474759941,
+      0.7367353104219821,
+      0.343253304441073,
+      0.8585636416032552,
+      0.7143709154852381,
+      0.7927960647571887
+    ],
+    "confusion": [
+      [
+        2930976,
+        30832,
+        126813,
+        245065
+      ],
+      [
+        18970,
+        1485214,
+        18388,
+        79781
+      ],
+      [
+        285782,
+        22840,
+        9180040,
+        126174
+      ],
+      [
+        133939,
+        40048,
+        61466,
+        970932
+      ]
+    ]
+  },
+  "adaptation_history": {
+    "A117_step4_sample2_image": [
+      {
+        "selected_entropy": 0.07495000213384628,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07490911334753036,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.0748540461063385,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.0748026892542839,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07475129514932632,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.07469840347766876,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07465025037527084,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07460789382457733,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.07455742359161377,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.07451745867729187,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07447430491447449,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.07443723827600479,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.0743875801563263,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07433706521987915,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07430090755224228,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.07426313310861588,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07422991842031479,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.07419203966856003,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07416418194770813,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07412730157375336,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      }
+    ],
+    "A11_step1_sample4_image": [
+      {
+        "selected_entropy": 0.18993240594863892,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.189551442861557,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.1891811639070511,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.18878015875816345,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.1884089708328247,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.188034325838089,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.18764564394950867,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.18730686604976654,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.18693271279335022,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.1865541934967041,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.18616215884685516,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.18581512570381165,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.18544146418571472,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.18507957458496094,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.18470335006713867,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.18437376618385315,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.18403178453445435,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.18367893993854523,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.18334656953811646,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.18303081393241882,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      }
+    ],
+    "A11_step2_sample4_image": [
+      {
+        "selected_entropy": 0.1727706342935562,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.17249666154384613,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.17222373187541962,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.17194987833499908,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.1716608703136444,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.17140132188796997,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.1711415946483612,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.17085424065589905,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.17058363556861877,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.1703074425458908,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.1700265109539032,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.16975846886634827,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.16952458024024963,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.16924090683460236,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.16899359226226807,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.1687137484550476,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.1684536635875702,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.1682220697402954,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.16794732213020325,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.16769292950630188,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      }
+    ],
+    "A125_step1_sample4_image": [
+      {
+        "selected_entropy": 0.13140711188316345,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.13132376968860626,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.13124100863933563,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.13116386532783508,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.13108228147029877,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.13100416958332062,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.13092342019081116,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.13084881007671356,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.13076849281787872,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.13069118559360504,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.13061124086380005,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.13053694367408752,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.13046202063560486,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.13038161396980286,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.13030336797237396,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.1302281618118286,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.13015519082546234,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.130076065659523,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.13000352680683136,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.1299249231815338,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      }
+    ],
+    "A153_step3_sample3_image": [
+      {
+        "selected_entropy": 0.18739622831344604,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769470.0
+      },
+      {
+        "selected_entropy": 0.18687409162521362,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.18637987971305847,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.18591730296611786,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.18546603620052338,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.18501147627830505,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.1845686286687851,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.18413200974464417,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.18375320732593536,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.18339213728904724,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.18302592635154724,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.1826665699481964,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.1823626011610031,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.18205474317073822,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.18178768455982208,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769473.0
+      },
+      {
+        "selected_entropy": 0.18154770135879517,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.18132604658603668,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.1811097413301468,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.1809256225824356,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.1807347536087036,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      }
+    ],
+    "A170_step4_sample3_image": [
+      {
+        "selected_entropy": 0.06648929417133331,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.06624278426170349,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.06601322442293167,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.06579569727182388,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.06557656824588776,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.0653509646654129,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.065133236348629,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.06491988897323608,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.06472154706716537,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.06451758742332458,
+        "selected_classes": 4.0,
+        "selected_pixels": 884737.0
+      },
+      {
+        "selected_entropy": 0.06432706117630005,
+        "selected_classes": 4.0,
+        "selected_pixels": 884737.0
+      },
+      {
+        "selected_entropy": 0.06413821130990982,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.0639604851603508,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.06377340108156204,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.06361091881990433,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.06343965232372284,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.06328940391540527,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.06314011663198471,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.06298120319843292,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.06285102665424347,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      }
+    ],
+    "A181_step1_sample1_image": [
+      {
+        "selected_entropy": 0.09564237296581268,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.09553658217191696,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.09544945508241653,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.09536223113536835,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.09526967257261276,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.09517678618431091,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.09508387744426727,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769473.0
+      },
+      {
+        "selected_entropy": 0.09499810636043549,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.09490484744310379,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.09482314437627792,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.09473448991775513,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.09466241300106049,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.09458738565444946,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.09451060742139816,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.09442848712205887,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.09434552490711212,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.09426812082529068,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769473.0
+      },
+      {
+        "selected_entropy": 0.09420625120401382,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.09412854164838791,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.09404990077018738,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      }
+    ],
+    "A186_step2_sample2_image": [
+      {
+        "selected_entropy": 0.06152356043457985,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.06125902384519577,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.060927100479602814,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.06058145686984062,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.06023693457245827,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.0599064864218235,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.059551410377025604,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.059165142476558685,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.05877173691987991,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769473.0
+      },
+      {
+        "selected_entropy": 0.0583934485912323,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.05804537981748581,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.05766334384679794,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.057336658239364624,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.05700370669364929,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.056676387786865234,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769470.0
+      },
+      {
+        "selected_entropy": 0.05635151267051697,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.05605195462703705,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.055700406432151794,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.05537179112434387,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.055004604160785675,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      }
+    ],
+    "A191_step4_sample3_image": [
+      {
+        "selected_entropy": 0.07814335823059082,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07809434831142426,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.07806006073951721,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769473.0
+      },
+      {
+        "selected_entropy": 0.0780140683054924,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769473.0
+      },
+      {
+        "selected_entropy": 0.07796060293912888,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07792361825704575,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07787839323282242,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07783181965351105,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07779689133167267,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.07775810360908508,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.07770965993404388,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.0776735246181488,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.07762335240840912,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07757718116044998,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.0775371789932251,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.07749122381210327,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07745042443275452,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07741181552410126,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07736936211585999,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.07732842862606049,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769473.0
+      }
+    ],
+    "A40_step3_sample3_image": [
+      {
+        "selected_entropy": 0.10272995382547379,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.10267236083745956,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.10260871052742004,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.10257040709257126,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.10252436995506287,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769470.0
+      },
+      {
+        "selected_entropy": 0.10249173641204834,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.10244894027709961,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.10240880399942398,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.1023612841963768,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.10229945927858353,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.10223731398582458,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.10217967629432678,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.1021096333861351,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.10204251110553741,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769470.0
+      },
+      {
+        "selected_entropy": 0.10197164863348007,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.10189804434776306,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.10182096064090729,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.10174904763698578,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.10165818780660629,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769473.0
+      },
+      {
+        "selected_entropy": 0.10155640542507172,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      }
+    ],
+    "A42_step2_sample4_image": [
+      {
+        "selected_entropy": 0.047359153628349304,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.04711863398551941,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.04689154401421547,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.0466507151722908,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.04640771448612213,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.04615206643939018,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769470.0
+      },
+      {
+        "selected_entropy": 0.04588475078344345,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.04560787230730057,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.0453171506524086,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.045035503804683685,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.04476000741124153,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.04447753727436066,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.0441889613866806,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.04389544576406479,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.043616071343421936,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.04334688186645508,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.043086763471364975,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.0428382009267807,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.04260497912764549,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.04237883538007736,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      }
+    ],
+    "A44_step4_sample3_image": [
+      {
+        "selected_entropy": 0.04764225333929062,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.04759834706783295,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.047543127089738846,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.04751339927315712,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.04745960235595703,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.04742857813835144,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.04738576337695122,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.04735059291124344,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.047300443053245544,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.047266386449337006,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.04724665358662605,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.0472269207239151,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.047200873494148254,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.04716121405363083,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769473.0
+      },
+      {
+        "selected_entropy": 0.04714338481426239,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.04710419476032257,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.047080148011446,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.04703779146075249,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.047009870409965515,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.04697776213288307,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      }
+    ],
+    "A55_step2_sample1_image": [
+      {
+        "selected_entropy": 0.13212783634662628,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.13205769658088684,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.13197705149650574,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.13189473748207092,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.13182222843170166,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.13174547255039215,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.13166314363479614,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.13159635663032532,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.13152721524238586,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.13144263625144958,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.13137072324752808,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.1312982141971588,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.13123247027397156,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.13116586208343506,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.13109801709651947,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.13102394342422485,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.13095705211162567,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.1308804452419281,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.13080507516860962,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.1307462900876999,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769473.0
+      }
+    ],
+    "A59_step3_sample1_image": [
+      {
+        "selected_entropy": 0.11483059078454971,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.11476176977157593,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.11468640714883804,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.11461332440376282,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.1145181804895401,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.11443670094013214,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.11435429751873016,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.11430327594280243,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.11420591175556183,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.11413973569869995,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.11407500505447388,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.11401978135108948,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.11395588517189026,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.11388086527585983,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.11380575597286224,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.11374245584011078,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.11365831643342972,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.11360277235507965,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.11351903527975082,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.11345711350440979,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      }
+    ],
+    "A63_step1_sample4_image": [
+      {
+        "selected_entropy": 0.1051991805434227,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.1050991639494896,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.10500090569257736,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.10486971586942673,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.10477028787136078,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.10468263179063797,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.10457682609558105,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.10447625815868378,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.10439333319664001,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.10429336130619049,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.10420230031013489,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.10411971807479858,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.1040160283446312,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.10391481965780258,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.1038164347410202,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.10372348129749298,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.10361368954181671,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.10352104902267456,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.103408083319664,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.10334718227386475,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      }
+    ],
+    "A67_step1_sample1_image": [
+      {
+        "selected_entropy": 0.15899723768234253,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.15879279375076294,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.15860100090503693,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.15839079022407532,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.1581789255142212,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.15795683860778809,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.15774595737457275,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.15753863751888275,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.15731552243232727,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.15708675980567932,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.15686184167861938,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.1566401720046997,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.15643298625946045,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.156218022108078,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.15599477291107178,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.15578654408454895,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.15557801723480225,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.1553741991519928,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.15516361594200134,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.15494900941848755,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      }
+    ],
+    "A71_step2_sample1_image": [
+      {
+        "selected_entropy": 0.26459449529647827,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.2642267942428589,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.26390087604522705,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.2635561227798462,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.26318711042404175,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.26281261444091797,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.262439489364624,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.26209819316864014,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.2617150843143463,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.2613458037376404,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.26096153259277344,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.2606179118156433,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.2602667808532715,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.25987765192985535,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.2594815194606781,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.25911903381347656,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.25868475437164307,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.25830721855163574,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.2579154968261719,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.2574639916419983,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      }
+    ],
+    "A72_step4_sample4_image": [
+      {
+        "selected_entropy": 0.08284765481948853,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.08274514973163605,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.08265717327594757,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.08256343007087708,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.08248361945152283,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.08240056037902832,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.0823231115937233,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.0822506844997406,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.08216947317123413,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.0821007490158081,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.08202141523361206,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.08195298910140991,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.08188588917255402,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.0818193256855011,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.08174721151590347,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.08169002830982208,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.08162733167409897,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.08156371861696243,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.08150022476911545,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.08143825829029083,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      }
+    ],
+    "A74_step3_sample4_image": [
+      {
+        "selected_entropy": 0.15516044199466705,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.15496458113193512,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.15476618707180023,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.1545892357826233,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.15440866351127625,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.15422484278678894,
+        "selected_classes": 4.0,
+        "selected_pixels": 884737.0
+      },
+      {
+        "selected_entropy": 0.15403962135314941,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.15383845567703247,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.1536550521850586,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.1534779965877533,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.15330037474632263,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.15310876071453094,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.15293751657009125,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.15278080105781555,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.1525927484035492,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.15241894125938416,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.1522400677204132,
+        "selected_classes": 4.0,
+        "selected_pixels": 884736.0
+      },
+      {
+        "selected_entropy": 0.1520521342754364,
+        "selected_classes": 4.0,
+        "selected_pixels": 884734.0
+      },
+      {
+        "selected_entropy": 0.15187527239322662,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      },
+      {
+        "selected_entropy": 0.1516919881105423,
+        "selected_classes": 4.0,
+        "selected_pixels": 884735.0
+      }
+    ],
+    "A7_step1_sample4_image": [
+      {
+        "selected_entropy": 0.11722324788570404,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.11703053116798401,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.11682090163230896,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.11663714051246643,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.11644530296325684,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.11626032739877701,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.11608169972896576,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.11591143906116486,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.11574175208806992,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.11555789411067963,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.11538104712963104,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.11521093547344208,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.11503901332616806,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.1148676648736,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.11470609158277512,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769472.0
+      },
+      {
+        "selected_entropy": 0.11454527080059052,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.11438940465450287,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.11421631276607513,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.11405658721923828,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      },
+      {
+        "selected_entropy": 0.11390753090381622,
+        "selected_classes": 4.0,
+        "selected_pixels": 1769471.0
+      }
+    ]
+  },
+  "elapsed_seconds": 192.4566159248352
+}

@@ -1,0 +1,44 @@
+Launching: /home/sppark/miniconda3/envs/komap/bin/python -B -m torch.distributed.run --standalone --nproc_per_node=8 /Data3/sppark/komap/experiments/accuracy_v1/run.py train fullframe --gpus 8 --smoke
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+Run: /Data3/sppark/komap/experiments/accuracy_v1/outputs/smoke/fullframe/official
+Device: cuda:0, GPUs: 8, accumulation: 1
+Train: 70, validation: 20
+Monitor: python -m alphase.cli.monitor --run /Data3/sppark/komap/experiments/accuracy_v1/outputs/smoke/fullframe/official
+Optimizer updates:   0%|          | 0/3 [00:00<?, ?it/s]Optimizer updates:  33%|███▎      | 1/3 [00:02<00:04,  2.27s/it]Optimizer updates:  33%|███▎      | 1/3 [00:02<00:04,  2.27s/it, ETA=0h 00m, best=-1.00, loss=2.1627, stage=s0_patch512]
+Valid raw:   0%|          | 0/3 [00:00<?, ?it/s][A
+Valid raw:  33%|███▎      | 1/3 [00:00<00:01,  1.72it/s][A
+Valid raw:  67%|██████▋   | 2/3 [00:01<00:00,  1.47it/s][A
+Valid raw: 100%|██████████| 3/3 [00:01<00:00,  2.05it/s][A
+                                                        [A
+Valid ema:   0%|          | 0/3 [00:00<?, ?it/s][A
+Valid ema:  33%|███▎      | 1/3 [00:00<00:00,  2.80it/s][A
+Valid ema:  67%|██████▋   | 2/3 [00:00<00:00,  2.51it/s][A
+Valid ema: 100%|██████████| 3/3 [00:00<00:00,  3.34it/s][A
+                                                        [A                                                                                                                        Validation update 1: raw=31.396, EMA=10.702, best=31.396
+Optimizer updates:  33%|███▎      | 1/3 [00:04<00:04,  2.27s/it, ETA=0h 00m, best=-1.00, loss=2.1627, stage=s0_patch512]Optimizer updates:  67%|██████▋   | 2/3 [00:06<00:03,  3.45s/it, ETA=0h 00m, best=-1.00, loss=2.1627, stage=s0_patch512]Optimizer updates:  67%|██████▋   | 2/3 [00:06<00:03,  3.45s/it, ETA=0h 00m, best=31.40, loss=1.6028, stage=s1_patch768]
+Valid raw:   0%|          | 0/3 [00:00<?, ?it/s][A
+Valid raw:  33%|███▎      | 1/3 [00:00<00:00,  2.28it/s][A
+Valid raw:  67%|██████▋   | 2/3 [00:00<00:00,  2.15it/s][A
+Valid raw: 100%|██████████| 3/3 [00:01<00:00,  2.96it/s][A
+                                                        [A
+Valid ema:   0%|          | 0/3 [00:00<?, ?it/s][A
+Valid ema:  33%|███▎      | 1/3 [00:00<00:00,  2.64it/s][A
+Valid ema:  67%|██████▋   | 2/3 [00:00<00:00,  2.21it/s][A
+Valid ema: 100%|██████████| 3/3 [00:01<00:00,  3.07it/s][A
+                                                        [A                                                                                                                        Validation update 2: raw=34.216, EMA=31.400, best=34.216
+Optimizer updates:  67%|██████▋   | 2/3 [00:08<00:03,  3.45s/it, ETA=0h 00m, best=31.40, loss=1.6028, stage=s1_patch768]Optimizer updates: 100%|██████████| 3/3 [00:10<00:00,  3.81s/it, ETA=0h 00m, best=31.40, loss=1.6028, stage=s1_patch768]Optimizer updates: 100%|██████████| 3/3 [00:10<00:00,  3.81s/it, ETA=0h 00m, best=34.22, loss=1.4765, stage=s2_fullframe]
+Valid raw:   0%|          | 0/3 [00:00<?, ?it/s][A
+Valid raw:  33%|███▎      | 1/3 [00:00<00:00,  3.33it/s][A
+Valid raw:  67%|██████▋   | 2/3 [00:00<00:00,  3.11it/s][A
+Valid raw: 100%|██████████| 3/3 [00:00<00:00,  4.34it/s][A
+                                                        [A
+Valid ema:   0%|          | 0/3 [00:00<?, ?it/s][A
+Valid ema:  33%|███▎      | 1/3 [00:00<00:00,  3.82it/s][A
+Valid ema:  67%|██████▋   | 2/3 [00:00<00:00,  3.33it/s][A
+Valid ema: 100%|██████████| 3/3 [00:00<00:00,  4.60it/s][A
+                                                        [A                                                                                                                         Validation update 3: raw=36.896, EMA=34.217, best=36.896
+Optimizer updates: 100%|██████████| 3/3 [00:12<00:00,  3.81s/it, ETA=0h 00m, best=34.22, loss=1.4765, stage=s2_fullframe]Completed. Checkpoint: /Data3/sppark/komap/experiments/accuracy_v1/outputs/smoke/fullframe/official/best.pt
+Optimizer updates: 100%|██████████| 3/3 [00:13<00:00,  4.53s/it, ETA=0h 00m, best=34.22, loss=1.4765, stage=s2_fullframe]

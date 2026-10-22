@@ -1,0 +1,39 @@
+GPU=GPU-797180ea-8868-f008-3828-0d465756997f NVIDIA GeForce RTX 4090
+COMMAND: /home/sppark/miniconda3/envs/komap/bin/python -B -u /Data3/sppark/komap/experiments/model349_seed100_gpu4567_v1/outputs/runs/seed100_20261007T103906_646909Z/implementation/source/experiments/historical_scripts/resnet34_refinements.py --candidate ema --data-dir /Data3/sppark/komap/experiments/model349_train_route_v2/outputs/runs/model349_train_20260930T143930_234475Z/data --checkpoint /Data3/sppark/komap/experiments/model349_train_route_v2/outputs/runs/model349_train_20260930T143930_234475Z/outputs/model109_aspp_native/best.pt --output-dir /Data3/sppark/komap/experiments/model349_seed100_gpu4567_v1/outputs/runs/seed100_20261007T103906_646909Z/jobs/m123_s3490/attempt_1/training --patch-size 512 --val-stride 384 --patches-per-image 6 --epochs 4 --batch-size 4 --lr 1e-5 --eval-bias -0.35 --sdf-weight 0.2 --warmup-epochs 2 --ema-decay 0.995 --seed 3490
+loaded=/Data3/sppark/komap/experiments/model349_train_route_v2/outputs/runs/model349_train_20260930T143930_234475Z/outputs/model109_aspp_native/best.pt compatible=375 missing=0 unexpected=0
+/Data3/sppark/komap/experiments/model349_seed100_gpu4567_v1/outputs/runs/seed100_20261007T103906_646909Z/implementation/source/experiments/historical_scripts/resnet34_refinements.py:435: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+candidate=ema device=cuda patches=420 params=28,246,853
+resnet34_refinements:   0%|          | 0/4 [00:00<?, ?item/s]
+resnet34_refinements:   0%|          | 0/105 [00:00<?, ?item/s][A/Data3/sppark/komap/experiments/model349_seed100_gpu4567_v1/outputs/runs/seed100_20261007T103906_646909Z/implementation/source/experiments/historical_scripts/resnet34_refinements.py:448: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+resnet34_refinements:  37%|███▋      | 39/105 [00:10<00:17,  3.85item/s][Aresnet34_refinements: 100%|██████████| 105/105 [00:17<00:00,  5.88item/s]
+
+resnet34_refinements:   0%|          | 0/20 [00:00<?, ?item/s][Aresnet34_refinements: 100%|██████████| 20/20 [00:07<00:00,  2.55item/s]
+epoch=01/4 loss=0.4059 miou=0.75847 image=0.75847 0.7041,0.8471,0.9289,0.5538
+resnet34_refinements:  25%|██▌       | 1/4 [00:26<01:18, 26.27s/item]
+resnet34_refinements:   0%|          | 0/105 [00:00<?, ?item/s][A
+resnet34_refinements:  69%|██████▊   | 72/105 [00:10<00:04,  7.17item/s][Aresnet34_refinements: 100%|██████████| 105/105 [00:13<00:00,  7.60item/s]
+
+resnet34_refinements:   0%|          | 0/20 [00:00<?, ?item/s][Aresnet34_refinements: 100%|██████████| 20/20 [00:07<00:00,  2.85item/s]
+epoch=02/4 loss=0.4093 miou=0.75947 image=0.75947 0.7060,0.8481,0.9281,0.5557
+resnet34_refinements:  50%|█████     | 2/4 [00:47<00:46, 23.50s/item]
+resnet34_refinements:   0%|          | 0/105 [00:00<?, ?item/s][A
+resnet34_refinements:  73%|███████▎  | 77/105 [00:10<00:03,  7.52item/s][Aresnet34_refinements: 100%|██████████| 105/105 [00:13<00:00,  7.80item/s]
+
+resnet34_refinements:   0%|          | 0/20 [00:00<?, ?item/s][Aresnet34_refinements: 100%|██████████| 20/20 [00:07<00:00,  2.83item/s]
+epoch=03/4 loss=0.4036 miou=0.75942 image=0.75942 0.7055,0.8483,0.9285,0.5554
+resnet34_refinements:  75%|███████▌  | 3/4 [01:08<00:22, 22.35s/item]
+resnet34_refinements:   0%|          | 0/105 [00:00<?, ?item/s][A
+resnet34_refinements:  70%|███████   | 74/105 [00:10<00:04,  7.37item/s][Aresnet34_refinements: 100%|██████████| 105/105 [00:13<00:00,  7.72item/s]
+
+resnet34_refinements:   0%|          | 0/20 [00:00<?, ?item/s][Aresnet34_refinements: 100%|██████████| 20/20 [00:06<00:00,  2.87item/s]
+epoch=04/4 loss=0.3992 miou=0.75893 image=0.75893 0.7052,0.8471,0.9286,0.5548
+resnet34_refinements: 100%|██████████| 4/4 [01:29<00:00, 21.80s/item]resnet34_refinements: 100%|██████████| 4/4 [01:29<00:00, 22.44s/item]
+resnet34_refinements:   0%|          | 0/20 [00:00<?, ?item/s]resnet34_refinements: 100%|██████████| 20/20 [00:06<00:00,  3.22item/s]
+{"candidate": "ema", "best_fixed_miou": 0.7594721119216923, "best_calibrated": {"image_mean_miou": 0.7595130790401555, "miou": 0.7595130790401555, "image_miou_compat": 0.7595130790401555, "image_class_iou": {"Al3Ni": 0.7067986943549115, "Primary Si": 0.8481180642368205, "Al": 0.9280820309483669, "Eutectic Si": 0.5550535266205233}, "iou": {"Al3Ni": 0.7067986943549115, "Primary Si": 0.8481180642368205, "Al": 0.9280820309483669, "Eutectic Si": 0.5550535266205233}, "image_mean_miou_exclude": 0.7595130790401555, "image_scores": [0.8578637681382109, 0.6612475746236393, 0.7100032602575577, 0.7642346573215801, 0.6989854595292284, 0.8310749816972705, 0.760628026423535, 0.7924176812125627, 0.8073107869341917, 0.795218923501805, 0.8184089249231682, 0.8772974060779746, 0.7977541614530393, 0.7951574694608198, 0.792696925356093, 0.7255750559240335, 0.3697899350444594, 0.8508382154630174, 0.7133455689678693, 0.7704127984930559], "image_scores_exclude": [0.8578637681382109, 0.6612475746236393, 0.7100032602575577, 0.7642346573215801, 0.6989854595292284, 0.8310749816972705, 0.760628026423535, 0.7924176812125627, 0.8073107869341917, 0.795218923501805, 0.8184089249231682, 0.8772974060779746, 0.7977541614530393, 0.7951574694608198, 0.792696925356093, 0.7255750559240335, 0.3697899350444594, 0.8508382154630174, 0.7133455689678693, 0.7704127984930559], "image_mious": [0.8578637681382109, 0.6612475746236393, 0.7100032602575577, 0.7642346573215801, 0.6989854595292284, 0.8310749816972705, 0.760628026423535, 0.7924176812125627, 0.8073107869341917, 0.795218923501805, 0.8184089249231682, 0.8772974060779746, 0.7977541614530393, 0.7951574694608198, 0.792696925356093, 0.7255750559240335, 0.3697899350444594, 0.8508382154630174, 0.7133455689678693, 0.7704127984930559], "image_std_miou": 0.10488876165170595, "image_min_miou": 0.3697899350444594, "image_max_miou": 0.8772974060779746, "metric": "image_mIoU_four_classes_empty0", "al_bias": -0.3999999999999997}}
+wrote test_masks=0 dir=/Data3/sppark/komap/experiments/model349_seed100_gpu4567_v1/outputs/runs/seed100_20261007T103906_646909Z/jobs/m123_s3490/attempt_1/training/test_masks
+EMA routed images:   0%|          | 0/2 [00:00<?, ?it/s]EMA routed images:  50%|█████     | 1/2 [00:03<00:03,  3.67s/it]EMA routed images: 100%|██████████| 2/2 [00:06<00:00,  3.22s/it]EMA routed images: 100%|██████████| 2/2 [00:06<00:00,  3.28s/it]
+Model349 image mIoU:   0%|          | 0/20 [00:00<?, ?image/s]Model349 image mIoU: 100%|██████████| 20/20 [00:10<00:00,  1.95image/s]Model349 image mIoU: 100%|██████████| 20/20 [00:10<00:00,  1.95image/s]
+COMPLETE m123_s3490 image_miou=0.8006885183406182

@@ -1,0 +1,1698 @@
+diagnostics:   0%|          | 0/20 [00:00<?, ?it/s]diagnostics:   5%|▌         | 1/20 [00:00<00:16,  1.14it/s]diagnostics:  10%|█         | 2/20 [00:01<00:09,  1.95it/s]diagnostics:  15%|█▌        | 3/20 [00:01<00:06,  2.43it/s]diagnostics:  20%|██        | 4/20 [00:02<00:07,  2.04it/s]diagnostics:  25%|██▌       | 5/20 [00:02<00:07,  1.90it/s]diagnostics:  30%|███       | 6/20 [00:02<00:05,  2.46it/s]diagnostics:  35%|███▌      | 7/20 [00:03<00:06,  1.99it/s]diagnostics:  40%|████      | 8/20 [00:04<00:06,  1.98it/s]diagnostics:  45%|████▌     | 9/20 [00:04<00:06,  1.73it/s]diagnostics:  50%|█████     | 10/20 [00:05<00:05,  1.75it/s]diagnostics:  55%|█████▌    | 11/20 [00:05<00:04,  1.83it/s]diagnostics:  60%|██████    | 12/20 [00:06<00:04,  1.86it/s]diagnostics:  65%|██████▌   | 13/20 [00:06<00:03,  1.97it/s]diagnostics:  70%|███████   | 14/20 [00:06<00:02,  2.44it/s]diagnostics:  75%|███████▌  | 15/20 [00:07<00:01,  2.92it/s]diagnostics:  80%|████████  | 16/20 [00:07<00:01,  3.37it/s]diagnostics:  85%|████████▌ | 17/20 [00:07<00:00,  3.78it/s]diagnostics:  90%|█████████ | 18/20 [00:07<00:00,  4.21it/s]diagnostics:  95%|█████████▌| 19/20 [00:07<00:00,  4.59it/s]diagnostics: 100%|██████████| 20/20 [00:08<00:00,  3.14it/s]diagnostics: 100%|██████████| 20/20 [00:08<00:00,  2.38it/s]
+{
+  "val_image_miou": 0.8022654566541207,
+  "val_global_miou": 0.8173515131014801,
+  "num_images": 20,
+  "per_image": [
+    {
+      "image_id": "A117_step4_sample2",
+      "split": "valid",
+      "height": 875,
+      "width": 1230,
+      "checkpoint_sha256": "1a97954c9655cb1e9d3a3b7c95a79dcda07807dd34fc979c57960b1b6cce1615",
+      "inference_config_hash": "2aec9aee314c6f56ac3a307e37dcf4cc0b185df396a10e7923997a72420a0861",
+      "class_names": [
+        "Al",
+        "Al3Ni",
+        "PrimarySi",
+        "EutecticSi"
+      ],
+      "iou": [
+        0.9383004757112798,
+        0.8220138406524145,
+        0.9617904692717137,
+        0.6865901445552791
+      ],
+      "image_miou": 0.8521737325476718,
+      "precision": [
+        0.9557964873656407,
+        0.8964090335250385,
+        0.9731701111079698,
+        0.8973011634560366
+      ],
+      "recall": [
+        0.9808644613329428,
+        0.9082962605000213,
+        0.9879881172773066,
+        0.745145400405474
+      ],
+      "gt_fraction": [
+        0.6218127758420441,
+        0.1961170731707317,
+        0.06474425087108014,
+        0.11732590011614402
+      ],
+      "pred_fraction": [
+        0.6381212543554007,
+        0.1987177700348432,
+        0.06573008130081301,
+        0.09743089430894308
+      ],
+      "pixel_error_rate": 0.06056213704994193,
+      "error_pixels": 65180,
+      "Al3Ni_to_EutecticSi_count": 4737,
+      "Al3Ni_to_EutecticSi_fraction_of_all_errors": 0.0726756673826327,
+      "present_class_miou_diagnostic": 0.8521737325476718,
+      "boundary_2px_error_rate": 0.11217049124836038,
+      "interior_error_rate": 0.0030567222351004435,
+      "Al3Ni_to_EutecticSi_gt_rate": 0.022442685162812514,
+      "EutecticSi_to_Al3Ni_count": 15176,
+      "EutecticSi_to_Al3Ni_gt_rate": 0.12018499746578815,
+      "EutecticSi_to_Al3Ni_fraction_of_all_errors": 0.23283215710340596,
+      "undefined_reasons": {},
+      "confusion_matrix": [
+        [
+          656420,
+          6575,
+          207,
+          6024
+        ],
+        [
+          14245,
+          191715,
+          374,
+          4737
+        ],
+        [
+          425,
+          404,
+          68844,
+          8
+        ],
+        [
+          15688,
+          15176,
+          1317,
+          94091
+        ]
+      ],
+      "gt_Al3Ni_mean_P_EutecticSi": 0.02751799300312996
+    },
+    {
+      "image_id": "A11_step1_sample4",
+      "split": "valid",
+      "height": 480,
+      "width": 675,
+      "checkpoint_sha256": "1a97954c9655cb1e9d3a3b7c95a79dcda07807dd34fc979c57960b1b6cce1615",
+      "inference_config_hash": "2aec9aee314c6f56ac3a307e37dcf4cc0b185df396a10e7923997a72420a0861",
+      "class_names": [
+        "Al",
+        "Al3Ni",
+        "PrimarySi",
+        "EutecticSi"
+      ],
+      "iou": [
+        0.9631839018353581,
+        0.48871895820714717,
+        0.9371986523835462,
+        0.6204638543215674
+      ],
+      "image_miou": 0.7523913416869047,
+      "precision": [
+        0.977378746810872,
+        0.8673743617307176,
+        0.9810157322352444,
+        0.6680242682995338
+      ],
+      "recall": [
+        0.9851454701037544,
+        0.5281891825546191,
+        0.9545099650708856,
+        0.8970654797827399
+      ],
+      "gt_fraction": [
+        0.6925185185185185,
+        0.07543827160493827,
+        0.15021604938271604,
+        0.08182716049382716
+      ],
+      "pred_fraction": [
+        0.6980216049382716,
+        0.04593827160493827,
+        0.1461574074074074,
+        0.10988271604938271
+      ],
+      "pixel_error_rate": 0.0611358024691358,
+      "error_pixels": 19808,
+      "Al3Ni_to_EutecticSi_count": 8495,
+      "Al3Ni_to_EutecticSi_fraction_of_all_errors": 0.4288671243941842,
+      "present_class_miou_diagnostic": 0.7523913416869047,
+      "boundary_2px_error_rate": 0.11284688587916894,
+      "interior_error_rate": 0.0038135400193930876,
+      "Al3Ni_to_EutecticSi_gt_rate": 0.3475574830210294,
+      "EutecticSi_to_Al3Ni_count": 769,
+      "EutecticSi_to_Al3Ni_gt_rate": 0.029005733252866626,
+      "EutecticSi_to_Al3Ni_fraction_of_all_errors": 0.03882269789983845,
+      "undefined_reasons": {},
+      "confusion_matrix": [
+        [
+          221043,
+          1130,
+          294,
+          1909
+        ],
+        [
+          2697,
+          12910,
+          340,
+          8495
+        ],
+        [
+          724,
+          75,
+          46456,
+          1415
+        ],
+        [
+          1695,
+          769,
+          265,
+          23783
+        ]
+      ],
+      "gt_Al3Ni_mean_P_EutecticSi": 0.32882359623908997
+    },
+    {
+      "image_id": "A11_step2_sample4",
+      "split": "valid",
+      "height": 480,
+      "width": 675,
+      "checkpoint_sha256": "1a97954c9655cb1e9d3a3b7c95a79dcda07807dd34fc979c57960b1b6cce1615",
+      "inference_config_hash": "2aec9aee314c6f56ac3a307e37dcf4cc0b185df396a10e7923997a72420a0861",
+      "class_names": [
+        "Al",
+        "Al3Ni",
+        "PrimarySi",
+        "EutecticSi"
+      ],
+      "iou": [
+        0.9238579690812985,
+        0.6233299197408845,
+        0.9144499798384474,
+        0.6150910364145659
+      ],
+      "image_miou": 0.7691822262687991,
+      "precision": [
+        0.9626187611500643,
+        0.7779858510195589,
+        0.9492189082267799,
+        0.7484555408802351
+      ],
+      "recall": [
+        0.9582356767472355,
+        0.7581981460023175,
+        0.961486911567603,
+        0.7753795903954802
+      ],
+      "gt_fraction": [
+        0.5978580246913581,
+        0.10654320987654321,
+        0.22567283950617284,
+        0.06992592592592592
+      ],
+      "pred_fraction": [
+        0.5951358024691358,
+        0.10383333333333333,
+        0.22858950617283952,
+        0.07244135802469136
+      ],
+      "pixel_error_rate": 0.07512962962962963,
+      "error_pixels": 24342,
+      "Al3Ni_to_EutecticSi_count": 3207,
+      "Al3Ni_to_EutecticSi_fraction_of_all_errors": 0.1317475967463643,
+      "present_class_miou_diagnostic": 0.7691822262687991,
+      "boundary_2px_error_rate": 0.10416005495150443,
+      "interior_error_rate": 0.004075378542014705,
+      "Al3Ni_to_EutecticSi_gt_rate": 0.0929026651216686,
+      "EutecticSi_to_Al3Ni_count": 2289,
+      "EutecticSi_to_Al3Ni_gt_rate": 0.10103283898305085,
+      "EutecticSi_to_Al3Ni_fraction_of_all_errors": 0.09403500123243776,
+      "undefined_reasons": {},
+      "confusion_matrix": [
+        [
+          185616,
+          4625,
+          1520,
+          1945
+        ],
+        [
+          3892,
+          26173,
+          1248,
+          3207
+        ],
+        [
+          1509,
+          555,
+          70302,
+          752
+        ],
+        [
+          1807,
+          2289,
+          993,
+          17567
+        ]
+      ],
+      "gt_Al3Ni_mean_P_EutecticSi": 0.11083539575338364
+    },
+    {
+      "image_id": "A125_step1_sample4",
+      "split": "valid",
+      "height": 875,
+      "width": 1230,
+      "checkpoint_sha256": "1a97954c9655cb1e9d3a3b7c95a79dcda07807dd34fc979c57960b1b6cce1615",
+      "inference_config_hash": "2aec9aee314c6f56ac3a307e37dcf4cc0b185df396a10e7923997a72420a0861",
+      "class_names": [
+        "Al",
+        "Al3Ni",
+        "PrimarySi",
+        "EutecticSi"
+      ],
+      "iou": [
+        0.9400349928423731,
+        0.7814493317719535,
+        0.8011521817029136,
+        0.6246562326796695
+      ],
+      "image_miou": 0.7868231847492275,
+      "precision": [
+        0.9652115056942545,
+        0.8861311924511073,
+        0.9076855813372474,
+        0.7612314738575545
+      ],
+      "recall": [
+        0.9730013221833167,
+        0.8686795971652369,
+        0.8722203883203793,
+        0.7768681848917133
+      ],
+      "gt_fraction": [
+        0.547435075493612,
+        0.24910569105691058,
+        0.06192427409988385,
+        0.1415349593495935
+      ],
+      "pred_fraction": [
+        0.551853193960511,
+        0.24419976771196283,
+        0.05950476190476191,
+        0.14444227642276422
+      ],
+      "pixel_error_rate": 0.08698629500580721,
+      "error_pixels": 93619,
+      "Al3Ni_to_EutecticSi_count": 23970,
+      "Al3Ni_to_EutecticSi_fraction_of_all_errors": 0.2560377701107681,
+      "present_class_miou_diagnostic": 0.7868231847492275,
+      "boundary_2px_error_rate": 0.14664269247575376,
+      "interior_error_rate": 0.012586101419590304,
+      "Al3Ni_to_EutecticSi_gt_rate": 0.08940693770980977,
+      "EutecticSi_to_Al3Ni_count": 20400,
+      "EutecticSi_to_Al3Ni_gt_rate": 0.1339224169057357,
+      "EutecticSi_to_Al3Ni_fraction_of_all_errors": 0.21790448520065372,
+      "undefined_reasons": {},
+      "confusion_matrix": [
+        [
+          573270,
+          6341,
+          576,
+          8990
+        ],
+        [
+          9509,
+          232893,
+          1728,
+          23970
+        ],
+        [
+          1172,
+          3186,
+          58130,
+          4158
+        ],
+        [
+          9981,
+          20400,
+          3608,
+          118338
+        ]
+      ],
+      "gt_Al3Ni_mean_P_EutecticSi": 0.10483463108539581
+    },
+    {
+      "image_id": "A153_step3_sample3",
+      "split": "valid",
+      "height": 909,
+      "width": 1278,
+      "checkpoint_sha256": "1a97954c9655cb1e9d3a3b7c95a79dcda07807dd34fc979c57960b1b6cce1615",
+      "inference_config_hash": "2aec9aee314c6f56ac3a307e37dcf4cc0b185df396a10e7923997a72420a0861",
+      "class_names": [
+        "Al",
+        "Al3Ni",
+        "PrimarySi",
+        "EutecticSi"
+      ],
+      "iou": [
+        0.8975329188776361,
+        0.7537458456170569,
+        0.9353108066316171,
+        0.35611353711790394
+      ],
+      "image_miou": 0.7356757770610535,
+      "precision": [
+        0.9756680634374624,
+        0.8004068603454796,
+        0.9560066519151743,
+        0.5946044476850164
+      ],
+      "recall": [
+        0.9180826794545716,
+        0.9282098872447541,
+        0.9773781087536884,
+        0.47029988465974626
+      ],
+      "gt_fraction": [
+        0.676551301452524,
+        0.2532293135416828,
+        0.061263559845812436,
+        0.008955825159980786
+      ],
+      "pred_fraction": [
+        0.6366202347934324,
+        0.29366309087872794,
+        0.06263310212085371,
+        0.007083572206985957
+      ],
+      "pixel_error_rate": 0.07973043000700696,
+      "error_pixels": 92623,
+      "Al3Ni_to_EutecticSi_count": 2725,
+      "Al3Ni_to_EutecticSi_fraction_of_all_errors": 0.029420338360882287,
+      "present_class_miou_diagnostic": 0.7356757770610535,
+      "boundary_2px_error_rate": 0.12537475292837907,
+      "interior_error_rate": 0.030456216727111296,
+      "Al3Ni_to_EutecticSi_gt_rate": 0.009263130700224694,
+      "EutecticSi_to_Al3Ni_count": 4037,
+      "EutecticSi_to_Al3Ni_gt_rate": 0.3880238369857747,
+      "EutecticSi_to_Al3Ni_fraction_of_all_errors": 0.043585286591883224,
+      "undefined_reasons": {},
+      "confusion_matrix": [
+        [
+          721568,
+          62819,
+          961,
+          603
+        ],
+        [
+          16856,
+          273058,
+          1538,
+          2725
+        ],
+        [
+          367,
+          1235,
+          69560,
+          8
+        ],
+        [
+          772,
+          4037,
+          702,
+          4893
+        ]
+      ],
+      "gt_Al3Ni_mean_P_EutecticSi": 0.019104480743408203
+    },
+    {
+      "image_id": "A170_step4_sample3",
+      "split": "valid",
+      "height": 480,
+      "width": 675,
+      "checkpoint_sha256": "1a97954c9655cb1e9d3a3b7c95a79dcda07807dd34fc979c57960b1b6cce1615",
+      "inference_config_hash": "2aec9aee314c6f56ac3a307e37dcf4cc0b185df396a10e7923997a72420a0861",
+      "class_names": [
+        "Al",
+        "Al3Ni",
+        "PrimarySi",
+        "EutecticSi"
+      ],
+      "iou": [
+        0.9398778853313478,
+        0.9161791781169791,
+        0.9219580101707435,
+        0.7353905188264449
+      ],
+      "image_miou": 0.8783513981113789,
+      "precision": [
+        0.9655353886447917,
+        0.9570625965191523,
+        0.9648856777569649,
+        0.85955896094188
+      ],
+      "recall": [
+        0.9725042066529835,
+        0.9554513038296746,
+        0.9539655476512434,
+        0.8358168271851717
+      ],
+      "gt_fraction": [
+        0.50075,
+        0.3263179012345679,
+        0.10499382716049382,
+        0.06793827160493827
+      ],
+      "pred_fraction": [
+        0.5043641975308641,
+        0.3257685185185185,
+        0.10380555555555555,
+        0.06606172839506173
+      ],
+      "pixel_error_rate": 0.04429320987654321,
+      "error_pixels": 14351,
+      "Al3Ni_to_EutecticSi_count": 1086,
+      "Al3Ni_to_EutecticSi_fraction_of_all_errors": 0.07567416904745314,
+      "present_class_miou_diagnostic": 0.8783513981113789,
+      "boundary_2px_error_rate": 0.07110873929506238,
+      "interior_error_rate": 0.0028291877873393846,
+      "Al3Ni_to_EutecticSi_gt_rate": 0.01027173758831708,
+      "EutecticSi_to_Al3Ni_count": 1159,
+      "EutecticSi_to_Al3Ni_gt_rate": 0.05265309831001272,
+      "EutecticSi_to_Al3Ni_fraction_of_all_errors": 0.08076092258379207,
+      "undefined_reasons": {},
+      "confusion_matrix": [
+        [
+          157782,
+          2895,
+          252,
+          1314
+        ],
+        [
+          3217,
+          101017,
+          407,
+          1086
+        ],
+        [
+          482,
+          478,
+          32452,
+          606
+        ],
+        [
+          1933,
+          1159,
+          522,
+          18398
+        ]
+      ],
+      "gt_Al3Ni_mean_P_EutecticSi": 0.013795772567391396
+    },
+    {
+      "image_id": "A181_step1_sample1",
+      "split": "valid",
+      "height": 1024,
+      "width": 1440,
+      "checkpoint_sha256": "1a97954c9655cb1e9d3a3b7c95a79dcda07807dd34fc979c57960b1b6cce1615",
+      "inference_config_hash": "2aec9aee314c6f56ac3a307e37dcf4cc0b185df396a10e7923997a72420a0861",
+      "class_names": [
+        "Al",
+        "Al3Ni",
+        "PrimarySi",
+        "EutecticSi"
+      ],
+      "iou": [
+        0.9585162831746004,
+        0.7979373202540554,
+        0.8936965554860342,
+        0.5004262932058646
+      ],
+      "image_miou": 0.7876441130301386,
+      "precision": [
+        0.975346373041119,
+        0.8575003384734613,
+        0.9637709994982612,
+        0.788182978910756
+      ],
+      "recall": [
+        0.9823160488673586,
+        0.9199200653100474,
+        0.9247638494612945,
+        0.5781832862333468
+      ],
+      "gt_fraction": [
+        0.6043477376302083,
+        0.2708102756076389,
+        0.040850830078125,
+        0.08399115668402778
+      ],
+      "pred_fraction": [
+        0.6086663140190972,
+        0.29052327473958334,
+        0.03919745551215278,
+        0.06161295572916667
+      ],
+      "pixel_error_rate": 0.07087605794270833,
+      "error_pixels": 104511,
+      "Al3Ni_to_EutecticSi_count": 16097,
+      "Al3Ni_to_EutecticSi_fraction_of_all_errors": 0.15402206466304982,
+      "present_class_miou_diagnostic": 0.7876441130301386,
+      "boundary_2px_error_rate": 0.15137285626345,
+      "interior_error_rate": 0.017232903556087455,
+      "Al3Ni_to_EutecticSi_gt_rate": 0.04031042306286092,
+      "EutecticSi_to_Al3Ni_count": 44646,
+      "EutecticSi_to_Al3Ni_gt_rate": 0.3604844570044409,
+      "EutecticSi_to_Al3Ni_fraction_of_all_errors": 0.42718948244682375,
+      "undefined_reasons": {},
+      "confusion_matrix": [
+        [
+          875388,
+          13410,
+          305,
+          2044
+        ],
+        [
+          14103,
+          367348,
+          1778,
+          16097
+        ],
+        [
+          439,
+          2990,
+          55705,
+          1103
+        ],
+        [
+          7585,
+          44646,
+          11,
+          71608
+        ]
+      ],
+      "gt_Al3Ni_mean_P_EutecticSi": 0.0564395971596241
+    },
+    {
+      "image_id": "A186_step2_sample2",
+      "split": "valid",
+      "height": 909,
+      "width": 1278,
+      "checkpoint_sha256": "1a97954c9655cb1e9d3a3b7c95a79dcda07807dd34fc979c57960b1b6cce1615",
+      "inference_config_hash": "2aec9aee314c6f56ac3a307e37dcf4cc0b185df396a10e7923997a72420a0861",
+      "class_names": [
+        "Al",
+        "Al3Ni",
+        "PrimarySi",
+        "EutecticSi"
+      ],
+      "iou": [
+        0.9724458902585289,
+        0.9538200190378561,
+        0.8408752352080284,
+        0.42366533023844694
+      ],
+      "image_miou": 0.7977016186857151,
+      "precision": [
+        0.981708438756216,
+        0.9780077541961854,
+        0.9497948400047231,
+        0.5351324337831085
+      ],
+      "recall": [
+        0.990390758577887,
+        0.974726281195563,
+        0.8799887865548057,
+        0.6703952585667181
+      ],
+      "gt_fraction": [
+        0.5658835054084438,
+        0.2875969913110247,
+        0.12589545339510477,
+        0.020624049885426727
+      ],
+      "pred_fraction": [
+        0.5708882312331389,
+        0.2866320278350214,
+        0.11664265018051101,
+        0.025837090751328656
+      ],
+      "pixel_error_rate": 0.03461300746663086,
+      "error_pixels": 40210,
+      "Al3Ni_to_EutecticSi_count": 1249,
+      "Al3Ni_to_EutecticSi_fraction_of_all_errors": 0.0310619248943049,
+      "present_class_miou_diagnostic": 0.7977016186857151,
+      "boundary_2px_error_rate": 0.1319364005466956,
+      "interior_error_rate": 0.007993834705652141,
+      "Al3Ni_to_EutecticSi_gt_rate": 0.0037383792973403334,
+      "EutecticSi_to_Al3Ni_count": 1924,
+      "EutecticSi_to_Al3Ni_gt_rate": 0.08030385241454151,
+      "EutecticSi_to_Al3Ni_fraction_of_all_errors": 0.047848793832380006,
+      "undefined_reasons": {},
+      "confusion_matrix": [
+        [
+          651071,
+          3875,
+          1509,
+          933
+        ],
+        [
+          6472,
+          325658,
+          723,
+          1249
+        ],
+        [
+          4257,
+          1524,
+          128701,
+          11771
+        ],
+        [
+          1402,
+          1924,
+          4571,
+          16062
+        ]
+      ],
+      "gt_Al3Ni_mean_P_EutecticSi": 0.005784694571048021
+    },
+    {
+      "image_id": "A191_step4_sample3",
+      "split": "valid",
+      "height": 1024,
+      "width": 1440,
+      "checkpoint_sha256": "1a97954c9655cb1e9d3a3b7c95a79dcda07807dd34fc979c57960b1b6cce1615",
+      "inference_config_hash": "2aec9aee314c6f56ac3a307e37dcf4cc0b185df396a10e7923997a72420a0861",
+      "class_names": [
+        "Al",
+        "Al3Ni",
+        "PrimarySi",
+        "EutecticSi"
+      ],
+      "iou": [
+        0.9389002964157876,
+        0.7867853301028461,
+        0.9678913351536308,
+        0.5785630973840071
+      ],
+      "image_miou": 0.8180350147640679,
+      "precision": [
+        0.9580132689676537,
+        0.9457206730914474,
+        0.9795375843856029,
+        0.6476637811898565
+      ],
+      "recall": [
+        0.9791931844327784,
+        0.8239946934660669,
+        0.9878651051220545,
+        0.8443029720260398
+      ],
+      "gt_fraction": [
+        0.6425496419270833,
+        0.25764227973090276,
+        0.03844943576388889,
+        0.061358642578125
+      ],
+      "pred_fraction": [
+        0.6567552354600694,
+        0.2244805230034722,
+        0.03877631293402778,
+        0.07998792860243055
+      ],
+      "pixel_error_rate": 0.06873575846354167,
+      "error_pixels": 101355,
+      "Al3Ni_to_EutecticSi_count": 35254,
+      "Al3Ni_to_EutecticSi_fraction_of_all_errors": 0.3478269448966504,
+      "present_class_miou_diagnostic": 0.8180350147640679,
+      "boundary_2px_error_rate": 0.13821398670698995,
+      "interior_error_rate": 0.005547526921821827,
+      "Al3Ni_to_EutecticSi_gt_rate": 0.09279590638810874,
+      "EutecticSi_to_Al3Ni_count": 4665,
+      "EutecticSi_to_Al3Ni_gt_rate": 0.05156006498889221,
+      "EutecticSi_to_Al3Ni_fraction_of_all_errors": 0.04602634305165014,
+      "undefined_reasons": {},
+      "confusion_matrix": [
+        [
+          927764,
+          13099,
+          312,
+          6303
+        ],
+        [
+          30873,
+          313043,
+          739,
+          35254
+        ],
+        [
+          485,
+          203,
+          56008,
+          0
+        ],
+        [
+          9303,
+          4665,
+          119,
+          76390
+        ]
+      ],
+      "gt_Al3Ni_mean_P_EutecticSi": 0.09612417221069336
+    },
+    {
+      "image_id": "A40_step3_sample3",
+      "split": "valid",
+      "height": 909,
+      "width": 1278,
+      "checkpoint_sha256": "1a97954c9655cb1e9d3a3b7c95a79dcda07807dd34fc979c57960b1b6cce1615",
+      "inference_config_hash": "2aec9aee314c6f56ac3a307e37dcf4cc0b185df396a10e7923997a72420a0861",
+      "class_names": [
+        "Al",
+        "Al3Ni",
+        "PrimarySi",
+        "EutecticSi"
+      ],
+      "iou": [
+        0.940975021384747,
+        0.8130686056482366,
+        0.903290557693443,
+        0.6426231236110989
+      ],
+      "image_miou": 0.8249893270843813,
+      "precision": [
+        0.9707765514045096,
+        0.8844106406212084,
+        0.9547153756700797,
+        0.7984415754493567
+      ],
+      "recall": [
+        0.9684064194153114,
+        0.9097425897035881,
+        0.9437248371070663,
+        0.7670580834556511
+      ],
+      "gt_fraction": [
+        0.5436712685353042,
+        0.22071064696453996,
+        0.15351441247411127,
+        0.08210367202604454
+      ],
+      "pred_fraction": [
+        0.5423439057520776,
+        0.227032405900997,
+        0.15174717784767522,
+        0.07887651049925024
+      ],
+      "pixel_error_rate": 0.06486172873938412,
+      "error_pixels": 75350,
+      "Al3Ni_to_EutecticSi_count": 10615,
+      "Al3Ni_to_EutecticSi_fraction_of_all_errors": 0.14087591240875913,
+      "present_class_miou_diagnostic": 0.8249893270843813,
+      "boundary_2px_error_rate": 0.12205462359126298,
+      "interior_error_rate": 0.01304954858143171,
+      "Al3Ni_to_EutecticSi_gt_rate": 0.04140015600624025,
+      "EutecticSi_to_Al3Ni_count": 12029,
+      "EutecticSi_to_Al3Ni_gt_rate": 0.1261165862864332,
+      "EutecticSi_to_Al3Ni_fraction_of_all_errors": 0.15964167219641673,
+      "undefined_reasons": {},
+      "confusion_matrix": [
+        [
+          611630,
+          15307,
+          1050,
+          3597
+        ],
+        [
+          10175,
+          233258,
+          2352,
+          10615
+        ],
+        [
+          2629,
+          3150,
+          168302,
+          4257
+        ],
+        [
+          5608,
+          12029,
+          4581,
+          73162
+        ]
+      ],
+      "gt_Al3Ni_mean_P_EutecticSi": 0.05549119785428047
+    },
+    {
+      "image_id": "A42_step2_sample4",
+      "split": "valid",
+      "height": 875,
+      "width": 1230,
+      "checkpoint_sha256": "1a97954c9655cb1e9d3a3b7c95a79dcda07807dd34fc979c57960b1b6cce1615",
+      "inference_config_hash": "2aec9aee314c6f56ac3a307e37dcf4cc0b185df396a10e7923997a72420a0861",
+      "class_names": [
+        "Al",
+        "Al3Ni",
+        "PrimarySi",
+        "EutecticSi"
+      ],
+      "iou": [
+        0.9617952368446515,
+        0.8523769013509375,
+        0.8193345780580974,
+        0.6711227775823343
+      ],
+      "image_miou": 0.8261573734590051,
+      "precision": [
+        0.9773469783329916,
+        0.9444750277134691,
+        0.8439045936395759,
+        0.8802129547471162
+      ],
+      "recall": [
+        0.9837249873469976,
+        0.8973433066804231,
+        0.965684826052472,
+        0.7385788313776878
+      ],
+      "gt_fraction": [
+        0.6572283391405342,
+        0.1296836236933798,
+        0.11949082462253194,
+        0.093597212543554
+      ],
+      "pred_fraction": [
+        0.6615173054587689,
+        0.12321207897793264,
+        0.13673403019744484,
+        0.07853658536585366
+      ],
+      "pixel_error_rate": 0.05257793263646922,
+      "error_pixels": 56587,
+      "Al3Ni_to_EutecticSi_count": 3774,
+      "Al3Ni_to_EutecticSi_fraction_of_all_errors": 0.06669376358527578,
+      "present_class_miou_diagnostic": 0.8261573734590051,
+      "boundary_2px_error_rate": 0.11826401842919088,
+      "interior_error_rate": 0.018858877607121714,
+      "Al3Ni_to_EutecticSi_gt_rate": 0.027039807411228613,
+      "EutecticSi_to_Al3Ni_count": 1328,
+      "EutecticSi_to_Al3Ni_gt_rate": 0.013183235054698513,
+      "EutecticSi_to_Al3Ni_fraction_of_all_errors": 0.02346828776927563,
+      "undefined_reasons": {},
+      "confusion_matrix": [
+        [
+          695830,
+          5863,
+          1662,
+          3987
+        ],
+        [
+          9281,
+          125244,
+          1273,
+          3774
+        ],
+        [
+          1877,
+          172,
+          124189,
+          2364
+        ],
+        [
+          4970,
+          1328,
+          20036,
+          74400
+        ]
+      ],
+      "gt_Al3Ni_mean_P_EutecticSi": 0.03255082666873932
+    },
+    {
+      "image_id": "A44_step4_sample3",
+      "split": "valid",
+      "height": 909,
+      "width": 1278,
+      "checkpoint_sha256": "1a97954c9655cb1e9d3a3b7c95a79dcda07807dd34fc979c57960b1b6cce1615",
+      "inference_config_hash": "2aec9aee314c6f56ac3a307e37dcf4cc0b185df396a10e7923997a72420a0861",
+      "class_names": [
+        "Al",
+        "Al3Ni",
+        "PrimarySi",
+        "EutecticSi"
+      ],
+      "iou": [
+        0.9677527534861378,
+        0.9163500356209926,
+        0.9447543356145902,
+        0.7499500723950272
+      ],
+      "image_miou": 0.8947017992791868,
+      "precision": [
+        0.9826940363299453,
+        0.9591364975205995,
+        0.9707329367879827,
+        0.8580956597494965
+      ],
+      "recall": [
+        0.984531971101757,
+        0.9535783126575397,
+        0.9724535295335531,
+        0.856127101738387
+      ],
+      "gt_fraction": [
+        0.560123852760863,
+        0.20900024274727944,
+        0.1704645425418911,
+        0.06041136194996651
+      ],
+      "pred_fraction": [
+        0.5611714536085847,
+        0.20778908876803173,
+        0.1707666854322365,
+        0.06027277219114713
+      ],
+      "pixel_error_rate": 0.03175341008279232,
+      "error_pixels": 36888,
+      "Al3Ni_to_EutecticSi_count": 4255,
+      "Al3Ni_to_EutecticSi_fraction_of_all_errors": 0.11534916504012145,
+      "present_class_miou_diagnostic": 0.8947017992791868,
+      "boundary_2px_error_rate": 0.0868939995258172,
+      "interior_error_rate": 0.0040973753531885855,
+      "Al3Ni_to_EutecticSi_gt_rate": 0.0175250004118684,
+      "EutecticSi_to_Al3Ni_count": 2914,
+      "EutecticSi_to_Al3Ni_gt_rate": 0.04152180108292961,
+      "EutecticSi_to_Al3Ni_fraction_of_all_errors": 0.07899587941878118,
+      "undefined_reasons": {},
+      "confusion_matrix": [
+        [
+          640632,
+          5269,
+          1163,
+          3633
+        ],
+        [
+          5934,
+          231525,
+          1082,
+          4255
+        ],
+        [
+          1726,
+          1681,
+          192574,
+          2048
+        ],
+        [
+          3622,
+          2914,
+          3561,
+          60083
+        ]
+      ],
+      "gt_Al3Ni_mean_P_EutecticSi": 0.021251609548926353
+    },
+    {
+      "image_id": "A55_step2_sample1",
+      "split": "valid",
+      "height": 780,
+      "width": 1096,
+      "checkpoint_sha256": "1a97954c9655cb1e9d3a3b7c95a79dcda07807dd34fc979c57960b1b6cce1615",
+      "inference_config_hash": "2aec9aee314c6f56ac3a307e37dcf4cc0b185df396a10e7923997a72420a0861",
+      "class_names": [
+        "Al",
+        "Al3Ni",
+        "PrimarySi",
+        "EutecticSi"
+      ],
+      "iou": [
+        0.947401117018759,
+        0.8007272878181885,
+        0.9020733703760454,
+        0.6117075428042573
+      ],
+      "image_miou": 0.8154773295043125,
+      "precision": [
+        0.9675998380596158,
+        0.9022609569903787,
+        0.9583529673832024,
+        0.7489094102317149
+      ],
+      "recall": [
+        0.9784409892092925,
+        0.876779324055666,
+        0.938878630182978,
+        0.7695307952031668
+      ],
+      "gt_fraction": [
+        0.5743238817143926,
+        0.20593533595358413,
+        0.13936458918210742,
+        0.08037619314991577
+      ],
+      "pred_fraction": [
+        0.5807587029758563,
+        0.20011931499157776,
+        0.1365326127643646,
+        0.08258936926820139
+      ],
+      "pixel_error_rate": 0.06479973797492046,
+      "error_pixels": 55396,
+      "Al3Ni_to_EutecticSi_count": 11013,
+      "Al3Ni_to_EutecticSi_fraction_of_all_errors": 0.1988049678677161,
+      "present_class_miou_diagnostic": 0.8154773295043125,
+      "boundary_2px_error_rate": 0.10876303298308247,
+      "interior_error_rate": 0.004912959381044487,
+      "Al3Ni_to_EutecticSi_gt_rate": 0.0625560920193127,
+      "EutecticSi_to_Al3Ni_count": 8532,
+      "EutecticSi_to_Al3Ni_gt_rate": 0.12417045057631855,
+      "EutecticSi_to_Al3Ni_fraction_of_all_errors": 0.15401834067441691,
+      "undefined_reasons": {},
+      "confusion_matrix": [
+        [
+          480393,
+          4570,
+          1084,
+          4931
+        ],
+        [
+          7774,
+          154357,
+          2906,
+          11013
+        ],
+        [
+          1879,
+          3619,
+          111858,
+          1784
+        ],
+        [
+          6433,
+          8532,
+          871,
+          52876
+        ]
+      ],
+      "gt_Al3Ni_mean_P_EutecticSi": 0.07181458175182343
+    },
+    {
+      "image_id": "A59_step3_sample1",
+      "split": "valid",
+      "height": 480,
+      "width": 675,
+      "checkpoint_sha256": "1a97954c9655cb1e9d3a3b7c95a79dcda07807dd34fc979c57960b1b6cce1615",
+      "inference_config_hash": "2aec9aee314c6f56ac3a307e37dcf4cc0b185df396a10e7923997a72420a0861",
+      "class_names": [
+        "Al",
+        "Al3Ni",
+        "PrimarySi",
+        "EutecticSi"
+      ],
+      "iou": [
+        0.9406891654667745,
+        0.7964456736063097,
+        0.951543794957023,
+        0.6050897710426618
+      ],
+      "image_miou": 0.8234421012681922,
+      "precision": [
+        0.9675256503238305,
+        0.8928248482151828,
+        0.9778246250733842,
+        0.7464946149156676
+      ],
+      "recall": [
+        0.9713584496392438,
+        0.8806399093933602,
+        0.9725303890864696,
+        0.761583912097025
+      ],
+      "gt_fraction": [
+        0.6061512345679012,
+        0.21800925925925926,
+        0.11629012345679013,
+        0.059549382716049384
+      ],
+      "pred_fraction": [
+        0.6085524691358025,
+        0.21503395061728395,
+        0.1156604938271605,
+        0.060753086419753084
+      ],
+      "pixel_error_rate": 0.06077469135802469,
+      "error_pixels": 19691,
+      "Al3Ni_to_EutecticSi_count": 3408,
+      "Al3Ni_to_EutecticSi_fraction_of_all_errors": 0.1730739931948606,
+      "present_class_miou_diagnostic": 0.8234421012681922,
+      "boundary_2px_error_rate": 0.08395418563016328,
+      "interior_error_rate": 0.0024947122945929824,
+      "Al3Ni_to_EutecticSi_gt_rate": 0.04824803567636441,
+      "EutecticSi_to_Al3Ni_count": 2723,
+      "EutecticSi_to_Al3Ni_gt_rate": 0.14113195812169588,
+      "EutecticSi_to_Al3Ni_fraction_of_all_errors": 0.13828652683967294,
+      "undefined_reasons": {},
+      "confusion_matrix": [
+        [
+          190768,
+          4101,
+          172,
+          1352
+        ],
+        [
+          4498,
+          62204,
+          525,
+          3408
+        ],
+        [
+          162,
+          643,
+          36643,
+          230
+        ],
+        [
+          1743,
+          2723,
+          134,
+          14694
+        ]
+      ],
+      "gt_Al3Ni_mean_P_EutecticSi": 0.05915800854563713
+    },
+    {
+      "image_id": "A63_step1_sample4",
+      "split": "valid",
+      "height": 480,
+      "width": 675,
+      "checkpoint_sha256": "1a97954c9655cb1e9d3a3b7c95a79dcda07807dd34fc979c57960b1b6cce1615",
+      "inference_config_hash": "2aec9aee314c6f56ac3a307e37dcf4cc0b185df396a10e7923997a72420a0861",
+      "class_names": [
+        "Al",
+        "Al3Ni",
+        "PrimarySi",
+        "EutecticSi"
+      ],
+      "iou": [
+        0.9326677085718268,
+        0.7902150254398248,
+        0.9670096280913725,
+        0.6070796460176991
+      ],
+      "image_miou": 0.8242430020301809,
+      "precision": [
+        0.9632409258907046,
+        0.9253384850157472,
+        0.9848350116561321,
+        0.6793113954905545
+      ],
+      "recall": [
+        0.9670886598576611,
+        0.8440294971272878,
+        0.9816265421008504,
+        0.8509541984732825
+      ],
+      "gt_fraction": [
+        0.5980339506172839,
+        0.2084320987654321,
+        0.1288425925925926,
+        0.06469135802469136
+      ],
+      "pred_fraction": [
+        0.6004228395061728,
+        0.19011728395061728,
+        0.12842283950617284,
+        0.08103703703703703
+      ],
+      "pixel_error_rate": 0.06420061728395061,
+      "error_pixels": 20801,
+      "Al3Ni_to_EutecticSi_count": 5379,
+      "Al3Ni_to_EutecticSi_fraction_of_all_errors": 0.25859333685880487,
+      "present_class_miou_diagnostic": 0.8242430020301809,
+      "boundary_2px_error_rate": 0.08739719729605476,
+      "interior_error_rate": 0.0030308472901980155,
+      "Al3Ni_to_EutecticSi_gt_rate": 0.07965112835396553,
+      "EutecticSi_to_Al3Ni_count": 1036,
+      "EutecticSi_to_Al3Ni_gt_rate": 0.04942748091603053,
+      "EutecticSi_to_Al3Ni_fraction_of_all_errors": 0.04980529782222009,
+      "undefined_reasons": {},
+      "confusion_matrix": [
+        [
+          187386,
+          3376,
+          316,
+          2685
+        ],
+        [
+          4890,
+          56999,
+          264,
+          5379
+        ],
+        [
+          224,
+          187,
+          40978,
+          356
+        ],
+        [
+          2037,
+          1036,
+          51,
+          17836
+        ]
+      ],
+      "gt_Al3Ni_mean_P_EutecticSi": 0.07737106084823608
+    },
+    {
+      "image_id": "A67_step1_sample1",
+      "split": "valid",
+      "height": 480,
+      "width": 675,
+      "checkpoint_sha256": "1a97954c9655cb1e9d3a3b7c95a79dcda07807dd34fc979c57960b1b6cce1615",
+      "inference_config_hash": "2aec9aee314c6f56ac3a307e37dcf4cc0b185df396a10e7923997a72420a0861",
+      "class_names": [
+        "Al",
+        "Al3Ni",
+        "PrimarySi",
+        "EutecticSi"
+      ],
+      "iou": [
+        0.889453897998384,
+        0.5725315135659269,
+        0.912160129584635,
+        0.624810367202208
+      ],
+      "image_miou": 0.7497389770877885,
+      "precision": [
+        0.9107911673049579,
+        0.8287386456926459,
+        0.9750179326720918,
+        0.7774568445950556
+      ],
+      "recall": [
+        0.9743370946114259,
+        0.6493608897742363,
+        0.9339888638786874,
+        0.7608956951431243
+      ],
+      "gt_fraction": [
+        0.5823364197530864,
+        0.14874074074074073,
+        0.13026234567901235,
+        0.1386604938271605
+      ],
+      "pred_fraction": [
+        0.622966049382716,
+        0.1165462962962963,
+        0.12478086419753086,
+        0.1357067901234568
+      ],
+      "pixel_error_rate": 0.10885185185185185,
+      "error_pixels": 35268,
+      "Al3Ni_to_EutecticSi_count": 5394,
+      "Al3Ni_to_EutecticSi_fraction_of_all_errors": 0.15294317795168424,
+      "present_class_miou_diagnostic": 0.7497389770877885,
+      "boundary_2px_error_rate": 0.14634054167541466,
+      "interior_error_rate": 0.004857309260337799,
+      "Al3Ni_to_EutecticSi_gt_rate": 0.11192729083665338,
+      "EutecticSi_to_Al3Ni_count": 4553,
+      "EutecticSi_to_Al3Ni_gt_rate": 0.10134443306771135,
+      "EutecticSi_to_Al3Ni_fraction_of_all_errors": 0.12909719859362595,
+      "undefined_reasons": {},
+      "confusion_matrix": [
+        [
+          183835,
+          1451,
+          265,
+          3126
+        ],
+        [
+          11113,
+          31294,
+          391,
+          5394
+        ],
+        [
+          1058,
+          463,
+          39419,
+          1265
+        ],
+        [
+          5835,
+          4553,
+          354,
+          34184
+        ]
+      ],
+      "gt_Al3Ni_mean_P_EutecticSi": 0.12677934765815735
+    },
+    {
+      "image_id": "A71_step2_sample1",
+      "split": "valid",
+      "height": 480,
+      "width": 675,
+      "checkpoint_sha256": "1a97954c9655cb1e9d3a3b7c95a79dcda07807dd34fc979c57960b1b6cce1615",
+      "inference_config_hash": "2aec9aee314c6f56ac3a307e37dcf4cc0b185df396a10e7923997a72420a0861",
+      "class_names": [
+        "Al",
+        "Al3Ni",
+        "PrimarySi",
+        "EutecticSi"
+      ],
+      "iou": [
+        0.9186927760984799,
+        0.4440667305618785,
+        1.0,
+        0.4827805986955321
+      ],
+      "image_miou": 0.7113850263389727,
+      "precision": [
+        0.9732143610513437,
+        0.716256038647343,
+        null,
+        0.49866140004388854
+      ],
+      "recall": [
+        0.9425245558697108,
+        0.5388613276635955,
+        null,
+        0.9381166659786153
+      ],
+      "gt_fraction": [
+        0.7553950617283951,
+        0.1698425925925926,
+        0.0,
+        0.07476234567901234
+      ],
+      "pred_fraction": [
+        0.731574074074074,
+        0.12777777777777777,
+        0.0,
+        0.14064814814814816
+      ],
+      "pixel_error_rate": 0.1263641975308642,
+      "error_pixels": 40942,
+      "Al3Ni_to_EutecticSi_count": 19939,
+      "Al3Ni_to_EutecticSi_fraction_of_all_errors": 0.487006008499829,
+      "present_class_miou_diagnostic": 0.6151800351186302,
+      "boundary_2px_error_rate": 0.1575552974202604,
+      "interior_error_rate": 0.024701582794341904,
+      "Al3Ni_to_EutecticSi_gt_rate": 0.36233622271893,
+      "EutecticSi_to_Al3Ni_count": 587,
+      "EutecticSi_to_Al3Ni_gt_rate": 0.024233166824918467,
+      "EutecticSi_to_Al3Ni_fraction_of_all_errors": 0.014337355283083386,
+      "undefined_reasons": {
+        "precision_PrimarySi": "no_predicted_pixels",
+        "recall_PrimarySi": "no_gt_pixels"
+      },
+      "confusion_matrix": [
+        [
+          230681,
+          11160,
+          0,
+          2907
+        ],
+        [
+          5437,
+          29653,
+          0,
+          19939
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          912,
+          587,
+          0,
+          22724
+        ]
+      ],
+      "gt_Al3Ni_mean_P_EutecticSi": 0.3365072011947632
+    },
+    {
+      "image_id": "A72_step4_sample4",
+      "split": "valid",
+      "height": 480,
+      "width": 675,
+      "checkpoint_sha256": "1a97954c9655cb1e9d3a3b7c95a79dcda07807dd34fc979c57960b1b6cce1615",
+      "inference_config_hash": "2aec9aee314c6f56ac3a307e37dcf4cc0b185df396a10e7923997a72420a0861",
+      "class_names": [
+        "Al",
+        "Al3Ni",
+        "PrimarySi",
+        "EutecticSi"
+      ],
+      "iou": [
+        0.9426987552455609,
+        0.7785304108702685,
+        0.9505529732328899,
+        0.80129961492891
+      ],
+      "image_miou": 0.8682704385694073,
+      "precision": [
+        0.9595799672526015,
+        0.9307435699091084,
+        0.9821960914210003,
+        0.8858756830880697
+      ],
+      "recall": [
+        0.9816802488163687,
+        0.8264042411624563,
+        0.9672184620402838,
+        0.8935383980181668
+      ],
+      "gt_fraction": [
+        0.6688456790123457,
+        0.1437993827160494,
+        0.037848765432098766,
+        0.14950617283950618
+      ],
+      "pred_fraction": [
+        0.68425,
+        0.12767901234567902,
+        0.037271604938271606,
+        0.1507993827160494
+      ],
+      "pixel_error_rate": 0.05437345679012345,
+      "error_pixels": 17617,
+      "Al3Ni_to_EutecticSi_count": 2714,
+      "Al3Ni_to_EutecticSi_fraction_of_all_errors": 0.1540557416132145,
+      "present_class_miou_diagnostic": 0.8682704385694073,
+      "boundary_2px_error_rate": 0.08058540285763184,
+      "interior_error_rate": 0.0018087879265724861,
+      "Al3Ni_to_EutecticSi_gt_rate": 0.058251593655427016,
+      "EutecticSi_to_Al3Ni_count": 1588,
+      "EutecticSi_to_Al3Ni_gt_rate": 0.032782824112303884,
+      "EutecticSi_to_Al3Ni_fraction_of_all_errors": 0.09014020548333995,
+      "undefined_reasons": {},
+      "confusion_matrix": [
+        [
+          212736,
+          1230,
+          72,
+          2668
+        ],
+        [
+          5312,
+          38503,
+          62,
+          2714
+        ],
+        [
+          161,
+          47,
+          11861,
+          194
+        ],
+        [
+          3488,
+          1588,
+          81,
+          43283
+        ]
+      ],
+      "gt_Al3Ni_mean_P_EutecticSi": 0.0719573125243187
+    },
+    {
+      "image_id": "A74_step3_sample4",
+      "split": "valid",
+      "height": 480,
+      "width": 675,
+      "checkpoint_sha256": "1a97954c9655cb1e9d3a3b7c95a79dcda07807dd34fc979c57960b1b6cce1615",
+      "inference_config_hash": "2aec9aee314c6f56ac3a307e37dcf4cc0b185df396a10e7923997a72420a0861",
+      "class_names": [
+        "Al",
+        "Al3Ni",
+        "PrimarySi",
+        "EutecticSi"
+      ],
+      "iou": [
+        0.9321464989802856,
+        0.7575043886908072,
+        0.8913931635571293,
+        0.2747883567203989
+      ],
+      "image_miou": 0.7139581019871553,
+      "precision": [
+        0.9507280291211648,
+        0.8392891659418189,
+        0.9287361214572026,
+        0.8859599925219668
+      ],
+      "recall": [
+        0.9794633689003973,
+        0.8860221910470604,
+        0.9568395278295508,
+        0.28486415003606635
+      ],
+      "gt_fraction": [
+        0.6221944444444445,
+        0.24200617283950618,
+        0.0844537037037037,
+        0.05134567901234568
+      ],
+      "pred_fraction": [
+        0.641,
+        0.2554814814814815,
+        0.08700925925925926,
+        0.016509259259259258
+      ],
+      "pixel_error_rate": 0.0807253086419753,
+      "error_pixels": 26155,
+      "Al3Ni_to_EutecticSi_count": 426,
+      "Al3Ni_to_EutecticSi_fraction_of_all_errors": 0.016287516727203213,
+      "present_class_miou_diagnostic": 0.7139581019871553,
+      "boundary_2px_error_rate": 0.10497810128924805,
+      "interior_error_rate": 0.007768911981196264,
+      "Al3Ni_to_EutecticSi_gt_rate": 0.005432980487182757,
+      "EutecticSi_to_Al3Ni_count": 8484,
+      "EutecticSi_to_Al3Ni_gt_rate": 0.5099783601827362,
+      "EutecticSi_to_Al3Ni_fraction_of_all_errors": 0.32437392467979353,
+      "undefined_reasons": {},
+      "confusion_matrix": [
+        [
+          197451,
+          3939,
+          68,
+          133
+        ],
+        [
+          8053,
+          69473,
+          458,
+          426
+        ],
+        [
+          250,
+          880,
+          26182,
+          51
+        ],
+        [
+          1930,
+          8484,
+          1483,
+          4739
+        ]
+      ],
+      "gt_Al3Ni_mean_P_EutecticSi": 0.018356775864958763
+    },
+    {
+      "image_id": "A7_step1_sample4",
+      "split": "valid",
+      "height": 909,
+      "width": 1278,
+      "checkpoint_sha256": "1a97954c9655cb1e9d3a3b7c95a79dcda07807dd34fc979c57960b1b6cce1615",
+      "inference_config_hash": "2aec9aee314c6f56ac3a307e37dcf4cc0b185df396a10e7923997a72420a0861",
+      "class_names": [
+        "Al",
+        "Al3Ni",
+        "PrimarySi",
+        "EutecticSi"
+      ],
+      "iou": [
+        0.961527820744016,
+        0.7309329376116299,
+        0.8990599506925097,
+        0.6683482892273618
+      ],
+      "image_miou": 0.8149672495688793,
+      "precision": [
+        0.9701410159134568,
+        0.8779792718462146,
+        0.9519160879230487,
+        0.8320640756302521
+      ],
+      "recall": [
+        0.9908509521618837,
+        0.8135799416448247,
+        0.9418323263394943,
+        0.7725614897745628
+      ],
+      "gt_fraction": [
+        0.6642538275736807,
+        0.0870317861207091,
+        0.1639843953096405,
+        0.0847299909959697
+      ],
+      "pred_fraction": [
+        0.6784338840769836,
+        0.08064804915546328,
+        0.16224728889164347,
+        0.07867077787590966
+      ],
+      "pixel_error_rate": 0.05111121440782576,
+      "error_pixels": 59376,
+      "Al3Ni_to_EutecticSi_count": 7535,
+      "Al3Ni_to_EutecticSi_fraction_of_all_errors": 0.12690312584209107,
+      "present_class_miou_diagnostic": 0.8149672495688793,
+      "boundary_2px_error_rate": 0.11505491705158927,
+      "interior_error_rate": 0.008129835546439238,
+      "Al3Ni_to_EutecticSi_gt_rate": 0.07452648236981356,
+      "EutecticSi_to_Al3Ni_count": 7566,
+      "EutecticSi_to_Al3Ni_gt_rate": 0.07686602797899036,
+      "EutecticSi_to_Al3Ni_fraction_of_all_errors": 0.12742522231204528,
+      "undefined_reasons": {},
+      "confusion_matrix": [
+        [
+          764605,
+          2309,
+          1277,
+          3474
+        ],
+        [
+          9991,
+          82257,
+          1322,
+          7535
+        ],
+        [
+          5185,
+          1557,
+          179420,
+          4339
+        ],
+        [
+          8357,
+          7566,
+          6464,
+          76044
+        ]
+      ],
+      "gt_Al3Ni_mean_P_EutecticSi": 0.09331077337265015
+    }
+  ],
+  "mean_class_iou": [
+    0.9404225682683917,
+    0.7588364627143098,
+    0.9157747853852205,
+    0.5940280102485619
+  ],
+  "score_role": "development_validation"
+}

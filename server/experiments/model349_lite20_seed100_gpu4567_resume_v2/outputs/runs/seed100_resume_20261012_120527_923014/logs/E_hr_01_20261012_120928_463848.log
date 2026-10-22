@@ -1,0 +1,780 @@
+COMMAND: /home/sppark/miniconda3/envs/komap/bin/python -B -u /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/outputs/runs/seed100_resume_20261012_120527_923014/implementation/source/../fusion_source/model397_reproduction_bundle/model392/train.py --data-root /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/outputs/runs/seed100_resume_20261012_120527_923014/implementation/source/../expert_splits/model392_cv/seed1_fold4 --output-dir /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/outputs/runs/seed100_resume_20261012_120527_923014/jobs/E_hr_01/attempt_1/training --device cuda:0 --architecture UnetPlusPlus --encoder-name tu-hrnet_w48 --encoder-weights imagenet --patch-size 512 --input-scale 2.0 --normalize-width --samples-per-image 12 --batch-size 4 --accumulation-steps 2 --num-workers 4 --epochs 70 --lr 3e-4 --encoder-lr-mult 1.0 --weight-decay 1e-4 --boundary-head-weight 1.0 --seed 3492 --rng-mode legacy --val-every 0 --resume
+Unexpected keys (downsamp_modules.0.1.num_batches_tracked, downsamp_modules.1.1.num_batches_tracked, downsamp_modules.2.1.num_batches_tracked, final_layer.1.num_batches_tracked, downsamp_modules.0.0.bias, downsamp_modules.0.0.weight, downsamp_modules.0.1.bias, downsamp_modules.0.1.running_mean, downsamp_modules.0.1.running_var, downsamp_modules.0.1.weight, downsamp_modules.1.0.bias, downsamp_modules.1.0.weight, downsamp_modules.1.1.bias, downsamp_modules.1.1.running_mean, downsamp_modules.1.1.running_var, downsamp_modules.1.1.weight, downsamp_modules.2.0.bias, downsamp_modules.2.0.weight, downsamp_modules.2.1.bias, downsamp_modules.2.1.running_mean, downsamp_modules.2.1.running_var, downsamp_modules.2.1.weight, final_layer.0.bias, final_layer.0.weight, final_layer.1.bias, final_layer.1.running_mean, final_layer.1.running_var, final_layer.1.weight, classifier.bias, classifier.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/outputs/runs/seed100_resume_20261012_120527_923014/implementation/source/../fusion_source/model397_reproduction_bundle/model392/train.py:178: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=use_amp)
+53 train images, 159 steps/epoch, device=cuda:0, target_width=1278
+Expert HRNet epochs:   0%|          | 0/70 [00:00<?, ?it/s]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/outputs/runs/seed100_resume_20261012_120527_923014/implementation/source/../fusion_source/model397_reproduction_bundle/model392/train.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+
+Expert HRNet batches:  14%|█▍        | 23/159 [00:05<00:29,  4.56it/s][Aepoch   1/70 step   50/159 loss=2.4691
+
+Expert HRNet batches:  38%|███▊      | 61/159 [00:10<00:15,  6.26it/s][A
+Expert HRNet batches:  62%|██████▏   | 99/159 [00:15<00:08,  6.83it/s][Aepoch   1/70 step  100/159 loss=2.1833
+
+Expert HRNet batches:  86%|████████▌ | 136/159 [00:20<00:03,  7.05it/s][Aepoch   1/70 step  150/159 loss=2.0229
+epoch   1/70 step  159/159 loss=1.9989
+
+                                                                       [Aepoch   1/70 train_loss=1.9989 time=23.4s
+Expert HRNet epochs:   1%|▏         | 1/70 [00:25<28:55, 25.16s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  23%|██▎       | 36/159 [00:05<00:17,  7.13it/s][Aepoch   2/70 step   50/159 loss=1.5246
+
+Expert HRNet batches:  47%|████▋     | 74/159 [00:10<00:11,  7.32it/s][Aepoch   2/70 step  100/159 loss=1.4921
+
+Expert HRNet batches:  70%|██████▉   | 111/159 [00:15<00:06,  7.31it/s][A
+Expert HRNet batches:  93%|█████████▎| 148/159 [00:20<00:01,  7.30it/s][Aepoch   2/70 step  150/159 loss=1.4491
+epoch   2/70 step  159/159 loss=1.4438
+
+                                                                       [Aepoch   2/70 train_loss=1.4438 time=21.8s
+Expert HRNet epochs:   3%|▎         | 2/70 [00:51<29:02, 25.62s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  23%|██▎       | 36/159 [00:05<00:17,  7.05it/s][Aepoch   3/70 step   50/159 loss=1.3312
+
+Expert HRNet batches:  47%|████▋     | 74/159 [00:10<00:11,  7.30it/s][Aepoch   3/70 step  100/159 loss=1.3080
+
+Expert HRNet batches:  70%|███████   | 112/159 [00:15<00:06,  7.37it/s][Aepoch   3/70 step  150/159 loss=1.2932
+
+Expert HRNet batches:  94%|█████████▍| 150/159 [00:20<00:01,  7.41it/s][Aepoch   3/70 step  159/159 loss=1.2910
+
+                                                                       [Aepoch   3/70 train_loss=1.2910 time=21.6s
+Expert HRNet epochs:   4%|▍         | 3/70 [01:17<28:45, 25.75s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  21%|██        | 33/159 [00:05<00:19,  6.60it/s][Aepoch   4/70 step   50/159 loss=1.2782
+
+Expert HRNet batches:  45%|████▍     | 71/159 [00:10<00:12,  7.17it/s][Aepoch   4/70 step  100/159 loss=1.2690
+
+Expert HRNet batches:  69%|██████▊   | 109/159 [00:15<00:06,  7.35it/s][A
+Expert HRNet batches:  92%|█████████▏| 147/159 [00:20<00:01,  7.38it/s][Aepoch   4/70 step  150/159 loss=1.2629
+epoch   4/70 step  159/159 loss=1.2641
+
+                                                                       [Aepoch   4/70 train_loss=1.2641 time=21.8s
+Expert HRNet epochs:   6%|▌         | 4/70 [01:43<28:27, 25.86s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  23%|██▎       | 37/159 [00:05<00:16,  7.22it/s][Aepoch   5/70 step   50/159 loss=1.2324
+
+Expert HRNet batches:  47%|████▋     | 75/159 [00:10<00:11,  7.43it/s][Aepoch   5/70 step  100/159 loss=1.2559
+
+Expert HRNet batches:  71%|███████   | 113/159 [00:15<00:06,  7.40it/s][Aepoch   5/70 step  150/159 loss=1.2423
+
+Expert HRNet batches:  95%|█████████▍| 151/159 [00:20<00:01,  7.46it/s][Aepoch   5/70 step  159/159 loss=1.2436
+
+                                                                       [Aepoch   5/70 train_loss=1.2436 time=21.4s
+Expert HRNet epochs:   7%|▋         | 5/70 [02:09<28:05, 25.93s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  23%|██▎       | 37/159 [00:05<00:16,  7.29it/s][Aepoch   6/70 step   50/159 loss=1.2301
+
+Expert HRNet batches:  47%|████▋     | 75/159 [00:10<00:11,  7.43it/s][Aepoch   6/70 step  100/159 loss=1.2291
+
+Expert HRNet batches:  71%|███████   | 113/159 [00:15<00:06,  7.41it/s][Aepoch   6/70 step  150/159 loss=1.2144
+
+Expert HRNet batches:  95%|█████████▍| 151/159 [00:20<00:01,  7.39it/s][Aepoch   6/70 step  159/159 loss=1.2099
+
+                                                                       [Aepoch   6/70 train_loss=1.2099 time=21.6s
+Expert HRNet epochs:   9%|▊         | 6/70 [02:35<27:41, 25.96s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  23%|██▎       | 36/159 [00:05<00:17,  7.00it/s][Aepoch   7/70 step   50/159 loss=1.2177
+
+Expert HRNet batches:  47%|████▋     | 74/159 [00:10<00:11,  7.23it/s][Aepoch   7/70 step  100/159 loss=1.2105
+
+Expert HRNet batches:  70%|██████▉   | 111/159 [00:15<00:06,  7.27it/s][A
+Expert HRNet batches:  94%|█████████▎| 149/159 [00:20<00:01,  7.37it/s][Aepoch   7/70 step  150/159 loss=1.2047
+epoch   7/70 step  159/159 loss=1.2051
+
+                                                                       [Aepoch   7/70 train_loss=1.2051 time=21.8s
+Expert HRNet epochs:  10%|█         | 7/70 [03:01<27:20, 26.04s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  23%|██▎       | 36/159 [00:05<00:17,  7.07it/s][Aepoch   8/70 step   50/159 loss=1.1699
+
+Expert HRNet batches:  47%|████▋     | 74/159 [00:10<00:11,  7.31it/s][Aepoch   8/70 step  100/159 loss=1.1839
+
+Expert HRNet batches:  70%|███████   | 112/159 [00:15<00:06,  7.42it/s][Aepoch   8/70 step  150/159 loss=1.1845
+
+Expert HRNet batches:  94%|█████████▍| 150/159 [00:20<00:01,  7.46it/s][Aepoch   8/70 step  159/159 loss=1.1844
+
+                                                                       [Aepoch   8/70 train_loss=1.1844 time=21.5s
+Expert HRNet epochs:  11%|█▏        | 8/70 [03:27<26:52, 26.02s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  23%|██▎       | 36/159 [00:05<00:17,  7.09it/s][Aepoch   9/70 step   50/159 loss=1.2033
+
+Expert HRNet batches:  46%|████▌     | 73/159 [00:10<00:11,  7.27it/s][Aepoch   9/70 step  100/159 loss=1.1927
+
+Expert HRNet batches:  70%|██████▉   | 111/159 [00:15<00:06,  7.35it/s][A
+Expert HRNet batches:  94%|█████████▎| 149/159 [00:20<00:01,  7.39it/s][Aepoch   9/70 step  150/159 loss=1.1839
+epoch   9/70 step  159/159 loss=1.1833
+
+                                                                       [Aepoch   9/70 train_loss=1.1833 time=21.7s
+Expert HRNet epochs:  13%|█▎        | 9/70 [03:53<26:24, 25.97s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  23%|██▎       | 36/159 [00:05<00:17,  7.13it/s][Aepoch  10/70 step   50/159 loss=1.1865
+
+Expert HRNet batches:  47%|████▋     | 75/159 [00:10<00:11,  7.49it/s][Aepoch  10/70 step  100/159 loss=1.1820
+
+Expert HRNet batches:  72%|███████▏  | 114/159 [00:15<00:05,  7.61it/s][Aepoch  10/70 step  150/159 loss=1.1794
+
+Expert HRNet batches:  96%|█████████▌| 153/159 [00:20<00:00,  7.51it/s][Aepoch  10/70 step  159/159 loss=1.1797
+
+                                                                       [Aepoch  10/70 train_loss=1.1797 time=21.3s
+Expert HRNet epochs:  14%|█▍        | 10/70 [04:18<25:55, 25.92s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  21%|██        | 33/159 [00:05<00:19,  6.57it/s][Aepoch  11/70 step   50/159 loss=1.1589
+
+Expert HRNet batches:  43%|████▎     | 68/159 [00:10<00:13,  6.79it/s][Aepoch  11/70 step  100/159 loss=1.1562
+
+Expert HRNet batches:  65%|██████▍   | 103/159 [00:15<00:08,  6.84it/s][A
+Expert HRNet batches:  87%|████████▋ | 138/159 [00:20<00:03,  6.88it/s][Aepoch  11/70 step  150/159 loss=1.1645
+epoch  11/70 step  159/159 loss=1.1657
+
+                                                                       [Aepoch  11/70 train_loss=1.1657 time=23.3s
+Expert HRNet epochs:  16%|█▌        | 11/70 [04:46<26:02, 26.47s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  20%|██        | 32/159 [00:05<00:20,  6.27it/s][Aepoch  12/70 step   50/159 loss=1.1775
+
+Expert HRNet batches:  43%|████▎     | 68/159 [00:10<00:13,  6.78it/s][Aepoch  12/70 step  100/159 loss=1.1624
+
+Expert HRNet batches:  66%|██████▌   | 105/159 [00:15<00:07,  6.99it/s][A
+Expert HRNet batches:  90%|████████▉ | 143/159 [00:20<00:02,  7.19it/s][Aepoch  12/70 step  150/159 loss=1.1620
+epoch  12/70 step  159/159 loss=1.1586
+
+                                                                       [Aepoch  12/70 train_loss=1.1586 time=22.5s
+Expert HRNet epochs:  17%|█▋        | 12/70 [05:13<25:46, 26.66s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  23%|██▎       | 36/159 [00:05<00:17,  7.15it/s][Aepoch  13/70 step   50/159 loss=1.1866
+
+Expert HRNet batches:  47%|████▋     | 74/159 [00:10<00:11,  7.40it/s][Aepoch  13/70 step  100/159 loss=1.1842
+
+Expert HRNet batches:  70%|███████   | 112/159 [00:15<00:06,  7.42it/s][Aepoch  13/70 step  150/159 loss=1.1699
+
+Expert HRNet batches:  94%|█████████▍| 150/159 [00:20<00:01,  7.47it/s][Aepoch  13/70 step  159/159 loss=1.1666
+
+                                                                       [Aepoch  13/70 train_loss=1.1666 time=21.4s
+Expert HRNet epochs:  19%|█▊        | 13/70 [05:39<24:59, 26.30s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  23%|██▎       | 36/159 [00:05<00:17,  7.17it/s][Aepoch  14/70 step   50/159 loss=1.1517
+
+Expert HRNet batches:  47%|████▋     | 74/159 [00:10<00:11,  7.41it/s][Aepoch  14/70 step  100/159 loss=1.1635
+
+Expert HRNet batches:  70%|███████   | 112/159 [00:15<00:06,  7.43it/s][Aepoch  14/70 step  150/159 loss=1.1621
+
+Expert HRNet batches:  94%|█████████▍| 150/159 [00:20<00:01,  7.45it/s][Aepoch  14/70 step  159/159 loss=1.1605
+
+                                                                       [Aepoch  14/70 train_loss=1.1605 time=21.5s
+Expert HRNet epochs:  20%|██        | 14/70 [06:05<24:26, 26.18s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  22%|██▏       | 35/159 [00:05<00:18,  6.88it/s][Aepoch  15/70 step   50/159 loss=1.1434
+
+Expert HRNet batches:  46%|████▌     | 73/159 [00:10<00:11,  7.26it/s][Aepoch  15/70 step  100/159 loss=1.1519
+
+Expert HRNet batches:  70%|██████▉   | 111/159 [00:15<00:06,  7.35it/s][A
+Expert HRNet batches:  94%|█████████▎| 149/159 [00:20<00:01,  7.42it/s][Aepoch  15/70 step  150/159 loss=1.1512
+epoch  15/70 step  159/159 loss=1.1506
+
+                                                                       [Aepoch  15/70 train_loss=1.1506 time=21.7s
+Expert HRNet epochs:  21%|██▏       | 15/70 [06:30<23:52, 26.05s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  23%|██▎       | 36/159 [00:05<00:17,  7.07it/s][Aepoch  16/70 step   50/159 loss=1.1746
+
+Expert HRNet batches:  47%|████▋     | 74/159 [00:10<00:11,  7.34it/s][Aepoch  16/70 step  100/159 loss=1.1691
+
+Expert HRNet batches:  70%|███████   | 112/159 [00:15<00:06,  7.41it/s][Aepoch  16/70 step  150/159 loss=1.1607
+
+Expert HRNet batches:  94%|█████████▍| 150/159 [00:20<00:01,  7.45it/s][Aepoch  16/70 step  159/159 loss=1.1583
+
+                                                                       [Aepoch  16/70 train_loss=1.1583 time=21.5s
+Expert HRNet epochs:  23%|██▎       | 16/70 [06:56<23:23, 25.99s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  21%|██▏       | 34/159 [00:05<00:18,  6.68it/s][Aepoch  17/70 step   50/159 loss=1.1226
+
+Expert HRNet batches:  45%|████▌     | 72/159 [00:10<00:12,  7.16it/s][Aepoch  17/70 step  100/159 loss=1.1276
+
+Expert HRNet batches:  69%|██████▉   | 110/159 [00:15<00:06,  7.30it/s][A
+Expert HRNet batches:  93%|█████████▎| 148/159 [00:20<00:01,  7.37it/s][Aepoch  17/70 step  150/159 loss=1.1434
+epoch  17/70 step  159/159 loss=1.1432
+
+                                                                       [Aepoch  17/70 train_loss=1.1432 time=22.0s
+Expert HRNet epochs:  24%|██▍       | 17/70 [07:23<23:08, 26.19s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  19%|█▉        | 31/159 [00:05<00:20,  6.12it/s][Aepoch  18/70 step   50/159 loss=1.1420
+
+Expert HRNet batches:  40%|████      | 64/159 [00:10<00:14,  6.37it/s][A
+Expert HRNet batches:  62%|██████▏   | 99/159 [00:15<00:09,  6.62it/s][Aepoch  18/70 step  100/159 loss=1.1331
+
+Expert HRNet batches:  84%|████████▎ | 133/159 [00:20<00:03,  6.66it/s][Aepoch  18/70 step  150/159 loss=1.1369
+epoch  18/70 step  159/159 loss=1.1355
+
+                                                                       [Aepoch  18/70 train_loss=1.1355 time=24.1s
+Expert HRNet epochs:  26%|██▌       | 18/70 [07:52<23:32, 27.17s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  20%|██        | 32/159 [00:05<00:20,  6.27it/s][Aepoch  19/70 step   50/159 loss=1.1408
+
+Expert HRNet batches:  42%|████▏     | 67/159 [00:10<00:13,  6.61it/s][Aepoch  19/70 step  100/159 loss=1.1322
+
+Expert HRNet batches:  64%|██████▍   | 102/159 [00:15<00:08,  6.70it/s][A
+Expert HRNet batches:  86%|████████▌ | 137/159 [00:20<00:03,  6.75it/s][Aepoch  19/70 step  150/159 loss=1.1365
+epoch  19/70 step  159/159 loss=1.1369
+
+                                                                       [Aepoch  19/70 train_loss=1.1369 time=23.8s
+Expert HRNet epochs:  27%|██▋       | 19/70 [08:21<23:34, 27.74s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  20%|██        | 32/159 [00:05<00:20,  6.27it/s][Aepoch  20/70 step   50/159 loss=1.1571
+
+Expert HRNet batches:  42%|████▏     | 67/159 [00:10<00:13,  6.63it/s][Aepoch  20/70 step  100/159 loss=1.1312
+
+Expert HRNet batches:  64%|██████▍   | 102/159 [00:15<00:08,  6.77it/s][A
+Expert HRNet batches:  88%|████████▊ | 140/159 [00:20<00:02,  7.08it/s][Aepoch  20/70 step  150/159 loss=1.1322
+epoch  20/70 step  159/159 loss=1.1295
+
+                                                                       [Aepoch  20/70 train_loss=1.1295 time=22.9s
+Expert HRNet epochs:  29%|██▊       | 20/70 [08:49<23:05, 27.72s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  20%|██        | 32/159 [00:05<00:20,  6.24it/s][Aepoch  21/70 step   50/159 loss=1.1114
+
+Expert HRNet batches:  42%|████▏     | 67/159 [00:10<00:13,  6.68it/s][Aepoch  21/70 step  100/159 loss=1.1186
+
+Expert HRNet batches:  64%|██████▍   | 102/159 [00:15<00:08,  6.82it/s][A
+Expert HRNet batches:  86%|████████▌ | 137/159 [00:20<00:03,  6.85it/s][Aepoch  21/70 step  150/159 loss=1.1252
+epoch  21/70 step  159/159 loss=1.1254
+
+                                                                       [Aepoch  21/70 train_loss=1.1254 time=23.5s
+Expert HRNet epochs:  30%|███       | 21/70 [09:18<22:56, 28.09s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  20%|██        | 32/159 [00:05<00:20,  6.31it/s][Aepoch  22/70 step   50/159 loss=1.1118
+
+Expert HRNet batches:  43%|████▎     | 69/159 [00:10<00:12,  6.95it/s][Aepoch  22/70 step  100/159 loss=1.1233
+
+Expert HRNet batches:  67%|██████▋   | 107/159 [00:15<00:07,  7.17it/s][A
+Expert HRNet batches:  91%|█████████ | 145/159 [00:20<00:01,  7.28it/s][Aepoch  22/70 step  150/159 loss=1.1305
+epoch  22/70 step  159/159 loss=1.1276
+
+                                                                       [Aepoch  22/70 train_loss=1.1276 time=22.4s
+Expert HRNet epochs:  31%|███▏      | 22/70 [09:49<23:13, 29.03s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  20%|██        | 32/159 [00:05<00:19,  6.39it/s][Aepoch  23/70 step   50/159 loss=1.1323
+
+Expert HRNet batches:  42%|████▏     | 67/159 [00:10<00:13,  6.74it/s][Aepoch  23/70 step  100/159 loss=1.1288
+
+Expert HRNet batches:  64%|██████▍   | 102/159 [00:15<00:08,  6.82it/s][A
+Expert HRNet batches:  86%|████████▌ | 137/159 [00:20<00:03,  6.89it/s][Aepoch  23/70 step  150/159 loss=1.1288
+epoch  23/70 step  159/159 loss=1.1262
+
+                                                                       [Aepoch  23/70 train_loss=1.1262 time=23.2s
+Expert HRNet epochs:  33%|███▎      | 23/70 [10:19<22:58, 29.33s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  21%|██        | 33/159 [00:05<00:19,  6.50it/s][Aepoch  24/70 step   50/159 loss=1.1423
+
+Expert HRNet batches:  43%|████▎     | 68/159 [00:10<00:13,  6.78it/s][Aepoch  24/70 step  100/159 loss=1.1285
+
+Expert HRNet batches:  64%|██████▍   | 102/159 [00:15<00:08,  6.71it/s][A
+Expert HRNet batches:  87%|████████▋ | 138/159 [00:20<00:03,  6.85it/s][Aepoch  24/70 step  150/159 loss=1.1274
+epoch  24/70 step  159/159 loss=1.1279
+
+                                                                       [Aepoch  24/70 train_loss=1.1279 time=23.1s
+Expert HRNet epochs:  34%|███▍      | 24/70 [10:50<22:41, 29.59s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  20%|██        | 32/159 [00:05<00:20,  6.30it/s][Aepoch  25/70 step   50/159 loss=1.1384
+
+Expert HRNet batches:  42%|████▏     | 67/159 [00:10<00:13,  6.69it/s][Aepoch  25/70 step  100/159 loss=1.1330
+
+Expert HRNet batches:  64%|██████▍   | 102/159 [00:15<00:08,  6.78it/s][A
+Expert HRNet batches:  86%|████████▌ | 137/159 [00:20<00:03,  6.84it/s][Aepoch  25/70 step  150/159 loss=1.1277
+epoch  25/70 step  159/159 loss=1.1265
+
+                                                                       [Aepoch  25/70 train_loss=1.1265 time=23.3s
+Expert HRNet epochs:  36%|███▌      | 25/70 [11:19<22:12, 29.62s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  22%|██▏       | 35/159 [00:05<00:17,  6.91it/s][Aepoch  26/70 step   50/159 loss=1.1148
+
+Expert HRNet batches:  46%|████▌     | 73/159 [00:10<00:11,  7.22it/s][Aepoch  26/70 step  100/159 loss=1.1116
+
+Expert HRNet batches:  69%|██████▉   | 110/159 [00:15<00:06,  7.27it/s][A
+Expert HRNet batches:  92%|█████████▏| 147/159 [00:20<00:01,  7.13it/s][Aepoch  26/70 step  150/159 loss=1.1274
+epoch  26/70 step  159/159 loss=1.1229
+
+                                                                       [Aepoch  26/70 train_loss=1.1229 time=22.5s
+Expert HRNet epochs:  37%|███▋      | 26/70 [11:47<21:18, 29.07s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  21%|██        | 33/159 [00:05<00:19,  6.45it/s][Aepoch  27/70 step   50/159 loss=1.0929
+
+Expert HRNet batches:  43%|████▎     | 68/159 [00:10<00:13,  6.74it/s][Aepoch  27/70 step  100/159 loss=1.1027
+
+Expert HRNet batches:  64%|██████▍   | 102/159 [00:15<00:08,  6.74it/s][A
+Expert HRNet batches:  87%|████████▋ | 138/159 [00:20<00:03,  6.87it/s][Aepoch  27/70 step  150/159 loss=1.1094
+epoch  27/70 step  159/159 loss=1.1117
+
+                                                                       [Aepoch  27/70 train_loss=1.1117 time=23.4s
+Expert HRNet epochs:  39%|███▊      | 27/70 [12:16<20:53, 29.15s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  20%|██        | 32/159 [00:05<00:20,  6.30it/s][Aepoch  28/70 step   50/159 loss=1.1028
+
+Expert HRNet batches:  42%|████▏     | 67/159 [00:10<00:13,  6.63it/s][Aepoch  28/70 step  100/159 loss=1.1146
+
+Expert HRNet batches:  64%|██████▍   | 102/159 [00:15<00:08,  6.72it/s][A
+Expert HRNet batches:  86%|████████▌ | 137/159 [00:20<00:03,  6.83it/s][Aepoch  28/70 step  150/159 loss=1.1174
+epoch  28/70 step  159/159 loss=1.1170
+
+                                                                       [Aepoch  28/70 train_loss=1.1170 time=23.6s
+Expert HRNet epochs:  40%|████      | 28/70 [12:45<20:17, 28.99s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  19%|█▉        | 31/159 [00:05<00:21,  6.06it/s][Aepoch  29/70 step   50/159 loss=1.1077
+
+Expert HRNet batches:  40%|████      | 64/159 [00:10<00:15,  6.30it/s][A
+Expert HRNet batches:  62%|██████▏   | 98/159 [00:15<00:09,  6.50it/s][Aepoch  29/70 step  100/159 loss=1.1042
+
+Expert HRNet batches:  84%|████████▎ | 133/159 [00:20<00:03,  6.67it/s][Aepoch  29/70 step  150/159 loss=1.1074
+epoch  29/70 step  159/159 loss=1.1119
+
+                                                                       [Aepoch  29/70 train_loss=1.1119 time=24.3s
+Expert HRNet epochs:  41%|████▏     | 29/70 [13:16<20:08, 29.48s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  20%|██        | 32/159 [00:05<00:20,  6.33it/s][Aepoch  30/70 step   50/159 loss=1.1074
+
+Expert HRNet batches:  42%|████▏     | 67/159 [00:10<00:13,  6.72it/s][Aepoch  30/70 step  100/159 loss=1.1184
+
+Expert HRNet batches:  64%|██████▍   | 102/159 [00:15<00:08,  6.80it/s][A
+Expert HRNet batches:  86%|████████▌ | 136/159 [00:20<00:03,  6.76it/s][Aepoch  30/70 step  150/159 loss=1.1142
+epoch  30/70 step  159/159 loss=1.1153
+
+                                                                       [Aepoch  30/70 train_loss=1.1153 time=23.6s
+Expert HRNet epochs:  43%|████▎     | 30/70 [13:46<19:48, 29.70s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  19%|█▉        | 31/159 [00:05<00:20,  6.15it/s][Aepoch  31/70 step   50/159 loss=1.1210
+
+Expert HRNet batches:  42%|████▏     | 66/159 [00:10<00:14,  6.63it/s][Aepoch  31/70 step  100/159 loss=1.1099
+
+Expert HRNet batches:  65%|██████▌   | 104/159 [00:15<00:07,  7.05it/s][A
+Expert HRNet batches:  89%|████████▉ | 142/159 [00:20<00:02,  7.25it/s][Aepoch  31/70 step  150/159 loss=1.1004
+epoch  31/70 step  159/159 loss=1.1037
+
+                                                                       [Aepoch  31/70 train_loss=1.1037 time=22.5s
+Expert HRNet epochs:  44%|████▍     | 31/70 [14:15<19:11, 29.52s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  20%|██        | 32/159 [00:05<00:19,  6.38it/s][Aepoch  32/70 step   50/159 loss=1.0897
+
+Expert HRNet batches:  43%|████▎     | 68/159 [00:10<00:13,  6.74it/s][Aepoch  32/70 step  100/159 loss=1.1031
+
+Expert HRNet batches:  65%|██████▍   | 103/159 [00:15<00:08,  6.86it/s][A
+Expert HRNet batches:  87%|████████▋ | 138/159 [00:20<00:03,  6.89it/s][Aepoch  32/70 step  150/159 loss=1.0985
+epoch  32/70 step  159/159 loss=1.1006
+
+                                                                       [Aepoch  32/70 train_loss=1.1006 time=23.3s
+Expert HRNet epochs:  46%|████▌     | 32/70 [14:45<18:53, 29.82s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  21%|██▏       | 34/159 [00:05<00:18,  6.61it/s][Aepoch  33/70 step   50/159 loss=1.0861
+
+Expert HRNet batches:  44%|████▍     | 70/159 [00:10<00:13,  6.83it/s][Aepoch  33/70 step  100/159 loss=1.0997
+
+Expert HRNet batches:  66%|██████▌   | 105/159 [00:15<00:07,  6.89it/s][A
+Expert HRNet batches:  89%|████████▉ | 142/159 [00:20<00:02,  7.01it/s][Aepoch  33/70 step  150/159 loss=1.1020
+epoch  33/70 step  159/159 loss=1.1025
+
+                                                                       [Aepoch  33/70 train_loss=1.1025 time=22.9s
+Expert HRNet epochs:  47%|████▋     | 33/70 [15:13<18:01, 29.24s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  23%|██▎       | 36/159 [00:05<00:17,  7.10it/s][Aepoch  34/70 step   50/159 loss=1.1095
+
+Expert HRNet batches:  46%|████▌     | 73/159 [00:10<00:11,  7.25it/s][Aepoch  34/70 step  100/159 loss=1.1077
+
+Expert HRNet batches:  69%|██████▉   | 110/159 [00:15<00:06,  7.02it/s][A
+Expert HRNet batches:  92%|█████████▏| 146/159 [00:20<00:01,  6.97it/s][Aepoch  34/70 step  150/159 loss=1.0996
+epoch  34/70 step  159/159 loss=1.0969
+
+                                                                       [Aepoch  34/70 train_loss=1.0969 time=22.8s
+Expert HRNet epochs:  49%|████▊     | 34/70 [15:41<17:14, 28.73s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  21%|██▏       | 34/159 [00:05<00:18,  6.73it/s][Aepoch  35/70 step   50/159 loss=1.1206
+
+Expert HRNet batches:  46%|████▌     | 73/159 [00:10<00:11,  7.27it/s][Aepoch  35/70 step  100/159 loss=1.1065
+
+Expert HRNet batches:  70%|███████   | 112/159 [00:15<00:06,  7.43it/s][Aepoch  35/70 step  150/159 loss=1.1022
+
+Expert HRNet batches:  94%|█████████▍| 150/159 [00:20<00:01,  7.43it/s][Aepoch  35/70 step  159/159 loss=1.1010
+
+                                                                       [Aepoch  35/70 train_loss=1.1010 time=21.8s
+Expert HRNet epochs:  50%|█████     | 35/70 [16:08<16:29, 28.28s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  20%|██        | 32/159 [00:05<00:19,  6.38it/s][Aepoch  36/70 step   50/159 loss=1.0856
+
+Expert HRNet batches:  42%|████▏     | 67/159 [00:10<00:13,  6.73it/s][Aepoch  36/70 step  100/159 loss=1.0982
+
+Expert HRNet batches:  64%|██████▍   | 102/159 [00:15<00:08,  6.85it/s][A
+Expert HRNet batches:  87%|████████▋ | 138/159 [00:20<00:03,  6.90it/s][Aepoch  36/70 step  150/159 loss=1.0952
+epoch  36/70 step  159/159 loss=1.0979
+
+                                                                       [Aepoch  36/70 train_loss=1.0979 time=23.3s
+Expert HRNet epochs:  51%|█████▏    | 36/70 [16:36<16:02, 28.30s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  19%|█▉        | 31/159 [00:05<00:21,  6.05it/s][Aepoch  37/70 step   50/159 loss=1.0669
+
+Expert HRNet batches:  43%|████▎     | 69/159 [00:10<00:13,  6.91it/s][Aepoch  37/70 step  100/159 loss=1.0783
+
+Expert HRNet batches:  65%|██████▌   | 104/159 [00:15<00:07,  6.95it/s][A
+Expert HRNet batches:  87%|████████▋ | 139/159 [00:20<00:02,  6.95it/s][Aepoch  37/70 step  150/159 loss=1.0813
+epoch  37/70 step  159/159 loss=1.0837
+
+                                                                       [Aepoch  37/70 train_loss=1.0837 time=23.3s
+Expert HRNet epochs:  53%|█████▎    | 37/70 [17:04<15:31, 28.22s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  20%|██        | 32/159 [00:05<00:19,  6.38it/s][Aepoch  38/70 step   50/159 loss=1.0712
+
+Expert HRNet batches:  42%|████▏     | 67/159 [00:10<00:13,  6.69it/s][Aepoch  38/70 step  100/159 loss=1.0818
+
+Expert HRNet batches:  65%|██████▌   | 104/159 [00:15<00:07,  6.99it/s][A
+Expert HRNet batches:  87%|████████▋ | 139/159 [00:20<00:02,  7.00it/s][Aepoch  38/70 step  150/159 loss=1.0869
+epoch  38/70 step  159/159 loss=1.0890
+
+                                                                       [Aepoch  38/70 train_loss=1.0890 time=22.8s
+Expert HRNet epochs:  54%|█████▍    | 38/70 [17:32<14:54, 27.95s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  20%|██        | 32/159 [00:05<00:19,  6.38it/s][Aepoch  39/70 step   50/159 loss=1.0807
+
+Expert HRNet batches:  43%|████▎     | 68/159 [00:10<00:13,  6.77it/s][Aepoch  39/70 step  100/159 loss=1.0839
+
+Expert HRNet batches:  67%|██████▋   | 106/159 [00:15<00:07,  7.07it/s][A
+Expert HRNet batches:  89%|████████▉ | 142/159 [00:20<00:02,  6.98it/s][Aepoch  39/70 step  150/159 loss=1.0909
+epoch  39/70 step  159/159 loss=1.0907
+
+                                                                       [Aepoch  39/70 train_loss=1.0907 time=23.1s
+Expert HRNet epochs:  56%|█████▌    | 39/70 [17:59<14:21, 27.79s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  20%|██        | 32/159 [00:05<00:20,  6.31it/s][Aepoch  40/70 step   50/159 loss=1.0989
+
+Expert HRNet batches:  43%|████▎     | 68/159 [00:10<00:13,  6.71it/s][Aepoch  40/70 step  100/159 loss=1.0924
+
+Expert HRNet batches:  65%|██████▍   | 103/159 [00:15<00:08,  6.77it/s][A
+Expert HRNet batches:  86%|████████▌ | 137/159 [00:20<00:03,  6.75it/s][Aepoch  40/70 step  150/159 loss=1.0919
+epoch  40/70 step  159/159 loss=1.0884
+
+                                                                       [Aepoch  40/70 train_loss=1.0884 time=23.7s
+Expert HRNet epochs:  57%|█████▋    | 40/70 [18:28<13:59, 27.98s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  22%|██▏       | 35/159 [00:05<00:18,  6.83it/s][Aepoch  41/70 step   50/159 loss=1.0715
+
+Expert HRNet batches:  45%|████▌     | 72/159 [00:10<00:12,  7.14it/s][Aepoch  41/70 step  100/159 loss=1.0822
+
+Expert HRNet batches:  69%|██████▊   | 109/159 [00:15<00:06,  7.23it/s][A
+Expert HRNet batches:  92%|█████████▏| 146/159 [00:20<00:01,  7.03it/s][Aepoch  41/70 step  150/159 loss=1.0834
+epoch  41/70 step  159/159 loss=1.0843
+
+                                                                       [Aepoch  41/70 train_loss=1.0843 time=22.7s
+Expert HRNet epochs:  59%|█████▊    | 41/70 [18:55<13:22, 27.69s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  22%|██▏       | 35/159 [00:05<00:17,  6.94it/s][Aepoch  42/70 step   50/159 loss=1.0706
+
+Expert HRNet batches:  46%|████▌     | 73/159 [00:10<00:11,  7.26it/s][Aepoch  42/70 step  100/159 loss=1.0673
+
+Expert HRNet batches:  69%|██████▉   | 110/159 [00:15<00:06,  7.13it/s][A
+Expert HRNet batches:  92%|█████████▏| 146/159 [00:20<00:01,  6.95it/s][Aepoch  42/70 step  150/159 loss=1.0780
+epoch  42/70 step  159/159 loss=1.0777
+
+                                                                       [Aepoch  42/70 train_loss=1.0777 time=22.8s
+Expert HRNet epochs:  60%|██████    | 42/70 [19:22<12:52, 27.60s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  20%|██        | 32/159 [00:05<00:20,  6.20it/s][Aepoch  43/70 step   50/159 loss=1.0821
+
+Expert HRNet batches:  42%|████▏     | 67/159 [00:10<00:13,  6.64it/s][Aepoch  43/70 step  100/159 loss=1.0820
+
+Expert HRNet batches:  64%|██████▍   | 102/159 [00:15<00:08,  6.73it/s][A
+Expert HRNet batches:  86%|████████▌ | 137/159 [00:20<00:03,  6.77it/s][Aepoch  43/70 step  150/159 loss=1.0824
+epoch  43/70 step  159/159 loss=1.0834
+
+                                                                       [Aepoch  43/70 train_loss=1.0834 time=23.6s
+Expert HRNet epochs:  61%|██████▏   | 43/70 [19:51<12:34, 27.94s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  19%|█▉        | 31/159 [00:05<00:20,  6.11it/s][Aepoch  44/70 step   50/159 loss=1.0649
+
+Expert HRNet batches:  42%|████▏     | 67/159 [00:10<00:13,  6.71it/s][Aepoch  44/70 step  100/159 loss=1.0767
+
+Expert HRNet batches:  64%|██████▍   | 102/159 [00:15<00:08,  6.79it/s][A
+Expert HRNet batches:  87%|████████▋ | 138/159 [00:20<00:03,  6.91it/s][Aepoch  44/70 step  150/159 loss=1.0823
+epoch  44/70 step  159/159 loss=1.0831
+
+                                                                       [Aepoch  44/70 train_loss=1.0831 time=23.4s
+Expert HRNet epochs:  63%|██████▎   | 44/70 [20:20<12:14, 28.24s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  19%|█▉        | 31/159 [00:05<00:21,  6.05it/s][Aepoch  45/70 step   50/159 loss=1.0783
+
+Expert HRNet batches:  42%|████▏     | 66/159 [00:10<00:14,  6.54it/s][Aepoch  45/70 step  100/159 loss=1.0806
+
+Expert HRNet batches:  64%|██████▍   | 102/159 [00:15<00:08,  6.83it/s][A
+Expert HRNet batches:  86%|████████▌ | 137/159 [00:20<00:03,  6.86it/s][Aepoch  45/70 step  150/159 loss=1.0775
+epoch  45/70 step  159/159 loss=1.0772
+
+                                                                       [Aepoch  45/70 train_loss=1.0772 time=23.5s
+Expert HRNet epochs:  64%|██████▍   | 45/70 [20:49<11:52, 28.50s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  20%|██        | 32/159 [00:05<00:19,  6.37it/s][Aepoch  46/70 step   50/159 loss=1.0521
+
+Expert HRNet batches:  42%|████▏     | 67/159 [00:10<00:13,  6.71it/s][Aepoch  46/70 step  100/159 loss=1.0665
+
+Expert HRNet batches:  64%|██████▍   | 102/159 [00:15<00:08,  6.78it/s][A
+Expert HRNet batches:  86%|████████▌ | 137/159 [00:20<00:03,  6.84it/s][Aepoch  46/70 step  150/159 loss=1.0760
+epoch  46/70 step  159/159 loss=1.0758
+
+                                                                       [Aepoch  46/70 train_loss=1.0758 time=23.5s
+Expert HRNet epochs:  66%|██████▌   | 46/70 [21:18<11:26, 28.61s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  21%|██        | 33/159 [00:05<00:19,  6.45it/s][Aepoch  47/70 step   50/159 loss=1.0788
+
+Expert HRNet batches:  43%|████▎     | 68/159 [00:10<00:13,  6.75it/s][Aepoch  47/70 step  100/159 loss=1.0813
+
+Expert HRNet batches:  65%|██████▍   | 103/159 [00:15<00:08,  6.82it/s][A
+Expert HRNet batches:  87%|████████▋ | 139/159 [00:20<00:02,  6.94it/s][Aepoch  47/70 step  150/159 loss=1.0759
+epoch  47/70 step  159/159 loss=1.0742
+
+                                                                       [Aepoch  47/70 train_loss=1.0742 time=23.1s
+Expert HRNet epochs:  67%|██████▋   | 47/70 [21:45<10:51, 28.33s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  21%|██        | 33/159 [00:05<00:19,  6.47it/s][Aepoch  48/70 step   50/159 loss=1.0492
+
+Expert HRNet batches:  43%|████▎     | 69/159 [00:10<00:13,  6.80it/s][Aepoch  48/70 step  100/159 loss=1.0599
+
+Expert HRNet batches:  67%|██████▋   | 106/159 [00:15<00:07,  7.02it/s][A
+Expert HRNet batches:  91%|█████████ | 145/159 [00:20<00:01,  7.26it/s][Aepoch  48/70 step  150/159 loss=1.0667
+epoch  48/70 step  159/159 loss=1.0656
+
+                                                                       [Aepoch  48/70 train_loss=1.0656 time=22.3s
+Expert HRNet epochs:  69%|██████▊   | 48/70 [22:13<10:21, 28.26s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  20%|██        | 32/159 [00:05<00:20,  6.35it/s][Aepoch  49/70 step   50/159 loss=1.0570
+
+Expert HRNet batches:  42%|████▏     | 67/159 [00:10<00:13,  6.73it/s][Aepoch  49/70 step  100/159 loss=1.0749
+
+Expert HRNet batches:  64%|██████▎   | 101/159 [00:15<00:08,  6.67it/s][A
+Expert HRNet batches:  86%|████████▌ | 136/159 [00:20<00:03,  6.79it/s][Aepoch  49/70 step  150/159 loss=1.0773
+epoch  49/70 step  159/159 loss=1.0787
+
+                                                                       [Aepoch  49/70 train_loss=1.0787 time=23.6s
+Expert HRNet epochs:  70%|███████   | 49/70 [22:43<10:01, 28.64s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  21%|██        | 33/159 [00:05<00:19,  6.47it/s][Aepoch  50/70 step   50/159 loss=1.0666
+
+Expert HRNet batches:  43%|████▎     | 68/159 [00:10<00:13,  6.77it/s][Aepoch  50/70 step  100/159 loss=1.0709
+
+Expert HRNet batches:  65%|██████▍   | 103/159 [00:15<00:08,  6.83it/s][A
+Expert HRNet batches:  87%|████████▋ | 138/159 [00:20<00:03,  6.86it/s][Aepoch  50/70 step  150/159 loss=1.0748
+epoch  50/70 step  159/159 loss=1.0726
+
+                                                                       [Aepoch  50/70 train_loss=1.0726 time=23.3s
+Expert HRNet epochs:  71%|███████▏  | 50/70 [23:13<09:41, 29.06s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  21%|██▏       | 34/159 [00:05<00:18,  6.79it/s][Aepoch  51/70 step   50/159 loss=1.0531
+
+Expert HRNet batches:  44%|████▍     | 70/159 [00:10<00:12,  6.92it/s][Aepoch  51/70 step  100/159 loss=1.0537
+
+Expert HRNet batches:  66%|██████▌   | 105/159 [00:15<00:07,  6.87it/s][A
+Expert HRNet batches:  88%|████████▊ | 140/159 [00:20<00:02,  6.74it/s][Aepoch  51/70 step  150/159 loss=1.0641
+epoch  51/70 step  159/159 loss=1.0660
+
+                                                                       [Aepoch  51/70 train_loss=1.0660 time=23.5s
+Expert HRNet epochs:  73%|███████▎  | 51/70 [23:42<09:14, 29.19s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  21%|██        | 33/159 [00:05<00:19,  6.46it/s][Aepoch  52/70 step   50/159 loss=1.0692
+
+Expert HRNet batches:  43%|████▎     | 69/159 [00:10<00:13,  6.87it/s][Aepoch  52/70 step  100/159 loss=1.0649
+
+Expert HRNet batches:  65%|██████▌   | 104/159 [00:15<00:07,  6.88it/s][A
+Expert HRNet batches:  87%|████████▋ | 139/159 [00:20<00:02,  6.88it/s][Aepoch  52/70 step  150/159 loss=1.0693
+epoch  52/70 step  159/159 loss=1.0683
+
+                                                                       [Aepoch  52/70 train_loss=1.0683 time=23.3s
+Expert HRNet epochs:  74%|███████▍  | 52/70 [24:11<08:42, 29.04s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  19%|█▉        | 31/159 [00:05<00:20,  6.19it/s][Aepoch  53/70 step   50/159 loss=1.0922
+
+Expert HRNet batches:  42%|████▏     | 67/159 [00:10<00:13,  6.75it/s][Aepoch  53/70 step  100/159 loss=1.0774
+
+Expert HRNet batches:  64%|██████▍   | 102/159 [00:15<00:08,  6.84it/s][A
+Expert HRNet batches:  87%|████████▋ | 138/159 [00:20<00:03,  6.93it/s][Aepoch  53/70 step  150/159 loss=1.0672
+epoch  53/70 step  159/159 loss=1.0638
+
+                                                                       [Aepoch  53/70 train_loss=1.0638 time=23.3s
+Expert HRNet epochs:  76%|███████▌  | 53/70 [24:39<08:08, 28.71s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  21%|██        | 33/159 [00:05<00:19,  6.54it/s][Aepoch  54/70 step   50/159 loss=1.0396
+
+Expert HRNet batches:  43%|████▎     | 69/159 [00:10<00:13,  6.84it/s][Aepoch  54/70 step  100/159 loss=1.0525
+
+Expert HRNet batches:  65%|██████▌   | 104/159 [00:15<00:07,  6.91it/s][A
+Expert HRNet batches:  87%|████████▋ | 139/159 [00:20<00:02,  6.94it/s][Aepoch  54/70 step  150/159 loss=1.0602
+epoch  54/70 step  159/159 loss=1.0615
+
+                                                                       [Aepoch  54/70 train_loss=1.0615 time=23.2s
+Expert HRNet epochs:  77%|███████▋  | 54/70 [25:07<07:37, 28.58s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  20%|██        | 32/159 [00:05<00:19,  6.38it/s][Aepoch  55/70 step   50/159 loss=1.0646
+
+Expert HRNet batches:  43%|████▎     | 68/159 [00:10<00:13,  6.76it/s][Aepoch  55/70 step  100/159 loss=1.0721
+
+Expert HRNet batches:  65%|██████▌   | 104/159 [00:15<00:07,  6.91it/s][A
+Expert HRNet batches:  87%|████████▋ | 139/159 [00:20<00:02,  6.95it/s][Aepoch  55/70 step  150/159 loss=1.0639
+epoch  55/70 step  159/159 loss=1.0642
+
+                                                                       [Aepoch  55/70 train_loss=1.0642 time=23.3s
+Expert HRNet epochs:  79%|███████▊  | 55/70 [25:35<07:05, 28.38s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  21%|██        | 33/159 [00:05<00:19,  6.46it/s][Aepoch  56/70 step   50/159 loss=1.0472
+
+Expert HRNet batches:  43%|████▎     | 68/159 [00:10<00:13,  6.77it/s][Aepoch  56/70 step  100/159 loss=1.0491
+
+Expert HRNet batches:  65%|██████▌   | 104/159 [00:15<00:07,  6.89it/s][A
+Expert HRNet batches:  87%|████████▋ | 139/159 [00:20<00:02,  6.90it/s][Aepoch  56/70 step  150/159 loss=1.0523
+epoch  56/70 step  159/159 loss=1.0532
+
+                                                                       [Aepoch  56/70 train_loss=1.0532 time=23.3s
+Expert HRNet epochs:  80%|████████  | 56/70 [26:04<06:37, 28.38s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  19%|█▉        | 31/159 [00:05<00:21,  6.08it/s][Aepoch  57/70 step   50/159 loss=1.0571
+
+Expert HRNet batches:  42%|████▏     | 66/159 [00:10<00:14,  6.54it/s][Aepoch  57/70 step  100/159 loss=1.0491
+
+Expert HRNet batches:  64%|██████▎   | 101/159 [00:15<00:08,  6.74it/s][A
+Expert HRNet batches:  86%|████████▌ | 137/159 [00:20<00:03,  6.86it/s][Aepoch  57/70 step  150/159 loss=1.0587
+epoch  57/70 step  159/159 loss=1.0601
+
+                                                                       [Aepoch  57/70 train_loss=1.0601 time=23.4s
+Expert HRNet epochs:  81%|████████▏ | 57/70 [26:31<06:05, 28.14s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  23%|██▎       | 36/159 [00:05<00:17,  7.12it/s][Aepoch  58/70 step   50/159 loss=1.0404
+
+Expert HRNet batches:  47%|████▋     | 75/159 [00:10<00:11,  7.43it/s][Aepoch  58/70 step  100/159 loss=1.0474
+
+Expert HRNet batches:  71%|███████   | 113/159 [00:15<00:06,  7.44it/s][Aepoch  58/70 step  150/159 loss=1.0519
+
+Expert HRNet batches:  95%|█████████▍| 151/159 [00:20<00:01,  7.22it/s][Aepoch  58/70 step  159/159 loss=1.0532
+
+                                                                       [Aepoch  58/70 train_loss=1.0532 time=22.0s
+Expert HRNet epochs:  83%|████████▎ | 58/70 [26:58<05:32, 27.71s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  19%|█▉        | 31/159 [00:05<00:21,  6.08it/s][Aepoch  59/70 step   50/159 loss=1.0619
+
+Expert HRNet batches:  42%|████▏     | 66/159 [00:10<00:14,  6.57it/s][Aepoch  59/70 step  100/159 loss=1.0635
+
+Expert HRNet batches:  64%|██████▍   | 102/159 [00:15<00:08,  6.76it/s][A
+Expert HRNet batches:  86%|████████▌ | 137/159 [00:20<00:03,  6.80it/s][Aepoch  59/70 step  150/159 loss=1.0557
+epoch  59/70 step  159/159 loss=1.0567
+
+                                                                       [Aepoch  59/70 train_loss=1.0567 time=23.8s
+Expert HRNet epochs:  84%|████████▍ | 59/70 [27:26<05:07, 27.95s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  21%|██        | 33/159 [00:05<00:19,  6.45it/s][Aepoch  60/70 step   50/159 loss=1.0423
+
+Expert HRNet batches:  43%|████▎     | 69/159 [00:10<00:13,  6.78it/s][Aepoch  60/70 step  100/159 loss=1.0519
+
+Expert HRNet batches:  65%|██████▌   | 104/159 [00:15<00:08,  6.87it/s][A
+Expert HRNet batches:  87%|████████▋ | 139/159 [00:20<00:02,  6.91it/s][Aepoch  60/70 step  150/159 loss=1.0525
+epoch  60/70 step  159/159 loss=1.0516
+
+                                                                       [Aepoch  60/70 train_loss=1.0516 time=23.2s
+Expert HRNet epochs:  86%|████████▌ | 60/70 [27:55<04:40, 28.02s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  20%|██        | 32/159 [00:05<00:19,  6.39it/s][Aepoch  61/70 step   50/159 loss=1.0771
+
+Expert HRNet batches:  42%|████▏     | 67/159 [00:10<00:13,  6.74it/s][Aepoch  61/70 step  100/159 loss=1.0551
+
+Expert HRNet batches:  64%|██████▍   | 102/159 [00:15<00:08,  6.84it/s][A
+Expert HRNet batches:  86%|████████▌ | 137/159 [00:20<00:03,  6.85it/s][Aepoch  61/70 step  150/159 loss=1.0507
+epoch  61/70 step  159/159 loss=1.0522
+
+                                                                       [Aepoch  61/70 train_loss=1.0522 time=23.4s
+Expert HRNet epochs:  87%|████████▋ | 61/70 [28:23<04:12, 28.07s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  21%|██        | 33/159 [00:05<00:19,  6.48it/s][Aepoch  62/70 step   50/159 loss=1.0439
+
+Expert HRNet batches:  43%|████▎     | 69/159 [00:10<00:13,  6.84it/s][Aepoch  62/70 step  100/159 loss=1.0440
+
+Expert HRNet batches:  66%|██████▌   | 105/159 [00:15<00:07,  6.98it/s][A
+Expert HRNet batches:  89%|████████▊ | 141/159 [00:20<00:02,  7.00it/s][Aepoch  62/70 step  150/159 loss=1.0479
+epoch  62/70 step  159/159 loss=1.0467
+
+                                                                       [Aepoch  62/70 train_loss=1.0467 time=23.0s
+Expert HRNet epochs:  89%|████████▊ | 62/70 [28:51<03:43, 27.97s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  23%|██▎       | 36/159 [00:05<00:17,  7.07it/s][Aepoch  63/70 step   50/159 loss=1.0331
+
+Expert HRNet batches:  47%|████▋     | 75/159 [00:10<00:11,  7.47it/s][Aepoch  63/70 step  100/159 loss=1.0506
+
+Expert HRNet batches:  71%|███████   | 113/159 [00:15<00:06,  7.51it/s][Aepoch  63/70 step  150/159 loss=1.0569
+
+Expert HRNet batches:  96%|█████████▌| 152/159 [00:20<00:00,  7.56it/s][Aepoch  63/70 step  159/159 loss=1.0557
+
+                                                                       [Aepoch  63/70 train_loss=1.0557 time=21.3s
+Expert HRNet epochs:  90%|█████████ | 63/70 [29:17<03:12, 27.55s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  19%|█▉        | 31/159 [00:05<00:20,  6.17it/s][Aepoch  64/70 step   50/159 loss=1.0273
+
+Expert HRNet batches:  42%|████▏     | 66/159 [00:10<00:14,  6.60it/s][Aepoch  64/70 step  100/159 loss=1.0375
+
+Expert HRNet batches:  64%|██████▍   | 102/159 [00:15<00:08,  6.80it/s][A
+Expert HRNet batches:  86%|████████▌ | 137/159 [00:20<00:03,  6.86it/s][Aepoch  64/70 step  150/159 loss=1.0455
+epoch  64/70 step  159/159 loss=1.0448
+
+                                                                       [Aepoch  64/70 train_loss=1.0448 time=23.6s
+Expert HRNet epochs:  91%|█████████▏| 64/70 [29:46<02:46, 27.80s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  19%|█▉        | 31/159 [00:05<00:21,  6.06it/s][Aepoch  65/70 step   50/159 loss=1.0378
+
+Expert HRNet batches:  43%|████▎     | 68/159 [00:10<00:13,  6.81it/s][Aepoch  65/70 step  100/159 loss=1.0495
+
+Expert HRNet batches:  67%|██████▋   | 107/159 [00:15<00:07,  7.19it/s][A
+Expert HRNet batches:  91%|█████████ | 145/159 [00:20<00:01,  7.33it/s][Aepoch  65/70 step  150/159 loss=1.0520
+epoch  65/70 step  159/159 loss=1.0497
+
+                                                                       [Aepoch  65/70 train_loss=1.0497 time=22.5s
+Expert HRNet epochs:  93%|█████████▎| 65/70 [30:14<02:19, 27.90s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  21%|██        | 33/159 [00:05<00:19,  6.47it/s][Aepoch  66/70 step   50/159 loss=1.0658
+
+Expert HRNet batches:  43%|████▎     | 68/159 [00:10<00:13,  6.75it/s][Aepoch  66/70 step  100/159 loss=1.0599
+
+Expert HRNet batches:  65%|██████▌   | 104/159 [00:15<00:08,  6.86it/s][A
+Expert HRNet batches:  87%|████████▋ | 139/159 [00:20<00:02,  6.85it/s][Aepoch  66/70 step  150/159 loss=1.0600
+epoch  66/70 step  159/159 loss=1.0585
+
+                                                                       [Aepoch  66/70 train_loss=1.0585 time=23.5s
+Expert HRNet epochs:  94%|█████████▍| 66/70 [30:44<01:54, 28.67s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  22%|██▏       | 35/159 [00:05<00:17,  6.94it/s][Aepoch  67/70 step   50/159 loss=1.0361
+
+Expert HRNet batches:  47%|████▋     | 74/159 [00:10<00:11,  7.37it/s][Aepoch  67/70 step  100/159 loss=1.0451
+
+Expert HRNet batches:  71%|███████   | 113/159 [00:15<00:06,  7.51it/s][Aepoch  67/70 step  150/159 loss=1.0501
+
+Expert HRNet batches:  96%|█████████▌| 152/159 [00:20<00:00,  7.55it/s][Aepoch  67/70 step  159/159 loss=1.0515
+
+                                                                       [Aepoch  67/70 train_loss=1.0515 time=21.3s
+Expert HRNet epochs:  96%|█████████▌| 67/70 [31:11<01:24, 28.00s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  22%|██▏       | 35/159 [00:05<00:18,  6.88it/s][Aepoch  68/70 step   50/159 loss=1.0647
+
+Expert HRNet batches:  46%|████▌     | 73/159 [00:10<00:11,  7.23it/s][Aepoch  68/70 step  100/159 loss=1.0647
+
+Expert HRNet batches:  69%|██████▉   | 110/159 [00:15<00:06,  7.17it/s][A
+Expert HRNet batches:  92%|█████████▏| 147/159 [00:20<00:01,  7.22it/s][Aepoch  68/70 step  150/159 loss=1.0589
+epoch  68/70 step  159/159 loss=1.0593
+
+                                                                       [Aepoch  68/70 train_loss=1.0593 time=22.2s
+Expert HRNet epochs:  97%|█████████▋| 68/70 [31:38<00:55, 27.79s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  22%|██▏       | 35/159 [00:05<00:17,  6.99it/s][Aepoch  69/70 step   50/159 loss=1.0492
+
+Expert HRNet batches:  47%|████▋     | 74/159 [00:10<00:11,  7.35it/s][Aepoch  69/70 step  100/159 loss=1.0498
+
+Expert HRNet batches:  70%|██████▉   | 111/159 [00:15<00:06,  7.12it/s][A
+Expert HRNet batches:  92%|█████████▏| 147/159 [00:20<00:01,  7.05it/s][Aepoch  69/70 step  150/159 loss=1.0572
+epoch  69/70 step  159/159 loss=1.0568
+
+                                                                       [Aepoch  69/70 train_loss=1.0568 time=22.6s
+Expert HRNet epochs:  99%|█████████▊| 69/70 [32:06<00:27, 27.77s/it]
+Expert HRNet batches:   0%|          | 0/159 [00:00<?, ?it/s][A
+Expert HRNet batches:  20%|██        | 32/159 [00:05<00:19,  6.40it/s][Aepoch  70/70 step   50/159 loss=1.0441
+
+Expert HRNet batches:  43%|████▎     | 68/159 [00:10<00:13,  6.78it/s][Aepoch  70/70 step  100/159 loss=1.0447
+
+Expert HRNet batches:  67%|██████▋   | 106/159 [00:15<00:07,  7.13it/s][A
+Expert HRNet batches:  91%|█████████ | 144/159 [00:20<00:02,  7.27it/s][Aepoch  70/70 step  150/159 loss=1.0485
+epoch  70/70 step  159/159 loss=1.0490
+
+                                                                       [Aepoch  70/70 train_loss=1.0490 time=22.3s
+Expert HRNet epochs: 100%|██████████| 70/70 [32:33<00:00, 27.52s/it]Expert HRNet epochs: 100%|██████████| 70/70 [32:33<00:00, 27.90s/it]
+done. final model: /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/outputs/runs/seed100_resume_20261012_120527_923014/jobs/E_hr_01/attempt_1/training/last.pt (evaluate it with evaluate.py)
+COMPLETE E_hr_01 image_miou=None

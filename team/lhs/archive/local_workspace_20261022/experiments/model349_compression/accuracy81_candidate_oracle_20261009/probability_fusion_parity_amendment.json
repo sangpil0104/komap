@@ -1,0 +1,10 @@
+{
+  "initial_attempt": "Model401 argmax parity failed before fusion output generation",
+  "initial_percent": 79.4180985137511,
+  "expected_percent": 79.41817088506788,
+  "cause": "Channel reordering changed class tie priority. Original matched_eval labels uses team order [2,0,1,3] then maps labels to route order.",
+  "correction": "Preserve original team class tie priority only for Model401 parity labels; probability mixture is unchanged.",
+  "corrected_gate": "Parent PNG exact and Model401 metric passed in live session81230",
+  "initial_server_directory": "parity_attempt1_empty_runs",
+  "gpu_used": false
+}

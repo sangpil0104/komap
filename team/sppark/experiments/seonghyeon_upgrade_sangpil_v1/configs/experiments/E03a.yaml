@@ -1,0 +1,7 @@
+inherit: E02_scratch.yaml
+run:
+  name: E03a_plain_finetune
+training:
+  recipe: finetune_existing
+  initialize_from: /Data3/sppark/komap/experiments/seonghyeon_seed10_v1/outputs/20260926T054632_756879Z/seed_00/last.pt
+  total_optimizer_updates: 4000

@@ -1,0 +1,1305 @@
+{
+  "HRNet347": {
+    "id": "347_05",
+    "group": "347",
+    "family": "HRNet347",
+    "archive": "models/HRNet347/347_05_seed3424.zip",
+    "image_miou": 0.8037393227519078,
+    "image_miou_percent": 80.37393227519078,
+    "delta_baseline_percentage_points": 0.11808674757056714,
+    "baseline_image_miou": 0.8025584552762022,
+    "image_count": 20,
+    "score_scope": "Full R+E+F ensemble on valid20 with this candidate inserted; not a standalone model score",
+    "fold_score_policy": "Fold members are evaluated together; no separately measured per-fold score",
+    "hr336_parent": {
+      "task_id": "336_05",
+      "seed": 3412,
+      "checkpoint_sha256": "076c0e31ad5e625a97b0fd6758d72290fae3e824228ee4a39e9460a0d18c6fe5",
+      "source_checkpoint": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/jobs/336_05/attempt_1/training/last.pt",
+      "included_in_this_repository": false
+    },
+    "checkpoints": [
+      {
+        "family": "HRNet347",
+        "group": "347",
+        "candidate_id": "347_05",
+        "task_id": "347_05",
+        "training_seed": 3424,
+        "fold": null,
+        "hr_slot": null,
+        "archive": "models/HRNet347/347_05_seed3424.zip",
+        "member": "347_05_seed3424/347_05/last.pt",
+        "checkpoint_sha256": "c45a4a066472cacf2040ed10e543413f482a906563d1fca3d8c61cbafece20f5",
+        "checkpoint_bytes": 308935373,
+        "deployed_weight_key": "R/weights/model347_hrnet_inverse_ce_finetune/last.pt",
+        "source_checkpoint": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/jobs/347_05/attempt_1/training/last.pt",
+        "candidate_ensemble_image_miou": 0.8037393227519078
+      }
+    ],
+    "images": [
+      {
+        "image": "A117_step4_sample2",
+        "image_miou": 0.868637537711579,
+        "class_iou": [
+          0.8405552536073075,
+          0.9642286227108282,
+          0.9425696033848765,
+          0.7271966711433038
+        ]
+      },
+      {
+        "image": "A11_step1_sample4",
+        "image_miou": 0.7963157761358695,
+        "class_iou": [
+          0.6089292066880114,
+          0.9431899167192686,
+          0.9658337737500108,
+          0.6673102073861867
+        ]
+      },
+      {
+        "image": "A11_step2_sample4",
+        "image_miou": 0.7773379371968766,
+        "class_iou": [
+          0.6446876859012493,
+          0.9181688164498893,
+          0.9314143147348283,
+          0.6150809317015397
+        ]
+      },
+      {
+        "image": "A125_step1_sample4",
+        "image_miou": 0.7936925012573515,
+        "class_iou": [
+          0.7929203481231607,
+          0.8020524164193313,
+          0.9462352916136616,
+          0.633561948873252
+        ]
+      },
+      {
+        "image": "A153_step3_sample3",
+        "image_miou": 0.7199134897946752,
+        "class_iou": [
+          0.762415448973961,
+          0.9393935269619185,
+          0.903016139995733,
+          0.2748288432470881
+        ]
+      },
+      {
+        "image": "A170_step4_sample3",
+        "image_miou": 0.8866663054387482,
+        "class_iou": [
+          0.9140983842786894,
+          0.9448668098195113,
+          0.9395318826510075,
+          0.7481681450057848
+        ]
+      },
+      {
+        "image": "A181_step1_sample1",
+        "image_miou": 0.7987137636580599,
+        "class_iou": [
+          0.8093794205187932,
+          0.8852529567407313,
+          0.9622412358208042,
+          0.5379814415519106
+        ]
+      },
+      {
+        "image": "A186_step2_sample2",
+        "image_miou": 0.8143977219702637,
+        "class_iou": [
+          0.9532417029055112,
+          0.8764427000349746,
+          0.9726758653240092,
+          0.45523061961656014
+        ]
+      },
+      {
+        "image": "A191_step4_sample3",
+        "image_miou": 0.8231637670560258,
+        "class_iou": [
+          0.7907298460424018,
+          0.9727536534083998,
+          0.9404633961150108,
+          0.5887081726582908
+        ]
+      },
+      {
+        "image": "A40_step3_sample3",
+        "image_miou": 0.8269668222725959,
+        "class_iou": [
+          0.8216524435649933,
+          0.9040171397964649,
+          0.9480393313607383,
+          0.6341583743681873
+        ]
+      },
+      {
+        "image": "A42_step2_sample4",
+        "image_miou": 0.8339962499890127,
+        "class_iou": [
+          0.8611768083448399,
+          0.8230070471302293,
+          0.9631504589856781,
+          0.6886506854953035
+        ]
+      },
+      {
+        "image": "A44_step4_sample3",
+        "image_miou": 0.8997691542186546,
+        "class_iou": [
+          0.9191412074490023,
+          0.946136281815447,
+          0.9707898600312918,
+          0.7630092675788771
+        ]
+      },
+      {
+        "image": "A55_step2_sample1",
+        "image_miou": 0.8203386501340092,
+        "class_iou": [
+          0.805553833116306,
+          0.903525408828581,
+          0.9520231020306859,
+          0.6202522565604639
+        ]
+      },
+      {
+        "image": "A59_step3_sample1",
+        "image_miou": 0.83190076194414,
+        "class_iou": [
+          0.8042994810971089,
+          0.9578043609140643,
+          0.9460667110884647,
+          0.6194324946769217
+        ]
+      },
+      {
+        "image": "A63_step1_sample4",
+        "image_miou": 0.846907324726403,
+        "class_iou": [
+          0.818144733621604,
+          0.9741236184241734,
+          0.943675553601407,
+          0.651685393258427
+        ]
+      },
+      {
+        "image": "A67_step1_sample1",
+        "image_miou": 0.7550712727963281,
+        "class_iou": [
+          0.5823009510996506,
+          0.8975551328119495,
+          0.8956107302907367,
+          0.6448182769829756
+        ]
+      },
+      {
+        "image": "A71_step2_sample1",
+        "image_miou": 0.5450663225145916,
+        "class_iou": [
+          0.6183771715621293,
+          0.0,
+          0.9202444468316205,
+          0.6416436716646166
+        ]
+      },
+      {
+        "image": "A72_step4_sample4",
+        "image_miou": 0.8717990667099381,
+        "class_iou": [
+          0.7814311794089915,
+          0.9536145065975876,
+          0.9433379467914498,
+          0.8088126340417235
+        ]
+      },
+      {
+        "image": "A74_step3_sample4",
+        "image_miou": 0.7456677155987743,
+        "class_iou": [
+          0.7744960760689049,
+          0.8938007957289081,
+          0.9349594274361491,
+          0.37941456316113503
+        ]
+      },
+      {
+        "image": "A7_step1_sample4",
+        "image_miou": 0.8184643139142614,
+        "class_iou": [
+          0.7297730495204713,
+          0.9055124857600839,
+          0.9640026573533715,
+          0.674569063023119
+        ]
+      }
+    ],
+    "archive_bytes": 286912180,
+    "archive_sha256": "5a4216ef688573909401d14394e2bb083aa8b812398ca8fcbabbf555a871b88f",
+    "archive_verified": true
+  },
+  "B4-326": {
+    "id": "326_set1",
+    "group": "326",
+    "family": "B4-326",
+    "archive": "models/B4-326/326_set1.zip",
+    "image_miou": 0.8030375658295739,
+    "image_miou_percent": 80.30375658295739,
+    "delta_baseline_percentage_points": 0.04791105533716866,
+    "baseline_image_miou": 0.8025584552762022,
+    "image_count": 20,
+    "score_scope": "Full R+E+F ensemble on valid20 with this candidate inserted; not a standalone model score",
+    "fold_score_policy": "Fold members are evaluated together; no separately measured per-fold score",
+    "hr336_parent": null,
+    "checkpoints": [
+      {
+        "family": "B4-326",
+        "group": "326",
+        "candidate_id": "326_set1",
+        "task_id": "326_02",
+        "training_seed": 3457,
+        "fold": 1,
+        "hr_slot": null,
+        "archive": "models/B4-326/326_set1.zip",
+        "member": "326_set1/326_02/last.pt",
+        "checkpoint_sha256": "cfc49d3f62bc66f0eef6d0411223380bfc28b343da77e9375bea69b273409e2a",
+        "checkpoint_bytes": 81649847,
+        "deployed_weight_key": "R/weights/model326_hybrid_fullstats_group_oof/fold1/last.pt",
+        "source_checkpoint": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/jobs/326_02/attempt_1/training/last.pt",
+        "candidate_ensemble_image_miou": 0.8030375658295739
+      },
+      {
+        "family": "B4-326",
+        "group": "326",
+        "candidate_id": "326_set1",
+        "task_id": "326_03",
+        "training_seed": 3458,
+        "fold": 2,
+        "hr_slot": null,
+        "archive": "models/B4-326/326_set1.zip",
+        "member": "326_set1/326_03/last.pt",
+        "checkpoint_sha256": "ab7fa2681825963c9857b37478417b97f3174cd28d6959577cd1561095bcebb5",
+        "checkpoint_bytes": 81649847,
+        "deployed_weight_key": "R/weights/model326_hybrid_fullstats_group_oof/fold2/last.pt",
+        "source_checkpoint": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/jobs/326_03/attempt_1/training/last.pt",
+        "candidate_ensemble_image_miou": 0.8030375658295739
+      }
+    ],
+    "images": [
+      {
+        "image": "A117_step4_sample2",
+        "image_miou": 0.8679312034006932,
+        "class_iou": [
+          0.8405216613933758,
+          0.9628440431289522,
+          0.9424524683265302,
+          0.7259066407539144
+        ]
+      },
+      {
+        "image": "A11_step1_sample4",
+        "image_miou": 0.8019599551503085,
+        "class_iou": [
+          0.6103928393833914,
+          0.952513966480447,
+          0.9659868073192507,
+          0.6789462074181452
+        ]
+      },
+      {
+        "image": "A11_step2_sample4",
+        "image_miou": 0.7718578134750371,
+        "class_iou": [
+          0.6430975638460633,
+          0.9139567218779951,
+          0.9310247997398835,
+          0.5993521684362065
+        ]
+      },
+      {
+        "image": "A125_step1_sample4",
+        "image_miou": 0.7926836654143353,
+        "class_iou": [
+          0.7932077096304146,
+          0.7984412604242458,
+          0.9462182672549999,
+          0.6328674243476811
+        ]
+      },
+      {
+        "image": "A153_step3_sample3",
+        "image_miou": 0.7227331323287008,
+        "class_iou": [
+          0.7623785568482225,
+          0.939514757310618,
+          0.9030120579067296,
+          0.28602715724923344
+        ]
+      },
+      {
+        "image": "A170_step4_sample3",
+        "image_miou": 0.8896173227656912,
+        "class_iou": [
+          0.9144764702172327,
+          0.9488919828286344,
+          0.9397844368115599,
+          0.7553164012053379
+        ]
+      },
+      {
+        "image": "A181_step1_sample1",
+        "image_miou": 0.7935278528319855,
+        "class_iou": [
+          0.8100853732532963,
+          0.8665129467485121,
+          0.9623016306365729,
+          0.5352114606895606
+        ]
+      },
+      {
+        "image": "A186_step2_sample2",
+        "image_miou": 0.8099687462277181,
+        "class_iou": [
+          0.9532128169231351,
+          0.8693677301968938,
+          0.9728355068912344,
+          0.44445893089960886
+        ]
+      },
+      {
+        "image": "A191_step4_sample3",
+        "image_miou": 0.8249534441630278,
+        "class_iou": [
+          0.7935235998874282,
+          0.9719762475257839,
+          0.9405232266078812,
+          0.5937907026310181
+        ]
+      },
+      {
+        "image": "A40_step3_sample3",
+        "image_miou": 0.8239564035815556,
+        "class_iou": [
+          0.8211805555555556,
+          0.9009222239991471,
+          0.9479910762168308,
+          0.6257317585546893
+        ]
+      },
+      {
+        "image": "A42_step2_sample4",
+        "image_miou": 0.8191313955135247,
+        "class_iou": [
+          0.8611356100229036,
+          0.8025000655840919,
+          0.96311656941315,
+          0.6497733370339532
+        ]
+      },
+      {
+        "image": "A44_step4_sample3",
+        "image_miou": 0.9006636300017945,
+        "class_iou": [
+          0.9188779558800191,
+          0.9473315300017771,
+          0.9707766219004994,
+          0.7656684122248826
+        ]
+      },
+      {
+        "image": "A55_step2_sample1",
+        "image_miou": 0.8208790729958304,
+        "class_iou": [
+          0.8057262360169996,
+          0.9038863623420682,
+          0.9520250485720029,
+          0.6218786450522507
+        ]
+      },
+      {
+        "image": "A59_step3_sample1",
+        "image_miou": 0.830658560868291,
+        "class_iou": [
+          0.8037945095187388,
+          0.9569712356374487,
+          0.9461424637666958,
+          0.6157260345502806
+        ]
+      },
+      {
+        "image": "A63_step1_sample4",
+        "image_miou": 0.8477448388537113,
+        "class_iou": [
+          0.819213487721775,
+          0.9749413242929281,
+          0.9435798054062694,
+          0.6532447379938726
+        ]
+      },
+      {
+        "image": "A67_step1_sample1",
+        "image_miou": 0.7574920634664944,
+        "class_iou": [
+          0.5821291213920317,
+          0.9039287978770871,
+          0.8956900128325116,
+          0.6482203217643473
+        ]
+      },
+      {
+        "image": "A71_step2_sample1",
+        "image_miou": 0.5483675615632198,
+        "class_iou": [
+          0.627085147255967,
+          0.0,
+          0.9193948343595888,
+          0.6469902646373235
+        ]
+      },
+      {
+        "image": "A72_step4_sample4",
+        "image_miou": 0.8677288497146998,
+        "class_iou": [
+          0.7825894652191395,
+          0.9390253660878611,
+          0.9432451437109959,
+          0.8060554238408022
+        ]
+      },
+      {
+        "image": "A74_step3_sample4",
+        "image_miou": 0.7451573554452019,
+        "class_iou": [
+          0.7750274131735226,
+          0.8917552017921998,
+          0.934907701734901,
+          0.3789391050801839
+        ]
+      },
+      {
+        "image": "A7_step1_sample4",
+        "image_miou": 0.8237384488296587,
+        "class_iou": [
+          0.7293373669309673,
+          0.9123752170689847,
+          0.9640476250282585,
+          0.6891935862904246
+        ]
+      }
+    ],
+    "archive_bytes": 151692625,
+    "archive_sha256": "77185ba3e80a87e533a8a526e2d24e1a78d4703850427d85cb7145679caacd4b",
+    "archive_verified": true
+  },
+  "B4-322": {
+    "id": "322_set2",
+    "group": "322",
+    "family": "B4-322",
+    "archive": "models/B4-322/322_set2.zip",
+    "image_miou": 0.8025805934883181,
+    "image_miou_percent": 80.25805934883181,
+    "delta_baseline_percentage_points": 0.0022138212115940803,
+    "baseline_image_miou": 0.8025584552762022,
+    "image_count": 20,
+    "score_scope": "Full R+E+F ensemble on valid20 with this candidate inserted; not a standalone model score",
+    "fold_score_policy": "Fold members are evaluated together; no separately measured per-fold score",
+    "hr336_parent": null,
+    "checkpoints": [
+      {
+        "family": "B4-322",
+        "group": "322",
+        "candidate_id": "322_set2",
+        "task_id": "322_02",
+        "training_seed": 3465,
+        "fold": 3,
+        "hr_slot": null,
+        "archive": "models/B4-322/322_set2.zip",
+        "member": "322_set2/322_02/last.pt",
+        "checkpoint_sha256": "9fbfb603689980a91c5a3728161da72c48a8d068bbc73362477bcb4a016dc569",
+        "checkpoint_bytes": 81649847,
+        "deployed_weight_key": "R/weights/model322_team_b4_group_oof/fold3/last.pt",
+        "source_checkpoint": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/jobs/322_02/attempt_1/training/last.pt",
+        "candidate_ensemble_image_miou": 0.8025805934883181
+      }
+    ],
+    "images": [
+      {
+        "image": "A117_step4_sample2",
+        "image_miou": 0.8680273029590784,
+        "class_iou": [
+          0.840627931648211,
+          0.9628315854410857,
+          0.942423791353335,
+          0.7262259033936818
+        ]
+      },
+      {
+        "image": "A11_step1_sample4",
+        "image_miou": 0.8030498976799909,
+        "class_iou": [
+          0.6026471114290824,
+          0.9588973866099546,
+          0.965918151563475,
+          0.6847369411174515
+        ]
+      },
+      {
+        "image": "A11_step2_sample4",
+        "image_miou": 0.770978900198046,
+        "class_iou": [
+          0.6427831654269843,
+          0.9121196576581441,
+          0.9308792529403652,
+          0.5981335247666906
+        ]
+      },
+      {
+        "image": "A125_step1_sample4",
+        "image_miou": 0.7923888272911584,
+        "class_iou": [
+          0.7930391712163902,
+          0.797890200906598,
+          0.946199272746324,
+          0.6324266642953215
+        ]
+      },
+      {
+        "image": "A153_step3_sample3",
+        "image_miou": 0.7202263837667234,
+        "class_iou": [
+          0.7623098406256794,
+          0.9391617907198259,
+          0.9030132983045003,
+          0.27642060541688795
+        ]
+      },
+      {
+        "image": "A170_step4_sample3",
+        "image_miou": 0.8895796911209939,
+        "class_iou": [
+          0.914309649059595,
+          0.9493674558960075,
+          0.9397962809427929,
+          0.7548453785855802
+        ]
+      },
+      {
+        "image": "A181_step1_sample1",
+        "image_miou": 0.7924530566707326,
+        "class_iou": [
+          0.8095296612157624,
+          0.866597047958977,
+          0.9622890401908808,
+          0.5313964773173099
+        ]
+      },
+      {
+        "image": "A186_step2_sample2",
+        "image_miou": 0.8103667955198964,
+        "class_iou": [
+          0.9532903699046421,
+          0.869921552570177,
+          0.9728324373107968,
+          0.44542282229396996
+        ]
+      },
+      {
+        "image": "A191_step4_sample3",
+        "image_miou": 0.82503928201951,
+        "class_iou": [
+          0.7935274446697268,
+          0.9728898389030812,
+          0.9404987764582687,
+          0.5932410680469637
+        ]
+      },
+      {
+        "image": "A40_step3_sample3",
+        "image_miou": 0.8257073041539755,
+        "class_iou": [
+          0.821756427018297,
+          0.9029104441751072,
+          0.9479954156413659,
+          0.6301669297811323
+        ]
+      },
+      {
+        "image": "A42_step2_sample4",
+        "image_miou": 0.816376651026788,
+        "class_iou": [
+          0.8610854748183241,
+          0.7984952397110547,
+          0.963099808655485,
+          0.6428260809222883
+        ]
+      },
+      {
+        "image": "A44_step4_sample3",
+        "image_miou": 0.901959489877369,
+        "class_iou": [
+          0.9190429536430671,
+          0.9487169350734063,
+          0.9707742773843226,
+          0.7693037934086798
+        ]
+      },
+      {
+        "image": "A55_step2_sample1",
+        "image_miou": 0.8209374566390916,
+        "class_iou": [
+          0.8058627774701246,
+          0.9038771293298408,
+          0.9520521627069749,
+          0.6219577570494264
+        ]
+      },
+      {
+        "image": "A59_step3_sample1",
+        "image_miou": 0.8307522185030589,
+        "class_iou": [
+          0.8039516244268066,
+          0.9568482755011253,
+          0.9460543914400357,
+          0.6161545826442685
+        ]
+      },
+      {
+        "image": "A63_step1_sample4",
+        "image_miou": 0.8474463122578202,
+        "class_iou": [
+          0.8188047873639644,
+          0.9747030512814434,
+          0.9435675610876906,
+          0.6527098492981829
+        ]
+      },
+      {
+        "image": "A67_step1_sample1",
+        "image_miou": 0.7574639329632783,
+        "class_iou": [
+          0.5822581548630431,
+          0.9037698179682913,
+          0.8955954637762953,
+          0.6482322952454838
+        ]
+      },
+      {
+        "image": "A71_step2_sample1",
+        "image_miou": 0.5425354167969824,
+        "class_iou": [
+          0.6143911953190304,
+          0.0,
+          0.9193420026421761,
+          0.6364084692267228
+        ]
+      },
+      {
+        "image": "A72_step4_sample4",
+        "image_miou": 0.8676824540591986,
+        "class_iou": [
+          0.7823097798773746,
+          0.9391102576412226,
+          0.9432381002606055,
+          0.8060716784575915
+        ]
+      },
+      {
+        "image": "A74_step3_sample4",
+        "image_miou": 0.7444513607975308,
+        "class_iou": [
+          0.7742023008465378,
+          0.8926413685425294,
+          0.9348833424285071,
+          0.37607843137254904
+        ]
+      },
+      {
+        "image": "A7_step1_sample4",
+        "image_miou": 0.8241891354651391,
+        "class_iou": [
+          0.7302835778781038,
+          0.9129487303224102,
+          0.9640004069027791,
+          0.689523826757263
+        ]
+      }
+    ],
+    "archive_bytes": 75845307,
+    "archive_sha256": "c24041a2951cf51bea4101de5f538b674c2d0a11ee683df93d786e850ecb514c",
+    "archive_verified": true
+  },
+  "B4-warmstart": {
+    "id": "E_b4_set3",
+    "group": "E_b4",
+    "family": "B4-warmstart",
+    "archive": "models/B4-warmstart/E_b4_set3.zip",
+    "image_miou": 0.8025309503624174,
+    "image_miou_percent": 80.25309503624175,
+    "delta_baseline_percentage_points": -0.0027504913784781593,
+    "baseline_image_miou": 0.8025584552762022,
+    "image_count": 20,
+    "score_scope": "Full R+E+F ensemble on valid20 with this candidate inserted; not a standalone model score",
+    "fold_score_policy": "Fold members are evaluated together; no separately measured per-fold score",
+    "hr336_parent": null,
+    "checkpoints": [
+      {
+        "family": "B4-warmstart",
+        "group": "E_b4",
+        "candidate_id": "E_b4_set3",
+        "task_id": "E_b4_12",
+        "training_seed": 3479,
+        "fold": 1,
+        "hr_slot": null,
+        "archive": "models/B4-warmstart/E_b4_set3.zip",
+        "member": "E_b4_set3/E_b4_12/last.pt",
+        "checkpoint_sha256": "8828e5cdbb37b2e07abcf65b91ae12b7fdc9becafba0f5416bfd69b0f894aca1",
+        "checkpoint_bytes": 81649847,
+        "deployed_weight_key": "E/model329_ws/fold1/last.pt",
+        "source_checkpoint": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/outputs/runs/seed100_resume_20261012_120527_923014/jobs/E_b4_12/attempt_1/training/last.pt",
+        "candidate_ensemble_image_miou": 0.8025309503624174
+      },
+      {
+        "family": "B4-warmstart",
+        "group": "E_b4",
+        "candidate_id": "E_b4_set3",
+        "task_id": "E_b4_13",
+        "training_seed": 3480,
+        "fold": 2,
+        "hr_slot": null,
+        "archive": "models/B4-warmstart/E_b4_set3.zip",
+        "member": "E_b4_set3/E_b4_13/last.pt",
+        "checkpoint_sha256": "832e5458f6109c7bd41ffa362a4da42b33336e024f8e56898cf630d1a95d923b",
+        "checkpoint_bytes": 81649847,
+        "deployed_weight_key": "E/model329_ws/fold2/last.pt",
+        "source_checkpoint": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/outputs/runs/seed100_resume_20261012_120527_923014/jobs/E_b4_13/attempt_1/training/last.pt",
+        "candidate_ensemble_image_miou": 0.8025309503624174
+      },
+      {
+        "family": "B4-warmstart",
+        "group": "E_b4",
+        "candidate_id": "E_b4_set3",
+        "task_id": "E_b4_14",
+        "training_seed": 3481,
+        "fold": 3,
+        "hr_slot": null,
+        "archive": "models/B4-warmstart/E_b4_set3.zip",
+        "member": "E_b4_set3/E_b4_14/last.pt",
+        "checkpoint_sha256": "0c43b64bb47e5ba4e7aaadbdc19f14c56130ffdfedbff2bfae0c3ad6b5420e12",
+        "checkpoint_bytes": 81649847,
+        "deployed_weight_key": "E/model329_ws/fold3/last.pt",
+        "source_checkpoint": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/outputs/runs/seed100_resume_20261012_120527_923014/jobs/E_b4_14/attempt_1/training/last.pt",
+        "candidate_ensemble_image_miou": 0.8025309503624174
+      },
+      {
+        "family": "B4-warmstart",
+        "group": "E_b4",
+        "candidate_id": "E_b4_set3",
+        "task_id": "E_b4_15",
+        "training_seed": 3482,
+        "fold": 4,
+        "hr_slot": null,
+        "archive": "models/B4-warmstart/E_b4_set3.zip",
+        "member": "E_b4_set3/E_b4_15/last.pt",
+        "checkpoint_sha256": "18688c75507e7b25cd729483bbc64e106f991cd1f02743abb5854a3bb80af895",
+        "checkpoint_bytes": 81649847,
+        "deployed_weight_key": "E/model329_ws/fold4/last.pt",
+        "source_checkpoint": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/outputs/runs/seed100_resume_20261012_120527_923014/jobs/E_b4_15/attempt_1/training/last.pt",
+        "candidate_ensemble_image_miou": 0.8025309503624174
+      }
+    ],
+    "images": [
+      {
+        "image": "A117_step4_sample2",
+        "image_miou": 0.8681331747244172,
+        "class_iou": [
+          0.8406152659917024,
+          0.962832106554504,
+          0.942516014306209,
+          0.7265693120452531
+        ]
+      },
+      {
+        "image": "A11_step1_sample4",
+        "image_miou": 0.8028865488008542,
+        "class_iou": [
+          0.6023023846126345,
+          0.9588444553483808,
+          0.9660109583340558,
+          0.6843883969083456
+        ]
+      },
+      {
+        "image": "A11_step2_sample4",
+        "image_miou": 0.7713110657937612,
+        "class_iou": [
+          0.6430634819981681,
+          0.9126555624544448,
+          0.9310346526846961,
+          0.5984905660377359
+        ]
+      },
+      {
+        "image": "A125_step1_sample4",
+        "image_miou": 0.7925907860090391,
+        "class_iou": [
+          0.7929132763517673,
+          0.7977700991844214,
+          0.9464622170084902,
+          0.6332175514914773
+        ]
+      },
+      {
+        "image": "A153_step3_sample3",
+        "image_miou": 0.7191328834717376,
+        "class_iou": [
+          0.75966692269512,
+          0.9390195784976666,
+          0.9012662249814447,
+          0.2765788077127189
+        ]
+      },
+      {
+        "image": "A170_step4_sample3",
+        "image_miou": 0.8894023789980989,
+        "class_iou": [
+          0.9142172754124342,
+          0.949070448678906,
+          0.9397364134458759,
+          0.7545853784551796
+        ]
+      },
+      {
+        "image": "A181_step1_sample1",
+        "image_miou": 0.7924790101426394,
+        "class_iou": [
+          0.8093164676865885,
+          0.8663705781517843,
+          0.9623985738068085,
+          0.5318304209253765
+        ]
+      },
+      {
+        "image": "A186_step2_sample2",
+        "image_miou": 0.8103619254145837,
+        "class_iou": [
+          0.9532399956930043,
+          0.8700404884611135,
+          0.9728422329952,
+          0.44532498450901736
+        ]
+      },
+      {
+        "image": "A191_step4_sample3",
+        "image_miou": 0.8250574787225253,
+        "class_iou": [
+          0.7937132814461462,
+          0.9727034211943774,
+          0.9405742781080105,
+          0.5932389341415673
+        ]
+      },
+      {
+        "image": "A40_step3_sample3",
+        "image_miou": 0.8251119366157613,
+        "class_iou": [
+          0.8209684507160145,
+          0.9022636214742615,
+          0.9476420764692173,
+          0.6295735978035524
+        ]
+      },
+      {
+        "image": "A42_step2_sample4",
+        "image_miou": 0.8164884296400123,
+        "class_iou": [
+          0.861309080473122,
+          0.7985409176036072,
+          0.9632373276169274,
+          0.6428663928663929
+        ]
+      },
+      {
+        "image": "A44_step4_sample3",
+        "image_miou": 0.9019414157562312,
+        "class_iou": [
+          0.9189990879168815,
+          0.9486456177099749,
+          0.9707638841772772,
+          0.7693570732207912
+        ]
+      },
+      {
+        "image": "A55_step2_sample1",
+        "image_miou": 0.8208243295318696,
+        "class_iou": [
+          0.8056506760741147,
+          0.9035253934046273,
+          0.9521697389768429,
+          0.6219515096718932
+        ]
+      },
+      {
+        "image": "A59_step3_sample1",
+        "image_miou": 0.8309631950109577,
+        "class_iou": [
+          0.8045328351625541,
+          0.9565751955424177,
+          0.9462932907066259,
+          0.6164514586322334
+        ]
+      },
+      {
+        "image": "A63_step1_sample4",
+        "image_miou": 0.8474841685289771,
+        "class_iou": [
+          0.8188004066418163,
+          0.9746355339575679,
+          0.9435020061859481,
+          0.6529987273305758
+        ]
+      },
+      {
+        "image": "A67_step1_sample1",
+        "image_miou": 0.7575917421320859,
+        "class_iou": [
+          0.5825908667287978,
+          0.9036447325160866,
+          0.8958552523624289,
+          0.6482761169210303
+        ]
+      },
+      {
+        "image": "A71_step2_sample1",
+        "image_miou": 0.542054401553796,
+        "class_iou": [
+          0.6129848463784234,
+          0.0,
+          0.9187348764645951,
+          0.6364978833721655
+        ]
+      },
+      {
+        "image": "A72_step4_sample4",
+        "image_miou": 0.8678190957393025,
+        "class_iou": [
+          0.7829999196593557,
+          0.9388751100088008,
+          0.9434590287915297,
+          0.805942324497524
+        ]
+      },
+      {
+        "image": "A74_step3_sample4",
+        "image_miou": 0.744547570522308,
+        "class_iou": [
+          0.7733787657526097,
+          0.8933691147496433,
+          0.9344960590306892,
+          0.3769463425562899
+        ]
+      },
+      {
+        "image": "A7_step1_sample4",
+        "image_miou": 0.8244374701393897,
+        "class_iou": [
+          0.7308576512142058,
+          0.9129224611696346,
+          0.9642069716693489,
+          0.6897627965043696
+        ]
+      }
+    ],
+    "archive_bytes": 303384039,
+    "archive_sha256": "afff02deb319402428d63c6178ed2c3a49a00df1442fba101d42c879185e62af",
+    "archive_verified": true
+  },
+  "HRNet392": {
+    "id": "E_hr_set1",
+    "group": "E_hr",
+    "family": "HRNet392",
+    "archive": "models/HRNet392/E_hr_set1.zip",
+    "image_miou": 0.8023661370269481,
+    "image_miou_percent": 80.23661370269481,
+    "delta_baseline_percentage_points": -0.019231824925403096,
+    "baseline_image_miou": 0.8025584552762022,
+    "image_count": 20,
+    "score_scope": "Full R+E+F ensemble on valid20 with this candidate inserted; not a standalone model score",
+    "fold_score_policy": "Fold members are evaluated together; no separately measured per-fold score",
+    "hr336_parent": null,
+    "checkpoints": [
+      {
+        "family": "HRNet392",
+        "group": "E_hr",
+        "candidate_id": "E_hr_set1",
+        "task_id": "E_hr_04",
+        "training_seed": 3495,
+        "fold": 2,
+        "hr_slot": 1,
+        "archive": "models/HRNet392/E_hr_set1.zip",
+        "member": "E_hr_set1/E_hr_04/last.pt",
+        "checkpoint_sha256": "df52d950a773c02fca35c8b41b5a906b530077fc62d25916e2c0c18003b969e8",
+        "checkpoint_bytes": 308935501,
+        "deployed_weight_key": "E/model392/seed1/fold2/last.pt",
+        "source_checkpoint": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/outputs/runs/seed100_resume_20261012_120527_923014/jobs/E_hr_04/attempt_1/training/last.pt",
+        "candidate_ensemble_image_miou": 0.8023661370269481
+      },
+      {
+        "family": "HRNet392",
+        "group": "E_hr",
+        "candidate_id": "E_hr_set1",
+        "task_id": "E_hr_05",
+        "training_seed": 3496,
+        "fold": 4,
+        "hr_slot": 1,
+        "archive": "models/HRNet392/E_hr_set1.zip",
+        "member": "E_hr_set1/E_hr_05/last.pt",
+        "checkpoint_sha256": "404bb4109fb2d70bfba3ccd0223b3589c5becdda186aa76572c0bdf7394fe783",
+        "checkpoint_bytes": 308935501,
+        "deployed_weight_key": "E/model392/seed1/fold4/last.pt",
+        "source_checkpoint": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/outputs/runs/seed100_resume_20261012_120527_923014/jobs/E_hr_05/attempt_1/training/last.pt",
+        "candidate_ensemble_image_miou": 0.8023661370269481
+      },
+      {
+        "family": "HRNet392",
+        "group": "E_hr",
+        "candidate_id": "E_hr_set1",
+        "task_id": "E_hr_06",
+        "training_seed": 3497,
+        "fold": 1,
+        "hr_slot": 2,
+        "archive": "models/HRNet392/E_hr_set1.zip",
+        "member": "E_hr_set1/E_hr_06/last.pt",
+        "checkpoint_sha256": "df7d47a481c9ac40b7d9a977f7c6aa7f28c2a048df0b142e236317ddaa53f116",
+        "checkpoint_bytes": 308935501,
+        "deployed_weight_key": "E/model392/seed2/fold1/last.pt",
+        "source_checkpoint": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/outputs/runs/seed100_resume_20261012_120527_923014/jobs/E_hr_06/attempt_1/training/last.pt",
+        "candidate_ensemble_image_miou": 0.8023661370269481
+      },
+      {
+        "family": "HRNet392",
+        "group": "E_hr",
+        "candidate_id": "E_hr_set1",
+        "task_id": "E_hr_07",
+        "training_seed": 3498,
+        "fold": 4,
+        "hr_slot": 2,
+        "archive": "models/HRNet392/E_hr_set1.zip",
+        "member": "E_hr_set1/E_hr_07/last.pt",
+        "checkpoint_sha256": "feecdd5e68c310a29425135b83853dfee61a5568fe06c85c0d946e9a4611a04c",
+        "checkpoint_bytes": 308935501,
+        "deployed_weight_key": "E/model392/seed2/fold4/last.pt",
+        "source_checkpoint": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/outputs/runs/seed100_resume_20261012_120527_923014/jobs/E_hr_07/attempt_1/training/last.pt",
+        "candidate_ensemble_image_miou": 0.8023661370269481
+      }
+    ],
+    "images": [
+      {
+        "image": "A117_step4_sample2",
+        "image_miou": 0.8679867523483396,
+        "class_iou": [
+          0.8402788135072774,
+          0.9628331487375047,
+          0.9424245199062562,
+          0.7264105272423202
+        ]
+      },
+      {
+        "image": "A11_step1_sample4",
+        "image_miou": 0.8020980966682603,
+        "class_iou": [
+          0.5996688503347491,
+          0.9585889570552147,
+          0.965605922847123,
+          0.6845286564359536
+        ]
+      },
+      {
+        "image": "A11_step2_sample4",
+        "image_miou": 0.7713490121028226,
+        "class_iou": [
+          0.6421966274862237,
+          0.912616248464643,
+          0.9308860497951031,
+          0.5996971226653205
+        ]
+      },
+      {
+        "image": "A125_step1_sample4",
+        "image_miou": 0.791673165353411,
+        "class_iou": [
+          0.792779954874718,
+          0.7979126736524014,
+          0.9461658713854263,
+          0.6298341615010983
+        ]
+      },
+      {
+        "image": "A153_step3_sample3",
+        "image_miou": 0.7179707599475049,
+        "class_iou": [
+          0.7575028156261732,
+          0.9389054401501857,
+          0.8997498900956975,
+          0.27572489391796323
+        ]
+      },
+      {
+        "image": "A170_step4_sample3",
+        "image_miou": 0.8892284621951014,
+        "class_iou": [
+          0.9141758370722107,
+          0.9489784072440214,
+          0.9396873817631479,
+          0.7540722227010256
+        ]
+      },
+      {
+        "image": "A181_step1_sample1",
+        "image_miou": 0.7927149254486063,
+        "class_iou": [
+          0.8106140762070582,
+          0.8667425435382529,
+          0.9621678756159854,
+          0.5313352064331289
+        ]
+      },
+      {
+        "image": "A186_step2_sample2",
+        "image_miou": 0.8100964068593633,
+        "class_iou": [
+          0.9532918473307339,
+          0.8699832286750653,
+          0.9728363894386974,
+          0.44427416199295683
+        ]
+      },
+      {
+        "image": "A191_step4_sample3",
+        "image_miou": 0.8249658536626928,
+        "class_iou": [
+          0.7931387544401622,
+          0.9727579137565586,
+          0.9404102082354783,
+          0.5935565382185723
+        ]
+      },
+      {
+        "image": "A40_step3_sample3",
+        "image_miou": 0.8252670079883024,
+        "class_iou": [
+          0.8213718840681048,
+          0.9022811557855981,
+          0.9478469478576713,
+          0.6295680442418354
+        ]
+      },
+      {
+        "image": "A42_step2_sample4",
+        "image_miou": 0.8154467155057917,
+        "class_iou": [
+          0.8579915794968302,
+          0.7984847693873822,
+          0.9626369912880547,
+          0.6426735218508998
+        ]
+      },
+      {
+        "image": "A44_step4_sample3",
+        "image_miou": 0.9020658916424822,
+        "class_iou": [
+          0.9193202828055196,
+          0.948520730520523,
+          0.9708759673210202,
+          0.7695465859228657
+        ]
+      },
+      {
+        "image": "A55_step2_sample1",
+        "image_miou": 0.820659868561523,
+        "class_iou": [
+          0.8053648923349075,
+          0.9036381674175029,
+          0.9522292930865603,
+          0.6214071214071214
+        ]
+      },
+      {
+        "image": "A59_step3_sample1",
+        "image_miou": 0.8309452485351476,
+        "class_iou": [
+          0.8047523618665903,
+          0.9568563799151788,
+          0.9462608814860511,
+          0.6159113708727701
+        ]
+      },
+      {
+        "image": "A63_step1_sample4",
+        "image_miou": 0.847743503984175,
+        "class_iou": [
+          0.8193973557725038,
+          0.9752295537048901,
+          0.9438087922830608,
+          0.6525383141762452
+        ]
+      },
+      {
+        "image": "A67_step1_sample1",
+        "image_miou": 0.7564354360773334,
+        "class_iou": [
+          0.5800927909966648,
+          0.9036441812927328,
+          0.8950311366690266,
+          0.6469736353509098
+        ]
+      },
+      {
+        "image": "A71_step2_sample1",
+        "image_miou": 0.5436179542024784,
+        "class_iou": [
+          0.6170466838060719,
+          0.0,
+          0.9210107694510284,
+          0.636414363552813
+        ]
+      },
+      {
+        "image": "A72_step4_sample4",
+        "image_miou": 0.8667921526003152,
+        "class_iou": [
+          0.7793842250458106,
+          0.9389209093820045,
+          0.9427092707295338,
+          0.8061542052439119
+        ]
+      },
+      {
+        "image": "A74_step3_sample4",
+        "image_miou": 0.7464510731368732,
+        "class_iou": [
+          0.7784145072042952,
+          0.8933306139098511,
+          0.9376090229157208,
+          0.376450148517626
+        ]
+      },
+      {
+        "image": "A7_step1_sample4",
+        "image_miou": 0.8238144537184404,
+        "class_iou": [
+          0.7295782850789336,
+          0.9129100287115379,
+          0.963522539867414,
+          0.6892469612158759
+        ]
+      }
+    ],
+    "archive_bytes": 1147625355,
+    "archive_sha256": "d6ea2ac8c90150d46641b571d2315ab5fcc69241d8f6a8853a65c24ba70ecc45",
+    "archive_verified": true
+  }
+}

@@ -1,0 +1,42 @@
+loaded=/Data3/sppark/komap/experiments/model364_reproduction_gpu4567_v1/outputs/runs/model364_train_20261006T075724_689269Z/outputs/model109_aspp_native/best.pt missing=0 unexpected=0
+/Data3/sppark/komap/experiments/model364_reproduction_gpu4567_v1/outputs/runs/model364_train_20261006T075724_689269Z/source_snapshot/experiments/historical_scripts/encoder_structure_search.py:470: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+candidate=aspp device=cuda gpu=0 patches=280 batch=2 params=28,246,853 lr_groups=[8e-06]
+encoder_structure_search:   0%|          | 0/5 [00:00<?, ?item/s]
+encoder_structure_search:   0%|          | 0/140 [00:00<?, ?item/s][A/Data3/sppark/komap/experiments/model364_reproduction_gpu4567_v1/outputs/runs/model364_train_20261006T075724_689269Z/source_snapshot/experiments/historical_scripts/encoder_structure_search.py:385: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+encoder_structure_search:  30%|███       | 42/140 [00:10<00:23,  4.19item/s][Aencoder_structure_search: 100%|██████████| 140/140 [00:19<00:00,  7.22item/s]
+
+encoder_structure_search:   0%|          | 0/20 [00:00<?, ?item/s][A
+encoder_structure_search:  80%|████████  | 16/20 [00:10<00:02,  1.56item/s][Aencoder_structure_search: 100%|██████████| 20/20 [00:12<00:00,  1.67item/s]
+epoch=01/5 loss=0.4209 miou=0.75411 image=0.75411 0.6938,0.8388,0.9298,0.5540 time=31.9s
+encoder_structure_search:  20%|██        | 1/5 [00:32<02:08, 32.10s/item]
+encoder_structure_search:   0%|          | 0/140 [00:00<?, ?item/s][A
+encoder_structure_search:  68%|██████▊   | 95/140 [00:10<00:04,  9.47item/s][Aencoder_structure_search: 100%|██████████| 140/140 [00:14<00:00,  9.79item/s]
+
+encoder_structure_search:   0%|          | 0/20 [00:00<?, ?item/s][Aencoder_structure_search: 100%|██████████| 20/20 [00:09<00:00,  2.08item/s]
+epoch=02/5 loss=0.4189 miou=0.75928 image=0.75928 0.7018,0.8455,0.9310,0.5589 time=24.3s
+encoder_structure_search:  40%|████      | 2/5 [00:57<01:23, 27.93s/item]
+encoder_structure_search:   0%|          | 0/140 [00:00<?, ?item/s][A
+encoder_structure_search:  69%|██████▉   | 97/140 [00:10<00:04,  9.69item/s][Aencoder_structure_search: 100%|██████████| 140/140 [00:14<00:00,  9.95item/s]
+
+encoder_structure_search:   0%|          | 0/20 [00:00<?, ?item/s][A
+encoder_structure_search: 100%|██████████| 20/20 [00:10<00:00,  1.99item/s][Aencoder_structure_search: 100%|██████████| 20/20 [00:10<00:00,  1.99item/s]
+epoch=03/5 loss=0.4230 miou=0.75747 image=0.75747 0.6981,0.8426,0.9317,0.5575 time=24.6s
+encoder_structure_search:  60%|██████    | 3/5 [01:22<00:53, 26.64s/item]
+encoder_structure_search:   0%|          | 0/140 [00:00<?, ?item/s][A
+encoder_structure_search:  67%|██████▋   | 94/140 [00:10<00:04,  9.34item/s][Aencoder_structure_search: 100%|██████████| 140/140 [00:14<00:00,  9.71item/s]
+
+encoder_structure_search:   0%|          | 0/20 [00:00<?, ?item/s][A
+encoder_structure_search:  90%|█████████ | 18/20 [00:10<00:01,  1.78item/s][Aencoder_structure_search: 100%|██████████| 20/20 [00:11<00:00,  1.80item/s]
+epoch=04/5 loss=0.4126 miou=0.76046 image=0.76046 0.7071,0.8445,0.9310,0.5592 time=26.3s
+encoder_structure_search:  80%|████████  | 4/5 [01:49<00:26, 26.85s/item]
+encoder_structure_search:   0%|          | 0/140 [00:00<?, ?item/s][A
+encoder_structure_search:  68%|██████▊   | 95/140 [00:10<00:04,  9.40item/s][Aencoder_structure_search: 100%|██████████| 140/140 [00:14<00:00,  9.66item/s]
+
+encoder_structure_search:   0%|          | 0/20 [00:00<?, ?item/s][Aencoder_structure_search: 100%|██████████| 20/20 [00:09<00:00,  2.05item/s]
+epoch=05/5 loss=0.4129 miou=0.76031 image=0.76031 0.7058,0.8458,0.9308,0.5588 time=24.7s
+encoder_structure_search: 100%|██████████| 5/5 [02:14<00:00, 26.18s/item]encoder_structure_search: 100%|██████████| 5/5 [02:14<00:00, 26.87s/item]
+encoder_structure_search:   0%|          | 0/20 [00:00<?, ?item/s]encoder_structure_search: 100%|██████████| 20/20 [00:08<00:00,  2.23item/s]
+{"candidate": "aspp", "best_fixed_miou": 0.7604629365880755, "best_calibrated": {"image_mean_miou": 0.7605433969276032, "miou": 0.7605433969276032, "image_miou_compat": 0.7605433969276032, "image_class_iou": {"Al3Ni": 0.7056533380095862, "Primary Si": 0.8447025050868054, "Al": 0.9310933025069377, "Eutectic Si": 0.5607244421070836}, "iou": {"Al3Ni": 0.7056533380095862, "Primary Si": 0.8447025050868054, "Al": 0.9310933025069377, "Eutectic Si": 0.5607244421070836}, "image_mean_miou_exclude": 0.7605433969276032, "image_scores": [0.8597439434317661, 0.6520346233294778, 0.7326996726588733, 0.7696318409307028, 0.7015125122752046, 0.8772988634039594, 0.7753919137484926, 0.7526961514315523, 0.8143719504810389, 0.8046421911105149, 0.8115222623981178, 0.8767978102062992, 0.7998203749469613, 0.816115980423269, 0.8217001886623976, 0.718035491426522, 0.35456274496188955, 0.835970466835122, 0.6614071752301878, 0.7749117806597173], "image_scores_exclude": [0.8597439434317661, 0.6520346233294778, 0.7326996726588733, 0.7696318409307028, 0.7015125122752046, 0.8772988634039594, 0.7753919137484926, 0.7526961514315523, 0.8143719504810389, 0.8046421911105149, 0.8115222623981178, 0.8767978102062992, 0.7998203749469613, 0.816115980423269, 0.8217001886623976, 0.718035491426522, 0.35456274496188955, 0.835970466835122, 0.6614071752301878, 0.7749117806597173], "image_mious": [0.8597439434317661, 0.6520346233294778, 0.7326996726588733, 0.7696318409307028, 0.7015125122752046, 0.8772988634039594, 0.7753919137484926, 0.7526961514315523, 0.8143719504810389, 0.8046421911105149, 0.8115222623981178, 0.8767978102062992, 0.7998203749469613, 0.816115980423269, 0.8217001886623976, 0.718035491426522, 0.35456274496188955, 0.835970466835122, 0.6614071752301878, 0.7749117806597173], "image_std_miou": 0.11214934443167346, "image_min_miou": 0.35456274496188955, "image_max_miou": 0.8772988634039594, "metric": "image_mIoU_four_classes_empty0", "al_bias": -0.44999999999999973}}

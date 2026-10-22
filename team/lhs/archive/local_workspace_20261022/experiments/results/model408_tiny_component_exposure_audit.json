@@ -1,0 +1,357 @@
+{
+  "experiment": "Model408 deterministic tiny-GT-component crop exposure audit",
+  "created_at_utc": "2026-10-06T01:21:15.617336Z",
+  "scope": "fixed outer-train splits only; sampled deterministic post-augmentation crops",
+  "sampling": {
+    "seed": 1,
+    "rng_mode": "per_item",
+    "probes_per_fold_epoch": 32,
+    "epochs": 8,
+    "total_probes": 1024,
+    "patch_size": 512,
+    "input_scale": 2.0,
+    "samples_per_image": 12,
+    "crop_indices": "32 unique evenly spaced virtual-dataset indices per fold and epoch",
+    "component_definition": "same Model408 CPU 8-connected labels, area bins, and crop-border exclusion",
+    "area_bins_augmented_pixels": [
+      [
+        4,
+        16
+      ],
+      [
+        16,
+        64
+      ],
+      [
+        64,
+        256
+      ]
+    ]
+  },
+  "folds": {
+    "1": {
+      "train_images": 52,
+      "target_width": 1230,
+      "train_images_sha256": "444655a5ce0e06a517ee27dc314176528e07c956f114b22b2299649ac0485707",
+      "train_masks_file_count": 52,
+      "train_masks_sha256": "713a91cd2b86b5bfe8932c19ad018b22d86fc457cdfaf497317480b826fffd64",
+      "virtual_crops_per_epoch": 624,
+      "probe_indices_per_epoch": [
+        0,
+        20,
+        40,
+        60,
+        80,
+        100,
+        120,
+        140,
+        160,
+        180,
+        200,
+        221,
+        241,
+        261,
+        281,
+        301,
+        321,
+        341,
+        361,
+        381,
+        401,
+        422,
+        442,
+        462,
+        482,
+        502,
+        522,
+        542,
+        562,
+        582,
+        602,
+        623
+      ],
+      "probes": 256,
+      "size_bin_exposure": {
+        "Al3Ni": {
+          "4-15_augmented_px": {
+            "components": 719,
+            "crops_with_at_least_one": 195,
+            "crop_exposure_fraction": 0.76171875
+          },
+          "16-63_augmented_px": {
+            "components": 6424,
+            "crops_with_at_least_one": 256,
+            "crop_exposure_fraction": 1.0
+          },
+          "64-255_augmented_px": {
+            "components": 6539,
+            "crops_with_at_least_one": 256,
+            "crop_exposure_fraction": 1.0
+          }
+        },
+        "Eutectic Si": {
+          "4-15_augmented_px": {
+            "components": 166,
+            "crops_with_at_least_one": 94,
+            "crop_exposure_fraction": 0.3671875
+          },
+          "16-63_augmented_px": {
+            "components": 2386,
+            "crops_with_at_least_one": 243,
+            "crop_exposure_fraction": 0.94921875
+          },
+          "64-255_augmented_px": {
+            "components": 6474,
+            "crops_with_at_least_one": 256,
+            "crop_exposure_fraction": 1.0
+          }
+        }
+      }
+    },
+    "2": {
+      "train_images": 52,
+      "target_width": 1278,
+      "train_images_sha256": "05967590eb7ddb1026d4b1c7f8121531e8d9cfaf38aa9c3078e95ec018e52a4d",
+      "train_masks_file_count": 52,
+      "train_masks_sha256": "fe05ff07adc2d4b9be9089a821b37c9dfb3ce22e704203330204c23bb0582c43",
+      "virtual_crops_per_epoch": 624,
+      "probe_indices_per_epoch": [
+        0,
+        20,
+        40,
+        60,
+        80,
+        100,
+        120,
+        140,
+        160,
+        180,
+        200,
+        221,
+        241,
+        261,
+        281,
+        301,
+        321,
+        341,
+        361,
+        381,
+        401,
+        422,
+        442,
+        462,
+        482,
+        502,
+        522,
+        542,
+        562,
+        582,
+        602,
+        623
+      ],
+      "probes": 256,
+      "size_bin_exposure": {
+        "Al3Ni": {
+          "4-15_augmented_px": {
+            "components": 545,
+            "crops_with_at_least_one": 168,
+            "crop_exposure_fraction": 0.65625
+          },
+          "16-63_augmented_px": {
+            "components": 5694,
+            "crops_with_at_least_one": 254,
+            "crop_exposure_fraction": 0.9921875
+          },
+          "64-255_augmented_px": {
+            "components": 6087,
+            "crops_with_at_least_one": 253,
+            "crop_exposure_fraction": 0.98828125
+          }
+        },
+        "Eutectic Si": {
+          "4-15_augmented_px": {
+            "components": 141,
+            "crops_with_at_least_one": 77,
+            "crop_exposure_fraction": 0.30078125
+          },
+          "16-63_augmented_px": {
+            "components": 1867,
+            "crops_with_at_least_one": 225,
+            "crop_exposure_fraction": 0.87890625
+          },
+          "64-255_augmented_px": {
+            "components": 5246,
+            "crops_with_at_least_one": 252,
+            "crop_exposure_fraction": 0.984375
+          }
+        }
+      }
+    },
+    "3": {
+      "train_images": 53,
+      "target_width": 1278,
+      "train_images_sha256": "feffcff401c462fb89df9b3c986bf627bc56548bfa3456d2eea99c296362dc4c",
+      "train_masks_file_count": 53,
+      "train_masks_sha256": "92e7a00857e9bf9646546697d238e6c28d2f4d29bd54357cf0e3e2166d9ae10a",
+      "virtual_crops_per_epoch": 636,
+      "probe_indices_per_epoch": [
+        0,
+        20,
+        40,
+        61,
+        81,
+        102,
+        122,
+        143,
+        163,
+        184,
+        204,
+        225,
+        245,
+        266,
+        286,
+        307,
+        327,
+        348,
+        368,
+        389,
+        409,
+        430,
+        450,
+        471,
+        491,
+        512,
+        532,
+        553,
+        573,
+        594,
+        614,
+        635
+      ],
+      "probes": 256,
+      "size_bin_exposure": {
+        "Al3Ni": {
+          "4-15_augmented_px": {
+            "components": 594,
+            "crops_with_at_least_one": 185,
+            "crop_exposure_fraction": 0.72265625
+          },
+          "16-63_augmented_px": {
+            "components": 6432,
+            "crops_with_at_least_one": 255,
+            "crop_exposure_fraction": 0.99609375
+          },
+          "64-255_augmented_px": {
+            "components": 6967,
+            "crops_with_at_least_one": 256,
+            "crop_exposure_fraction": 1.0
+          }
+        },
+        "Eutectic Si": {
+          "4-15_augmented_px": {
+            "components": 143,
+            "crops_with_at_least_one": 83,
+            "crop_exposure_fraction": 0.32421875
+          },
+          "16-63_augmented_px": {
+            "components": 2012,
+            "crops_with_at_least_one": 227,
+            "crop_exposure_fraction": 0.88671875
+          },
+          "64-255_augmented_px": {
+            "components": 5766,
+            "crops_with_at_least_one": 253,
+            "crop_exposure_fraction": 0.98828125
+          }
+        }
+      }
+    },
+    "4": {
+      "train_images": 53,
+      "target_width": 1278,
+      "train_images_sha256": "6611b438924d9ae59e237ed713bbcb124e10c2c8c2acac76668d315a82f62179",
+      "train_masks_file_count": 53,
+      "train_masks_sha256": "c013d16d8a09f5bcd974bcafb41c715e5c808f78801ff03252d195ec75cf4c8a",
+      "virtual_crops_per_epoch": 636,
+      "probe_indices_per_epoch": [
+        0,
+        20,
+        40,
+        61,
+        81,
+        102,
+        122,
+        143,
+        163,
+        184,
+        204,
+        225,
+        245,
+        266,
+        286,
+        307,
+        327,
+        348,
+        368,
+        389,
+        409,
+        430,
+        450,
+        471,
+        491,
+        512,
+        532,
+        553,
+        573,
+        594,
+        614,
+        635
+      ],
+      "probes": 256,
+      "size_bin_exposure": {
+        "Al3Ni": {
+          "4-15_augmented_px": {
+            "components": 539,
+            "crops_with_at_least_one": 162,
+            "crop_exposure_fraction": 0.6328125
+          },
+          "16-63_augmented_px": {
+            "components": 5031,
+            "crops_with_at_least_one": 252,
+            "crop_exposure_fraction": 0.984375
+          },
+          "64-255_augmented_px": {
+            "components": 5644,
+            "crops_with_at_least_one": 255,
+            "crop_exposure_fraction": 0.99609375
+          }
+        },
+        "Eutectic Si": {
+          "4-15_augmented_px": {
+            "components": 136,
+            "crops_with_at_least_one": 82,
+            "crop_exposure_fraction": 0.3203125
+          },
+          "16-63_augmented_px": {
+            "components": 1970,
+            "crops_with_at_least_one": 224,
+            "crop_exposure_fraction": 0.875
+          },
+          "64-255_augmented_px": {
+            "components": 5417,
+            "crops_with_at_least_one": 250,
+            "crop_exposure_fraction": 0.9765625
+          }
+        }
+      }
+    }
+  },
+  "optimizer_steps": 0,
+  "miou_computed": false,
+  "official_valid_read": false,
+  "test_read": false,
+  "dataset_code_sha256": "8f458d3fce489172a63ef738a8bc98f745f8182c7044596d6059d6dd66437381",
+  "loss_code_sha256": "eb7ec4e70d1f9a93050a606d5860b5e7204bc87504321526d0e3f022c899b247",
+  "script_sha256": "6bf05d7dc91320a39750f16cc738fe025e51ed08729476d7bfb29c343878d8c5",
+  "interpretation": "Descriptive exposure diagnostic only; it does not estimate model performance or authorize loss/sampler tuning on the same OOF split."
+}

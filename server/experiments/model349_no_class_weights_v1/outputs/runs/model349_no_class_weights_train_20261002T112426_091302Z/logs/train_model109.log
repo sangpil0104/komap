@@ -1,0 +1,34 @@
+loaded=/Data3/sppark/komap/experiments/model349_no_class_weights_v1/outputs/runs/model349_no_class_weights_train_20261002T112426_091302Z/outputs/model98_hard_negative/best.pt missing=31 unexpected=0
+/Data3/sppark/komap/experiments/model349_no_class_weights_v1/outputs/runs/model349_no_class_weights_train_20261002T112426_091302Z/source_snapshot/experiments/historical_scripts/encoder_structure_search.py:470: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+candidate=aspp device=cuda gpu=0 patches=420 batch=4 params=28,246,853 lr_groups=[1.5e-05]
+encoder_structure_search:   0%|          | 0/4 [00:00<?, ?item/s]
+encoder_structure_search:   0%|          | 0/105 [00:00<?, ?item/s][A/Data3/sppark/komap/experiments/model349_no_class_weights_v1/outputs/runs/model349_no_class_weights_train_20261002T112426_091302Z/source_snapshot/experiments/historical_scripts/encoder_structure_search.py:385: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+encoder_structure_search:  25%|██▍       | 26/105 [00:10<00:31,  2.55item/s][A
+encoder_structure_search:  95%|█████████▌| 100/105 [00:20<00:00,  5.27item/s][Aencoder_structure_search: 100%|██████████| 105/105 [00:21<00:00,  4.91item/s]
+
+encoder_structure_search:   0%|          | 0/20 [00:00<?, ?item/s][Aencoder_structure_search: 100%|██████████| 20/20 [00:09<00:00,  2.01item/s]
+epoch=01/4 loss=0.3467 miou=0.75719 image=0.75719 0.7033,0.8470,0.9310,0.5475 time=31.9s
+encoder_structure_search:  25%|██▌       | 1/4 [00:32<01:36, 32.09s/item]
+encoder_structure_search:   0%|          | 0/105 [00:00<?, ?item/s][A
+encoder_structure_search:  61%|██████    | 64/105 [00:10<00:06,  6.37item/s][Aencoder_structure_search: 100%|██████████| 105/105 [00:16<00:00,  6.49item/s]
+
+encoder_structure_search:   0%|          | 0/20 [00:00<?, ?item/s][Aencoder_structure_search: 100%|██████████| 20/20 [00:06<00:00,  2.90item/s]
+epoch=02/4 loss=0.3461 miou=0.75930 image=0.75930 0.7016,0.8496,0.9308,0.5552 time=23.6s
+encoder_structure_search:  50%|█████     | 2/4 [00:56<00:54, 27.47s/item]
+encoder_structure_search:   0%|          | 0/105 [00:00<?, ?item/s][A
+encoder_structure_search:  62%|██████▏   | 65/105 [00:10<00:06,  6.37item/s][Aencoder_structure_search: 100%|██████████| 105/105 [00:15<00:00,  6.88item/s]
+
+encoder_structure_search:   0%|          | 0/20 [00:00<?, ?item/s][Aencoder_structure_search: 100%|██████████| 20/20 [00:07<00:00,  2.63item/s]
+epoch=03/4 loss=0.3374 miou=0.76164 image=0.76164 0.7057,0.8515,0.9314,0.5579 time=23.3s
+encoder_structure_search:  75%|███████▌  | 3/4 [01:20<00:25, 25.91s/item]
+encoder_structure_search:   0%|          | 0/105 [00:00<?, ?item/s][A
+encoder_structure_search:  65%|██████▍   | 68/105 [00:10<00:05,  6.72item/s][Aencoder_structure_search: 100%|██████████| 105/105 [00:15<00:00,  6.86item/s]
+
+encoder_structure_search:   0%|          | 0/20 [00:00<?, ?item/s][Aencoder_structure_search: 100%|██████████| 20/20 [00:07<00:00,  2.77item/s]
+epoch=04/4 loss=0.3461 miou=0.76252 image=0.76252 0.7121,0.8508,0.9318,0.5554 time=23.0s
+encoder_structure_search: 100%|██████████| 4/4 [01:44<00:00, 25.06s/item]encoder_structure_search: 100%|██████████| 4/4 [01:44<00:00, 26.03s/item]
+encoder_structure_search:   0%|          | 0/20 [00:00<?, ?item/s]encoder_structure_search: 100%|██████████| 20/20 [00:06<00:00,  2.95item/s]
+{"candidate": "aspp", "best_fixed_miou": 0.7625216407544185, "best_calibrated": {"image_mean_miou": 0.763480854881765, "miou": 0.763480854881765, "image_miou_compat": 0.763480854881765, "image_class_iou": {"Al3Ni": 0.7088260670932842, "Primary Si": 0.8507047727108226, "Al": 0.9326663037925809, "Eutectic Si": 0.5617262759303723}, "iou": {"Al3Ni": 0.7088260670932842, "Primary Si": 0.8507047727108226, "Al": 0.9326663037925809, "Eutectic Si": 0.5617262759303723}, "image_mean_miou_exclude": 0.763480854881765, "image_scores": [0.8628627769183703, 0.6634005809175512, 0.7098093725643961, 0.7754909674556286, 0.719889471254563, 0.8309352262997687, 0.7688895459845608, 0.7826371129862403, 0.8128411850840669, 0.8088026887447806, 0.8218065723045225, 0.8827424674094849, 0.8018119173245742, 0.7952865898035593, 0.7935311796586492, 0.7214740110515305, 0.37190131209809046, 0.8434667984641044, 0.7212077630789269, 0.7808295582319308], "image_scores_exclude": [0.8628627769183703, 0.6634005809175512, 0.7098093725643961, 0.7754909674556286, 0.719889471254563, 0.8309352262997687, 0.7688895459845608, 0.7826371129862403, 0.8128411850840669, 0.8088026887447806, 0.8218065723045225, 0.8827424674094849, 0.8018119173245742, 0.7952865898035593, 0.7935311796586492, 0.7214740110515305, 0.37190131209809046, 0.8434667984641044, 0.7212077630789269, 0.7808295582319308], "image_mious": [0.8628627769183703, 0.6634005809175512, 0.7098093725643961, 0.7754909674556286, 0.719889471254563, 0.8309352262997687, 0.7688895459845608, 0.7826371129862403, 0.8128411850840669, 0.8088026887447806, 0.8218065723045225, 0.8827424674094849, 0.8018119173245742, 0.7952865898035593, 0.7935311796586492, 0.7214740110515305, 0.37190131209809046, 0.8434667984641044, 0.7212077630789269, 0.7808295582319308], "image_std_miou": 0.10460609478423318, "image_min_miou": 0.37190131209809046, "image_max_miou": 0.8827424674094849, "metric": "image_mIoU_four_classes_empty0", "al_bias": 0.05000000000000071}}

@@ -1,0 +1,71 @@
+COMMAND: /home/sppark/miniconda3/envs/komap/bin/python -B -u /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/source/experiments/historical_scripts/encoder_structure_search.py --candidate aspp --data-dir /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/source/../data --checkpoint /Data3/sppark/komap/experiments/model349_lite20_b4ws_retrain_gpu234567_v1/outputs/lite20_b4ws_train_20261011_130221_265591/outputs/model109_aspp_native/best.pt --output-dir /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/jobs/restart51_09/attempt_1/training --patch-size 768 --val-stride 576 --tile-batch-size 1 --patches-per-image 4 --epochs 6 --batch-size 2 --lr 8e-6 --eval-bias -0.55 --seed 3448 --skip-test-inference
+loaded=/Data3/sppark/komap/experiments/model349_lite20_b4ws_retrain_gpu234567_v1/outputs/lite20_b4ws_train_20261011_130221_265591/outputs/model109_aspp_native/best.pt missing=0 unexpected=0
+/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/source/experiments/historical_scripts/encoder_structure_search.py:470: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+candidate=aspp device=cuda gpu=0 patches=280 batch=2 params=28,246,853 lr_groups=[8e-06]
+encoder_structure_search:   0%|          | 0/6 [00:00<?, ?item/s]
+encoder_structure_search:   0%|          | 0/140 [00:00<?, ?item/s][A/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/source/experiments/historical_scripts/encoder_structure_search.py:385: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+encoder_structure_search:  51%|█████▏    | 72/140 [00:10<00:09,  7.11item/s][Aencoder_structure_search: 100%|██████████| 140/140 [00:15<00:00,  8.86item/s]
+
+encoder_structure_search:   0%|          | 0/20 [00:00<?, ?item/s][A
+encoder_structure_search:  90%|█████████ | 18/20 [00:10<00:01,  1.79item/s][Aencoder_structure_search: 100%|██████████| 20/20 [00:10<00:00,  1.84item/s]
+epoch=01/6 loss=0.4196 miou=0.76338 image=0.76338 0.7131,0.8455,0.9316,0.5633 time=27.1s
+encoder_structure_search:  17%|█▋        | 1/6 [00:27<02:16, 27.28s/item]
+encoder_structure_search:   0%|          | 0/140 [00:00<?, ?item/s][A
+encoder_structure_search:  76%|███████▌  | 106/140 [00:10<00:03, 10.54item/s][Aencoder_structure_search: 100%|██████████| 140/140 [00:13<00:00, 10.75item/s]
+
+encoder_structure_search:   0%|          | 0/20 [00:00<?, ?item/s][Aencoder_structure_search: 100%|██████████| 20/20 [00:09<00:00,  2.07item/s]
+epoch=02/6 loss=0.4184 miou=0.76302 image=0.76302 0.7125,0.8466,0.9316,0.5614 time=23.1s
+encoder_structure_search:  33%|███▎      | 2/6 [00:50<01:39, 24.98s/item]
+encoder_structure_search:   0%|          | 0/140 [00:00<?, ?item/s][A
+encoder_structure_search:  89%|████████▉ | 125/140 [00:10<00:01, 12.48item/s][Aencoder_structure_search: 100%|██████████| 140/140 [00:11<00:00, 12.39item/s]
+
+encoder_structure_search:   0%|          | 0/20 [00:00<?, ?item/s][Aencoder_structure_search: 100%|██████████| 20/20 [00:09<00:00,  2.11item/s]
+epoch=03/6 loss=0.4171 miou=0.76327 image=0.76327 0.7121,0.8456,0.9314,0.5640 time=21.2s
+encoder_structure_search:  50%|█████     | 3/6 [01:12<01:10, 23.38s/item]
+encoder_structure_search:   0%|          | 0/140 [00:00<?, ?item/s][A
+encoder_structure_search:  91%|█████████ | 127/140 [00:10<00:01, 12.67item/s][Aencoder_structure_search: 100%|██████████| 140/140 [00:11<00:00, 12.64item/s]
+
+encoder_structure_search:   0%|          | 0/20 [00:00<?, ?item/s][Aencoder_structure_search: 100%|██████████| 20/20 [00:09<00:00,  2.03item/s]
+epoch=04/6 loss=0.4183 miou=0.76038 image=0.76038 0.7025,0.8474,0.9306,0.5611 time=21.4s
+encoder_structure_search:  67%|██████▋   | 4/6 [01:33<00:45, 22.70s/item]
+encoder_structure_search:   0%|          | 0/140 [00:00<?, ?item/s][A
+encoder_structure_search:  94%|█████████▎| 131/140 [00:10<00:00, 13.05item/s][Aencoder_structure_search: 100%|██████████| 140/140 [00:10<00:00, 13.20item/s]
+
+encoder_structure_search:   0%|          | 0/20 [00:00<?, ?item/s][Aencoder_structure_search: 100%|██████████| 20/20 [00:09<00:00,  2.16item/s]
+epoch=05/6 loss=0.4113 miou=0.76136 image=0.76136 0.7062,0.8466,0.9304,0.5623 time=20.3s
+encoder_structure_search:  83%|████████▎ | 5/6 [01:54<00:21, 21.98s/item]
+encoder_structure_search:   0%|          | 0/140 [00:00<?, ?item/s][A
+encoder_structure_search:  86%|████████▋ | 121/140 [00:10<00:01, 12.06item/s][Aencoder_structure_search: 100%|██████████| 140/140 [00:11<00:00, 12.31item/s]
+
+encoder_structure_search:   0%|          | 0/20 [00:00<?, ?item/s][Aencoder_structure_search: 100%|██████████| 20/20 [00:09<00:00,  2.19item/s]
+epoch=06/6 loss=0.4107 miou=0.75780 image=0.75780 0.6995,0.8424,0.9301,0.5591 time=20.9s
+encoder_structure_search: 100%|██████████| 6/6 [02:15<00:00, 21.74s/item]encoder_structure_search: 100%|██████████| 6/6 [02:15<00:00, 22.62s/item]
+encoder_structure_search:   0%|          | 0/20 [00:00<?, ?item/s]encoder_structure_search: 100%|██████████| 20/20 [00:08<00:00,  2.29item/s]
+{"candidate": "aspp", "best_fixed_miou": 0.7633814414986938, "best_calibrated": {"image_mean_miou": 0.7634788420087579, "miou": 0.7634788420087579, "image_miou_compat": 0.7634788420087579, "image_class_iou": {"Al3Ni": 0.7124779110730153, "Primary Si": 0.8455594807717655, "Al": 0.9316381414483874, "Eutectic Si": 0.5642398347418633}, "iou": {"Al3Ni": 0.7124779110730153, "Primary Si": 0.8455594807717655, "Al": 0.9316381414483874, "Eutectic Si": 0.5642398347418633}, "image_mean_miou_exclude": 0.7634788420087579, "image_scores": [0.8511546791155632, 0.659331454112009, 0.734622565261815, 0.7660273727253273, 0.6972757481497447, 0.87595099232579, 0.7784222143474046, 0.7722170432997778, 0.8183499855586007, 0.8038647711864934, 0.8350503597256986, 0.8788926823620434, 0.7993803109463496, 0.8150121370534849, 0.8155770526376177, 0.7263390316590885, 0.3663964738092948, 0.8122251068490202, 0.6872942438234766, 0.7761926152265592], "image_scores_exclude": [0.8511546791155632, 0.659331454112009, 0.734622565261815, 0.7660273727253273, 0.6972757481497447, 0.87595099232579, 0.7784222143474046, 0.7722170432997778, 0.8183499855586007, 0.8038647711864934, 0.8350503597256986, 0.8788926823620434, 0.7993803109463496, 0.8150121370534849, 0.8155770526376177, 0.7263390316590885, 0.3663964738092948, 0.8122251068490202, 0.6872942438234766, 0.7761926152265592], "image_mious": [0.8511546791155632, 0.659331454112009, 0.734622565261815, 0.7660273727253273, 0.6972757481497447, 0.87595099232579, 0.7784222143474046, 0.7722170432997778, 0.8183499855586007, 0.8038647711864934, 0.8350503597256986, 0.8788926823620434, 0.7993803109463496, 0.8150121370534849, 0.8155770526376177, 0.7263390316590885, 0.3663964738092948, 0.8122251068490202, 0.6872942438234766, 0.7761926152265592], "image_std_miou": 0.1081306226756687, "image_min_miou": 0.3663964738092948, "image_max_miou": 0.8788926823620434, "metric": "image_mIoU_four_classes_empty0", "al_bias": -0.4999999999999998}}
+CPU torch_threads=2 opencv_threads=2
+component=base GPU=GPU-c26b1177-bd33-c433-b7b2-7b0cbeafc4d2 device=NVIDIA GeForce RTX 4090
+Model349 base:   0%|          | 0/19 [00:00<?, ?image/s]DONE base A117_step4_sample2 source=restart51_aspp_768_finetune
+Model349 base:   5%|▌         | 1/19 [00:03<01:09,  3.87s/image]DONE base A11_step1_sample4 source=restart51_aspp_768_finetune
+Model349 base:  11%|█         | 2/19 [00:05<00:44,  2.63s/image]DONE base A11_step2_sample4 source=restart51_aspp_768_finetune
+Model349 base:  16%|█▌        | 3/19 [00:07<00:38,  2.38s/image]DONE base A125_step1_sample4 source=restart51_aspp_768_finetune
+Model349 base:  21%|██        | 4/19 [00:09<00:34,  2.27s/image]DONE base A153_step3_sample3 source=restart51_aspp_768_finetune
+Model349 base:  26%|██▋       | 5/19 [00:11<00:30,  2.17s/image]DONE base A170_step4_sample3 source=restart51_aspp_768_finetune
+Model349 base:  32%|███▏      | 6/19 [00:14<00:30,  2.32s/image]DONE base A181_step1_sample1 source=restart51_aspp_768_finetune
+Model349 base:  37%|███▋      | 7/19 [00:17<00:30,  2.52s/image]DONE base A186_step2_sample2 source=restart51_aspp_768_finetune
+Model349 base:  42%|████▏     | 8/19 [00:20<00:31,  2.82s/image]DONE base A191_step4_sample3 source=restart51_aspp_768_finetune
+Model349 base:  47%|████▋     | 9/19 [00:23<00:27,  2.70s/image]DONE base A40_step3_sample3 source=restart51_aspp_768_finetune
+Model349 base:  53%|█████▎    | 10/19 [00:26<00:25,  2.85s/image]DONE base A42_step2_sample4 source=restart51_aspp_768_finetune
+Model349 base:  58%|█████▊    | 11/19 [00:28<00:20,  2.57s/image]DONE base A44_step4_sample3 source=restart51_aspp_768_finetune
+Model349 base:  63%|██████▎   | 12/19 [00:30<00:16,  2.39s/image]DONE base A55_step2_sample1 source=restart51_aspp_768_finetune
+Model349 base:  68%|██████▊   | 13/19 [00:32<00:13,  2.27s/image]DONE base A59_step3_sample1 source=restart51_aspp_768_finetune
+Model349 base:  74%|███████▎  | 14/19 [00:33<00:10,  2.06s/image]DONE base A63_step1_sample4 source=restart51_aspp_768_finetune
+Model349 base:  79%|███████▉  | 15/19 [00:35<00:08,  2.06s/image]DONE base A67_step1_sample1 source=restart51_aspp_768_finetune
+Model349 base:  84%|████████▍ | 16/19 [00:37<00:05,  1.98s/image]DONE base A72_step4_sample4 source=restart51_aspp_768_finetune
+Model349 base:  89%|████████▉ | 17/19 [00:39<00:03,  1.93s/image]DONE base A74_step3_sample4 source=restart51_aspp_768_finetune
+Model349 base:  95%|█████████▍| 18/19 [00:41<00:02,  2.00s/image]DONE base A7_step1_sample4 source=restart51_aspp_768_finetune
+Model349 base: 100%|██████████| 19/19 [00:43<00:00,  2.03s/image]Model349 base: 100%|██████████| 19/19 [00:43<00:00,  2.31s/image]
+Full R+E+F image mIoU:   0%|          | 0/20 [00:00<?, ?image/s]Full R+E+F image mIoU:  45%|████▌     | 9/20 [00:05<00:06,  1.74image/s]Full R+E+F image mIoU: 100%|██████████| 20/20 [00:09<00:00,  2.20image/s]
+COMPLETE restart51_09 image_miou=0.8025852413460948

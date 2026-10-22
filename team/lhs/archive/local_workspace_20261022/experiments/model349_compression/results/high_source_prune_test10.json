@@ -1,0 +1,73 @@
+{
+  "comparison": "baseline versus forced-restart51 test masks; no test ground truth",
+  "images": {
+    "A107_step1_sample3": {
+      "source": "restart51_aspp_768_finetune",
+      "pixels": 1076250,
+      "different_pixels": 0
+    },
+    "A122_step4_sample1": {
+      "source": "restart51_aspp_768_finetune",
+      "pixels": 1076250,
+      "different_pixels": 6
+    },
+    "A124_step4_sample3": {
+      "source": "restart51_aspp_768_finetune",
+      "pixels": 1076250,
+      "different_pixels": 2
+    },
+    "A127_step3_sample2": {
+      "source": "restart51_aspp_768_finetune",
+      "pixels": 1474560,
+      "different_pixels": 2
+    },
+    "A133_step4_sample1": {
+      "source": "restart51_aspp_768_finetune",
+      "pixels": 1076250,
+      "different_pixels": 0
+    },
+    "A167_step3_sample3": {
+      "source": "restart61_pairwise_margin",
+      "pixels": 1161702,
+      "different_pixels": 1468
+    },
+    "A38_step2_sample2": {
+      "source": "restart51_aspp_768_finetune",
+      "pixels": 324000,
+      "different_pixels": 0
+    },
+    "A51_step3_sample3": {
+      "source": "restart61_pairwise_margin",
+      "pixels": 1161702,
+      "different_pixels": 4383
+    },
+    "A63_step2_sample3": {
+      "source": "restart51_aspp_768_finetune",
+      "pixels": 324000,
+      "different_pixels": 1
+    },
+    "A87_step1_sample4": {
+      "source": "restart51_aspp_768_finetune",
+      "pixels": 324000,
+      "different_pixels": 1
+    }
+  },
+  "combinations": [
+    {
+      "drop_high_sources": [],
+      "checkpoint_count": 15,
+      "different_pixels": 0,
+      "total_pixels": 9074964,
+      "agreement": 1.0
+    },
+    {
+      "drop_high_sources": [
+        "restart61_pairwise_margin"
+      ],
+      "checkpoint_count": 14,
+      "different_pixels": 5851,
+      "total_pixels": 9074964,
+      "agreement": 0.9993552591503393
+    }
+  ]
+}

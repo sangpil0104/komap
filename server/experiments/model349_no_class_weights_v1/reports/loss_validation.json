@@ -1,0 +1,77 @@
+{
+  "training_started": false,
+  "plain_ce": 1.7948646545410156,
+  "old_weighted_ce": 1.8030060529708862,
+  "historical_losses": [
+    {
+      "module": "improve_model6",
+      "function": "segmentation_loss",
+      "args": [
+        "standard"
+      ],
+      "loss": 2.62550687789917,
+      "plain_ce_plus_dice": 2.62550687789917
+    },
+    {
+      "module": "improve_model6",
+      "function": "segmentation_loss",
+      "args": [
+        "weighted"
+      ],
+      "loss": 2.62550687789917,
+      "plain_ce_plus_dice": 2.62550687789917
+    },
+    {
+      "module": "improve_five_causes",
+      "function": "patch_loss",
+      "args": [],
+      "loss": 2.62550687789917,
+      "plain_ce_plus_dice": 2.62550687789917
+    },
+    {
+      "module": "hard_negative_finetune",
+      "function": "loss_fn",
+      "args": [],
+      "loss": 2.62550687789917,
+      "plain_ce_plus_dice": 2.62550687789917
+    },
+    {
+      "module": "encoder_structure_search",
+      "function": "loss_fn",
+      "args": [],
+      "loss": 2.62550687789917,
+      "plain_ce_plus_dice": 2.62550687789917
+    },
+    {
+      "module": "resnet34_refinements",
+      "function": "segmentation_loss",
+      "args": [
+        "ema",
+        1,
+        0
+      ],
+      "loss": 2.62550687789917,
+      "plain_ce_plus_dice": 2.62550687789917
+    }
+  ],
+  "hrnet_half_ce_half_dice": "passed",
+  "class_weight_reenable_guard": "passed",
+  "unweighted_ce_call_sites": [
+    "source/experiments/historical_scripts/model1_unet_resnet34.py:211",
+    "source/experiments/historical_scripts/improve_model6.py:118",
+    "source/experiments/historical_scripts/improve_model6.py:163",
+    "source/experiments/historical_scripts/improve_model6.py:167",
+    "source/experiments/historical_scripts/improve_five_causes.py:366",
+    "source/experiments/historical_scripts/hard_negative_finetune.py:125",
+    "source/experiments/historical_scripts/encoder_structure_search.py:288",
+    "source/experiments/historical_scripts/resnet34_refinements.py:319",
+    "source/experiments/historical_scripts/model181_raw_zcdf_aspp.py:248",
+    "source/experiments/historical_scripts/model242_ema_continuation.py:49",
+    "source/experiments/historical_scripts/model253_highres_scale_finetune.py:278",
+    "source/experiments/historical_scripts/model253_highres_scale_finetune.py:385",
+    "source/experiments/historical_scripts/model253_highres_scale_finetune.py:499",
+    "source/experiments/model322_team_b4/KoMaP/train.py:221",
+    "source/experiments/model326_hybrid_fullstats/KoMaP/train.py:257",
+    "source/experiments/model336_hrnet_best/komap_seg/losses.py:54"
+  ]
+}

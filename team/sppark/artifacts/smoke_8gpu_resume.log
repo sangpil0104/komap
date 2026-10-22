@@ -1,0 +1,32 @@
+W0920 05:43:34.944000 702323 site-packages/torch/distributed/run.py:766] 
+W0920 05:43:34.944000 702323 site-packages/torch/distributed/run.py:766] *****************************************
+W0920 05:43:34.944000 702323 site-packages/torch/distributed/run.py:766] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0920 05:43:34.944000 702323 site-packages/torch/distributed/run.py:766] *****************************************
+Run: /Data3/sppark/komap/runs/smoke/integration8
+Device: cuda:0, GPUs: 8, accumulation: 1
+Train: 70, validation: 20
+Monitor: python -m alphase.cli.monitor --run /Data3/sppark/komap/runs/smoke/integration8
+Optimizer updates:  50%|█████     | 3/6 [00:00<?, ?it/s]Optimizer updates:  67%|██████▋   | 4/6 [00:02<00:04,  2.19s/it]Optimizer updates:  67%|██████▋   | 4/6 [00:02<00:04,  2.19s/it, ETA=0h 00m, best=36.11, loss=1.3266, stage=s1_patch768]
+Valid raw:   0%|          | 0/3 [00:00<?, ?it/s][A
+Valid raw:  33%|███▎      | 1/3 [00:00<00:00,  2.58it/s][A
+Valid raw:  67%|██████▋   | 2/3 [00:00<00:00,  2.21it/s][A
+Valid raw: 100%|██████████| 3/3 [00:01<00:00,  3.14it/s][A
+                                                        [A
+Valid ema:   0%|          | 0/3 [00:00<?, ?it/s][A
+Valid ema:  33%|███▎      | 1/3 [00:00<00:00,  3.59it/s][A
+Valid ema:  67%|██████▋   | 2/3 [00:00<00:00,  3.26it/s][A
+Valid ema: 100%|██████████| 3/3 [00:00<00:00,  4.56it/s][A
+                                                        [A                                                                                                                        Validation update 4: raw=45.895, EMA=36.177, best=45.895
+Optimizer updates:  67%|██████▋   | 4/6 [00:04<00:04,  2.19s/it, ETA=0h 00m, best=36.11, loss=1.3266, stage=s1_patch768]Optimizer updates:  83%|████████▎ | 5/6 [00:06<00:03,  3.38s/it, ETA=0h 00m, best=36.11, loss=1.3266, stage=s1_patch768]Optimizer updates:  83%|████████▎ | 5/6 [00:06<00:03,  3.38s/it, ETA=0h 00m, best=45.89, loss=1.2698, stage=s2_fullframe]Optimizer updates: 100%|██████████| 6/6 [00:07<00:00,  2.24s/it, ETA=0h 00m, best=45.89, loss=1.2698, stage=s2_fullframe]Optimizer updates: 100%|██████████| 6/6 [00:07<00:00,  2.24s/it, ETA=0h 00m, best=45.89, loss=1.2133, stage=s2_fullframe]
+Valid raw:   0%|          | 0/3 [00:00<?, ?it/s][A
+Valid raw:  33%|███▎      | 1/3 [00:00<00:00,  2.64it/s][A
+Valid raw:  67%|██████▋   | 2/3 [00:00<00:00,  2.29it/s][A
+Valid raw: 100%|██████████| 3/3 [00:01<00:00,  3.17it/s][A
+                                                        [A
+Valid ema:   0%|          | 0/3 [00:00<?, ?it/s][A
+Valid ema:  33%|███▎      | 1/3 [00:00<00:00,  2.80it/s][A
+Valid ema:  67%|██████▋   | 2/3 [00:00<00:00,  2.41it/s][A
+Valid ema: 100%|██████████| 3/3 [00:00<00:00,  3.30it/s][A
+                                                        [A                                                                                                                         Validation update 6: raw=47.322, EMA=45.897, best=47.322
+Optimizer updates: 100%|██████████| 6/6 [00:09<00:00,  2.24s/it, ETA=0h 00m, best=45.89, loss=1.2133, stage=s2_fullframe]Completed. Checkpoint: /Data3/sppark/komap/runs/smoke/integration8/best.pt
+Optimizer updates: 100%|██████████| 6/6 [00:10<00:00,  3.55s/it, ETA=0h 00m, best=45.89, loss=1.2133, stage=s2_fullframe]

@@ -1,0 +1,95 @@
+{
+  "model": 307,
+  "method": "per-image probability-only coordinate search maximizing a ratio-of-expectations mIoU surrogate; class Al fixed",
+  "pool_size": 128,
+  "sweeps": 2,
+  "bias_grid": [
+    -1.5,
+    -1.0,
+    -0.5,
+    0.0,
+    0.5,
+    1.0,
+    1.5
+  ],
+  "oof": {
+    "image_count": 70,
+    "baseline_image_mean_miou": 0.7750956402616517,
+    "expected_iou_decoder_image_mean_miou": 0.7648432691125406,
+    "delta_pp": -1.0252371149110895,
+    "positive_images": 10,
+    "group_bootstrap_95ci_delta_pp": [
+      -1.3484507945258897,
+      -0.6934370325676045
+    ],
+    "mean_class_iou_baseline": [
+      0.7865894930833086,
+      0.8450087649058661,
+      0.9180371503173728,
+      0.5507471527400589
+    ],
+    "mean_class_iou_decoder": [
+      0.7802005063561789,
+      0.8430760664773703,
+      0.9101132007161288,
+      0.5259833029004847
+    ],
+    "per_class_delta_pp": [
+      -0.6388986727129731,
+      -0.19326984284957494,
+      -0.7923949601243985,
+      -2.476384983957425
+    ],
+    "bias_mean": [
+      0.11428571428571428,
+      0.08571428571428572,
+      0.0,
+      0.6571428571428571
+    ],
+    "bias_values_by_class": {
+      "0": {
+        "-1.5": 0,
+        "-1.0": 0,
+        "-0.5": 0,
+        "0.0": 54,
+        "0.5": 16,
+        "1.0": 0,
+        "1.5": 0
+      },
+      "1": {
+        "-1.5": 0,
+        "-1.0": 0,
+        "-0.5": 0,
+        "0.0": 59,
+        "0.5": 10,
+        "1.0": 1,
+        "1.5": 0
+      },
+      "3": {
+        "-1.5": 0,
+        "-1.0": 0,
+        "-0.5": 0,
+        "0.0": 0,
+        "0.5": 50,
+        "1.0": 18,
+        "1.5": 2
+      }
+    },
+    "selection_used_ground_truth": false,
+    "selection_data": "per-image Model303 train grouped-OOF probabilities only",
+    "scoring_masks": "train masks opened only after all per-image biases were selected",
+    "classes": [
+      "Al3Ni",
+      "Primary Si",
+      "Al",
+      "Eutectic Si"
+    ]
+  },
+  "official_valid_secondary_only": {
+    "image_count": 20,
+    "baseline_image_mean_miou": 0.750472040179293,
+    "decoder_image_mean_miou": 0.7373330755021723,
+    "delta_pp": -1.313896467712084,
+    "used_for_bias_selection": false
+  }
+}

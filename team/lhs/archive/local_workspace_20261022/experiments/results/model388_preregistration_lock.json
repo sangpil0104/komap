@@ -1,0 +1,27 @@
+{
+  "lock_type": "pre-primary-OOF analysis hash lock",
+  "model": 388,
+  "locked_at_utc": "2026-10-02T12:59:26Z",
+  "locked_at_unix": 1790945966,
+  "artifacts_sha256": {
+    "experiments/model388_component_sampler_audit_preregistration.md": "d7d12d57471260babbddaa21872d6a54e82b23219df199c8836eaa4d5151ce13",
+    "experiments/model388_component_sampler_audit.py": "ca6f13bf5ed8813efc881173d14facf21db4eb6b104ca5cc37358cd4cd14cb4e",
+    "experiments/model388_component_sampler_audit_smoke.py": "e771b3fca6ae3c407c3b3aeebb2850984911def74acfa9f4b6a7aa720571ac3a"
+  },
+  "pre_result_evidence": {
+    "checked_at_utc": "2026-10-02T12:59:26Z",
+    "active_model382_runner_pid": 972710,
+    "active_training": "seed1/fold3, epoch68/70; OOF inference not yet started",
+    "seed1_fold3_oof_files": 0,
+    "seed1_fold4_oof_directory_exists": false,
+    "seed2_fold3_oof_directory_exists": false,
+    "seed2_fold4_oof_directory_exists": false,
+    "official_valid_or_test_read": false
+  },
+  "enforcement": {
+    "Model388 folds3-4 OOF archive and manifest must be newer than locked_at_unix": true,
+    "Model382 original lock, checkpoint, manifest, OOF hash, and fixed recipe checks are required": true,
+    "folds1-2 are exploratory only": true,
+    "sampler causal effect is not estimated by E1/E2": true
+  }
+}

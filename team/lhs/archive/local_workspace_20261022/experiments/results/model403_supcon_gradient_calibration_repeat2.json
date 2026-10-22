@@ -1,0 +1,122 @@
+{
+  "experiment": "Model403 supervised contrastive loss-scale preflight",
+  "recorded_at_utc": "2026-10-04T18:21:55.151252+00:00",
+  "data_scope": "fixed outer-train fold only; no held-out fold, official valid, or test read",
+  "data_root": "/workspace/komap_model1/outputs/model403_local_supcon/splits/model392_cv/seed1_fold1",
+  "fold_train_images": 52,
+  "probe_images": [
+    "A101_step3_sample3",
+    "A106_step4_sample1",
+    "A108_step2_sample2",
+    "A109_step1_sample3",
+    "A111_step1_sample2",
+    "A111_step3_sample4",
+    "A121_step2_sample2",
+    "A123_step1_sample1",
+    "A123_step4_sample2",
+    "A125_step2_sample1",
+    "A130_step1_sample1",
+    "A137_step4_sample2",
+    "A139_step3_sample4",
+    "A139_step4_sample3",
+    "A146_step2_sample1",
+    "A147_step4_sample4"
+  ],
+  "seed": 403,
+  "device": "cuda:0",
+  "visible_devices_env": "7",
+  "gpu_name": "Tesla P100-PCIE-16GB",
+  "torch_version": "2.6.0+cu118",
+  "cuda_version": "11.8",
+  "model": {
+    "architecture": "UnetPlusPlus",
+    "encoder_name": "tu-hrnet_w48",
+    "encoder_weights": "imagenet",
+    "boundary_head": true
+  },
+  "patch_size": 512,
+  "input_scale": 2.0,
+  "target_width": 1230,
+  "batch_size": 4,
+  "contrastive_weight_tested": 0.05,
+  "contrastive_temperature": 0.1,
+  "positions_per_class_per_image": 16,
+  "decoder_gradient_norm_ratio": {
+    "values_by_batch": [
+      7.111943520139047,
+      7.9886589863806075,
+      7.582228894503857,
+      7.843977597891703
+    ],
+    "min": 7.111943520139047,
+    "median": 7.713103246197781,
+    "max": 7.9886589863806075,
+    "weight_for_unit_median_ratio": 0.006482475134071075
+  },
+  "batches": [
+    {
+      "batch": 1,
+      "image_ids": [
+        "A101_step3_sample3",
+        "A106_step4_sample1",
+        "A108_step2_sample2",
+        "A109_step1_sample3"
+      ],
+      "seg_loss": 1.101989984512329,
+      "boundary_loss": 1.9947636127471924,
+      "supcon_loss_unweighted": 6.605946063995361,
+      "supervised_decoder_grad_norm": 0.0010109854629263282,
+      "weighted_supcon_decoder_grad_norm": 0.007190071512013674,
+      "gradient_norm_ratio": 7.111943520139047
+    },
+    {
+      "batch": 2,
+      "image_ids": [
+        "A111_step1_sample2",
+        "A111_step3_sample4",
+        "A121_step2_sample2",
+        "A123_step1_sample1"
+      ],
+      "seg_loss": 1.098639726638794,
+      "boundary_loss": 1.9692885875701904,
+      "supcon_loss_unweighted": 6.517114162445068,
+      "supervised_decoder_grad_norm": 0.0009998915484175086,
+      "weighted_supcon_decoder_grad_norm": 0.00798779260367155,
+      "gradient_norm_ratio": 7.9886589863806075
+    },
+    {
+      "batch": 3,
+      "image_ids": [
+        "A123_step4_sample2",
+        "A125_step2_sample1",
+        "A130_step1_sample1",
+        "A137_step4_sample2"
+      ],
+      "seg_loss": 1.1380963325500488,
+      "boundary_loss": 1.9915835857391357,
+      "supcon_loss_unweighted": 6.493350028991699,
+      "supervised_decoder_grad_norm": 0.00102250708732754,
+      "weighted_supcon_decoder_grad_norm": 0.007752882782369852,
+      "gradient_norm_ratio": 7.582228894503857
+    },
+    {
+      "batch": 4,
+      "image_ids": [
+        "A139_step3_sample4",
+        "A139_step4_sample3",
+        "A146_step2_sample1",
+        "A147_step4_sample4"
+      ],
+      "seg_loss": 1.1140971183776855,
+      "boundary_loss": 1.9086002111434937,
+      "supcon_loss_unweighted": 6.584882736206055,
+      "supervised_decoder_grad_norm": 0.0009608764667063951,
+      "weighted_supcon_decoder_grad_norm": 0.0075370934791862965,
+      "gradient_norm_ratio": 7.843977597891703
+    }
+  ],
+  "optimizer_steps": 0,
+  "official_valid_read": false,
+  "test_read": false,
+  "trainer_sha256": "7e9d369f8b412d11ae20237ae8e33bfed25ea094c081fc59756da2dd8162b13d"
+}

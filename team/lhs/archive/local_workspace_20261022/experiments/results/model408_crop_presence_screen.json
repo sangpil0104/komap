@@ -1,0 +1,570 @@
+{
+  "experiment": "Model408 deterministic training-crop target-presence screen",
+  "created_at_utc": "2026-10-05T22:29:48.758596Z",
+  "scope": "four fixed outer-train splits only; sampled pre-training crop stream",
+  "sampling": {
+    "run_seed": 1,
+    "rng_mode": "per_item",
+    "probes_per_fold_epoch": 32,
+    "epochs": 8,
+    "total_probes": 1024,
+    "probe_selection": "32 unique evenly spaced virtual-dataset indices per fold and epoch",
+    "patch_size": 512,
+    "input_scale": 2.0,
+    "samples_per_image": 12,
+    "post_augmentation_mask": true
+  },
+  "classes": {
+    "Al3Ni": 1,
+    "Eutectic Si": 3
+  },
+  "folds": {
+    "1": {
+      "train_images": 52,
+      "virtual_crops_per_epoch": 624,
+      "target_width": 1230,
+      "probe_indices_per_epoch": [
+        0,
+        20,
+        40,
+        60,
+        80,
+        100,
+        120,
+        140,
+        160,
+        180,
+        200,
+        221,
+        241,
+        261,
+        281,
+        301,
+        321,
+        341,
+        361,
+        381,
+        401,
+        422,
+        442,
+        462,
+        482,
+        502,
+        522,
+        542,
+        562,
+        582,
+        602,
+        623
+      ],
+      "epochs": {
+        "1": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "2": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "3": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "4": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "5": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "6": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "7": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "8": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        }
+      },
+      "all_probe_epochs": {
+        "Al3Ni": {
+          "present": 256,
+          "absent": 0,
+          "total": 256,
+          "absent_fraction": 0.0
+        },
+        "Eutectic Si": {
+          "present": 256,
+          "absent": 0,
+          "total": 256,
+          "absent_fraction": 0.0
+        }
+      }
+    },
+    "2": {
+      "train_images": 52,
+      "virtual_crops_per_epoch": 624,
+      "target_width": 1278,
+      "probe_indices_per_epoch": [
+        0,
+        20,
+        40,
+        60,
+        80,
+        100,
+        120,
+        140,
+        160,
+        180,
+        200,
+        221,
+        241,
+        261,
+        281,
+        301,
+        321,
+        341,
+        361,
+        381,
+        401,
+        422,
+        442,
+        462,
+        482,
+        502,
+        522,
+        542,
+        562,
+        582,
+        602,
+        623
+      ],
+      "epochs": {
+        "1": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "2": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "3": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "4": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "5": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "6": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "7": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "8": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        }
+      },
+      "all_probe_epochs": {
+        "Al3Ni": {
+          "present": 256,
+          "absent": 0,
+          "total": 256,
+          "absent_fraction": 0.0
+        },
+        "Eutectic Si": {
+          "present": 256,
+          "absent": 0,
+          "total": 256,
+          "absent_fraction": 0.0
+        }
+      }
+    },
+    "3": {
+      "train_images": 53,
+      "virtual_crops_per_epoch": 636,
+      "target_width": 1278,
+      "probe_indices_per_epoch": [
+        0,
+        20,
+        40,
+        61,
+        81,
+        102,
+        122,
+        143,
+        163,
+        184,
+        204,
+        225,
+        245,
+        266,
+        286,
+        307,
+        327,
+        348,
+        368,
+        389,
+        409,
+        430,
+        450,
+        471,
+        491,
+        512,
+        532,
+        553,
+        573,
+        594,
+        614,
+        635
+      ],
+      "epochs": {
+        "1": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "2": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "3": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "4": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "5": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "6": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "7": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "8": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        }
+      },
+      "all_probe_epochs": {
+        "Al3Ni": {
+          "present": 256,
+          "absent": 0,
+          "total": 256,
+          "absent_fraction": 0.0
+        },
+        "Eutectic Si": {
+          "present": 256,
+          "absent": 0,
+          "total": 256,
+          "absent_fraction": 0.0
+        }
+      }
+    },
+    "4": {
+      "train_images": 53,
+      "virtual_crops_per_epoch": 636,
+      "target_width": 1278,
+      "probe_indices_per_epoch": [
+        0,
+        20,
+        40,
+        61,
+        81,
+        102,
+        122,
+        143,
+        163,
+        184,
+        204,
+        225,
+        245,
+        266,
+        286,
+        307,
+        327,
+        348,
+        368,
+        389,
+        409,
+        430,
+        450,
+        471,
+        491,
+        512,
+        532,
+        553,
+        573,
+        594,
+        614,
+        635
+      ],
+      "epochs": {
+        "1": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "2": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "3": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "4": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "5": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "6": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "7": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        },
+        "8": {
+          "Al3Ni": {
+            "present": 32,
+            "absent": 0
+          },
+          "Eutectic Si": {
+            "present": 32,
+            "absent": 0
+          }
+        }
+      },
+      "all_probe_epochs": {
+        "Al3Ni": {
+          "present": 256,
+          "absent": 0,
+          "total": 256,
+          "absent_fraction": 0.0
+        },
+        "Eutectic Si": {
+          "present": 256,
+          "absent": 0,
+          "total": 256,
+          "absent_fraction": 0.0
+        }
+      }
+    }
+  },
+  "optimizer_steps": 0,
+  "miou_computed": false,
+  "official_valid_read": false,
+  "test_read": false,
+  "dataset_code_sha256": "8f458d3fce489172a63ef738a8bc98f745f8182c7044596d6059d6dd66437381",
+  "screen_script_sha256": "dfb89f2c3f73d9ed342033713bcebc2dce88a161c3c664821cdb2218c15cad65",
+  "interpretation": "Exposure screen only; crop-level absence is not evidence of model improvement. Any follow-up loss needs a separately preregistered grouped-OOF evaluation."
+}

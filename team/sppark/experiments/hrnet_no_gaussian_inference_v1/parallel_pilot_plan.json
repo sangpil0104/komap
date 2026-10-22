@@ -1,0 +1,29 @@
+[
+  {
+    "id": "V00_parallel_control",
+    "contrast": "A00_control",
+    "change": {
+      "execution": "independent images on 8 GPUs"
+    },
+    "config": {
+      "patch": 512,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bilinear",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "flip4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  }
+]

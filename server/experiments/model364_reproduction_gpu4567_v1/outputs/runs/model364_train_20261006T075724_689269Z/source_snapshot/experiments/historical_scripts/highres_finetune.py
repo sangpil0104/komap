@@ -1,0 +1,148 @@
+#!/usr/bin/env python3
+"""Fine-tune the corrected hard-negative model with larger native patches."""
+
+from __future__ import annotations
+from local_image_metrics import progress as _local_progress
+
+import argparse
+import json
+import random
+import time
+from pathlib import Path
+
+import numpy as np
+import torch
+import torch.nn.functional as F
+from PIL import Image
+from torch.cuda.amp import GradScaler, autocast
+from torch.utils.data import DataLoader
+
+from calibrate_al import predict_probabilities, score_prediction
+from hard_negative_finetune import HARD_CLASS_WEIGHTS, load_model
+from improve_five_causes import CLASS_NAMES, NUM_CLASSES, RareAwarePatchDataset, collect_split, decode_mask
+
+
+def dice_loss(logits, target):
+    probs = torch.softmax(logits, dim=1)
+    one_hot = F.one_hot(target, NUM_CLASSES).permute(0, 3, 1, 2).float()
+    dims = (0, 2, 3)
+    intersection = (probs * one_hot).sum(dims)
+    denominator = probs.sum(dims) + one_hot.sum(dims)
+    return 1.0 - ((2.0 * intersection + 1.0) / (denominator + 1.0)).mean()
+
+
+def loss_fn(logits, target):
+    return F.cross_entropy(logits, target, weight=HARD_CLASS_WEIGHTS.to(logits.device)) + dice_loss(logits, target)
+
+
+@torch.no_grad()
+def evaluate(model, samples, args, device, use_amp):
+    model.eval()
+    confusion = np.zeros((NUM_CLASSES, NUM_CLASSES), dtype=np.int64)
+    image_scores = []
+    for image_path, mask_path in _local_progress(samples, 'highres_finetune'):
+        probabilities = predict_probabilities(model, image_path, args.patch_size, args.val_stride, device,
+                                               use_amp, args.tile_batch_size, True)
+        probabilities = np.log(np.maximum(probabilities, 1e-7))
+        probabilities[3] += args.eutectic_bias
+        prediction = probabilities.argmax(axis=0).astype(np.uint8)
+        target = decode_mask(Image.open(mask_path).convert("RGB"))
+        bins = target.reshape(-1) * NUM_CLASSES + prediction.reshape(-1)
+        current = np.bincount(bins, minlength=NUM_CLASSES * NUM_CLASSES).reshape(NUM_CLASSES, NUM_CLASSES)
+        confusion += current
+        image_scores.append(score_prediction(prediction, target))
+    intersection = np.diag(confusion).astype(np.float64)
+    union = confusion.sum(0) + confusion.sum(1) - intersection
+    iou = intersection / np.maximum(union, 1.0)
+    return {"image_miou_compat": float(iou.mean()),
+            "image_class_iou": {name: float(value) for name, value in zip(CLASS_NAMES, iou)},
+            "image_mean_miou": float(np.mean(image_scores)), "confusion": confusion.tolist()}
+
+
+def train(args):
+    random.seed(args.seed)
+    np.random.seed(args.seed)
+    torch.manual_seed(args.seed)
+    torch.cuda.manual_seed_all(args.seed)
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    use_amp = device.type == "cuda" and not args.no_amp
+    if device.type == "cuda":
+        torch.backends.cudnn.benchmark = True
+    train_samples = collect_split(args.data_dir, "train")
+    valid_samples = collect_split(args.data_dir, "valid")
+    dataset = RareAwarePatchDataset(train_samples, args.patch_size, args.patches_per_image, True, args.seed)
+    loader = DataLoader(dataset, batch_size=args.batch_size, shuffle=True, num_workers=args.num_workers,
+                        pin_memory=(device.type == "cuda"), persistent_workers=(args.num_workers > 0))
+    model = load_model(args.checkpoint, device)
+    optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
+    scaler = GradScaler(enabled=use_amp)
+    output_dir = Path(args.output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+    best = -1.0
+    history = []
+    start = time.time()
+    print(f"device={device} patch={args.patch_size} patches={len(dataset)} batch={args.batch_size}", flush=True)
+    for epoch in _local_progress(range(1, args.epochs + 1), 'highres_finetune'):
+        model.train()
+        total, count = 0.0, 0
+        epoch_start = time.time()
+        for images, masks in _local_progress(loader, 'highres_finetune'):
+            images, masks = images.to(device, non_blocking=True), masks.to(device, non_blocking=True)
+            optimizer.zero_grad(set_to_none=True)
+            with autocast(enabled=use_amp):
+                loss = loss_fn(model(images), masks)
+            if use_amp:
+                scaler.scale(loss).backward()
+                scaler.unscale_(optimizer)
+                torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+                scaler.step(optimizer)
+                scaler.update()
+            else:
+                loss.backward()
+                torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+                optimizer.step()
+            total += float(loss.item()) * images.shape[0]
+            count += images.shape[0]
+        validation = evaluate(model, valid_samples, args, device, use_amp)
+        record = {"epoch": epoch, "train_loss": total / max(count, 1), "valid": validation,
+                  "seconds": time.time() - epoch_start}
+        history.append(record)
+        (output_dir / "history.json").write_text(json.dumps(history, ensure_ascii=False, indent=2), encoding="utf-8")
+        torch.save({"model": model.state_dict(), "epoch": epoch, "metrics": validation, "args": vars(args)},
+                   output_dir / "last.pt")
+        score = validation["image_mean_miou"]
+        print(f"epoch={epoch:02d} loss={record['train_loss']:.4f} image={score:.4f} "
+              f"image={validation['image_mean_miou']:.4f} "
+              f"iou=" + ",".join(f"{v:.3f}" for v in validation["image_class_iou"].values()) +
+              f" time={record['seconds']:.1f}s", flush=True)
+        if score > best:
+            best = score
+            torch.save({"model": model.state_dict(), "epoch": epoch, "metrics": validation, "args": vars(args)},
+                       output_dir / "best.pt")
+    summary = {"best_image_mean_miou": best, "epochs": len(history), "elapsed_seconds": time.time() - start}
+    (output_dir / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(json.dumps(summary, ensure_ascii=False), flush=True)
+
+
+def parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--data-dir", required=True)
+    parser.add_argument("--checkpoint", required=True)
+    parser.add_argument("--output-dir", required=True)
+    parser.add_argument("--patch-size", type=int, default=640)
+    parser.add_argument("--val-stride", type=int, default=512)
+    parser.add_argument("--tile-batch-size", type=int, default=2)
+    parser.add_argument("--patches-per-image", type=int, default=4)
+    parser.add_argument("--epochs", type=int, default=4)
+    parser.add_argument("--batch-size", type=int, default=2)
+    parser.add_argument("--num-workers", type=int, default=4)
+    parser.add_argument("--lr", type=float, default=1.5e-5)
+    parser.add_argument("--weight-decay", type=float, default=1e-4)
+    parser.add_argument("--eutectic-bias", "--al-bias", dest="eutectic_bias", type=float, default=0.0)
+    parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--no-amp", action="store_true")
+    return parser.parse_args()
+
+
+if __name__ == "__main__":
+    train(parse_args())

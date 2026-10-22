@@ -1,0 +1,2755 @@
+{
+  "checkpoint_sha256": "682e9fd9e00cde62639472c819a5ba790ca1e159695d32db4c093bd8b6ae05d2",
+  "model_loaded_strictly_from_original_checkpoint": true,
+  "bn_layers": [
+    {
+      "name": "encoder.model.bn1",
+      "type": "BatchNorm2d",
+      "channels": 64,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 5.605193857299268e-45
+    },
+    {
+      "name": "encoder.model.bn2",
+      "type": "BatchNorm2d",
+      "channels": 64,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.01771690510213375
+    },
+    {
+      "name": "encoder.model.layer1.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 64,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0004771332023665309
+    },
+    {
+      "name": "encoder.model.layer1.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 64,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.009344932623207569
+    },
+    {
+      "name": "encoder.model.layer1.0.bn3",
+      "type": "BatchNorm2d",
+      "channels": 256,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 5.601605168924835e-16
+    },
+    {
+      "name": "encoder.model.layer1.0.downsample.1",
+      "type": "BatchNorm2d",
+      "channels": 256,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 1.1904223275326802e-15
+    },
+    {
+      "name": "encoder.model.layer1.1.bn1",
+      "type": "BatchNorm2d",
+      "channels": 64,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.005761901848018169
+    },
+    {
+      "name": "encoder.model.layer1.1.bn2",
+      "type": "BatchNorm2d",
+      "channels": 64,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.003476468613371253
+    },
+    {
+      "name": "encoder.model.layer1.1.bn3",
+      "type": "BatchNorm2d",
+      "channels": 256,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 1.3734168967036164e-12
+    },
+    {
+      "name": "encoder.model.layer1.2.bn1",
+      "type": "BatchNorm2d",
+      "channels": 64,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.007863286882638931
+    },
+    {
+      "name": "encoder.model.layer1.2.bn2",
+      "type": "BatchNorm2d",
+      "channels": 64,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.006077124271541834
+    },
+    {
+      "name": "encoder.model.layer1.2.bn3",
+      "type": "BatchNorm2d",
+      "channels": 256,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00018167341477237642
+    },
+    {
+      "name": "encoder.model.layer1.3.bn1",
+      "type": "BatchNorm2d",
+      "channels": 64,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.011308632791042328
+    },
+    {
+      "name": "encoder.model.layer1.3.bn2",
+      "type": "BatchNorm2d",
+      "channels": 64,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00420075748115778
+    },
+    {
+      "name": "encoder.model.layer1.3.bn3",
+      "type": "BatchNorm2d",
+      "channels": 256,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 8.608386997366324e-05
+    },
+    {
+      "name": "encoder.model.transition1.0.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.06371624767780304
+    },
+    {
+      "name": "encoder.model.transition1.1.0.1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0811837688088417
+    },
+    {
+      "name": "encoder.model.stage2.0.branches.0.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.043642558157444
+    },
+    {
+      "name": "encoder.model.stage2.0.branches.0.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0011103515280410647
+    },
+    {
+      "name": "encoder.model.stage2.0.branches.0.1.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.08111032098531723
+    },
+    {
+      "name": "encoder.model.stage2.0.branches.0.1.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0008537118555977941
+    },
+    {
+      "name": "encoder.model.stage2.0.branches.0.2.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.07958352565765381
+    },
+    {
+      "name": "encoder.model.stage2.0.branches.0.2.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0008263228228315711
+    },
+    {
+      "name": "encoder.model.stage2.0.branches.0.3.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.11183704435825348
+    },
+    {
+      "name": "encoder.model.stage2.0.branches.0.3.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0006470003863796592
+    },
+    {
+      "name": "encoder.model.stage2.0.branches.1.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.04779450595378876
+    },
+    {
+      "name": "encoder.model.stage2.0.branches.1.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.004188397899270058
+    },
+    {
+      "name": "encoder.model.stage2.0.branches.1.1.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.06455208361148834
+    },
+    {
+      "name": "encoder.model.stage2.0.branches.1.1.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0028530526906251907
+    },
+    {
+      "name": "encoder.model.stage2.0.branches.1.2.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.06012862175703049
+    },
+    {
+      "name": "encoder.model.stage2.0.branches.1.2.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0010500698117539287
+    },
+    {
+      "name": "encoder.model.stage2.0.branches.1.3.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.07404513657093048
+    },
+    {
+      "name": "encoder.model.stage2.0.branches.1.3.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0007233461947180331
+    },
+    {
+      "name": "encoder.model.stage2.0.fuse_layers.0.1.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0029455432668328285
+    },
+    {
+      "name": "encoder.model.stage2.0.fuse_layers.1.0.0.1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.039477717131376266
+    },
+    {
+      "name": "encoder.model.transition2.2.0.1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 1.031791297366469e-12
+    },
+    {
+      "name": "encoder.model.stage3.0.branches.0.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.10797198116779327
+    },
+    {
+      "name": "encoder.model.stage3.0.branches.0.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0010264202719554305
+    },
+    {
+      "name": "encoder.model.stage3.0.branches.0.1.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.09961920231580734
+    },
+    {
+      "name": "encoder.model.stage3.0.branches.0.1.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00023565506853628904
+    },
+    {
+      "name": "encoder.model.stage3.0.branches.0.2.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0999147817492485
+    },
+    {
+      "name": "encoder.model.stage3.0.branches.0.2.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00037496324512176216
+    },
+    {
+      "name": "encoder.model.stage3.0.branches.0.3.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.09172368049621582
+    },
+    {
+      "name": "encoder.model.stage3.0.branches.0.3.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0001855986047303304
+    },
+    {
+      "name": "encoder.model.stage3.0.branches.1.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.07353521138429642
+    },
+    {
+      "name": "encoder.model.stage3.0.branches.1.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0007266395841725171
+    },
+    {
+      "name": "encoder.model.stage3.0.branches.1.1.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.09722019731998444
+    },
+    {
+      "name": "encoder.model.stage3.0.branches.1.1.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.000967445143032819
+    },
+    {
+      "name": "encoder.model.stage3.0.branches.1.2.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.09042759984731674
+    },
+    {
+      "name": "encoder.model.stage3.0.branches.1.2.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00021573429694399238
+    },
+    {
+      "name": "encoder.model.stage3.0.branches.1.3.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.06955251842737198
+    },
+    {
+      "name": "encoder.model.stage3.0.branches.1.3.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00028246635338291526
+    },
+    {
+      "name": "encoder.model.stage3.0.branches.2.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0016644112765789032
+    },
+    {
+      "name": "encoder.model.stage3.0.branches.2.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 1.9675001211583165e-11
+    },
+    {
+      "name": "encoder.model.stage3.0.branches.2.1.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.002245100447908044
+    },
+    {
+      "name": "encoder.model.stage3.0.branches.2.1.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 2.4244356609415263e-05
+    },
+    {
+      "name": "encoder.model.stage3.0.branches.2.2.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0014158324338495731
+    },
+    {
+      "name": "encoder.model.stage3.0.branches.2.2.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 3.55725369161064e-08
+    },
+    {
+      "name": "encoder.model.stage3.0.branches.2.3.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 1.4133114234482491e-08
+    },
+    {
+      "name": "encoder.model.stage3.0.branches.2.3.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 2.0335917394476155e-09
+    },
+    {
+      "name": "encoder.model.stage3.0.fuse_layers.0.1.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.005740201100707054
+    },
+    {
+      "name": "encoder.model.stage3.0.fuse_layers.0.2.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0003029361250810325
+    },
+    {
+      "name": "encoder.model.stage3.0.fuse_layers.1.0.0.1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.03119463287293911
+    },
+    {
+      "name": "encoder.model.stage3.0.fuse_layers.1.2.1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0003881985030602664
+    },
+    {
+      "name": "encoder.model.stage3.0.fuse_layers.2.0.0.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.12015359848737717
+    },
+    {
+      "name": "encoder.model.stage3.0.fuse_layers.2.0.1.1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0024972085375338793
+    },
+    {
+      "name": "encoder.model.stage3.0.fuse_layers.2.1.0.1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.09879152476787567
+    },
+    {
+      "name": "encoder.model.stage3.1.branches.0.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.07727286219596863
+    },
+    {
+      "name": "encoder.model.stage3.1.branches.0.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00033840950345620513
+    },
+    {
+      "name": "encoder.model.stage3.1.branches.0.1.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.08340857177972794
+    },
+    {
+      "name": "encoder.model.stage3.1.branches.0.1.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00032403410295955837
+    },
+    {
+      "name": "encoder.model.stage3.1.branches.0.2.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.08233913779258728
+    },
+    {
+      "name": "encoder.model.stage3.1.branches.0.2.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00015958474250510335
+    },
+    {
+      "name": "encoder.model.stage3.1.branches.0.3.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.08473452180624008
+    },
+    {
+      "name": "encoder.model.stage3.1.branches.0.3.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00015947707288432866
+    },
+    {
+      "name": "encoder.model.stage3.1.branches.1.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.11668529361486435
+    },
+    {
+      "name": "encoder.model.stage3.1.branches.1.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00024460707209073007
+    },
+    {
+      "name": "encoder.model.stage3.1.branches.1.1.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.10963001847267151
+    },
+    {
+      "name": "encoder.model.stage3.1.branches.1.1.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00011317353346385062
+    },
+    {
+      "name": "encoder.model.stage3.1.branches.1.2.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.10756628215312958
+    },
+    {
+      "name": "encoder.model.stage3.1.branches.1.2.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00017585490422789007
+    },
+    {
+      "name": "encoder.model.stage3.1.branches.1.3.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.10660743713378906
+    },
+    {
+      "name": "encoder.model.stage3.1.branches.1.3.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00015846405585762113
+    },
+    {
+      "name": "encoder.model.stage3.1.branches.2.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.04123227298259735
+    },
+    {
+      "name": "encoder.model.stage3.1.branches.2.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0014944247668609023
+    },
+    {
+      "name": "encoder.model.stage3.1.branches.2.1.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.02892482466995716
+    },
+    {
+      "name": "encoder.model.stage3.1.branches.2.1.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0007171173929236829
+    },
+    {
+      "name": "encoder.model.stage3.1.branches.2.2.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.02772233448922634
+    },
+    {
+      "name": "encoder.model.stage3.1.branches.2.2.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.000976568553596735
+    },
+    {
+      "name": "encoder.model.stage3.1.branches.2.3.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.02106093056499958
+    },
+    {
+      "name": "encoder.model.stage3.1.branches.2.3.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0011220973683521152
+    },
+    {
+      "name": "encoder.model.stage3.1.fuse_layers.0.1.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.008194818161427975
+    },
+    {
+      "name": "encoder.model.stage3.1.fuse_layers.0.2.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0018554443959146738
+    },
+    {
+      "name": "encoder.model.stage3.1.fuse_layers.1.0.0.1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.02962551824748516
+    },
+    {
+      "name": "encoder.model.stage3.1.fuse_layers.1.2.1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0010801239404827356
+    },
+    {
+      "name": "encoder.model.stage3.1.fuse_layers.2.0.0.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.07753415405750275
+    },
+    {
+      "name": "encoder.model.stage3.1.fuse_layers.2.0.1.1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0006716003408655524
+    },
+    {
+      "name": "encoder.model.stage3.1.fuse_layers.2.1.0.1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.07144875824451447
+    },
+    {
+      "name": "encoder.model.stage3.2.branches.0.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.07400362938642502
+    },
+    {
+      "name": "encoder.model.stage3.2.branches.0.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00020705306087620556
+    },
+    {
+      "name": "encoder.model.stage3.2.branches.0.1.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.08314850926399231
+    },
+    {
+      "name": "encoder.model.stage3.2.branches.0.1.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00014333706349134445
+    },
+    {
+      "name": "encoder.model.stage3.2.branches.0.2.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.10685472935438156
+    },
+    {
+      "name": "encoder.model.stage3.2.branches.0.2.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0001297470007557422
+    },
+    {
+      "name": "encoder.model.stage3.2.branches.0.3.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.08145492523908615
+    },
+    {
+      "name": "encoder.model.stage3.2.branches.0.3.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00013563124230131507
+    },
+    {
+      "name": "encoder.model.stage3.2.branches.1.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.09000322222709656
+    },
+    {
+      "name": "encoder.model.stage3.2.branches.1.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00013870702241547406
+    },
+    {
+      "name": "encoder.model.stage3.2.branches.1.1.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.08232244104146957
+    },
+    {
+      "name": "encoder.model.stage3.2.branches.1.1.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00040041437023319304
+    },
+    {
+      "name": "encoder.model.stage3.2.branches.1.2.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.07849307358264923
+    },
+    {
+      "name": "encoder.model.stage3.2.branches.1.2.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00013098973431624472
+    },
+    {
+      "name": "encoder.model.stage3.2.branches.1.3.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.04809456318616867
+    },
+    {
+      "name": "encoder.model.stage3.2.branches.1.3.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00011277965677436441
+    },
+    {
+      "name": "encoder.model.stage3.2.branches.2.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.05536465719342232
+    },
+    {
+      "name": "encoder.model.stage3.2.branches.2.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0007695414242334664
+    },
+    {
+      "name": "encoder.model.stage3.2.branches.2.1.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.041832294315099716
+    },
+    {
+      "name": "encoder.model.stage3.2.branches.2.1.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0002966160827782005
+    },
+    {
+      "name": "encoder.model.stage3.2.branches.2.2.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.03546609729528427
+    },
+    {
+      "name": "encoder.model.stage3.2.branches.2.2.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00024108322395477444
+    },
+    {
+      "name": "encoder.model.stage3.2.branches.2.3.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.032036956399679184
+    },
+    {
+      "name": "encoder.model.stage3.2.branches.2.3.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0001938622008310631
+    },
+    {
+      "name": "encoder.model.stage3.2.fuse_layers.0.1.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0042040301486849785
+    },
+    {
+      "name": "encoder.model.stage3.2.fuse_layers.0.2.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.003099017310887575
+    },
+    {
+      "name": "encoder.model.stage3.2.fuse_layers.1.0.0.1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.04752493277192116
+    },
+    {
+      "name": "encoder.model.stage3.2.fuse_layers.1.2.1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00231179385446012
+    },
+    {
+      "name": "encoder.model.stage3.2.fuse_layers.2.0.0.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.11585679650306702
+    },
+    {
+      "name": "encoder.model.stage3.2.fuse_layers.2.0.1.1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0007747571798972785
+    },
+    {
+      "name": "encoder.model.stage3.2.fuse_layers.2.1.0.1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.06022415682673454
+    },
+    {
+      "name": "encoder.model.stage3.3.branches.0.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.057281795889139175
+    },
+    {
+      "name": "encoder.model.stage3.3.branches.0.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 8.627012721262872e-05
+    },
+    {
+      "name": "encoder.model.stage3.3.branches.0.1.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.07103708386421204
+    },
+    {
+      "name": "encoder.model.stage3.3.branches.0.1.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 7.129104051273316e-05
+    },
+    {
+      "name": "encoder.model.stage3.3.branches.0.2.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.058256909251213074
+    },
+    {
+      "name": "encoder.model.stage3.3.branches.0.2.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0001288536877837032
+    },
+    {
+      "name": "encoder.model.stage3.3.branches.0.3.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.06466306000947952
+    },
+    {
+      "name": "encoder.model.stage3.3.branches.0.3.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 4.960913065588102e-05
+    },
+    {
+      "name": "encoder.model.stage3.3.branches.1.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.08107791095972061
+    },
+    {
+      "name": "encoder.model.stage3.3.branches.1.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.000237676125834696
+    },
+    {
+      "name": "encoder.model.stage3.3.branches.1.1.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.04571222513914108
+    },
+    {
+      "name": "encoder.model.stage3.3.branches.1.1.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 5.933770808042027e-05
+    },
+    {
+      "name": "encoder.model.stage3.3.branches.1.2.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.03559083491563797
+    },
+    {
+      "name": "encoder.model.stage3.3.branches.1.2.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00012937061546836048
+    },
+    {
+      "name": "encoder.model.stage3.3.branches.1.3.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.037355463951826096
+    },
+    {
+      "name": "encoder.model.stage3.3.branches.1.3.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0001367663062410429
+    },
+    {
+      "name": "encoder.model.stage3.3.branches.2.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.07816038280725479
+    },
+    {
+      "name": "encoder.model.stage3.3.branches.2.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0004857528838329017
+    },
+    {
+      "name": "encoder.model.stage3.3.branches.2.1.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.08533746004104614
+    },
+    {
+      "name": "encoder.model.stage3.3.branches.2.1.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0003630665014497936
+    },
+    {
+      "name": "encoder.model.stage3.3.branches.2.2.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.07845614850521088
+    },
+    {
+      "name": "encoder.model.stage3.3.branches.2.2.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0004188762395642698
+    },
+    {
+      "name": "encoder.model.stage3.3.branches.2.3.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.07623664289712906
+    },
+    {
+      "name": "encoder.model.stage3.3.branches.2.3.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0004471618158277124
+    },
+    {
+      "name": "encoder.model.stage3.3.fuse_layers.0.1.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.004034991841763258
+    },
+    {
+      "name": "encoder.model.stage3.3.fuse_layers.0.2.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.004270114004611969
+    },
+    {
+      "name": "encoder.model.stage3.3.fuse_layers.1.0.0.1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.04973802715539932
+    },
+    {
+      "name": "encoder.model.stage3.3.fuse_layers.1.2.1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.005279202479869127
+    },
+    {
+      "name": "encoder.model.stage3.3.fuse_layers.2.0.0.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.1199021115899086
+    },
+    {
+      "name": "encoder.model.stage3.3.fuse_layers.2.0.1.1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00016456074081361294
+    },
+    {
+      "name": "encoder.model.stage3.3.fuse_layers.2.1.0.1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0527338981628418
+    },
+    {
+      "name": "encoder.model.transition3.3.0.1",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 1.8531585510572768e-07
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.0.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.07106859236955643
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.0.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 3.682151373141096e-06
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.0.1.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.08783112466335297
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.0.1.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 3.198855665687006e-06
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.0.2.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.055882830172777176
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.0.2.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 1.642422648728825e-05
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.0.3.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.06465069204568863
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.0.3.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 1.9394912669667974e-05
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.1.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.06201518699526787
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.1.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 5.624727054964751e-05
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.1.1.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.020237695425748825
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.1.1.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00014823318633716553
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.1.2.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.04516012594103813
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.1.2.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0005772091099061072
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.1.3.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0701351910829544
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.1.3.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0003140397311653942
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.2.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.08264797925949097
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.2.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.000592248048633337
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.2.1.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.07793790102005005
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.2.1.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0004795955610461533
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.2.2.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.05741167068481445
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.2.2.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0004182771372143179
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.2.3.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.053622763603925705
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.2.3.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.000863700348418206
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.3.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.015691732987761497
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.3.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.007024962455034256
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.3.1.bn1",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.013781078159809113
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.3.1.bn2",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0038167075254023075
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.3.2.bn1",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.012885241769254208
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.3.2.bn2",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.002269906224682927
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.3.3.bn1",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0134700583294034
+    },
+    {
+      "name": "encoder.model.stage4.0.branches.3.3.bn2",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.008798823691904545
+    },
+    {
+      "name": "encoder.model.stage4.0.fuse_layers.0.1.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.002219689544290304
+    },
+    {
+      "name": "encoder.model.stage4.0.fuse_layers.0.2.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.004190078005194664
+    },
+    {
+      "name": "encoder.model.stage4.0.fuse_layers.0.3.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0013108914718031883
+    },
+    {
+      "name": "encoder.model.stage4.0.fuse_layers.1.0.0.1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.03942537307739258
+    },
+    {
+      "name": "encoder.model.stage4.0.fuse_layers.1.2.1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0036389378365129232
+    },
+    {
+      "name": "encoder.model.stage4.0.fuse_layers.1.3.1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0014889989979565144
+    },
+    {
+      "name": "encoder.model.stage4.0.fuse_layers.2.0.0.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.14333315193653107
+    },
+    {
+      "name": "encoder.model.stage4.0.fuse_layers.2.0.1.1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00046218367060646415
+    },
+    {
+      "name": "encoder.model.stage4.0.fuse_layers.2.1.0.1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.05284390598535538
+    },
+    {
+      "name": "encoder.model.stage4.0.fuse_layers.2.3.1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0017617051489651203
+    },
+    {
+      "name": "encoder.model.stage4.0.fuse_layers.3.0.0.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.12609577178955078
+    },
+    {
+      "name": "encoder.model.stage4.0.fuse_layers.3.0.1.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0008638690342195332
+    },
+    {
+      "name": "encoder.model.stage4.0.fuse_layers.3.0.2.1",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0014362354995682836
+    },
+    {
+      "name": "encoder.model.stage4.0.fuse_layers.3.1.0.1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.11267485469579697
+    },
+    {
+      "name": "encoder.model.stage4.0.fuse_layers.3.1.1.1",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.004287195857614279
+    },
+    {
+      "name": "encoder.model.stage4.0.fuse_layers.3.2.0.1",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.09409432858228683
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.0.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0519581213593483
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.0.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0002060889673884958
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.0.1.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.06531526893377304
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.0.1.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00016938787302933633
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.0.2.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0006007322808727622
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.0.2.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 1.7273350749746896e-05
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.0.3.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.06989620625972748
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.0.3.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 3.5736542486120015e-05
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.1.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.05914810672402382
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.1.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00024617044255137444
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.1.1.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.06546840816736221
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.1.1.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00020718705491162837
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.1.2.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.05244762450456619
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.1.2.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0001563747791806236
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.1.3.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.06708838790655136
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.1.3.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0002151433436665684
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.2.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.09411803632974625
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.2.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0012960335006937385
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.2.1.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.07182347029447556
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.2.1.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0009057414717972279
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.2.2.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.08503438532352448
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.2.2.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0003317215887364
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.2.3.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.052818313241004944
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.2.3.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0005717377061955631
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.3.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0714561715722084
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.3.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00630827946588397
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.3.1.bn1",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.08768202364444733
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.3.1.bn2",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0014928351156413555
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.3.2.bn1",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.03563562408089638
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.3.2.bn2",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0020699319429695606
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.3.3.bn1",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.04288984462618828
+    },
+    {
+      "name": "encoder.model.stage4.1.branches.3.3.bn2",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.007034632842987776
+    },
+    {
+      "name": "encoder.model.stage4.1.fuse_layers.0.1.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.003786294022575021
+    },
+    {
+      "name": "encoder.model.stage4.1.fuse_layers.0.2.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00415144395083189
+    },
+    {
+      "name": "encoder.model.stage4.1.fuse_layers.0.3.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00384488794952631
+    },
+    {
+      "name": "encoder.model.stage4.1.fuse_layers.1.0.0.1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.06282849609851837
+    },
+    {
+      "name": "encoder.model.stage4.1.fuse_layers.1.2.1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0036991904489696026
+    },
+    {
+      "name": "encoder.model.stage4.1.fuse_layers.1.3.1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.005406506359577179
+    },
+    {
+      "name": "encoder.model.stage4.1.fuse_layers.2.0.0.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.09885939210653305
+    },
+    {
+      "name": "encoder.model.stage4.1.fuse_layers.2.0.1.1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00043000312871299684
+    },
+    {
+      "name": "encoder.model.stage4.1.fuse_layers.2.1.0.1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.039967942982912064
+    },
+    {
+      "name": "encoder.model.stage4.1.fuse_layers.2.3.1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.002700066426768899
+    },
+    {
+      "name": "encoder.model.stage4.1.fuse_layers.3.0.0.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.08220801502466202
+    },
+    {
+      "name": "encoder.model.stage4.1.fuse_layers.3.0.1.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0007508510607294738
+    },
+    {
+      "name": "encoder.model.stage4.1.fuse_layers.3.0.2.1",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0016240464756265283
+    },
+    {
+      "name": "encoder.model.stage4.1.fuse_layers.3.1.0.1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.09635075181722641
+    },
+    {
+      "name": "encoder.model.stage4.1.fuse_layers.3.1.1.1",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0021174887660890818
+    },
+    {
+      "name": "encoder.model.stage4.1.fuse_layers.3.2.0.1",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.12020616978406906
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.0.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0394250825047493
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.0.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 5.884979600523366e-06
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.0.1.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.06296034902334213
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.0.1.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 8.916489605326205e-06
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.0.2.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.03190375864505768
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.0.2.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 4.452511348063126e-06
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.0.3.bn1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 4.5172188833930704e-07
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.0.3.bn2",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 6.903346275066724e-06
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.1.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.043094001710414886
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.1.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0003241925442125648
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.1.1.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0680893138051033
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.1.1.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00016915274318307638
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.1.2.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.04691261798143387
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.1.2.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0004591849574353546
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.1.3.bn1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.05382575839757919
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.1.3.bn2",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0002547575277276337
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.2.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.09018454700708389
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.2.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0018512160750105977
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.2.1.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.07374237477779388
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.2.1.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0004385627107694745
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.2.2.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.11775567382574081
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.2.2.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0004932238953188062
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.2.3.bn1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.09675098210573196
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.2.3.bn2",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.001774116768501699
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.3.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.1019628494977951
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.3.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.008537995629012585
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.3.1.bn1",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.09973320364952087
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.3.1.bn2",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.006192016880959272
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.3.2.bn1",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.1573466658592224
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.3.2.bn2",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.003439969616010785
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.3.3.bn1",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.1340639442205429
+    },
+    {
+      "name": "encoder.model.stage4.2.branches.3.3.bn2",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.008841314353048801
+    },
+    {
+      "name": "encoder.model.stage4.2.fuse_layers.0.1.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.002769873710349202
+    },
+    {
+      "name": "encoder.model.stage4.2.fuse_layers.0.2.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.015141241252422333
+    },
+    {
+      "name": "encoder.model.stage4.2.fuse_layers.0.3.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.013280589133501053
+    },
+    {
+      "name": "encoder.model.stage4.2.fuse_layers.1.0.0.1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.07452176511287689
+    },
+    {
+      "name": "encoder.model.stage4.2.fuse_layers.1.2.1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.010034930892288685
+    },
+    {
+      "name": "encoder.model.stage4.2.fuse_layers.1.3.1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.016341939568519592
+    },
+    {
+      "name": "encoder.model.stage4.2.fuse_layers.2.0.0.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.07551075518131256
+    },
+    {
+      "name": "encoder.model.stage4.2.fuse_layers.2.0.1.1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 6.449834472732618e-05
+    },
+    {
+      "name": "encoder.model.stage4.2.fuse_layers.2.1.0.1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0499902181327343
+    },
+    {
+      "name": "encoder.model.stage4.2.fuse_layers.2.3.1",
+      "type": "BatchNorm2d",
+      "channels": 192,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.010957827791571617
+    },
+    {
+      "name": "encoder.model.stage4.2.fuse_layers.3.0.0.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.11469018459320068
+    },
+    {
+      "name": "encoder.model.stage4.2.fuse_layers.3.0.1.1",
+      "type": "BatchNorm2d",
+      "channels": 48,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 6.371478957589716e-05
+    },
+    {
+      "name": "encoder.model.stage4.2.fuse_layers.3.0.2.1",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0003318531671538949
+    },
+    {
+      "name": "encoder.model.stage4.2.fuse_layers.3.1.0.1",
+      "type": "BatchNorm2d",
+      "channels": 96,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.09107422083616257
+    },
+    {
+      "name": "encoder.model.stage4.2.fuse_layers.3.1.1.1",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0003717530344147235
+    },
+    {
+      "name": "encoder.model.stage4.2.fuse_layers.3.2.0.1",
+      "type": "BatchNorm2d",
+      "channels": 384,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.11121737211942673
+    },
+    {
+      "name": "encoder.model.incre_modules.0.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 32,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.004467922728508711
+    },
+    {
+      "name": "encoder.model.incre_modules.0.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 32,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00020131058408878744
+    },
+    {
+      "name": "encoder.model.incre_modules.0.0.bn3",
+      "type": "BatchNorm2d",
+      "channels": 128,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 6.656433271245987e-08
+    },
+    {
+      "name": "encoder.model.incre_modules.0.0.downsample.1",
+      "type": "BatchNorm2d",
+      "channels": 128,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0033599522430449724
+    },
+    {
+      "name": "encoder.model.incre_modules.1.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 64,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.006342812906950712
+    },
+    {
+      "name": "encoder.model.incre_modules.1.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 64,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0011635108385235071
+    },
+    {
+      "name": "encoder.model.incre_modules.1.0.bn3",
+      "type": "BatchNorm2d",
+      "channels": 256,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 1.6551962301854586e-14
+    },
+    {
+      "name": "encoder.model.incre_modules.1.0.downsample.1",
+      "type": "BatchNorm2d",
+      "channels": 256,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 1.4279945498643642e-12
+    },
+    {
+      "name": "encoder.model.incre_modules.2.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 128,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.026592982932925224
+    },
+    {
+      "name": "encoder.model.incre_modules.2.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 128,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.0024558508303016424
+    },
+    {
+      "name": "encoder.model.incre_modules.2.0.bn3",
+      "type": "BatchNorm2d",
+      "channels": 512,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.00011420789087424055
+    },
+    {
+      "name": "encoder.model.incre_modules.2.0.downsample.1",
+      "type": "BatchNorm2d",
+      "channels": 512,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.009739840403199196
+    },
+    {
+      "name": "encoder.model.incre_modules.3.0.bn1",
+      "type": "BatchNorm2d",
+      "channels": 256,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.01711459271609783
+    },
+    {
+      "name": "encoder.model.incre_modules.3.0.bn2",
+      "type": "BatchNorm2d",
+      "channels": 256,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.006257541477680206
+    },
+    {
+      "name": "encoder.model.incre_modules.3.0.bn3",
+      "type": "BatchNorm2d",
+      "channels": 1024,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 3.235855932704791e-14
+    },
+    {
+      "name": "encoder.model.incre_modules.3.0.downsample.1",
+      "type": "BatchNorm2d",
+      "channels": 1024,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 3.9356304673554554e-12
+    },
+    {
+      "name": "decoder.blocks.x_0_0.conv1.1",
+      "type": "BatchNorm2d",
+      "channels": 256,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.051259543746709824
+    },
+    {
+      "name": "decoder.blocks.x_0_0.conv2.1",
+      "type": "BatchNorm2d",
+      "channels": 256,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 1.2708864212036133
+    },
+    {
+      "name": "decoder.blocks.x_0_1.conv1.1",
+      "type": "BatchNorm2d",
+      "channels": 128,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 1.3759503364562988
+    },
+    {
+      "name": "decoder.blocks.x_0_1.conv2.1",
+      "type": "BatchNorm2d",
+      "channels": 128,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 1.0275452136993408
+    },
+    {
+      "name": "decoder.blocks.x_1_1.conv1.1",
+      "type": "BatchNorm2d",
+      "channels": 256,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.006196105387061834
+    },
+    {
+      "name": "decoder.blocks.x_1_1.conv2.1",
+      "type": "BatchNorm2d",
+      "channels": 256,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 1.4628154039382935
+    },
+    {
+      "name": "decoder.blocks.x_0_2.conv1.1",
+      "type": "BatchNorm2d",
+      "channels": 64,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 1.7446322441101074
+    },
+    {
+      "name": "decoder.blocks.x_0_2.conv2.1",
+      "type": "BatchNorm2d",
+      "channels": 64,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 1.0230824947357178
+    },
+    {
+      "name": "decoder.blocks.x_1_2.conv1.1",
+      "type": "BatchNorm2d",
+      "channels": 128,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 1.0319095849990845
+    },
+    {
+      "name": "decoder.blocks.x_1_2.conv2.1",
+      "type": "BatchNorm2d",
+      "channels": 128,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 2.100903034210205
+    },
+    {
+      "name": "decoder.blocks.x_2_2.conv1.1",
+      "type": "BatchNorm2d",
+      "channels": 128,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.013048439286649227
+    },
+    {
+      "name": "decoder.blocks.x_2_2.conv2.1",
+      "type": "BatchNorm2d",
+      "channels": 128,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 1.1349272727966309
+    },
+    {
+      "name": "decoder.blocks.x_0_3.conv1.1",
+      "type": "BatchNorm2d",
+      "channels": 32,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 3.2378907203674316
+    },
+    {
+      "name": "decoder.blocks.x_0_3.conv2.1",
+      "type": "BatchNorm2d",
+      "channels": 32,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.700148344039917
+    },
+    {
+      "name": "decoder.blocks.x_1_3.conv1.1",
+      "type": "BatchNorm2d",
+      "channels": 64,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.6983659863471985
+    },
+    {
+      "name": "decoder.blocks.x_1_3.conv2.1",
+      "type": "BatchNorm2d",
+      "channels": 64,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.34370511770248413
+    },
+    {
+      "name": "decoder.blocks.x_2_3.conv1.1",
+      "type": "BatchNorm2d",
+      "channels": 64,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.7897036075592041
+    },
+    {
+      "name": "decoder.blocks.x_2_3.conv2.1",
+      "type": "BatchNorm2d",
+      "channels": 64,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.4034082591533661
+    },
+    {
+      "name": "decoder.blocks.x_3_3.conv1.1",
+      "type": "BatchNorm2d",
+      "channels": 64,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.020647170022130013
+    },
+    {
+      "name": "decoder.blocks.x_3_3.conv2.1",
+      "type": "BatchNorm2d",
+      "channels": 64,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.5309750437736511
+    },
+    {
+      "name": "decoder.blocks.x_0_4.conv1.1",
+      "type": "BatchNorm2d",
+      "channels": 16,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 1.379102110862732
+    },
+    {
+      "name": "decoder.blocks.x_0_4.conv2.1",
+      "type": "BatchNorm2d",
+      "channels": 16,
+      "affine": true,
+      "eps": 1e-05,
+      "minimum_running_variance": 0.3478366434574127
+    }
+  ],
+  "bn_layer_count": 343,
+  "total_bn_channels": 49248,
+  "gpu_used": false,
+  "any_image_or_gt_opened": false,
+  "checkpoint_unchanged": true
+}

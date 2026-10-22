@@ -1,0 +1,44 @@
+HRNet validation:   0%|          | 0/20 [00:00<?, ?item/s]A117_step4_sample2: image mIoU zero=0.876203, skip=0.876203
+A11_step1_sample4: image mIoU zero=0.719295, skip=0.719295
+A11_step2_sample4: image mIoU zero=0.761560, skip=0.761560
+HRNet validation:  15%|█▌        | 3/20 [00:11<01:03,  3.75s/item]A125_step1_sample4: image mIoU zero=0.798061, skip=0.798061
+A153_step3_sample3: image mIoU zero=0.726133, skip=0.726133
+A170_step4_sample3: image mIoU zero=0.861273, skip=0.861273
+HRNet validation:  30%|███       | 6/20 [00:25<01:01,  4.36s/item]A181_step1_sample1: image mIoU zero=0.788326, skip=0.788326
+HRNet validation:  30%|███       | 6/20 [00:40<01:01,  4.36s/item]A186_step2_sample2: image mIoU zero=0.793021, skip=0.793021
+HRNet validation:  40%|████      | 8/20 [00:40<01:05,  5.48s/item]A191_step4_sample3: image mIoU zero=0.835218, skip=0.835218
+A40_step3_sample3: image mIoU zero=0.828334, skip=0.828334
+HRNet validation:  50%|█████     | 10/20 [00:55<01:01,  6.14s/item]A42_step2_sample4: image mIoU zero=0.799413, skip=0.799413
+A44_step4_sample3: image mIoU zero=0.892658, skip=0.892658
+HRNet validation:  60%|██████    | 12/20 [01:08<00:50,  6.28s/item]A55_step2_sample1: image mIoU zero=0.821712, skip=0.821712
+A59_step3_sample1: image mIoU zero=0.822205, skip=0.822205
+A63_step1_sample4: image mIoU zero=0.830860, skip=0.830860
+A67_step1_sample1: image mIoU zero=0.747240, skip=0.747240
+A71_step2_sample1: image mIoU zero=0.400052, skip=0.400052
+HRNet validation:  85%|████████▌ | 17/20 [01:19<00:12,  4.11s/item]A72_step4_sample4: image mIoU zero=0.859285, skip=0.859285
+A74_step3_sample4: image mIoU zero=0.747962, skip=0.747962
+A7_step1_sample4: image mIoU zero=0.815594, skip=0.815594
+HRNet validation: 100%|██████████| 20/20 [01:29<00:00,  4.46s/item]
+{
+  "model": "Model336 HRNet-W48 + SMP U-Net++",
+  "split": "valid",
+  "images": 20,
+  "class_order": [
+    "Al",
+    "Al3Ni",
+    "Primary_Si",
+    "Eutectic_Si"
+  ],
+  "inference": {
+    "patch_size": 512,
+    "input_scale": 2.0,
+    "overlap": 170,
+    "tta": "4-way horizontal/vertical flips",
+    "downsample_antialias": false
+  },
+  "per_image_metrics": "/Data3/sppark/komap/experiments/model364_reproduction_gpu4567_v1/outputs/runs/model364_train_20261006T075724_689269Z/outputs/model336_hrnet_best/valid_eval/valid_per_image.csv",
+  "probabilities": "/Data3/sppark/komap/experiments/model364_reproduction_gpu4567_v1/outputs/runs/model364_train_20261006T075724_689269Z/outputs/model336_hrnet_best/valid_eval/valid_probabilities.npz",
+  "image_miou_empty_zero": 0.7862202667533598,
+  "image_miou_empty_skip": 0.7862202667533598,
+  "image_miou_empty_one": 0.7862202667533598
+}

@@ -1,0 +1,26 @@
+{
+  "lock_type": "pre-score-inspection safety-interpretation addendum",
+  "model": 388,
+  "locked_at_utc": "2026-10-02T13:19:27Z",
+  "locked_at_unix": 1790947167,
+  "artifacts_sha256": {
+    "experiments/model388_component_sampler_safety_addendum.md": "0de6f519c7b7b6a886a96dc060fbdb699db72ec17fc1cf743b0a52960f4e2376",
+    "experiments/model388_component_sampler_audit_preregistration.md": "d7d12d57471260babbddaa21872d6a54e82b23219df199c8836eaa4d5151ce13",
+    "experiments/results/model388_preregistration_lock.json": "bf9b900a7895a5770cdeaccf8334741c6f525ea27a4be14f940e573e59819df9"
+  },
+  "pre_score_inspection_evidence": {
+    "checked_at_utc": "2026-10-02T13:19:27Z",
+    "seed1_fold3_oof_archive_exists": true,
+    "seed1_fold3_oof_manifest_exists": true,
+    "seed1_fold3_oof_summary_exists": true,
+    "OOF_score_or_prediction_values_opened_by_this_audit": false,
+    "active_training": "Model382 seed1/fold4 on P100",
+    "official_valid_or_test_read": false,
+    "amendment_basis": "E1 training-GT-only anchor-dose results; no OOF outcome used"
+  },
+  "enforcement": {
+    "does_not_change_locked_sampler_candidate": true,
+    "non-target_and_lt64_oracle_headroom_is_descriptive_only": true,
+    "future_candidate_training_requires_separate_paired_adoption_gate": true
+  }
+}

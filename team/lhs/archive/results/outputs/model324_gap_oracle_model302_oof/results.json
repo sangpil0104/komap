@@ -1,0 +1,1578 @@
+{
+  "audit": "oracle upper bound: replace predictions inside GT-defined gap pixels by GT",
+  "split": "train",
+  "metric": "image-wise mean of 4 class IoUs; absent union=0",
+  "gap_definition": {
+    "class": "Primary Si (main channel id 1)",
+    "connectivity": 8,
+    "radius_at_training_resolution_px": 5,
+    "minimum_side_used_by_training": 1024,
+    "crop_border_excluded": false
+  },
+  "image_count": 70,
+  "specimen_group_count": 59,
+  "baseline_image_mean_miou": 0.7745623599558978,
+  "gap_oracle_image_mean_miou": 0.7746751915426251,
+  "gap_oracle_delta_pp": 0.011283158672714122,
+  "gap_oracle_group_bootstrap_95ci_delta_pp": [
+    0.007614932681766119,
+    0.015315581079469802
+  ],
+  "mean_gap_pixel_fraction": 0.0003823778616747511,
+  "mean_gap_error_fraction": 0.10880449490990333,
+  "per_class_baseline_image_mean_iou": [
+    0.7860532649951618,
+    0.844420509012883,
+    0.9180402410809998,
+    0.5497354247345465
+  ],
+  "per_class_gap_oracle_image_mean_iou": [
+    0.7862276396284253,
+    0.8446146167384275,
+    0.9181054051323234,
+    0.549753104671323
+  ],
+  "images": [
+    {
+      "image": "A101_step3_sample3_image.png",
+      "specimen_group": "A101",
+      "baseline_miou": 0.8052732094081405,
+      "oracle_miou": 0.8053782634792923,
+      "delta_pp": 0.010505407115179999,
+      "baseline_class_iou": [
+        0.8250094747636882,
+        0.9285726430332398,
+        0.9203972073184972,
+        0.5471135125171369
+      ],
+      "oracle_class_iou": [
+        0.8250923126227933,
+        0.9288885109278,
+        0.9204187178494386,
+        0.5471135125171369
+      ],
+      "gap_pixel_fraction": 0.0003084785133565621,
+      "gap_error_fraction": 0.09939759036144578,
+      "gap_pixels": 332
+    },
+    {
+      "image": "A106_step4_sample1_image.png",
+      "specimen_group": "A106",
+      "baseline_miou": 0.7275704659047856,
+      "oracle_miou": 0.7276950905862991,
+      "delta_pp": 0.01246246815135299,
+      "baseline_class_iou": [
+        0.8091468364276075,
+        0.7253392056023635,
+        0.9051947930089702,
+        0.4706010285802011
+      ],
+      "oracle_class_iou": [
+        0.8092025068321879,
+        0.7256667442083224,
+        0.9052739567499265,
+        0.47063715455475946
+      ],
+      "gap_pixel_fraction": 0.0006448315911730546,
+      "gap_error_fraction": 0.08213256484149856,
+      "gap_pixels": 694
+    },
+    {
+      "image": "A108_step2_sample2_image.png",
+      "specimen_group": "A108",
+      "baseline_miou": 0.869984542232079,
+      "oracle_miou": 0.8700450491104411,
+      "delta_pp": 0.006050687836212099,
+      "baseline_class_iou": [
+        0.9235345232760223,
+        0.915668756777144,
+        0.9456440002431337,
+        0.6950908886320161
+      ],
+      "oracle_class_iou": [
+        0.9235822477995568,
+        0.9157658985088701,
+        0.9456700502765645,
+        0.6951619998567731
+      ],
+      "gap_pixel_fraction": 0.00019233449477351917,
+      "gap_error_fraction": 0.12560386473429952,
+      "gap_pixels": 207
+    },
+    {
+      "image": "A109_step1_sample3_image.png",
+      "specimen_group": "A109",
+      "baseline_miou": 0.8442527278193463,
+      "oracle_miou": 0.844262917069376,
+      "delta_pp": 0.0010189250029601915,
+      "baseline_class_iou": [
+        0.8983060799107536,
+        0.8700958743516035,
+        0.937318605082483,
+        0.6712903519325454
+      ],
+      "oracle_class_iou": [
+        0.8983140864654531,
+        0.8701238216069507,
+        0.9373234082725549,
+        0.6712903519325454
+      ],
+      "gap_pixel_fraction": 0.00017096399535423927,
+      "gap_error_fraction": 0.021739130434782608,
+      "gap_pixels": 184
+    },
+    {
+      "image": "A111_step1_sample2_image.png",
+      "specimen_group": "A111",
+      "baseline_miou": 0.8053899961248298,
+      "oracle_miou": 0.8053899961248298,
+      "delta_pp": 0.0,
+      "baseline_class_iou": [
+        0.7538244217946621,
+        0.9230363423212192,
+        0.916492925213133,
+        0.6282062951703046
+      ],
+      "oracle_class_iou": [
+        0.7538244217946621,
+        0.9230363423212192,
+        0.916492925213133,
+        0.6282062951703046
+      ],
+      "gap_pixel_fraction": 0.0,
+      "gap_error_fraction": 0.0,
+      "gap_pixels": 0
+    },
+    {
+      "image": "A111_step3_sample4_image.png",
+      "specimen_group": "A111",
+      "baseline_miou": 0.8437002102514629,
+      "oracle_miou": 0.8437002102514629,
+      "delta_pp": 0.0,
+      "baseline_class_iou": [
+        0.8127462811305207,
+        0.9748551355570901,
+        0.9288689205950004,
+        0.6583305037232404
+      ],
+      "oracle_class_iou": [
+        0.8127462811305207,
+        0.9748551355570901,
+        0.9288689205950004,
+        0.6583305037232404
+      ],
+      "gap_pixel_fraction": 0.0,
+      "gap_error_fraction": 0.0,
+      "gap_pixels": 0
+    },
+    {
+      "image": "A118_step2_sample1_image.png",
+      "specimen_group": "A118",
+      "baseline_miou": 0.8232676243321778,
+      "oracle_miou": 0.8234427519863452,
+      "delta_pp": 0.017512765416738407,
+      "baseline_class_iou": [
+        0.8401821290906949,
+        0.8600908522890386,
+        0.9374433694691726,
+        0.6553541464798053
+      ],
+      "oracle_class_iou": [
+        0.8403311169510596,
+        0.8606285907401149,
+        0.9374571537744013,
+        0.6553541464798053
+      ],
+      "gap_pixel_fraction": 0.00025365853658536585,
+      "gap_error_fraction": 0.15384615384615385,
+      "gap_pixels": 273
+    },
+    {
+      "image": "A121_step2_sample2_image.png",
+      "specimen_group": "A121",
+      "baseline_miou": 0.8583373139700664,
+      "oracle_miou": 0.8583373139700664,
+      "delta_pp": 0.0,
+      "baseline_class_iou": [
+        0.8692981099195287,
+        0.9291502662653393,
+        0.947281413764031,
+        0.6876194659313666
+      ],
+      "oracle_class_iou": [
+        0.8692981099195287,
+        0.9291502662653393,
+        0.947281413764031,
+        0.6876194659313666
+      ],
+      "gap_pixel_fraction": 0.0,
+      "gap_error_fraction": 0.0,
+      "gap_pixels": 0
+    },
+    {
+      "image": "A123_step1_sample1_image.png",
+      "specimen_group": "A123",
+      "baseline_miou": 0.7610390877160105,
+      "oracle_miou": 0.7610991163029359,
+      "delta_pp": 0.006002858692544244,
+      "baseline_class_iou": [
+        0.7660786702842962,
+        0.8515032202550129,
+        0.9221714965173804,
+        0.5044029638073525
+      ],
+      "oracle_class_iou": [
+        0.7661320883817384,
+        0.8516438618147678,
+        0.92221036383041,
+        0.5044101511848273
+      ],
+      "gap_pixel_fraction": 0.00033821138211382115,
+      "gap_error_fraction": 0.08791208791208792,
+      "gap_pixels": 364
+    },
+    {
+      "image": "A123_step4_sample2_image.png",
+      "specimen_group": "A123",
+      "baseline_miou": 0.8476995047395883,
+      "oracle_miou": 0.8476995047395883,
+      "delta_pp": 0.0,
+      "baseline_class_iou": [
+        0.8550053296441612,
+        0.9010884303880969,
+        0.9137932387654162,
+        0.7209110201606791
+      ],
+      "oracle_class_iou": [
+        0.8550053296441612,
+        0.9010884303880969,
+        0.9137932387654162,
+        0.7209110201606791
+      ],
+      "gap_pixel_fraction": 0.0,
+      "gap_error_fraction": 0.0,
+      "gap_pixels": 0
+    },
+    {
+      "image": "A125_step2_sample1_image.png",
+      "specimen_group": "A125",
+      "baseline_miou": 0.7521124837562558,
+      "oracle_miou": 0.7521124837562558,
+      "delta_pp": 0.0,
+      "baseline_class_iou": [
+        0.7742428726447667,
+        0.6990095120514044,
+        0.9419840546592725,
+        0.5932134956695801
+      ],
+      "oracle_class_iou": [
+        0.7742428726447667,
+        0.6990095120514044,
+        0.9419840546592725,
+        0.5932134956695801
+      ],
+      "gap_pixel_fraction": 0.0,
+      "gap_error_fraction": 0.0,
+      "gap_pixels": 0
+    },
+    {
+      "image": "A130_step1_sample1_image.png",
+      "specimen_group": "A130",
+      "baseline_miou": 0.8530813504372028,
+      "oracle_miou": 0.8531080514296938,
+      "delta_pp": 0.0026700992491024422,
+      "baseline_class_iou": [
+        0.9085571719378382,
+        0.8920829840128324,
+        0.9495476836324278,
+        0.6621375621657126
+      ],
+      "oracle_class_iou": [
+        0.9086233718948082,
+        0.8920829840128324,
+        0.9495882876454222,
+        0.6621375621657126
+      ],
+      "gap_pixel_fraction": 0.00016547309027777779,
+      "gap_error_fraction": 0.13114754098360656,
+      "gap_pixels": 244
+    },
+    {
+      "image": "A137_step4_sample2_image.png",
+      "specimen_group": "A137",
+      "baseline_miou": 0.8631118543574865,
+      "oracle_miou": 0.8631118543574865,
+      "delta_pp": 0.0,
+      "baseline_class_iou": [
+        0.8551470883186312,
+        0.9666104683836211,
+        0.9424824694660694,
+        0.6882073912616242
+      ],
+      "oracle_class_iou": [
+        0.8551470883186312,
+        0.9666104683836211,
+        0.9424824694660694,
+        0.6882073912616242
+      ],
+      "gap_pixel_fraction": 0.0,
+      "gap_error_fraction": 0.0,
+      "gap_pixels": 0
+    },
+    {
+      "image": "A138_step4_sample3_image.png",
+      "specimen_group": "A138",
+      "baseline_miou": 0.716576917619129,
+      "oracle_miou": 0.7169029190910501,
+      "delta_pp": 0.0326001471921078,
+      "baseline_class_iou": [
+        0.738893098624388,
+        0.8699444206926037,
+        0.8864521781003518,
+        0.3710179730591723
+      ],
+      "oracle_class_iou": [
+        0.7392370230665412,
+        0.8706442116793318,
+        0.886684623763999,
+        0.3710458178543285
+      ],
+      "gap_pixel_fraction": 0.0009876887340301975,
+      "gap_error_fraction": 0.18626528692380057,
+      "gap_pixels": 1063
+    },
+    {
+      "image": "A139_step3_sample4_image.png",
+      "specimen_group": "A139",
+      "baseline_miou": 0.6785488681462488,
+      "oracle_miou": 0.6785797967447608,
+      "delta_pp": 0.0030928598511947847,
+      "baseline_class_iou": [
+        0.7371737503254361,
+        0.8577197353724547,
+        0.9299298210826721,
+        0.18937216580443253
+      ],
+      "oracle_class_iou": [
+        0.7371961240562354,
+        0.8578210760357031,
+        0.9299298210826721,
+        0.18937216580443253
+      ],
+      "gap_pixel_fraction": 9.629991319444444e-05,
+      "gap_error_fraction": 0.07746478873239436,
+      "gap_pixels": 142
+    },
+    {
+      "image": "A139_step4_sample3_image.png",
+      "specimen_group": "A139",
+      "baseline_miou": 0.8085172641985747,
+      "oracle_miou": 0.8085172641985747,
+      "delta_pp": 0.0,
+      "baseline_class_iou": [
+        0.7876882033003156,
+        0.9604052498273083,
+        0.9452204134757869,
+        0.5407551901908876
+      ],
+      "oracle_class_iou": [
+        0.7876882033003156,
+        0.9604052498273083,
+        0.9452204134757869,
+        0.5407551901908876
+      ],
+      "gap_pixel_fraction": 0.0,
+      "gap_error_fraction": 0.0,
+      "gap_pixels": 0
+    },
+    {
+      "image": "A140_step4_sample2_image.png",
+      "specimen_group": "A140",
+      "baseline_miou": 0.8622879614069894,
+      "oracle_miou": 0.8623714660519572,
+      "delta_pp": 0.008350464496786891,
+      "baseline_class_iou": [
+        0.9148970703600509,
+        0.8888479122025039,
+        0.9507096375718966,
+        0.6946972254935064
+      ],
+      "oracle_class_iou": [
+        0.9150737147564769,
+        0.8889440014244471,
+        0.9507709225333989,
+        0.6946972254935064
+      ],
+      "gap_pixel_fraction": 0.00012885199652777778,
+      "gap_error_fraction": 0.37894736842105264,
+      "gap_pixels": 190
+    },
+    {
+      "image": "A146_step2_sample1_image.png",
+      "specimen_group": "A146",
+      "baseline_miou": 0.8571334912519333,
+      "oracle_miou": 0.8572787153257095,
+      "delta_pp": 0.014522407377626223,
+      "baseline_class_iou": [
+        0.9191039097795441,
+        0.8930184942024793,
+        0.942025370396354,
+        0.6743861906293557
+      ],
+      "oracle_class_iou": [
+        0.9192325049860972,
+        0.8934294217623964,
+        0.9420595133747458,
+        0.6743934211795988
+      ],
+      "gap_pixel_fraction": 0.0003667033370003667,
+      "gap_error_fraction": 0.1596244131455399,
+      "gap_pixels": 426
+    },
+    {
+      "image": "A147_step4_sample4_image.png",
+      "specimen_group": "A147",
+      "baseline_miou": 0.651760872218916,
+      "oracle_miou": 0.6519367705753114,
+      "delta_pp": 0.017589835639542084,
+      "baseline_class_iou": [
+        0.7953204882849878,
+        0.8488470151962783,
+        0.8205108878054199,
+        0.1423650975889782
+      ],
+      "oracle_class_iou": [
+        0.7954815370497899,
+        0.8492454169064607,
+        0.8206550307560169,
+        0.1423650975889782
+      ],
+      "gap_pixel_fraction": 0.0011689744874330938,
+      "gap_error_fraction": 0.09572901325478646,
+      "gap_pixels": 1358
+    },
+    {
+      "image": "A150_step4_sample1_image.png",
+      "specimen_group": "A150",
+      "baseline_miou": 0.722438171026362,
+      "oracle_miou": 0.7225445994740637,
+      "delta_pp": 0.010642844770170079,
+      "baseline_class_iou": [
+        0.8258766648522137,
+        0.7429484145764316,
+        0.9548174477672512,
+        0.3661101569095514
+      ],
+      "oracle_class_iou": [
+        0.8259957956009596,
+        0.7431172249256812,
+        0.954872602952516,
+        0.36619277441709797
+      ],
+      "gap_pixel_fraction": 0.00038519965277777776,
+      "gap_error_fraction": 0.1619718309859155,
+      "gap_pixels": 568
+    },
+    {
+      "image": "A152_step2_sample1_image.png",
+      "specimen_group": "A152",
+      "baseline_miou": 0.8120518155015112,
+      "oracle_miou": 0.8121898965534172,
+      "delta_pp": 0.013808105190604714,
+      "baseline_class_iou": [
+        0.8415689671626889,
+        0.8390854052060605,
+        0.9396528440002866,
+        0.6279000456370089
+      ],
+      "oracle_class_iou": [
+        0.8417953838021965,
+        0.839343355160011,
+        0.9397149535028582,
+        0.627905893748603
+      ],
+      "gap_pixel_fraction": 0.0004837729469347561,
+      "gap_error_fraction": 0.13345195729537365,
+      "gap_pixels": 562
+    },
+    {
+      "image": "A153_step1_sample4_image.png",
+      "specimen_group": "A153",
+      "baseline_miou": 0.7974585676341,
+      "oracle_miou": 0.7974585676341,
+      "delta_pp": 0.0,
+      "baseline_class_iou": [
+        0.7465235130244758,
+        0.9355694286321953,
+        0.9232091189904645,
+        0.5845322098892642
+      ],
+      "oracle_class_iou": [
+        0.7465235130244758,
+        0.9355694286321953,
+        0.9232091189904645,
+        0.5845322098892642
+      ],
+      "gap_pixel_fraction": 0.0,
+      "gap_error_fraction": 0.0,
+      "gap_pixels": 0
+    },
+    {
+      "image": "A154_step2_sample3_image.png",
+      "specimen_group": "A154",
+      "baseline_miou": 0.7990015610291855,
+      "oracle_miou": 0.7993059526788181,
+      "delta_pp": 0.03043916496325849,
+      "baseline_class_iou": [
+        0.8184094460157038,
+        0.8040829387969444,
+        0.931964996366171,
+        0.6415488629379226
+      ],
+      "oracle_class_iou": [
+        0.818823464248553,
+        0.8047102103828278,
+        0.9321237321747964,
+        0.6415664039090951
+      ],
+      "gap_pixel_fraction": 0.0010054213559071087,
+      "gap_error_fraction": 0.14126712328767124,
+      "gap_pixels": 1168
+    },
+    {
+      "image": "A155_step3_sample2_image.png",
+      "specimen_group": "A155",
+      "baseline_miou": 0.8596736473655244,
+      "oracle_miou": 0.8596736473655244,
+      "delta_pp": 0.0,
+      "baseline_class_iou": [
+        0.9233918240588768,
+        0.8936194644835319,
+        0.9542613935727694,
+        0.66742190734692
+      ],
+      "oracle_class_iou": [
+        0.9233918240588768,
+        0.8936194644835319,
+        0.9542613935727694,
+        0.66742190734692
+      ],
+      "gap_pixel_fraction": 4.3901103725396015e-05,
+      "gap_error_fraction": 0.0,
+      "gap_pixels": 51
+    },
+    {
+      "image": "A156_step4_sample1_image.png",
+      "specimen_group": "A156",
+      "baseline_miou": 0.7299671532461087,
+      "oracle_miou": 0.7300246656865153,
+      "delta_pp": 0.005751244040652637,
+      "baseline_class_iou": [
+        0.7471321769017228,
+        0.8244757951977528,
+        0.9045038152570013,
+        0.44375682562795776
+      ],
+      "oracle_class_iou": [
+        0.7472010293983719,
+        0.8245574543948425,
+        0.9045594198346641,
+        0.44378075911818243
+      ],
+      "gap_pixel_fraction": 0.00044589748489715954,
+      "gap_error_fraction": 0.08301158301158301,
+      "gap_pixels": 518
+    },
+    {
+      "image": "A156_step4_sample2_image.png",
+      "specimen_group": "A156",
+      "baseline_miou": 0.7584738310066632,
+      "oracle_miou": 0.7587410596741284,
+      "delta_pp": 0.026722866746520246,
+      "baseline_class_iou": [
+        0.7883934689901627,
+        0.8664750859547391,
+        0.9099084562193712,
+        0.4691183128623797
+      ],
+      "oracle_class_iou": [
+        0.7885824318966982,
+        0.8671499858770361,
+        0.9099901514561378,
+        0.46924166946664136
+      ],
+      "gap_pixel_fraction": 0.0009443041330737142,
+      "gap_error_fraction": 0.10756608933454877,
+      "gap_pixels": 1097
+    },
+    {
+      "image": "A159_step4_sample4_image.png",
+      "specimen_group": "A159",
+      "baseline_miou": 0.7452462745925724,
+      "oracle_miou": 0.7453688618600672,
+      "delta_pp": 0.012258726749481141,
+      "baseline_class_iou": [
+        0.7821749928748829,
+        0.9146151869459077,
+        0.8733726856280845,
+        0.41082223292141445
+      ],
+      "oracle_class_iou": [
+        0.7823168028374184,
+        0.9149149470788964,
+        0.8734214646025396,
+        0.41082223292141445
+      ],
+      "gap_pixel_fraction": 0.0004725824695145571,
+      "gap_error_fraction": 0.13479052823315119,
+      "gap_pixels": 549
+    },
+    {
+      "image": "A15_step1_sample1_image.png",
+      "specimen_group": "A15",
+      "baseline_miou": 0.8421317252953184,
+      "oracle_miou": 0.8421829724967478,
+      "delta_pp": 0.005124720142934969,
+      "baseline_class_iou": [
+        0.8863956582998487,
+        0.8881376155911306,
+        0.9506092945588176,
+        0.6433843327314771
+      ],
+      "oracle_class_iou": [
+        0.8863956582998487,
+        0.8882848239740104,
+        0.9506670749816547,
+        0.6433843327314771
+      ],
+      "gap_pixel_fraction": 0.0002654320987654321,
+      "gap_error_fraction": 0.11627906976744186,
+      "gap_pixels": 86
+    },
+    {
+      "image": "A164_step1_sample2_image.png",
+      "specimen_group": "A164",
+      "baseline_miou": 0.7079986378942222,
+      "oracle_miou": 0.7080388350869505,
+      "delta_pp": 0.004019719272829736,
+      "baseline_class_iou": [
+        0.9421102569093033,
+        0.6427198829327909,
+        0.9683107983195056,
+        0.27885361341528914
+      ],
+      "oracle_class_iou": [
+        0.9421850528396564,
+        0.6427405543181982,
+        0.9683261877679588,
+        0.27890354542198875
+      ],
+      "gap_pixel_fraction": 0.0001687179672583847,
+      "gap_error_fraction": 0.1326530612244898,
+      "gap_pixels": 196
+    },
+    {
+      "image": "A164_step4_sample1_image.png",
+      "specimen_group": "A164",
+      "baseline_miou": 0.8600875621957045,
+      "oracle_miou": 0.8600875621957045,
+      "delta_pp": 0.0,
+      "baseline_class_iou": [
+        0.8990676381095944,
+        0.9097575303340288,
+        0.942116420149678,
+        0.6894086601895166
+      ],
+      "oracle_class_iou": [
+        0.8990676381095944,
+        0.9097575303340288,
+        0.942116420149678,
+        0.6894086601895166
+      ],
+      "gap_pixel_fraction": 1.377289528639875e-05,
+      "gap_error_fraction": 0.0,
+      "gap_pixels": 16
+    },
+    {
+      "image": "A166_step4_sample3_image.png",
+      "specimen_group": "A166",
+      "baseline_miou": 0.8421224872414523,
+      "oracle_miou": 0.8421252519796096,
+      "delta_pp": 0.0002764738157301494,
+      "baseline_class_iou": [
+        0.8373052709248218,
+        0.9027178786455442,
+        0.9295800088179659,
+        0.6988867905774774
+      ],
+      "oracle_class_iou": [
+        0.8373052709248218,
+        0.9027275153456098,
+        0.9295814310705295,
+        0.6988867905774774
+      ],
+      "gap_pixel_fraction": 6.800367047659382e-05,
+      "gap_error_fraction": 0.012658227848101266,
+      "gap_pixels": 79
+    },
+    {
+      "image": "A167_step3_sample4_image.png",
+      "specimen_group": "A167",
+      "baseline_miou": 0.7613792618438688,
+      "oracle_miou": 0.7616911775084731,
+      "delta_pp": 0.031191566460431197,
+      "baseline_class_iou": [
+        0.8304494051960665,
+        0.8867640040668682,
+        0.8926993995781614,
+        0.4356042385343797
+      ],
+      "oracle_class_iou": [
+        0.830677151507279,
+        0.8876603640341464,
+        0.8928229559580875,
+        0.4356042385343797
+      ],
+      "gap_pixel_fraction": 0.0006430220486837416,
+      "gap_error_fraction": 0.22088353413654618,
+      "gap_pixels": 747
+    },
+    {
+      "image": "A16_step4_sample4_image.png",
+      "specimen_group": "A16",
+      "baseline_miou": 0.8031666985597378,
+      "oracle_miou": 0.8033405835389754,
+      "delta_pp": 0.017388497923764845,
+      "baseline_class_iou": [
+        0.7105804955392006,
+        0.914343660106372,
+        0.9409769789244932,
+        0.6467656596688854
+      ],
+      "oracle_class_iou": [
+        0.7111011193411743,
+        0.9143815062397814,
+        0.9410698905296793,
+        0.6468098180452668
+      ],
+      "gap_pixel_fraction": 0.00027469135802469136,
+      "gap_error_fraction": 0.2696629213483146,
+      "gap_pixels": 89
+    },
+    {
+      "image": "A181_step4_sample4_image.png",
+      "specimen_group": "A181",
+      "baseline_miou": 0.7506016319623608,
+      "oracle_miou": 0.7506016319623608,
+      "delta_pp": 0.0,
+      "baseline_class_iou": [
+        0.7582973723640101,
+        0.9651562107379178,
+        0.891866645473014,
+        0.3870862992745016
+      ],
+      "oracle_class_iou": [
+        0.7582973723640101,
+        0.9651562107379178,
+        0.891866645473014,
+        0.3870862992745016
+      ],
+      "gap_pixel_fraction": 0.0,
+      "gap_error_fraction": 0.0,
+      "gap_pixels": 0
+    },
+    {
+      "image": "A182_step4_sample3_image.png",
+      "specimen_group": "A182",
+      "baseline_miou": 0.6853634072753203,
+      "oracle_miou": 0.6853649110822468,
+      "delta_pp": 0.00015038069265393972,
+      "baseline_class_iou": [
+        0.8161426694650126,
+        0.6046057316041554,
+        0.924144174704391,
+        0.396561053327722
+      ],
+      "oracle_class_iou": [
+        0.8161464382109898,
+        0.6046057316041554,
+        0.9241464211861199,
+        0.396561053327722
+      ],
+      "gap_pixel_fraction": 3.594292534722222e-05,
+      "gap_error_fraction": 0.03773584905660377,
+      "gap_pixels": 53
+    },
+    {
+      "image": "A187_step2_sample1_image.png",
+      "specimen_group": "A187",
+      "baseline_miou": 0.8521200856737985,
+      "oracle_miou": 0.8521322652946527,
+      "delta_pp": 0.0012179620854202433,
+      "baseline_class_iou": [
+        0.8831792620418878,
+        0.9693043805407908,
+        0.9356085931748959,
+        0.6203881069376197
+      ],
+      "oracle_class_iou": [
+        0.8831905769470123,
+        0.9693417841190828,
+        0.9356085931748959,
+        0.6203881069376197
+      ],
+      "gap_pixel_fraction": 5.9465737514518004e-05,
+      "gap_error_fraction": 0.0625,
+      "gap_pixels": 64
+    },
+    {
+      "image": "A187_step4_sample4_image.png",
+      "specimen_group": "A187",
+      "baseline_miou": 0.6961081742865382,
+      "oracle_miou": 0.6961556578494066,
+      "delta_pp": 0.004748356286843336,
+      "baseline_class_iou": [
+        0.7125212938108832,
+        0.9198758059150601,
+        0.8163651507267167,
+        0.33567044669349266
+      ],
+      "oracle_class_iou": [
+        0.7125477846880057,
+        0.9200361239622282,
+        0.8163682760538994,
+        0.33567044669349266
+      ],
+      "gap_pixel_fraction": 7.154471544715447e-05,
+      "gap_error_fraction": 0.16883116883116883,
+      "gap_pixels": 77
+    },
+    {
+      "image": "A188_step4_sample1_image.png",
+      "specimen_group": "A188",
+      "baseline_miou": 0.841169527202887,
+      "oracle_miou": 0.841169527202887,
+      "delta_pp": 0.0,
+      "baseline_class_iou": [
+        0.8909596788217415,
+        0.8978758081164774,
+        0.9348462754608666,
+        0.6409963464124626
+      ],
+      "oracle_class_iou": [
+        0.8909596788217415,
+        0.8978758081164774,
+        0.9348462754608666,
+        0.6409963464124626
+      ],
+      "gap_pixel_fraction": 3.9597073948396404e-05,
+      "gap_error_fraction": 0.0,
+      "gap_pixels": 46
+    },
+    {
+      "image": "A18_step2_sample1_image.png",
+      "specimen_group": "A18",
+      "baseline_miou": 0.7478323441398528,
+      "oracle_miou": 0.7478362020983609,
+      "delta_pp": 0.00038579585081022216,
+      "baseline_class_iou": [
+        0.9358106786622336,
+        0.8325811225675461,
+        0.9777259940378721,
+        0.24521158129175946
+      ],
+      "oracle_class_iou": [
+        0.9358106786622336,
+        0.8325913060495609,
+        0.9777312423898896,
+        0.24521158129175946
+      ],
+      "gap_pixel_fraction": 5.246913580246914e-05,
+      "gap_error_fraction": 0.058823529411764705,
+      "gap_pixels": 17
+    },
+    {
+      "image": "A191_step3_sample1_image.png",
+      "specimen_group": "A191",
+      "baseline_miou": 0.8865165539108054,
+      "oracle_miou": 0.8865165539108054,
+      "delta_pp": 0.0,
+      "baseline_class_iou": [
+        0.9084332768693373,
+        0.9129615746881187,
+        0.9552965702005942,
+        0.7693747938851714
+      ],
+      "oracle_class_iou": [
+        0.9084332768693373,
+        0.9129615746881187,
+        0.9552965702005942,
+        0.7693747938851714
+      ],
+      "gap_pixel_fraction": 0.0,
+      "gap_error_fraction": 0.0,
+      "gap_pixels": 0
+    },
+    {
+      "image": "A191_step4_sample1_image.png",
+      "specimen_group": "A191",
+      "baseline_miou": 0.806202015350436,
+      "oracle_miou": 0.806202015350436,
+      "delta_pp": 0.0,
+      "baseline_class_iou": [
+        0.7823859690556723,
+        0.8995054321388033,
+        0.9340261307830959,
+        0.6088905294241721
+      ],
+      "oracle_class_iou": [
+        0.7823859690556723,
+        0.8995054321388033,
+        0.9340261307830959,
+        0.6088905294241721
+      ],
+      "gap_pixel_fraction": 0.0,
+      "gap_error_fraction": 0.0,
+      "gap_pixels": 0
+    },
+    {
+      "image": "A200_step4_sample3_image.png",
+      "specimen_group": "A200",
+      "baseline_miou": 0.6931887012430874,
+      "oracle_miou": 0.6932242199416,
+      "delta_pp": 0.003551869851259326,
+      "baseline_class_iou": [
+        0.8449892511198479,
+        0.6273215350964406,
+        0.942709459783112,
+        0.3577345589729491
+      ],
+      "oracle_class_iou": [
+        0.8450279858230986,
+        0.6273864070255822,
+        0.9427265456371757,
+        0.3577559412805432
+      ],
+      "gap_pixel_fraction": 0.00043556781343236046,
+      "gap_error_fraction": 0.043478260869565216,
+      "gap_pixels": 506
+    },
+    {
+      "image": "A201_step3_sample1_image.png",
+      "specimen_group": "A201",
+      "baseline_miou": 0.7740694409374763,
+      "oracle_miou": 0.774219434092376,
+      "delta_pp": 0.01499931548997191,
+      "baseline_class_iou": [
+        0.8071481962637187,
+        0.8486425691278701,
+        0.9081049816816207,
+        0.5323820166766956
+      ],
+      "oracle_class_iou": [
+        0.8072724163421119,
+        0.8490895813630541,
+        0.9081337219876424,
+        0.5323820166766956
+      ],
+      "gap_pixel_fraction": 0.0002452961672473868,
+      "gap_error_fraction": 0.20454545454545456,
+      "gap_pixels": 264
+    },
+    {
+      "image": "A201_step3_sample4_image.png",
+      "specimen_group": "A201",
+      "baseline_miou": 0.7732193069434399,
+      "oracle_miou": 0.773340225350144,
+      "delta_pp": 0.012091840670414022,
+      "baseline_class_iou": [
+        0.7781087264713726,
+        0.920939543083817,
+        0.9046455479845787,
+        0.48918341023399153
+      ],
+      "oracle_class_iou": [
+        0.7781452212848982,
+        0.9213625590240139,
+        0.9046654760901057,
+        0.4891876450015582
+      ],
+      "gap_pixel_fraction": 0.00016167247386759582,
+      "gap_error_fraction": 0.14942528735632185,
+      "gap_pixels": 174
+    },
+    {
+      "image": "A21_step2_sample4_image.png",
+      "specimen_group": "A21",
+      "baseline_miou": 0.8081359781058517,
+      "oracle_miou": 0.8084655981541259,
+      "delta_pp": 0.03296200482741929,
+      "baseline_class_iou": [
+        0.7087767288254329,
+        0.875897061749685,
+        0.9405757937951463,
+        0.7072943280531425
+      ],
+      "oracle_class_iou": [
+        0.7098358741701971,
+        0.8760365117482387,
+        0.9406956786449252,
+        0.7072943280531425
+      ],
+      "gap_pixel_fraction": 0.00017732602681238389,
+      "gap_error_fraction": 0.616504854368932,
+      "gap_pixels": 206
+    },
+    {
+      "image": "A222_step2_sample2_image.png",
+      "specimen_group": "A222",
+      "baseline_miou": 0.7840755967826052,
+      "oracle_miou": 0.7842479804755746,
+      "delta_pp": 0.017238369296945777,
+      "baseline_class_iou": [
+        0.7804642243617914,
+        0.799184318947938,
+        0.9422961659064095,
+        0.6143576779142823
+      ],
+      "oracle_class_iou": [
+        0.7807217652205527,
+        0.7995303639679249,
+        0.9423668125714736,
+        0.6143729801423474
+      ],
+      "gap_pixel_fraction": 0.0008222996515679442,
+      "gap_error_fraction": 0.09491525423728814,
+      "gap_pixels": 885
+    },
+    {
+      "image": "A224_step1_sample2_image.png",
+      "specimen_group": "A224",
+      "baseline_miou": 0.4821457360728738,
+      "oracle_miou": 0.48297169229250797,
+      "delta_pp": 0.08259562196341608,
+      "baseline_class_iou": [
+        0.5083056108458722,
+        0.2821648000324436,
+        0.766160438069714,
+        0.3719520953434655
+      ],
+      "oracle_class_iou": [
+        0.5103711334465574,
+        0.2822239348828405,
+        0.767064967925047,
+        0.372226732915587
+      ],
+      "gap_pixel_fraction": 0.0028032520325203254,
+      "gap_error_fraction": 0.27510772290354657,
+      "gap_pixels": 3017
+    },
+    {
+      "image": "A224_step4_sample2_image.png",
+      "specimen_group": "A224",
+      "baseline_miou": 0.7131829688331619,
+      "oracle_miou": 0.7133256514223605,
+      "delta_pp": 0.01426825891985839,
+      "baseline_class_iou": [
+        0.764222835665216,
+        0.76538068158573,
+        0.8536079878715125,
+        0.46952037021018944
+      ],
+      "oracle_class_iou": [
+        0.7643870660276412,
+        0.7656939385257643,
+        0.8536758467811825,
+        0.4695457543548544
+      ],
+      "gap_pixel_fraction": 0.0007414634146341464,
+      "gap_error_fraction": 0.10651629072681704,
+      "gap_pixels": 798
+    },
+    {
+      "image": "A2_step4_sample1_image.png",
+      "specimen_group": "A2",
+      "baseline_miou": 0.6328183394082733,
+      "oracle_miou": 0.6330079849735241,
+      "delta_pp": 0.018964556525080667,
+      "baseline_class_iou": [
+        0.59534136507838,
+        0.7659492992264686,
+        0.8308175572003277,
+        0.33916513612791704
+      ],
+      "oracle_class_iou": [
+        0.5956052456292391,
+        0.7662035854742326,
+        0.8310579726627076,
+        0.33916513612791704
+      ],
+      "gap_pixel_fraction": 0.00121115397924769,
+      "gap_error_fraction": 0.1257995735607676,
+      "gap_pixels": 1407
+    },
+    {
+      "image": "A39_step2_sample3_image.png",
+      "specimen_group": "A39",
+      "baseline_miou": 0.8306901146297072,
+      "oracle_miou": 0.8309199544508938,
+      "delta_pp": 0.022983982118662816,
+      "baseline_class_iou": [
+        0.8144344801662212,
+        0.892224845544174,
+        0.9356430168403339,
+        0.6804581159680998
+      ],
+      "oracle_class_iou": [
+        0.8148279722244024,
+        0.8926563129669239,
+        0.9357374166441491,
+        0.6804581159680998
+      ],
+      "gap_pixel_fraction": 0.0007394323156885329,
+      "gap_error_fraction": 0.1420256111757858,
+      "gap_pixels": 859
+    },
+    {
+      "image": "A40_step3_sample4_image.png",
+      "specimen_group": "A40",
+      "baseline_miou": 0.8191411566353997,
+      "oracle_miou": 0.8191509139717698,
+      "delta_pp": 0.0009757336370097569,
+      "baseline_class_iou": [
+        0.8206952807915749,
+        0.8846300996351919,
+        0.9301084830161835,
+        0.6411307630986484
+      ],
+      "oracle_class_iou": [
+        0.8207173032157945,
+        0.8846396335713324,
+        0.9301159560013041,
+        0.6411307630986484
+      ],
+      "gap_pixel_fraction": 0.00021606229480538038,
+      "gap_error_fraction": 0.027888446215139442,
+      "gap_pixels": 251
+    },
+    {
+      "image": "A49_step2_sample2_image.png",
+      "specimen_group": "A49",
+      "baseline_miou": 0.7512920381754952,
+      "oracle_miou": 0.7515123224325424,
+      "delta_pp": 0.022028425704723187,
+      "baseline_class_iou": [
+        0.7212188210969541,
+        0.8912074283255533,
+        0.9428651326566745,
+        0.44987677062279874
+      ],
+      "oracle_class_iou": [
+        0.7215535650953434,
+        0.8916491212838156,
+        0.9429544860360525,
+        0.44989211731495776
+      ],
+      "gap_pixel_fraction": 0.0005104579315521536,
+      "gap_error_fraction": 0.23946037099494097,
+      "gap_pixels": 593
+    },
+    {
+      "image": "A51_step4_sample4_image.png",
+      "specimen_group": "A51",
+      "baseline_miou": 0.81460613872765,
+      "oracle_miou": 0.81460613872765,
+      "delta_pp": 0.0,
+      "baseline_class_iou": [
+        0.7402435074793029,
+        0.9192785921423747,
+        0.9297223271023851,
+        0.6691801281865375
+      ],
+      "oracle_class_iou": [
+        0.7402435074793029,
+        0.9192785921423747,
+        0.9297223271023851,
+        0.6691801281865375
+      ],
+      "gap_pixel_fraction": 0.0,
+      "gap_error_fraction": 0.0,
+      "gap_pixels": 0
+    },
+    {
+      "image": "A55_step3_sample4_image.png",
+      "specimen_group": "A55",
+      "baseline_miou": 0.8171046635143938,
+      "oracle_miou": 0.8171057443584192,
+      "delta_pp": 0.00010808440253917695,
+      "baseline_class_iou": [
+        0.8369041589616141,
+        0.9312314562750436,
+        0.9335955210500899,
+        0.5666875177708274
+      ],
+      "oracle_class_iou": [
+        0.8369071035676847,
+        0.9312314562750436,
+        0.9335968998201211,
+        0.5666875177708274
+      ],
+      "gap_pixel_fraction": 1.2912089330998827e-05,
+      "gap_error_fraction": 0.06666666666666667,
+      "gap_pixels": 15
+    },
+    {
+      "image": "A57_step1_sample3_image.png",
+      "specimen_group": "A57",
+      "baseline_miou": 0.49637177203200566,
+      "oracle_miou": 0.49637177203200566,
+      "delta_pp": 0.0,
+      "baseline_class_iou": [
+        0.4391801396728212,
+        0.0,
+        0.8985776984117003,
+        0.6477292500435009
+      ],
+      "oracle_class_iou": [
+        0.4391801396728212,
+        0.0,
+        0.8985776984117003,
+        0.6477292500435009
+      ],
+      "gap_pixel_fraction": 0.0,
+      "gap_error_fraction": 0.0,
+      "gap_pixels": 0
+    },
+    {
+      "image": "A61_step2_sample2_image.png",
+      "specimen_group": "A61",
+      "baseline_miou": 0.7207278640536716,
+      "oracle_miou": 0.7208136323947189,
+      "delta_pp": 0.008576834104723208,
+      "baseline_class_iou": [
+        0.5328165951039983,
+        0.8531264057579847,
+        0.8968008520795103,
+        0.6001676032731933
+      ],
+      "oracle_class_iou": [
+        0.5329095336344541,
+        0.853318335208099,
+        0.8968294706944195,
+        0.6001971900419029
+      ],
+      "gap_pixel_fraction": 0.00022222222222222223,
+      "gap_error_fraction": 0.125,
+      "gap_pixels": 72
+    },
+    {
+      "image": "A64_step2_sample3_image.png",
+      "specimen_group": "A64",
+      "baseline_miou": 0.7795989067224531,
+      "oracle_miou": 0.7797308002907357,
+      "delta_pp": 0.01318935682825817,
+      "baseline_class_iou": [
+        0.7157226193640446,
+        0.9435849056603773,
+        0.9246593613515705,
+        0.5344287405138203
+      ],
+      "oracle_class_iou": [
+        0.7159827062724742,
+        0.9437791655229206,
+        0.9247325888537281,
+        0.5344287405138203
+      ],
+      "gap_pixel_fraction": 0.00022530864197530865,
+      "gap_error_fraction": 0.3287671232876712,
+      "gap_pixels": 73
+    },
+    {
+      "image": "A66_step3_sample2_image.png",
+      "specimen_group": "A66",
+      "baseline_miou": 0.6385798335892976,
+      "oracle_miou": 0.6386800464446527,
+      "delta_pp": 0.010021285535510849,
+      "baseline_class_iou": [
+        0.47254575707154745,
+        0.9436829276013802,
+        0.8905829984009681,
+        0.24750765128329444
+      ],
+      "oracle_class_iou": [
+        0.4726132024004364,
+        0.9439817600303999,
+        0.8906175720644799,
+        0.24750765128329444
+      ],
+      "gap_pixel_fraction": 0.00011419753086419754,
+      "gap_error_fraction": 0.32432432432432434,
+      "gap_pixels": 37
+    },
+    {
+      "image": "A69_step4_sample4_image.png",
+      "specimen_group": "A69",
+      "baseline_miou": 0.7826168607076256,
+      "oracle_miou": 0.7826168607076256,
+      "delta_pp": 0.0,
+      "baseline_class_iou": [
+        0.7556176449695735,
+        0.9311234311234311,
+        0.9307137166690098,
+        0.5130126500684876
+      ],
+      "oracle_class_iou": [
+        0.7556176449695735,
+        0.9311234311234311,
+        0.9307137166690098,
+        0.5130126500684876
+      ],
+      "gap_pixel_fraction": 5.864197530864198e-05,
+      "gap_error_fraction": 0.0,
+      "gap_pixels": 19
+    },
+    {
+      "image": "A78_step4_sample1_image.png",
+      "specimen_group": "A78",
+      "baseline_miou": 0.7816022415154481,
+      "oracle_miou": 0.7816022415154481,
+      "delta_pp": 0.0,
+      "baseline_class_iou": [
+        0.7792581977834352,
+        0.9656753011406033,
+        0.8501610341480632,
+        0.5313144329896907
+      ],
+      "oracle_class_iou": [
+        0.7792581977834352,
+        0.9656753011406033,
+        0.8501610341480632,
+        0.5313144329896907
+      ],
+      "gap_pixel_fraction": 0.0,
+      "gap_error_fraction": 0.0,
+      "gap_pixels": 0
+    },
+    {
+      "image": "A7_step1_sample2_image.png",
+      "specimen_group": "A7",
+      "baseline_miou": 0.8029264114928533,
+      "oracle_miou": 0.8031461199029791,
+      "delta_pp": 0.021970841012586284,
+      "baseline_class_iou": [
+        0.76291211780494,
+        0.8855685489823031,
+        0.958156378600823,
+        0.6050686005833473
+      ],
+      "oracle_class_iou": [
+        0.7634950716805252,
+        0.8857610394084428,
+        0.9582491041527016,
+        0.605079264370247
+      ],
+      "gap_pixel_fraction": 0.0013514653499778772,
+      "gap_error_fraction": 0.061146496815286625,
+      "gap_pixels": 1570
+    },
+    {
+      "image": "A7_step4_sample3_image.png",
+      "specimen_group": "A7",
+      "baseline_miou": 0.6654650565228524,
+      "oracle_miou": 0.6661686216482147,
+      "delta_pp": 0.07035651253622932,
+      "baseline_class_iou": [
+        0.5625059050821173,
+        0.8343753583014656,
+        0.8456592663527243,
+        0.4193196963551023
+      ],
+      "oracle_class_iou": [
+        0.5637789015457603,
+        0.8353726062177566,
+        0.8460746709943862,
+        0.41944830783495596
+      ],
+      "gap_pixel_fraction": 0.0024369416597371787,
+      "gap_error_fraction": 0.17025785941363475,
+      "gap_pixels": 2831
+    },
+    {
+      "image": "A83_step1_sample2_image.png",
+      "specimen_group": "A83",
+      "baseline_miou": 0.8037642482888665,
+      "oracle_miou": 0.8038261736450294,
+      "delta_pp": 0.006192535616289518,
+      "baseline_class_iou": [
+        0.7701249636733508,
+        0.921296824057819,
+        0.9172195938853329,
+        0.6064156115389636
+      ],
+      "oracle_class_iou": [
+        0.7701618762533058,
+        0.921443881971998,
+        0.9172635351212534,
+        0.6064354012335607
+      ],
+      "gap_pixel_fraction": 0.00030246913580246913,
+      "gap_error_fraction": 0.10204081632653061,
+      "gap_pixels": 98
+    },
+    {
+      "image": "A87_step2_sample2_image.png",
+      "specimen_group": "A87",
+      "baseline_miou": 0.834389437127361,
+      "oracle_miou": 0.834436832852338,
+      "delta_pp": 0.004739572497702849,
+      "baseline_class_iou": [
+        0.7792308863586377,
+        0.9453966415749855,
+        0.9226211096322497,
+        0.6903091109435713
+      ],
+      "oracle_class_iou": [
+        0.779283623504729,
+        0.9455061385221218,
+        0.9226484584389301,
+        0.6903091109435713
+      ],
+      "gap_pixel_fraction": 0.00010493827160493828,
+      "gap_error_fraction": 0.17647058823529413,
+      "gap_pixels": 34
+    },
+    {
+      "image": "A89_step1_sample2_image.png",
+      "specimen_group": "A89",
+      "baseline_miou": 0.7854997828789294,
+      "oracle_miou": 0.7859846570689086,
+      "delta_pp": 0.048487418997922305,
+      "baseline_class_iou": [
+        0.7490150143754659,
+        0.8896247802939603,
+        0.9085531219767498,
+        0.5948062148695418
+      ],
+      "oracle_class_iou": [
+        0.7495178028375676,
+        0.8908729146472119,
+        0.9087270958669472,
+        0.5948208149239077
+      ],
+      "gap_pixel_fraction": 0.0011574074074074073,
+      "gap_error_fraction": 0.17866666666666667,
+      "gap_pixels": 375
+    },
+    {
+      "image": "A8_step2_sample3_image.png",
+      "specimen_group": "A8",
+      "baseline_miou": 0.7486825179141046,
+      "oracle_miou": 0.7489807165307638,
+      "delta_pp": 0.029819861665925096,
+      "baseline_class_iou": [
+        0.7121203754831584,
+        0.7837141251477627,
+        0.8956291614168455,
+        0.6032664096086513
+      ],
+      "oracle_class_iou": [
+        0.712775062812336,
+        0.7840483899110138,
+        0.8958330037910543,
+        0.6032664096086513
+      ],
+      "gap_pixel_fraction": 0.0009876543209876543,
+      "gap_error_fraction": 0.175,
+      "gap_pixels": 320
+    },
+    {
+      "image": "A8_step3_sample3_image.png",
+      "specimen_group": "A8",
+      "baseline_miou": 0.7175683566133625,
+      "oracle_miou": 0.7177534403459558,
+      "delta_pp": 0.018508373259329414,
+      "baseline_class_iou": [
+        0.6428392934646798,
+        0.7936061006012611,
+        0.8684667027124449,
+        0.565361329675064
+      ],
+      "oracle_class_iou": [
+        0.6432216989818736,
+        0.7936992168020885,
+        0.8686674101862178,
+        0.565425435413643
+      ],
+      "gap_pixel_fraction": 0.0008302469135802469,
+      "gap_error_fraction": 0.15613382899628253,
+      "gap_pixels": 269
+    },
+    {
+      "image": "A94_step4_sample2_image.png",
+      "specimen_group": "A94",
+      "baseline_miou": 0.7580344731225134,
+      "oracle_miou": 0.7580565610559025,
+      "delta_pp": 0.0022087933389092207,
+      "baseline_class_iou": [
+        0.7939582443400256,
+        0.7068677516346108,
+        0.9321056495757475,
+        0.5992062469396696
+      ],
+      "oracle_class_iou": [
+        0.7939927913496195,
+        0.7068677516346108,
+        0.9321285681757985,
+        0.5992371330635808
+      ],
+      "gap_pixel_fraction": 0.0002345679012345679,
+      "gap_error_fraction": 0.06578947368421052,
+      "gap_pixels": 76
+    },
+    {
+      "image": "A96_step1_sample1_image.png",
+      "specimen_group": "A96",
+      "baseline_miou": 0.8013949764772672,
+      "oracle_miou": 0.8013949764772672,
+      "delta_pp": 0.0,
+      "baseline_class_iou": [
+        0.880821407438252,
+        0.6886886886886887,
+        0.9501388123328057,
+        0.6859309974493221
+      ],
+      "oracle_class_iou": [
+        0.880821407438252,
+        0.6886886886886887,
+        0.9501388123328057,
+        0.6859309974493221
+      ],
+      "gap_pixel_fraction": 0.0,
+      "gap_error_fraction": 0.0,
+      "gap_pixels": 0
+    },
+    {
+      "image": "A98_step2_sample4_image.png",
+      "specimen_group": "A98",
+      "baseline_miou": 0.8717153977192635,
+      "oracle_miou": 0.871880160792022,
+      "delta_pp": 0.016476307275847812,
+      "baseline_class_iou": [
+        0.9029407107797274,
+        0.8959867330016583,
+        0.9425873262864195,
+        0.7453468208092485
+      ],
+      "oracle_class_iou": [
+        0.9031241002015549,
+        0.8962542715901928,
+        0.9427092733418859,
+        0.7454329980344548
+      ],
+      "gap_pixel_fraction": 0.00036728395061728393,
+      "gap_error_fraction": 0.2184873949579832,
+      "gap_pixels": 119
+    }
+  ],
+  "warning": "This is a GT-informed upper bound, not an achievable model score."
+}

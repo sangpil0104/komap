@@ -1,0 +1,106 @@
+{
+  "experiment": "Model391 train-mask physical-scale feasibility audit",
+  "scope": "train.zip image/mask pairs only; no prediction, OOF, valid, or test artifacts",
+  "metric": "image-wise median axial same-class boundary run length in native pixels",
+  "regression": "log(median run length) ~ log(native image width) + categorical step fixed effects",
+  "bootstrap": {
+    "unit": "specimen group, retaining all images in each sampled group",
+    "draws": 20000,
+    "seed": 391,
+    "minimum_valid_fraction": 0.95
+  },
+  "images": 70,
+  "specimen_groups": 59,
+  "resolution_strata": [
+    {
+      "native_width_px": 675,
+      "images": 17,
+      "specimen_groups": 16
+    },
+    {
+      "native_width_px": 1230,
+      "images": 20,
+      "specimen_groups": 15
+    },
+    {
+      "native_width_px": 1278,
+      "images": 24,
+      "specimen_groups": 21
+    },
+    {
+      "native_width_px": 1440,
+      "images": 9,
+      "specimen_groups": 7
+    }
+  ],
+  "class_slopes": {
+    "Al": {
+      "slope": 0.8638896594071412,
+      "group_bootstrap_95ci": [
+        0.5635134798155362,
+        1.164081722038281
+      ],
+      "valid_draws": 20000,
+      "images": 70,
+      "groups": 59,
+      "median_run_px_by_native_width": {
+        "675": 8.0,
+        "1230": 11.0,
+        "1278": 13.0,
+        "1440": 19.0
+      }
+    },
+    "Al3Ni": {
+      "slope": 1.217188310083102,
+      "group_bootstrap_95ci": [
+        0.7624599540955717,
+        1.6338279182176385
+      ],
+      "valid_draws": 20000,
+      "images": 70,
+      "groups": 59,
+      "median_run_px_by_native_width": {
+        "675": 3.0,
+        "1230": 6.0,
+        "1278": 6.5,
+        "1440": 11.0
+      }
+    },
+    "Primary_Si": {
+      "slope": 0.5672886835632469,
+      "group_bootstrap_95ci": [
+        0.11927349575060169,
+        1.0150877278666441
+      ],
+      "valid_draws": 19999,
+      "images": 69,
+      "groups": 58,
+      "median_run_px_by_native_width": {
+        "675": 14.0,
+        "1230": 19.0,
+        "1278": 16.5,
+        "1440": 28.0
+      }
+    },
+    "Eutectic_Si": {
+      "slope": 0.8378463465562118,
+      "group_bootstrap_95ci": [
+        0.6045142006183618,
+        1.0723042538559162
+      ],
+      "valid_draws": 19999,
+      "images": 70,
+      "groups": 59,
+      "median_run_px_by_native_width": {
+        "675": 3.0,
+        "1230": 4.0,
+        "1278": 4.0,
+        "1440": 5.0
+      }
+    }
+  },
+  "pre_registered_decision": "supports_followup_hypothesis",
+  "supported_non_al_phase_count": 2,
+  "interpretation_guard": "Pixel-run scaling is not physical calibration: field-of-view and acquisition metadata are unavailable, and phase morphology may vary by specimen/step. A positive result is only a gate for a later paired OOF experiment, not evidence of mIoU gain.",
+  "locked_input_sha256": "b2952c3bee58f4a1809d8999959d6448236f8efbd0caf439a1b11b39857a1f14"
+}

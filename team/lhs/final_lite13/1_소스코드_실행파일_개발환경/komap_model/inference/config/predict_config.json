@@ -1,0 +1,46 @@
+{
+  "key": "final_13_weights",
+  "expert": {
+    "family_weights": [
+      0.4,
+      0.42,
+      0.18
+    ],
+    "hr_folds": {
+      "1": [
+        2,
+        4
+      ],
+      "2": [
+        1,
+        4
+      ]
+    },
+    "b4_dir": "E1_2_b4",
+    "b4_fold_ids": [
+      1,
+      3
+    ],
+    "replacement": {
+      "seed": 1,
+      "fold": 2,
+      "checkpoint": "E3_hrnet_zcdf/last.pt",
+      "args": "E3_hrnet_zcdf/args.json",
+      "preprocessing": "full_image_zcdf_rgb8",
+      "tta": "single_view",
+      "individual_probability_fp16": true
+    },
+    "hr_group_overrides": {
+      "2": {
+        "checkpoint": "E5_hrnet_train70/seed5/last.pt",
+        "training_seed": 5,
+        "training_images": 70,
+        "epoch": 70,
+        "tta": "flip4"
+      }
+    }
+  },
+  "R_config_file": "r_config.yaml",
+  "assets_manifest_file": "weights_sha256.json",
+  "status": "13 weights; R class-wise combination in r_config.yaml (al_gamma 1.0, al3ni_gamma 1.0, eut_edge_blend 0.125); E family weights B4 0.4 / HRNet group1 0.42 / HRNet group2 0.18"
+}

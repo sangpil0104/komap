@@ -1,0 +1,774 @@
+{
+  "model": 340,
+  "scope": "interim train-only grouped OOF; only the listed completed folds",
+  "metric": "image-wise mean of four class IoUs; empty union=0",
+  "class_order": [
+    "Al",
+    "Al3Ni",
+    "Primary Si",
+    "Eutectic Si"
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "image_count": 18,
+      "model322_mean_miou_empty0": 75.91700208185713,
+      "model329_mean_miou_empty0": 76.93478377838397,
+      "paired_delta_pp_empty0": 1.0177816965268285,
+      "positive_images": 10
+    },
+    {
+      "fold": 2,
+      "image_count": 18,
+      "model322_mean_miou_empty0": 77.30682959757209,
+      "model329_mean_miou_empty0": 78.46858373246988,
+      "paired_delta_pp_empty0": 1.161754134897775,
+      "positive_images": 11
+    },
+    {
+      "fold": 3,
+      "image_count": 17,
+      "model322_mean_miou_empty0": 83.41084679727592,
+      "model329_mean_miou_empty0": 83.1018351895287,
+      "paired_delta_pp_empty0": -0.3090116077472318,
+      "positive_images": 11
+    }
+  ],
+  "image_count": 53,
+  "total_train_images": 70,
+  "specimen_group_count": 44,
+  "model322_mean_miou_empty0": 78.79270501478146,
+  "model329_mean_miou_empty0": 79.4338078003275,
+  "paired_delta_pp_empty0": 0.6411027855460363,
+  "positive_images": 32,
+  "group_bootstrap_95ci_delta_pp_empty0": [
+    0.07386728360253528,
+    1.2245796941358484
+  ],
+  "class_delta_pp_empty0": {
+    "Al": {
+      "mean": 0.14523648832549008,
+      "group_bootstrap_95ci": [
+        -0.08481088974613767,
+        0.4095129207255434
+      ],
+      "positive_images": 21
+    },
+    "Al3Ni": {
+      "mean": 1.2877154753073883,
+      "group_bootstrap_95ci": [
+        0.5496334860491711,
+        2.13589105709942
+      ],
+      "positive_images": 33
+    },
+    "Primary Si": {
+      "mean": -0.026788873168956027,
+      "group_bootstrap_95ci": [
+        -0.4301573909805954,
+        0.41714280900096634
+      ],
+      "positive_images": 24
+    },
+    "Eutectic Si": {
+      "mean": 1.1582480517202192,
+      "group_bootstrap_95ci": [
+        -0.2507770371791281,
+        2.463814461836729
+      ],
+      "positive_images": 33
+    }
+  },
+  "images": [
+    {
+      "image": "A118_step2_sample1",
+      "specimen_group": "A118",
+      "model322_miou_empty0": 85.41841986059416,
+      "model329_miou_empty0": 85.14030479938273,
+      "delta_pp_empty0": -0.2781150612114258,
+      "class_delta_pp_empty0": [
+        -0.41119282346091524,
+        -0.4609316480782666,
+        0.6791233076549275,
+        -0.9194590809614378
+      ]
+    },
+    {
+      "image": "A138_step4_sample3",
+      "specimen_group": "A138",
+      "model322_miou_empty0": 71.30102219687173,
+      "model329_miou_empty0": 70.67113887637174,
+      "delta_pp_empty0": -0.629883320499991,
+      "class_delta_pp_empty0": [
+        -0.350377744704522,
+        -0.22956560507099155,
+        -0.6746261816764965,
+        -1.264963750547976
+      ]
+    },
+    {
+      "image": "A140_step4_sample2",
+      "specimen_group": "A140",
+      "model322_miou_empty0": 87.33278035196145,
+      "model329_miou_empty0": 87.03617617360807,
+      "delta_pp_empty0": -0.2966041783533768,
+      "class_delta_pp_empty0": [
+        -0.25091467043451,
+        -0.2859424700519253,
+        -0.19288325393123085,
+        -0.45667631899583006
+      ]
+    },
+    {
+      "image": "A155_step3_sample2",
+      "specimen_group": "A155",
+      "model322_miou_empty0": 86.5084932252186,
+      "model329_miou_empty0": 86.15155983022287,
+      "delta_pp_empty0": -0.35693339499572874,
+      "class_delta_pp_empty0": [
+        -0.23636961541848578,
+        -0.030447555641366364,
+        -0.568970010873826,
+        -0.5919463980492479
+      ]
+    },
+    {
+      "image": "A164_step1_sample2",
+      "specimen_group": "A164",
+      "model322_miou_empty0": 66.6174434195668,
+      "model329_miou_empty0": 66.18920962373433,
+      "delta_pp_empty0": -0.4282337958324778,
+      "class_delta_pp_empty0": [
+        -0.37361566983568073,
+        -0.9036927840738951,
+        0.029205316656089053,
+        -0.46483204607641604
+      ]
+    },
+    {
+      "image": "A164_step4_sample1",
+      "specimen_group": "A164",
+      "model322_miou_empty0": 87.57173575146554,
+      "model329_miou_empty0": 86.21633860246057,
+      "delta_pp_empty0": -1.3553971490049666,
+      "class_delta_pp_empty0": [
+        -0.3529288243695916,
+        -0.5644838196594781,
+        -2.0347416470902657,
+        -2.469434304900542
+      ]
+    },
+    {
+      "image": "A16_step4_sample4",
+      "specimen_group": "A16",
+      "model322_miou_empty0": 78.32210904078573,
+      "model329_miou_empty0": 80.08802348859945,
+      "delta_pp_empty0": 1.76591444781371,
+      "class_delta_pp_empty0": [
+        0.8543603576401049,
+        3.9233451728173496,
+        -0.8070472407747387,
+        3.0929995015721357
+      ]
+    },
+    {
+      "image": "A200_step4_sample3",
+      "specimen_group": "A200",
+      "model322_miou_empty0": 69.13582343669972,
+      "model329_miou_empty0": 69.06564205773677,
+      "delta_pp_empty0": -0.0701813789629524,
+      "class_delta_pp_empty0": [
+        -0.2484140902262899,
+        -0.18122406166546368,
+        0.21043229139191544,
+        -0.06151965535196591
+      ]
+    },
+    {
+      "image": "A51_step4_sample4",
+      "specimen_group": "A51",
+      "model322_miou_empty0": 83.33677733772547,
+      "model329_miou_empty0": 83.42413548262786,
+      "delta_pp_empty0": 0.08735814490239413,
+      "class_delta_pp_empty0": [
+        -0.26714596841572735,
+        0.16037562930288907,
+        0.2210498995757315,
+        0.23515301914665
+      ]
+    },
+    {
+      "image": "A57_step1_sample3",
+      "specimen_group": "A57",
+      "model322_miou_empty0": 52.01069305699766,
+      "model329_miou_empty0": 54.014662196356376,
+      "delta_pp_empty0": 2.003969139358719,
+      "class_delta_pp_empty0": [
+        0.17937763747443158,
+        4.26433798551421,
+        0.0,
+        3.5721609344462335
+      ]
+    },
+    {
+      "image": "A64_step2_sample3",
+      "specimen_group": "A64",
+      "model322_miou_empty0": 72.16695200260294,
+      "model329_miou_empty0": 74.50157598706313,
+      "delta_pp_empty0": 2.3346239844601935,
+      "class_delta_pp_empty0": [
+        0.13019354158305685,
+        1.1816883949283818,
+        1.3213173395175803,
+        6.705296661811744
+      ]
+    },
+    {
+      "image": "A69_step4_sample4",
+      "specimen_group": "A69",
+      "model322_miou_empty0": 75.31114309258446,
+      "model329_miou_empty0": 76.00925055771953,
+      "delta_pp_empty0": 0.6981074651350672,
+      "class_delta_pp_empty0": [
+        0.7858221927709685,
+        0.942147813478933,
+        1.2878109483370426,
+        -0.22335109404669762
+      ]
+    },
+    {
+      "image": "A7_step1_sample2",
+      "specimen_group": "A7",
+      "model322_miou_empty0": 82.01517670090325,
+      "model329_miou_empty0": 81.68340071533046,
+      "delta_pp_empty0": -0.33177598557277976,
+      "class_delta_pp_empty0": [
+        -0.19837732007227382,
+        -0.9327386192060971,
+        0.039085432424901256,
+        -0.23507343543766046
+      ]
+    },
+    {
+      "image": "A7_step4_sample3",
+      "specimen_group": "A7",
+      "model322_miou_empty0": 66.08237097160965,
+      "model329_miou_empty0": 67.48250406325008,
+      "delta_pp_empty0": 1.4001330916404209,
+      "class_delta_pp_empty0": [
+        1.7324000945027063,
+        8.198384108807033,
+        -2.0707165166127917,
+        -2.259535320135253
+      ]
+    },
+    {
+      "image": "A87_step2_sample2",
+      "specimen_group": "A87",
+      "model322_miou_empty0": 79.92733935000678,
+      "model329_miou_empty0": 84.18726676842748,
+      "delta_pp_empty0": 4.259927418420705,
+      "class_delta_pp_empty0": [
+        0.39975177199219614,
+        6.4656009390503755,
+        0.5178718435381313,
+        9.656485119102165
+      ]
+    },
+    {
+      "image": "A8_step2_sample3",
+      "specimen_group": "A8",
+      "model322_miou_empty0": 73.841873991744,
+      "model329_miou_empty0": 77.5746511811248,
+      "delta_pp_empty0": 3.7327771893808093,
+      "class_delta_pp_empty0": [
+        0.8778943340970957,
+        3.1794876815677053,
+        4.262596034841515,
+        6.611130707016932
+      ]
+    },
+    {
+      "image": "A8_step3_sample3",
+      "specimen_group": "A8",
+      "model322_miou_empty0": 72.27915923790148,
+      "model329_miou_empty0": 75.1401542543336,
+      "delta_pp_empty0": 2.860995016432122,
+      "class_delta_pp_empty0": [
+        1.0079780334951272,
+        3.2448274766982865,
+        1.6664519236107123,
+        5.5247226319243286
+      ]
+    },
+    {
+      "image": "A94_step4_sample2",
+      "specimen_group": "A94",
+      "model322_miou_empty0": 77.32672444818904,
+      "model329_miou_empty0": 80.25011335256151,
+      "delta_pp_empty0": 2.9233889043724703,
+      "class_delta_pp_empty0": [
+        1.1175675248120354,
+        3.7914234243366263,
+        0.7160873940515344,
+        6.068477274289719
+      ]
+    },
+    {
+      "image": "A106_step4_sample1",
+      "specimen_group": "A106",
+      "model322_miou_empty0": 76.43934335243608,
+      "model329_miou_empty0": 75.6235473244348,
+      "delta_pp_empty0": -0.8157960280012921,
+      "class_delta_pp_empty0": [
+        -0.5103172166184389,
+        -0.252255581741323,
+        -2.302948563907248,
+        -0.1976627497381922
+      ]
+    },
+    {
+      "image": "A111_step1_sample2",
+      "specimen_group": "A111",
+      "model322_miou_empty0": 80.31124152544547,
+      "model329_miou_empty0": 83.00832257467707,
+      "delta_pp_empty0": 2.6970810492315977,
+      "class_delta_pp_empty0": [
+        -0.3337204546133288,
+        3.6708930597943557,
+        -0.619121278483592,
+        8.070272870228933
+      ]
+    },
+    {
+      "image": "A111_step3_sample4",
+      "specimen_group": "A111",
+      "model322_miou_empty0": 81.5495228888263,
+      "model329_miou_empty0": 85.06684355855809,
+      "delta_pp_empty0": 3.517320669731794,
+      "class_delta_pp_empty0": [
+        -0.44665159763884743,
+        3.4131308827337947,
+        0.09271807556141543,
+        11.010085318270836
+      ]
+    },
+    {
+      "image": "A123_step1_sample1",
+      "specimen_group": "A123",
+      "model322_miou_empty0": 78.54212882562663,
+      "model329_miou_empty0": 77.94881623227054,
+      "delta_pp_empty0": -0.5933125933560879,
+      "class_delta_pp_empty0": [
+        -0.5058658377552372,
+        -0.5805263180195253,
+        -1.4176836643817303,
+        0.13082544673217456
+      ]
+    },
+    {
+      "image": "A123_step4_sample2",
+      "specimen_group": "A123",
+      "model322_miou_empty0": 86.19929557096117,
+      "model329_miou_empty0": 86.76970538138814,
+      "delta_pp_empty0": 0.5704098104269639,
+      "class_delta_pp_empty0": [
+        -0.13540074675949532,
+        1.0763407738131114,
+        -0.7848792217303058,
+        2.1255784363845454
+      ]
+    },
+    {
+      "image": "A139_step3_sample4",
+      "specimen_group": "A139",
+      "model322_miou_empty0": 71.87649570891108,
+      "model329_miou_empty0": 72.15164752081607,
+      "delta_pp_empty0": 0.2751518119049945,
+      "class_delta_pp_empty0": [
+        -0.30839737611879636,
+        0.3833485297735195,
+        -1.103546922983012,
+        2.129203016948261
+      ]
+    },
+    {
+      "image": "A139_step4_sample3",
+      "specimen_group": "A139",
+      "model322_miou_empty0": 83.67699673287125,
+      "model329_miou_empty0": 83.17180245804799,
+      "delta_pp_empty0": -0.5051942748232507,
+      "class_delta_pp_empty0": [
+        -0.2282016486692129,
+        -0.797761904842087,
+        -0.05979237118520775,
+        -0.9350211745965176
+      ]
+    },
+    {
+      "image": "A147_step4_sample4",
+      "specimen_group": "A147",
+      "model322_miou_empty0": 69.09780211750606,
+      "model329_miou_empty0": 68.1471792984129,
+      "delta_pp_empty0": -0.9506228190931609,
+      "class_delta_pp_empty0": [
+        -1.526760472067823,
+        -2.206646621091879,
+        -0.5748952022649023,
+        0.5058110190519938
+      ]
+    },
+    {
+      "image": "A152_step2_sample1",
+      "specimen_group": "A152",
+      "model322_miou_empty0": 82.83876289615648,
+      "model329_miou_empty0": 81.99392508677468,
+      "delta_pp_empty0": -0.8448378093818043,
+      "class_delta_pp_empty0": [
+        -0.24469719686325275,
+        -0.10135945870384244,
+        -1.2884412935564638,
+        -1.7448532884036583
+      ]
+    },
+    {
+      "image": "A15_step1_sample1",
+      "specimen_group": "A15",
+      "model322_miou_empty0": 86.02006120063102,
+      "model329_miou_empty0": 86.8998999935221,
+      "delta_pp_empty0": 0.8798387928910856,
+      "class_delta_pp_empty0": [
+        0.3287099510012492,
+        1.6882013079589364,
+        -0.5686323246260283,
+        2.071076237230196
+      ]
+    },
+    {
+      "image": "A167_step3_sample4",
+      "specimen_group": "A167",
+      "model322_miou_empty0": 78.08230950406221,
+      "model329_miou_empty0": 78.55313984825342,
+      "delta_pp_empty0": 0.47083034419121983,
+      "class_delta_pp_empty0": [
+        -1.1037001053739837,
+        -0.32581424088174993,
+        3.3923923349872043,
+        -0.07955661196664687
+      ]
+    },
+    {
+      "image": "A182_step4_sample3",
+      "specimen_group": "A182",
+      "model322_miou_empty0": 69.00739890811714,
+      "model329_miou_empty0": 70.59525970085676,
+      "delta_pp_empty0": 1.587860792739626,
+      "class_delta_pp_empty0": [
+        -0.2550572662782691,
+        -0.1415437437879974,
+        2.3873764008060183,
+        4.360667780218752
+      ]
+    },
+    {
+      "image": "A21_step2_sample4",
+      "specimen_group": "A21",
+      "model322_miou_empty0": 84.8259049594023,
+      "model329_miou_empty0": 84.95358363061729,
+      "delta_pp_empty0": 0.12767867121499243,
+      "class_delta_pp_empty0": [
+        -0.1255842860435341,
+        0.5396033821938206,
+        -0.02550411178279255,
+        0.12219970049236473
+      ]
+    },
+    {
+      "image": "A2_step4_sample1",
+      "specimen_group": "A2",
+      "model322_miou_empty0": 61.83931433150235,
+      "model329_miou_empty0": 67.74227772109008,
+      "delta_pp_empty0": 5.902963389587724,
+      "class_delta_pp_empty0": [
+        4.18782935264046,
+        10.337243310335815,
+        0.8995091854848591,
+        8.187271709889787
+      ]
+    },
+    {
+      "image": "A39_step2_sample3",
+      "specimen_group": "A39",
+      "model322_miou_empty0": 85.13423528697419,
+      "model329_miou_empty0": 84.5412328652792,
+      "delta_pp_empty0": -0.5930024216949881,
+      "class_delta_pp_empty0": [
+        -0.5609614982344246,
+        -0.8784944383233295,
+        -0.3996006105565497,
+        -0.5329531396656484
+      ]
+    },
+    {
+      "image": "A49_step2_sample2",
+      "specimen_group": "A49",
+      "model322_miou_empty0": 79.13142576528175,
+      "model329_miou_empty0": 77.67750753365158,
+      "delta_pp_empty0": -1.453918231630169,
+      "class_delta_pp_empty0": [
+        -0.39276162761346933,
+        -2.2771212245349948,
+        -0.6096802268074186,
+        -2.5361098475647936
+      ]
+    },
+    {
+      "image": "A61_step2_sample2",
+      "specimen_group": "A61",
+      "model322_miou_empty0": 62.74882118518107,
+      "model329_miou_empty0": 69.4534385273532,
+      "delta_pp_empty0": 6.704617342172137,
+      "class_delta_pp_empty0": [
+        2.800077190264272,
+        13.916336903255155,
+        4.496011640382591,
+        5.606043634786539
+      ]
+    },
+    {
+      "image": "A78_step4_sample1",
+      "specimen_group": "A78",
+      "model322_miou_empty0": 74.20187199640523,
+      "model329_miou_empty0": 78.13637792845381,
+      "delta_pp_empty0": 3.934505932048571,
+      "class_delta_pp_empty0": [
+        1.8807820264507447,
+        4.180318283063311,
+        0.6074918696882814,
+        9.069431548991963
+      ]
+    },
+    {
+      "image": "A108_step2_sample2",
+      "specimen_group": "A108",
+      "model322_miou_empty0": 88.27503653871554,
+      "model329_miou_empty0": 88.38951480393544,
+      "delta_pp_empty0": 0.11447826521989724,
+      "class_delta_pp_empty0": [
+        0.057042212083358024,
+        0.4637199490418076,
+        -0.6196457600703531,
+        0.5567966598247542
+      ]
+    },
+    {
+      "image": "A109_step1_sample3",
+      "specimen_group": "A109",
+      "model322_miou_empty0": 84.74956405632655,
+      "model329_miou_empty0": 85.54828527725768,
+      "delta_pp_empty0": 0.7987212209311201,
+      "class_delta_pp_empty0": [
+        0.17250326957793938,
+        0.33290283297832124,
+        1.1445127358351015,
+        1.5449660453331404
+      ]
+    },
+    {
+      "image": "A130_step1_sample1",
+      "specimen_group": "A130",
+      "model322_miou_empty0": 86.10695679175002,
+      "model329_miou_empty0": 86.33333136345624,
+      "delta_pp_empty0": 0.22637457170622266,
+      "class_delta_pp_empty0": [
+        -0.033047160596000325,
+        0.046671891436955715,
+        0.08205930974752862,
+        0.8098142462364066
+      ]
+    },
+    {
+      "image": "A137_step4_sample2",
+      "specimen_group": "A137",
+      "model322_miou_empty0": 87.46988867112015,
+      "model329_miou_empty0": 87.6752387617518,
+      "delta_pp_empty0": 0.20535009063166187,
+      "class_delta_pp_empty0": [
+        -0.20567738256876966,
+        0.29371219549587657,
+        0.12843970764498946,
+        0.6049258419545622
+      ]
+    },
+    {
+      "image": "A153_step1_sample4",
+      "specimen_group": "A153",
+      "model322_miou_empty0": 81.57990172554037,
+      "model329_miou_empty0": 81.8332071828392,
+      "delta_pp_empty0": 0.2533054572988247,
+      "class_delta_pp_empty0": [
+        0.03872716701400769,
+        0.699362296162731,
+        -0.17042574861034776,
+        0.44555811462893
+      ]
+    },
+    {
+      "image": "A154_step2_sample3",
+      "specimen_group": "A154",
+      "model322_miou_empty0": 80.55901565124289,
+      "model329_miou_empty0": 79.57662769489392,
+      "delta_pp_empty0": -0.9823879563489735,
+      "class_delta_pp_empty0": [
+        -0.05558122355473483,
+        -0.043865283525812426,
+        -1.6454064632015375,
+        -2.184698855113798
+      ]
+    },
+    {
+      "image": "A159_step4_sample4",
+      "specimen_group": "A159",
+      "model322_miou_empty0": 76.23937687905368,
+      "model329_miou_empty0": 76.10664060418112,
+      "delta_pp_empty0": -0.132736274872558,
+      "class_delta_pp_empty0": [
+        -0.18233344057779766,
+        -0.5220231779329065,
+        -0.1918437646577953,
+        0.3652552836782563
+      ]
+    },
+    {
+      "image": "A187_step2_sample1",
+      "specimen_group": "A187",
+      "model322_miou_empty0": 86.11312866996002,
+      "model329_miou_empty0": 86.25897332498714,
+      "delta_pp_empty0": 0.1458446550271275,
+      "class_delta_pp_empty0": [
+        -0.025438048280868042,
+        0.05260055057516588,
+        -0.060608862618583004,
+        0.6168249804327508
+      ]
+    },
+    {
+      "image": "A187_step4_sample4",
+      "specimen_group": "A187",
+      "model322_miou_empty0": 75.4953619759682,
+      "model329_miou_empty0": 74.46887320554154,
+      "delta_pp_empty0": -1.026488770426659,
+      "class_delta_pp_empty0": [
+        0.9066739290345294,
+        0.08287143692041754,
+        -1.1252918062117256,
+        -3.9702086414498683
+      ]
+    },
+    {
+      "image": "A18_step2_sample1",
+      "specimen_group": "A18",
+      "model322_miou_empty0": 89.41947375104175,
+      "model329_miou_empty0": 83.15229861437905,
+      "delta_pp_empty0": -6.267175136662706,
+      "class_delta_pp_empty0": [
+        0.1946179775308865,
+        0.6691213611991875,
+        -4.099933735785566,
+        -21.832506149595343
+      ]
+    },
+    {
+      "image": "A191_step3_sample1",
+      "specimen_group": "A191",
+      "model322_miou_empty0": 90.61599633075173,
+      "model329_miou_empty0": 90.06089084904173,
+      "delta_pp_empty0": -0.5551054817100054,
+      "class_delta_pp_empty0": [
+        -0.038150622154187186,
+        -0.08858827788444934,
+        -1.3238732785079477,
+        -0.7698097482934818
+      ]
+    },
+    {
+      "image": "A191_step4_sample1",
+      "specimen_group": "A191",
+      "model322_miou_empty0": 81.73974747917049,
+      "model329_miou_empty0": 81.7267102691509,
+      "delta_pp_empty0": -0.013037210019584133,
+      "class_delta_pp_empty0": [
+        -0.10936718930331102,
+        0.34331875436891535,
+        -1.1094978085315566,
+        0.8233974033875824
+      ]
+    },
+    {
+      "image": "A201_step3_sample1",
+      "specimen_group": "A201",
+      "model322_miou_empty0": 78.0702996097323,
+      "model329_miou_empty0": 78.62366377899227,
+      "delta_pp_empty0": 0.5533641692599622,
+      "class_delta_pp_empty0": [
+        -0.20500564407147648,
+        0.1064972519226326,
+        0.970444759677136,
+        1.3415203095115347
+      ]
+    },
+    {
+      "image": "A201_step3_sample4",
+      "specimen_group": "A201",
+      "model322_miou_empty0": 79.11037320295353,
+      "model329_miou_empty0": 79.43193027285349,
+      "delta_pp_empty0": 0.32155706989995814,
+      "class_delta_pp_empty0": [
+        -0.10157280747541408,
+        0.21182833853008454,
+        0.29046490887137955,
+        0.8855078396738048
+      ]
+    },
+    {
+      "image": "A222_step2_sample2",
+      "specimen_group": "A222",
+      "model322_miou_empty0": 78.26477823040715,
+      "model329_miou_empty0": 78.60744701457844,
+      "delta_pp_empty0": 0.3426687841712961,
+      "class_delta_pp_empty0": [
+        0.0639538585074706,
+        0.5076688520949002,
+        0.15102222383750474,
+        0.6480302022453199
+      ]
+    },
+    {
+      "image": "A55_step3_sample4",
+      "specimen_group": "A55",
+      "model322_miou_empty0": 83.38020559273545,
+      "model329_miou_empty0": 83.53415488227438,
+      "delta_pp_empty0": 0.15394928953892384,
+      "class_delta_pp_empty0": [
+        0.058432554851461926,
+        0.46931500166458306,
+        0.01954142794100555,
+        0.06850817369864481
+      ]
+    },
+    {
+      "image": "A98_step2_sample4",
+      "specimen_group": "A98",
+      "model322_miou_empty0": 90.79529039722094,
+      "model329_miou_empty0": 91.4034103218735,
+      "delta_pp_empty0": 0.6081199246525504,
+      "class_delta_pp_empty0": [
+        0.2464264800955407,
+        1.2173212541937817,
+        -0.5825887185997525,
+        1.5513206829206427
+      ]
+    }
+  ],
+  "output": "/workspace/komap_model1/outputs/model340_partial_oof_audit/folds1_3.json"
+}

@@ -1,0 +1,48 @@
+{
+  "objective": "성능을 유지한채로 fusion805 모델 경량화",
+  "requirements": {
+    "smaller_model": {
+      "verified": true,
+      "checkpoints_before": 27,
+      "checkpoints_after": 23,
+      "bytes_before": 4553557386,
+      "bytes_after": 3317816946
+    },
+    "performance_preservation": {
+      "verified": true,
+      "scope": "existing valid20 benchmark",
+      "metric": "mean image-wise 4-class IoU; empty union=0",
+      "mean_loss_limit_pp": 0.01,
+      "worst_image_loss_limit_pp": 0.1,
+      "evidence": "fresh_validation_gpu0/validation.json"
+    },
+    "requested_gpu0_validation": {
+      "verified": true,
+      "fresh_E_images": 20,
+      "R": "previous verified raw inference reused with SHA audit",
+      "F": "CPU exact implementation",
+      "evidence": [
+        "fresh23_gpu0_shard0_completion.json",
+        "fresh23_gpu0_shard1_completion.json",
+        "fresh_validation_gpu0/independent_metrics.json"
+      ]
+    },
+    "reproducible_code_and_assets": {
+      "verified": true,
+      "configuration": "selected_config.json",
+      "original_weight_manifest": "selected_assets.json",
+      "packaged_weights": false
+    },
+    "original_models_preserved": {
+      "verified": true,
+      "default_model_replaced": false
+    }
+  },
+  "limitations": {
+    "independent_generalization_verified": false,
+    "conditional_full_search_LOSO_pass": false,
+    "conditional_LOSO_delta_vs_lite25_pp": -0.0450437466221274,
+    "speed_measured": false
+  },
+  "all_requested_benchmark_requirements_met": true
+}

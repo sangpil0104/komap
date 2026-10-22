@@ -1,0 +1,2282 @@
+{
+  "metric": "mean over 20 images of per-image mean of four class IoUs",
+  "empty_policies": {
+    "empty_zero": "union=0 class IoU is 0; always average four classes",
+    "empty_skipped": "union=0 class is NaN; nanmean over present unions"
+  },
+  "valid_image_count": 20,
+  "scanned_npz_count": 188,
+  "scored_archive_count": 111,
+  "top_empty_zero": [
+    {
+      "archive": "/workspace/komap_model1/outputs/model289_model257_binary_boundary/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7741807399112058,
+      "image_mean_miou_empty_skipped": 0.7805277805927774,
+      "mean_delta_skip_minus_zero_pp": 0.6347040681571547,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7279878446300047,
+        0.8555063305926852,
+        0.9308659834282649,
+        0.5823628009938686
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model286_model257_imagewise_softiou/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7739515232625814,
+      "image_mean_miou_empty_skipped": 0.7739515232625814,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7237290888668323,
+        0.8570518686021218,
+        0.9317411180140208,
+        0.5832840175673507
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model284_model257_imagewise_lovasz_w050/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7739126856544448,
+      "image_mean_miou_empty_skipped": 0.7739126856544448,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7238960897721861,
+        0.8570880777345593,
+        0.9316990276984118,
+        0.5829675474126221
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model283_model257_imagewise_lovasz/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.773346949890023,
+      "image_mean_miou_empty_skipped": 0.773346949890023,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7232324997507131,
+        0.8567590645562297,
+        0.9312199603890786,
+        0.5821762748640702
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model291_hierarchical_heads/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7730270655472556,
+      "image_mean_miou_empty_skipped": 0.7730270655472556,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7187838395851158,
+        0.8565049436393565,
+        0.9340342644401474,
+        0.5827852145244028
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model257_full_image_stats_1x/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7720750168508469,
+      "image_mean_miou_empty_skipped": 0.7720750168508469,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7217893043121558,
+        0.8559875772648825,
+        0.9303720960742645,
+        0.5801510897520846
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model293_train_region_corrector/valid_probs_region_corrected.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7719581102604136,
+      "image_mean_miou_empty_skipped": 0.7719581102604136,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7217893043121558,
+        0.8557666780631445,
+        0.9303720960742645,
+        0.5799043625920897
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model262_fullstats_seed_ensemble/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7716086358348677,
+      "image_mean_miou_empty_skipped": 0.7776413353142946,
+      "mean_delta_skip_minus_zero_pp": 0.6032699479426862,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7217878979554756,
+        0.8550724928428215,
+        0.9307732143480422,
+        0.5788009381931312
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model261_fullstats_seed261/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7709640983967178,
+      "image_mean_miou_empty_skipped": 0.7769462154515627,
+      "mean_delta_skip_minus_zero_pp": 0.5982117054844971,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7215878956358,
+        0.854177693526791,
+        0.9310934108680003,
+        0.5769973935562799
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model294_decoder_region_probe/valid_probs_decoder_region.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7709133350884221,
+      "image_mean_miou_empty_skipped": 0.7709133350884221,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7215808021262208,
+        0.8530015022868029,
+        0.9303720960742645,
+        0.5786989398664005
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model292_cross_specimen_copy/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7706585680942574,
+      "image_mean_miou_empty_skipped": 0.7706585680942574,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7182172065697414,
+        0.8553993122621829,
+        0.9307240980183094,
+        0.5782936555267957
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model269_fullstats_1x_extended/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7698530074546982,
+      "image_mean_miou_empty_skipped": 0.7759204399361259,
+      "mean_delta_skip_minus_zero_pp": 0.6067432481427715,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7199218012406836,
+        0.8546833076260058,
+        0.9278290744734059,
+        0.5769778464786972
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model272_microstructure_augmentation_1x/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7698084352329724,
+      "image_mean_miou_empty_skipped": 0.7698084352329724,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7223462425242881,
+        0.8539844133399145,
+        0.9304754361631915,
+        0.572427648904496
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model242_native_stem_ema/valid_probs_ema.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7686436127469807,
+      "image_mean_miou_empty_skipped": 0.7686436127469807,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7151858875921411,
+        0.8539334413408923,
+        0.9307136813949564,
+        0.5747414406599327
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model256_inference_parity/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7686436127469807,
+      "image_mean_miou_empty_skipped": 0.7686436127469807,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7151858875921411,
+        0.8539334413408923,
+        0.9307136813949564,
+        0.5747414406599327
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model220_native_tent_extended/valid_probs_03.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7684120118513614,
+      "image_mean_miou_empty_skipped": 0.7684120118513614,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.723738774816623,
+        0.8533977001395504,
+        0.9305092639418419,
+        0.5660023085074293
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model227_tent_probability_soup/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7683997275459347,
+      "image_mean_miou_empty_skipped": 0.7683997275459347,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7258407045124871,
+        0.8527987615973196,
+        0.9309401225874143,
+        0.5640193214865178
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model244_supervised_distillation/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7683299970341143,
+      "image_mean_miou_empty_skipped": 0.7683299970341143,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7131815830836165,
+        0.8552133886892415,
+        0.9304830693015805,
+        0.5744419470620186
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model242_native_stem_ema/valid_probs_raw.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7682832320775191,
+      "image_mean_miou_empty_skipped": 0.7682832320775191,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7143113573953659,
+        0.8540395573094008,
+        0.9306078457536107,
+        0.5741741678516993
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model259_fullstats_2x/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7681025332833725,
+      "image_mean_miou_empty_skipped": 0.7681025332833725,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7176323666889075,
+        0.851820453887615,
+        0.9346713126660815,
+        0.5682859998908858
+      ],
+      "empty_image_class_pairs": 0
+    }
+  ],
+  "top_empty_skipped": [
+    {
+      "archive": "/workspace/komap_model1/outputs/model289_model257_binary_boundary/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7741807399112058,
+      "image_mean_miou_empty_skipped": 0.7805277805927774,
+      "mean_delta_skip_minus_zero_pp": 0.6347040681571547,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7279878446300047,
+        0.8555063305926852,
+        0.9308659834282649,
+        0.5823628009938686
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model262_fullstats_seed_ensemble/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7716086358348677,
+      "image_mean_miou_empty_skipped": 0.7776413353142946,
+      "mean_delta_skip_minus_zero_pp": 0.6032699479426862,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7217878979554756,
+        0.8550724928428215,
+        0.9307732143480422,
+        0.5788009381931312
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model261_fullstats_seed261/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7709640983967178,
+      "image_mean_miou_empty_skipped": 0.7769462154515627,
+      "mean_delta_skip_minus_zero_pp": 0.5982117054844971,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7215878956358,
+        0.854177693526791,
+        0.9310934108680003,
+        0.5769973935562799
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model269_fullstats_1x_extended/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7698530074546982,
+      "image_mean_miou_empty_skipped": 0.7759204399361259,
+      "mean_delta_skip_minus_zero_pp": 0.6067432481427715,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7199218012406836,
+        0.8546833076260058,
+        0.9278290744734059,
+        0.5769778464786972
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model286_model257_imagewise_softiou/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7739515232625814,
+      "image_mean_miou_empty_skipped": 0.7739515232625814,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7237290888668323,
+        0.8570518686021218,
+        0.9317411180140208,
+        0.5832840175673507
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model284_model257_imagewise_lovasz_w050/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7739126856544448,
+      "image_mean_miou_empty_skipped": 0.7739126856544448,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7238960897721861,
+        0.8570880777345593,
+        0.9316990276984118,
+        0.5829675474126221
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model283_model257_imagewise_lovasz/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.773346949890023,
+      "image_mean_miou_empty_skipped": 0.773346949890023,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7232324997507131,
+        0.8567590645562297,
+        0.9312199603890786,
+        0.5821762748640702
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model291_hierarchical_heads/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7730270655472556,
+      "image_mean_miou_empty_skipped": 0.7730270655472556,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7187838395851158,
+        0.8565049436393565,
+        0.9340342644401474,
+        0.5827852145244028
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model305_model257_boundary_fixed4/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7667954854573564,
+      "image_mean_miou_empty_skipped": 0.7725363658995624,
+      "mean_delta_skip_minus_zero_pp": 0.5740880442205998,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7098721674531766,
+        0.8532481685777402,
+        0.9301994049142965,
+        0.573862200884212
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model257_full_image_stats_1x/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7720750168508469,
+      "image_mean_miou_empty_skipped": 0.7720750168508469,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7217893043121558,
+        0.8559875772648825,
+        0.9303720960742645,
+        0.5801510897520846
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model293_train_region_corrector/valid_probs_region_corrected.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7719581102604136,
+      "image_mean_miou_empty_skipped": 0.7719581102604136,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7217893043121558,
+        0.8557666780631445,
+        0.9303720960742645,
+        0.5799043625920897
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model294_decoder_region_probe/valid_probs_decoder_region.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7709133350884221,
+      "image_mean_miou_empty_skipped": 0.7709133350884221,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7215808021262208,
+        0.8530015022868029,
+        0.9303720960742645,
+        0.5786989398664005
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model292_cross_specimen_copy/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7706585680942574,
+      "image_mean_miou_empty_skipped": 0.7706585680942574,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7182172065697414,
+        0.8553993122621829,
+        0.9307240980183094,
+        0.5782936555267957
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model234_native_low_lr_continue/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7642214955930182,
+      "image_mean_miou_empty_skipped": 0.7698181373833982,
+      "mean_delta_skip_minus_zero_pp": 0.5596641790379997,
+      "per_class_image_mean_iou_empty_zero": [
+        0.708352114824514,
+        0.8539135789062795,
+        0.9288027794350053,
+        0.5658175092062743
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model272_microstructure_augmentation_1x/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7698084352329724,
+      "image_mean_miou_empty_skipped": 0.7698084352329724,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7223462425242881,
+        0.8539844133399145,
+        0.9304754361631915,
+        0.572427648904496
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model242_native_stem_ema/valid_probs_ema.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7686436127469807,
+      "image_mean_miou_empty_skipped": 0.7686436127469807,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7151858875921411,
+        0.8539334413408923,
+        0.9307136813949564,
+        0.5747414406599327
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model256_inference_parity/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7686436127469807,
+      "image_mean_miou_empty_skipped": 0.7686436127469807,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7151858875921411,
+        0.8539334413408923,
+        0.9307136813949564,
+        0.5747414406599327
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model217_native_tent/valid_probs_03.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7631221818353209,
+      "image_mean_miou_empty_skipped": 0.7686414396207443,
+      "mean_delta_skip_minus_zero_pp": 0.5519257785423393,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7083606704628309,
+        0.8535921595352038,
+        0.927751043776337,
+        0.5627848535669114
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model217_native_tent/valid_probs_02.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7631071115269286,
+      "image_mean_miou_empty_skipped": 0.7686258634502017,
+      "mean_delta_skip_minus_zero_pp": 0.5518751923273113,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7083283522688512,
+        0.8535934165249921,
+        0.9277401930326359,
+        0.5627664842812348
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model217_native_tent/valid_probs_01.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.763098172210583,
+      "image_mean_miou_empty_skipped": 0.7686168230080113,
+      "mean_delta_skip_minus_zero_pp": 0.5518650797428304,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7083137739480516,
+        0.8535908621361535,
+        0.9277344343118779,
+        0.5627536184462493
+      ],
+      "empty_image_class_pairs": 1
+    }
+  ],
+  "all_scored": [
+    {
+      "archive": "/workspace/komap_model1/outputs/model289_model257_binary_boundary/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7741807399112058,
+      "image_mean_miou_empty_skipped": 0.7805277805927774,
+      "mean_delta_skip_minus_zero_pp": 0.6347040681571547,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7279878446300047,
+        0.8555063305926852,
+        0.9308659834282649,
+        0.5823628009938686
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model286_model257_imagewise_softiou/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7739515232625814,
+      "image_mean_miou_empty_skipped": 0.7739515232625814,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7237290888668323,
+        0.8570518686021218,
+        0.9317411180140208,
+        0.5832840175673507
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model284_model257_imagewise_lovasz_w050/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7739126856544448,
+      "image_mean_miou_empty_skipped": 0.7739126856544448,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7238960897721861,
+        0.8570880777345593,
+        0.9316990276984118,
+        0.5829675474126221
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model283_model257_imagewise_lovasz/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.773346949890023,
+      "image_mean_miou_empty_skipped": 0.773346949890023,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7232324997507131,
+        0.8567590645562297,
+        0.9312199603890786,
+        0.5821762748640702
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model291_hierarchical_heads/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7730270655472556,
+      "image_mean_miou_empty_skipped": 0.7730270655472556,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7187838395851158,
+        0.8565049436393565,
+        0.9340342644401474,
+        0.5827852145244028
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model257_full_image_stats_1x/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7720750168508469,
+      "image_mean_miou_empty_skipped": 0.7720750168508469,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7217893043121558,
+        0.8559875772648825,
+        0.9303720960742645,
+        0.5801510897520846
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model293_train_region_corrector/valid_probs_region_corrected.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7719581102604136,
+      "image_mean_miou_empty_skipped": 0.7719581102604136,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7217893043121558,
+        0.8557666780631445,
+        0.9303720960742645,
+        0.5799043625920897
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model262_fullstats_seed_ensemble/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7716086358348677,
+      "image_mean_miou_empty_skipped": 0.7776413353142946,
+      "mean_delta_skip_minus_zero_pp": 0.6032699479426862,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7217878979554756,
+        0.8550724928428215,
+        0.9307732143480422,
+        0.5788009381931312
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model261_fullstats_seed261/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7709640983967178,
+      "image_mean_miou_empty_skipped": 0.7769462154515627,
+      "mean_delta_skip_minus_zero_pp": 0.5982117054844971,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7215878956358,
+        0.854177693526791,
+        0.9310934108680003,
+        0.5769973935562799
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model294_decoder_region_probe/valid_probs_decoder_region.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7709133350884221,
+      "image_mean_miou_empty_skipped": 0.7709133350884221,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7215808021262208,
+        0.8530015022868029,
+        0.9303720960742645,
+        0.5786989398664005
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model292_cross_specimen_copy/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7706585680942574,
+      "image_mean_miou_empty_skipped": 0.7706585680942574,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7182172065697414,
+        0.8553993122621829,
+        0.9307240980183094,
+        0.5782936555267957
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model269_fullstats_1x_extended/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7698530074546982,
+      "image_mean_miou_empty_skipped": 0.7759204399361259,
+      "mean_delta_skip_minus_zero_pp": 0.6067432481427715,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7199218012406836,
+        0.8546833076260058,
+        0.9278290744734059,
+        0.5769778464786972
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model272_microstructure_augmentation_1x/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7698084352329724,
+      "image_mean_miou_empty_skipped": 0.7698084352329724,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7223462425242881,
+        0.8539844133399145,
+        0.9304754361631915,
+        0.572427648904496
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model242_native_stem_ema/valid_probs_ema.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7686436127469807,
+      "image_mean_miou_empty_skipped": 0.7686436127469807,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7151858875921411,
+        0.8539334413408923,
+        0.9307136813949564,
+        0.5747414406599327
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model256_inference_parity/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7686436127469807,
+      "image_mean_miou_empty_skipped": 0.7686436127469807,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7151858875921411,
+        0.8539334413408923,
+        0.9307136813949564,
+        0.5747414406599327
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model220_native_tent_extended/valid_probs_03.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7684120118513614,
+      "image_mean_miou_empty_skipped": 0.7684120118513614,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.723738774816623,
+        0.8533977001395504,
+        0.9305092639418419,
+        0.5660023085074293
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model227_tent_probability_soup/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7683997275459347,
+      "image_mean_miou_empty_skipped": 0.7683997275459347,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7258407045124871,
+        0.8527987615973196,
+        0.9309401225874143,
+        0.5640193214865178
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model244_supervised_distillation/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7683299970341143,
+      "image_mean_miou_empty_skipped": 0.7683299970341143,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7131815830836165,
+        0.8552133886892415,
+        0.9304830693015805,
+        0.5744419470620186
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model242_native_stem_ema/valid_probs_raw.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7682832320775191,
+      "image_mean_miou_empty_skipped": 0.7682832320775191,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7143113573953659,
+        0.8540395573094008,
+        0.9306078457536107,
+        0.5741741678516993
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model259_fullstats_2x/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7681025332833725,
+      "image_mean_miou_empty_skipped": 0.7681025332833725,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7176323666889075,
+        0.851820453887615,
+        0.9346713126660815,
+        0.5682859998908858
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model220_native_tent_extended/valid_probs_02.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7680611621909442,
+      "image_mean_miou_empty_skipped": 0.7680611621909442,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7228686336208542,
+        0.8535113567689512,
+        0.9302789497654734,
+        0.5655857086084979
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model220_native_tent_extended/valid_probs_01.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.767965575010742,
+      "image_mean_miou_empty_skipped": 0.767965575010742,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.722603234481646,
+        0.8535553942455618,
+        0.9301971529907404,
+        0.5655065183250196
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model220_native_tent_extended/valid_probs_06.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.767918532350862,
+      "image_mean_miou_empty_skipped": 0.767918532350862,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7274035635060725,
+        0.8520390611444173,
+        0.9311332025540647,
+        0.5610983021988932
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model239_native_stem/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7674363577608136,
+      "image_mean_miou_empty_skipped": 0.7674363577608136,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7118026310470958,
+        0.8556291916715674,
+        0.9296016802439077,
+        0.5727119280806834
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model220_native_tent_extended/valid_probs_05.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7672023274482764,
+      "image_mean_miou_empty_skipped": 0.7672023274482764,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7258829271385628,
+        0.8520462415936791,
+        0.9307660121427981,
+        0.5601141289180657
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model217_native_tent/valid_probs_09.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7671627210190183,
+      "image_mean_miou_empty_skipped": 0.7671627210190183,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7178680694040638,
+        0.8542509115346331,
+        0.9293801887778335,
+        0.5671517143595428
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model309_model308_route_probe/model217_valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7671627210190183,
+      "image_mean_miou_empty_skipped": 0.7671627210190183,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7178680694040638,
+        0.8542509115346331,
+        0.9293801887778335,
+        0.5671517143595428
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model217_native_tent/valid_probs_08.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7670755979674416,
+      "image_mean_miou_empty_skipped": 0.7670755979674416,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7177061393182531,
+        0.8542609644877721,
+        0.9293356786133262,
+        0.566999609450415
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model217_native_tent/valid_probs_07.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7670376155067521,
+      "image_mean_miou_empty_skipped": 0.7670376155067521,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7176476139025108,
+        0.8542638688129557,
+        0.9293136592828134,
+        0.5669253200287288
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model220_native_tent_extended/valid_probs_04.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7670057956251412,
+      "image_mean_miou_empty_skipped": 0.7670057956251412,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7253897423840825,
+        0.8520760945343564,
+        0.9306417228849941,
+        0.5599156226971316
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model305_model257_boundary_fixed4/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7667954854573564,
+      "image_mean_miou_empty_skipped": 0.7725363658995624,
+      "mean_delta_skip_minus_zero_pp": 0.5740880442205998,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7098721674531766,
+        0.8532481685777402,
+        0.9301994049142965,
+        0.573862200884212
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model232_d4_marginal_tent/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7665111085222596,
+      "image_mean_miou_empty_skipped": 0.7665111085222596,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7264567745069204,
+        0.8515507227877535,
+        0.9300726510748634,
+        0.5579642857195013
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model231_d4_tent/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7661563205414732,
+      "image_mean_miou_empty_skipped": 0.7661563205414732,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7262527812956925,
+        0.8509824918853817,
+        0.9300207818400267,
+        0.5573692271447916
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model316_reliable_tent_valid/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.766115247483165,
+      "image_mean_miou_empty_skipped": 0.766115247483165,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7252299122704784,
+        0.8510104259962945,
+        0.9298247336101199,
+        0.5583959180557666
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model249_eutectic_cldice/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7660601448348542,
+      "image_mean_miou_empty_skipped": 0.7660601448348542,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7079824289516552,
+        0.8545450185074686,
+        0.9301982316122137,
+        0.5715149002680794
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model217_native_tent/valid_probs_06.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7656555080140661,
+      "image_mean_miou_empty_skipped": 0.7656555080140661,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7141642342709175,
+        0.8540225788083925,
+        0.9287437022898258,
+        0.5656915166871282
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model217_native_tent/valid_probs_05.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7656234271378287,
+      "image_mean_miou_empty_skipped": 0.7656234271378287,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7140949451637628,
+        0.8540486448601452,
+        0.9287146251666225,
+        0.5656354933607848
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model217_native_tent/valid_probs_04.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.765610290030368,
+      "image_mean_miou_empty_skipped": 0.765610290030368,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7140518853978206,
+        0.8540672020609682,
+        0.9287018598471878,
+        0.5656202128154956
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model234_native_low_lr_continue/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7642214955930182,
+      "image_mean_miou_empty_skipped": 0.7698181373833982,
+      "mean_delta_skip_minus_zero_pp": 0.5596641790379997,
+      "per_class_image_mean_iou_empty_zero": [
+        0.708352114824514,
+        0.8539135789062795,
+        0.9288027794350053,
+        0.5658175092062743
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model217_native_tent/valid_probs_03.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7631221818353209,
+      "image_mean_miou_empty_skipped": 0.7686414396207443,
+      "mean_delta_skip_minus_zero_pp": 0.5519257785423393,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7083606704628309,
+        0.8535921595352038,
+        0.927751043776337,
+        0.5627848535669114
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model217_native_tent/valid_probs_02.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7631071115269286,
+      "image_mean_miou_empty_skipped": 0.7686258634502017,
+      "mean_delta_skip_minus_zero_pp": 0.5518751923273113,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7083283522688512,
+        0.8535934165249921,
+        0.9277401930326359,
+        0.5627664842812348
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model217_native_tent/valid_probs_01.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.763098172210583,
+      "image_mean_miou_empty_skipped": 0.7686168230080113,
+      "mean_delta_skip_minus_zero_pp": 0.5518650797428304,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7083137739480516,
+        0.8535908621361535,
+        0.9277344343118779,
+        0.5627536184462493
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model237_matssl_finetune/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7623801564689978,
+      "image_mean_miou_empty_skipped": 0.7680270181277493,
+      "mean_delta_skip_minus_zero_pp": 0.5646861658751501,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7078687006629195,
+        0.8506749378878101,
+        0.9302614909105336,
+        0.5607154964147284
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model199_native_long/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7617972962705604,
+      "image_mean_miou_empty_skipped": 0.7673333267982261,
+      "mean_delta_skip_minus_zero_pp": 0.5536030527665714,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7047231135316776,
+        0.8530641339882289,
+        0.9298181548934691,
+        0.559583782668866
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model195_native_resume/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7611099229264656,
+      "image_mean_miou_empty_skipped": 0.7665532350865565,
+      "mean_delta_skip_minus_zero_pp": 0.5443312160090863,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7042232265875423,
+        0.8530037821098624,
+        0.92696391945134,
+        0.560248763557118
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model216_pixel_refiner_native/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7611099229264656,
+      "image_mean_miou_empty_skipped": 0.7665532350865565,
+      "mean_delta_skip_minus_zero_pp": 0.5443312160090863,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7042232265875423,
+        0.8530037821098624,
+        0.92696391945134,
+        0.560248763557118
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model217_native_tent/valid_probs_00.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7611099229264656,
+      "image_mean_miou_empty_skipped": 0.7665532350865565,
+      "mean_delta_skip_minus_zero_pp": 0.5443312160090863,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7042232265875423,
+        0.8530037821098624,
+        0.92696391945134,
+        0.560248763557118
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model220_native_tent_extended/valid_probs_00.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7611099229264656,
+      "image_mean_miou_empty_skipped": 0.7665532350865565,
+      "mean_delta_skip_minus_zero_pp": 0.5443312160090863,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7042232265875423,
+        0.8530037821098624,
+        0.92696391945134,
+        0.560248763557118
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model207_imagewise_iou/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7601338257010536,
+      "image_mean_miou_empty_skipped": 0.7601338257010536,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7030140957346583,
+        0.8456893222906343,
+        0.9320783535558878,
+        0.5597535312230337
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model209_rare_boundary/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7596072830111061,
+      "image_mean_miou_empty_skipped": 0.7596072830111061,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7060108451871272,
+        0.8443029697353046,
+        0.9284030239834806,
+        0.5597122931385119
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model211_test_time_distill/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7580910899671777,
+      "image_mean_miou_empty_skipped": 0.7580910899671777,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.701300384022002,
+        0.8375161520132643,
+        0.9340395905360707,
+        0.5595082332973733
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model277_3x_high_lr_finetune/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7576979735279166,
+      "image_mean_miou_empty_skipped": 0.7576979735279166,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7022880978115943,
+        0.8442088355913471,
+        0.9299738122011151,
+        0.5543211485076093
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model186_team_schedule/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7576098078571951,
+      "image_mean_miou_empty_skipped": 0.7630893989909465,
+      "mean_delta_skip_minus_zero_pp": 0.5479591133751405,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6962306587162301,
+        0.8532965883088917,
+        0.9275501873995038,
+        0.5533617970041547
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model229_global_tent/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7574646504036066,
+      "image_mean_miou_empty_skipped": 0.7631934489158768,
+      "mean_delta_skip_minus_zero_pp": 0.5728798512270261,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7043414439725182,
+        0.8509562634674765,
+        0.9271440930317848,
+        0.5474168011426467
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model230_global_adabn/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7569396684777717,
+      "image_mean_miou_empty_skipped": 0.7625959026833088,
+      "mean_delta_skip_minus_zero_pp": 0.565623420553707,
+      "per_class_image_mean_iou_empty_zero": [
+        0.702407103773668,
+        0.8501773526310353,
+        0.9269457600715583,
+        0.548228457434825
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model273_highres_3x_longer_finetune/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7568355558817824,
+      "image_mean_miou_empty_skipped": 0.7568355558817824,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7053275519847282,
+        0.8427336515252385,
+        0.9275643108202875,
+        0.5517167091968755
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model275_3x_uniform_area_sampling/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7557614859622926,
+      "image_mean_miou_empty_skipped": 0.7557614859622926,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.7021739045404654,
+        0.8415676920471495,
+        0.9291866989615489,
+        0.550117648300007
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model201_gradient_representation/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7545277483677242,
+      "image_mean_miou_empty_skipped": 0.7545277483677242,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6946604643329963,
+        0.8472013712598055,
+        0.9262786648302053,
+        0.5499704930478903
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model255_matched_1x_control/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7545046547146972,
+      "image_mean_miou_empty_skipped": 0.7602524953996076,
+      "mean_delta_skip_minus_zero_pp": 0.574784068491041,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6924993295976869,
+        0.8497773378908928,
+        0.9260283357049947,
+        0.5497136156652143
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model181_raw_zcdf_aspp/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7517354390225235,
+      "image_mean_miou_empty_skipped": 0.7576771862863398,
+      "mean_delta_skip_minus_zero_pp": 0.5941747263816355,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6939911809304752,
+        0.8442588076782458,
+        0.9255270547728539,
+        0.543164712708519
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model311_eutectic_oof_hard_mining/valid_fold_ensemble_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7507781562906677,
+      "image_mean_miou_empty_skipped": 0.7507781562906677,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6918605826440221,
+        0.8434275313294268,
+        0.9220814291060128,
+        0.5457430820832087
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model265_highres_fullstats_3x/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7505338196124477,
+      "image_mean_miou_empty_skipped": 0.7505338196124477,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6951507741246392,
+        0.8398647318134606,
+        0.9269375570165606,
+        0.5401822154951302
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model303_boundary_oof_8ep/valid_fold_ensemble_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.750472040179293,
+      "image_mean_miou_empty_skipped": 0.750472040179293,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6918422823175286,
+        0.8426214087896913,
+        0.9222675942104666,
+        0.5451568753994858
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model310_dinov2_1024_scale_probe/valid_baseline.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.750472040179293,
+      "image_mean_miou_empty_skipped": 0.750472040179293,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6918422823175286,
+        0.8426214087896913,
+        0.9222675942104666,
+        0.5451568753994858
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model310_dinov2_1024_scale_probe/valid_candidate.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7501939494309624,
+      "image_mean_miou_empty_skipped": 0.7501939494309624,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6892791380624834,
+        0.8405685349365737,
+        0.9237948733788155,
+        0.5471332513459766
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model302_boundary_oof/valid_fold_ensemble_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7498643859937449,
+      "image_mean_miou_empty_skipped": 0.7498643859937449,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6913119858948843,
+        0.842015971001809,
+        0.9221651883442924,
+        0.5439643987339938
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model303_boundary_oof_8ep/fold2/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7497894173781607,
+      "image_mean_miou_empty_skipped": 0.7497894173781607,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.694248560583718,
+        0.8379975052131193,
+        0.9240480253428721,
+        0.5428635783729338
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model310_dinov2_1024_scale_probe/fold2_valid_baseline.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7497894173781607,
+      "image_mean_miou_empty_skipped": 0.7497894173781607,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.694248560583718,
+        0.8379975052131193,
+        0.9240480253428721,
+        0.5428635783729338
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model192_team_schedule_seed456/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.749738350446318,
+      "image_mean_miou_empty_skipped": 0.7552091125888434,
+      "mean_delta_skip_minus_zero_pp": 0.5470762142525398,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6807154808665001,
+        0.8464881498625635,
+        0.9276819066503149,
+        0.5440678644058934
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model311_eutectic_oof_hard_mining/fold2/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7497244163643217,
+      "image_mean_miou_empty_skipped": 0.7497244163643217,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6928932190918182,
+        0.8400987875058498,
+        0.9244421864136315,
+        0.5414634724459877
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model253_highres_scale/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7497078333432793,
+      "image_mean_miou_empty_skipped": 0.7497078333432793,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6958122913705714,
+        0.8397845482113832,
+        0.9249789709891502,
+        0.5382555228020128
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model302_boundary_oof/fold2/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7495969717509181,
+      "image_mean_miou_empty_skipped": 0.7495969717509181,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6952460112378288,
+        0.83712620343599,
+        0.924412884530604,
+        0.5416027877992499
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model321_rotation_aug_oof/fold1/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7495911616923693,
+      "image_mean_miou_empty_skipped": 0.7495911616923693,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6947607140022718,
+        0.8416685172529046,
+        0.9224577209274258,
+        0.5394776945868751
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model310_dinov2_1024_scale_probe/fold1_valid_candidate.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7480663613232891,
+      "image_mean_miou_empty_skipped": 0.7480663613232891,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6873265419130623,
+        0.8381478048055383,
+        0.9258837309110033,
+        0.5409073676635521
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model310_dinov2_1024_scale_probe/fold2_valid_candidate.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7479253627596453,
+      "image_mean_miou_empty_skipped": 0.7479253627596453,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6893547499102036,
+        0.8346971694998715,
+        0.9243609347330702,
+        0.543288596895436
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model311_eutectic_oof_hard_mining/fold4/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7473621044580798,
+      "image_mean_miou_empty_skipped": 0.7473621044580798,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.689265772448725,
+        0.8376049388568629,
+        0.9206769702618898,
+        0.5419007362648414
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model311_eutectic_oof_hard_mining/fold1/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7472110247751075,
+      "image_mean_miou_empty_skipped": 0.7472110247751075,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6880651059291532,
+        0.8416630970649674,
+        0.9211606029519581,
+        0.537955293154351
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model303_boundary_oof_8ep/fold1/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7471522340219148,
+      "image_mean_miou_empty_skipped": 0.7471522340219148,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6889547278091329,
+        0.8411911616561424,
+        0.9231769267679878,
+        0.5352861198543957
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model310_dinov2_1024_scale_probe/fold1_valid_baseline.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7471522340219148,
+      "image_mean_miou_empty_skipped": 0.7471522340219148,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6889547278091329,
+        0.8411911616561424,
+        0.9231769267679878,
+        0.5352861198543957
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model321_rotation_aug_oof/valid_fold_ensemble_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7469415469400517,
+      "image_mean_miou_empty_skipped": 0.7469415469400517,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6855671837837396,
+        0.8413579713884694,
+        0.9226658046320285,
+        0.5381752279559693
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model302_boundary_oof/fold1/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7466804658872728,
+      "image_mean_miou_empty_skipped": 0.7466804658872728,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6897073122945694,
+        0.8398060148006389,
+        0.9227619246451718,
+        0.534446611808711
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model310_dinov2_1024_scale_probe/fold3_valid_candidate.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7465155029997846,
+      "image_mean_miou_empty_skipped": 0.7465155029997846,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6905954688685532,
+        0.832125714289943,
+        0.9210594457712451,
+        0.5422813830693978
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model303_boundary_oof_8ep/fold4/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7455072360321402,
+      "image_mean_miou_empty_skipped": 0.7455072360321402,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6860040832629902,
+        0.8370019493464638,
+        0.9197377828287667,
+        0.53928512869034
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model310_dinov2_1024_scale_probe/fold4_valid_baseline.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7455072360321402,
+      "image_mean_miou_empty_skipped": 0.7455072360321402,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6860040832629902,
+        0.8370019493464638,
+        0.9197377828287667,
+        0.53928512869034
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model303_boundary_oof_8ep/fold3/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7455002432186388,
+      "image_mean_miou_empty_skipped": 0.7455002432186388,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6887284979712291,
+        0.832539695519127,
+        0.9201363896527213,
+        0.5405963897314782
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model310_dinov2_1024_scale_probe/fold3_valid_baseline.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7455002432186388,
+      "image_mean_miou_empty_skipped": 0.7455002432186388,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6887284979712291,
+        0.832539695519127,
+        0.9201363896527213,
+        0.5405963897314782
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model311_eutectic_oof_hard_mining/fold3/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7450567019923838,
+      "image_mean_miou_empty_skipped": 0.7450567019923838,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6873667993586914,
+        0.8328838516091883,
+        0.9201183914571794,
+        0.5398577655444762
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model302_boundary_oof/fold3/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7449306486545796,
+      "image_mean_miou_empty_skipped": 0.7449306486545796,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6871335055262202,
+        0.8325147910288495,
+        0.9201468832875183,
+        0.5399274147757303
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model310_dinov2_1024_scale_probe/fold4_valid_candidate.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7447965977394982,
+      "image_mean_miou_empty_skipped": 0.7447965977394982,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6803368297519656,
+        0.8393552182894531,
+        0.9214121333007814,
+        0.5380822096157933
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model302_boundary_oof/fold4/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7440758024742241,
+      "image_mean_miou_empty_skipped": 0.7440758024742241,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6835425039832399,
+        0.836113806041302,
+        0.9194115939121467,
+        0.537235305960208
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model321_rotation_aug_oof/fold2/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7430703806921553,
+      "image_mean_miou_empty_skipped": 0.7430703806921553,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6807092145016093,
+        0.8364585253843076,
+        0.9245435726224199,
+        0.5305702102602845
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model298_oof_region_corrector/valid_probs_region_corrected.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7428984286224849,
+      "image_mean_miou_empty_skipped": 0.7428984286224849,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.677511321987658,
+        0.842469492810312,
+        0.923032140219339,
+        0.5285807594726314
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model297_train_only_oof/valid_fold_ensemble_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7425459240078258,
+      "image_mean_miou_empty_skipped": 0.7425459240078258,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6778589187051206,
+        0.8422574392745747,
+        0.9230322438197879,
+        0.52703509423182
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model300_rotation_consistency_pilot/fold4_lambda5/valid_adapted_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7423725414209625,
+      "image_mean_miou_empty_skipped": 0.7423725414209625,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6786861162733079,
+        0.8388544581231056,
+        0.922860768847609,
+        0.529088822439828
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model321_rotation_aug_oof/fold3/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7423662533688192,
+      "image_mean_miou_empty_skipped": 0.7423662533688192,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6809147735036947,
+        0.8368405813394217,
+        0.9195653605342852,
+        0.5321442980978757
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model300_rotation_consistency_pilot/fold2_lambda5/valid_adapted_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7419994795051507,
+      "image_mean_miou_empty_skipped": 0.7419994795051507,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6758562166202073,
+        0.8426164771618769,
+        0.9234763977404864,
+        0.5260488264980322
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model321_rotation_aug_oof/fold4/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7417961721782314,
+      "image_mean_miou_empty_skipped": 0.7417961721782314,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.676256355254296,
+        0.8362576177095351,
+        0.9221992665127956,
+        0.5324714492362991
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model300_rotation_consistency_pilot/fold3_lambda5/valid_adapted_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.740577022172061,
+      "image_mean_miou_empty_skipped": 0.740577022172061,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6735904313019653,
+        0.8396526163320607,
+        0.9210448852601274,
+        0.5280201557940908
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model315_model257_whole_image_valid/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7392543882176401,
+      "image_mean_miou_empty_skipped": 0.7392543882176401,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6887723630527758,
+        0.8389324285827472,
+        0.918164021476399,
+        0.5111487397586383
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model300_rotation_consistency_pilot/fold1_lambda5/valid_adapted_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7368133530099847,
+      "image_mean_miou_empty_skipped": 0.7368133530099847,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6759090491705894,
+        0.83545187756044,
+        0.9216265307850264,
+        0.514265954523883
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model300_rotation_consistency_pilot/valid_adapted_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7357598431344873,
+      "image_mean_miou_empty_skipped": 0.7357598431344873,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6761302160483837,
+        0.8348382161477916,
+        0.9199110581530622,
+        0.5121598821887114
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model308_dinov2_dense_fusion/fold2/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.734254196109019,
+      "image_mean_miou_empty_skipped": 0.734254196109019,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6695105097478551,
+        0.8354060821230995,
+        0.9208811163812367,
+        0.5112190761838845
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model308_dinov2_dense_fusion/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7342226973041998,
+      "image_mean_miou_empty_skipped": 0.7342226973041998,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6650582706123849,
+        0.8356689135263,
+        0.9197495038012553,
+        0.5164141012768595
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model308_dinov2_dense_fusion/valid_baseline_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7321890627865015,
+      "image_mean_miou_empty_skipped": 0.7321890627865015,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6668682304714653,
+        0.8335664212086519,
+        0.9186573499192201,
+        0.5096642495466689
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model308_dinov2_dense_fusion/fold3/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7313022506801492,
+      "image_mean_miou_empty_skipped": 0.7313022506801492,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.658695439229368,
+        0.8344550041381982,
+        0.9177755731047131,
+        0.5142829862483179
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model308_dinov2_dense_fusion/fold1/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7308299436849482,
+      "image_mean_miou_empty_skipped": 0.7308299436849482,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6649932216858426,
+        0.8294224053776771,
+        0.9195719976486842,
+        0.5093321500275894
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model308_dinov2_dense_fusion/fold4/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7306568018268198,
+      "image_mean_miou_empty_skipped": 0.7360863707327321,
+      "mean_delta_skip_minus_zero_pp": 0.5429568905912285,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6578715866361142,
+        0.8337127734471901,
+        0.9180805428336317,
+        0.5129623043903435
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model313_context_1792/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7126618541618944,
+      "image_mean_miou_empty_skipped": 0.7180110283489723,
+      "mean_delta_skip_minus_zero_pp": 0.5349174187077921,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6223546491634591,
+        0.8151495154079049,
+        0.9139191653117777,
+        0.4992240867644361
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model319_uniform_area_control_e8_valid/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7095348854549365,
+      "image_mean_miou_empty_skipped": 0.7147357633086774,
+      "mean_delta_skip_minus_zero_pp": 0.5200877853740904,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6136334850511418,
+        0.8144216064131177,
+        0.9129545832673209,
+        0.4971298670881656
+      ],
+      "empty_image_class_pairs": 1
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model318_area_weighted_best_e4_valid/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7092568254460471,
+      "image_mean_miou_empty_skipped": 0.7092568254460471,
+      "mean_delta_skip_minus_zero_pp": 0.0,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6095256060936476,
+        0.8207092169108912,
+        0.9101027331887817,
+        0.49668974559086776
+      ],
+      "empty_image_class_pairs": 0
+    },
+    {
+      "archive": "/workspace/komap_model1/outputs/model314_whole_image/valid_probs.npz",
+      "channel_order": "main [Al3Ni, Primary Si, Al, Eutectic Si]",
+      "image_count": 20,
+      "image_mean_miou_empty_zero": 0.7050469709836725,
+      "image_mean_miou_empty_skipped": 0.7101832754621162,
+      "mean_delta_skip_minus_zero_pp": 0.513630447844371,
+      "per_class_image_mean_iou_empty_zero": [
+        0.6098452348852665,
+        0.8052402583328601,
+        0.9126353170994749,
+        0.4924670736170885
+      ],
+      "empty_image_class_pairs": 1
+    }
+  ],
+  "errors": []
+}

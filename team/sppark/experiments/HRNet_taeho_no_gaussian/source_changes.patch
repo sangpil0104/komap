@@ -1,0 +1,11 @@
+--- HRNet_taeho/source/komap_seg/dataset.py
++++ HRNet_taeho_no_gaussian/source/komap_seg/dataset.py
+@@ -71,8 +71,6 @@
+                 ],
+                 p=0.3,
+             ),
+-            A.GaussNoise(std_range=(0.02, 0.08), p=0.2),
+-            A.GaussianBlur(blur_limit=(3, 5), p=0.15),
+             A.Normalize(mean=IMAGENET_MEAN, std=IMAGENET_STD),
+             ToTensorV2(),
+         ]

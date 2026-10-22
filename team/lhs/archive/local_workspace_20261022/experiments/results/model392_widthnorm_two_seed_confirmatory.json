@@ -1,0 +1,235 @@
+{
+  "model": 392,
+  "stage": "two_seed_confirmatory",
+  "scope": "70 train-only grouped OOF images / 59 specimen groups; both seeds complete before analysis",
+  "metric": "image-wise 4-class mIoU; empty-union=0",
+  "model392_lock_sha256": "68e7f2d524e338f24d9e88472d1463aadc69d5cb4daf7a56e0d5997edc3ebc98",
+  "bootstrap_draws": 20000,
+  "bootstrap_seed": 390,
+  "analysis_attempt_claim_sha256": "56e9b74baf00aed443a63ad12cb36ab49395b1835c9cce44f29d6c85a76398d4",
+  "summary": {
+    "per_seed": {
+      "1": {
+        "reference_image_miou_empty0_pct": 78.9189148341472,
+        "candidate_image_miou_empty0_pct": 78.97749376443204,
+        "delta_pp": 0.05857893028482513,
+        "group_bootstrap_95ci_delta_pp": [
+          -0.557758700371838,
+          0.6380946444498122
+        ],
+        "class_delta_pp": {
+          "Al": -0.18142291206083208,
+          "Al3Ni": 0.28239183957967295,
+          "Primary_Si": 0.18851684502457094,
+          "Eutectic_Si": -0.05517005140411488
+        },
+        "fold_delta_pp": {
+          "1": 1.2944515261764944,
+          "2": -0.4191530649196683,
+          "3": -1.1759921842721455,
+          "4": 0.4904129382318447
+        },
+        "step4_delta_pp": 0.8112466073252214,
+        "gate": {
+          "gain_at_least_0_50pp": false,
+          "group_bootstrap_ci_lower_above_zero": false,
+          "at_least_3_of_4_folds_positive": false,
+          "worst_fold_at_least_minus_0_30pp": false,
+          "all_class_deltas_at_least_minus_0_50pp": true,
+          "step4_delta_at_least_minus_0_50pp": true
+        },
+        "gate_passed": false
+      },
+      "2": {
+        "reference_image_miou_empty0_pct": 78.96001898944398,
+        "candidate_image_miou_empty0_pct": 79.10993365296578,
+        "delta_pp": 0.14991466352177796,
+        "group_bootstrap_95ci_delta_pp": [
+          -0.41226235839975495,
+          0.6655247819128968
+        ],
+        "class_delta_pp": {
+          "Al": -0.0006943206231113663,
+          "Al3Ni": 0.23449797864495636,
+          "Primary_Si": 0.4455075620102122,
+          "Eutectic_Si": -0.0796525659449443
+        },
+        "fold_delta_pp": {
+          "1": 0.71378950452955,
+          "2": 0.1227618487703746,
+          "3": -0.8208856034898475,
+          "4": 0.5524210203796013
+        },
+        "step4_delta_pp": 0.8422713329917019,
+        "gate": {
+          "gain_at_least_0_50pp": false,
+          "group_bootstrap_ci_lower_above_zero": false,
+          "at_least_3_of_4_folds_positive": true,
+          "worst_fold_at_least_minus_0_30pp": false,
+          "all_class_deltas_at_least_minus_0_50pp": true,
+          "step4_delta_at_least_minus_0_50pp": true
+        },
+        "gate_passed": false
+      }
+    },
+    "equal_weight_delta_pp": 0.10424679690330153,
+    "equal_weight_group_bootstrap_95ci_delta_pp": [
+      -0.4174826044695027,
+      0.6006522972061077
+    ],
+    "equal_weight_class_delta_pp": {
+      "Al": -0.09105861634197172,
+      "Al3Ni": 0.25844490911231466,
+      "Primary_Si": 0.3170122035173915,
+      "Eutectic_Si": -0.06741130867452959
+    },
+    "equal_weight_fold_delta_pp": {
+      "1": 1.0041205153530222,
+      "2": -0.14819560807464685,
+      "3": -0.9984388938809966,
+      "4": 0.521416979305723
+    },
+    "seed2_minus_seed1_delta_pp": 0.09133573323695282,
+    "equal_weight_step4_delta_pp": 0.8267589701584618,
+    "bootstrap_pairing": "average seed1/seed2 image deltas first; resample each fold's specimen groups once",
+    "width_strata_descriptive_only": {
+      "675": {
+        "images": 17,
+        "groups": 16,
+        "seed_delta_pp": {
+          "1": 0.18201185070495376,
+          "2": 0.4349563387331677
+        },
+        "equal_weight_delta_pp": 0.30848409471906074
+      },
+      "1230": {
+        "images": 20,
+        "groups": 15,
+        "seed_delta_pp": {
+          "1": 0.19207344774489987,
+          "2": -0.02179005492088798
+        },
+        "equal_weight_delta_pp": 0.08514169641200595
+      },
+      "1278": {
+        "images": 24,
+        "groups": 21,
+        "seed_delta_pp": {
+          "1": -0.339367551599927,
+          "2": 0.016231976772836575
+        },
+        "equal_weight_delta_pp": -0.1615677874135452
+      },
+      "1440": {
+        "images": 9,
+        "groups": 7,
+        "seed_delta_pp": {
+          "1": 0.5899639934948662,
+          "2": 0.34955581599225416
+        },
+        "equal_weight_delta_pp": 0.46975990474356016
+      },
+      "native_width_equals_fold_train_mode": {
+        "images": 19,
+        "groups": 18,
+        "folds": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "seed_delta_pp": {
+          "1": -0.18483847227542347,
+          "2": -0.41751945632212517
+        },
+        "equal_weight_delta_pp": -0.3011789642987744,
+        "interpretation": "secondary descriptive subset only; not a causal or gate result"
+      }
+    },
+    "gate": {
+      "both_seed_point_deltas_positive": true,
+      "equal_weight_mean_gain_at_least_0_50pp": false,
+      "paired_group_bootstrap_ci_lower_above_zero": false,
+      "each_seed_fold_class_step4_safety_passed": false,
+      "pooled_three_of_four_folds_improve": false,
+      "pooled_fold_class_step4_safety_passed": false
+    },
+    "gate_passed": false,
+    "fold_target_width_counts": {
+      "1": {
+        "target_width": 1230,
+        "training_width_counts": {
+          "675": 9,
+          "1230": 18,
+          "1278": 17,
+          "1440": 8
+        },
+        "heldout_width_counts": {
+          "675": 8,
+          "1230": 2,
+          "1278": 7,
+          "1440": 1
+        },
+        "heldout_images_at_target_width": 2
+      },
+      "2": {
+        "target_width": 1278,
+        "training_width_counts": {
+          "675": 14,
+          "1230": 15,
+          "1278": 17,
+          "1440": 6
+        },
+        "heldout_width_counts": {
+          "675": 3,
+          "1230": 5,
+          "1278": 7,
+          "1440": 3
+        },
+        "heldout_images_at_target_width": 7
+      },
+      "3": {
+        "target_width": 1278,
+        "training_width_counts": {
+          "675": 15,
+          "1230": 12,
+          "1278": 20,
+          "1440": 6
+        },
+        "heldout_width_counts": {
+          "675": 2,
+          "1230": 8,
+          "1278": 4,
+          "1440": 3
+        },
+        "heldout_images_at_target_width": 4
+      },
+      "4": {
+        "target_width": 1278,
+        "training_width_counts": {
+          "675": 13,
+          "1230": 15,
+          "1278": 18,
+          "1440": 7
+        },
+        "heldout_width_counts": {
+          "675": 4,
+          "1230": 5,
+          "1278": 6,
+          "1440": 2
+        },
+        "heldout_images_at_target_width": 6
+      }
+    }
+  },
+  "valid_evaluation_authorized": false,
+  "sources": {
+    "model392_lock": "/workspace/komap_model1/experiments/results/model392_widthnorm_runtime_lock.json",
+    "model382_lock": "/workspace/komap_model1/experiments/results/model382_e5_preregistration_lock.json",
+    "cv_root": "/workspace/komap_model1/data_model322_group_cv",
+    "model382_root": "/workspace/komap_model1/outputs/model382_seed_count_control",
+    "model392_root": "/workspace/komap_model1/outputs/model392_widthnorm",
+    "model392_status": "runtime-safety pre-score lock; both seeds × four folds required; no Model392 score accessed",
+    "analysis_claim": "/workspace/komap_model1/experiments/results/model392_widthnorm_two_seed_confirmatory.json.claim"
+  }
+}

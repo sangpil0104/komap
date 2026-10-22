@@ -1,0 +1,29 @@
+--- original/experiments/model326_hybrid_fullstats/KoMaP/train.py
++++ new/experiments/model326_hybrid_fullstats/KoMaP/train.py
+@@ -150,6 +150,8 @@
+     np.random.seed(seed)
+     random.seed(seed)
+     torch.manual_seed(seed)
++    if hasattr(aug, "set_random_seed"):
++        aug.set_random_seed(seed)
+ 
+ 
+ ds = CropDS(train_pairs, args.iters * args.bs)
+--- original/experiments/model336_hrnet_best/komap_seg/dataset.py
++++ new/experiments/model336_hrnet_best/komap_seg/dataset.py
+@@ -89,6 +89,15 @@
+     worker_seed = torch.initial_seed() % 2**32
+     random.seed(worker_seed)
+     np.random.seed(worker_seed)
++    info = torch.utils.data.get_worker_info()
++    if info is not None:
++        ds = info.dataset
++        if hasattr(ds, "rng"):
++            ds.rng.seed(worker_seed)
++        for name in ("transform", "aug"):
++            transform = getattr(ds, name, None)
++            if hasattr(transform, "set_random_seed"):
++                transform.set_random_seed(worker_seed)
+ 
+ 
+ class KomapPatchDataset(Dataset):

@@ -1,0 +1,83 @@
+{
+  "base_model400_lock_sha256": "e2223de82fef7322d6838672bd415cad6dd02489220b1df75aa724dd28c2679f",
+  "decision": "resume only missing deterministic maps; no labels or score",
+  "expected_valid_ids": [
+    "A117_step4_sample2",
+    "A11_step1_sample4",
+    "A11_step2_sample4",
+    "A125_step1_sample4",
+    "A153_step3_sample3",
+    "A170_step4_sample3",
+    "A181_step1_sample1",
+    "A186_step2_sample2",
+    "A191_step4_sample3",
+    "A40_step3_sample3",
+    "A42_step2_sample4",
+    "A44_step4_sample3",
+    "A55_step2_sample1",
+    "A59_step3_sample1",
+    "A63_step1_sample4",
+    "A67_step1_sample1",
+    "A71_step2_sample1",
+    "A72_step4_sample4",
+    "A74_step3_sample4",
+    "A7_step1_sample4"
+  ],
+  "experiment": "Model400 interrupted inference recovery",
+  "lock_sha256": "77796342c3651fa11f024f9087fd0bd20a4ff32cbef2479e46d05b2d2ddf3d1d",
+  "locked_at_utc": "2026-10-04T14:59:35Z",
+  "official_valid_mask_pixels_decoded": false,
+  "official_valid_score_computed": false,
+  "preserved_partial_map": {
+    "image_id": "A117_step4_sample2",
+    "path": "outputs/model400_model396_d2_valid_once/hrnet_seed2_mean_valid/A117_step4_sample2.npz",
+    "sha256": "262ecd260fadfb9af3a732d356aef542eda3753e698841434b4774242af35d83",
+    "shape": [
+      875,
+      1230
+    ]
+  },
+  "recovery_files": {
+    "experiments/model400_inference_recovery.py": {
+      "sha256": "953f9a57bfeba92aa8485cc7993e15c94c0026c241350df1d2716d3442822bbb",
+      "size_bytes": 13947
+    },
+    "experiments/model400_inference_recovery_addendum.md": {
+      "sha256": "b922bf6f7dfbbfb8c33cf22ed5e43e0ec013f480b1255c49ad2228b8ee9c2719",
+      "size_bytes": 1137
+    },
+    "experiments/model400_inference_recovery_smoke.py": {
+      "sha256": "f5c83b39b8a1192a8dc7b9fd70d67f544efe4445cd1624c0fc9c0c9b67a905ad",
+      "size_bytes": 1247
+    },
+    "experiments/model400_model396_d2_valid_once.py": {
+      "sha256": "537189d33aa97909214591e0451d546dc465bc0e0759ceb211ad5dfb467dbd85",
+      "size_bytes": 30848
+    },
+    "experiments/results/model400_model396_d2_valid_lock.json": {
+      "sha256": "11b98f83e3b9fa653658bc69a1dfe9a6d5ff3feed0d0aaffb2b347e1afcfbda6",
+      "size_bytes": 18313
+    },
+    "outputs/model400_model396_d2_valid_once/hrnet_seed2_mean_valid/A117_step4_sample2.npz": {
+      "sha256": "262ecd260fadfb9af3a732d356aef542eda3753e698841434b4774242af35d83",
+      "size_bytes": 6263857
+    },
+    "outputs/model400_model396_d2_valid_once/inference.claim": {
+      "sha256": "04e3b3969f119abb46541f9da12916c0c4601ed51c117587ec588a568c927e75",
+      "size_bytes": 310
+    }
+  },
+  "revision": 1,
+  "runtime": {
+    "Pillow": "11.3.0",
+    "albumentations": "2.0.8",
+    "cudnn": "90100",
+    "numpy": "2.2.6",
+    "python": "3.10.12",
+    "segmentation-models-pytorch": "0.5.0",
+    "timm": "1.0.29",
+    "torch": "2.6.0+cu118",
+    "torch_cuda": "11.8"
+  },
+  "test_inputs_excluded": true
+}

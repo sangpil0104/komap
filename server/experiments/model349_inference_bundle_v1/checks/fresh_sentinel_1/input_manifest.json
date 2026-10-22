@@ -1,0 +1,112 @@
+{
+  "model": "Model349",
+  "config": {
+    "model": "Model349",
+    "original_run": "model349_train_20260930T143930_234475Z",
+    "validation_image_miou": 0.8006879890006227,
+    "class_order": [
+      "Al3Ni",
+      "Primary Si",
+      "Al",
+      "Eutectic Si"
+    ],
+    "palette": [
+      [
+        25,
+        76,
+        153
+      ],
+      [
+        76,
+        178,
+        76
+      ],
+      [
+        153,
+        127,
+        76
+      ],
+      [
+        204,
+        204,
+        204
+      ]
+    ],
+    "calibration": "configs/calibration.json",
+    "weights_dir": "weights",
+    "route": {
+      "base": {
+        "primary_source": "326",
+        "primary_gamma": 1.0,
+        "al3ni_source": "326",
+        "al3ni_gamma": 0.7,
+        "al_source": "322",
+        "al_gamma": 0.6,
+        "eutectic_source": "269",
+        "eutectic_gamma": 0.7,
+        "prior_scale": 1.25,
+        "beta_scale": 0.8,
+        "al_delta": 0.0,
+        "eut_delta": 0.15,
+        "gaussian_blend": 0.5,
+        "eut_edge_blend": 0.25,
+        "cleanup_threshold": 128
+      },
+      "gamma329": [
+        0.5,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "gamma336": [
+        0.0,
+        0.25,
+        0.75,
+        0.75
+      ],
+      "gamma347": [
+        0.0,
+        0.0,
+        0.25,
+        0.0
+      ]
+    },
+    "inference": {
+      "device": "cuda",
+      "threads": 2,
+      "probability_storage_dtype": "float16",
+      "b4_folds": 4,
+      "b4_tta": "d4",
+      "native": {
+        "patch": 1024,
+        "stride": 576,
+        "scale": 1.0,
+        "tta": "d4"
+      },
+      "hrnet": {
+        "patch": 512,
+        "overlap": 170,
+        "batch_size": 2,
+        "input_scale": 2.0,
+        "tta": "flip4"
+      },
+      "tent": {
+        "steps": 5,
+        "lr": 1e-05
+      }
+    }
+  },
+  "images": [
+    {
+      "name": "A117_step4_sample2",
+      "path": "/Data3/sppark/komap/dataset/valid/images/A117_step4_sample2_image.png",
+      "size": [
+        1230,
+        875
+      ],
+      "sha256": "44cef6ab8394b7d08b48875cab895392b25a6916cb7e2ff72f8ecb92c5251e5a"
+    }
+  ],
+  "calibration_sha256": "9dd33a9aacbe83ed005023b0538bec70023c87c45ea03b419f7f007aabbdd056",
+  "weights_manifest_sha256": "1b39b72b2a4933e7848c608412c5d7db54483cf4db3d7fef86db3f115065c5b4"
+}

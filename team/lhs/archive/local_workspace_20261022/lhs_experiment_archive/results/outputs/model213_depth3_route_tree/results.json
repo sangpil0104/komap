@@ -1,0 +1,171 @@
+{
+  "candidate_count": 1574,
+  "metrics": {
+    "image_scores": {
+      "score": 0.7874953721203607,
+      "tree": {
+        "root_feature": "gray_p10",
+        "root_threshold": 43.5,
+        "left": {
+          "feature": "margin_primary_eutectic",
+          "threshold": 0.03555213287472725,
+          "left_candidate": 726,
+          "right_candidate": 1288
+        },
+        "right": {
+          "feature": "gray_std",
+          "threshold": 58.856393814086914,
+          "left_candidate": 1288,
+          "right_candidate": 757
+        },
+        "scores": [
+          0.8566311224242448,
+          0.75506238027813,
+          0.7418787723783324,
+          0.7832138190709421,
+          0.7283976360947799,
+          0.8685971467577376,
+          0.7946639862071337,
+          0.8080664856496141,
+          0.8078606013394803,
+          0.8086614491033457,
+          0.828131191147708,
+          0.8909068272876789,
+          0.8012667192399041,
+          0.8198744840699254,
+          0.830262027552449,
+          0.7454305538223016,
+          0.47552788224631637,
+          0.864126924744265,
+          0.7319291775424355,
+          0.8094182554504874
+        ]
+      },
+      "left": {
+        "feature": "margin_primary_eutectic",
+        "threshold": 0.03555213287472725,
+        "left": {
+          "primary_gamma": 0.7,
+          "mode": "none",
+          "rare_gamma": 0.0,
+          "global_miou": 0.8113855150757923,
+          "image_mean_miou": 0.7853883396016108,
+          "image_mean_miou_exclude": 0.7933276524133387,
+          "_result_path": "outputs/model197_native_narrow_blend/results.json"
+        },
+        "right": {
+          "primary_gamma": 1.0,
+          "stage": "calibration_al_delta",
+          "global_miou": 0.8130140280304629,
+          "image_mean_miou": 0.7853946790748321,
+          "image_mean_miou_exclude": 0.7933039630687123,
+          "_result_path": "outputs/model204_branch_fusion/results.json"
+        }
+      },
+      "right": {
+        "feature": "gray_std",
+        "threshold": 58.856393814086914,
+        "left": {
+          "primary_gamma": 1.0,
+          "stage": "calibration_al_delta",
+          "global_miou": 0.8130140280304629,
+          "image_mean_miou": 0.7853946790748321,
+          "image_mean_miou_exclude": 0.7933039630687123,
+          "_result_path": "outputs/model204_branch_fusion/results.json"
+        },
+        "right": {
+          "primary_gamma": 0.75,
+          "mode": "eutectic",
+          "rare_gamma": 0.15,
+          "global_miou": 0.811500546561976,
+          "image_mean_miou": 0.7854242748354378,
+          "image_mean_miou_exclude": 0.793349739539543,
+          "_result_path": "outputs/model197_native_narrow_blend/results.json"
+        }
+      }
+    },
+    "image_scores_exclude": {
+      "score": 0.7954535547038749,
+      "tree": {
+        "root_feature": "area_al",
+        "root_threshold": 0.6200687351167925,
+        "left": {
+          "feature": "area_eutectic",
+          "threshold": 0.07915571256264686,
+          "left_candidate": 731,
+          "right_candidate": 1287
+        },
+        "right": {
+          "feature": "margin_primary_eutectic",
+          "threshold": 0.02954091038554907,
+          "left_candidate": 742,
+          "right_candidate": 1289
+        },
+        "scores": [
+          0.8566311224242448,
+          0.7553944174095376,
+          0.7419669977651884,
+          0.7832138190709421,
+          0.7285748158369861,
+          0.8683727908577462,
+          0.7946639862071337,
+          0.8080494373943239,
+          0.8081660973403708,
+          0.8086614491033457,
+          0.8282729075017425,
+          0.8897478113644601,
+          0.8012667192399041,
+          0.8199898651733855,
+          0.8304732131851356,
+          0.7448402574531581,
+          0.6350971533234718,
+          0.8635562684654325,
+          0.732706658240491,
+          0.8094253067204988
+        ]
+      },
+      "left": {
+        "feature": "area_eutectic",
+        "threshold": 0.07915571256264686,
+        "left": {
+          "primary_gamma": 0.7,
+          "mode": "rare",
+          "rare_gamma": 0.15,
+          "global_miou": 0.8118707537314405,
+          "image_mean_miou": 0.7855463812647914,
+          "image_mean_miou_exclude": 0.793424370171208,
+          "_result_path": "outputs/model197_native_narrow_blend/results.json"
+        },
+        "right": {
+          "primary_gamma": 1.0,
+          "stage": "calibration_al_delta",
+          "global_miou": 0.8130140280304629,
+          "image_mean_miou": 0.7853946790748321,
+          "image_mean_miou_exclude": 0.7933039630687123,
+          "_result_path": "outputs/model204_branch_fusion/results.json"
+        }
+      },
+      "right": {
+        "feature": "margin_primary_eutectic",
+        "threshold": 0.02954091038554907,
+        "left": {
+          "primary_gamma": 0.75,
+          "mode": "none",
+          "rare_gamma": 0.0,
+          "global_miou": 0.811335479637814,
+          "image_mean_miou": 0.7853536547041869,
+          "image_mean_miou_exclude": 0.7932923691207303,
+          "_result_path": "outputs/model197_native_narrow_blend/results.json"
+        },
+        "right": {
+          "primary_gamma": 1.0,
+          "stage": "calibration_al_delta",
+          "global_miou": 0.8130127176444022,
+          "image_mean_miou": 0.7853848981220998,
+          "image_mean_miou_exclude": 0.7932930995305627,
+          "_result_path": "outputs/model204_branch_fusion/results.json"
+        }
+      }
+    }
+  }
+}

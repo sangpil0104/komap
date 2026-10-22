@@ -1,0 +1,284 @@
+{
+  "kind": "single",
+  "experiment": "seed2027",
+  "model_split": "official",
+  "split": "valid",
+  "cache": "cache/b7223b1985eaeedacd441406416a8ddde4d789e065d3cdcf440c824ffe3590c3",
+  "member": {
+    "checkpoint_sha256": "b7292474ee0ef8ce8d68ae0781553d6c5206a8ad0a550f0a997624da885e1b12",
+    "selected_weights": "ema",
+    "dataset_hash": "bb179b2aaa8e47ef3f7d393c9ae3d5de28b561b5ae8d372b52bd26d5cd298cb9",
+    "class_names": [
+      "primary_si",
+      "al3ni",
+      "eutectic_si",
+      "al"
+    ],
+    "palette": [
+      [
+        76,
+        178,
+        76
+      ],
+      [
+        25,
+        76,
+        153
+      ],
+      [
+        204,
+        204,
+        204
+      ],
+      [
+        153,
+        127,
+        76
+      ]
+    ],
+    "inference": {
+      "mode": "full_frame",
+      "local_core_size": 768,
+      "halo": 64,
+      "overlap_fraction": 0.5,
+      "tile_weight": "gaussian",
+      "d4": false,
+      "scales": [
+        1.0
+      ],
+      "probability_dtype": "float32",
+      "refiner_enabled": false,
+      "class_logit_bias": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "output_mode": "RGBA"
+    },
+    "model_config": {
+      "name": "cnn_unet"
+    },
+    "precision": "bf16",
+    "baseline_source_hash": "525d818f3d9780ef2de1d95d01ef00c5990d78a3f4af1711c25f95c0e7700c5f",
+    "torch_version": "2.7.1+cu128",
+    "split": "valid",
+    "train_ids": [
+      "A101_step3_sample3",
+      "A106_step4_sample1",
+      "A108_step2_sample2",
+      "A109_step1_sample3",
+      "A111_step1_sample2",
+      "A111_step3_sample4",
+      "A118_step2_sample1",
+      "A121_step2_sample2",
+      "A123_step1_sample1",
+      "A123_step4_sample2",
+      "A125_step2_sample1",
+      "A130_step1_sample1",
+      "A137_step4_sample2",
+      "A138_step4_sample3",
+      "A139_step3_sample4",
+      "A139_step4_sample3",
+      "A140_step4_sample2",
+      "A146_step2_sample1",
+      "A147_step4_sample4",
+      "A150_step4_sample1",
+      "A152_step2_sample1",
+      "A153_step1_sample4",
+      "A154_step2_sample3",
+      "A155_step3_sample2",
+      "A156_step4_sample1",
+      "A156_step4_sample2",
+      "A159_step4_sample4",
+      "A15_step1_sample1",
+      "A164_step1_sample2",
+      "A164_step4_sample1",
+      "A166_step4_sample3",
+      "A167_step3_sample4",
+      "A16_step4_sample4",
+      "A181_step4_sample4",
+      "A182_step4_sample3",
+      "A187_step2_sample1",
+      "A187_step4_sample4",
+      "A188_step4_sample1",
+      "A18_step2_sample1",
+      "A191_step3_sample1",
+      "A191_step4_sample1",
+      "A200_step4_sample3",
+      "A201_step3_sample1",
+      "A201_step3_sample4",
+      "A21_step2_sample4",
+      "A222_step2_sample2",
+      "A224_step1_sample2",
+      "A224_step4_sample2",
+      "A2_step4_sample1",
+      "A39_step2_sample3",
+      "A40_step3_sample4",
+      "A49_step2_sample2",
+      "A51_step4_sample4",
+      "A55_step3_sample4",
+      "A57_step1_sample3",
+      "A61_step2_sample2",
+      "A64_step2_sample3",
+      "A66_step3_sample2",
+      "A69_step4_sample4",
+      "A78_step4_sample1",
+      "A7_step1_sample2",
+      "A7_step4_sample3",
+      "A83_step1_sample2",
+      "A87_step2_sample2",
+      "A89_step1_sample2",
+      "A8_step2_sample3",
+      "A8_step3_sample3",
+      "A94_step4_sample2",
+      "A96_step1_sample1",
+      "A98_step2_sample4"
+    ],
+    "validation_ids": [
+      "A117_step4_sample2",
+      "A11_step1_sample4",
+      "A11_step2_sample4",
+      "A125_step1_sample4",
+      "A153_step3_sample3",
+      "A170_step4_sample3",
+      "A181_step1_sample1",
+      "A186_step2_sample2",
+      "A191_step4_sample3",
+      "A40_step3_sample3",
+      "A42_step2_sample4",
+      "A44_step4_sample3",
+      "A55_step2_sample1",
+      "A59_step3_sample1",
+      "A63_step1_sample4",
+      "A67_step1_sample1",
+      "A71_step2_sample1",
+      "A72_step4_sample4",
+      "A74_step3_sample4",
+      "A7_step1_sample4"
+    ],
+    "images": [
+      {
+        "image_id": "A117_step4_sample2",
+        "width": 1230,
+        "height": 875,
+        "image_sha256": "44cef6ab8394b7d08b48875cab895392b25a6916cb7e2ff72f8ecb92c5251e5a"
+      },
+      {
+        "image_id": "A11_step1_sample4",
+        "width": 675,
+        "height": 480,
+        "image_sha256": "93cbd8d9e435213146e9d4fe3b02430ce78fcdd36f4329bbaa100bf7eac6a1c3"
+      },
+      {
+        "image_id": "A11_step2_sample4",
+        "width": 675,
+        "height": 480,
+        "image_sha256": "695434cd5eaf15790dc47571aa030896bed6158b52da2cb640358715452092d5"
+      },
+      {
+        "image_id": "A125_step1_sample4",
+        "width": 1230,
+        "height": 875,
+        "image_sha256": "ca33ef43ad09a1f721eed16a86d9cf521fa3cd39be3518e55222643fa8ed6569"
+      },
+      {
+        "image_id": "A153_step3_sample3",
+        "width": 1278,
+        "height": 909,
+        "image_sha256": "1c1410fcbd71747e6fe77a2898aa0a6c108ba1524b272efd1451d97516aeb32a"
+      },
+      {
+        "image_id": "A170_step4_sample3",
+        "width": 675,
+        "height": 480,
+        "image_sha256": "66007fd0f64ee0aaf5f14a0062dd1fb47d4cd82e54145397c6c7765456376b94"
+      },
+      {
+        "image_id": "A181_step1_sample1",
+        "width": 1440,
+        "height": 1024,
+        "image_sha256": "70b0f50c810b7e7b555f5cc568adfc5702e37d1eba08231eb1319e3331f21ee4"
+      },
+      {
+        "image_id": "A186_step2_sample2",
+        "width": 1278,
+        "height": 909,
+        "image_sha256": "bc7c27acec1b0a03f2cfc133cc191bbbff0cbb20cc422f204d378a37e26971f3"
+      },
+      {
+        "image_id": "A191_step4_sample3",
+        "width": 1440,
+        "height": 1024,
+        "image_sha256": "7caaae85b73d874cec4b23781aacc13e58103c0b03ebcd0e0dc962ef442f52b9"
+      },
+      {
+        "image_id": "A40_step3_sample3",
+        "width": 1278,
+        "height": 909,
+        "image_sha256": "7a57ae33d32de4836df06ce8518b09b7ab0c5399bbb7731eb65129aa882c4cd6"
+      },
+      {
+        "image_id": "A42_step2_sample4",
+        "width": 1230,
+        "height": 875,
+        "image_sha256": "fb9ad5641210ed705bf0a83d2ba7d6a4e775cf2f2d6242cbc5a3c513e3c9cc40"
+      },
+      {
+        "image_id": "A44_step4_sample3",
+        "width": 1278,
+        "height": 909,
+        "image_sha256": "90153ce08bc0995bac6a119b316995ebc865c5fad466d681210b08f5d8e9dc46"
+      },
+      {
+        "image_id": "A55_step2_sample1",
+        "width": 1096,
+        "height": 780,
+        "image_sha256": "b212f559e567e844547f83c0646bc2098d15dc174d0fd0383a080e9bfc6e2ded"
+      },
+      {
+        "image_id": "A59_step3_sample1",
+        "width": 675,
+        "height": 480,
+        "image_sha256": "a23291122eb42e7533380f834275bee444b3875266ac3c622aedbbefa011d904"
+      },
+      {
+        "image_id": "A63_step1_sample4",
+        "width": 675,
+        "height": 480,
+        "image_sha256": "629ed6a2272ba535a08b63d924f9fadf3a47571779efc5f5e9b6cbf2ea5d85ba"
+      },
+      {
+        "image_id": "A67_step1_sample1",
+        "width": 675,
+        "height": 480,
+        "image_sha256": "0d2291ef658b850cd9a46aa7ad05d3656228d9cb27dd6a910c0415b13a9295c6"
+      },
+      {
+        "image_id": "A71_step2_sample1",
+        "width": 675,
+        "height": 480,
+        "image_sha256": "3d4ca3ba899c17a5b7a447751a0a9bfe43ebda9341dc89885ee806ffb52eb1b8"
+      },
+      {
+        "image_id": "A72_step4_sample4",
+        "width": 675,
+        "height": 480,
+        "image_sha256": "48f692d2ffc41abadd8f6e0f8cc379d922097f4a20b52f502976eb11417f9283"
+      },
+      {
+        "image_id": "A74_step3_sample4",
+        "width": 675,
+        "height": 480,
+        "image_sha256": "7948fed4105460bd18c367aa1032f0309687f9299183b277003e15095efecb77"
+      },
+      {
+        "image_id": "A7_step1_sample4",
+        "width": 1278,
+        "height": 909,
+        "image_sha256": "48f0925a9df4312a9cb3c5d64cb5519950339f93b791e9daef6e031fd2dc03e6"
+      }
+    ]
+  },
+  "smoke_test": false
+}

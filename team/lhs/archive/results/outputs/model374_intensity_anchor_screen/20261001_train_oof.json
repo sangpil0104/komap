@@ -1,0 +1,64 @@
+{
+  "purpose": "train-only grayscale class-separability screen; not a segmentation score",
+  "metric": "orientation-free pooled Al3Ni-vs-Eutectic pixel AUC",
+  "class_pair": [
+    "Al3Ni",
+    "Eutectic_Si"
+  ],
+  "folds": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "images": 70,
+  "filename_proxy_groups": 59,
+  "model329_input_reference": "raw + full-image z-score + full-image empirical CDF",
+  "al_mode_anchor_definition": "(gray - lowest argmax-bin of full-image histogram) / max(q95-q05,1); no clipping",
+  "modal_bin_al_fraction_median": 0.999983218213975,
+  "modal_bin_al_fraction_images_gt_0_5": 64,
+  "methods": {
+    "raw": {
+      "pooled_pair_separability_auc": 0.7992435078763623,
+      "image_macro_pair_separability_auc": 0.857610013896388,
+      "absolute_pooled_vs_image_macro_gap": 0.05836650602002569,
+      "images_with_both_phases": 70
+    },
+    "zscore": {
+      "pooled_pair_separability_auc": 0.8508975306918789,
+      "image_macro_pair_separability_auc": 0.8576100138535835,
+      "absolute_pooled_vs_image_macro_gap": 0.0067124831617045855,
+      "images_with_both_phases": 70
+    },
+    "cdf": {
+      "pooled_pair_separability_auc": 0.8375308313941334,
+      "image_macro_pair_separability_auc": 0.857610013896388,
+      "absolute_pooled_vs_image_macro_gap": 0.0200791825022546,
+      "images_with_both_phases": 70
+    },
+    "al_mode_anchor": {
+      "pooled_pair_separability_auc": 0.8310035847615693,
+      "image_macro_pair_separability_auc": 0.857610013896388,
+      "absolute_pooled_vs_image_macro_gap": 0.0266064291348187,
+      "images_with_both_phases": 70
+    }
+  },
+  "anchor_minus_cdf_pooled_auc_delta": -0.006527246632564099,
+  "anchor_minus_cdf_pooled_auc_group_bootstrap_95_ci": [
+    -0.029421782477151825,
+    0.011128732959012483
+  ],
+  "cdf_minus_anchor_gap_reduction_group_bootstrap_95_ci": [
+    -0.029421782477151825,
+    0.011055799028539814
+  ],
+  "predeclared_gates": {
+    "modal_bin_al_fraction_gt_0_5_in_at_least_70pct_images": true,
+    "anchor_reduces_cdf_gap_by_at_least_half": false,
+    "anchor_auc_gain_at_least_0_02": false,
+    "group_bootstrap_auc_gain_ci_lower_gt_0": false
+  },
+  "all_gates_pass": false,
+  "input_sha256": "7a5eecd2eb9c5ec81e555facf60574719e3a3f42435d09b274ccdf64a461a1a1",
+  "warning": "Intensity AUC is a train-mask diagnostic, not a model mIoU estimate. A pass only justifies a separate grouped-OOF model experiment."
+}

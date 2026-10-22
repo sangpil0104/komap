@@ -1,0 +1,207 @@
+{
+  "experiment": "Model405 fixed Model404 small-component branch swap",
+  "status": "NO_GO",
+  "metric": "image-wise 4-class mIoU; empty-union=0",
+  "class_order": [
+    "Al",
+    "Al3Ni",
+    "Primary Si",
+    "Eutectic Si"
+  ],
+  "scope": "train-only exactly-once grouped OOF; selection-conditional development evidence",
+  "reference_formula": "0.50*Model329_B4 + 0.25*Model392_seed1 + 0.25*Model392_seed2",
+  "candidate_formula": "0.50*Model329_B4 + 0.25*Model404_v6_candidate + 0.25*Model392_seed2",
+  "official_valid_used": false,
+  "test_used": false,
+  "gpu_used": false,
+  "lock_sha256": "74d5a8ee5087d877620f5d929f790c89ee0e9fe92aa030c568b03c7d39e172b3",
+  "claim_sha256": "2251fa7db8c07856c3ffc799a82f4142116f5454b2e674e9f1ba89a231eceea7",
+  "reference": {
+    "image_mean_miou_percent": 79.9858620080774,
+    "class_image_mean_iou_percent": {
+      "Al": 93.07011016597666,
+      "Al3Ni": 80.92439665786083,
+      "Primary Si": 86.94599829350229,
+      "Eutectic Si": 59.00294291496987
+    }
+  },
+  "candidate": {
+    "image_mean_miou_percent": 79.9700230082554,
+    "class_image_mean_iou_percent": {
+      "Al": 93.08077160718177,
+      "Al3Ni": 80.92474863512852,
+      "Primary Si": 86.95180695630827,
+      "Eutectic Si": 58.92276483440306
+    }
+  },
+  "candidate_vs_reference": {
+    "delta_image_mean_pp": -0.015838999822012895,
+    "paired_group_bootstrap_95ci_pp": [
+      -0.07495877453052965,
+      0.035840493907209725
+    ],
+    "positive_images": 38,
+    "positive_folds": 2,
+    "fold_delta_pp": {
+      "1": -0.15219617862748214,
+      "2": -0.012843625699631612,
+      "3": 0.0236454898399334,
+      "4": 0.08588312723931042
+    },
+    "class_delta_pp": {
+      "Al": 0.010661441205080153,
+      "Al3Ni": 0.00035197726766030994,
+      "Primary Si": 0.005808662806004212,
+      "Eutectic Si": -0.0801780805667962
+    },
+    "step4_delta_pp": -0.05270036703237558,
+    "largest_group_positive_contribution_share": null,
+    "group_delta_sum_pp": {
+      "A101": 0.039072400135103935,
+      "A106": -0.13276046811871445,
+      "A108": -0.011600255580238028,
+      "A109": 0.06757183344213435,
+      "A111": -0.1400394154319501,
+      "A118": 0.0015099153141212573,
+      "A121": -0.00655922334595882,
+      "A123": -0.05361075989183395,
+      "A125": 0.15459390471099788,
+      "A130": 0.28429950633648005,
+      "A137": 0.10988387418944812,
+      "A138": -0.7952648511180369,
+      "A139": 0.25675990646875924,
+      "A140": -0.13181243231816242,
+      "A146": 0.14696700828942255,
+      "A147": 0.019653514524161503,
+      "A15": -0.010231599556004278,
+      "A150": 0.1279756591202469,
+      "A152": -0.06369427219476143,
+      "A153": 0.007289216300826462,
+      "A154": 0.02080957754764523,
+      "A155": 0.07744225797205184,
+      "A156": 0.21756832939078402,
+      "A159": -0.02251319192085044,
+      "A16": -0.07363604666488499,
+      "A164": -0.28136411878763246,
+      "A166": 0.8024197935451977,
+      "A167": 0.013026777700930747,
+      "A18": -0.04644499189146167,
+      "A181": -0.12158785370721403,
+      "A182": 0.2026187672163865,
+      "A187": -0.18264266063096612,
+      "A188": -0.008007898458575746,
+      "A191": 0.20632016607517178,
+      "A2": -0.4261127788629665,
+      "A200": 0.0814568142418981,
+      "A201": 0.11556154905494609,
+      "A21": -0.48153569214912095,
+      "A222": -0.14362004238291926,
+      "A224": -0.054899183730965084,
+      "A39": -0.019901120441895293,
+      "A40": 0.035628765746334445,
+      "A49": 0.12540036706675667,
+      "A51": -0.02078583560342906,
+      "A55": 0.054454045021115616,
+      "A57": 0.24622766457818024,
+      "A61": 0.23083906757277728,
+      "A64": -0.35406278090546195,
+      "A66": -0.07698380908575941,
+      "A69": -1.339626889434105,
+      "A7": -0.1048462011623022,
+      "A78": 0.248402443504106,
+      "A8": 0.018744868978559648,
+      "A83": 0.02522610545725723,
+      "A87": 0.07888800152892061,
+      "A89": 0.05089220717658105,
+      "A94": -0.14240158191439478,
+      "A96": 0.12770695782482466,
+      "A98": -0.05739529828246437
+    }
+  },
+  "small_component_diagnostics": {
+    "Al3Ni": {
+      "reference": {
+        "tiny_gt_components": 66342,
+        "tiny_gt_hits": 39252,
+        "tiny_gt_hit_rate_percent": 59.16613909740436,
+        "tiny_pred_components_per_image": 1128.942857142857,
+        "unmatched_tiny_pred_components_per_image": 290.9,
+        "target_fp_pixels_per_image": 20331.2,
+        "target_fn_pixels_per_image": 27915.7
+      },
+      "candidate": {
+        "tiny_gt_components": 66342,
+        "tiny_gt_hits": 39593,
+        "tiny_gt_hit_rate_percent": 59.68014229296675,
+        "tiny_pred_components_per_image": 1138.8285714285714,
+        "unmatched_tiny_pred_components_per_image": 295.7857142857143,
+        "target_fp_pixels_per_image": 20376.385714285716,
+        "target_fn_pixels_per_image": 27909.928571428572
+      },
+      "candidate_vs_reference": {
+        "tiny_gt_hit_rate_delta_pp": 0.5140031955623883,
+        "tiny_gt_hit_rate_group_bootstrap_95ci_pp": [
+          0.23489530671258751,
+          0.8649659964505676
+        ],
+        "unmatched_tiny_pred_components_per_image_delta": 4.885714285714286,
+        "unmatched_tiny_pred_components_per_image_group_bootstrap_95ci": [
+          2.0869254658385095,
+          7.828191105769225
+        ],
+        "target_fp_pixels_per_image_delta": 45.18571428571428,
+        "target_fn_pixels_per_image_delta": -5.771428571428571
+      }
+    },
+    "Eutectic Si": {
+      "reference": {
+        "tiny_gt_components": 43545,
+        "tiny_gt_hits": 29655,
+        "tiny_gt_hit_rate_percent": 68.10196348604892,
+        "tiny_pred_components_per_image": 737.3714285714286,
+        "unmatched_tiny_pred_components_per_image": 200.78571428571428,
+        "target_fp_pixels_per_image": 15297.785714285714,
+        "target_fn_pixels_per_image": 17485.571428571428
+      },
+      "candidate": {
+        "tiny_gt_components": 43545,
+        "tiny_gt_hits": 29728,
+        "tiny_gt_hit_rate_percent": 68.26960615455276,
+        "tiny_pred_components_per_image": 743.0571428571428,
+        "unmatched_tiny_pred_components_per_image": 204.81428571428572,
+        "target_fp_pixels_per_image": 15461.514285714286,
+        "target_fn_pixels_per_image": 17380.67142857143
+      },
+      "candidate_vs_reference": {
+        "tiny_gt_hit_rate_delta_pp": 0.16764266850384502,
+        "tiny_gt_hit_rate_group_bootstrap_95ci_pp": [
+          -0.42176968434927575,
+          0.6255014277442338
+        ],
+        "unmatched_tiny_pred_components_per_image_delta": 4.0285714285714285,
+        "unmatched_tiny_pred_components_per_image_group_bootstrap_95ci": [
+          -1.7975310559006208,
+          8.454578877005344
+        ],
+        "target_fp_pixels_per_image_delta": 163.72857142857143,
+        "target_fn_pixels_per_image_delta": -104.9
+      }
+    }
+  },
+  "pre_registered_gate": {
+    "checks": {
+      "overall_gain_at_least_0_20pp": false,
+      "group_bootstrap_ci_lower_above_zero": false,
+      "positive_in_at_least_3_of_4_folds": false,
+      "worst_fold_at_least_minus_0_30pp": true,
+      "both_target_class_iou_deltas_nonnegative": false,
+      "all_class_iou_deltas_at_least_minus_0_50pp": true,
+      "step4_delta_at_least_minus_0_30pp": true,
+      "tiny_gt_component_hit_rate_non_decreasing_for_both_targets": true,
+      "unmatched_tiny_pred_components_non_increasing_for_both_targets": false
+    },
+    "pass": false
+  },
+  "valid_stage_allowed": false,
+  "decision_note": "This one-shot OOF screen cannot authorize a valid/test look. A passing screen only supports a separately locked independent-seed OOF confirmation."
+}

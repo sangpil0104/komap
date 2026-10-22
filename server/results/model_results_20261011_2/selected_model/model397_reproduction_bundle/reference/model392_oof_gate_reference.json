@@ -1,0 +1,32 @@
+{
+  "experiment": "Model392 width-normalized HRNet-W48 grouped OOF",
+  "recorded_at_utc": "2026-10-04T02:46:00Z",
+  "metric": "image-wise 4-class mIoU; empty-union=0",
+  "scope": {
+    "train_images": 70,
+    "specimen_groups": 59,
+    "seeds": 2,
+    "folds_per_seed": 4,
+    "official_valid_used": false,
+    "test_used": false
+  },
+  "two_seed_mean": {
+    "Model382_reference_oof_percent": 78.9395,
+    "Model392_candidate_oof_percent": 79.0437,
+    "delta_percentage_points": 0.1042,
+    "paired_group_bootstrap_95ci_percentage_points": [-0.4175, 0.6007],
+    "positive_folds": 2,
+    "folds": 4,
+    "worst_fold_delta_percentage_points": -0.9984,
+    "class_delta_percentage_points": {
+      "Al": -0.0911,
+      "Al3Ni": 0.2584,
+      "Primary Si": 0.3170,
+      "Eutectic Si": -0.0674
+    },
+    "Step4_delta_percentage_points": 0.827,
+    "gate_passed": false,
+    "official_valid_evaluation_authorized": false
+  },
+  "interpretation": "The preregistered Model392 adoption gate failed. No full-train checkpoint or official-valid score was produced; this is train-only development evidence."
+}

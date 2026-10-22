@@ -1,0 +1,46 @@
+test_actual_training_crop (test_integration.Integration.test_actual_training_crop) ... ok
+test_archive_rejects_duplicates_missing_and_invalid_probabilities (test_integration.Integration.test_archive_rejects_duplicates_missing_and_invalid_probabilities) ... ok
+test_empty_class_is_zero_and_images_equal_weight (test_integration.Integration.test_empty_class_is_zero_and_images_equal_weight) ... ok
+test_error_panel_uses_ground_truth_colors (test_integration.Integration.test_error_panel_uses_ground_truth_colors) ... ok
+test_fixed_route_end_to_end_and_reordered_entries (test_integration.Integration.test_fixed_route_end_to_end_and_reordered_entries) ... Model338 fixed route:   0%|          | 0/20 [00:00<?, ?image/s]Model338 fixed route: 100%|██████████| 20/20 [00:00<00:00, 1425.08image/s]
+Export masks:   0%|          | 0/20 [00:00<?, ?image/s]Export masks: 100%|██████████| 20/20 [00:00<00:00, 290.80image/s]
+Export masks:   0%|          | 0/20 [00:00<?, ?image/s]Export masks: 100%|██████████| 20/20 [00:00<00:00, 284.13image/s]
+ok
+test_gpu_ids_and_mapping (test_integration.Integration.test_gpu_ids_and_mapping) ... ok
+test_orchestration_and_duplicate_lock_without_training (test_integration.Integration.test_orchestration_and_duplicate_lock_without_training) ... {
+  "training": "enabled",
+  "gpu_pool": [
+    2,
+    4
+  ],
+  "concurrent_folds": 2,
+  "steps_per_fold": 2,
+  "batch_per_fold": 2,
+  "folds": []
+}
+RUN_DIRECTORY=/tmp/tmpuby0w6sx/outputs/runs/Model326_20260929_074743_439655
+Model326 four folds:   0%|          | 0/8 [00:00<?, ?step/s]fold1: GPU 2, PID 12345678, log /tmp/tmpuby0w6sx/outputs/runs/Model326_20260929_074743_439655/fold1.log
+fold2: GPU 4, PID 12345678, log /tmp/tmpuby0w6sx/outputs/runs/Model326_20260929_074743_439655/fold2.log
+Model326 four folds:  50%|█████     | 4/8 [00:00<00:00, 6967.28step/s, f1:complete f2:complete]fold3: GPU 2, PID 12345678, log /tmp/tmpuby0w6sx/outputs/runs/Model326_20260929_074743_439655/fold3.log
+fold4: GPU 4, PID 12345678, log /tmp/tmpuby0w6sx/outputs/runs/Model326_20260929_074743_439655/fold4.log
+Model326 four folds: 100%|██████████| 8/8 [00:00<00:00, 6429.28step/s, f1:complete f2:complete f3:complete f4:complete]Model326 four folds: 100%|██████████| 8/8 [00:00<00:00, 5644.14step/s, f1:complete f2:complete f3:complete f4:complete]
+Four folds and OOF complete. Starting validation ensemble inference.
+COMPLETE: /tmp/tmpuby0w6sx/outputs/runs/Model326_20260929_074743_439655
+{
+  "training": "enabled",
+  "gpu_pool": [
+    2,
+    4
+  ],
+  "concurrent_folds": 2,
+  "steps_per_fold": 2,
+  "batch_per_fold": 2,
+  "folds": []
+}
+ok
+test_original_training_components_preserved (test_integration.Integration.test_original_training_components_preserved) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.429s
+
+OK

@@ -1,0 +1,110 @@
+{
+  "images": [
+    {
+      "name": "A107_step1_sample3",
+      "sha256": "d82c410e100e70a10acfa4a413af46b18b4a7a6f008bc5d75d4dfdc3f4876c51"
+    },
+    {
+      "name": "A122_step4_sample1",
+      "sha256": "167161486dac3b4bac47ecb723efa0c3ba641102cd355d81451d78e6011c79a4"
+    },
+    {
+      "name": "A124_step4_sample3",
+      "sha256": "230779e335559a4fbd6198ded711ef0f31584ce7b2f26c24bc8ba57720e0e463"
+    },
+    {
+      "name": "A127_step3_sample2",
+      "sha256": "6c4194bcd6d44ef2a3296fefbe1ed99c7ed4c8fa0ce59be8da6cc66b0e7b640b"
+    },
+    {
+      "name": "A133_step4_sample1",
+      "sha256": "5099e5567d5830aea189d66a12162809b7dd57d15cf58599ddce682efc500624"
+    },
+    {
+      "name": "A167_step3_sample3",
+      "sha256": "ac09dcf0c0d39d690421c1acf2a4386c73af64e9ae2b66b859fc747d9936c48c"
+    },
+    {
+      "name": "A38_step2_sample2",
+      "sha256": "ad22a5d5f6344a249a397c9fb876d8dfb2c11a1a220ab4fdba23c7bb76f703bb"
+    },
+    {
+      "name": "A51_step3_sample3",
+      "sha256": "99c70f8d6d1fca723688ed2ed9c8754c0fdeee2e0623a7570302a3d3e768e3a4"
+    },
+    {
+      "name": "A63_step2_sample3",
+      "sha256": "0bb030951d765242ccf684e2733df82c4c7a02f7b7172b84c9bc7896c3d005ce"
+    },
+    {
+      "name": "A87_step1_sample4",
+      "sha256": "72c56c109ad4c12d3e2559cb075a11ea16fb535cf224c7f54db91c47d6ea6728"
+    }
+  ],
+  "config": {
+    "family_weights": [
+      0.4,
+      0.42,
+      0.18
+    ],
+    "hr_folds": {
+      "1": [
+        2,
+        4
+      ],
+      "2": [
+        1,
+        4
+      ]
+    },
+    "b4_dir": "model329_ws",
+    "b4_fold_ids": [
+      1,
+      3
+    ],
+    "replacement": {
+      "seed": 1,
+      "fold": 2,
+      "checkpoint": "model414_seed414/last.pt",
+      "args": "model414_seed414/args.json",
+      "preprocessing": "full_image_zcdf_rgb8",
+      "tta": "single_view",
+      "individual_probability_fp16": true
+    },
+    "hr_group_overrides": {
+      "2": {
+        "checkpoint": "model392_train70/seed5/last.pt",
+        "training_seed": 5,
+        "training_images": 70,
+        "epoch": 70,
+        "tta": "flip4"
+      }
+    }
+  },
+  "input_checkpoint_sha256": {
+    "/tmp/tmp.cOd3F257su/assets/model329_ws/fold1/last.pt": "c5f058dcab2a9d4bc5a57a7c0f4fb5bdcd514c8e946fe67d07707a77c9c38b08",
+    "/tmp/tmp.cOd3F257su/assets/model329_ws/fold1/args.json": "fb83dcee944f48bced5c2642735b73fb00ea2e4de80906e8485d776a82ec144c",
+    "/tmp/tmp.cOd3F257su/assets/model329_ws/fold3/last.pt": "01483b5e4e1aabb1acba422fd044e246e979141fd4194c65583ea22794e88771",
+    "/tmp/tmp.cOd3F257su/assets/model329_ws/fold3/args.json": "1f03aaf2dbe1d594cf720ab9f155f02f8884902df2dcd40b32cc9cf5007e3575",
+    "/tmp/tmp.cOd3F257su/assets/model392/seed1/fold4/last.pt": "bddaf2cc9bd261da2b06c26075eec2b596624981909023a6dd6cb6b5c9de6558",
+    "/tmp/tmp.cOd3F257su/assets/model392_train70/seed5/last.pt": "0bea2ec8e4adc9438bdb8d54758c3ad24904e79e5c9ef259cb1b81bda1da7ffe",
+    "/tmp/tmp.cOd3F257su/assets/model414_seed414/last.pt": "03cb77be29829dadad00e9bceda4d9568a30e0336ba0ebc0bebb7bc5b986c412",
+    "/tmp/tmp.cOd3F257su/assets/model414_seed414/args.json": "4da9368a3d6199e62fe904d6b092d4d642517d2d98de0b7b00cf35bc73f790d0"
+  },
+  "input_image_sha256": {
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_resume_gpu3456_v2/data/test/images/A107_step1_sample3_image.png": "ebf196b950d59d574c8828442bf5bcd50c218d9064451c5faee605e19ae6e9b5",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_resume_gpu3456_v2/data/test/images/A122_step4_sample1_image.png": "f729aa1d44010a88389806ab0aa243587de39d4857a7ef8aa851b263aebc3f77",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_resume_gpu3456_v2/data/test/images/A124_step4_sample3_image.png": "0b536d06b7ad6b0659d1de32b618d3f075babadaa32df407b7452ef493101e6b",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_resume_gpu3456_v2/data/test/images/A127_step3_sample2_image.png": "a9226a1249996d9fee7406f5a3078c5f4819681e595ba73aa7dbfac2bdf28e9c",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_resume_gpu3456_v2/data/test/images/A133_step4_sample1_image.png": "2cac1de148308c86b92fa042221a5084f4d7e396c15ead62894a28b59e5d9aea",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_resume_gpu3456_v2/data/test/images/A167_step3_sample3_image.png": "fffdedce30778a61162873e0edcee46b905be46c542d10facb135d14ef8dd50a",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_resume_gpu3456_v2/data/test/images/A38_step2_sample2_image.png": "db99f13b261a16b5cbf94f729a7cd4f75a70608d070a2f16d054404e772c8fa9",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_resume_gpu3456_v2/data/test/images/A51_step3_sample3_image.png": "dee722162651dff90d41092498456bbe7d241f9ae3c1f47af57720bd790c917b",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_resume_gpu3456_v2/data/test/images/A63_step2_sample3_image.png": "7a32e3d30e2074cb341d103da931dc6bc8be7aa2fe8ef461b8a166a7f0ba08b2",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_resume_gpu3456_v2/data/test/images/A87_step1_sample4_image.png": "14c92a138ee9e4bdfb8278b7e2bbf27e9b8e1e6a603741a3abd69964442bb0c3"
+  },
+  "inference_source_sha256": "3fa3442fbbe0e6b05f142a5d242caf343bc23ad6e84bf4a0597d65e5664343d4",
+  "gt_read": false,
+  "fresh_expert_inference": true,
+  "allow_retrained": true
+}

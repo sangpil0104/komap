@@ -1,0 +1,152 @@
+{
+  "experiment": "Model392 per-image pixel-scale normalization",
+  "revision": 2,
+  "locked_at_utc": "2026-10-02T23:04:02Z",
+  "status": "amended pre-score lock; both seeds × four folds required; no Model392 score accessed",
+  "supersedes": {
+    "path": "experiments/results/model392_widthnorm_preregistration_lock.json",
+    "sha256": "9ec64f794ef38515347666df1ef4769f576118adee247c60e8e8c03d2d942459"
+  },
+  "protocol": {
+    "path": "experiments/model392_widthnorm_amendment.md",
+    "sha256": "39cf0da77a9026eb759044b8f37e2ef562a805a8c89020bcea33ab53467f425b",
+    "supersedes_original": {
+      "experiments/model392_widthnorm_preregistration.md": "ac85d7b64afb48779361c0a232c97b87975f844c18bdb47620d1ea22d2940bb8"
+    }
+  },
+  "reference_oof_runner": {
+    "path": "/workspace/komap_model1/run_model382_seed_count_control_p100.sh",
+    "sha256": "753c1ae26cdd663aa104fa6143a725c325fb48fe7a2b7209a878c3120c101f69",
+    "inference": "evaluate_image_mean.py, held-out train fold via data_root/valid symlink, batch=2, patch=512, overlap=170, input_scale=2.0, flip4 TTA, antialias=false",
+    "local_path": "run_model382_seed_count_control_p100.sh"
+  },
+  "candidate_source_sha256": {
+    "model336_hrnet_widthnorm_candidate/README.md": "f067ba6fa6e742f909622c2abc4120fea7fee1428989cb336e4b7f2e5b1499a3",
+    "model336_hrnet_widthnorm_candidate/evaluate_image_mean.py": "1fa9eebd9bbc41469889e99ade5414171899f62374378d5695c7553bcfe7be4e",
+    "model336_hrnet_widthnorm_candidate/komap_seg/__init__.py": "d395bdb478361073c5639a5432d7a266ea1bf9bf4f1cf217e0add53e3a83a7dc",
+    "model336_hrnet_widthnorm_candidate/komap_seg/checkpoint.py": "a0c438b71b76d922db89781b7fc4a765ded6de8d176d89ae5567b5843344d734",
+    "model336_hrnet_widthnorm_candidate/komap_seg/dataset.py": "8f458d3fce489172a63ef738a8bc98f745f8182c7044596d6059d6dd66437381",
+    "model336_hrnet_widthnorm_candidate/komap_seg/inference.py": "bbffe98e11d1e71d823b93a44dbe6347e1c3de23d8d6aac000c944044d6d33eb",
+    "model336_hrnet_widthnorm_candidate/komap_seg/losses.py": "f1276925cfc9817a9c19b92df9de08aa71ecb47100a62bc3352f646f3e9733ea",
+    "model336_hrnet_widthnorm_candidate/komap_seg/metrics.py": "be5e66f4acf98d0d9ab95a14a62c03ced6456dd8d72a042c0ee229468f57bc27",
+    "model336_hrnet_widthnorm_candidate/komap_seg/model.py": "f6f2790fc86ab5a13f6440ba812feba38db71915e22dc466521874494e12a3b4",
+    "model336_hrnet_widthnorm_candidate/komap_seg/palette.py": "61c4bb59dcc4ac1a243f5d8c79f265201264f95737e8056fe602f77baa898525",
+    "model336_hrnet_widthnorm_candidate/predict.py": "92bdd3729d50c01fc79fa4780746d40b21edbe6aeca4518127a8b01169fb6947",
+    "model336_hrnet_widthnorm_candidate/requirements.txt": "09cec8c8f6260f789b6e125c80f0b205369fbf4f09ff4068bc70e9e1bbc16a94",
+    "model336_hrnet_widthnorm_candidate/train.py": "af143d67d86dcf6f718db2de2b373d67ba51eedb8e55dc0ae3da9a6f45fcc815"
+  },
+  "analysis_source_sha256": {
+    "experiments/model392_official_valid_once.py": "817da6f7cce65d427ddf4a277ab1b7ebd4c0dafa9fb5e77ab991937c76351d5d",
+    "experiments/model392_official_valid_once_smoke.py": "3930706015d3831daddcaeb6cd189a2187caf1345c4f5422a208fdfbf3a7c847",
+    "experiments/model392_widthnorm_candidate_smoke.py": "c0955fae8d2e30e46f05a3efb20175704e094c0666cfa13bcab0e9ddc6abb508",
+    "experiments/model392_widthnorm_fold_geometry_audit.py": "8f781c2456a6fd52f0ad111485b01627c8c2cb7de1d7979450ddfa66a7bd00b8",
+    "experiments/model392_widthnorm_fold_geometry_audit_smoke.py": "ab1d258cc2eec2ead78b7409cc3d9ff31da1a4b68140f20072084060bc0e123f",
+    "experiments/model392_widthnorm_oof.py": "3566912d5fd52c4a0c0c2bd618a1b22d8b3961afb86c63a8fce05b19de3f2482",
+    "experiments/model392_widthnorm_oof_smoke.py": "48a1c40ffb5edeb4093d6a4c1a3c9bd0bca3fc4af59bc0fdac18fb8852b7b584"
+  },
+  "analysis_smoke_sha256": {
+    "experiments/model392_official_valid_once_smoke.py": "3930706015d3831daddcaeb6cd189a2187caf1345c4f5422a208fdfbf3a7c847",
+    "experiments/model392_widthnorm_candidate_smoke.py": "c0955fae8d2e30e46f05a3efb20175704e094c0666cfa13bcab0e9ddc6abb508",
+    "experiments/model392_widthnorm_fold_geometry_audit_smoke.py": "ab1d258cc2eec2ead78b7409cc3d9ff31da1a4b68140f20072084060bc0e123f",
+    "experiments/model392_widthnorm_oof_smoke.py": "48a1c40ffb5edeb4093d6a4c1a3c9bd0bca3fc4af59bc0fdac18fb8852b7b584"
+  },
+  "execution_source_sha256": {
+    "experiments/model392_prepare_full_train.py": "b3660db0f78c7fc1d1ef4bee2d3a3a6a121c74dc73ee91f113eca3b7b9830ec1",
+    "experiments/model392_prepare_run.py": "13a20d2734e61bbb0375113ef6e7ac4bf9829e6624f42ad388e6e6de40a716a8",
+    "experiments/model392_record_fold.py": "284da5ed8f79b2a6563f8fcefa99f459807b7ff1f61ce0df38c4a610003e4a96",
+    "run_model392_full_train_p100.sh": "8bd2642d597a95b10fcba6ca5061869c324bccef38d56947ec602123f62279a0"
+  },
+  "analysis_dependency_sha256": {
+    "experiments/model382_oof_ensemble_compare.py": "cd9f1e58047cabb164af4e72a88ca61069dd1a6230f791e10bc42cbd1937b37e",
+    "experiments/model390_per_item_rng_oof.py": "781bbd490ad8e41d778b200abbccee8809807b7021cfc15e22872f9263c69b16",
+    "experiments/model391_interpretation_addendum.md": "a955258f0a51013e22817f508001b2217e9c7b5bd36b206ac80d8c586ea07c2f",
+    "experiments/model391_physical_scale_mask_audit.md": "c99dac3f9ad242d63bebc6823fe6e52d0512ddbbd2e9218a66098a93328d18f6",
+    "experiments/model391_physical_scale_mask_audit.py": "df02a5cb67a76aafa3fadd764435489374321f68916e27955d7a0b1bcd9749c5",
+    "experiments/model391_physical_scale_mask_audit_smoke.py": "3d751954c0c6d878ac4b06f7dadb8c9fc3771e806d0deb17189943d2e69c700b",
+    "experiments/results/model382_e5_preregistration_lock.json": "ad0e888b51b70ad10e6af4b70f307ea7822876e8106fdcec82a93acb94b82ed5",
+    "experiments/results/model390_preregistration_lock.json": "52d4b70168cb3c3cbcc7479e2260348337a5637cc12a96f1dfe742503be5362e",
+    "experiments/results/model391_physical_scale_mask_audit.json": "fc01846c213fd4c6b4da03c0497403b19e682a33553acf1a75657a1b590034f8",
+    "experiments/results/model391_physical_scale_mask_audit_lock.json": "2382c90ae197a38716416453ea2df1d2582cc4e04436f1bbb1f22f1f857aa39b"
+  },
+  "lock_generator": {
+    "path": "experiments/create_model392_amendment_lock.py",
+    "sha256": "2ae0aabc9ff2a871d2c1d14741acff392e7b57acaf231698b978fadcda3c02a2"
+  },
+  "geometry_audit": {
+    "path": "experiments/results/model392_widthnorm_fold_geometry_audit.json",
+    "sha256": "3524d2027cd5584ad259f9b4a74c21d07fccd8ab94dad56ebcdc37ceedc8c9e0",
+    "scope": "fixed train grouped split image filenames and native widths only"
+  },
+  "full_train_and_valid_once": {
+    "runner": "run_model392_full_train_p100.sh",
+    "prepare": "experiments/model392_prepare_full_train.py",
+    "valid_evaluator": "experiments/model392_official_valid_once.py",
+    "valid_evaluator_smoke": "experiments/model392_official_valid_once_smoke.py",
+    "policy": "after passing two-seed OOF gate; train both seeds on 70 train images; evaluate valid exactly once; test is inaccessible to evaluator"
+  },
+  "source_smokes": {
+    "candidate": {
+      "path": "experiments/model392_widthnorm_candidate_smoke.py",
+      "sha256": "c0955fae8d2e30e46f05a3efb20175704e094c0666cfa13bcab0e9ddc6abb508",
+      "result": "passed synthetic compatibility checks before revision-2 lock"
+    },
+    "paired_oof": {
+      "path": "experiments/model392_widthnorm_oof_smoke.py",
+      "sha256": "48a1c40ffb5edeb4093d6a4c1a3c9bd0bca3fc4af59bc0fdac18fb8852b7b584",
+      "result": "passed two-seed paired analysis, bootstrap, width diagnostics, manifests and resume receipts"
+    },
+    "geometry": {
+      "path": "experiments/model392_widthnorm_fold_geometry_audit_smoke.py",
+      "sha256": "ab1d258cc2eec2ead78b7409cc3d9ff31da1a4b68140f20072084060bc0e123f",
+      "result": "passed synthetic metadata-only fold audit"
+    },
+    "official_valid_once": {
+      "path": "experiments/model392_official_valid_once_smoke.py",
+      "sha256": "3930706015d3831daddcaeb6cd189a2187caf1345c4f5422a208fdfbf3a7c847",
+      "result": "passed empty=0 metric, failed-gate rejection, image/mask ID checks, full-train receipt preparation"
+    }
+  },
+  "locked_files_sha256": {
+    "model336_hrnet_widthnorm_candidate/README.md": "f067ba6fa6e742f909622c2abc4120fea7fee1428989cb336e4b7f2e5b1499a3",
+    "model336_hrnet_widthnorm_candidate/evaluate_image_mean.py": "1fa9eebd9bbc41469889e99ade5414171899f62374378d5695c7553bcfe7be4e",
+    "model336_hrnet_widthnorm_candidate/komap_seg/__init__.py": "d395bdb478361073c5639a5432d7a266ea1bf9bf4f1cf217e0add53e3a83a7dc",
+    "model336_hrnet_widthnorm_candidate/komap_seg/checkpoint.py": "a0c438b71b76d922db89781b7fc4a765ded6de8d176d89ae5567b5843344d734",
+    "model336_hrnet_widthnorm_candidate/komap_seg/dataset.py": "8f458d3fce489172a63ef738a8bc98f745f8182c7044596d6059d6dd66437381",
+    "model336_hrnet_widthnorm_candidate/komap_seg/inference.py": "bbffe98e11d1e71d823b93a44dbe6347e1c3de23d8d6aac000c944044d6d33eb",
+    "model336_hrnet_widthnorm_candidate/komap_seg/losses.py": "f1276925cfc9817a9c19b92df9de08aa71ecb47100a62bc3352f646f3e9733ea",
+    "model336_hrnet_widthnorm_candidate/komap_seg/metrics.py": "be5e66f4acf98d0d9ab95a14a62c03ced6456dd8d72a042c0ee229468f57bc27",
+    "model336_hrnet_widthnorm_candidate/komap_seg/model.py": "f6f2790fc86ab5a13f6440ba812feba38db71915e22dc466521874494e12a3b4",
+    "model336_hrnet_widthnorm_candidate/komap_seg/palette.py": "61c4bb59dcc4ac1a243f5d8c79f265201264f95737e8056fe602f77baa898525",
+    "model336_hrnet_widthnorm_candidate/predict.py": "92bdd3729d50c01fc79fa4780746d40b21edbe6aeca4518127a8b01169fb6947",
+    "model336_hrnet_widthnorm_candidate/requirements.txt": "09cec8c8f6260f789b6e125c80f0b205369fbf4f09ff4068bc70e9e1bbc16a94",
+    "model336_hrnet_widthnorm_candidate/train.py": "af143d67d86dcf6f718db2de2b373d67ba51eedb8e55dc0ae3da9a6f45fcc815",
+    "experiments/model392_widthnorm_amendment.md": "39cf0da77a9026eb759044b8f37e2ef562a805a8c89020bcea33ab53467f425b",
+    "experiments/model392_widthnorm_preregistration.md": "ac85d7b64afb48779361c0a232c97b87975f844c18bdb47620d1ea22d2940bb8",
+    "experiments/model382_oof_ensemble_compare.py": "cd9f1e58047cabb164af4e72a88ca61069dd1a6230f791e10bc42cbd1937b37e",
+    "experiments/model390_per_item_rng_oof.py": "781bbd490ad8e41d778b200abbccee8809807b7021cfc15e22872f9263c69b16",
+    "experiments/model391_interpretation_addendum.md": "a955258f0a51013e22817f508001b2217e9c7b5bd36b206ac80d8c586ea07c2f",
+    "experiments/model391_physical_scale_mask_audit.md": "c99dac3f9ad242d63bebc6823fe6e52d0512ddbbd2e9218a66098a93328d18f6",
+    "experiments/model391_physical_scale_mask_audit.py": "df02a5cb67a76aafa3fadd764435489374321f68916e27955d7a0b1bcd9749c5",
+    "experiments/model391_physical_scale_mask_audit_smoke.py": "3d751954c0c6d878ac4b06f7dadb8c9fc3771e806d0deb17189943d2e69c700b",
+    "experiments/results/model382_e5_preregistration_lock.json": "ad0e888b51b70ad10e6af4b70f307ea7822876e8106fdcec82a93acb94b82ed5",
+    "experiments/results/model390_preregistration_lock.json": "52d4b70168cb3c3cbcc7479e2260348337a5637cc12a96f1dfe742503be5362e",
+    "experiments/results/model391_physical_scale_mask_audit.json": "fc01846c213fd4c6b4da03c0497403b19e682a33553acf1a75657a1b590034f8",
+    "experiments/results/model391_physical_scale_mask_audit_lock.json": "2382c90ae197a38716416453ea2df1d2582cc4e04436f1bbb1f22f1f857aa39b",
+    "experiments/model392_official_valid_once.py": "817da6f7cce65d427ddf4a277ab1b7ebd4c0dafa9fb5e77ab991937c76351d5d",
+    "experiments/model392_official_valid_once_smoke.py": "3930706015d3831daddcaeb6cd189a2187caf1345c4f5422a208fdfbf3a7c847",
+    "experiments/model392_widthnorm_candidate_smoke.py": "c0955fae8d2e30e46f05a3efb20175704e094c0666cfa13bcab0e9ddc6abb508",
+    "experiments/model392_widthnorm_fold_geometry_audit.py": "8f781c2456a6fd52f0ad111485b01627c8c2cb7de1d7979450ddfa66a7bd00b8",
+    "experiments/model392_widthnorm_fold_geometry_audit_smoke.py": "ab1d258cc2eec2ead78b7409cc3d9ff31da1a4b68140f20072084060bc0e123f",
+    "experiments/model392_widthnorm_oof.py": "3566912d5fd52c4a0c0c2bd618a1b22d8b3961afb86c63a8fce05b19de3f2482",
+    "experiments/model392_widthnorm_oof_smoke.py": "48a1c40ffb5edeb4093d6a4c1a3c9bd0bca3fc4af59bc0fdac18fb8852b7b584",
+    "experiments/model392_prepare_full_train.py": "b3660db0f78c7fc1d1ef4bee2d3a3a6a121c74dc73ee91f113eca3b7b9830ec1",
+    "experiments/model392_prepare_run.py": "13a20d2734e61bbb0375113ef6e7ac4bf9829e6624f42ad388e6e6de40a716a8",
+    "experiments/model392_record_fold.py": "284da5ed8f79b2a6563f8fcefa99f459807b7ff1f61ce0df38c4a610003e4a96",
+    "run_model392_full_train_p100.sh": "8bd2642d597a95b10fcba6ca5061869c324bccef38d56947ec602123f62279a0",
+    "experiments/results/model392_widthnorm_fold_geometry_audit.json": "3524d2027cd5584ad259f9b4a74c21d07fccd8ab94dad56ebcdc37ceedc8c9e0",
+    "experiments/create_model392_amendment_lock.py": "2ae0aabc9ff2a871d2c1d14741acff392e7b57acaf231698b978fadcda3c02a2",
+    "run_model382_seed_count_control_p100.sh": "753c1ae26cdd663aa104fa6143a725c325fb48fe7a2b7209a878c3120c101f69",
+    "experiments/results/model392_widthnorm_preregistration_lock.json": "9ec64f794ef38515347666df1ef4769f576118adee247c60e8e8c03d2d942459"
+  },
+  "scope": "hashes of source, protocols, the fixed image-width-only geometry result, and preregistration dependencies; no Model382/Model392 OOF score values, official valid values, or test artifacts read"
+}

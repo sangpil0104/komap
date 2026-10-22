@@ -1,0 +1,10 @@
+**표 9. 주요 학습 증강**
+
+| 모델 | 공간 증강 | 밝기·표현 증강 | 실행상 구분 |
+| --- | --- | --- | --- |
+| B4 전문가 | random crop 1536, D4 | brightness/contrast, gamma, blur/noise | 증강과 추론 D4 TTA는 별개 |
+| HRNet 전문가 | random crop, flip/90° rotation, deformation | brightness/contrast, gamma, blur | seed1/2, rng_mode=legacy |
+| F 보정기 | 256 crop, 좌우/상하 반전, 90° 회전 | 전체 영상 gray normalization 유지 | 클래스 0/3 위치를 고려한 혼합 crop |
+| R 기존 계열 | 원래 각 학습 소스의 crop·증강 | 기존 학습 레시피 유지 | 현재 실행 plan과 source snapshot이 기준 |
+
+광학 배율·물리 길이를 새로 합성하거나 정답 정보를 추론 입력에 넣지 않았다. [S05, S06, S12]

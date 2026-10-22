@@ -1,0 +1,59 @@
+{
+  "model": "Model257 ResNet34 U-Net++/ASPP + Model239 native stem",
+  "inference": "whole image, scale=1, full-image raw/z/CDF representation, D4 probability mean",
+  "split": "valid",
+  "count": 1,
+  "metrics": {
+    "global_miou": 0.8083949670407341,
+    "global_iou": {
+      "Al3Ni": 0.7760416276905961,
+      "Primary Si": 0.9713934227397165,
+      "Al": 0.9392188316315628,
+      "Eutectic Si": 0.5469259861010608
+    },
+    "image_mean_miou": 0.8083949670407341,
+    "image_mean_miou_exclude": 0.8083949670407341,
+    "image_scores": [
+      0.8083949670407341
+    ],
+    "image_scores_exclude": [
+      0.8083949670407341
+    ],
+    "confusion": [
+      [
+        311105,
+        551,
+        23689,
+        44564
+      ],
+      [
+        223,
+        56063,
+        394,
+        16
+      ],
+      [
+        17011,
+        389,
+        918649,
+        11429
+      ],
+      [
+        3744,
+        78,
+        6538,
+        80117
+      ]
+    ]
+  },
+  "images": [
+    {
+      "image": "A191_step4_sample3_image.png",
+      "height": 1024,
+      "width": 1440,
+      "seconds": 12.490889310836792
+    }
+  ],
+  "elapsed_seconds": 13.410255193710327,
+  "peak_cuda_allocated_bytes": 15885298176
+}

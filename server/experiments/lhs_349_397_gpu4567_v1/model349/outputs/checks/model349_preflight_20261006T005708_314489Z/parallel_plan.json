@@ -1,0 +1,62 @@
+{
+  "physical_gpus": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "max_concurrent_gpu_stages": 4,
+  "gpu_stages": 50,
+  "cpu_stages": 9,
+  "initial_assignment": {
+    "4": "train_model6",
+    "5": "train_model336",
+    "6": "train_model322_fold1",
+    "7": "train_model322_fold2"
+  },
+  "scheduling": "one independent model/fold per GPU; dependencies respected",
+  "training_started": false,
+  "gpu_inventory": {
+    "0": {
+      "uuid": "GPU-40738a36-d667-3442-08fe-c1b1dce02f43",
+      "name": "NVIDIA GeForce RTX 4090",
+      "memory_mib": 24564
+    },
+    "1": {
+      "uuid": "GPU-83fdf94a-9837-bbeb-19fa-650ef0882953",
+      "name": "NVIDIA GeForce RTX 4090",
+      "memory_mib": 24564
+    },
+    "2": {
+      "uuid": "GPU-616f69eb-638e-0010-f57e-7eea9ca9e563",
+      "name": "NVIDIA GeForce RTX 4090",
+      "memory_mib": 24564
+    },
+    "3": {
+      "uuid": "GPU-2cbc38c2-5330-cfed-4e43-819c008330e7",
+      "name": "NVIDIA GeForce RTX 4090",
+      "memory_mib": 24564
+    },
+    "4": {
+      "uuid": "GPU-c26b1177-bd33-c433-b7b2-7b0cbeafc4d2",
+      "name": "NVIDIA GeForce RTX 4090",
+      "memory_mib": 24564
+    },
+    "5": {
+      "uuid": "GPU-797180ea-8868-f008-3828-0d465756997f",
+      "name": "NVIDIA GeForce RTX 4090",
+      "memory_mib": 24564
+    },
+    "6": {
+      "uuid": "GPU-d7e94612-cce1-c1d5-78b5-3c538803e341",
+      "name": "NVIDIA GeForce RTX 4090",
+      "memory_mib": 24564
+    },
+    "7": {
+      "uuid": "GPU-9a9706ca-83f7-9d16-de3b-11a5f7ca7b6e",
+      "name": "NVIDIA GeForce RTX 4090",
+      "memory_mib": 24564
+    }
+  },
+  "route_workers": 4
+}

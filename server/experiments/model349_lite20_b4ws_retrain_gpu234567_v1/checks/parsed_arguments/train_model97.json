@@ -1,0 +1,23 @@
+{
+  "data_dir": "/Data3/sppark/komap/experiments/model349_lite20_b4ws_retrain_gpu234567_v1/source/../data",
+  "checkpoint": "/Data3/sppark/komap/experiments/model349_lite20_b4ws_retrain_gpu234567_v1/checks/never_executed/outputs/model62_ft_weighted_safeaug/best.pt",
+  "output_dir": "/Data3/sppark/komap/experiments/model349_lite20_b4ws_retrain_gpu234567_v1/checks/never_executed/outputs/model97_native_patch",
+  "mode": "train",
+  "patch_size": 512,
+  "patches_per_image": 6,
+  "val_stride": 448,
+  "final_stride": 384,
+  "tile_batch_size": 4,
+  "batch_size": 4,
+  "num_workers": 4,
+  "freeze_epochs": 3,
+  "finetune_epochs": 12,
+  "encoder_lr": 5e-06,
+  "decoder_lr": 0.0001,
+  "weight_decay": 0.0001,
+  "patience": 4,
+  "folds": 4,
+  "seed": 42,
+  "tta": false,
+  "no_amp": false
+}

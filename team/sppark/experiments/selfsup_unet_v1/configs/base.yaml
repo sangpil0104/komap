@@ -1,0 +1,44 @@
+seed: 2026
+scale: 1
+data:
+  manifest: data/processed/manifest.csv
+model:
+  encoder: resnet18
+  pretrained: true
+  freeze_encoder_bn_stats: true
+sampling:
+  core: 512
+  halo: 64
+ssl:
+  updates: 2000
+  mask_ratio: 0.5
+  mask_block: 16
+  fill: 0.5
+train:
+  updates: 4000
+  effective_batch: 12
+  encoder_lr: 0.0001
+  decoder_lr: 0.0003
+  weight_decay: 0.01
+  warmup: 200
+  min_lr_ratio: 0.01
+  precision: bf16
+  workers: 2
+  cpu_threads: 2
+  checkpoint_every: 1000
+  log_every: 20
+control:
+  max_extra_updates: 12000
+evaluation:
+  empty_union: one
+  checkpoint: last
+  boundary_radii: [1, 2, 4]
+  border_widths: [16, 32, 64]
+inference:
+  mode: tiled
+  core: 512
+  halo: 64
+  overlap: 0.5
+  offset: 0
+  pad: 0
+  d4: false

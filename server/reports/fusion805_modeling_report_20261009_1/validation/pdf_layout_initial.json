@@ -1,0 +1,410 @@
+[
+  {
+    "page": 1,
+    "chars": 1417,
+    "images": 0,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": "다. 본 결과는 물성·탄성 측정의 대체 성능이나 현장 적용 효과를 검증한 것은 아니다.\n본 문서는 원본 양식의 필수 목차를 유지한 확장본이다. 사용자 요청에 따라 원본 양식의 10 페이지 제한은 적용하지 \n않았다. 그림·표와 검증 20 장 전체 비교를 포함하며, 미확인 인적 사항과 현재 모델의 test10 제출물 상태를 명시한다.\n모델링 결과서  •  1\n"
+  },
+  {
+    "page": 2,
+    "chars": 726,
+    "images": 1,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": " 실험, 현재 새 가중치의 결과를 구분한다. 저장 마스크를 CPU 에서 재채점했으며 새로운 모델 학습\n이나 GPU 추론은 수행하지 않았다. [S07]\n그림 1. 현재 실행의 구성별 성능. R/E/두 결합 단계의 valid20 image mIoU. 우측은 같은 부모 가중치에서 결합 단계를 추가했을 때의 변\n화다. [S03, S07]\n모델링 결과서  •  2\n"
+  },
+  {
+    "page": 3,
+    "chars": 1011,
+    "images": 1,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": " S02]\n현재 접근은 하나의 큰 모델로 모든 경우를 해결하기보다 입력 표현과 특징 추출 방식이 다른 모델을 조합한다. 다만 모\n델 종류가 많다는 사실만으로 개선이 입증되는 것은 아니다. 보고서에서는 실제 같은 실행의 R, E, stage1, stage2 를 \n함께 비교하고, 평균뿐 아니라 개별 영상의 손실도 제시한다. [S07]\n모델링 결과서  •  3\n"
+  },
+  {
+    "page": 4,
+    "chars": 529,
+    "images": 1,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": "본 좌표 복원이 필요하다. [S02]\n표 4. 분할별 영상 밝기 통계\n분할\n평균 밝기의 이미지 평균\n밝기 표준편차의 이미지 평균\ntrain\n170.359\n57.726\nvalid\n169.504\n64.341\ntest\n177.553\n54.219\nPIL grayscale 0–255 기준. 각 영상을 동일하게 가중하여 평균했다. [S02]\n모델링 결과서  •  4\n"
+  },
+  {
+    "page": 5,
+    "chars": 938,
+    "images": 1,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": "20\n20.0300\nPrimary Si\n9.4283\n10.1690\n69\n19\n10.5926\nAl\n57.2806\n61.0185\n70\n20\n61.4113\nEutectic Si\n6.9769\n7.6561\n70\n20\n7.9661\n픽셀 구성비는 split 전체 픽셀 기준, 평균 면적은 영상별 비율의 평균이다. 성능 지표가 아니다. [S02]\n모델링 결과서  •  5\n"
+  },
+  {
+    "page": 6,
+    "chars": 580,
+    "images": 1,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": " 7. 공식 분할 사이 공통 시편 ID\n분할 쌍\n공유 개수\nID\ntrain/valid\n7\nA125, A153, A181, A191, A40, A55, \nA7\ntrain/test\n3\nA167, A51, A87\nvalid/test\n1\nA63\n파일명 A 번호에 따른 집계. 제공된 train/valid 분할을 변경하지 않았다. [S02]\n모델링 결과서  •  6\n"
+  },
+  {
+    "page": 7,
+    "chars": 338,
+    "images": 1,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": "ain/valid 가 공유하는 7 개 시편 ID 가 있으므로 valid20 은 완전히 새로운 시편만의 외부 검증이 아니다. 내부 OOF\n는 train70 안에서 시편을 분리하여 보정기 입력의 자기 학습을 방지하지만, 공식 train/valid 의 시편 중복이나 과거 후\n보 탐색의 선택 편향까지 제거하지 않는다. [S02, S13]\n모델링 결과서  •  7\n"
+  },
+  {
+    "page": 8,
+    "chars": 1498,
+    "images": 1,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": "ckpoint 에 저장하고, 추론 시 원본 너비에 \n맞춘 effective input scale 과 overlap 을 계산한다. 현재 저장된 seed1/fold1 의 target_width 는 1230 이다. 모든 \nfold 값을 임의로 하나로 덮어쓰지 않고 각 checkpoint 의 전처리 metadata 를 읽는다. [S05]\n모델링 결과서  •  8\n"
+  },
+  {
+    "page": 9,
+    "chars": 1272,
+    "images": 1,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": "별 평균을 한 번 float16 으로 반올림한 다음 다\n시 float32 로 결합한다. 각 fold 를 먼저 float16 으로 바꾸어 평균하는 연산과 일반적으로 같지 않다. 반면 OOF 에서\n는 해당 이미지를 제외한 한 fold 의 모델만 각 family 에서 사용한다. 이 수치 처리와 클래스 순서가 재현의 일부다. \n[S05]\n모델링 결과서  •  9\n"
+  },
+  {
+    "page": 10,
+    "chars": 1112,
+    "images": 1,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": " 단일 신경망 층의 이름이 아니라 모델 집합, 입력 표현, 확률 결합, 라우팅, 후\n처리를 묶은 실험·패키지 식별자다. fusion805 의 파일명 역시 현재 새 가중치가 80.5%를 보장한다는 뜻이 아니다. \nGitHub 에서는 F 를 제외한 stage1 을 대표 후보로 두고 stage2 를 탐색 기록으로 보존한다. [S08]\n모델링 결과서  •  10\n"
+  },
+  {
+    "page": 11,
+    "chars": 1080,
+    "images": 1,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": "학습 초기값은 사용했다. [S03, S12]\n고해상도 경로는 Model109·restart51·restart59·restart61 중 영상 밝기 규칙에 맞는 checkpoint 를 선택한다. \nEMA 분기를 제거한 lite 설정에서는 과거 EMA 경로 대신 restart51 을 재사용한다. 선택된 모델에 대해 TENT 5 회, \n모델링 결과서  •  11\n"
+  },
+  {
+    "page": 12,
+    "chars": 1663,
+    "images": 0,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": " folds × seed0\n4 folds × seeds1·2\n초기화\nImageNet encoder\nImageNet encoder\n학습량\n16,000 iterations/fold\n70 epochs/fold\nbatch / accumulation\n2 / 1\n4 / 2\ncrop\n1536\n512\nlearning rate\n3e-4\n3e-4\n모델링 결과서  •  12\n"
+  },
+  {
+    "page": 13,
+    "chars": 1698,
+    "images": 0,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": "총 1,120 update 를 고정한다. seed81349, AdamW lr=10⁻³, \nweight decay=10⁻ , cosine T_max=8, gradient clip=1\n⁴\n을 사용했다. 클래스 0·3 중심 crop 과 균등 crop 을 섞으\n며, valid/test 정답은 F 학습에 넣지 않았다. [S06, S13]\n모델링 결과서  •  13\n"
+  },
+  {
+    "page": 14,
+    "chars": 669,
+    "images": 1,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": "₁\nstage1 은 E 의 모든 클래스 출력을 통째로 대체하지 않는다. E 가 Al Ni \n₃\n또는 Al 로 판단한 위치에만 E label 을 적용한\n다. stage2 도 F 가 Al 로 판단한 위치만 덮어쓴다. 신뢰도 threshold 나 이번 validation 점수에 따른 추가 규칙은 사용\n하지 않았다. [S08, S03]\n모델링 결과서  •  14\n"
+  },
+  {
+    "page": 15,
+    "chars": 1374,
+    "images": 1,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": "rchitecture 나 전처리 하나에 귀속시키지는 않는다. [S07]\n3-3-2. \n \n \n \n클래스별및이미지별결과\n표 16. 이미지별 class IoU 의 20 장 평균\n클래스\nR\nE\nStage1\nStage2\nStage1\nR %p\n−\nAl3Ni\n77.4730%\n75.3279%\n77.9823%\n78.0271%\n+0.509266\n모델링 결과서  •  15\n"
+  },
+  {
+    "page": 16,
+    "chars": 1373,
+    "images": 1,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": "9365\n79.278000\n79.287796\n-0.001365\n+0.009797\nA186_step2_sam\nple2\n80.974851\n81.059065\n81.059239\n+0.084214\n+0.000174\nA191_step4_sam\nple3\n82.256575\n82.552131\n82.551927\n+0.295556\n-0.000204\n모델링 결과서  •  16\n"
+  },
+  {
+    "page": 17,
+    "chars": 914,
+    "images": 0,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": "_sampl\ne4\n74.537545\n74.820515\n74.838632\n+0.282970\n+0.018116\nA7_step1_sample\n4\n82.484591\n82.472935\n82.468445\n-0.011656\n-0.004490\n원본 순서에 맞춰 이름으로 대응시켰다. 비교 이미지는 부록 A 에 20 장 모두 제공한다. [S07]\n모델링 결과서  •  17\n"
+  },
+  {
+    "page": 18,
+    "chars": 159,
+    "images": 1,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": "KoMaP | 고탄성 알루미늄 합금 상 분할 · Fusion805\n그림 14. 이미지별 성능. 단계별 분포와 어려운 영상을 표시했다. A71 의 낮은 점수는 absent Primary Si 규칙과 다른 클래스의 잔여 오류\n를 함께 고려해야 한다. [S07]\n모델링 결과서  •  18\n"
+  },
+  {
+    "page": 19,
+    "chars": 530,
+    "images": 1,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": "A11_step2_sampl\ne4\n64.1693\n91.5230\n93.0444\n60.6904\n77.356787\nA125_step1_sam\nple4\n79.2777\n79.8408\n94.6713\n63.7279\n79.379401\nA153_step3_sam\nple3\n74.6793\n93.8866\n89.2375\n27.7046\n71.376994\n모델링 결과서  •  19\n"
+  },
+  {
+    "page": 20,
+    "chars": 1344,
+    "images": 0,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": "상\n변경 픽셀\n오류→정답\n정답→오류\n오류→다른 오류\nR→stage1\n16 / 4\n177,703\n83,508\n82,597\n11,598\nstage1→stage2\n14 / 6\n14,878\n8,938\n5,458\n482\n진단용 픽셀 수이며 image mIoU 의 정의를 대체하지 않는다. 동일 픽셀을 각 전환에서 독립 비교했다. [S07]\n모델링 결과서  •  20\n"
+  },
+  {
+    "page": 21,
+    "chars": 715,
+    "images": 2,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": "ep1_sample4 의 +0.231528%p,\n최대 악화는 A72_step4_sample4 의 −0.020728%p 다. 변경 픽셀은 14,878 개로 stage1 변경보다 적다. 국소 수\n정의 평균 이득은 관측되지만, 단일 seed·단일 validation 결과이므로 안정적 일반화 이득으로 확대 해석하지 않는다. \n[S07]\n모델링 결과서  •  21\n"
+  },
+  {
+    "page": 22,
+    "chars": 587,
+    "images": 1,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": ". [S02, S07]\nA44_step4_sample3 은 stage1 90.129810%로 가장 높다. 그림의 오류 맵은 맞은 픽셀을 흰색, 틀린 픽셀을 그 위\n치의 정답 색으로 표시하여 어떤 상이 다른 상으로 분류됐는지 보여 준다. 100%\nimage mIoU\n−\n와 오류 맵의 색 픽셀 \n비율은 같은 값이 아니다. [S07]\n모델링 결과서  •  22\n"
+  },
+  {
+    "page": 23,
+    "chars": 304,
+    "images": 2,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": "르게 분류된 픽셀이다. 변경 위치 \n맵은 정오와 무관하게 새 예측 색으로 표시한다. [S02, S07]\n그림 20. F 개선 최대 사례. A63_step1_sample4 의 원본·정답·예측·오류·변경 위치. 흰색 오류 맵은 올바르게 분류된 픽셀이다. 변경 위치 \n맵은 정오와 무관하게 새 예측 색으로 표시한다. [S02, S07]\n모델링 결과서  •  23\n"
+  },
+  {
+    "page": 24,
+    "chars": 674,
+    "images": 1,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": "재추론\nR+E\n80.474424%\n고정 가중치를 원본 영상부터 \n추론\n현재 로컬 재학습\nR+E\n80.236507%\n새 가중치, 주 결과\n현재 로컬 재학습\nR+E+F\n80.267268%\n새 가중치, 추가 비교\nGitHub 값은 원문 기록이며 이 보고서에서 해당 원본 가중치를 다시 실행한 수치가 아니다. [S03, S08, S09]\n모델링 결과서  •  24\n"
+  },
+  {
+    "page": 25,
+    "chars": 1407,
+    "images": 1,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": " 후보 88 개에서 조합을 선택한 기록이다.\n현재 fusion805 는 고정된 27 개 구성의 한 번 재학습이므로 두 점수의 근접성이나 우열을 같은 탐색 예산의 비교로 해\n석하지 않는다. Model364 의 중단 보고서(model_results_1006_3)는 최종 점수가 없으므로 완료 실험의 수치로 채\n우지 않았다. [S11]\n모델링 결과서  •  25\n"
+  },
+  {
+    "page": 26,
+    "chars": 506,
+    "images": 0,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": "–S03]\nGitHub fresh 보고서의 test10 은 별도 고정 가중치 실행이며 새 R 대비 일치율 98.21783315%가 기록되어 있다. \n이는 두 모델 예측 사이의 일치율이지 정답 대비 정확도 또는 test mIoU 가 아니다. 과거 다른 모델의 test 마스크를 현\n재 모델의 제출 결과로 대체하지 않는다. [S09]\n모델링 결과서  •  26\n"
+  },
+  {
+    "page": 27,
+    "chars": 1054,
+    "images": 1,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": "간으로 해석하지 않는다. [S10]\n실험 구축 시 GitHub commit d4ef4b08455a6bd849225f672fdcbaa23e24cdb1 의 fusion805 ZIP 을 다운로드\n하고 공개 checksum 을 검증했다. 보고서 작성 시에는 ac6252bef323bdba7482f89a61420312310901e9 의 최\n모델링 결과서  •  27\n"
+  },
+  {
+    "page": 28,
+    "chars": 961,
+    "images": 0,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": "selected_model 의 \nmodel_manifest.json 이다. 구성 가중치의 해시는 새 재학습 패키지 기준이며 원본 GitHub 가중치 해시와 같다고 주\n장하지 않는다. Word 의 DOC 는 실제 Word 97–2003 바이너리 형식으로 변환하고, 편집 호환성을 위해 DOCX 와 \n열람용 PDF 도 함께 제공한다.\n모델링 결과서  •  28\n"
+  },
+  {
+    "page": 29,
+    "chars": 1512,
+    "images": 0,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": " 재학습을 완료하고, 같은 실행의 R 대비 stage1 +0.184584%p 를 얻은 것\n이다. stage2 의 추가 이득과 영상별 손실, 검증셋의 범위를 함께 공개하여 다음 실험의 기준으로 사용한다. 현재 로컬\n·GitHub 기록 모두를 근거로 81% 달성이나 현장 배포 준비 완료를 주장하지 않는다. [S03, S07–S09]\n모델링 결과서  •  29\n"
+  },
+  {
+    "page": 30,
+    "chars": 1985,
+    "images": 0,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": "ing for Convolutional Neural Networks — Tan and Le, 2019. \nEfficientNet 의 배경.\n[P05] Deep High-Resolution Representation Learning for Visual Recognition — Wang et al., 2019. HRNet 의\n배경.\n모델링 결과서  •  30\n"
+  },
+  {
+    "page": 31,
+    "chars": 612,
+    "images": 0,
+    "width": 595.303955078125,
+    "height": 841.8897705078125,
+    "tail": "tage1·stage2 원본 비교 이미지 40 개를 모두 포함한다. 각 페이지의 왼쪽은 대표 \nstage1, 오른쪽은 stage2 이며, 각 이미지 내부는 기존 실험과 같은 2×2 배치다. 원본 PNG 는 appendix/에 별도로 \n보존하므로 확대하여 확인할 수 있다. 표·그림의 개별 파일과 생성 코드는 ZIP 에도 포함했다.\n모델링 결과서  •  31\n"
+  },
+  {
+    "page": 32,
+    "chars": 349,
+    "images": 2,
+    "width": 841.8897705078125,
+    "height": 595.303955078125,
+    "tail": " 13.114057%)  |   -0.019282%p\n−\n−\nΔ\nStage1 R+E (대표)\nStage2 R+E+F (비교)\n각 패널: 좌상 Original / 우상 오류 / 좌하 Prediction / 우하 Ground truth. 맞은 픽셀은 흰색, 오류는 정답 색. 100% image mIoU\n−\n는 픽셀 오류율이 아니다.\n모델링 결과서  •  32\n"
+  },
+  {
+    "page": 33,
+    "chars": 348,
+    "images": 2,
+    "width": 841.8897705078125,
+    "height": 595.303955078125,
+    "tail": " 19.629420%)  |   -0.011425%p\n−\n−\nΔ\nStage1 R+E (대표)\nStage2 R+E+F (비교)\n각 패널: 좌상 Original / 우상 오류 / 좌하 Prediction / 우하 Ground truth. 맞은 픽셀은 흰색, 오류는 정답 색. 100% image mIoU\n−\n는 픽셀 오류율이 아니다.\n모델링 결과서  •  33\n"
+  },
+  {
+    "page": 34,
+    "chars": 348,
+    "images": 2,
+    "width": 841.8897705078125,
+    "height": 595.303955078125,
+    "tail": " 22.609028%)  |   +0.034184%p\n−\n−\nΔ\nStage1 R+E (대표)\nStage2 R+E+F (비교)\n각 패널: 좌상 Original / 우상 오류 / 좌하 Prediction / 우하 Ground truth. 맞은 픽셀은 흰색, 오류는 정답 색. 100% image mIoU\n−\n는 픽셀 오류율이 아니다.\n모델링 결과서  •  34\n"
+  },
+  {
+    "page": 35,
+    "chars": 349,
+    "images": 2,
+    "width": 841.8897705078125,
+    "height": 595.303955078125,
+    "tail": " 20.615975%)  |   +0.004624%p\n−\n−\nΔ\nStage1 R+E (대표)\nStage2 R+E+F (비교)\n각 패널: 좌상 Original / 우상 오류 / 좌하 Prediction / 우하 Ground truth. 맞은 픽셀은 흰색, 오류는 정답 색. 100% image mIoU\n−\n는 픽셀 오류율이 아니다.\n모델링 결과서  •  35\n"
+  },
+  {
+    "page": 36,
+    "chars": 349,
+    "images": 2,
+    "width": 841.8897705078125,
+    "height": 595.303955078125,
+    "tail": " 28.551803%)  |   +0.071203%p\n−\n−\nΔ\nStage1 R+E (대표)\nStage2 R+E+F (비교)\n각 패널: 좌상 Original / 우상 오류 / 좌하 Prediction / 우하 Ground truth. 맞은 픽셀은 흰색, 오류는 정답 색. 100% image mIoU\n−\n는 픽셀 오류율이 아니다.\n모델링 결과서  •  36\n"
+  },
+  {
+    "page": 37,
+    "chars": 349,
+    "images": 2,
+    "width": 841.8897705078125,
+    "height": 595.303955078125,
+    "tail": " 11.250719%)  |   -0.016762%p\n−\n−\nΔ\nStage1 R+E (대표)\nStage2 R+E+F (비교)\n각 패널: 좌상 Original / 우상 오류 / 좌하 Prediction / 우하 Ground truth. 맞은 픽셀은 흰색, 오류는 정답 색. 100% image mIoU\n−\n는 픽셀 오류율이 아니다.\n모델링 결과서  •  37\n"
+  },
+  {
+    "page": 38,
+    "chars": 349,
+    "images": 2,
+    "width": 841.8897705078125,
+    "height": 595.303955078125,
+    "tail": " 20.712204%)  |   +0.009797%p\n−\n−\nΔ\nStage1 R+E (대표)\nStage2 R+E+F (비교)\n각 패널: 좌상 Original / 우상 오류 / 좌하 Prediction / 우하 Ground truth. 맞은 픽셀은 흰색, 오류는 정답 색. 100% image mIoU\n−\n는 픽셀 오류율이 아니다.\n모델링 결과서  •  38\n"
+  },
+  {
+    "page": 39,
+    "chars": 349,
+    "images": 2,
+    "width": 841.8897705078125,
+    "height": 595.303955078125,
+    "tail": " 18.940761%)  |   +0.000174%p\n−\n−\nΔ\nStage1 R+E (대표)\nStage2 R+E+F (비교)\n각 패널: 좌상 Original / 우상 오류 / 좌하 Prediction / 우하 Ground truth. 맞은 픽셀은 흰색, 오류는 정답 색. 100% image mIoU\n−\n는 픽셀 오류율이 아니다.\n모델링 결과서  •  39\n"
+  },
+  {
+    "page": 40,
+    "chars": 349,
+    "images": 2,
+    "width": 841.8897705078125,
+    "height": 595.303955078125,
+    "tail": " 17.448073%)  |   -0.000204%p\n−\n−\nΔ\nStage1 R+E (대표)\nStage2 R+E+F (비교)\n각 패널: 좌상 Original / 우상 오류 / 좌하 Prediction / 우하 Ground truth. 맞은 픽셀은 흰색, 오류는 정답 색. 100% image mIoU\n−\n는 픽셀 오류율이 아니다.\n모델링 결과서  •  40\n"
+  },
+  {
+    "page": 41,
+    "chars": 348,
+    "images": 2,
+    "width": 841.8897705078125,
+    "height": 595.303955078125,
+    "tail": " 17.495420%)  |   +0.004143%p\n−\n−\nΔ\nStage1 R+E (대표)\nStage2 R+E+F (비교)\n각 패널: 좌상 Original / 우상 오류 / 좌하 Prediction / 우하 Ground truth. 맞은 픽셀은 흰색, 오류는 정답 색. 100% image mIoU\n−\n는 픽셀 오류율이 아니다.\n모델링 결과서  •  41\n"
+  },
+  {
+    "page": 42,
+    "chars": 348,
+    "images": 2,
+    "width": 841.8897705078125,
+    "height": 595.303955078125,
+    "tail": " 18.447373%)  |   +0.003683%p\n−\n−\nΔ\nStage1 R+E (대표)\nStage2 R+E+F (비교)\n각 패널: 좌상 Original / 우상 오류 / 좌하 Prediction / 우하 Ground truth. 맞은 픽셀은 흰색, 오류는 정답 색. 100% image mIoU\n−\n는 픽셀 오류율이 아니다.\n모델링 결과서  •  42\n"
+  },
+  {
+    "page": 43,
+    "chars": 346,
+    "images": 2,
+    "width": 841.8897705078125,
+    "height": 595.303955078125,
+    "tail": "U 9.831203%)  |   +0.038987%p\n−\n−\nΔ\nStage1 R+E (대표)\nStage2 R+E+F (비교)\n각 패널: 좌상 Original / 우상 오류 / 좌하 Prediction / 우하 Ground truth. 맞은 픽셀은 흰색, 오류는 정답 색. 100% image mIoU\n−\n는 픽셀 오류율이 아니다.\n모델링 결과서  •  43\n"
+  },
+  {
+    "page": 44,
+    "chars": 348,
+    "images": 2,
+    "width": 841.8897705078125,
+    "height": 595.303955078125,
+    "tail": " 17.936821%)  |   +0.028687%p\n−\n−\nΔ\nStage1 R+E (대표)\nStage2 R+E+F (비교)\n각 패널: 좌상 Original / 우상 오류 / 좌하 Prediction / 우하 Ground truth. 맞은 픽셀은 흰색, 오류는 정답 색. 100% image mIoU\n−\n는 픽셀 오류율이 아니다.\n모델링 결과서  •  44\n"
+  },
+  {
+    "page": 45,
+    "chars": 348,
+    "images": 2,
+    "width": 841.8897705078125,
+    "height": 595.303955078125,
+    "tail": " 16.901380%)  |   +0.123295%p\n−\n−\nΔ\nStage1 R+E (대표)\nStage2 R+E+F (비교)\n각 패널: 좌상 Original / 우상 오류 / 좌하 Prediction / 우하 Ground truth. 맞은 픽셀은 흰색, 오류는 정답 색. 100% image mIoU\n−\n는 픽셀 오류율이 아니다.\n모델링 결과서  •  45\n"
+  },
+  {
+    "page": 46,
+    "chars": 348,
+    "images": 2,
+    "width": 841.8897705078125,
+    "height": 595.303955078125,
+    "tail": " 15.237151%)  |   +0.231528%p\n−\n−\nΔ\nStage1 R+E (대표)\nStage2 R+E+F (비교)\n각 패널: 좌상 Original / 우상 오류 / 좌하 Prediction / 우하 Ground truth. 맞은 픽셀은 흰색, 오류는 정답 색. 100% image mIoU\n−\n는 픽셀 오류율이 아니다.\n모델링 결과서  •  46\n"
+  },
+  {
+    "page": 47,
+    "chars": 348,
+    "images": 2,
+    "width": 841.8897705078125,
+    "height": 595.303955078125,
+    "tail": " 24.265192%)  |   +0.093469%p\n−\n−\nΔ\nStage1 R+E (대표)\nStage2 R+E+F (비교)\n각 패널: 좌상 Original / 우상 오류 / 좌하 Prediction / 우하 Ground truth. 맞은 픽셀은 흰색, 오류는 정답 색. 100% image mIoU\n−\n는 픽셀 오류율이 아니다.\n모델링 결과서  •  47\n"
+  },
+  {
+    "page": 48,
+    "chars": 348,
+    "images": 2,
+    "width": 841.8897705078125,
+    "height": 595.303955078125,
+    "tail": " 45.802101%)  |   +0.026220%p\n−\n−\nΔ\nStage1 R+E (대표)\nStage2 R+E+F (비교)\n각 패널: 좌상 Original / 우상 오류 / 좌하 Prediction / 우하 Ground truth. 맞은 픽셀은 흰색, 오류는 정답 색. 100% image mIoU\n−\n는 픽셀 오류율이 아니다.\n모델링 결과서  •  48\n"
+  },
+  {
+    "page": 49,
+    "chars": 348,
+    "images": 2,
+    "width": 841.8897705078125,
+    "height": 595.303955078125,
+    "tail": " 13.173026%)  |   -0.020728%p\n−\n−\nΔ\nStage1 R+E (대표)\nStage2 R+E+F (비교)\n각 패널: 좌상 Original / 우상 오류 / 좌하 Prediction / 우하 Ground truth. 맞은 픽셀은 흰색, 오류는 정답 색. 100% image mIoU\n−\n는 픽셀 오류율이 아니다.\n모델링 결과서  •  49\n"
+  },
+  {
+    "page": 50,
+    "chars": 348,
+    "images": 2,
+    "width": 841.8897705078125,
+    "height": 595.303955078125,
+    "tail": " 25.161368%)  |   +0.018116%p\n−\n−\nΔ\nStage1 R+E (대표)\nStage2 R+E+F (비교)\n각 패널: 좌상 Original / 우상 오류 / 좌하 Prediction / 우하 Ground truth. 맞은 픽셀은 흰색, 오류는 정답 색. 100% image mIoU\n−\n는 픽셀 오류율이 아니다.\n모델링 결과서  •  50\n"
+  },
+  {
+    "page": 51,
+    "chars": 347,
+    "images": 2,
+    "width": 841.8897705078125,
+    "height": 595.303955078125,
+    "tail": " 17.531555%)  |   -0.004490%p\n−\n−\nΔ\nStage1 R+E (대표)\nStage2 R+E+F (비교)\n각 패널: 좌상 Original / 우상 오류 / 좌하 Prediction / 우하 Ground truth. 맞은 픽셀은 흰색, 오류는 정답 색. 100% image mIoU\n−\n는 픽셀 오류율이 아니다.\n모델링 결과서  •  51\n"
+  }
+]

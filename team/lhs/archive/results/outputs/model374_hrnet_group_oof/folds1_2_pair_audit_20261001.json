@@ -1,0 +1,4731 @@
+{
+  "audit": "paired grouped train-OOF metrics recomputed from saved maps; no official-valid/test labels",
+  "score_source": "saved per-fold probability archives and train-OOF masks; checkpoint inference was not rerun by this audit",
+  "metric": "per-image mean of four class IoUs; empty union=0",
+  "class_order": [
+    "Al",
+    "Al3Ni",
+    "Primary_Si",
+    "Eutectic_Si"
+  ],
+  "channel_alignment": "identity; Model329 and Model374 both [Al, Al3Ni, Primary_Si, Eutectic_Si]",
+  "reference_model": 329,
+  "candidate_model": 374,
+  "reference_sha256": "539bc1983bffb3ff55303f6865fc9a2094edc5dea9910551a481005fc1a01837",
+  "reference_fold_maps_compared_to_merged_archive": 36,
+  "reference_fold_map_parity_exact": true,
+  "reference_fold_training_provenance_verified": {
+    "1": {
+      "training_images": 52,
+      "training_specimen_groups": 44,
+      "heldout_images": 18,
+      "heldout_specimen_groups": 15,
+      "train_heldout_group_overlap": [],
+      "model329_training_split": "train_fold1",
+      "no_valid_eval": true,
+      "validation_loader_empty_confirmed_by_log": true,
+      "validation_evaluation_messages": false,
+      "fixed_training_iterations": 16000,
+      "training_args_sha256": "c0d69e6f3a10b4a3726ab0533152c870b9ffc11991ed94419a9c502a002da8e3",
+      "training_log_sha256": "9e3eec90c8f890d0ce4a4cf2bab9b382124822e3ab74a09fe82ec912d4eb6eba",
+      "checkpoint_sha256": "2466fef573bb580c15e15cedc631c36d5ec048c5cc891015263e635a11ce02a2",
+      "external_init_checkpoint": null,
+      "fresh_init_path_verified_in_current_source": true,
+      "source_hashes_measured_at_audit_time": true,
+      "trainer_source_sha256": "bf65382820adc6211bd55f94c25ea5aab01a1405105c1b723810d71c75575ed3",
+      "model_builder_source_sha256": "ea3297e1479dbd156fa45029300888f6e71a98b59b659d6d6f8a7e01ded37ff2",
+      "checkpoint_to_oof_archive_binding_verified": false,
+      "fold_oof_probability_archive_sha256": "b3680bc39f36eb22d6b59d4aaee5d15c4f1ca95dd88866a27d225540cd5d95d0"
+    },
+    "2": {
+      "training_images": 52,
+      "training_specimen_groups": 44,
+      "heldout_images": 18,
+      "heldout_specimen_groups": 15,
+      "train_heldout_group_overlap": [],
+      "model329_training_split": "train_fold2",
+      "no_valid_eval": true,
+      "validation_loader_empty_confirmed_by_log": true,
+      "validation_evaluation_messages": false,
+      "fixed_training_iterations": 16000,
+      "training_args_sha256": "eb8afd8e4f147d82ba3ba4691ebc505fe0cb3ab28fe0b305e44816940d503c07",
+      "training_log_sha256": "0007ce011948fcd5ce120895563c001e402afe82ef2d43ee38d142a1bc6c3036",
+      "checkpoint_sha256": "95f9538f70aa348e959abb89c493b19c936de12b68fc72558f34ecf80d0b9036",
+      "external_init_checkpoint": null,
+      "fresh_init_path_verified_in_current_source": true,
+      "source_hashes_measured_at_audit_time": true,
+      "trainer_source_sha256": "bf65382820adc6211bd55f94c25ea5aab01a1405105c1b723810d71c75575ed3",
+      "model_builder_source_sha256": "ea3297e1479dbd156fa45029300888f6e71a98b59b659d6d6f8a7e01ded37ff2",
+      "checkpoint_to_oof_archive_binding_verified": false,
+      "fold_oof_probability_archive_sha256": "1ed378d13439aa78111634b1bd84e6c957cfeb60f9cc93024a19629f111c0c8c"
+    }
+  },
+  "candidate_fold_training_provenance_verified": {
+    "1": {
+      "heldout_images": 18,
+      "train_state_epoch": 70,
+      "inference_split": "valid",
+      "validation_checkpoint_selection": false,
+      "external_initial_checkpoint": null,
+      "training_args_sha256_verified": true,
+      "checkpoint_sha256_verified": true,
+      "model_code_tree_sha256_verified": true,
+      "evaluation_script_sha256_verified": true,
+      "runner_sha256_verified": false,
+      "runner_sha256_in_manifest": "7b4a4ccfc00001c183dc45c8d315cc77530d317246609d4821f41b5631481a80",
+      "runner_sha256_current": "2704023fc7d773b6082937c026fd20a36807ae4d2f0b3d2175f2defbc58b4bff",
+      "probability_archive_sha256_recorded": "2176c5c2c2f5e230a911e246cdf894e74755f2ee81cdab8bb547b600adee457d",
+      "probability_archive_sha256_bound_to_manifest": false,
+      "inference_manifest_sha256": "bd2b2b856f59354826fd542ee2c8bae3935a0911a9784035c4c1e9f301aded29"
+    },
+    "2": {
+      "heldout_images": 18,
+      "train_state_epoch": 70,
+      "inference_split": "valid",
+      "validation_checkpoint_selection": false,
+      "external_initial_checkpoint": null,
+      "training_args_sha256_verified": true,
+      "checkpoint_sha256_verified": true,
+      "model_code_tree_sha256_verified": true,
+      "evaluation_script_sha256_verified": true,
+      "runner_sha256_verified": true,
+      "runner_sha256_in_manifest": "2704023fc7d773b6082937c026fd20a36807ae4d2f0b3d2175f2defbc58b4bff",
+      "runner_sha256_current": "2704023fc7d773b6082937c026fd20a36807ae4d2f0b3d2175f2defbc58b4bff",
+      "probability_archive_sha256_recorded": "14362486e73c8e7af53f8eecae45147573b21c2c897eb8b217ea1e4caeb33614",
+      "probability_archive_sha256_bound_to_manifest": false,
+      "inference_manifest_sha256": "71543e7ee6df6146a74f53796049ba341defe1d7fbb4c29b5a23fb9451b6cfc6"
+    }
+  },
+  "provenance_status": "partial_with_warnings",
+  "provenance_warnings": [
+    "Model329 trainer/model-builder source hashes were measured during audit, not at training time",
+    "fold 1: Model329 has no inference manifest binding last.pt to its OOF map",
+    "fold 1: runner SHA differs from inference manifest; training args, checkpoint, model code and evaluation code hashes match",
+    "fold 1: candidate probability archive SHA is recorded now but was not bound to the inference-time manifest",
+    "fold 2: Model329 has no inference manifest binding last.pt to its OOF map",
+    "fold 2: candidate probability archive SHA is recorded now but was not bound to the inference-time manifest"
+  ],
+  "folds": [
+    1,
+    2
+  ],
+  "fold_summary": {
+    "1": {
+      "image_count": 18,
+      "specimen_group_count": 15,
+      "model329_image_mean_miou_empty0": 0.7693453699044828,
+      "model374_image_mean_miou_empty0": 0.7643494768394258,
+      "fixed_half_blend_image_mean_miou_empty0": 0.7745891484637131,
+      "fixed_max_confidence_gate_image_mean_miou_empty0": 0.7746465738602847,
+      "model374_delta_vs_model329_pp": -0.4995893065056896,
+      "fixed_half_blend_delta_vs_model329_pp": 0.5243778559230337,
+      "confidence_gate_delta_vs_model329_pp": 0.5301203955801926,
+      "confidence_gate_delta_vs_blend_pp": 0.005742539657159021,
+      "fixed_half_blend_positive_images": 12,
+      "confidence_gate_positive_images_vs_model329": 12,
+      "confidence_gate_positive_images_vs_blend": 4,
+      "confidence_gate_candidate_pixel_fraction": 0.5181327925559637,
+      "class_delta_blend_vs_model329_pp": {
+        "Al": 0.09639276946780129,
+        "Al3Ni": -0.2214786320356099,
+        "Primary_Si": 0.6191699696314488,
+        "Eutectic_Si": 1.6034273166284965
+      },
+      "class_delta_confidence_gate_vs_model329_pp": {
+        "Al": 0.09838586544938521,
+        "Al3Ni": -0.27088333905105283,
+        "Primary_Si": 0.6314893929519974,
+        "Eutectic_Si": 1.6614896629704345
+      }
+    },
+    "2": {
+      "image_count": 18,
+      "specimen_group_count": 15,
+      "model329_image_mean_miou_empty0": 0.7846884078056422,
+      "model374_image_mean_miou_empty0": 0.7834180785516751,
+      "fixed_half_blend_image_mean_miou_empty0": 0.7923731685383623,
+      "fixed_max_confidence_gate_image_mean_miou_empty0": 0.7918890553240412,
+      "model374_delta_vs_model329_pp": -0.12703292539672323,
+      "fixed_half_blend_delta_vs_model329_pp": 0.7684760732719935,
+      "confidence_gate_delta_vs_model329_pp": 0.7200647518398834,
+      "confidence_gate_delta_vs_blend_pp": -0.04841132143211,
+      "fixed_half_blend_positive_images": 15,
+      "confidence_gate_positive_images_vs_model329": 15,
+      "confidence_gate_positive_images_vs_blend": 3,
+      "confidence_gate_candidate_pixel_fraction": 0.4531455228660149,
+      "class_delta_blend_vs_model329_pp": {
+        "Al": 0.4917799733334782,
+        "Al3Ni": 0.3729789651667146,
+        "Primary_Si": 0.9230486991260081,
+        "Eutectic_Si": 1.286096655461777
+      },
+      "class_delta_confidence_gate_vs_model329_pp": {
+        "Al": 0.477497616783918,
+        "Al3Ni": 0.3379618414083392,
+        "Primary_Si": 0.880732182536296,
+        "Eutectic_Si": 1.184067366630985
+      }
+    }
+  },
+  "image_count": 36,
+  "specimen_group_count": 30,
+  "group_ownership_exactly_once": true,
+  "model329_image_mean_miou_empty0": 0.7770168888550626,
+  "model374_image_mean_miou_empty0": 0.7738837776955505,
+  "fixed_half_blend_image_mean_miou_empty0": 0.7834811585010376,
+  "fixed_max_confidence_gate_image_mean_miou_empty0": 0.7832678145921629,
+  "fixed_max_confidence_gate_rule": {
+    "choose_model374_when": "its max class probability is strictly greater than Model329's",
+    "ties": "choose Model329",
+    "fitted_parameters": 0
+  },
+  "model374_delta_vs_model329_pp": -0.3133111159512064,
+  "fixed_half_blend_delta_vs_model329_pp": 0.6464269645975135,
+  "confidence_gate_delta_vs_model329_pp": 0.6250925737100379,
+  "confidence_gate_delta_vs_blend_pp": -0.021334390887475487,
+  "model374_positive_images": 21,
+  "fixed_half_blend_positive_images": 27,
+  "confidence_gate_positive_images_vs_model329": 27,
+  "confidence_gate_positive_images_vs_blend": 7,
+  "model374_group_bootstrap_95ci_delta_pp": [
+    -1.2778703221030612,
+    0.5523555557427775
+  ],
+  "fixed_half_blend_group_bootstrap_95ci_delta_pp": [
+    0.2358115253280719,
+    1.0144028199671438
+  ],
+  "confidence_gate_group_bootstrap_95ci_vs_model329_pp": [
+    0.19096601191079646,
+    1.0217608286633537
+  ],
+  "confidence_gate_group_bootstrap_95ci_vs_blend_pp": [
+    -0.05859030679363338,
+    0.023399138695273197
+  ],
+  "confidence_gate_candidate_pixel_fraction_image_mean": 0.4856391577109893,
+  "class_delta_blend_vs_model329_pp": {
+    "Al": 0.29408637140063976,
+    "Al3Ni": 0.07575016656555232,
+    "Primary_Si": 0.7711093343787285,
+    "Eutectic_Si": 1.4447619860451366
+  },
+  "class_delta_confidence_gate_vs_model329_pp": {
+    "Al": 0.2879417411166516,
+    "Al3Ni": 0.033539251178643176,
+    "Primary_Si": 0.7561107877441468,
+    "Eutectic_Si": 1.42277851480071
+  },
+  "mean_image_oracle_best_model_miou_empty0_diagnostic_only": 0.7853522483284794,
+  "mean_pixel_oracle_miou_empty0_diagnostic_only": 0.8216750953459996,
+  "positive_pixel_complementarity": {
+    "model374_correct_only_pixels": 623885,
+    "model329_correct_only_pixels": 637459,
+    "prediction_disagreement_fraction_image_mean": 0.04237265437747631
+  },
+  "absent_class_false_positive_audit": {
+    "Model329": {
+      "gt_absent_image_class_pairs": 1,
+      "false_positive_absent_image_class_pairs": 0,
+      "false_positive_pixels_on_gt_absent_classes": 0,
+      "mean_image_fraction_predicted_as_gt_absent_classes": 0.0,
+      "image_mean_miou_after_gt_oracle_relabels_absent_class_fp": 0.7770168888550626,
+      "oracle_gain_pp_diagnostic_only": 0.0,
+      "by_class": {
+        "Al": {
+          "gt_absent_images": 0,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        },
+        "Al3Ni": {
+          "gt_absent_images": 0,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        },
+        "Primary_Si": {
+          "gt_absent_images": 1,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        },
+        "Eutectic_Si": {
+          "gt_absent_images": 0,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        }
+      }
+    },
+    "Model374": {
+      "gt_absent_image_class_pairs": 1,
+      "false_positive_absent_image_class_pairs": 0,
+      "false_positive_pixels_on_gt_absent_classes": 0,
+      "mean_image_fraction_predicted_as_gt_absent_classes": 0.0,
+      "image_mean_miou_after_gt_oracle_relabels_absent_class_fp": 0.7738837776955505,
+      "oracle_gain_pp_diagnostic_only": 0.0,
+      "by_class": {
+        "Al": {
+          "gt_absent_images": 0,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        },
+        "Al3Ni": {
+          "gt_absent_images": 0,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        },
+        "Primary_Si": {
+          "gt_absent_images": 1,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        },
+        "Eutectic_Si": {
+          "gt_absent_images": 0,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        }
+      }
+    },
+    "fixed_half_blend": {
+      "gt_absent_image_class_pairs": 1,
+      "false_positive_absent_image_class_pairs": 0,
+      "false_positive_pixels_on_gt_absent_classes": 0,
+      "mean_image_fraction_predicted_as_gt_absent_classes": 0.0,
+      "image_mean_miou_after_gt_oracle_relabels_absent_class_fp": 0.7834811585010376,
+      "oracle_gain_pp_diagnostic_only": 0.0,
+      "by_class": {
+        "Al": {
+          "gt_absent_images": 0,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        },
+        "Al3Ni": {
+          "gt_absent_images": 0,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        },
+        "Primary_Si": {
+          "gt_absent_images": 1,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        },
+        "Eutectic_Si": {
+          "gt_absent_images": 0,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        }
+      }
+    },
+    "fixed_max_confidence_gate": {
+      "gt_absent_image_class_pairs": 1,
+      "false_positive_absent_image_class_pairs": 0,
+      "false_positive_pixels_on_gt_absent_classes": 0,
+      "mean_image_fraction_predicted_as_gt_absent_classes": 0.0,
+      "image_mean_miou_after_gt_oracle_relabels_absent_class_fp": 0.7832678145921629,
+      "oracle_gain_pp_diagnostic_only": 0.0,
+      "by_class": {
+        "Al": {
+          "gt_absent_images": 0,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        },
+        "Al3Ni": {
+          "gt_absent_images": 0,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        },
+        "Primary_Si": {
+          "gt_absent_images": 1,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        },
+        "Eutectic_Si": {
+          "gt_absent_images": 0,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        }
+      }
+    }
+  },
+  "interpretation": "single-fold or partial-fold OOF is exploratory; fixed 0.5 blend and max-confidence gate have no fitted weights or threshold",
+  "per_image": [
+    {
+      "image": "A118_step2_sample1",
+      "fold": 1,
+      "specimen_group": "A118",
+      "pixels": 1076250,
+      "model329_miou_empty0": 0.8513999125452975,
+      "model374_miou_empty0": 0.8499316745126204,
+      "fixed_half_blend_miou_empty0": 0.8560059244561502,
+      "fixed_max_confidence_gate_miou_empty0": 0.8551366500809146,
+      "model374_delta_vs_model329_pp": -0.14682380326770383,
+      "blend_delta_vs_model329_pp": 0.46060119108527475,
+      "confidence_gate_delta_vs_model329_pp": 0.3736737535617096,
+      "confidence_gate_delta_vs_blend_pp": -0.08692743752356513,
+      "model329_class_iou": [
+        0.9529773910823925,
+        0.8588695591420387,
+        0.8811858924463356,
+        0.7125668075104233
+      ],
+      "model374_class_iou": [
+        0.956813160237878,
+        0.8491032547004314,
+        0.8800592902607027,
+        0.7137509928514694
+      ],
+      "blend_class_iou": [
+        0.9586771610052471,
+        0.8622700595201062,
+        0.8777545050113382,
+        0.7253219722879087
+      ],
+      "confidence_gate_class_iou": [
+        0.9586144321240504,
+        0.8614363487210083,
+        0.8774002698681798,
+        0.72309554961042
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.5699769922854592,
+        0.34005003780674947,
+        -0.34313874349973794,
+        1.2755164777485395
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        0.5637041041657853,
+        0.2566789578969608,
+        -0.3785622578155845,
+        1.0528742099996657
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        -0.006272888119673858,
+        -0.08337107990978865,
+        -0.03542351431584656,
+        -0.22264226774887375
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.40376678281068523,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8513999125452975
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8499316745126204
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8560059244561502
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8551366500809146
+        }
+      },
+      "prediction_disagreement_fraction": 0.029224622531939606,
+      "model374_correct_only_pixels": 15364,
+      "model329_correct_only_pixels": 14251,
+      "image_oracle_best_model_miou_empty0": 0.8513999125452975,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8854152328644544
+    },
+    {
+      "image": "A138_step4_sample3",
+      "fold": 1,
+      "specimen_group": "A138",
+      "pixels": 1076250,
+      "model329_miou_empty0": 0.7067164729781529,
+      "model374_miou_empty0": 0.6338826709437425,
+      "fixed_half_blend_miou_empty0": 0.683936999424697,
+      "fixed_max_confidence_gate_miou_empty0": 0.6812095862511092,
+      "model374_delta_vs_model329_pp": -7.283380203441037,
+      "blend_delta_vs_model329_pp": -2.2779473553455887,
+      "confidence_gate_delta_vs_model329_pp": -2.550688672704371,
+      "confidence_gate_delta_vs_blend_pp": -0.27274131735878226,
+      "model329_class_iou": [
+        0.8977070804933255,
+        0.7517654414829709,
+        0.854420879761253,
+        0.3229724901750625
+      ],
+      "model374_class_iou": [
+        0.8637184762886434,
+        0.6378757820845414,
+        0.8589964228755755,
+        0.17494000252620942
+      ],
+      "blend_class_iou": [
+        0.8901822183365647,
+        0.7177379811266438,
+        0.8685841538998149,
+        0.2592436443357646
+      ],
+      "confidence_gate_class_iou": [
+        0.8899517110717053,
+        0.716876652372459,
+        0.8664636759768555,
+        0.2515463055834169
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        -0.7524862156760737,
+        -3.402746035632709,
+        1.4163274138561888,
+        -6.372884583929794
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        -0.775536942162014,
+        -3.4888789110511853,
+        1.2042796215602447,
+        -7.142618459164563
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        -0.02305072648594031,
+        -0.08613287541847647,
+        -0.21204779229594406,
+        -0.7697338752347682
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.6502504065040651,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7067164729781529
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6338826709437425
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.683936999424697
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6812095862511092
+        }
+      },
+      "prediction_disagreement_fraction": 0.08379837398373984,
+      "model374_correct_only_pixels": 27556,
+      "model329_correct_only_pixels": 59265,
+      "image_oracle_best_model_miou_empty0": 0.7067164729781529,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.761337544011211
+    },
+    {
+      "image": "A140_step4_sample2",
+      "fold": 1,
+      "specimen_group": "A140",
+      "pixels": 1474560,
+      "model329_miou_empty0": 0.8703573601511555,
+      "model374_miou_empty0": 0.82503977227002,
+      "fixed_half_blend_miou_empty0": 0.8639855067502029,
+      "fixed_max_confidence_gate_miou_empty0": 0.8619120476762563,
+      "model374_delta_vs_model329_pp": -4.5317587881135495,
+      "blend_delta_vs_model329_pp": -0.6371853400952587,
+      "confidence_gate_delta_vs_model329_pp": -0.8445312474899214,
+      "confidence_gate_delta_vs_blend_pp": -0.20734590739466263,
+      "model329_class_iou": [
+        0.9491925599547236,
+        0.9106304128104005,
+        0.9074658186363724,
+        0.7141406492031256
+      ],
+      "model374_class_iou": [
+        0.9469371273294962,
+        0.8712026021687901,
+        0.891355216119597,
+        0.590664143462197
+      ],
+      "blend_class_iou": [
+        0.9495179549660561,
+        0.9032636118677687,
+        0.9054804215009642,
+        0.6976800386660222
+      ],
+      "confidence_gate_class_iou": [
+        0.9495918643065735,
+        0.9011669555735392,
+        0.9048994347055731,
+        0.6919899361193391
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.03253950113324411,
+        -0.7366800942631757,
+        -0.198539713540824,
+        -1.6460610537103348
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        0.03993043518498718,
+        -0.9463457236861261,
+        -0.2566383930799332,
+        -2.2150713083786466
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        0.00739093405174307,
+        -0.20966562942295042,
+        -0.05809867953910919,
+        -0.5690102546683118
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.31453382703993055,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8703573601511555
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.82503977227002
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8639855067502029
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8619120476762563
+        }
+      },
+      "prediction_disagreement_fraction": 0.03069186740451389,
+      "model374_correct_only_pixels": 12650,
+      "model329_correct_only_pixels": 30205,
+      "image_oracle_best_model_miou_empty0": 0.8703573601511555,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8939448167411275
+    },
+    {
+      "image": "A155_step3_sample2",
+      "fold": 1,
+      "specimen_group": "A155",
+      "pixels": 1161702,
+      "model329_miou_empty0": 0.8615173175247866,
+      "model374_miou_empty0": 0.8743709381828051,
+      "fixed_half_blend_miou_empty0": 0.8756707385101888,
+      "fixed_max_confidence_gate_miou_empty0": 0.8755089986440885,
+      "model374_delta_vs_model329_pp": 1.2853620658018539,
+      "blend_delta_vs_model329_pp": 1.4153420985402287,
+      "confidence_gate_delta_vs_model329_pp": 1.3991681119301935,
+      "confidence_gate_delta_vs_blend_pp": -0.016173986610035218,
+      "model329_class_iou": [
+        0.9588562144944436,
+        0.9254687103219285,
+        0.8910913065411131,
+        0.670653038741661
+      ],
+      "model374_class_iou": [
+        0.9625190793523161,
+        0.927887421787184,
+        0.9091672996900986,
+        0.6979099519016214
+      ],
+      "blend_class_iou": [
+        0.962226739150924,
+        0.9294420534705782,
+        0.9086853684997878,
+        0.7023287929194652
+      ],
+      "confidence_gate_class_iou": [
+        0.9621238528846838,
+        0.9291844201388805,
+        0.9088183777957424,
+        0.7019093437570473
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.3370524656480467,
+        0.39733431486497217,
+        1.7594061958674634,
+        3.1675754177804105
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        0.3267638390240246,
+        0.37157098169520175,
+        1.7727071254629245,
+        3.125630501538623
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        -0.01028862662402208,
+        -0.02576333316977042,
+        0.013300929595461142,
+        -0.04194491624178731
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.44746501254194276,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8615173175247866
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8743709381828051
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8756707385101888
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8755089986440885
+        }
+      },
+      "prediction_disagreement_fraction": 0.01816300565893835,
+      "model374_correct_only_pixels": 12103,
+      "model329_correct_only_pixels": 7848,
+      "image_oracle_best_model_miou_empty0": 0.8743709381828051,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8941295847621881
+    },
+    {
+      "image": "A164_step1_sample2",
+      "fold": 1,
+      "specimen_group": "A164",
+      "pixels": 1161702,
+      "model329_miou_empty0": 0.6618926171658177,
+      "model374_miou_empty0": 0.710856881057061,
+      "fixed_half_blend_miou_empty0": 0.6779610024614346,
+      "fixed_max_confidence_gate_miou_empty0": 0.6787917401417422,
+      "model374_delta_vs_model329_pp": 4.896426389124331,
+      "blend_delta_vs_model329_pp": 1.6068385295616938,
+      "confidence_gate_delta_vs_model329_pp": 1.689912297592444,
+      "confidence_gate_delta_vs_blend_pp": 0.08307376803075028,
+      "model329_class_iou": [
+        0.9646668280369307,
+        0.9269947278100277,
+        0.5361679033146486,
+        0.21974100950166378
+      ],
+      "model374_class_iou": [
+        0.9636564928280319,
+        0.9272047388020398,
+        0.6610849608823078,
+        0.29148133171586466
+      ],
+      "blend_class_iou": [
+        0.9652167051732659,
+        0.9300338015939468,
+        0.5714911462431356,
+        0.2451023568353909
+      ],
+      "confidence_gate_class_iou": [
+        0.9652562474642502,
+        0.9301435347327995,
+        0.5742687404261527,
+        0.24549843794376597
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.05498771363351418,
+        0.30390737839190995,
+        3.5323242928486986,
+        2.5361347333727107
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        0.058941942731949304,
+        0.3148806922771863,
+        3.8100837111504138,
+        2.5757428442102186
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        0.003954229098435125,
+        0.010973313885276337,
+        0.27775941830171513,
+        0.039608110837507926
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.2875616982668533,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6618926171658177
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.710856881057061
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6779610024614346
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6787917401417422
+        }
+      },
+      "prediction_disagreement_fraction": 0.03344489378515316,
+      "model374_correct_only_pixels": 26063,
+      "model329_correct_only_pixels": 10577,
+      "image_oracle_best_model_miou_empty0": 0.710856881057061,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.73297997108551
+    },
+    {
+      "image": "A164_step4_sample1",
+      "fold": 1,
+      "specimen_group": "A164",
+      "pixels": 1161702,
+      "model329_miou_empty0": 0.8621741929659598,
+      "model374_miou_empty0": 0.8737015721324514,
+      "fixed_half_blend_miou_empty0": 0.8749136444988292,
+      "fixed_max_confidence_gate_miou_empty0": 0.8744330209531784,
+      "model374_delta_vs_model329_pp": 1.1527379166491603,
+      "blend_delta_vs_model329_pp": 1.2739451532869484,
+      "confidence_gate_delta_vs_model329_pp": 1.2258827987218668,
+      "confidence_gate_delta_vs_blend_pp": -0.048062354565081566,
+      "model329_class_iou": [
+        0.9437352186145204,
+        0.9010378789160056,
+        0.9069044879171462,
+        0.697019186416167
+      ],
+      "model374_class_iou": [
+        0.9452209024916117,
+        0.9009008505705387,
+        0.9229168918188696,
+        0.7257676436487851
+      ],
+      "blend_class_iou": [
+        0.9471512460863523,
+        0.906221198156682,
+        0.9195130039319721,
+        0.7267691298203109
+      ],
+      "confidence_gate_class_iou": [
+        0.9470874905592876,
+        0.9058244541067418,
+        0.9196026821660318,
+        0.7252174569806523
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.3416027471831895,
+        0.5183319240676387,
+        1.2608516014825932,
+        2.974994340414394
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        0.3352271944767282,
+        0.478657519073622,
+        1.269819424888563,
+        2.8198270564485317
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        -0.006375552706461285,
+        -0.039674404994016754,
+        0.0089678234059698,
+        -0.15516728396586243
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.444770689901541,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8621741929659598
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8737015721324514
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8749136444988292
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8744330209531784
+        }
+      },
+      "prediction_disagreement_fraction": 0.025627914904166472,
+      "model374_correct_only_pixels": 15693,
+      "model329_correct_only_pixels": 12910,
+      "image_oracle_best_model_miou_empty0": 0.8737015721324514,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8996059499255314
+    },
+    {
+      "image": "A16_step4_sample4",
+      "fold": 1,
+      "specimen_group": "A16",
+      "pixels": 324000,
+      "model329_miou_empty0": 0.8008908976111057,
+      "model374_miou_empty0": 0.7794718702182248,
+      "fixed_half_blend_miou_empty0": 0.7951615458463892,
+      "fixed_max_confidence_gate_miou_empty0": 0.7950930548887807,
+      "model374_delta_vs_model329_pp": -2.141902739288082,
+      "blend_delta_vs_model329_pp": -0.572935176471645,
+      "confidence_gate_delta_vs_model329_pp": -0.5797842722324975,
+      "confidence_gate_delta_vs_blend_pp": -0.006849095760852464,
+      "model329_class_iou": [
+        0.9438454906631352,
+        0.7153679142870628,
+        0.9081786770943248,
+        0.6361715083998997
+      ],
+      "model374_class_iou": [
+        0.9335109398027435,
+        0.6617411305499408,
+        0.9299268262433338,
+        0.5927085842768811
+      ],
+      "blend_class_iou": [
+        0.9395926836022841,
+        0.6999004409045655,
+        0.9178022615250797,
+        0.6233507973536273
+      ],
+      "confidence_gate_class_iou": [
+        0.9395686046920615,
+        0.6996048366105866,
+        0.9178857071816335,
+        0.6233130710708414
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        -0.42528070608510715,
+        -1.546747338249732,
+        0.962358443075495,
+        -1.282071104627236
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        -0.4276885971073674,
+        -1.5763077676476223,
+        0.9707030087308777,
+        -1.2858437329058225
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        -0.0024078910222602445,
+        -0.029560429397890164,
+        0.008344565655382663,
+        -0.0037726282785865983
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.7616481481481482,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8008908976111057
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7794718702182248
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7951615458463892
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7950930548887807
+        }
+      },
+      "prediction_disagreement_fraction": 0.04053703703703704,
+      "model374_correct_only_pixels": 5077,
+      "model329_correct_only_pixels": 7102,
+      "image_oracle_best_model_miou_empty0": 0.8008908976111057,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8478434397085584
+    },
+    {
+      "image": "A200_step4_sample3",
+      "fold": 1,
+      "specimen_group": "A200",
+      "pixels": 1161702,
+      "model329_miou_empty0": 0.6906528149115679,
+      "model374_miou_empty0": 0.6848039897437597,
+      "fixed_half_blend_miou_empty0": 0.6962091600744014,
+      "fixed_max_confidence_gate_miou_empty0": 0.6959732550014651,
+      "model374_delta_vs_model329_pp": -0.5848825167808269,
+      "blend_delta_vs_model329_pp": 0.5556345162833431,
+      "confidence_gate_delta_vs_model329_pp": 0.5320440089897183,
+      "confidence_gate_delta_vs_blend_pp": -0.023590507293624885,
+      "model329_class_iou": [
+        0.9394824243635898,
+        0.8404907260355805,
+        0.6267586097570642,
+        0.35587949949003705
+      ],
+      "model374_class_iou": [
+        0.9452920734261285,
+        0.847346613680848,
+        0.6103791875913801,
+        0.33619808427668196
+      ],
+      "blend_class_iou": [
+        0.9458824834522797,
+        0.8527598186963624,
+        0.6266966527861662,
+        0.359497685362797
+      ],
+      "confidence_gate_class_iou": [
+        0.945875060626361,
+        0.852450721070911,
+        0.6265656790437436,
+        0.35900155926484495
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.6400059088689902,
+        1.226909266078191,
+        -0.0061956970898058294,
+        0.36181858727599714
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        0.6392636262771201,
+        1.1959995035330517,
+        -0.019293071332060485,
+        0.3122059774807895
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        -0.000742282591870147,
+        -0.03090976254513933,
+        -0.013097374242254656,
+        -0.04961260979520765
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.42139378257074533,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6906528149115679
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6848039897437597
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6962091600744014
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6959732550014651
+        }
+      },
+      "prediction_disagreement_fraction": 0.036213245737719314,
+      "model374_correct_only_pixels": 19144,
+      "model329_correct_only_pixels": 17820,
+      "image_oracle_best_model_miou_empty0": 0.6906528149115679,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.7210932194752677
+    },
+    {
+      "image": "A51_step4_sample4",
+      "fold": 1,
+      "specimen_group": "A51",
+      "pixels": 1161702,
+      "model329_miou_empty0": 0.8342323122917469,
+      "model374_miou_empty0": 0.8232212977433364,
+      "fixed_half_blend_miou_empty0": 0.8317453394544089,
+      "fixed_max_confidence_gate_miou_empty0": 0.8313976809974948,
+      "model374_delta_vs_model329_pp": -1.101101454841047,
+      "blend_delta_vs_model329_pp": -0.24869728373380084,
+      "confidence_gate_delta_vs_model329_pp": -0.2834631294252099,
+      "confidence_gate_delta_vs_blend_pp": -0.03476584569140906,
+      "model329_class_iou": [
+        0.9330686214620241,
+        0.7537988918755829,
+        0.9506875977154526,
+        0.6993741381139281
+      ],
+      "model374_class_iou": [
+        0.9316340997115155,
+        0.7321610246081545,
+        0.9318595392671821,
+        0.6972305273864933
+      ],
+      "blend_class_iou": [
+        0.9339307105138468,
+        0.7504981250063862,
+        0.9370686155095412,
+        0.7054839067878614
+      ],
+      "confidence_gate_class_iou": [
+        0.9338840980349312,
+        0.7501265214524152,
+        0.9369088187521896,
+        0.7046712857504429
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.08620890518227231,
+        -0.33007668691966696,
+        -1.36189822059114,
+        0.6109768673933313
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        0.08154765729071478,
+        -0.36723704231677035,
+        -1.3778778963263072,
+        0.5297147636514787
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        -0.0046612478915575295,
+        -0.037160355397103384,
+        -0.01597967573516712,
+        -0.08126210374185261
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.563933779919463,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8342323122917469
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8232212977433364
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8317453394544089
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8313976809974948
+        }
+      },
+      "prediction_disagreement_fraction": 0.03116634042120957,
+      "model374_correct_only_pixels": 14540,
+      "model329_correct_only_pixels": 18893,
+      "image_oracle_best_model_miou_empty0": 0.8342323122917469,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8657752133769174
+    },
+    {
+      "image": "A57_step1_sample3",
+      "fold": 1,
+      "specimen_group": "A57",
+      "pixels": 324000,
+      "model329_miou_empty0": 0.5401427606026011,
+      "model374_miou_empty0": 0.5447530249370264,
+      "fixed_half_blend_miou_empty0": 0.5492659214000912,
+      "fixed_max_confidence_gate_miou_empty0": 0.5489902746549624,
+      "model374_delta_vs_model329_pp": 0.46102643344252403,
+      "blend_delta_vs_model329_pp": 0.9123160797490093,
+      "confidence_gate_delta_vs_model329_pp": 0.8847514052361283,
+      "confidence_gate_delta_vs_blend_pp": -0.027564674512881027,
+      "model329_class_iou": [
+        0.9266220010837972,
+        0.5250750822329218,
+        0.0,
+        0.7088739590936853
+      ],
+      "model374_class_iou": [
+        0.9316951645749079,
+        0.5198210513234746,
+        0.0,
+        0.7274958838497231
+      ],
+      "blend_class_iou": [
+        0.9318018635298752,
+        0.5347265056376601,
+        0.0,
+        0.7305353164328295
+      ],
+      "confidence_gate_class_iou": [
+        0.9317980331959744,
+        0.5333793852074802,
+        0.0,
+        0.730783680216395
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.5179862446077932,
+        0.9651423404738346,
+        0.0,
+        2.1661357339144205
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        0.5176032112177209,
+        0.830430297455842,
+        0.0,
+        2.1909721122709613
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        -0.0003830333900722849,
+        -0.13471204301799267,
+        0.0,
+        0.024836378356540845
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.5808827160493827,
+      "target_absent_class_count": 1,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [
+            2
+          ],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.5401427606026011
+        },
+        "Model374": {
+          "gt_absent_classes": [
+            2
+          ],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.5447530249370264
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [
+            2
+          ],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.5492659214000912
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [
+            2
+          ],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.5489902746549624
+        }
+      },
+      "prediction_disagreement_fraction": 0.04493518518518518,
+      "model374_correct_only_pixels": 7400,
+      "model329_correct_only_pixels": 5827,
+      "image_oracle_best_model_miou_empty0": 0.5447530249370264,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.5852643634875403
+    },
+    {
+      "image": "A64_step2_sample3",
+      "fold": 1,
+      "specimen_group": "A64",
+      "pixels": 324000,
+      "model329_miou_empty0": 0.7449903598903227,
+      "model374_miou_empty0": 0.7867668409928618,
+      "fixed_half_blend_miou_empty0": 0.7764220587204398,
+      "fixed_max_confidence_gate_miou_empty0": 0.7802275287847669,
+      "model374_delta_vs_model329_pp": 4.177648110253907,
+      "blend_delta_vs_model329_pp": 3.1431698830117094,
+      "confidence_gate_delta_vs_model329_pp": 3.523716889444417,
+      "confidence_gate_delta_vs_blend_pp": 0.38054700643270767,
+      "model329_class_iou": [
+        0.9409729486989759,
+        0.7296064424646173,
+        0.952848307578454,
+        0.3565337408192438
+      ],
+      "model374_class_iou": [
+        0.9454695775739569,
+        0.7457678986243063,
+        0.945241652479066,
+        0.5105882352941177
+      ],
+      "blend_class_iou": [
+        0.9483782032158178,
+        0.7556483401777253,
+        0.950823405746321,
+        0.45083828574189494
+      ],
+      "confidence_gate_class_iou": [
+        0.9484178453050048,
+        0.755425640459973,
+        0.9510930493273543,
+        0.46597358004673567
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.740525451684193,
+        2.6041897713108053,
+        -0.2024901832132997,
+        9.430454492265111
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        0.7444896606028983,
+        2.5819197995355703,
+        -0.17552582510996784,
+        10.943983922749185
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        0.003964208918705303,
+        -0.022269971775235042,
+        0.026964358103331865,
+        1.513529430484073
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.44627469135802467,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7449903598903227
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7867668409928618
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7764220587204398
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7802275287847669
+        }
+      },
+      "prediction_disagreement_fraction": 0.04771604938271605,
+      "model374_correct_only_pixels": 8369,
+      "model329_correct_only_pixels": 6117,
+      "image_oracle_best_model_miou_empty0": 0.7867668409928618,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8322545800150212
+    },
+    {
+      "image": "A69_step4_sample4",
+      "fold": 1,
+      "specimen_group": "A69",
+      "pixels": 324000,
+      "model329_miou_empty0": 0.7600533323831904,
+      "model374_miou_empty0": 0.8024059286694857,
+      "fixed_half_blend_miou_empty0": 0.7830397805347786,
+      "fixed_max_confidence_gate_miou_empty0": 0.7877172390327942,
+      "model374_delta_vs_model329_pp": 4.235259628629528,
+      "blend_delta_vs_model329_pp": 2.2986448151588235,
+      "confidence_gate_delta_vs_model329_pp": 2.766390664960383,
+      "confidence_gate_delta_vs_blend_pp": 0.46774584980155964,
+      "model329_class_iou": [
+        0.9357141557165217,
+        0.7835940773851097,
+        0.9439166898525378,
+        0.3769884065785926
+      ],
+      "model374_class_iou": [
+        0.9325987295568104,
+        0.8004586616488298,
+        0.9398395193485909,
+        0.5367268041237113
+      ],
+      "blend_class_iou": [
+        0.9376689181464392,
+        0.8024157138669012,
+        0.9426882957204616,
+        0.44938619440531297
+      ],
+      "confidence_gate_class_iou": [
+        0.9380090414920292,
+        0.8034847790584282,
+        0.942695114213198,
+        0.46668002136752135
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.19547624299174338,
+        1.8821636481791582,
+        -0.12283941320762048,
+        7.239778782672035
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        0.22948857755075158,
+        1.9890701673318523,
+        -0.12215756393398891,
+        8.969161478892874
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        0.034012334559008206,
+        0.10690651915269411,
+        0.000681849273631574,
+        1.729382696220838
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.49335802469135803,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7600533323831904
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8024059286694857
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7830397805347786
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7877172390327942
+        }
+      },
+      "prediction_disagreement_fraction": 0.04083024691358025,
+      "model374_correct_only_pixels": 7028,
+      "model329_correct_only_pixels": 5539,
+      "image_oracle_best_model_miou_empty0": 0.8024059286694857,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.837324109611948
+    },
+    {
+      "image": "A7_step1_sample2",
+      "fold": 1,
+      "specimen_group": "A7",
+      "pixels": 1161702,
+      "model329_miou_empty0": 0.8168402895578206,
+      "model374_miou_empty0": 0.8185936728457198,
+      "fixed_half_blend_miou_empty0": 0.8208264843405395,
+      "fixed_max_confidence_gate_miou_empty0": 0.8203447190175277,
+      "model374_delta_vs_model329_pp": 0.17533832878992017,
+      "blend_delta_vs_model329_pp": 0.3986194782718888,
+      "confidence_gate_delta_vs_model329_pp": 0.35044294597070813,
+      "confidence_gate_delta_vs_blend_pp": -0.048176532301180686,
+      "model329_class_iou": [
+        0.9671566168158436,
+        0.7809474194765301,
+        0.8891033970670131,
+        0.6301537248718959
+      ],
+      "model374_class_iou": [
+        0.9691269415612414,
+        0.770661402498652,
+        0.898367053424259,
+        0.6362192938987268
+      ],
+      "blend_class_iou": [
+        0.969710544361566,
+        0.7848702132893574,
+        0.893080684596577,
+        0.635644495114658
+      ],
+      "confidence_gate_class_iou": [
+        0.9695616307357647,
+        0.7830331425237904,
+        0.8936497786322036,
+        0.6351343241783521
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.25539275457223676,
+        0.392279381282723,
+        0.3977287529563833,
+        0.5490770242762122
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        0.24050139199210951,
+        0.20857230472602906,
+        0.4546381565190494,
+        0.4980599306456224
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        -0.014891362580127243,
+        -0.18370707655669394,
+        0.05690940356266605,
+        -0.051017093630589816
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.5506730641765272,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8168402895578206
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8185936728457198
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8208264843405395
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8203447190175277
+        }
+      },
+      "prediction_disagreement_fraction": 0.027441633052194107,
+      "model374_correct_only_pixels": 15949,
+      "model329_correct_only_pixels": 13865,
+      "image_oracle_best_model_miou_empty0": 0.8185936728457198,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8604136126705552
+    },
+    {
+      "image": "A7_step4_sample3",
+      "fold": 1,
+      "specimen_group": "A7",
+      "pixels": 1161702,
+      "model329_miou_empty0": 0.6747994264207133,
+      "model374_miou_empty0": 0.6423969404382667,
+      "fixed_half_blend_miou_empty0": 0.6677106357010213,
+      "fixed_max_confidence_gate_miou_empty0": 0.6671645324874591,
+      "model374_delta_vs_model329_pp": -3.240248598244666,
+      "blend_delta_vs_model329_pp": -0.708879071969204,
+      "confidence_gate_delta_vs_model329_pp": -0.7634893933254228,
+      "confidence_gate_delta_vs_blend_pp": -0.054610321356218794,
+      "model329_class_iou": [
+        0.8646197950073959,
+        0.6197307778334326,
+        0.8364063919619475,
+        0.37844074088007723
+      ],
+      "model374_class_iou": [
+        0.8361341360485142,
+        0.5010014937533949,
+        0.8501131105749844,
+        0.3823390213761733
+      ],
+      "blend_class_iou": [
+        0.854521691047102,
+        0.5664444281142903,
+        0.8531768668676826,
+        0.39669955677501056
+      ],
+      "confidence_gate_class_iou": [
+        0.8543018985966239,
+        0.5659994788987394,
+        0.8534015407818041,
+        0.3949552116726692
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        -1.009810396029398,
+        -5.328634971914226,
+        1.6770474905735022,
+        1.8258815894933333
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        -1.0317896410772076,
+        -5.3731298934693195,
+        1.6995148819856531,
+        1.6514470792591995
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        -0.02197924504780957,
+        -0.044494921555093825,
+        0.022467391412150928,
+        -0.1744345102341338
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.7523375185718885,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6747994264207133
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6423969404382667
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6677106357010213
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6671645324874591
+        }
+      },
+      "prediction_disagreement_fraction": 0.09763261146145913,
+      "model374_correct_only_pixels": 40128,
+      "model329_correct_only_pixels": 66161,
+      "image_oracle_best_model_miou_empty0": 0.6747994264207133,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.7354108404191749
+    },
+    {
+      "image": "A87_step2_sample2",
+      "fold": 1,
+      "specimen_group": "A87",
+      "pixels": 324000,
+      "model329_miou_empty0": 0.841893472964689,
+      "model374_miou_empty0": 0.8507742927512313,
+      "fixed_half_blend_miou_empty0": 0.8542502058565669,
+      "fixed_max_confidence_gate_miou_empty0": 0.8538897947310894,
+      "model374_delta_vs_model329_pp": 0.8880819786542316,
+      "blend_delta_vs_model329_pp": 1.2356732891877886,
+      "confidence_gate_delta_vs_model329_pp": 1.199632176640042,
+      "confidence_gate_delta_vs_blend_pp": -0.03604111254774667,
+      "model329_class_iou": [
+        0.9343484403381697,
+        0.7845941900809579,
+        0.935912581216775,
+        0.7127186802228533
+      ],
+      "model374_class_iou": [
+        0.9361525704809287,
+        0.7751133280531167,
+        0.968043323018329,
+        0.7237879494525506
+      ],
+      "blend_class_iou": [
+        0.9368818428816097,
+        0.7852258810722548,
+        0.9654538990282058,
+        0.7294392004441976
+      ],
+      "confidence_gate_class_iou": [
+        0.9368760483285047,
+        0.784619046000068,
+        0.9653966937251881,
+        0.7286673908705966
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.2533402543440033,
+        0.0631690991296896,
+        2.9541317811430767,
+        1.6720520221344293
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        0.25276079903350235,
+        0.0024855919110167157,
+        2.9484112508413096,
+        1.594871064774328
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        -0.0005794553105009648,
+        -0.06068350721867288,
+        -0.005720530301767113,
+        -0.07718095736010122
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.5724351851851852,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.841893472964689
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8507742927512313
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8542502058565669
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8538897947310894
+        }
+      },
+      "prediction_disagreement_fraction": 0.031953703703703706,
+      "model374_correct_only_pixels": 5046,
+      "model329_correct_only_pixels": 4508,
+      "image_oracle_best_model_miou_empty0": 0.8507742927512313,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8818169334705577
+    },
+    {
+      "image": "A8_step2_sample3",
+      "fold": 1,
+      "specimen_group": "A8",
+      "pixels": 324000,
+      "model329_miou_empty0": 0.775767491141526,
+      "model374_miou_empty0": 0.7858189236228816,
+      "fixed_half_blend_miou_empty0": 0.7921598503676872,
+      "fixed_max_confidence_gate_miou_empty0": 0.7926301823237587,
+      "model374_delta_vs_model329_pp": 1.0051432481355649,
+      "blend_delta_vs_model329_pp": 1.6392359226161224,
+      "confidence_gate_delta_vs_model329_pp": 1.6862691182232714,
+      "confidence_gate_delta_vs_blend_pp": 0.047033195607149025,
+      "model329_class_iou": [
+        0.91075126691675,
+        0.7601404326769632,
+        0.8037984092767413,
+        0.628379855695649
+      ],
+      "model374_class_iou": [
+        0.9055890998227872,
+        0.7375443733856375,
+        0.8291288261015809,
+        0.6710133951815213
+      ],
+      "blend_class_iou": [
+        0.9111018742039829,
+        0.75635203655207,
+        0.8299440080877206,
+        0.6712414826269754
+      ],
+      "confidence_gate_class_iou": [
+        0.9113601331278102,
+        0.7565015113315039,
+        0.8308443199937775,
+        0.6718147648419429
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.03506072872329069,
+        -0.3788396124893234,
+        2.614559881097933,
+        4.286162693132633
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        0.060886621106015504,
+        -0.36389213454592895,
+        2.7045910717036215,
+        4.343490914629388
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        0.025825892382724813,
+        0.01494747794339446,
+        0.09003119060568832,
+        0.057328221496755205
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.5547438271604939,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.775767491141526
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7858189236228816
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7921598503676872
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7926301823237587
+        }
+      },
+      "prediction_disagreement_fraction": 0.05732716049382716,
+      "model374_correct_only_pixels": 8505,
+      "model329_correct_only_pixels": 8262,
+      "image_oracle_best_model_miou_empty0": 0.7858189236228816,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8410077075804072
+    },
+    {
+      "image": "A8_step3_sample3",
+      "fold": 1,
+      "specimen_group": "A8",
+      "pixels": 324000,
+      "model329_miou_empty0": 0.751387503526932,
+      "model374_miou_empty0": 0.7395772375895444,
+      "fixed_half_blend_miou_empty0": 0.7592797689135448,
+      "fixed_max_confidence_gate_miou_empty0": 0.7592453662386555,
+      "model374_delta_vs_model329_pp": -1.1810265937387543,
+      "blend_delta_vs_model329_pp": 0.7892265386612807,
+      "confidence_gate_delta_vs_model329_pp": 0.7857862711723507,
+      "confidence_gate_delta_vs_blend_pp": -0.0034402674889300044,
+      "model329_class_iou": [
+        0.8909777261349381,
+        0.7146559439998932,
+        0.8173744594354938,
+        0.5825418845374026
+      ],
+      "model374_class_iou": [
+        0.8844309168050175,
+        0.6882756453893282,
+        0.8093883357041252,
+        0.5762140524597071
+      ],
+      "blend_class_iou": [
+        0.8913736542993116,
+        0.7113358169238957,
+        0.8300333673441249,
+        0.6043762370868468
+      ],
+      "confidence_gate_class_iou": [
+        0.8916433542182045,
+        0.7116684406599255,
+        0.8292098302843288,
+        0.6044598397921628
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.039592816437350464,
+        -0.3320127075997492,
+        1.2658907908631112,
+        2.1834352549444214
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        0.0665628083266423,
+        -0.29875033399676676,
+        1.1835370848835014,
+        2.1917955254760146
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        0.026969991889291833,
+        0.033262373602982453,
+        -0.08235370597960978,
+        0.008360270531593272
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.5370308641975309,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.751387503526932
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7395772375895444
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7592797689135448
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7592453662386555
+        }
+      },
+      "prediction_disagreement_fraction": 0.0666141975308642,
+      "model374_correct_only_pixels": 8520,
+      "model329_correct_only_pixels": 10837,
+      "image_oracle_best_model_miou_empty0": 0.751387503526932,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8099868747600858
+    },
+    {
+      "image": "A94_step4_sample2",
+      "fold": 1,
+      "specimen_group": "A94",
+      "pixels": 324000,
+      "model329_miou_empty0": 0.8025081236473028,
+      "model374_miou_empty0": 0.7319230544586252,
+      "fixed_half_blend_miou_empty0": 0.7840601050354628,
+      "fixed_max_confidence_gate_miou_empty0": 0.7839726575790794,
+      "model374_delta_vs_model329_pp": -7.058506918867769,
+      "blend_delta_vs_model329_pp": -1.844801861184009,
+      "confidence_gate_delta_vs_model329_pp": -1.8535466068223427,
+      "confidence_gate_delta_vs_blend_pp": -0.008744745638333828,
+      "model329_class_iou": [
+        0.9411604145247432,
+        0.8259792242447346,
+        0.7871557067623619,
+        0.6557371490573715
+      ],
+      "model374_class_iou": [
+        0.9358018754508295,
+        0.8040787176638629,
+        0.6227804244261586,
+        0.5650312002936498
+      ],
+      "blend_class_iou": [
+        0.9393893989338999,
+        0.8197356733331539,
+        0.7425510545698025,
+        0.6345642933049946
+      ],
+      "confidence_gate_class_iou": [
+        0.9396433034192889,
+        0.8190629831283189,
+        0.7439414941924383,
+        0.6332428495762712
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        -0.177101559084325,
+        -0.6243550911580686,
+        -4.460465219255938,
+        -2.117285575237682
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        -0.15171111054542719,
+        -0.6916241116415645,
+        -4.321421256992364,
+        -2.2494299481100266
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        0.025390448538897825,
+        -0.06726902048349581,
+        0.13904396226357418,
+        -0.13214437287234482
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.5433302469135802,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8025081236473028
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7319230544586252
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7840601050354628
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7839726575790794
+        }
+      },
+      "prediction_disagreement_fraction": 0.04304320987654321,
+      "model374_correct_only_pixels": 3919,
+      "model329_correct_only_pixels": 9213,
+      "image_oracle_best_model_miou_empty0": 0.8025081236473028,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8365153705828586
+    },
+    {
+      "image": "A106_step4_sample1",
+      "fold": 2,
+      "specimen_group": "A106",
+      "pixels": 1076250,
+      "model329_miou_empty0": 0.7562321368931398,
+      "model374_miou_empty0": 0.7601348563534243,
+      "fixed_half_blend_miou_empty0": 0.7674886766528961,
+      "fixed_max_confidence_gate_miou_empty0": 0.7669484598614986,
+      "model374_delta_vs_model329_pp": 0.39027194602844206,
+      "blend_delta_vs_model329_pp": 1.1256539759756268,
+      "confidence_gate_delta_vs_model329_pp": 1.0716322968358782,
+      "confidence_gate_delta_vs_blend_pp": -0.054021679139748535,
+      "model329_class_iou": [
+        0.9254484994647537,
+        0.8349826681630464,
+        0.7688633687469405,
+        0.49563401119781847
+      ],
+      "model374_class_iou": [
+        0.9324751403201104,
+        0.8419454317952807,
+        0.7611697582756815,
+        0.5049490950226244
+      ],
+      "blend_class_iou": [
+        0.9321986589931963,
+        0.8430108242576523,
+        0.779029052711271,
+        0.5157161706494648
+      ],
+      "confidence_gate_class_iou": [
+        0.9320051376226006,
+        0.8428724413643097,
+        0.77818157254796,
+        0.5147346879111241
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.6750159528442601,
+        0.8028156094605832,
+        1.0165683964330485,
+        2.0082159451646375
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        0.6556638157846906,
+        0.7889773201263273,
+        0.9318203801019553,
+        1.910067671330562
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        -0.019352137059569507,
+        -0.013838289334255904,
+        -0.08474801633109319,
+        -0.09814827383407554
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.5662634146341463,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7562321368931398
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7601348563534243
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7674886766528961
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7669484598614986
+        }
+      },
+      "prediction_disagreement_fraction": 0.034421370499419277,
+      "model374_correct_only_pixels": 18999,
+      "model329_correct_only_pixels": 15401,
+      "image_oracle_best_model_miou_empty0": 0.7601348563534243,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8044690738526264
+    },
+    {
+      "image": "A111_step1_sample2",
+      "fold": 2,
+      "specimen_group": "A111",
+      "pixels": 1076250,
+      "model329_miou_empty0": 0.8300845202250632,
+      "model374_miou_empty0": 0.8359637771596631,
+      "fixed_half_blend_miou_empty0": 0.8374118367151052,
+      "fixed_max_confidence_gate_miou_empty0": 0.8370079073103828,
+      "model374_delta_vs_model329_pp": 0.5879256934599897,
+      "blend_delta_vs_model329_pp": 0.7327316490042035,
+      "confidence_gate_delta_vs_model329_pp": 0.6923387085319588,
+      "confidence_gate_delta_vs_blend_pp": -0.04039294047224473,
+      "model329_class_iou": [
+        0.9461609227938574,
+        0.7895011821796382,
+        0.929725509039582,
+        0.6549504668871751
+      ],
+      "model374_class_iou": [
+        0.9538095127866811,
+        0.792853732648572,
+        0.9371832005792904,
+        0.6600086626241087
+      ],
+      "blend_class_iou": [
+        0.953022224853838,
+        0.7954132819435337,
+        0.9370254308786309,
+        0.6641864091844183
+      ],
+      "confidence_gate_class_iou": [
+        0.9528912801436469,
+        0.795213714856572,
+        0.9366150509128156,
+        0.6633115833284969
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.686130205998059,
+        0.5912099763895506,
+        0.7299921839048928,
+        0.9235942297243227
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        0.673035734978944,
+        0.5712532676933835,
+        0.6889541873233651,
+        0.836111644132187
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        -0.013094471019114984,
+        -0.01995670869616717,
+        -0.041037996581527736,
+        -0.08748258559213573
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.4477063879210221,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8300845202250632
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8359637771596631
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8374118367151052
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8370079073103828
+        }
+      },
+      "prediction_disagreement_fraction": 0.02739419279907085,
+      "model374_correct_only_pixels": 15787,
+      "model329_correct_only_pixels": 11381,
+      "image_oracle_best_model_miou_empty0": 0.8359637771596631,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8623767332680204
+    },
+    {
+      "image": "A111_step3_sample4",
+      "fold": 2,
+      "specimen_group": "A111",
+      "pixels": 1076250,
+      "model329_miou_empty0": 0.8506724227456616,
+      "model374_miou_empty0": 0.8472919556579843,
+      "fixed_half_blend_miou_empty0": 0.8550563564966618,
+      "fixed_max_confidence_gate_miou_empty0": 0.8537343371713815,
+      "model374_delta_vs_model329_pp": -0.33804670876772525,
+      "blend_delta_vs_model329_pp": 0.4383933751000213,
+      "confidence_gate_delta_vs_model329_pp": 0.30619144257199027,
+      "confidence_gate_delta_vs_blend_pp": -0.13220193252803103,
+      "model329_class_iou": [
+        0.9367300251362725,
+        0.8211165453987468,
+        0.9794342922622279,
+        0.6654088281853993
+      ],
+      "model374_class_iou": [
+        0.9444724743337547,
+        0.8178789072810947,
+        0.979669094912749,
+        0.6471473461043387
+      ],
+      "blend_class_iou": [
+        0.9438663606222902,
+        0.8269075932119411,
+        0.9796739999095282,
+        0.6697774722428876
+      ],
+      "confidence_gate_class_iou": [
+        0.9435629775399493,
+        0.8257944344183422,
+        0.9795253746645358,
+        0.6660545620626983
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.7136335486017775,
+        0.5791047813194283,
+        0.023970764730030236,
+        0.436864405748838
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        0.6832952403676873,
+        0.4677889019595427,
+        0.00910824023079293,
+        0.06457338772990484
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        -0.030338308234090228,
+        -0.11131587935988563,
+        -0.014862524499237306,
+        -0.37229101801893316
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.43296724738675957,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8506724227456616
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8472919556579843
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8550563564966618
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8537343371713815
+        }
+      },
+      "prediction_disagreement_fraction": 0.029592566782810685,
+      "model374_correct_only_pixels": 15432,
+      "model329_correct_only_pixels": 13855,
+      "image_oracle_best_model_miou_empty0": 0.8506724227456616,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8816201608164393
+    },
+    {
+      "image": "A123_step1_sample1",
+      "fold": 2,
+      "specimen_group": "A123",
+      "pixels": 1076250,
+      "model329_miou_empty0": 0.7795122608961492,
+      "model374_miou_empty0": 0.7999363519239712,
+      "fixed_half_blend_miou_empty0": 0.7989026156335947,
+      "fixed_max_confidence_gate_miou_empty0": 0.798561260219717,
+      "model374_delta_vs_model329_pp": 2.0424091027821945,
+      "blend_delta_vs_model329_pp": 1.9390354737445437,
+      "confidence_gate_delta_vs_model329_pp": 1.904899932356774,
+      "confidence_gate_delta_vs_blend_pp": -0.03413554138776975,
+      "model329_class_iou": [
+        0.9271362496294154,
+        0.7730577199377117,
+        0.8696787869178065,
+        0.5481762870996634
+      ],
+      "model374_class_iou": [
+        0.938395741804048,
+        0.7941696638020561,
+        0.8893362387429564,
+        0.5778437633468242
+      ],
+      "blend_class_iou": [
+        0.9374526335733232,
+        0.7907524833466332,
+        0.888761672136987,
+        0.5786436734774351
+      ],
+      "confidence_gate_class_iou": [
+        0.9373202654876933,
+        0.7905429572930824,
+        0.8881894433618571,
+        0.5781923747362351
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        1.031638394390777,
+        1.769476340892151,
+        1.9082885219180445,
+        3.046738637777169
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        1.0184015858277884,
+        1.7485237355370775,
+        1.8510656444050588,
+        3.001608763657171
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        -0.013236808562988589,
+        -0.020952605355073484,
+        -0.057222877512985715,
+        -0.045129874119997915
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.499734262485482,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7795122608961492
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7999363519239712
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7989026156335947
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.798561260219717
+        }
+      },
+      "prediction_disagreement_fraction": 0.04867084785133566,
+      "model374_correct_only_pixels": 30380,
+      "model329_correct_only_pixels": 17309,
+      "image_oracle_best_model_miou_empty0": 0.7999363519239712,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8326963824445426
+    },
+    {
+      "image": "A123_step4_sample2",
+      "fold": 2,
+      "specimen_group": "A123",
+      "pixels": 1076250,
+      "model329_miou_empty0": 0.8676996074623653,
+      "model374_miou_empty0": 0.870869923440556,
+      "fixed_half_blend_miou_empty0": 0.8721820468154432,
+      "fixed_max_confidence_gate_miou_empty0": 0.8718971495958543,
+      "model374_delta_vs_model329_pp": 0.317031597819073,
+      "blend_delta_vs_model329_pp": 0.4482439353077905,
+      "confidence_gate_delta_vs_model329_pp": 0.4197542133488996,
+      "confidence_gate_delta_vs_blend_pp": -0.02848972195889088,
+      "model329_class_iou": [
+        0.9420177645869626,
+        0.8794653070562474,
+        0.9289864915855407,
+        0.7203288666207105
+      ],
+      "model374_class_iou": [
+        0.9425425304826248,
+        0.8747081054954782,
+        0.9384298466468299,
+        0.7277992111372914
+      ],
+      "blend_class_iou": [
+        0.9445458750963762,
+        0.8805104237530222,
+        0.934120595382746,
+        0.7295512930296284
+      ],
+      "confidence_gate_class_iou": [
+        0.9443835358736062,
+        0.8803310593368803,
+        0.9338065054844954,
+        0.7290674976884354
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.25281105094135947,
+        0.10451166967748726,
+        0.5134103797205358,
+        0.9222426408917905
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        0.23657712866436142,
+        0.08657522806329032,
+        0.48200138989547003,
+        0.8738631067724878
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        -0.016233922276998047,
+        -0.01793644161419694,
+        -0.03140898982506579,
+        -0.048379534119302736
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.3834425087108014,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8676996074623653
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.870869923440556
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8721820468154432
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8718971495958543
+        }
+      },
+      "prediction_disagreement_fraction": 0.026284785133565622,
+      "model374_correct_only_pixels": 13238,
+      "model329_correct_only_pixels": 13198,
+      "image_oracle_best_model_miou_empty0": 0.870869923440556,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8939693121371987
+    },
+    {
+      "image": "A139_step3_sample4",
+      "fold": 2,
+      "specimen_group": "A139",
+      "pixels": 1474560,
+      "model329_miou_empty0": 0.7215190997852441,
+      "model374_miou_empty0": 0.7441734948763424,
+      "fixed_half_blend_miou_empty0": 0.7404378285670352,
+      "fixed_max_confidence_gate_miou_empty0": 0.7403418483636354,
+      "model374_delta_vs_model329_pp": 2.2654395091098345,
+      "blend_delta_vs_model329_pp": 1.8918728781791128,
+      "confidence_gate_delta_vs_model329_pp": 1.882274857839128,
+      "confidence_gate_delta_vs_blend_pp": -0.009598020339984803,
+      "model329_class_iou": [
+        0.9360844654807142,
+        0.7812239383527371,
+        0.9283743293975533,
+        0.24039366590997177
+      ],
+      "model374_class_iou": [
+        0.9406420984193461,
+        0.8109578994907831,
+        0.9501879585645042,
+        0.274906023030736
+      ],
+      "blend_class_iou": [
+        0.9408050413149937,
+        0.8040086861111747,
+        0.9471895675980739,
+        0.26974801924389896
+      ],
+      "confidence_gate_class_iou": [
+        0.9406372804417847,
+        0.8044374603240678,
+        0.9464364975587519,
+        0.2698561551299372
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.4720575834279428,
+        2.278474775843764,
+        1.8815238200520668,
+        2.9354353333927192
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        0.4552814961070517,
+        2.3213521971330753,
+        1.8062168161198655,
+        2.946248921996544
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        -0.016776087320891087,
+        0.04287742128931127,
+        -0.07530700393220124,
+        0.010813588603825197
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.41369493272569446,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7215190997852441
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7441734948763424
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7404378285670352
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7403418483636354
+        }
+      },
+      "prediction_disagreement_fraction": 0.036402723524305555,
+      "model374_correct_only_pixels": 33480,
+      "model329_correct_only_pixels": 17261,
+      "image_oracle_best_model_miou_empty0": 0.7441734948763424,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.7722267080132303
+    },
+    {
+      "image": "A139_step4_sample3",
+      "fold": 2,
+      "specimen_group": "A139",
+      "pixels": 1474560,
+      "model329_miou_empty0": 0.8317267084707001,
+      "model374_miou_empty0": 0.8358520069379056,
+      "fixed_half_blend_miou_empty0": 0.8381145776589277,
+      "fixed_max_confidence_gate_miou_empty0": 0.8382364506481553,
+      "model374_delta_vs_model329_pp": 0.41252984672055515,
+      "blend_delta_vs_model329_pp": 0.6387869188227646,
+      "confidence_gate_delta_vs_model329_pp": 0.6509742177455258,
+      "confidence_gate_delta_vs_blend_pp": 0.012187298922761158,
+      "model329_class_iou": [
+        0.9484614714549469,
+        0.8019225239288502,
+        0.9835214127201474,
+        0.5930014257788558
+      ],
+      "model374_class_iou": [
+        0.9520719496045946,
+        0.8165885714441657,
+        0.9680811533888228,
+        0.6066663533140397
+      ],
+      "blend_class_iou": [
+        0.9515524089691902,
+        0.810377727828989,
+        0.9841089992351925,
+        0.606419174602339
+      ],
+      "confidence_gate_class_iou": [
+        0.9514258859695716,
+        0.811052151948617,
+        0.983793324775353,
+        0.6066744398990798
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.3090937514243386,
+        0.8455203900138764,
+        0.058758651504509096,
+        1.3417748823483122
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        0.29644145146247025,
+        0.91296280197668,
+        0.027191205520560313,
+        1.3673014120223925
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        -0.01265229996186834,
+        0.06744241196280365,
+        -0.03156744598394878,
+        0.02552652967408031
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.3101582845052083,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8317267084707001
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8358520069379056
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8381145776589277
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8382364506481553
+        }
+      },
+      "prediction_disagreement_fraction": 0.020490180121527778,
+      "model374_correct_only_pixels": 16672,
+      "model329_correct_only_pixels": 10940,
+      "image_oracle_best_model_miou_empty0": 0.8358520069379056,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8556754396028999
+    },
+    {
+      "image": "A147_step4_sample4",
+      "fold": 2,
+      "specimen_group": "A147",
+      "pixels": 1161702,
+      "model329_miou_empty0": 0.6814758651182178,
+      "model374_miou_empty0": 0.6941610890530359,
+      "fixed_half_blend_miou_empty0": 0.6948561471202359,
+      "fixed_max_confidence_gate_miou_empty0": 0.6949068755558674,
+      "model374_delta_vs_model329_pp": 1.268522393481808,
+      "blend_delta_vs_model329_pp": 1.338028200201813,
+      "confidence_gate_delta_vs_model329_pp": 1.3431010437649604,
+      "confidence_gate_delta_vs_blend_pp": 0.005072843563147522,
+      "model329_class_iou": [
+        0.8471653329464243,
+        0.800324093406898,
+        0.8538153337709667,
+        0.224598700348582
+      ],
+      "model374_class_iou": [
+        0.8521019450245348,
+        0.8225869755375526,
+        0.86616925806115,
+        0.2357861775889063
+      ],
+      "blend_class_iou": [
+        0.8629907277630122,
+        0.8260500950852152,
+        0.8626870637092102,
+        0.22769670192350605
+      ],
+      "confidence_gate_class_iou": [
+        0.8630199651095174,
+        0.8259526801616505,
+        0.862322413457018,
+        0.22833244349528387
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        1.5825394816587957,
+        2.572600167831718,
+        0.8871729938243478,
+        0.3098001574924042
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        1.585463216309313,
+        2.5628586754752436,
+        0.8507079686051244,
+        0.37337431467018567
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        0.002923734650517318,
+        -0.009741492356474257,
+        -0.036465025219223346,
+        0.06357415717778148
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.5645664722966819,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6814758651182178
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6941610890530359
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6948561471202359
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6949068755558674
+        }
+      },
+      "prediction_disagreement_fraction": 0.06479888990463992,
+      "model374_correct_only_pixels": 41323,
+      "model329_correct_only_pixels": 32234,
+      "image_oracle_best_model_miou_empty0": 0.6941610890530359,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.7375349727176023
+    },
+    {
+      "image": "A152_step2_sample1",
+      "fold": 2,
+      "specimen_group": "A152",
+      "pixels": 1161702,
+      "model329_miou_empty0": 0.8199502799875887,
+      "model374_miou_empty0": 0.8293083833227142,
+      "fixed_half_blend_miou_empty0": 0.8311475778827133,
+      "fixed_max_confidence_gate_miou_empty0": 0.8307642804208142,
+      "model374_delta_vs_model329_pp": 0.9358103335125434,
+      "blend_delta_vs_model329_pp": 1.119729789512458,
+      "confidence_gate_delta_vs_model329_pp": 1.0814000433225446,
+      "confidence_gate_delta_vs_blend_pp": -0.03832974618991347,
+      "model329_class_iou": [
+        0.9468842172346458,
+        0.8543663521600653,
+        0.8384486052732136,
+        0.64010194528243
+      ],
+      "model374_class_iou": [
+        0.9524174467998063,
+        0.8585934758423988,
+        0.8453173047876502,
+        0.6609053058610014
+      ],
+      "blend_class_iou": [
+        0.9520743988163825,
+        0.8598042264020889,
+        0.8491134313604349,
+        0.6635982549519471
+      ],
+      "confidence_gate_class_iou": [
+        0.9518687045675506,
+        0.859620535296211,
+        0.8488158463533626,
+        0.6627520354661324
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.5190181581736675,
+        0.5437874242023577,
+        1.0664826087221302,
+        2.34963096695171
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        0.4984487332904797,
+        0.5254183136145674,
+        1.036724108014897,
+        2.2650090183702343
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        -0.020569424883187803,
+        -0.018369110587790338,
+        -0.029758500707233182,
+        -0.08462194858147587
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.36072073561033724,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8199502799875887
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8293083833227142
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8311475778827133
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8307642804208142
+        }
+      },
+      "prediction_disagreement_fraction": 0.024299691314984394,
+      "model374_correct_only_pixels": 15324,
+      "model329_correct_only_pixels": 10749,
+      "image_oracle_best_model_miou_empty0": 0.8293083833227142,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8561772380058532
+    },
+    {
+      "image": "A15_step1_sample1",
+      "fold": 2,
+      "specimen_group": "A15",
+      "pixels": 324000,
+      "model329_miou_empty0": 0.8689933909805916,
+      "model374_miou_empty0": 0.8724134922031325,
+      "fixed_half_blend_miou_empty0": 0.8836091519061006,
+      "fixed_max_confidence_gate_miou_empty0": 0.8827359052000963,
+      "model374_delta_vs_model329_pp": 0.34201012225408833,
+      "blend_delta_vs_model329_pp": 1.461576092550898,
+      "confidence_gate_delta_vs_model329_pp": 1.3742514219504676,
+      "confidence_gate_delta_vs_blend_pp": -0.08732467060043048,
+      "model329_class_iou": [
+        0.9621340638683203,
+        0.896160179147731,
+        0.9175071070800054,
+        0.70017221382631
+      ],
+      "model374_class_iou": [
+        0.9647071628248018,
+        0.897861575556346,
+        0.9194337018927714,
+        0.707651528538611
+      ],
+      "blend_class_iou": [
+        0.9651021484419783,
+        0.9008463051715715,
+        0.9327957907683898,
+        0.7356923632424626
+      ],
+      "confidence_gate_class_iou": [
+        0.9650572155846538,
+        0.9006273525721455,
+        0.9319233198477322,
+        0.7333357327958537
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.29680845736579364,
+        0.46861260238404423,
+        1.528868368838443,
+        3.5520149416152558
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        0.2923151716333505,
+        0.44671734244144945,
+        1.4416212767726866,
+        3.3163518969543726
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        -0.00449328573244312,
+        -0.02189525994259478,
+        -0.08724709206575643,
+        -0.23566304466088317
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.37103395061728395,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8689933909805916
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8724134922031325
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8836091519061006
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8827359052000963
+        }
+      },
+      "prediction_disagreement_fraction": 0.023391975308641975,
+      "model374_correct_only_pixels": 3827,
+      "model329_correct_only_pixels": 3336,
+      "image_oracle_best_model_miou_empty0": 0.8724134922031325,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.9040039006430965
+    },
+    {
+      "image": "A167_step3_sample4",
+      "fold": 2,
+      "specimen_group": "A167",
+      "pixels": 1161702,
+      "model329_miou_empty0": 0.7855464249099195,
+      "model374_miou_empty0": 0.7988799864446482,
+      "fixed_half_blend_miou_empty0": 0.8031631283420494,
+      "fixed_max_confidence_gate_miou_empty0": 0.8027274782184197,
+      "model374_delta_vs_model329_pp": 1.3333561534728644,
+      "blend_delta_vs_model329_pp": 1.7616703432129843,
+      "confidence_gate_delta_vs_model329_pp": 1.7181053308500172,
+      "confidence_gate_delta_vs_blend_pp": -0.04356501236296717,
+      "model329_class_iou": [
+        0.9030331975533792,
+        0.835934583703163,
+        0.903747603276974,
+        0.49947031510616235
+      ],
+      "model374_class_iou": [
+        0.920106641185599,
+        0.8548395883269917,
+        0.9050764188275603,
+        0.5154972974384416
+      ],
+      "blend_class_iou": [
+        0.919564739100143,
+        0.8549734499175092,
+        0.9086578439248517,
+        0.5294564804256936
+      ],
+      "confidence_gate_class_iou": [
+        0.9194886046989118,
+        0.8548317745836052,
+        0.9082431166489403,
+        0.5283464169422217
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        1.653154154676384,
+        1.903886621434625,
+        0.4910240647877706,
+        2.9986165319531244
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        1.645540714553262,
+        1.8897190880442172,
+        0.44955133719662976,
+        2.8876101836059376
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        -0.0076134401231220394,
+        -0.014167533390407883,
+        -0.041472727591140846,
+        -0.11100634834718681
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.5606411971400583,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7855464249099195
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7988799864446482
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8031631283420494
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8027274782184197
+        }
+      },
+      "prediction_disagreement_fraction": 0.051062148468367964,
+      "model374_correct_only_pixels": 34250,
+      "model329_correct_only_pixels": 21098,
+      "image_oracle_best_model_miou_empty0": 0.7988799864446482,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8450819358979992
+    },
+    {
+      "image": "A182_step4_sample3",
+      "fold": 2,
+      "specimen_group": "A182",
+      "pixels": 1474560,
+      "model329_miou_empty0": 0.7059427346013717,
+      "model374_miou_empty0": 0.6899636354772547,
+      "fixed_half_blend_miou_empty0": 0.712011865945609,
+      "fixed_max_confidence_gate_miou_empty0": 0.7113675579967988,
+      "model374_delta_vs_model329_pp": -1.597909912411699,
+      "blend_delta_vs_model329_pp": 0.6069131344237255,
+      "confidence_gate_delta_vs_model329_pp": 0.5424823395427159,
+      "confidence_gate_delta_vs_blend_pp": -0.06443079488100967,
+      "model329_class_iou": [
+        0.9456725506029939,
+        0.8571763642360645,
+        0.6093202637489278,
+        0.4116017598175004
+      ],
+      "model374_class_iou": [
+        0.9325543324485643,
+        0.8277096410453515,
+        0.612030870728823,
+        0.38755969768627996
+      ],
+      "blend_class_iou": [
+        0.9415753031038504,
+        0.8479958119668288,
+        0.6319194404869836,
+        0.42655690822477305
+      ],
+      "confidence_gate_class_iou": [
+        0.9413951412713023,
+        0.8476752602356168,
+        0.6313899778752474,
+        0.42500985260502877
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        -0.40972474991435304,
+        -0.9180552269235642,
+        2.259917673805578,
+        1.4955148407272634
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        -0.42774093316916284,
+        -0.950110400044768,
+        2.206971412631964,
+        1.3408092787528358
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        -0.018016183254809803,
+        -0.03205517312120376,
+        -0.05294626117361423,
+        -0.15470556197442753
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.2882052951388889,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7059427346013717
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6899636354772547
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.712011865945609
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7113675579967988
+        }
+      },
+      "prediction_disagreement_fraction": 0.05214301215277778,
+      "model374_correct_only_pixels": 27486,
+      "model329_correct_only_pixels": 43953,
+      "image_oracle_best_model_miou_empty0": 0.7059427346013717,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.7577160104086498
+    },
+    {
+      "image": "A21_step2_sample4",
+      "fold": 2,
+      "specimen_group": "A21",
+      "pixels": 1161702,
+      "model329_miou_empty0": 0.8495393454474309,
+      "model374_miou_empty0": 0.8241576531642685,
+      "fixed_half_blend_miou_empty0": 0.85262795020481,
+      "fixed_max_confidence_gate_miou_empty0": 0.8520963936297705,
+      "model374_delta_vs_model329_pp": -2.538169228316245,
+      "blend_delta_vs_model329_pp": 0.3088604757379043,
+      "confidence_gate_delta_vs_model329_pp": 0.2557048182339594,
+      "confidence_gate_delta_vs_blend_pp": -0.05315565750394491,
+      "model329_class_iou": [
+        0.9503719076934226,
+        0.7880294874795226,
+        0.9018382079333185,
+        0.7579177786834598
+      ],
+      "model374_class_iou": [
+        0.9434321207527174,
+        0.7144003611375834,
+        0.8953338997451147,
+        0.7434642310216583
+      ],
+      "blend_class_iou": [
+        0.9501948659483372,
+        0.7719108527786696,
+        0.9144031278824841,
+        0.7740029542097489
+      ],
+      "confidence_gate_class_iou": [
+        0.9500961738664869,
+        0.7711050885235936,
+        0.9139205854638246,
+        0.7732637266651771
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        -0.01770417450853712,
+        -1.6118634700853063,
+        1.2564919949165643,
+        1.6085175526289075
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        -0.027573382693568682,
+        -1.692439895592901,
+        1.2082377530506117,
+        1.534594798171729
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        -0.009869208185031564,
+        -0.0805764255075947,
+        -0.04825424186595262,
+        -0.07392275445717855
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.5584091272977063,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8495393454474309
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8241576531642685
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.85262795020481
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8520963936297705
+        }
+      },
+      "prediction_disagreement_fraction": 0.03260474717268284,
+      "model374_correct_only_pixels": 13380,
+      "model329_correct_only_pixels": 21775,
+      "image_oracle_best_model_miou_empty0": 0.8495393454474309,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8792326782056358
+    },
+    {
+      "image": "A2_step4_sample1",
+      "fold": 2,
+      "specimen_group": "A2",
+      "pixels": 1161702,
+      "model329_miou_empty0": 0.6774224761666312,
+      "model374_miou_empty0": 0.6865666037916441,
+      "fixed_half_blend_miou_empty0": 0.6921214809300661,
+      "fixed_max_confidence_gate_miou_empty0": 0.691557761396662,
+      "model374_delta_vs_model329_pp": 0.9144127625012932,
+      "blend_delta_vs_model329_pp": 1.4699004763434886,
+      "confidence_gate_delta_vs_model329_pp": 1.4135285230030825,
+      "confidence_gate_delta_vs_blend_pp": -0.05637195334040612,
+      "model329_class_iou": [
+        0.8230053734720171,
+        0.6026878942496071,
+        0.8037631318191025,
+        0.4802335051257981
+      ],
+      "model374_class_iou": [
+        0.8514471636255257,
+        0.6428759388603608,
+        0.8104574805135007,
+        0.44148583216718895
+      ],
+      "blend_class_iou": [
+        0.8450032446463336,
+        0.6363581876412078,
+        0.8142860285544581,
+        0.472838462878265
+      ],
+      "confidence_gate_class_iou": [
+        0.8450813499019646,
+        0.636209602486121,
+        0.8146724727564632,
+        0.4702676204420994
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        2.199787117431651,
+        3.367029339160066,
+        1.0522896735355558,
+        -0.7395042247533123
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        2.207597642994752,
+        3.3521708236513903,
+        1.0909340937360623,
+        -0.9965884683698689
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        0.007810525563101134,
+        -0.014858515508675563,
+        0.03864442020050651,
+        -0.2570842436165566
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.5443091257482556,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6774224761666312
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6865666037916441
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6921214809300661
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.691557761396662
+        }
+      },
+      "prediction_disagreement_fraction": 0.08269074168762729,
+      "model374_correct_only_pixels": 49600,
+      "model329_correct_only_pixels": 35634,
+      "image_oracle_best_model_miou_empty0": 0.6865666037916441,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.7422716003198312
+    },
+    {
+      "image": "A39_step2_sample3",
+      "fold": 2,
+      "specimen_group": "A39",
+      "pixels": 1161702,
+      "model329_miou_empty0": 0.8454086698379851,
+      "model374_miou_empty0": 0.8546141752747579,
+      "fixed_half_blend_miou_empty0": 0.8577343866307161,
+      "fixed_max_confidence_gate_miou_empty0": 0.8573102532543405,
+      "model374_delta_vs_model329_pp": 0.9205505436772787,
+      "blend_delta_vs_model329_pp": 1.2325716792730979,
+      "confidence_gate_delta_vs_model329_pp": 1.1901583416355388,
+      "confidence_gate_delta_vs_blend_pp": -0.042413337637559057,
+      "model329_class_iou": [
+        0.9448597337105512,
+        0.824203271268388,
+        0.903084580842998,
+        0.7094870935300034
+      ],
+      "model374_class_iou": [
+        0.9530388585391104,
+        0.8377916524261647,
+        0.9040592481484954,
+        0.7235669419852614
+      ],
+      "blend_class_iou": [
+        0.9514407327346066,
+        0.8353357799993357,
+        0.9116855750597355,
+        0.7324754587291868
+      ],
+      "confidence_gate_class_iou": [
+        0.9513503048266659,
+        0.8353037910027532,
+        0.9111102754064658,
+        0.7314766417814771
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.6580999024055401,
+        1.1132508730947732,
+        0.8600994216737434,
+        2.298836519918346
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        0.649057111611473,
+        1.110051973436521,
+        0.80256945634678,
+        2.19895482514737
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        -0.009042790794067113,
+        -0.0031988996582521523,
+        -0.05752996532696342,
+        -0.09988169477097575
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.38189484050126454,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8454086698379851
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8546141752747579
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8577343866307161
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8573102532543405
+        }
+      },
+      "prediction_disagreement_fraction": 0.02336571685337548,
+      "model374_correct_only_pixels": 15726,
+      "model329_correct_only_pixels": 9620,
+      "image_oracle_best_model_miou_empty0": 0.8546141752747579,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.878505294102263
+    },
+    {
+      "image": "A49_step2_sample2",
+      "fold": 2,
+      "specimen_group": "A49",
+      "pixels": 1161702,
+      "model329_miou_empty0": 0.7767686662433141,
+      "model374_miou_empty0": 0.7560094675340345,
+      "fixed_half_blend_miou_empty0": 0.7747182008279064,
+      "fixed_max_confidence_gate_miou_empty0": 0.7734290701043096,
+      "model374_delta_vs_model329_pp": -2.075919870927956,
+      "blend_delta_vs_model329_pp": -0.2050465415407654,
+      "confidence_gate_delta_vs_model329_pp": -0.3339596139004475,
+      "confidence_gate_delta_vs_blend_pp": -0.12891307235968208,
+      "model329_class_iou": [
+        0.9492583073191068,
+        0.7524902352875217,
+        0.9172484830324369,
+        0.48807763933419085
+      ],
+      "model374_class_iou": [
+        0.952628852928863,
+        0.7283803974301509,
+        0.8943596621597129,
+        0.4486689576174112
+      ],
+      "blend_class_iou": [
+        0.9538944153217485,
+        0.7507375514788469,
+        0.9109249419043531,
+        0.48331589460667745
+      ],
+      "confidence_gate_class_iou": [
+        0.9535715169972022,
+        0.7493621469328727,
+        0.9097483463286649,
+        0.4810342701584983
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.46361080026416923,
+        -0.1752683808674771,
+        -0.6323541128083754,
+        -0.4761744727513395
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        0.4313209678095453,
+        -0.312808835464895,
+        -0.7500136703772031,
+        -0.7043369175692538
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        -0.03228983245462391,
+        -0.13754045459741793,
+        -0.11765955756882773,
+        -0.22816244481791426
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.4152975547946031,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7767686662433141
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7560094675340345
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7747182008279064
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7734290701043096
+        }
+      },
+      "prediction_disagreement_fraction": 0.03805795290014134,
+      "model374_correct_only_pixels": 15216,
+      "model329_correct_only_pixels": 24263,
+      "image_oracle_best_model_miou_empty0": 0.7767686662433141,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8075334423450289
+    },
+    {
+      "image": "A61_step2_sample2",
+      "fold": 2,
+      "specimen_group": "A61",
+      "pixels": 324000,
+      "model329_miou_empty0": 0.6945294046324836,
+      "model374_miou_empty0": 0.662738753930485,
+      "fixed_half_blend_miou_empty0": 0.6877189984733683,
+      "fixed_max_confidence_gate_miou_empty0": 0.6869329876709427,
+      "model374_delta_vs_model329_pp": -3.17906507019986,
+      "blend_delta_vs_model329_pp": -0.6810406159115323,
+      "confidence_gate_delta_vs_model329_pp": -0.7596416961540897,
+      "confidence_gate_delta_vs_blend_pp": -0.07860108024255741,
+      "model329_class_iou": [
+        0.8776095335645149,
+        0.4240164913497476,
+        0.8621789759132238,
+        0.6143126177024482
+      ],
+      "model374_class_iou": [
+        0.8627242322894497,
+        0.33874568703064745,
+        0.872332228985284,
+        0.5771528674165591
+      ],
+      "blend_class_iou": [
+        0.8720575838142792,
+        0.386926535589087,
+        0.8824502007715928,
+        0.6094416737185142
+      ],
+      "confidence_gate_class_iou": [
+        0.8717737684978715,
+        0.38503812729381787,
+        0.882625786163522,
+        0.6082942687285594
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        -0.5551949750235652,
+        -3.7089955760660596,
+        2.0271224858368964,
+        -0.4870943983933951
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        -0.5835765066643406,
+        -3.897836405592975,
+        2.0446810250298264,
+        -0.6018348973888754
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        -0.028381531640775393,
+        -0.18884082952691505,
+        0.017558539192930045,
+        -0.11474049899548033
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.5362932098765432,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6945294046324836
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.662738753930485
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6877189984733683
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6869329876709427
+        }
+      },
+      "prediction_disagreement_fraction": 0.059737654320987654,
+      "model374_correct_only_pixels": 5826,
+      "model329_correct_only_pixels": 11243,
+      "image_oracle_best_model_miou_empty0": 0.6945294046324836,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.7348529048456544
+    },
+    {
+      "image": "A78_step4_sample1",
+      "fold": 2,
+      "specimen_group": "A78",
+      "pixels": 324000,
+      "model329_miou_empty0": 0.7813673260977039,
+      "model374_miou_empty0": 0.7384898073843289,
+      "fixed_half_blend_miou_empty0": 0.7634142068872813,
+      "fixed_max_confidence_gate_miou_empty0": 0.7634470192140939,
+      "model374_delta_vs_model329_pp": -4.287751871337497,
+      "blend_delta_vs_model329_pp": -1.795311921042253,
+      "confidence_gate_delta_vs_model329_pp": -1.7920306883610015,
+      "confidence_gate_delta_vs_blend_pp": 0.003281232681251467,
+      "model329_class_iou": [
+        0.8483599607397777,
+        0.7444942408376963,
+        0.966246224906733,
+        0.5663688779066084
+      ],
+      "model374_class_iou": [
+        0.8093596891366784,
+        0.6574672014139079,
+        0.9620347925281619,
+        0.5250975464585675
+      ],
+      "blend_class_iou": [
+        0.8315726093382232,
+        0.7063694753900848,
+        0.9630987118354566,
+        0.5526160309853607
+      ],
+      "confidence_gate_class_iou": [
+        0.831414039872202,
+        0.7060156309666251,
+        0.9629945915172218,
+        0.5533638145003266
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        -1.6787351401554518,
+        -3.8124765447611564,
+        -0.31475130712763644,
+        -1.3752846921247674
+      ],
+      "class_delta_confidence_gate_vs_model329_pp": [
+        -1.6945920867575737,
+        -3.847860987107121,
+        -0.3251633389511177,
+        -1.3005063406281825
+      ],
+      "class_delta_confidence_gate_vs_blend_pp": [
+        -0.01585694660212189,
+        -0.03538444234596483,
+        -0.010412031823481271,
+        0.07477835149658496
+      ],
+      "confidence_gate_candidate_pixel_fraction": 0.5212808641975308,
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_target_predicted_by_confidence_gate": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7813673260977039
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7384898073843289
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7634142068872813
+        },
+        "fixed_max_confidence_gate": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7634470192140939
+        }
+      },
+      "prediction_disagreement_fraction": 0.06364506172839506,
+      "model374_correct_only_pixels": 4885,
+      "model329_correct_only_pixels": 15009,
+      "image_oracle_best_model_miou_empty0": 0.7813673260977039,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8122402802805004
+    }
+  ]
+}

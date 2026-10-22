@@ -1,0 +1,39 @@
+{
+  "metric": "valid20 image-wise four-class mIoU, empty union = 0",
+  "evaluation_role": "repeatedly used validation; exploratory ablation, not independent test performance",
+  "original_23": {
+    "checkpoints": 23,
+    "valid_miou": 0.8006834648740921
+  },
+  "lite_15": {
+    "checkpoints": 15,
+    "valid_miou": 0.8006435964878685,
+    "delta_vs_original_percentage_points": -0.003986838622360711,
+    "test_mask_difference_vs_original_d3_pixels": 14,
+    "recommended_status": "conservative default"
+  },
+  "lite_14_drop_ema": {
+    "checkpoints": 14,
+    "valid_miou": 0.8006503985745343,
+    "delta_vs_lite_15_percentage_points": 0.0006802086665813611,
+    "worst_valid_image_delta_percentage_points": -0.016082788155469263,
+    "test_mask_difference_vs_lite_15_pixels": 11,
+    "recommended_status": "exploratory; EMA brightness bands absent from test10"
+  },
+  "lite_13_drop_ema_seed456": {
+    "checkpoints": 13,
+    "valid_miou": 0.8005724554145223,
+    "delta_vs_lite_15_percentage_points": -0.007114107334627029,
+    "worst_valid_image_delta_percentage_points": -0.16395612462519749,
+    "test_mask_difference_vs_lite_15_pixels": 13,
+    "recommended_status": "exploratory; local valid degradation"
+  },
+  "lite_11_force_restart51": {
+    "checkpoints": 11,
+    "valid_miou": 0.8001889779395832,
+    "delta_vs_lite_15_percentage_points": -0.04546185482853238,
+    "recommended_status": "rejected by prespecified 0.02 percentage-point mean-loss criterion"
+  },
+  "test_pixels": 9074964,
+  "test_ground_truth_available": false
+}

@@ -1,0 +1,918 @@
+--- upstream/inference/infer_compact.py
++++ source/inference/infer_compact.py
+@@ -1,6 +1,6 @@
+ """Run the frozen compact R/E/F recipe from source images, without GT."""
+ from pathlib import Path
+-import argparse,json,subprocess,sys,os,hashlib,shutil
++import argparse,json,subprocess,sys,os,hashlib,shutil,time
+ ROOT=Path(__file__).resolve().parent
+ 
+ def sha(path):
+@@ -31,7 +31,12 @@
+   assert saved['inference']['b4_fold_ids']==rconfig['inference']['b4_fold_ids'], 'Reused R fold selection differs'
+   assert saved['route']==rconfig['route'] and saved['inference']['active_components']==rconfig['inference']['active_components'],'Existing release does not match compact R recipe'
+  assert not a.output.exists();a.output.mkdir(parents=True);release=a.release or a.output/'release'
+- def run(script,*args,env=None):subprocess.run([sys.executable,str(script),*map(str,args)],check=True,env=env)
++ phase_times=[]
++ def run(script,*args,env=None):
++  start=time.perf_counter()
++  subprocess.run([sys.executable,str(script),*map(str,args)],check=True,env=env)
++  phase_times.append({'script':Path(script).name,'wall_seconds':time.perf_counter()-start})
++  (a.output/'phase_timings.json').write_text(json.dumps(phase_times,indent=2)+'\n')
+  if not a.release:run(a.parent_package/'Model349_exh14/infer_lite.py','--input',a.input,'--output',release,'--config',rconfig_path,'--gpus',a.gpus)
+  env=os.environ.copy();env['CUDA_VISIBLE_DEVICES']=a.gpus
+  run(ROOT/'infer_expert.py','--parent-package',a.parent_package,'--assets',a.assets,'--input',a.input,'--output',a.output/'expert','--config',a.config,'--device','cuda',*(['--allow-retrained'] if a.allow_retrained else []),env=env)
+--- upstream/run_retrain.sh
++++ source/run_retrain.sh
+@@ -24,10 +24,8 @@
+ it(){ [[ $SMOKE == 1 ]] && echo 20 || echo "$1"; }
+ # stage NAME DONE_FILE SCRIPT ARGS... : 끝난 단계는 건너뛰고, 실패하면 그 레인을 멈춘다. CWD=폴더 로 작업 폴더 지정
+ stage(){ local name=$1 done=$2; shift 2
+-  if [[ -e "$done" ]]; then echo "skip $name"; return 0; fi
+-  echo "[$(date +%T)] run $name"
+-  ( cd "${CWD:-.}" && "$PY" -u "$@" ) > "$L/$name.log" 2>&1 || { echo "FAIL $name (see $L/$name.log)"; exit 1; }
+-  [[ -e "$done" ]] || { echo "FAIL $name (no $done)"; exit 1; }; }
++  ( cd "${CWD:-$ROOT}" && "$PY" "$ROOT/../stage.py" "$name" "$done" "$@" ); }
++
+ 
+ # ---------------------------------------------------------------- R1 restart61, R2 model269 (ResNet34 계열, 이어 학습)
+ # 원래 파이프라인과 같이 이 계열은 best.pt 선택에 valid 점수를 쓴다(학습에는 쓰지 않음).
+@@ -39,8 +37,8 @@
+ stage model109 "$W/model109_aspp_native/best.pt" "$HS/encoder_structure_search.py" --candidate aspp --data-dir "$DATA" --checkpoint "$W/model98_hard_negative/best.pt" --output-dir "$W/model109_aspp_native" --epochs $(ep 4) --patch-size 512 --val-stride 384 --patches-per-image 6 --lr 1.5e-5 --eval-bias -0.2 --seed 42 --skip-test-inference
+ stage restart51 "$W/restart51_aspp_768_finetune/best.pt" "$HS/encoder_structure_search.py" --candidate aspp --data-dir "$DATA" --checkpoint "$W/model109_aspp_native/best.pt" --output-dir "$W/restart51_aspp_768_finetune" --patch-size 768 --val-stride 576 --tile-batch-size 1 --patches-per-image 4 --epochs $(ep 6) --batch-size 2 --lr 8e-6 --eval-bias -0.55 --seed 123 --skip-test-inference
+ stage restart61 "$W/restart61_pairwise_margin/best.pt" "$HS/pairwise_margin_finetune.py" --data-dir "$DATA" --checkpoint "$W/restart51_aspp_768_finetune/best.pt" --output-dir "$W/restart61_pairwise_margin" --batch-size 1 --num-workers 2 --seed 42
+-stage model194 "$W/model194_multistage_seed2028/best.pt" "$HS/model194_multistage_team_schedule.py" --data-dir "$DATA" --checkpoint "$W/model109_aspp_native/best.pt" --output-dir "$W/model194_multistage_seed2028" --stage0-epochs $(ep 3) --stage1-epochs $(ep 3) --stage2-epochs 0 --stage0-patches 16 --stage1-patches 16 --stage2-patches 8 --stage0-batch 2 --stage1-batch 2 --stage2-batch 1 --encoder-lr 1e-4 --decoder-lr 3e-4 --selection-metric image_mean_miou_exclude --seed 2028
+-stage model195 "$W/model195_native_resume/best.pt" "$HS/model194_multistage_team_schedule.py" --data-dir "$DATA" --checkpoint "$W/model194_multistage_seed2028/best.pt" --output-dir "$W/model195_native_resume" --stage0-epochs 0 --stage1-epochs 0 --stage2-epochs $(ep 2) --stage2-patches 8 --stage2-batch 2 --eval-patch-size 768 --eval-stride 576 --tile-batch-size 2 --encoder-lr 5e-5 --decoder-lr 1.5e-4 --weight-decay 1e-4 --selection-metric image_mean_miou_exclude --seed 2028 --num-workers 4
++stage model194 "$W/model194_multistage_seed2028/best.pt" "$HS/model194_multistage_team_schedule.py" --data-dir "$DATA" --checkpoint "$W/model109_aspp_native/best.pt" --output-dir "$W/model194_multistage_seed2028" --stage0-epochs $(ep 3) --stage1-epochs $(ep 3) --stage2-epochs 0 --stage0-patches 16 --stage1-patches 16 --stage2-patches 8 --stage0-batch 2 --stage1-batch 2 --stage2-batch 1 --encoder-lr 1e-4 --decoder-lr 3e-4 --selection-metric image_mean_miou --seed 2028
++stage model195 "$W/model195_native_resume/best.pt" "$HS/model194_multistage_team_schedule.py" --data-dir "$DATA" --checkpoint "$W/model194_multistage_seed2028/best.pt" --output-dir "$W/model195_native_resume" --stage0-epochs 0 --stage1-epochs 0 --stage2-epochs $(ep 2) --stage2-patches 8 --stage2-batch 2 --eval-patch-size 768 --eval-stride 576 --tile-batch-size 2 --encoder-lr 5e-5 --decoder-lr 1.5e-4 --weight-decay 1e-4 --selection-metric image_mean_miou --seed 2028 --num-workers 4
+ stage model239 "$W/model239_native_stem/best.pt" "$HS/model239_native_stem_finetune.py" --data-dir "$DATA" --checkpoint "$W/model195_native_resume/best.pt" --output-dir "$W/model239_native_stem" --epochs $(ep 4) --encoder-lr 1e-5 --decoder-lr 3e-5 --native-lr 3e-4 --seed 239
+ stage model242 "$W/model242_native_stem_ema/best_ema.pt" "$HS/model242_ema_continuation.py" --data-dir "$DATA" --checkpoint "$W/model239_native_stem/best.pt" --output-dir "$W/model242_native_stem_ema" --epochs $(ep 4) --ema-decay 0.99 --encoder-lr 5e-6 --decoder-lr 1.5e-5 --native-lr 1e-4 --seed 242
+ stage model257 "$W/model257_full_image_stats_1x/best.pt" "$HS/model253_highres_scale_finetune.py" --data-dir "$DATA" --checkpoint "$W/model242_native_stem_ema/best_ema.pt" --output-dir "$W/model257_full_image_stats_1x" --scale 1 --patch-size 1024 --patches-per-image 8 --batch-size 2 --epochs $(ep 4) --scheduler-epochs $(ep 4) --encoder-lr 5e-6 --decoder-lr 1.5e-5 --native-lr 1e-4 --weight-decay 1e-4 --val-stride 576 --tta d4 --selection-metric image_mean_miou --seed 257 --global-representation --num-workers 4
+@@ -52,12 +50,13 @@
+ stage model336 "$W/model336_hrnet_best/last.pt" "$EXP/model336_hrnet_best/train.py" --data-root "$DATA" --output-dir "$W/model336_hrnet_best" --batch-size 4 --accumulation-steps 2 --epochs $(ep 70) --samples-per-image 12 --lr 3e-4 --encoder-lr-mult 1.0 --weight-decay 1e-4 --boundary-head-weight 1.0 --seed 0 --val-every 0
+ stage model347 "$W/model347_hrnet_inverse_ce_finetune/last.pt" "$EXP/model336_hrnet_best/train.py" --data-root "$DATA" --output-dir "$W/model347_hrnet_inverse_ce_finetune" --batch-size 4 --accumulation-steps 2 --epochs $(ep 12) --samples-per-image 12 --lr 1e-4 --encoder-lr-mult 0.3 --weight-decay 1e-4 --boundary-head-weight 1.0 --seed 347 --val-every 0 --init-checkpoint "$W/model336_hrnet_best/last.pt" --ce-class-weights 0.22906544 0.49862612 1.39166570 1.88064275
+ # N3 입력: 기존 밝기·Z·CDF를 RGB 8비트로 저장한 이미지(inference/zcdf_input.py와 같은 변환)
+-[[ -e $OUT/data_zcdf_png/done ]] || "$PY" "$ROOT/tools/make_zcdf_png.py" --data "$DATA" --out "$OUT/data_zcdf_png"
++stage prepare_n3 "$OUT/data_zcdf_png/done" "$ROOT/tools/make_zcdf_png.py" --data "$DATA" --out "$OUT/data_zcdf_png"
+ stage model414 "$E/model414_seed414/last.pt" "$EXP/model336_hrnet_best/train.py" --data-root "$OUT/data_zcdf_png" --output-dir "$E/model414_seed414" --device cuda:0 --architecture UnetPlusPlus --encoder-name tu-hrnet_w48 --patch-size 512 --input-scale 2 --samples-per-image 12 --batch-size 4 --accumulation-steps 2 --num-workers 4 --epochs $(ep 25) --lr 2e-4 --encoder-lr-mult .5 --weight-decay 1e-4 --boundary-head-weight 1 --seed 414 --val-every 0 --init-checkpoint "$W/model336_hrnet_best/last.pt"
+ }
+ 
+ # ---------------------------------------------------------------- 시편(A번호) 단위 4-fold 분할 (모든 B4·HRNet fold 학습이 공유)
+-prep_splits(){ [[ -d $E/splits/model329_cv ]] || "$PY" "$B/scripts/prepare_oof_splits.py" --data-root "$DATA" --output-root "$E/splits" > "$L/prepare_splits.log" 2>&1; }
++prep_splits(){ stage prepare_splits "$E/splits/model397_split_manifest.json" "$B/scripts/prepare_oof_splits.py" --data-root "$DATA" --output-root "$E/splits"; }
++
+ 
+ # ---------------------------------------------------------------- R4~R6 / E1~E2: B4 가로 4000 fold 1~4 (+ F 학습용 OOF), BN 고정 추가 학습 fold 1·3
+ lane_b4(){ local f
+@@ -111,6 +110,9 @@
+ }
+ 
+ # ---------------------------------------------------------------- 병렬 실행: 레인을 GPU에 나눠 배정(긴 레인부터)
++if [[ ${PLAN_ONLY:-0} == 1 ]]; then
++  prep_splits; lane_resnet; lane_hrnet; lane_b4; lane_r326; lane_hr392 1; lane_hr392 2; lane_hr70
++else
+ prep_splits
+ LANES=(resnet b4 hr1 hr2 hrnet hr70 r326); HOURS=(12 21 9 9 8 3 5)
+ declare -a LOAD ASSIGN; for gi in "${!G[@]}"; do LOAD[gi]=0; done
+@@ -124,14 +126,17 @@
+ for p in "${pids[@]}"; do wait "$p" || true; done
+ for l in "${LANES[@]}"; do grep -q LANE_DONE "$L/lane_$l.log" 2>/dev/null || { echo "lane $l did not finish"; exit 1; }; done
+ 
++fi
++
+ # ---------------------------------------------------------------- F1: E의 train70 OOF(B4 50% + HRNet seed1 25% + seed2 25%)로 보정기 학습, epoch 8
+ export CUDA_VISIBLE_DEVICES=${G[0]}
+-[[ -f $OUT/F/features/manifest.json ]] || "$PY" "$T/refiner_retrain/build_features.py" --model397-output "$E" --train "$DATA/train" \
+-  --palette-config "$PKG/Model349_exh14/configs/model349_lite.yaml" --out "$OUT/F/features" > "$L/F_features.log" 2>&1
+-[[ -f $OUT/F/training/epoch8.pt ]] || "$PY" "$T/refiner_retrain/train_refiner.py" --parent-package "$PKG" --features "$OUT/F/features" --out "$OUT/F/training" > "$L/F_train.log" 2>&1
++stage F_features "$OUT/F/features/manifest.json" "$T/refiner_retrain/build_features.py" --model397-output "$E" --train "$DATA/train" \
++  --palette-config "$PKG/Model349_exh14/configs/model349_lite.yaml" --out "$OUT/F/features"
++stage F_train "$OUT/F/training/epoch8.pt" "$T/refiner_retrain/train_refiner.py" --parent-package "$PKG" --features "$OUT/F/features" --out "$OUT/F/training"
+ 
+ # ---------------------------------------------------------------- 추론용 배치로 모으기 (lite13 13개 가중치) 후 예측
+-M=$OUT/model; rm -rf "$M"; mkdir -p "$M/weights/R" "$M/weights/E"
++[[ ${PLAN_ONLY:-0} == 1 ]] && exit 0
++M=$OUT/model; [[ ! -e $M ]] || { echo "Refusing to overwrite $M"; exit 1; }; mkdir -p "$M/weights/R" "$M/weights/E"
+ ln(){ mkdir -p "$(dirname "$2")"; command ln -sfn "$1" "$2"; }
+ for k in 1 3 4; do for f in last.pt args.json; do ln "$E/model329/fold$k/$f" "$M/weights/R/model329_fullstats_width4000_uniform_group_oof/fold$k/$f"; done; done
+ for f in last.pt args.json; do ln "$W/model326_hybrid_fullstats_group_oof/fold2/$f" "$M/weights/R/model326_hybrid_fullstats_group_oof/fold2/$f"; done
+@@ -145,8 +150,7 @@
+ ln "$OUT/F/training/epoch8.pt" "$M/weights/E/refiner/epoch8.pt"
+ for split in valid test; do
+   [[ -d $DATA/$split/images ]] || continue
+-  [[ -e $OUT/pred_$split/completion.json ]] && continue; rm -rf "$OUT/pred_$split"
+-  ALLOW_RETRAINED=1 bash "$ROOT/run_predict.sh" "$M/weights" "$DATA/$split/images" "$OUT/pred_$split" "${G[0]}"
++  "$PY" "$ROOT/../timed_predict.py" --source "$ROOT" --weights "$M/weights" --images "$DATA/$split/images" --output "$OUT/pred_$split" --gpus "${1:-0}" --split "$split"
+ done
+-[[ -d $DATA/valid/masks ]] && "$PY" "$ROOT/tools/score_masks.py" --labels "$OUT/pred_valid/fusion/predicted_labels" --gt "$DATA/valid/masks" --output "$OUT/pred_valid/metrics.json"
++stage score_valid "$OUT/pred_valid/metrics.json" "$ROOT/tools/score_masks.py" --labels "$OUT/pred_valid/fusion/predicted_labels" --gt "$DATA/valid/masks" --output "$OUT/pred_valid/metrics.json"
+ echo "ALL DONE -> $OUT (평가용 마스크: $OUT/pred_test/fusion/predicted_masks)"
+--- upstream/training/Model349_fusion805/b4ws/train_bnfreeze.py
++++ source/training/Model349_fusion805/b4ws/train_bnfreeze.py
+@@ -252,7 +252,7 @@
+ scaler = torch.amp.GradScaler("cuda", init_scale=args.amp_init_scale)
+ t0 = time.time()
+ run = 0.0
+-for it, (x, y) in enumerate(dl):
++for it, (x, y) in enumerate(__import__("tqdm").tqdm(dl, total=args.iters, desc="B4 iterations", mininterval=10)):
+     x, y = x.cuda(non_blocking=True), y.cuda(non_blocking=True)
+     with torch.autocast("cuda", dtype=torch.float16):
+         logits = model(x)
+--- upstream/training/Model349_fusion805/model397_reproduction_bundle/model329/train.py
++++ source/training/Model349_fusion805/model397_reproduction_bundle/model329/train.py
+@@ -227,7 +227,7 @@
+ scaler = torch.amp.GradScaler("cuda", init_scale=args.amp_init_scale)
+ t0 = time.time()
+ run = 0.0
+-for it, (x, y) in enumerate(dl):
++for it, (x, y) in enumerate(__import__("tqdm").tqdm(dl, total=args.iters, desc="B4 iterations", mininterval=10)):
+     x, y = x.cuda(non_blocking=True), y.cuda(non_blocking=True)
+     with torch.autocast("cuda", dtype=torch.float16):
+         logits = model(x)
+--- upstream/training/Model349_fusion805/model397_reproduction_bundle/model392/evaluate_image_mean.py
++++ source/training/Model349_fusion805/model397_reproduction_bundle/model392/evaluate_image_mean.py
+@@ -79,7 +79,6 @@
+ 
+     probabilities: dict[str, np.ndarray] = {}
+     rows: list[dict[str, object]] = []
+-    pooled = np.zeros((NUM_CLASSES, NUM_CLASSES), dtype=np.int64)
+     for sample in ds:
+         sample_scale = effective_input_scale(
+             preprocessing["input_scale"], preprocessing["target_width"], sample["width"]
+@@ -119,10 +118,6 @@
+             })
+             for class_id, name in enumerate(CLASS_NAMES):
+                 row[f"iou_{name}"] = ious[class_id]
+-            bins = target.reshape(-1) * NUM_CLASSES + pred.reshape(-1)
+-            pooled += np.bincount(bins, minlength=NUM_CLASSES**2).reshape(
+-                NUM_CLASSES, NUM_CLASSES
+-            )
+         rows.append(row)
+         if args.split == "valid":
+             print(
+@@ -176,13 +171,6 @@
+                               ("empty_one", "image_miou_empty_one")):
+             vals = [float(row[field]) for row in rows if np.isfinite(float(row[field]))]
+             summary[field] = float(np.mean(vals))
+-        intersection = np.diag(pooled).astype(np.float64)
+-        union = pooled.sum(0) + pooled.sum(1) - intersection
+-        global_iou = np.divide(intersection, union, out=np.zeros_like(intersection), where=union > 0)
+-        summary["pooled_global_miou_diagnostic_only"] = float(global_iou.mean())
+-        summary["pooled_global_iou_by_class"] = {
+-            name: float(value) for name, value in zip(CLASS_NAMES, global_iou)
+-        }
+     (output / f"{args.split}_summary.json").write_text(
+         json.dumps(summary, ensure_ascii=False, indent=2, allow_nan=True), encoding="utf-8"
+     )
+--- upstream/training/Model349_fusion805/model397_reproduction_bundle/model392/train.py
++++ source/training/Model349_fusion805/model397_reproduction_bundle/model392/train.py
+@@ -221,7 +221,7 @@
+         epoch_loss = 0.0
+         t0 = time.time()
+         optimizer.zero_grad(set_to_none=True)
+-        for batch_index, (img, mask) in enumerate(train_loader):
++        for batch_index, (img, mask) in enumerate(__import__("tqdm").tqdm(train_loader, desc=f"epoch {epoch}", mininterval=10)):
+             img, mask = img.to(device, non_blocking=True), mask.to(device, non_blocking=True)
+             with torch.cuda.amp.autocast(enabled=use_amp):
+                 if use_boundary:
+--- upstream/training/refiner_retrain/train_refiner.py
++++ source/training/refiner_retrain/train_refiner.py
+@@ -80,7 +80,7 @@
+     start = time.monotonic(); updates = 0; rows = []
+     for epoch in range(1, 9):
+         ds.epoch = epoch; model.train(); total = 0.
+-        for logits, gray, target in loader:
++        for logits, gray, target in __import__("tqdm").tqdm(loader, desc=f"F epoch {epoch}/8", mininterval=10):
+             logits = logits.to(dev); gray = gray.to(dev); target = target.to(dev); opt.zero_grad(set_to_none=True)
+             pred, delta = model(logits, gray); loss = objective(pred, target, delta); assert torch.isfinite(loss); loss.backward()
+             torch.nn.utils.clip_grad_norm_(model.parameters(), 1.); opt.step(); updates += 1; total += loss.item()
+--- upstream/training/train_route/experiments/historical_scripts/advanced_inference.py
++++ source/training/train_route/experiments/historical_scripts/advanced_inference.py
+@@ -2,6 +2,7 @@
+ """Compare D4 TTA, Gaussian tile blending, and ensemble variants."""
+ 
+ from __future__ import annotations
++from local_image_metrics import progress as _local_progress
+ 
+ import argparse
+ import json
+@@ -100,20 +101,8 @@
+ 
+ 
+ def metrics(predictions, targets):
+-    total = np.zeros((NUM_CLASSES, NUM_CLASSES), dtype=np.int64)
+-    image_scores = []
+-    for prediction, target in zip(predictions, targets):
+-        current = confusion(prediction, target)
+-        total += current
+-        intersection = np.diag(current).astype(np.float64)
+-        union = current.sum(0) + current.sum(1) - intersection
+-        image_scores.append(float(np.mean(intersection / np.maximum(union, 1.0))))
+-    intersection = np.diag(total).astype(np.float64)
+-    union = total.sum(0) + total.sum(1) - intersection
+-    iou = intersection / np.maximum(union, 1.0)
+-    return {"global_miou": float(iou.mean()),
+-            "global_iou": {name: float(value) for name, value in zip(CLASS_NAMES, iou)},
+-            "image_mean_miou": float(np.mean(image_scores)), "confusion": total.tolist()}
++    from local_image_metrics import summary
++    return summary(predictions, targets, CLASS_NAMES)
+ 
+ 
+ def ensemble_probability(probabilities, weights):
+@@ -197,7 +186,7 @@
+         del models
+         if device.type == "cuda":
+             torch.cuda.empty_cache()
+-    best = max(all_results, key=lambda x: x["global_miou"])
++    best = max(all_results, key=lambda x: x["image_miou_compat"])
+     output = Path(args.output_json)
+     output.parent.mkdir(parents=True, exist_ok=True)
+     output.write_text(json.dumps({"best": best, "records": all_results}, ensure_ascii=False, indent=2), encoding="utf-8")
+--- upstream/training/train_route/experiments/historical_scripts/calibrate_al.py
++++ source/training/train_route/experiments/historical_scripts/calibrate_al.py
+@@ -7,6 +7,7 @@
+ """
+ 
+ from __future__ import annotations
++from local_image_metrics import progress as _local_progress
+ 
+ import argparse
+ import json
+@@ -98,18 +99,12 @@
+     return np.bincount(bins, minlength=NUM_CLASSES * NUM_CLASSES).reshape(NUM_CLASSES, NUM_CLASSES)
+ 
+ 
+-def score_confusions(confusions: Sequence[np.ndarray], image_scores: Sequence[Sequence[float]]) -> Dict[str, object]:
+-    total = np.sum(np.stack(confusions), axis=0)
+-    intersection = np.diag(total).astype(np.float64)
+-    union = total.sum(0) + total.sum(1) - intersection
+-    iou = intersection / np.maximum(union, 1.0)
+-    return {
+-        "global_miou": float(iou.mean()),
+-        "global_iou": {name: float(value) for name, value in zip(CLASS_NAMES, iou)},
+-        "image_mean_miou": float(np.mean(image_scores)),
+-        "image_std_miou": float(np.std(image_scores)),
+-        "confusion": total.tolist(),
+-    }
++def score_confusions(confusions, image_scores):
++    # Callers pass an already-pooled confusion matrix but a separate score per image.
++    # Do not derive a pooled/global IoU from that matrix.
++    scores=np.asarray(image_scores,dtype=np.float64)
++    return {"image_miou_compat":float(scores.mean()), "image_mean_miou":float(scores.mean()),
++            "image_std_miou":float(scores.std())}
+ 
+ 
+ def score_prediction(prediction: np.ndarray, target: np.ndarray) -> float:
+@@ -144,7 +139,7 @@
+     for bias, current_confusion, current_scores in zip(biases, confusions, image_scores):
+         metrics = score_confusions([current_confusion], current_scores)
+         records.append({"eutectic_bias": float(bias), **metrics})
+-    best_global = max(records, key=lambda record: record["global_miou"])
++    best_global = max(records, key=lambda record: record["image_miou_compat"])
+     best_image = max(records, key=lambda record: record["image_mean_miou"])
+     result = {"records": records, "best_global": best_global, "best_image_mean": best_image,
+               "tta": args.tta, "patch_size": args.patch_size, "stride": args.stride}
+--- upstream/training/train_route/experiments/historical_scripts/encoder_structure_search.py
++++ source/training/train_route/experiments/historical_scripts/encoder_structure_search.py
+@@ -24,6 +24,7 @@
+ """
+ 
+ from __future__ import annotations
++from local_image_metrics import progress as _local_progress
+ 
+ import argparse
+ import json
+@@ -294,23 +295,8 @@
+ 
+ 
+ def metrics(predictions: Sequence[np.ndarray], targets: Sequence[np.ndarray]) -> Dict[str, object]:
+-    total = np.zeros((NUM_CLASSES, NUM_CLASSES), dtype=np.int64)
+-    image_scores: List[float] = []
+-    for prediction, target in zip(predictions, targets):
+-        current = confusion(prediction, target)
+-        total += current
+-        intersection = np.diag(current).astype(np.float64)
+-        union = current.sum(0) + current.sum(1) - intersection
+-        image_scores.append(float(np.mean(intersection / np.maximum(union, 1.0))))
+-    intersection = np.diag(total).astype(np.float64)
+-    union = total.sum(0) + total.sum(1) - intersection
+-    iou = intersection / np.maximum(union, 1.0)
+-    return {
+-        "global_miou": float(iou.mean()),
+-        "global_iou": {name: float(value) for name, value in zip(CLASS_NAMES, iou)},
+-        "image_mean_miou": float(np.mean(image_scores)),
+-        "confusion": total.tolist(),
+-    }
++    from local_image_metrics import summary
++    return summary(predictions, targets, CLASS_NAMES)
+ 
+ 
+ def metrics_from_probabilities(probabilities: Sequence[np.ndarray], targets: Sequence[np.ndarray], bias: float) -> Dict[str, object]:
+@@ -392,7 +378,7 @@
+     if freeze_bn:
+         freeze_encoder_bn(model)
+     total, count = 0.0, 0
+-    for images, masks in loader:
++    for images, masks in _local_progress(loader, 'encoder_structure_search'):
+         images = images.to(device, non_blocking=True)
+         masks = masks.to(device, non_blocking=True)
+         optimizer.zero_grad(set_to_none=True)
+@@ -526,7 +512,7 @@
+             print(
+                 f"epoch={epoch:02d}/{args.epochs} loss={train_loss:.4f} miou={score:.5f} "
+                 f"image={valid['image_mean_miou']:.5f} "
+-                + ",".join(f"{v:.4f}" for v in valid["global_iou"].values())
++                + ",".join(f"{v:.4f}" for v in valid["image_class_iou"].values())
+                 + f" time={record['seconds']:.1f}s", flush=True,
+             )
+             if score > best_score:
+@@ -590,7 +576,7 @@
+     parser.add_argument("--output-dir", required=True)
+     parser.add_argument("--checkpoint")
+     parser.add_argument("--split-manifest")
+-    parser.add_argument("--selection-metric", choices=("image_mean_miou", "global_miou"),
++    parser.add_argument("--selection-metric", choices=("image_mean_miou", "image_miou_compat"),
+                         default="image_mean_miou")
+     parser.add_argument("--patch-size", type=int, default=512)
+     parser.add_argument("--scale", type=float, default=1.0,
+--- upstream/training/train_route/experiments/historical_scripts/hard_negative_finetune.py
++++ source/training/train_route/experiments/historical_scripts/hard_negative_finetune.py
+@@ -2,6 +2,7 @@
+ """Mine non-Eutectic-Si pixels predicted as Eutectic Si and fine-tune a model."""
+ 
+ from __future__ import annotations
++from local_image_metrics import progress as _local_progress
+ 
+ import argparse
+ import json
+@@ -127,27 +128,17 @@
+ 
+ @torch.no_grad()
+ def evaluate_calibrated(model, samples, args, device, use_amp):
++    from local_image_metrics import summary
+     model.eval()
+-    confusion = np.zeros((NUM_CLASSES, NUM_CLASSES), dtype=np.int64)
+-    image_scores = []
+-    ious = []
+-    for image_path, mask_path in samples:
++    predictions, targets = [], []
++    for image_path, mask_path in _local_progress(samples, 'hard_negative_finetune'):
+         probabilities = predict_probabilities(model, image_path, args.patch_size, args.val_stride, device,
+-                                               use_amp, args.tile_batch_size, True)
++                                              use_amp, args.tile_batch_size, True)
+         adjusted = np.log(np.maximum(probabilities, 1e-7))
+         adjusted[3] += args.eutectic_bias
+-        prediction = adjusted.argmax(axis=0).astype(np.uint8)
+-        target = decode_mask(Image.open(mask_path).convert("RGB"))
+-        bins = target.reshape(-1) * NUM_CLASSES + prediction.reshape(-1)
+-        current = np.bincount(bins, minlength=NUM_CLASSES * NUM_CLASSES).reshape(NUM_CLASSES, NUM_CLASSES)
+-        confusion += current
+-        image_scores.append(score_prediction(prediction, target))
+-    intersection = np.diag(confusion).astype(np.float64)
+-    union = confusion.sum(0) + confusion.sum(1) - intersection
+-    iou = intersection / np.maximum(union, 1.0)
+-    return {"global_miou": float(iou.mean()),
+-            "global_iou": {name: float(value) for name, value in zip(CLASS_NAMES, iou)},
+-            "image_mean_miou": float(np.mean(image_scores)), "confusion": confusion.tolist()}
++        predictions.append(adjusted.argmax(0).astype(np.uint8))
++        targets.append(decode_mask(Image.open(mask_path).convert("RGB")))
++    return summary(predictions, targets, CLASS_NAMES)
+ 
+ 
+ def split_parameters(model):
+@@ -193,7 +184,7 @@
+         model.train()
+         total, count = 0.0, 0
+         epoch_start = time.time()
+-        for images, masks in loader:
++        for images, masks in _local_progress(loader, 'hard_negative_finetune'):
+             images, masks = images.to(device, non_blocking=True), masks.to(device, non_blocking=True)
+             optimizer.zero_grad(set_to_none=True)
+             with autocast(enabled=use_amp):
+@@ -220,7 +211,7 @@
+         score = validation["image_mean_miou"]
+         print(f"epoch={epoch:02d} loss={record['train_loss']:.4f} global={score:.4f} "
+               f"image={validation['image_mean_miou']:.4f} "
+-              f"iou=" + ",".join(f"{v:.3f}" for v in validation["global_iou"].values()) +
++              f"iou=" + ",".join(f"{v:.3f}" for v in validation["image_class_iou"].values()) +
+               f" time={record['seconds']:.1f}s", flush=True)
+         if score > best:
+             best = score
+--- upstream/training/train_route/experiments/historical_scripts/improve_five_causes.py
++++ source/training/train_route/experiments/historical_scripts/improve_five_causes.py
+@@ -13,6 +13,7 @@
+ """
+ 
+ from __future__ import annotations
++from local_image_metrics import progress as _local_progress
+ 
+ import argparse
+ import json
+@@ -323,27 +324,8 @@
+ 
+ 
+ def metrics_from_predictions(predictions: Sequence[np.ndarray], targets: Sequence[np.ndarray]) -> Dict[str, object]:
+-    confusion = np.zeros((NUM_CLASSES, NUM_CLASSES), dtype=np.int64)
+-    image_mious = []
+-    for prediction, target in zip(predictions, targets):
+-        current = confusion_for(prediction, target)
+-        confusion += current
+-        intersection = np.diag(current).astype(np.float64)
+-        union = current.sum(0) + current.sum(1) - intersection
+-        image_mious.append(float(np.mean(intersection / np.maximum(union, 1.0))))
+-    intersection = np.diag(confusion).astype(np.float64)
+-    union = confusion.sum(0) + confusion.sum(1) - intersection
+-    iou = intersection / np.maximum(union, 1.0)
+-    return {
+-        "global_miou": float(iou.mean()),
+-        "global_iou": {name: float(value) for name, value in zip(CLASS_NAMES, iou)},
+-        "image_mean_miou": float(np.mean(image_mious)),
+-        "image_std_miou": float(np.std(image_mious)),
+-        "image_min_miou": float(np.min(image_mious)),
+-        "image_max_miou": float(np.max(image_mious)),
+-        "image_mious": image_mious,
+-        "confusion": confusion.tolist(),
+-    }
++    from local_image_metrics import summary
++    return summary(predictions, targets, CLASS_NAMES)
+ 
+ 
+ @torch.no_grad()
+@@ -437,7 +419,7 @@
+         model.train()
+         total_loss, count = 0.0, 0
+         epoch_start = time.time()
+-        for images, masks in loader:
++        for images, masks in _local_progress(loader, 'improve_five_causes'):
+             images, masks = images.to(device, non_blocking=True), masks.to(device, non_blocking=True)
+             optimizer.zero_grad(set_to_none=True)
+             with autocast(enabled=use_amp):
+@@ -469,7 +451,7 @@
+         score = float(validation["image_mean_miou"])
+         print(f"epoch={epoch:02d} stage={record['stage']} loss={record['train_loss']:.4f} "
+               f"global={score:.4f} image={validation['image_mean_miou']:.4f} "
+-              f"iou=" + ",".join(f"{v:.3f}" for v in validation["global_iou"].values()) +
++              f"iou=" + ",".join(f"{v:.3f}" for v in validation["image_class_iou"].values()) +
+               f" time={record['epoch_seconds']:.1f}s", flush=True)
+         if score > best:
+             best, stale = score, 0
+--- upstream/training/train_route/experiments/historical_scripts/improve_model6.py
++++ source/training/train_route/experiments/historical_scripts/improve_model6.py
+@@ -13,6 +13,7 @@
+ """
+ 
+ from __future__ import annotations
++from local_image_metrics import progress as _local_progress
+ 
+ import argparse
+ import json
+@@ -198,34 +199,23 @@
+     loss_mode: str,
+     use_tta: bool = False,
+ ) -> Dict[str, object]:
++    from local_image_metrics import summary
+     model.eval()
+-    confusion = torch.zeros((NUM_CLASSES, NUM_CLASSES), dtype=torch.int64)
+-    total_loss = 0.0
+-    count = 0
+-    for images, masks in loader:
+-        images = images.to(device, non_blocking=True)
+-        masks = masks.to(device, non_blocking=True)
++    predictions, targets = [], []
++    total_loss = count = 0
++    for images, masks in _local_progress(loader, 'improve_model6'):
++        images, masks = images.to(device), masks.to(device)
+         with autocast(enabled=use_amp):
+             logits = model(images)
+             loss = segmentation_loss(logits, masks, loss_mode)
+-        probabilities = tta_logits(model, images, use_amp) if use_tta else torch.softmax(logits, dim=1)
+-        predictions = probabilities.argmax(dim=1).view(-1).cpu()
+-        targets = masks.view(-1).cpu()
+-        bins = targets * NUM_CLASSES + predictions
+-        confusion += torch.bincount(bins, minlength=NUM_CLASSES * NUM_CLASSES).reshape(NUM_CLASSES, NUM_CLASSES)
+-        total_loss += float(loss.item()) * images.shape[0]
++        probs = tta_logits(model, images, use_amp) if use_tta else torch.softmax(logits, 1)
++        predictions.extend(probs.argmax(1).cpu().numpy())
++        targets.extend(masks.cpu().numpy())
++        total_loss += float(loss) * images.shape[0]
+         count += images.shape[0]
+-
+-    intersection = torch.diag(confusion).float()
+-    union = confusion.sum(0).float() + confusion.sum(1).float() - intersection
+-    iou = (intersection / union.clamp_min(1.0)).tolist()
+-    return {
+-        "loss": total_loss / max(count, 1),
+-        "iou": {name: float(score) for name, score in zip(CLASS_NAMES, iou)},
+-        "miou": float(np.mean(iou)),
+-        "confusion": confusion.tolist(),
+-        "tta": use_tta,
+-    }
++    result = summary(predictions, targets, CLASS_NAMES)
++    result.update(loss=total_loss / max(count, 1), tta=use_tta)
++    return result
+ 
+ 
+ def load_model(checkpoint: str | Path, device: torch.device) -> torch.nn.Module:
+@@ -312,7 +302,7 @@
+             total_loss = 0.0
+             count = 0
+             epoch_start = time.time()
+-            for images, masks in train_loader:
++            for images, masks in _local_progress(train_loader, 'improve_model6'):
+                 images = images.to(device, non_blocking=True)
+                 masks = masks.to(device, non_blocking=True)
+                 optimizer.zero_grad(set_to_none=True)
+--- upstream/training/train_route/experiments/historical_scripts/model181_raw_zcdf_aspp.py
++++ source/training/train_route/experiments/historical_scripts/model181_raw_zcdf_aspp.py
+@@ -10,6 +10,7 @@
+ """
+ 
+ from __future__ import annotations
++from local_image_metrics import progress as _local_progress
+ 
+ import argparse
+ import copy
+@@ -224,29 +225,8 @@
+ 
+ 
+ def score(predictions, targets):
+-    total = np.zeros((NUM_CLASSES, NUM_CLASSES), dtype=np.int64)
+-    included_scores, excluded_scores = [], []
+-    for prediction, target in zip(predictions, targets):
+-        bins = target.reshape(-1) * NUM_CLASSES + prediction.reshape(-1)
+-        current = np.bincount(bins, minlength=NUM_CLASSES * NUM_CLASSES).reshape(NUM_CLASSES, NUM_CLASSES)
+-        total += current
+-        inter = np.diag(current).astype(np.float64)
+-        union = current.sum(0) + current.sum(1) - inter
+-        iou = inter / np.maximum(union, 1.0)
+-        included_scores.append(float(iou.mean()))
+-        excluded_scores.append(float(iou[union > 0].mean()))
+-    inter = np.diag(total).astype(np.float64)
+-    union = total.sum(0) + total.sum(1) - inter
+-    global_iou = inter / np.maximum(union, 1.0)
+-    return {
+-        "global_miou": float(global_iou.mean()),
+-        "global_iou": {name: float(value) for name, value in zip(CLASS_NAMES, global_iou)},
+-        "image_mean_miou": float(np.mean(included_scores)),
+-        "image_mean_miou_exclude": float(np.mean(excluded_scores)),
+-        "image_scores": included_scores,
+-        "image_scores_exclude": excluded_scores,
+-        "confusion": total.tolist(),
+-    }
++    from local_image_metrics import summary
++    return summary(predictions, targets, CLASS_NAMES)
+ 
+ 
+ def dice_loss(logits: torch.Tensor, target: torch.Tensor) -> torch.Tensor:
+@@ -261,7 +241,7 @@
+     model.train()
+     total, count = 0.0, 0
+     weights = HARD_CLASS_WEIGHTS.to(device)
+-    for images, masks in loader:
++    for images, masks in _local_progress(loader, 'model181_raw_zcdf_aspp'):
+         images, masks = images.to(device, non_blocking=True), masks.to(device, non_blocking=True)
+         optimizer.zero_grad(set_to_none=True)
+         with autocast(enabled=use_amp):
+@@ -339,7 +319,7 @@
+         selection = float(valid[args.selection_metric])
+         print(json.dumps({"epoch": epoch, "train_loss": train_loss,
+                           "selection": selection, **{k: valid[k] for k in
+-                          ("global_miou", "image_mean_miou", "image_mean_miou_exclude")}},
++                          ("image_miou_compat", "image_mean_miou", "image_mean_miou_exclude")}},
+                          ensure_ascii=False), flush=True)
+         if selection > best_score:
+             best_score = selection
+--- upstream/training/train_route/experiments/historical_scripts/model194_multistage_team_schedule.py
++++ source/training/train_route/experiments/historical_scripts/model194_multistage_team_schedule.py
+@@ -9,6 +9,7 @@
+ """
+ 
+ from __future__ import annotations
++from local_image_metrics import progress as _local_progress
+ 
+ import argparse
+ import copy
+@@ -109,7 +110,7 @@
+                               "epoch": global_epoch, "train_loss": train_loss,
+                               "selection": selection,
+                               **{key: valid[key] for key in
+-                                 ("global_miou", "image_mean_miou",
++                                 ("image_miou_compat", "image_mean_miou",
+                                   "image_mean_miou_exclude")}},
+                              ensure_ascii=False), flush=True)
+             if selection > best_score:
+--- upstream/training/train_route/experiments/historical_scripts/model1_unet_resnet34.py
++++ source/training/train_route/experiments/historical_scripts/model1_unet_resnet34.py
+@@ -7,6 +7,7 @@
+ """
+ 
+ from __future__ import annotations
++from local_image_metrics import progress as _local_progress
+ 
+ import argparse
+ import json
+@@ -217,42 +218,22 @@
+     device: torch.device,
+     use_amp: bool,
+ ) -> Dict[str, object]:
++    from local_image_metrics import summary
+     model.eval()
+-    confusion = torch.zeros((NUM_CLASSES, NUM_CLASSES), dtype=torch.int64)
+-    image_scores = []
+-    total_loss = 0.0
+-    count = 0
+-    for images, masks in loader:
+-        images = images.to(device, non_blocking=True)
+-        masks = masks.to(device, non_blocking=True)
++    predictions, targets = [], []
++    total_loss = count = 0
++    for images, masks in _local_progress(loader, 'model1_unet_resnet34'):
++        images, masks = images.to(device), masks.to(device)
+         with autocast(enabled=use_amp):
+             logits = model(images)
+             loss = combined_loss(logits, masks)
+-        predictions = logits.argmax(dim=1).cpu()
+-        targets = masks.cpu()
+-        for prediction, target in zip(predictions, targets):
+-            bins = target.reshape(-1) * NUM_CLASSES + prediction.reshape(-1)
+-            current = torch.bincount(bins, minlength=NUM_CLASSES * NUM_CLASSES).reshape(NUM_CLASSES, NUM_CLASSES)
+-            current_intersection = torch.diag(current).float()
+-            current_union = current.sum(0).float() + current.sum(1).float() - current_intersection
+-            image_scores.append(float((current_intersection / current_union.clamp_min(1.0)).mean()))
+-            confusion += current
+-        total_loss += float(loss.item()) * images.shape[0]
++        predictions.extend(logits.argmax(1).cpu().numpy())
++        targets.extend(masks.cpu().numpy())
++        total_loss += float(loss) * images.shape[0]
+         count += images.shape[0]
+-
+-    intersection = torch.diag(confusion).float()
+-    union = confusion.sum(0).float() + confusion.sum(1).float() - intersection
+-    iou = (intersection / union.clamp_min(1.0)).tolist()
+-    global_miou = float(np.mean(iou))
+-    image_mean_miou = float(np.mean(image_scores))
+-    return {
+-        "loss": total_loss / max(count, 1),
+-        "iou": {name: float(score) for name, score in zip(CLASS_NAMES, iou)},
+-        "global_miou": global_miou,
+-        "image_mean_miou": image_mean_miou,
+-        "miou": image_mean_miou,
+-        "confusion": confusion.tolist(),
+-    }
++    result = summary(predictions, targets, CLASS_NAMES)
++    result["loss"] = total_loss / max(count, 1)
++    return result
+ 
+ 
+ def train_one_epoch(
+@@ -266,7 +247,7 @@
+     model.train()
+     total_loss = 0.0
+     count = 0
+-    for images, masks in loader:
++    for images, masks in _local_progress(loader, 'model1_unet_resnet34'):
+         images = images.to(device, non_blocking=True)
+         masks = masks.to(device, non_blocking=True)
+         optimizer.zero_grad(set_to_none=True)
+@@ -365,7 +346,7 @@
+         print(
+             f"epoch={epoch:03d}/{args.epochs} train_loss={train_loss:.4f} "
+             f"valid_loss={float(valid_metrics['loss']):.4f} image_miou={miou:.4f} "
+-            f"global_miou={float(valid_metrics['global_miou']):.4f} "
++            f"image_miou_compat={float(valid_metrics['image_miou_compat']):.4f} "
+             f"iou=" + ", ".join(f"{v:.3f}" for v in valid_metrics["iou"].values()) +
+             f" time={record['epoch_seconds']:.1f}s",
+             flush=True,
+--- upstream/training/train_route/experiments/historical_scripts/model239_native_stem_finetune.py
++++ source/training/train_route/experiments/historical_scripts/model239_native_stem_finetune.py
+@@ -2,6 +2,7 @@
+ """Fine-tune model195 with a zero-init stride-1, full-resolution feature stem."""
+ 
+ from __future__ import annotations
++from local_image_metrics import progress as _local_progress
+ 
+ import argparse
+ import copy
+@@ -135,7 +136,7 @@
+             json.dumps(history, ensure_ascii=False, indent=2), encoding="utf-8")
+         print(json.dumps({"epoch": epoch, "train_loss": train_loss,
+                           "selection": record["selection"],
+-                          "global_miou": valid["global_miou"],
++                          "image_miou_compat": valid["image_miou_compat"],
+                           "image_mean_miou": valid["image_mean_miou"],
+                           "image_mean_miou_exclude": valid["image_mean_miou_exclude"]},
+                          ensure_ascii=False), flush=True)
+--- upstream/training/train_route/experiments/historical_scripts/model242_ema_continuation.py
++++ source/training/train_route/experiments/historical_scripts/model242_ema_continuation.py
+@@ -2,6 +2,7 @@
+ """Continue model239 with EMA 0.99 and compare raw/EMA checkpoints on valid."""
+ 
+ from __future__ import annotations
++from local_image_metrics import progress as _local_progress
+ 
+ import argparse
+ import copy
+@@ -40,7 +41,7 @@
+     model.train()
+     total_loss, count = 0.0, 0
+     weights = HARD_CLASS_WEIGHTS.to(device)
+-    for images, masks in loader:
++    for images, masks in _local_progress(loader, 'model242_ema_continuation'):
+         images = images.to(device, non_blocking=True)
+         masks = masks.to(device, non_blocking=True)
+         optimizer.zero_grad(set_to_none=True)
+@@ -126,8 +127,8 @@
+             "epoch": epoch, "train_loss": train_loss,
+             "raw_image_mean_miou": raw_metrics["image_mean_miou"],
+             "ema_image_mean_miou": ema_metrics["image_mean_miou"],
+-            "raw_global_miou": raw_metrics["global_miou"],
+-            "ema_global_miou": ema_metrics["global_miou"],
++            "raw_image_miou_compat": raw_metrics["image_miou_compat"],
++            "ema_image_miou_compat": ema_metrics["image_miou_compat"],
+         }, ensure_ascii=False), flush=True)
+ 
+         if raw_metrics[args.selection_metric] > best_raw["score"]:
+@@ -165,7 +166,7 @@
+         json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+     print(json.dumps({name: {
+         "image_mean_miou": value["final"]["image_mean_miou"],
+-        "global_miou": value["final"]["global_miou"],
++        "image_miou_compat": value["final"]["image_miou_compat"],
+         "image_mean_miou_exclude": value["final"]["image_mean_miou_exclude"],
+     } for name, value in finals.items()}, ensure_ascii=False), flush=True)
+     del loader, dataset, model, ema
+--- upstream/training/train_route/experiments/historical_scripts/model253_highres_scale_finetune.py
++++ source/training/train_route/experiments/historical_scripts/model253_highres_scale_finetune.py
+@@ -7,6 +7,7 @@
+ """
+ 
+ from __future__ import annotations
++from local_image_metrics import progress as _local_progress
+ 
+ import argparse
+ import copy
+@@ -436,7 +437,7 @@
+     (output / "summary.json").write_text(
+         json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+     print(json.dumps({key: result[key] for key in (
+-        "global_miou", "global_iou", "image_mean_miou",
++        "image_miou_compat", "image_class_iou", "image_mean_miou",
+         "image_mean_miou_exclude")}, ensure_ascii=False), flush=True)
+ 
+ 
+@@ -487,7 +488,7 @@
+         model.train()
+         freeze_batchnorm_stats(model)
+         total, count = 0.0, 0
+-        for images, masks in loader:
++        for images, masks in _local_progress(loader, 'model253_highres_scale_finetune'):
+             images, masks = images.to(device, non_blocking=True), masks.to(device, non_blocking=True)
+             optimizer.zero_grad(set_to_none=True)
+             with autocast(enabled=use_amp):
+@@ -523,10 +524,10 @@
+         valid = evaluate(model, valid_samples, args, device, use_amp)
+         scheduler.step()
+         record = {"epoch": epoch, "train_loss": total / max(count, 1),
+-                  "global_miou": valid["global_miou"],
++                  "image_miou_compat": valid["image_miou_compat"],
+                   "image_mean_miou": valid["image_mean_miou"],
+                   "image_mean_miou_exclude": valid["image_mean_miou_exclude"],
+-                  "global_iou": valid["global_iou"], "seconds": time.time() - start_time}
++                  "image_class_iou": valid["image_class_iou"], "seconds": time.time() - start_time}
+         history.append(record)
+         (output / "history.json").write_text(
+             json.dumps(history, ensure_ascii=False, indent=2), encoding="utf-8")
+--- upstream/training/train_route/experiments/historical_scripts/pairwise_margin_finetune.py
++++ source/training/train_route/experiments/historical_scripts/pairwise_margin_finetune.py
+@@ -8,6 +8,7 @@
+ """
+ 
+ from __future__ import annotations
++from local_image_metrics import progress as _local_progress
+ 
+ import argparse
+ import json
+@@ -62,7 +63,7 @@
+         if isinstance(module, torch.nn.modules.batchnorm._BatchNorm):
+             module.eval()
+     total, count = 0.0, 0
+-    for images, masks in loader:
++    for images, masks in _local_progress(loader, 'pairwise_margin_finetune'):
+         images = images.to(device, non_blocking=True)
+         masks = masks.to(device, non_blocking=True)
+         optimizer.zero_grad(set_to_none=True)
+@@ -166,7 +167,7 @@
+         torch.save({"model": model.state_dict(), "epoch": epoch, "metrics": calibrated,
+                     "args": vars(args)}, output_dir / "last.pt")
+         print(f"epoch={epoch:02d}/{args.epochs} loss={train_loss:.5f} "
+-              f"global={calibrated['global_miou']:.6f} image={calibrated['image_mean_miou']:.6f} "
++              f"global={calibrated['image_miou_compat']:.6f} image={calibrated['image_mean_miou']:.6f} "
+               f"bias={calibrated['biases']} time={record['seconds']:.1f}s", flush=True)
+         score = float(calibrated["image_mean_miou"])
+         if score > best_score:
+--- upstream/training/train_route/experiments/historical_scripts/restart_ensemble.py
++++ source/training/train_route/experiments/historical_scripts/restart_ensemble.py
+@@ -2,6 +2,7 @@
+ """Controlled native-resolution ensemble search for the restart track."""
+ 
+ from __future__ import annotations
++from local_image_metrics import progress as _local_progress
+ 
+ import argparse
+ import json
+@@ -22,24 +23,8 @@
+ 
+ 
+ def metrics(predictions, targets):
+-    total = np.zeros((NUM_CLASSES, NUM_CLASSES), dtype=np.int64)
+-    image_scores = []
+-    for prediction, target in zip(predictions, targets):
+-        current = confusion(prediction, target)
+-        total += current
+-        intersection = np.diag(current).astype(np.float64)
+-        union = current.sum(0) + current.sum(1) - intersection
+-        image_scores.append(float(np.mean(intersection / np.maximum(union, 1.0))))
+-    intersection = np.diag(total).astype(np.float64)
+-    union = total.sum(0) + total.sum(1) - intersection
+-    iou = intersection / np.maximum(union, 1.0)
+-    return {
+-        "global_miou": float(iou.mean()),
+-        "global_iou": {name: float(value) for name, value in zip(CLASS_NAMES, iou)},
+-        "image_mean_miou": float(np.mean(image_scores)),
+-        "image_scores": image_scores,
+-        "confusion": total.tolist(),
+-    }
++    from local_image_metrics import summary
++    return summary(predictions, targets, CLASS_NAMES)
+ 
+ 
+ def evaluate(cached, weight_new, bias):
+@@ -84,7 +69,7 @@
+             result = evaluate(cached, float(weight), bias)
+             records.append({"new_weight": float(weight), "bias_internal": bias, **result})
+     best_image = max(records, key=lambda item: item["image_mean_miou"])
+-    best_global = max(records, key=lambda item: item["global_miou"])
++    best_global = max(records, key=lambda item: item["image_miou_compat"])
+     result = {"best_image_mean": best_image, "best_global": best_global,
+               "records": records, "old_patch_size": args.old_patch_size, "old_stride": args.old_stride,
+               "new_patch_size": args.new_patch_size, "new_stride": args.new_stride,
+--- upstream/training/train_route/experiments/historical_scripts/train_models_2_to_6.py
++++ source/training/train_route/experiments/historical_scripts/train_models_2_to_6.py
+@@ -10,6 +10,7 @@
+ """
+ 
+ from __future__ import annotations
++from local_image_metrics import progress as _local_progress
+ 
+ import argparse
+ import json
+@@ -232,7 +233,7 @@
+     model.train()
+     total_loss = 0.0
+     count = 0
+-    for images, masks in loader:
++    for images, masks in _local_progress(loader, 'train_models_2_to_6'):
+         images = images.to(device, non_blocking=True)
+         masks = masks.to(device, non_blocking=True)
+         optimizer.zero_grad(set_to_none=True)
+--- upstream/training/train_route/experiments/historical_scripts/train_models_72_74.py
++++ source/training/train_route/experiments/historical_scripts/train_models_72_74.py
+@@ -9,6 +9,7 @@
+ """
+ 
+ from __future__ import annotations
++from local_image_metrics import progress as _local_progress
+ 
+ import argparse
+ import json
+@@ -161,7 +162,7 @@
+     model.train()
+     total_loss = 0.0
+     count = 0
+-    for images, masks in loader:
++    for images, masks in _local_progress(loader, 'train_models_72_74'):
+         images = images.to(device, non_blocking=True)
+         masks = masks.to(device, non_blocking=True)
+         optimizer.zero_grad(set_to_none=True)
+--- upstream/training/train_route/experiments/model326_hybrid_fullstats/KoMaP/train_ema.py
++++ source/training/train_route/experiments/model326_hybrid_fullstats/KoMaP/train_ema.py
+@@ -250,7 +250,7 @@
+ t0 = time.time()
+ optimizer_updates=0;skipped_updates=0;ema_updates=0
+ run = 0.0
+-for it, (x, y) in enumerate(dl):
++for it, (x, y) in enumerate(__import__("tqdm").tqdm(dl, total=args.iters, desc="B4 iterations", mininterval=10)):
+     x, y = x.cuda(non_blocking=True), y.cuda(non_blocking=True)
+     with torch.autocast("cuda", dtype=torch.float16):
+         logits = model(x)
+--- upstream/training/train_route/experiments/model336_hrnet_best/train.py
++++ source/training/train_route/experiments/model336_hrnet_best/train.py
+@@ -175,7 +175,7 @@
+         epoch_loss = 0.0
+         t0 = time.time()
+         optimizer.zero_grad(set_to_none=True)
+-        for batch_index, (img, mask) in enumerate(train_loader):
++        for batch_index, (img, mask) in enumerate(__import__("tqdm").tqdm(train_loader, desc=f"epoch {epoch}", mininterval=10)):
+             img, mask = img.to(device, non_blocking=True), mask.to(device, non_blocking=True)
+             with torch.cuda.amp.autocast(enabled=use_amp):
+                 if use_boundary:

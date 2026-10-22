@@ -1,0 +1,279 @@
+{
+  "claim_sha256": "79c697e8147cbd66047e2911938ae6ca05c90ec917595df63ad700e956c6e9d5",
+  "class_image_mean_iou_percent": {
+    "Al": 94.44808046883078,
+    "Al3Ni": 74.89524349067075,
+    "Eutectic_Si": 61.196404324027384,
+    "Primary_Si": 86.75117220117535
+  },
+  "class_order": [
+    "Al",
+    "Al3Ni",
+    "Primary_Si",
+    "Eutectic_Si"
+  ],
+  "difference_from_recorded_model364_pp": -0.6202476017580238,
+  "experiment": "Model400 Model396-D2 four-fold valid ensemble",
+  "fixed_probability_weights": {
+    "Model329_B4_four_fold": 0.5,
+    "Model382_seed2_four_fold": 0.5
+  },
+  "image_mean_miou_percent": 79.32272512117606,
+  "images": 20,
+  "independent_confirmation": false,
+  "inference_config": {
+    "argmax_after_probability_averaging": true,
+    "batch_size": 2,
+    "blend": "0.5 * Model329 B4 four-fold valid probabilities + 0.5 * Model382 seed2 four-fold valid probabilities",
+    "family": "Model382 seed2, four fixed fold checkpoints",
+    "fold_weights": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "folds": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "input_scale": 2.0,
+    "overlap": 170,
+    "patch_size": 512,
+    "target_width": 0,
+    "tile_stitching": "Gaussian weighted probabilities at original resolution",
+    "tta": "flip4"
+  },
+  "inference_manifest_sha256": "d22c95a6ec8c0eb4bbe5baea33cbc0af11c22e9a4f005a41669f68d2747241d8",
+  "interpretation": "one additional adaptively reused 20-image validation look; descriptive only",
+  "lock_sha256": "e2223de82fef7322d6838672bd415cad6dd02489220b1df75aa724dd28c2679f",
+  "metric": "image-wise 4-class mIoU; empty-union=0",
+  "official_valid_used": true,
+  "per_image": [
+    {
+      "class_iou_empty0": [
+        0.9441583925333992,
+        0.845237884605177,
+        0.9632370427362383,
+        0.737558587120583
+      ],
+      "image_id": "A117_step4_sample2",
+      "image_miou_empty0": 0.8725479767488493,
+      "specimen_group": "A117"
+    },
+    {
+      "class_iou_empty0": [
+        0.9665523938631594,
+        0.36845453461094985,
+        0.9564143071252076,
+        0.6046158063953343
+      ],
+      "image_id": "A11_step1_sample4",
+      "image_miou_empty0": 0.7240092604986628,
+      "specimen_group": "A11"
+    },
+    {
+      "class_iou_empty0": [
+        0.9290274940310631,
+        0.6341546221747987,
+        0.9285011173778865,
+        0.6285055419177267
+      ],
+      "image_id": "A11_step2_sample4",
+      "image_miou_empty0": 0.7800471938753687,
+      "specimen_group": "A11"
+    },
+    {
+      "class_iou_empty0": [
+        0.9483986732640965,
+        0.7931466482563524,
+        0.8005470550665075,
+        0.6424159011618602
+      ],
+      "image_id": "A125_step1_sample4",
+      "image_miou_empty0": 0.7961270694372042,
+      "specimen_group": "A125"
+    },
+    {
+      "class_iou_empty0": [
+        0.9056149858682409,
+        0.7671208993920443,
+        0.9382110525604648,
+        0.31788302713635597
+      ],
+      "image_id": "A153_step3_sample3",
+      "image_miou_empty0": 0.7322074912392765,
+      "specimen_group": "A153"
+    },
+    {
+      "class_iou_empty0": [
+        0.9407605886511761,
+        0.9158671252715423,
+        0.9333314249728059,
+        0.7520375914836993
+      ],
+      "image_id": "A170_step4_sample3",
+      "image_miou_empty0": 0.8854991825948059,
+      "specimen_group": "A170"
+    },
+    {
+      "class_iou_empty0": [
+        0.96473858064403,
+        0.7990510158879486,
+        0.869370907172341,
+        0.5473922563018133
+      ],
+      "image_id": "A181_step1_sample1",
+      "image_miou_empty0": 0.7951381900015332,
+      "specimen_group": "A181"
+    },
+    {
+      "class_iou_empty0": [
+        0.9736694770122514,
+        0.9563909730397756,
+        0.8253956643170635,
+        0.4436377089740329
+      ],
+      "image_id": "A186_step2_sample2",
+      "image_miou_empty0": 0.7997734558357807,
+      "specimen_group": "A186"
+    },
+    {
+      "class_iou_empty0": [
+        0.9438460368172829,
+        0.7827275696119855,
+        0.9720795446657875,
+        0.5702721675417173
+      ],
+      "image_id": "A191_step4_sample3",
+      "image_miou_empty0": 0.8172313296591933,
+      "specimen_group": "A191"
+    },
+    {
+      "class_iou_empty0": [
+        0.9489171414693569,
+        0.8239555440792057,
+        0.9052115247072388,
+        0.6570005053236287
+      ],
+      "image_id": "A40_step3_sample3",
+      "image_miou_empty0": 0.8337711788948575,
+      "specimen_group": "A40"
+    },
+    {
+      "class_iou_empty0": [
+        0.9629301438667063,
+        0.8589318346377961,
+        0.8114992527754057,
+        0.6701668374067028
+      ],
+      "image_id": "A42_step2_sample4",
+      "image_miou_empty0": 0.8258820171716527,
+      "specimen_group": "A42"
+    },
+    {
+      "class_iou_empty0": [
+        0.9706874780990588,
+        0.9190652083533212,
+        0.9487005282565565,
+        0.7616063166985381
+      ],
+      "image_id": "A44_step4_sample3",
+      "image_miou_empty0": 0.9000148828518686,
+      "specimen_group": "A44"
+    },
+    {
+      "class_iou_empty0": [
+        0.9533985347492411,
+        0.8058534301100445,
+        0.904109809863866,
+        0.6241420697530792
+      ],
+      "image_id": "A55_step2_sample1",
+      "image_miou_empty0": 0.8218759611190577,
+      "specimen_group": "A55"
+    },
+    {
+      "class_iou_empty0": [
+        0.9454127448861291,
+        0.8012742994603732,
+        0.9557093785781201,
+        0.6208107650643195
+      ],
+      "image_id": "A59_step3_sample1",
+      "image_miou_empty0": 0.8308017969972356,
+      "specimen_group": "A59"
+    },
+    {
+      "class_iou_empty0": [
+        0.9397908899173355,
+        0.8127083080327625,
+        0.9730642912836992,
+        0.6460152731544938
+      ],
+      "image_id": "A63_step1_sample4",
+      "image_miou_empty0": 0.8428946905970728,
+      "specimen_group": "A63"
+    },
+    {
+      "class_iou_empty0": [
+        0.8923933924246874,
+        0.5713289218181475,
+        0.9076400521124139,
+        0.6500073659398939
+      ],
+      "image_id": "A67_step1_sample1",
+      "image_miou_empty0": 0.7553424330737857,
+      "specimen_group": "A67"
+    },
+    {
+      "class_iou_empty0": [
+        0.9188508668856862,
+        0.28447780165239234,
+        0.0,
+        0.3846795449237647
+      ],
+      "image_id": "A71_step2_sample1",
+      "image_miou_empty0": 0.39700205336546085,
+      "specimen_group": "A71"
+    },
+    {
+      "class_iou_empty0": [
+        0.9413245724461912,
+        0.7704017513276847,
+        0.9551188743328481,
+        0.8081381913418579
+      ],
+      "image_id": "A72_step4_sample4",
+      "image_miou_empty0": 0.8687458473621454,
+      "specimen_group": "A72"
+    },
+    {
+      "class_iou_empty0": [
+        0.9330094298980423,
+        0.7524464727652521,
+        0.886654661864746,
+        0.4658374134356667
+      ],
+      "image_id": "A74_step3_sample4",
+      "image_miou_empty0": 0.7594869944909268,
+      "specimen_group": "A74"
+    },
+    {
+      "class_iou_empty0": [
+        0.9661342764390187,
+        0.716453853046595,
+        0.9154379504658724,
+        0.7065579937304075
+      ],
+      "image_id": "A7_step1_sample4",
+      "image_miou_empty0": 0.8261460184204734,
+      "specimen_group": "A7"
+    }
+  ],
+  "reference_model364_valid_percent": 79.94297272293409,
+  "status": "DESCRIPTIVE_SELECTION_CONDITIONAL_VALID_RESULT",
+  "test_used": false,
+  "valid_inference_different_from_oof_estimand": true
+}

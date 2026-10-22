@@ -1,0 +1,140 @@
+{
+  "model": 310,
+  "method": "Model308 DINO residual trained at 512px, evaluated without retraining at 1024px",
+  "inference": {
+    "patch_size": 1024,
+    "stride": 864,
+    "tta": "D4",
+    "blend": "Gaussian"
+  },
+  "validation_masks_used_for_training_or_selection": false,
+  "oof": {
+    "image_count": 70,
+    "baseline_image_mean_miou": 0.7750956402616517,
+    "candidate_image_mean_miou": 0.7748234477320587,
+    "delta_pp": -0.027219252959305162,
+    "positive_images": 31,
+    "group_bootstrap_95ci_delta_pp": [
+      -0.18537678547595213,
+      0.13761967435284314
+    ],
+    "per_class_mean_iou_delta_pp": [
+      -0.2383100035332597,
+      0.024673036937949977,
+      0.05804660318443622,
+      0.046713351573623996
+    ]
+  },
+  "valid_secondary": {
+    "image_count": 20,
+    "baseline_image_mean_miou": 0.750472040179293,
+    "candidate_image_mean_miou": 0.7501939494309624,
+    "delta_pp": -0.02780907483306977,
+    "positive_images": 6,
+    "group_bootstrap_95ci_delta_pp": [
+      -0.2603894731869508,
+      0.2329029055938966
+    ],
+    "per_class_mean_iou_delta_pp": [
+      -0.25631442550452244,
+      -0.20528738531175872,
+      0.15272791683489384,
+      0.19763759464908048
+    ]
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "heldout_groups": [
+        "A118",
+        "A138",
+        "A140",
+        "A155",
+        "A16",
+        "A164",
+        "A200",
+        "A51",
+        "A57",
+        "A64",
+        "A69",
+        "A7",
+        "A8",
+        "A87",
+        "A94"
+      ]
+    },
+    {
+      "fold": 2,
+      "heldout_groups": [
+        "A106",
+        "A111",
+        "A123",
+        "A139",
+        "A147",
+        "A15",
+        "A152",
+        "A167",
+        "A182",
+        "A2",
+        "A21",
+        "A39",
+        "A49",
+        "A61",
+        "A78"
+      ]
+    },
+    {
+      "fold": 3,
+      "heldout_groups": [
+        "A108",
+        "A109",
+        "A130",
+        "A137",
+        "A153",
+        "A154",
+        "A159",
+        "A18",
+        "A187",
+        "A191",
+        "A201",
+        "A222",
+        "A55",
+        "A98"
+      ]
+    },
+    {
+      "fold": 4,
+      "heldout_groups": [
+        "A101",
+        "A121",
+        "A125",
+        "A146",
+        "A150",
+        "A156",
+        "A166",
+        "A181",
+        "A188",
+        "A224",
+        "A40",
+        "A66",
+        "A83",
+        "A89",
+        "A96"
+      ]
+    }
+  ],
+  "inference_seconds": 1343.0,
+  "scoring_only_rerun": true,
+  "baseline_probability_parity_vs_model303": {
+    "oof": {
+      "image_count": 70,
+      "mean_absolute_probability_delta": 0.0,
+      "max_absolute_probability_delta": 0.0
+    },
+    "valid": {
+      "image_count": 20,
+      "mean_absolute_probability_delta": 0.0,
+      "max_absolute_probability_delta": 0.0
+    }
+  }
+}

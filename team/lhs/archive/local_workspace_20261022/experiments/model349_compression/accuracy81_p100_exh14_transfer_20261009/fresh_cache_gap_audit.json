@@ -1,0 +1,51 @@
+{
+  "fresh_executable": {
+    "path": "/Users/hyunseok/orca/workspaces/KoMaP/gurnard/Model349_exh14/infer_lite.py",
+    "sha256": "8a0a28cd95a3802cab56231e8f10a97fa0797ab796cd69e6ae2aaded9ed1cfbc"
+  },
+  "fresh_b4_impl": {
+    "path": "/Users/hyunseok/orca/workspaces/KoMaP/gurnard/Model349_exh14/src/b4_gray.py",
+    "sha256": "a9b88b4da1f74f87f65d3d1d2a59c5357731d0c0ba942e9de4f026371f684bca"
+  },
+  "fresh_hr_impl": {
+    "path": "/Users/hyunseok/orca/workspaces/KoMaP/gurnard/Model349_exh14/src/komap_seg/inference.py",
+    "sha256": "44da485aaa9504c6dd6d7baec5b1ef846610ba0a178f1879c2e821bf9b1d8657"
+  },
+  "cached_b4_322_driver": {
+    "path": "/Users/hyunseok/orca/workspaces/KoMaP/gurnard/model322_team_b4/KoMaP/run_group_cv.sh",
+    "sha256": "99fb293074c99da6d2e251f6f10c393281bbff457eb696e16395f52fa9d72eb9"
+  },
+  "cached_b4_326_driver": {
+    "path": "/Users/hyunseok/orca/workspaces/KoMaP/gurnard/run_model326_hybrid_fullstats_group_oof.sh",
+    "sha256": "3aadb90b0199155fa08e16fdc1dab8dd7e6780be2584cfbbe28de6489c7842ca"
+  },
+  "cached_b4_329_driver": {
+    "path": "/Users/hyunseok/orca/workspaces/KoMaP/gurnard/run_model329_hybrid_width4000_uniform_group_oof.sh",
+    "sha256": "b180a8683d1f999024922994a0ea3e10be1470b12e976de359412ceea4e091c3"
+  },
+  "cached_b4_predict": {
+    "path": "/Users/hyunseok/orca/workspaces/KoMaP/gurnard/model322_team_b4/KoMaP/predict.py",
+    "sha256": "e9b21d4678a7d73c598bb7146b729202fcae10e4b1614314a81e885d59d3be2d"
+  },
+  "cached_hr336_driver": {
+    "path": "/Users/hyunseok/orca/workspaces/KoMaP/gurnard/model336_hrnet_best/queue_model336_after333.sh",
+    "sha256": "e4f0b85092d69747109f1feb1502d3c8756a64acfb6c96b60e43286b56490974"
+  },
+  "cached_hr347_driver": {
+    "path": "/workspace/komap_model1/queue_model347_weighted_hrnet_after346.sh",
+    "sha256": "c81d5e3a7d20a98de07c320d86262f594674407bd120ea4df17609e4ba630f11"
+  },
+  "cached_hr_evaluator": {
+    "path": "/workspace/komap_model1/model336_hrnet_best/evaluate_image_mean.py",
+    "sha256": "73b27d759a4d6fe80fddc3e5612b2b29eb654702d2812e9315b578e19f8ffa57"
+  },
+  "fresh_control_b4_tta": false,
+  "fresh_control_hr_tta": false,
+  "historical_cached_b4_tta": true,
+  "historical_cached_hr_tta": true,
+  "configuration_mismatch_verified": true,
+  "fresh_vs_cached_score_gap_pp": -0.10173126646994035,
+  "exact_contribution_of_tta_to_gap_quantified": false,
+  "note": "Cached valid production commands omit --no_tta; default predict/evaluate paths use TTA. Fresh Model349_exh14 worker passes tta=False for B4 and HR despite config labels b4_tta=d4 and hrnet.tta=flip4. Other potential source differences remain unquantified.",
+  "server_original_code_verified": true
+}

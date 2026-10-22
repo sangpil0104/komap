@@ -1,0 +1,305 @@
+{
+  "units": "seconds (component walltime, not CUDA kernel duration)",
+  "groups": {
+    "batched": {
+      "references": {
+        "runs": [
+          {
+            "run": "batched_control1",
+            "seconds": {
+              "269": 26.18852172838524,
+              "base": 115.29596473602578,
+              "329": 95.62977082328871,
+              "326": 71.16020749881864,
+              "336": 82.07646224601194,
+              "fusion": 33.32088004704565,
+              "whole": 451.0639121811837,
+              "parent_startup_and_component_gaps": 27.39210510160774
+            },
+            "environment": {
+              "samples": 89,
+              "host_load1_median": 11.72,
+              "gpu_utilization_median_percent": 84.0,
+              "gpu_memory_peak_mib": 11720.0,
+              "note": "Whole-run samples include loading, CPU preprocessing, fusion and gaps; not isolated CUDA kernel utilization."
+            }
+          },
+          {
+            "run": "batched_control2",
+            "seconds": {
+              "269": 19.526963434182107,
+              "base": 112.23280466813594,
+              "329": 84.3767308248207,
+              "326": 48.89143161987886,
+              "336": 81.42740951711312,
+              "fusion": 24.53367761708796,
+              "whole": 395.7131390501745,
+              "parent_startup_and_component_gaps": 24.72412136895582
+            },
+            "environment": {
+              "samples": 78,
+              "host_load1_median": 8.995000000000001,
+              "gpu_utilization_median_percent": 91.5,
+              "gpu_memory_peak_mib": 11720.0,
+              "note": "Whole-run samples include loading, CPU preprocessing, fusion and gaps; not isolated CUDA kernel utilization."
+            }
+          },
+          {
+            "run": "batched_control3",
+            "seconds": {
+              "269": 18.640757186803967,
+              "base": 112.20329427113757,
+              "329": 66.35955507401377,
+              "326": 44.73296067584306,
+              "336": 81.15874638408422,
+              "fusion": 26.269960298668593,
+              "whole": 373.87642403692007,
+              "parent_startup_and_component_gaps": 24.51115014636889
+            },
+            "environment": {
+              "samples": 73,
+              "host_load1_median": 7.44,
+              "gpu_utilization_median_percent": 97.0,
+              "gpu_memory_peak_mib": 11720.0,
+              "note": "Whole-run samples include loading, CPU preprocessing, fusion and gaps; not isolated CUDA kernel utilization."
+            }
+          }
+        ],
+        "medians": {
+          "269": 19.526963434182107,
+          "base": 112.23280466813594,
+          "329": 84.3767308248207,
+          "326": 48.89143161987886,
+          "336": 81.42740951711312,
+          "fusion": 26.269960298668593,
+          "whole": 395.7131390501745,
+          "parent_startup_and_component_gaps": 24.72412136895582
+        }
+      },
+      "candidates": {
+        "runs": [
+          {
+            "run": "fp16_15_batched",
+            "seconds": {
+              "269": 18.605008710641414,
+              "base": 105.97971824603155,
+              "329": 94.67437819484621,
+              "326": 76.73946213023737,
+              "336": 81.13994543161243,
+              "fusion": 19.141446001827717,
+              "whole": 422.8804733310826,
+              "parent_startup_and_component_gaps": 26.600514615885913
+            },
+            "environment": {
+              "samples": 84,
+              "host_load1_median": 32.93,
+              "gpu_utilization_median_percent": 92.0,
+              "gpu_memory_peak_mib": 11720.0,
+              "note": "Whole-run samples include loading, CPU preprocessing, fusion and gaps; not isolated CUDA kernel utilization."
+            }
+          },
+          {
+            "run": "fp16_15_batched_repeat2",
+            "seconds": {
+              "269": 18.75472128810361,
+              "base": 106.25909276399761,
+              "329": 66.09360597701743,
+              "326": 67.47756435489282,
+              "336": 81.00820834422484,
+              "fusion": 19.452441254165024,
+              "whole": 384.15211904002354,
+              "parent_startup_and_component_gaps": 25.106485057622194
+            },
+            "environment": {
+              "samples": 76,
+              "host_load1_median": 9.915,
+              "gpu_utilization_median_percent": 97.0,
+              "gpu_memory_peak_mib": 11720.0,
+              "note": "Whole-run samples include loading, CPU preprocessing, fusion and gaps; not isolated CUDA kernel utilization."
+            }
+          },
+          {
+            "run": "fp16_15_batched_repeat3",
+            "seconds": {
+              "269": 18.71854790300131,
+              "base": 106.08721812395379,
+              "329": 74.28825265588239,
+              "326": 71.63188592484221,
+              "336": 81.0631710710004,
+              "fusion": 19.492461949121207,
+              "whole": 395.71784808766097,
+              "parent_startup_and_component_gaps": 24.43631045985967
+            },
+            "environment": {
+              "samples": 78,
+              "host_load1_median": 5.82,
+              "gpu_utilization_median_percent": 77.0,
+              "gpu_memory_peak_mib": 11720.0,
+              "note": "Whole-run samples include loading, CPU preprocessing, fusion and gaps; not isolated CUDA kernel utilization."
+            }
+          }
+        ],
+        "medians": {
+          "269": 18.71854790300131,
+          "base": 106.08721812395379,
+          "329": 74.28825265588239,
+          "326": 71.63188592484221,
+          "336": 81.0631710710004,
+          "fusion": 19.452441254165024,
+          "whole": 395.71784808766097,
+          "parent_startup_and_component_gaps": 25.106485057622194
+        }
+      }
+    },
+    "hramp": {
+      "references": {
+        "runs": [
+          {
+            "run": "hramp_control1",
+            "seconds": {
+              "269": 24.681680384092033,
+              "base": 124.84150936594233,
+              "329": 301.58944319188595,
+              "326": 205.05490125296637,
+              "336": 85.81915980577469,
+              "fusion": 25.591877506114542,
+              "whole": 795.2452520658262,
+              "parent_startup_and_component_gaps": 27.666680559050292
+            },
+            "environment": {
+              "samples": 156,
+              "host_load1_median": 31.785,
+              "gpu_utilization_median_percent": 0.0,
+              "gpu_memory_peak_mib": 11720.0,
+              "note": "Whole-run samples include loading, CPU preprocessing, fusion and gaps; not isolated CUDA kernel utilization."
+            }
+          },
+          {
+            "run": "hramp_control2",
+            "seconds": {
+              "269": 24.889647324103862,
+              "base": 124.37580232601613,
+              "329": 70.67813336104155,
+              "326": 48.7967062080279,
+              "336": 85.28959871269763,
+              "fusion": 25.43914559390396,
+              "whole": 408.6735583730042,
+              "parent_startup_and_component_gaps": 29.20452484721318
+            },
+            "environment": {
+              "samples": 80,
+              "host_load1_median": 57.335,
+              "gpu_utilization_median_percent": 97.5,
+              "gpu_memory_peak_mib": 11720.0,
+              "note": "Whole-run samples include loading, CPU preprocessing, fusion and gaps; not isolated CUDA kernel utilization."
+            }
+          },
+          {
+            "run": "hramp_control3",
+            "seconds": {
+              "269": 25.02102230815217,
+              "base": 123.43543749814853,
+              "329": 71.54147132206708,
+              "326": 49.094683109782636,
+              "336": 84.74950300110504,
+              "fusion": 25.33779289200902,
+              "whole": 408.5822820928879,
+              "parent_startup_and_component_gaps": 29.40237196162343
+            },
+            "environment": {
+              "samples": 81,
+              "host_load1_median": 56.51,
+              "gpu_utilization_median_percent": 83.0,
+              "gpu_memory_peak_mib": 11720.0,
+              "note": "Whole-run samples include loading, CPU preprocessing, fusion and gaps; not isolated CUDA kernel utilization."
+            }
+          }
+        ],
+        "medians": {
+          "269": 24.889647324103862,
+          "base": 124.37580232601613,
+          "329": 71.54147132206708,
+          "326": 49.094683109782636,
+          "336": 85.28959871269763,
+          "fusion": 25.43914559390396,
+          "whole": 408.6735583730042,
+          "parent_startup_and_component_gaps": 29.20452484721318
+        }
+      },
+      "candidates": {
+        "runs": [
+          {
+            "run": "fp16_15_batched_hramp",
+            "seconds": {
+              "269": 25.11523986188695,
+              "base": 117.15073201106861,
+              "329": 70.3068425389938,
+              "326": 48.271056414116174,
+              "336": 80.4499742379412,
+              "fusion": 24.546702628023922,
+              "whole": 395.82270479016006,
+              "parent_startup_and_component_gaps": 29.98215709812939
+            },
+            "environment": {
+              "samples": 78,
+              "host_load1_median": 58.655,
+              "gpu_utilization_median_percent": 83.0,
+              "gpu_memory_peak_mib": 11720.0,
+              "note": "Whole-run samples include loading, CPU preprocessing, fusion and gaps; not isolated CUDA kernel utilization."
+            }
+          },
+          {
+            "run": "fp16_15_batched_hramp_repeat2",
+            "seconds": {
+              "269": 25.031777364201844,
+              "base": 117.38153089815751,
+              "329": 69.97886679694057,
+              "326": 48.12310608290136,
+              "336": 80.64684054907411,
+              "fusion": 25.26010968303308,
+              "whole": 395.52401963993907,
+              "parent_startup_and_component_gaps": 29.101788265630603
+            },
+            "environment": {
+              "samples": 78,
+              "host_load1_median": 59.03,
+              "gpu_utilization_median_percent": 97.0,
+              "gpu_memory_peak_mib": 11720.0,
+              "note": "Whole-run samples include loading, CPU preprocessing, fusion and gaps; not isolated CUDA kernel utilization."
+            }
+          },
+          {
+            "run": "fp16_15_batched_hramp_repeat3",
+            "seconds": {
+              "269": 24.97533427318558,
+              "base": 117.43816956179217,
+              "329": 85.56623356463388,
+              "326": 48.415544494986534,
+              "336": 80.59896219382063,
+              "fusion": 33.08214624784887,
+              "whole": 419.88117142394185,
+              "parent_startup_and_component_gaps": 29.8047810876742
+            },
+            "environment": {
+              "samples": 83,
+              "host_load1_median": 58.35,
+              "gpu_utilization_median_percent": 54.0,
+              "gpu_memory_peak_mib": 11720.0,
+              "note": "Whole-run samples include loading, CPU preprocessing, fusion and gaps; not isolated CUDA kernel utilization."
+            }
+          }
+        ],
+        "medians": {
+          "269": 25.031777364201844,
+          "base": 117.38153089815751,
+          "329": 70.3068425389938,
+          "326": 48.271056414116174,
+          "336": 80.59896219382063,
+          "fusion": 25.26010968303308,
+          "whole": 395.82270479016006,
+          "parent_startup_and_component_gaps": 29.8047810876742
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+W0920 05:41:31.217000 699941 site-packages/torch/distributed/run.py:766] 
+W0920 05:41:31.217000 699941 site-packages/torch/distributed/run.py:766] *****************************************
+W0920 05:41:31.217000 699941 site-packages/torch/distributed/run.py:766] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0920 05:41:31.217000 699941 site-packages/torch/distributed/run.py:766] *****************************************
+/home/sppark/miniconda3/envs/komap/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/home/sppark/miniconda3/envs/komap/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/home/sppark/miniconda3/envs/komap/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/home/sppark/miniconda3/envs/komap/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/home/sppark/miniconda3/envs/komap/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/home/sppark/miniconda3/envs/komap/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/home/sppark/miniconda3/envs/komap/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/home/sppark/miniconda3/envs/komap/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py:4631: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+s0_patch512: 1/7 · 2.117 seconds/update
+s0_patch512: 2/7 · 0.058 seconds/update
+s0_patch512: 3/7 · 0.056 seconds/update
+s0_patch512: 4/7 · 0.055 seconds/update
+s0_patch512: 5/7 · 0.056 seconds/update
+s0_patch512: 6/7 · 0.117 seconds/update
+s0_patch512: 7/7 · 0.077 seconds/update
+s1_patch768: 1/7 · 0.537 seconds/update
+s1_patch768: 2/7 · 0.126 seconds/update
+s1_patch768: 3/7 · 0.124 seconds/update
+s1_patch768: 4/7 · 0.128 seconds/update
+s1_patch768: 5/7 · 0.137 seconds/update
+s1_patch768: 6/7 · 0.123 seconds/update
+s1_patch768: 7/7 · 0.125 seconds/update
+s2_fullframe: 1/7 · 0.711 seconds/update
+s2_fullframe: 2/7 · 0.270 seconds/update
+s2_fullframe: 3/7 · 0.199 seconds/update
+s2_fullframe: 4/7 · 0.234 seconds/update
+s2_fullframe: 5/7 · 0.244 seconds/update
+s2_fullframe: 6/7 · 0.193 seconds/update
+s2_fullframe: 7/7 · 0.691 seconds/update
+Benchmark validation:   0%|          | 0/3 [00:00<?, ?it/s]Benchmark validation:  33%|███▎      | 1/3 [00:00<00:00,  2.49it/s]Benchmark validation:  67%|██████▋   | 2/3 [00:00<00:00,  2.15it/s]Benchmark validation: 100%|██████████| 3/3 [00:01<00:00,  3.33it/s]                                                                   {
+  "config_hash": "776f57ab0ae0ef641760d9afcc1dba9080416844fcaf79e4075f2162099ca337",
+  "environment": {
+    "python": "3.11.16",
+    "torch": "2.7.1+cu128",
+    "torchvision": "0.22.1+cu128",
+    "cuda": "12.8",
+    "cudnn": 90701,
+    "code_commit": null,
+    "backbone_commit": "6876159a11b4df116f30f667f8c9888617df0751",
+    "gpus": [
+      "NVIDIA GeForce RTX 4090",
+      "NVIDIA GeForce RTX 4090",
+      "NVIDIA GeForce RTX 4090",
+      "NVIDIA GeForce RTX 4090",
+      "NVIDIA GeForce RTX 4090",
+      "NVIDIA GeForce RTX 4090",
+      "NVIDIA GeForce RTX 4090",
+      "NVIDIA GeForce RTX 4090"
+    ],
+    "cuda_visible_devices": null
+  },
+  "world_size": 8,
+  "effective_batch": 8,
+  "stages": [
+    {
+      "name": "s0_patch512",
+      "updates": 2500,
+      "seconds_per_update": 0.07210968285799027,
+      "median_seconds": 0.055977754294872284,
+      "measured_update_seconds": [
+        0.05551910772919655,
+        0.055039819329977036,
+        0.055977754294872284,
+        0.11688990145921707,
+        0.07712183147668839
+      ],
+      "peak_gpu_memory_gb": 2.3291707038879395
+    },
+    {
+      "name": "s1_patch768",
+      "updates": 1500,
+      "seconds_per_update": 0.1273408129811287,
+      "median_seconds": 0.1253741830587387,
+      "measured_update_seconds": [
+        0.12352942675352097,
+        0.1280551701784134,
+        0.13708192110061646,
+        0.12266336381435394,
+        0.1253741830587387
+      ],
+      "peak_gpu_memory_gb": 4.297921180725098
+    },
+    {
+      "name": "s2_fullframe",
+      "updates": 500,
+      "seconds_per_update": 0.3120496034622192,
+      "median_seconds": 0.2335023581981659,
+      "measured_update_seconds": [
+        0.1991567313671112,
+        0.2335023581981659,
+        0.24425087869167328,
+        0.19258709251880646,
+        0.6907509565353394
+      ],
+      "peak_gpu_memory_gb": 7.620803356170654
+    }
+  ],
+  "validation_seconds": 2.2547233188524842,
+  "validation_checks": 18,
+  "estimated_training_seconds": 527.3102283477783,
+  "estimated_total_seconds": 567.895248087123,
+  "planning_range_hours": [
+    0.1261989440193607,
+    0.20507328403146108
+  ],
+  "note": "Short sampled benchmark. Range is a planning margin, not a statistical confidence interval; checkpoint I/O and competing jobs may add time. No benchmark weights are retained."
+}
+Benchmark saved: artifacts/benchmark_cnn_unet_8gpu.json

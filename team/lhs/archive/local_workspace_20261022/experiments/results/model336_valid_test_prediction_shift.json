@@ -1,0 +1,220 @@
+{
+  "scope": "same Model336 checkpoint/inference on valid and test; no test masks used",
+  "images": {
+    "valid": 20,
+    "test": 10
+  },
+  "feature_names": [
+    "predicted_fraction_Al",
+    "predicted_fraction_Al3Ni",
+    "predicted_fraction_Primary_Si",
+    "predicted_fraction_Eutectic_Si",
+    "mean_max_probability",
+    "mean_normalized_entropy",
+    "fraction_max_probability_lt_0_6",
+    "predicted_boundary_fraction"
+  ],
+  "valid_feature_mean": [
+    0.6199762312613057,
+    0.18724433239796934,
+    0.10625075351425128,
+    0.0865286828264735,
+    0.9515884965658188,
+    0.09252691529147661,
+    0.03441056259429574,
+    0.14963038091313438
+  ],
+  "test_feature_mean": [
+    0.5612566406603728,
+    0.2631254609709518,
+    0.10583051038464583,
+    0.06978738798402961,
+    0.9483787000179291,
+    0.0986973372475822,
+    0.03617577874928931,
+    0.1532861778596293
+  ],
+  "test_minus_valid_feature_mean": [
+    -0.0587195906009329,
+    0.07588112857298246,
+    -0.00042024312960545207,
+    -0.016741294842443882,
+    -0.003209796547889665,
+    0.006170421956105593,
+    0.0017652161549935666,
+    0.003655796946494927
+  ],
+  "predicted_class_fraction_bootstrap_differences": {
+    "Al": {
+      "test_minus_valid": -0.05871959060093279,
+      "bootstrap_95ci": [
+        -0.10743343174204345,
+        -0.012172901804917256
+      ]
+    },
+    "Al3Ni": {
+      "test_minus_valid": 0.0758811285729824,
+      "bootstrap_95ci": [
+        0.001094279336433549,
+        0.1502733778550497
+      ]
+    },
+    "Primary_Si": {
+      "test_minus_valid": -0.0004202431296054798,
+      "bootstrap_95ci": [
+        -0.030909565720686958,
+        0.03223559795172478
+      ]
+    },
+    "Eutectic_Si": {
+      "test_minus_valid": -0.016741294842443882,
+      "bootstrap_95ci": [
+        -0.04290410973213998,
+        0.010051308398326655
+      ]
+    }
+  },
+  "valid_test_centroid_permutation_p_value": 0.08598280343931214,
+  "permutation_draws": 5000,
+  "a71_rank_among_20_valid_for_each_test": [
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    15,
+    20,
+    18,
+    19
+  ],
+  "test_nearest_valid": [
+    {
+      "test_image": "A107_step1_sample3",
+      "nearest_valid": "A170_step4_sample3",
+      "distance": 0.7550100808851397
+    },
+    {
+      "test_image": "A122_step4_sample1",
+      "nearest_valid": "A170_step4_sample3",
+      "distance": 1.4316472126919852
+    },
+    {
+      "test_image": "A124_step4_sample3",
+      "nearest_valid": "A170_step4_sample3",
+      "distance": 2.705490117350385
+    },
+    {
+      "test_image": "A127_step3_sample2",
+      "nearest_valid": "A170_step4_sample3",
+      "distance": 1.2387409983023263
+    },
+    {
+      "test_image": "A133_step4_sample1",
+      "nearest_valid": "A191_step4_sample3",
+      "distance": 1.2868002546300157
+    },
+    {
+      "test_image": "A167_step3_sample3",
+      "nearest_valid": "A170_step4_sample3",
+      "distance": 2.3230417146217968
+    },
+    {
+      "test_image": "A38_step2_sample2",
+      "nearest_valid": "A59_step3_sample1",
+      "distance": 1.4957058123509903
+    },
+    {
+      "test_image": "A51_step3_sample3",
+      "nearest_valid": "A7_step1_sample4",
+      "distance": 1.7982791922815078
+    },
+    {
+      "test_image": "A63_step2_sample3",
+      "nearest_valid": "A59_step3_sample1",
+      "distance": 1.0676776861721249
+    },
+    {
+      "test_image": "A87_step1_sample4",
+      "nearest_valid": "A59_step3_sample1",
+      "distance": 1.043987073893488
+    }
+  ],
+  "test_per_image_predicted_fraction": {
+    "A107_step1_sample3": {
+      "Al": 0.5145644599303136,
+      "Al3Ni": 0.33829500580720095,
+      "Primary_Si": 0.09644785133565621,
+      "Eutectic_Si": 0.05069268292682927
+    },
+    "A122_step4_sample1": {
+      "Al": 0.5597807200929152,
+      "Al3Ni": 0.2981166085946574,
+      "Primary_Si": 0.08924413472706155,
+      "Eutectic_Si": 0.05285853658536585
+    },
+    "A124_step4_sample3": {
+      "Al": 0.48867363530778163,
+      "Al3Ni": 0.37882648083623693,
+      "Primary_Si": 0.07110708478513357,
+      "Eutectic_Si": 0.06139279907084785
+    },
+    "A127_step3_sample2": {
+      "Al": 0.5065653483072917,
+      "Al3Ni": 0.36735093858506945,
+      "Primary_Si": 0.08363579644097222,
+      "Eutectic_Si": 0.04244791666666667
+    },
+    "A133_step4_sample1": {
+      "Al": 0.6452367015098722,
+      "Al3Ni": 0.2428274099883856,
+      "Primary_Si": 0.08060023228803717,
+      "Eutectic_Si": 0.031335656213704995
+    },
+    "A167_step3_sample3": {
+      "Al": 0.4460507083572207,
+      "Al3Ni": 0.41455209683722677,
+      "Primary_Si": 0.09399312388202827,
+      "Eutectic_Si": 0.045404070923524276
+    },
+    "A38_step2_sample2": {
+      "Al": 0.608891975308642,
+      "Al3Ni": 0.18017592592592593,
+      "Primary_Si": 0.10783333333333334,
+      "Eutectic_Si": 0.10309876543209877
+    },
+    "A51_step3_sample3": {
+      "Al": 0.6046516232217901,
+      "Al3Ni": 0.07413174807308587,
+      "Primary_Si": 0.20411947298016186,
+      "Eutectic_Si": 0.11709715572496217
+    },
+    "A63_step2_sample3": {
+      "Al": 0.6155123456790124,
+      "Al3Ni": 0.17918827160493828,
+      "Primary_Si": 0.10691975308641975,
+      "Eutectic_Si": 0.09837962962962964
+    },
+    "A87_step1_sample4": {
+      "Al": 0.6226388888888889,
+      "Al3Ni": 0.1577901234567901,
+      "Primary_Si": 0.12440432098765432,
+      "Eutectic_Si": 0.09516666666666666
+    }
+  },
+  "valid_images_with_predicted_absent_phase": {
+    "Al": [],
+    "Al3Ni": [],
+    "Primary_Si": [
+      "A71_step2_sample1"
+    ],
+    "Eutectic_Si": []
+  },
+  "test_images_with_predicted_absent_phase": {
+    "Al": [],
+    "Al3Ni": [],
+    "Primary_Si": [],
+    "Eutectic_Si": []
+  },
+  "interpretation_guard": "Prediction similarities are model dependent and cannot reveal true test class presence or mIoU."
+}

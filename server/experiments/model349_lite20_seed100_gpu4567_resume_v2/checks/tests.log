@@ -1,0 +1,36 @@
+test_active_routes_and_weights (test_design.SearchDesign.test_active_routes_and_weights) ... ok
+test_count_and_dependencies (test_design.SearchDesign.test_count_and_dependencies) ... ok
+test_empty_class_is_zero (test_design.SearchDesign.test_empty_class_is_zero) ... ok
+test_generated_training_arguments (test_design.SearchDesign.test_generated_training_arguments) ... ok
+test_parent_child_are_coupled (test_design.SearchDesign.test_parent_child_are_coupled) ... ok
+test_resume_rejects_changed_artifacts (test_design.SearchDesign.test_resume_rejects_changed_artifacts) ... Verify completed tasks:   0%|          | 0/1 [00:00<?, ?file/s]Verify completed tasks: 100%|██████████| 1/1 [00:00<00:00, 10155.70file/s]
+Verify completed tasks:   0%|          | 0/1 [00:00<?, ?file/s]Verify completed tasks:   0%|          | 0/1 [00:00<?, ?file/s]
+ok
+test_scheduler_gpu_mapping_and_completed_resume (test_design.SearchDesign.test_scheduler_gpu_mapping_and_completed_resume) ... Lite20 seed search:   0%|          | 0/100 [00:00<?, ?train/s]                                                              Lite20 seed search:   0%|          | 0/100 [00:00<?, ?train/s]                                                              Lite20 seed search:   0%|          | 0/100 [00:00<?, ?train/s]                                                              Lite20 seed search:   0%|          | 0/100 [00:00<?, ?train/s]                                                              Lite20 seed search:   0%|          | 0/100 [00:00<?, ?train/s]                                                              Lite20 seed search:   0%|          | 0/100 [00:00<?, ?train/s]                                                              Lite20 seed search:   0%|          | 0/100 [00:00<?, ?train/s]                                                              Lite20 seed search:   0%|          | 0/100 [00:00<?, ?train/s]Lite20 seed search:   4%|▍         | 4/100 [00:01<00:36,  2.65train/s]
+START baseline GPU=None | /tmp/tmpmxzjy7cj/logs/baseline_20261012_120444_795889.log
+Trained 0/100 | elapsed=0.00h | ETA≈0.00h
+[baseline GPU None] starting
+START fake_0 GPU=4 | /tmp/tmpmxzjy7cj/logs/fake_0_20261012_120444_795889.log
+START fake_1 GPU=5 | /tmp/tmpmxzjy7cj/logs/fake_1_20261012_120444_795889.log
+START fake_2 GPU=6 | /tmp/tmpmxzjy7cj/logs/fake_2_20261012_120444_795889.log
+START fake_3 GPU=7 | /tmp/tmpmxzjy7cj/logs/fake_3_20261012_120444_795889.log
+Verify completed tasks: 0file [00:00, ?file/s]Verify completed tasks: 0file [00:00, ?file/s]
+Lite20 seed search:   4%|▍         | 4/100 [00:00<?, ?train/s]Lite20 seed search:   4%|▍         | 4/100 [00:00<?, ?train/s]
+ok
+test_selection_never_loses_best_single (test_design.SearchDesign.test_selection_never_loses_best_single) ... ok
+test_b4_and_hr_valid_and_oof_logging (test_resume_fix.ResumeFix.test_b4_and_hr_valid_and_oof_logging) ... COMMAND: /home/sppark/miniconda3/envs/komap/bin/python -B -u /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/expert_worker.py --bundle /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/fusion_source --run /tmp/tmpgfqxvjq_/view --data-root /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/data --splits /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/expert_splits --family b4 --output /tmp/tmpgfqxvjq_/output --b4-dir model329_ws --fold-ids 1,2,3,4
+COMMAND: /home/sppark/miniconda3/envs/komap/bin/python -B -u /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/expert_worker.py --bundle /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/fusion_source --run /tmp/tmpgfqxvjq_/view --data-root /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/data --splits /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/expert_splits --family hr1 --output /tmp/tmpgfqxvjq_/output --fold-ids 2,4
+COMMAND: /home/sppark/miniconda3/envs/komap/bin/python -B -u /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/expert_worker.py --bundle /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/fusion_source --run /tmp/tmpgfqxvjq_/view --data-root /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/data --splits /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/expert_splits --family hr2 --output /tmp/tmpgfqxvjq_/output --fold-ids 1,4
+COMMAND: /home/sppark/miniconda3/envs/komap/bin/python -B -u /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/expert_worker.py --bundle /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/fusion_source --run /tmp/tmpgfqxvjq_/view --data-root /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/data --splits /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/expert_splits --family hr1 --output /tmp/tmpgfqxvjq_/output --fold 2
+COMMAND: /home/sppark/miniconda3/envs/komap/bin/python -B -u /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/expert_worker.py --bundle /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/fusion_source --run /tmp/tmpgfqxvjq_/view --data-root /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/data --splits /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_resume_v2/expert_splits --family hr2 --output /tmp/tmpgfqxvjq_/output --fold 4
+ok
+test_failed_child_is_still_reported (test_resume_fix.ResumeFix.test_failed_child_is_still_reported) ... COMMAND: /home/sppark/miniconda3/envs/komap/bin/python -c raise SystemExit(7)
+ok
+test_import_preserves_old_attempts_and_copies_cache (test_resume_fix.ResumeFix.test_import_preserves_old_attempts_and_copies_cache) ... ok
+test_real_subprocess_receives_exact_logged_argv (test_resume_fix.ResumeFix.test_real_subprocess_receives_exact_logged_argv) ... COMMAND: /home/sppark/miniconda3/envs/komap/bin/python -B /tmp/tmpgggqggte/echo argv.py /tmp/tmpgggqggte/output with spaces.json --fold 2 literal $(not_a_shell) two words
+ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 2.196s
+
+OK

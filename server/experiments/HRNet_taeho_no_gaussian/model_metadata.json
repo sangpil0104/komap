@@ -1,0 +1,37 @@
+{
+  "model_name": "HRNet_taeho_no_gaussian",
+  "model_created_date": "2026-09-28",
+  "model_date_tag": "0928",
+  "source_repository": "https://github.com/CNUKoMaP/HRNet_best.git",
+  "source_commit": "97adcdf337ab78fb7ec1469fe48943ff9a6363ea",
+  "source_directory": "source",
+  "import_status": "ready",
+  "training_started": false,
+  "result_directory_convention": "../../results/model_results_0928_<next_unused_number>",
+  "source_branch": "main",
+  "architecture": "UnetPlusPlus",
+  "encoder": "tu-hrnet_w48",
+  "boundary_head": true,
+  "pretrained_segmentation_checkpoint_included": false,
+  "upstream_metric": "global_miou",
+  "project_primary_metric": "image_miou",
+  "empty_union_policy": "one",
+  "imagenet_initialization_prepared": true,
+  "local_environment": "Python 3.11 / torch 2.7.1+cu128; see environment.freeze.txt",
+  "validation_report": "VALIDATION_REPORT.md",
+  "tests_passed": 11,
+  "configured_size_forward_backward_verified": false,
+  "baseline_model": "HRNet_taeho",
+  "baseline_directory": "../HRNet_taeho",
+  "source_modified_files": [
+    "komap_seg/dataset.py"
+  ],
+  "removed_augmentations": [
+    "GaussNoise",
+    "GaussianBlur"
+  ],
+  "baseline_source_manifest": "baseline_source_manifest.json",
+  "source_changes": "source_changes.patch",
+  "shared_environment": "../HRNet_taeho/.venv",
+  "baseline_preserved": true
+}

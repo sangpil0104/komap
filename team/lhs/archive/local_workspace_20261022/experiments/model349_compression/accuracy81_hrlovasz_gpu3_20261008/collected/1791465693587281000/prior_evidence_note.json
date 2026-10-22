@@ -1,0 +1,23 @@
+{
+  "prior_experiments": "Model333 B4 present-class Lovasz, Model283/284/285 fullstats candidates",
+  "prior_reported_paired_oof_gain_pp": 0.004,
+  "prior_reported_95ci_pp": [
+    -0.0084,
+    0.0171
+  ],
+  "evidence_source": "prior_model333_orderfix.json collected from authoritative P100 output, not prior dialogue",
+  "new_intervention_difference": "Current paired HR336 uses all-four-class per-patch Lovasz, replaces half Dice; prior B4 used present-class additive Lovasz. Different architecture/objective, no expected gain asserted.",
+  "decision": "Keep bounded paired experiment as falsifiable HR-specific transfer screen; disclose weak prior evidence and do not extrapolate guaranteed gain.",
+  "prior_artifact_sha256": "a3ccc386bfc63d5c7a01caad349a57f2f87342a4f74766b3da9fff5192614647",
+  "prior_control_standalone_oof_percent": 78.74836238810428,
+  "prior_lovasz_standalone_oof_percent": 78.63791835275157,
+  "prior_direct_delta_pp": -0.11044403535270808,
+  "prior_direct_class_delta_pp": [
+    -0.04457769756975871,
+    -0.08521670702604789,
+    0.017462882826257964,
+    -0.3294446196413281
+  ],
+  "prior_small_positive_route_delta_pp": 0.003992415142407875,
+  "caution": "The +0.004pp reported earlier was selected blended-route benefit, not direct standalone Lovasz benefit. Direct B4 OOF difference was negative. HR-specific efficacy remains unproven; fixed paired screen has no promised gain."
+}

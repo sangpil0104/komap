@@ -1,0 +1,312 @@
+[
+  {
+    "id": "remaining_phase2",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/phase2_remaining_parallel.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "remaining_phase2_parallel.log"
+  },
+  {
+    "id": "fresh_reproduction_initial_best",
+    "script": "reproduce.py",
+    "args": [
+      "--gpu",
+      "7",
+      "--id",
+      "EP01_class_weight"
+    ],
+    "log": "reproduce_initial_best.log"
+  },
+  {
+    "id": "large_context_d4",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/large_context_d4_plan.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "large_context_d4.log"
+  },
+  {
+    "id": "full_image",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/full_plan.json",
+      "--batch",
+      "1",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "full_image.log"
+  },
+  {
+    "id": "small_grid_shifts",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/phase_shift_plan.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "small_grid_shifts.log"
+  },
+  {
+    "id": "K00_adaptive_scale",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/adaptive_plans/K00_adaptive_scale.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "K00_adaptive_scale.log"
+  },
+  {
+    "id": "K01_adaptive_scale",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/adaptive_plans/K01_adaptive_scale.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "K01_adaptive_scale.log"
+  },
+  {
+    "id": "K02_adaptive_scale",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/adaptive_plans/K02_adaptive_scale.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "K02_adaptive_scale.log"
+  },
+  {
+    "id": "K03_adaptive_scale",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/adaptive_plans/K03_adaptive_scale.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "K03_adaptive_scale.log"
+  },
+  {
+    "id": "K04_adaptive_scale",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/adaptive_plans/K04_adaptive_scale.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "K04_adaptive_scale.log"
+  },
+  {
+    "id": "K05_adaptive_scale",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/adaptive_plans/K05_adaptive_scale.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "K05_adaptive_scale.log"
+  },
+  {
+    "id": "geometry",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/geometry_plan.json",
+      "--batch",
+      "1",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "geometry.log"
+  },
+  {
+    "id": "D00_temperature",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/extra_plans/D00_temperature.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "D00_temperature.log"
+  },
+  {
+    "id": "D01_temperature",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/extra_plans/D01_temperature.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "D01_temperature.log"
+  },
+  {
+    "id": "D02_temperature",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/extra_plans/D02_temperature.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "D02_temperature.log"
+  },
+  {
+    "id": "D03_temperature",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/extra_plans/D03_temperature.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "D03_temperature.log"
+  },
+  {
+    "id": "D04_temperature",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/extra_plans/D04_temperature.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "D04_temperature.log"
+  },
+  {
+    "id": "D05_temperature",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/extra_plans/D05_temperature.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "D05_temperature.log"
+  },
+  {
+    "id": "D06_quantize_input",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/extra_plans/D06_quantize_input.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "D06_quantize_input.log"
+  },
+  {
+    "id": "D07_clip_input",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/extra_plans/D07_clip_input.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "D07_clip_input.log"
+  },
+  {
+    "id": "D08_input_blur",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/extra_plans/D08_input_blur.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "D08_input_blur.log"
+  },
+  {
+    "id": "D09_input_blur",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/extra_plans/D09_input_blur.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "D09_input_blur.log"
+  },
+  {
+    "id": "D10_input_blur",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/extra_plans/D10_input_blur.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "D10_input_blur.log"
+  },
+  {
+    "id": "D11_decoder_interpolation",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/extra_plans/D11_decoder_interpolation.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "D11_decoder_interpolation.log"
+  }
+]

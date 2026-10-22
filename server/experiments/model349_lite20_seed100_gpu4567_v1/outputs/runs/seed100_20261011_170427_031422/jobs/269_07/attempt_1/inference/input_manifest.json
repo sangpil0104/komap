@@ -1,0 +1,349 @@
+{
+  "config": {
+    "model": "Model349",
+    "original_run": "model349_train_20260930T143930_234475Z",
+    "validation_image_miou": null,
+    "class_order": [
+      "Al3Ni",
+      "Primary Si",
+      "Al",
+      "Eutectic Si"
+    ],
+    "palette": [
+      [
+        25,
+        76,
+        153
+      ],
+      [
+        76,
+        178,
+        76
+      ],
+      [
+        153,
+        127,
+        76
+      ],
+      [
+        204,
+        204,
+        204
+      ]
+    ],
+    "calibration": "configs/calibration.json",
+    "weights_dir": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/jobs/269_07/attempt_1/inference/weights",
+    "route": {
+      "base": {
+        "primary_source": "326",
+        "primary_gamma": 1.0,
+        "al3ni_source": "326",
+        "al3ni_gamma": 0.7,
+        "al_source": "322",
+        "al_gamma": 0.6,
+        "eutectic_source": "269",
+        "eutectic_gamma": 0.7,
+        "prior_scale": 1.25,
+        "beta_scale": 0.8,
+        "al_delta": 0.0,
+        "eut_delta": 0.15,
+        "gaussian_blend": 0.5,
+        "eut_edge_blend": 0.25,
+        "cleanup_threshold": 128
+      },
+      "gamma329": [
+        0.5,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "gamma336": [
+        0.0,
+        0.25,
+        0.75,
+        0.75
+      ],
+      "gamma347": [
+        0.0,
+        0.0,
+        0.25,
+        0.0
+      ]
+    },
+    "inference": {
+      "device": "cuda",
+      "threads": 2,
+      "probability_storage_dtype": "float16",
+      "weight_storage_dtype": "float32",
+      "b4_folds": 4,
+      "b4_fold_ids": {
+        "322": [
+          3
+        ],
+        "326": [
+          1,
+          2
+        ],
+        "329": [
+          1,
+          3,
+          4
+        ]
+      },
+      "active_components": [
+        "322",
+        "326",
+        "329",
+        "base",
+        "336",
+        "347",
+        "269"
+      ],
+      "b4_tta": "d4",
+      "native": {
+        "patch": 1024,
+        "stride": 576,
+        "scale": 1.0,
+        "tta": "d4"
+      },
+      "hrnet": {
+        "patch": 512,
+        "overlap": 170,
+        "batch_size": 2,
+        "input_scale": 2.0,
+        "tta": "flip4"
+      },
+      "tent": {
+        "steps": 5,
+        "lr": 1e-05
+      },
+      "ema_pruned": true,
+      "pruned_high_bands": [
+        "model109",
+        "seed456"
+      ]
+    }
+  },
+  "images": [
+    {
+      "name": "A117_step4_sample2",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/images/A117_step4_sample2_image.png",
+      "size": [
+        1230,
+        875
+      ],
+      "sha256": "44cef6ab8394b7d08b48875cab895392b25a6916cb7e2ff72f8ecb92c5251e5a",
+      "gt": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/masks/A117_step4_sample2_mask.png",
+      "high_family": "restart51"
+    },
+    {
+      "name": "A11_step1_sample4",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/images/A11_step1_sample4_image.png",
+      "size": [
+        675,
+        480
+      ],
+      "sha256": "93cbd8d9e435213146e9d4fe3b02430ce78fcdd36f4329bbaa100bf7eac6a1c3",
+      "gt": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/masks/A11_step1_sample4_mask.png",
+      "high_family": "restart51"
+    },
+    {
+      "name": "A11_step2_sample4",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/images/A11_step2_sample4_image.png",
+      "size": [
+        675,
+        480
+      ],
+      "sha256": "695434cd5eaf15790dc47571aa030896bed6158b52da2cb640358715452092d5",
+      "gt": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/masks/A11_step2_sample4_mask.png",
+      "high_family": "restart51"
+    },
+    {
+      "name": "A125_step1_sample4",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/images/A125_step1_sample4_image.png",
+      "size": [
+        1230,
+        875
+      ],
+      "sha256": "ca33ef43ad09a1f721eed16a86d9cf521fa3cd39be3518e55222643fa8ed6569",
+      "gt": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/masks/A125_step1_sample4_mask.png",
+      "high_family": "restart51"
+    },
+    {
+      "name": "A153_step3_sample3",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/images/A153_step3_sample3_image.png",
+      "size": [
+        1278,
+        909
+      ],
+      "sha256": "1c1410fcbd71747e6fe77a2898aa0a6c108ba1524b272efd1451d97516aeb32a",
+      "gt": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/masks/A153_step3_sample3_mask.png",
+      "high_family": "restart51"
+    },
+    {
+      "name": "A170_step4_sample3",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/images/A170_step4_sample3_image.png",
+      "size": [
+        675,
+        480
+      ],
+      "sha256": "66007fd0f64ee0aaf5f14a0062dd1fb47d4cd82e54145397c6c7765456376b94",
+      "gt": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/masks/A170_step4_sample3_mask.png",
+      "high_family": "restart51"
+    },
+    {
+      "name": "A181_step1_sample1",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/images/A181_step1_sample1_image.png",
+      "size": [
+        1440,
+        1024
+      ],
+      "sha256": "70b0f50c810b7e7b555f5cc568adfc5702e37d1eba08231eb1319e3331f21ee4",
+      "gt": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/masks/A181_step1_sample1_mask.png",
+      "high_family": "restart51"
+    },
+    {
+      "name": "A186_step2_sample2",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/images/A186_step2_sample2_image.png",
+      "size": [
+        1278,
+        909
+      ],
+      "sha256": "bc7c27acec1b0a03f2cfc133cc191bbbff0cbb20cc422f204d378a37e26971f3",
+      "gt": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/masks/A186_step2_sample2_mask.png",
+      "high_family": "restart51"
+    },
+    {
+      "name": "A191_step4_sample3",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/images/A191_step4_sample3_image.png",
+      "size": [
+        1440,
+        1024
+      ],
+      "sha256": "7caaae85b73d874cec4b23781aacc13e58103c0b03ebcd0e0dc962ef442f52b9",
+      "gt": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/masks/A191_step4_sample3_mask.png",
+      "high_family": "restart51"
+    },
+    {
+      "name": "A40_step3_sample3",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/images/A40_step3_sample3_image.png",
+      "size": [
+        1278,
+        909
+      ],
+      "sha256": "7a57ae33d32de4836df06ce8518b09b7ab0c5399bbb7731eb65129aa882c4cd6",
+      "gt": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/masks/A40_step3_sample3_mask.png",
+      "high_family": "restart51"
+    },
+    {
+      "name": "A42_step2_sample4",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/images/A42_step2_sample4_image.png",
+      "size": [
+        1230,
+        875
+      ],
+      "sha256": "fb9ad5641210ed705bf0a83d2ba7d6a4e775cf2f2d6242cbc5a3c513e3c9cc40",
+      "gt": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/masks/A42_step2_sample4_mask.png",
+      "high_family": "restart51"
+    },
+    {
+      "name": "A44_step4_sample3",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/images/A44_step4_sample3_image.png",
+      "size": [
+        1278,
+        909
+      ],
+      "sha256": "90153ce08bc0995bac6a119b316995ebc865c5fad466d681210b08f5d8e9dc46",
+      "gt": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/masks/A44_step4_sample3_mask.png",
+      "high_family": "restart51"
+    },
+    {
+      "name": "A55_step2_sample1",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/images/A55_step2_sample1_image.png",
+      "size": [
+        1096,
+        780
+      ],
+      "sha256": "b212f559e567e844547f83c0646bc2098d15dc174d0fd0383a080e9bfc6e2ded",
+      "gt": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/masks/A55_step2_sample1_mask.png",
+      "high_family": "restart51"
+    },
+    {
+      "name": "A59_step3_sample1",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/images/A59_step3_sample1_image.png",
+      "size": [
+        675,
+        480
+      ],
+      "sha256": "a23291122eb42e7533380f834275bee444b3875266ac3c622aedbbefa011d904",
+      "gt": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/masks/A59_step3_sample1_mask.png",
+      "high_family": "restart51"
+    },
+    {
+      "name": "A63_step1_sample4",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/images/A63_step1_sample4_image.png",
+      "size": [
+        675,
+        480
+      ],
+      "sha256": "629ed6a2272ba535a08b63d924f9fadf3a47571779efc5f5e9b6cbf2ea5d85ba",
+      "gt": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/masks/A63_step1_sample4_mask.png",
+      "high_family": "restart51"
+    },
+    {
+      "name": "A67_step1_sample1",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/images/A67_step1_sample1_image.png",
+      "size": [
+        675,
+        480
+      ],
+      "sha256": "0d2291ef658b850cd9a46aa7ad05d3656228d9cb27dd6a910c0415b13a9295c6",
+      "gt": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/masks/A67_step1_sample1_mask.png",
+      "high_family": "restart51"
+    },
+    {
+      "name": "A71_step2_sample1",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/images/A71_step2_sample1_image.png",
+      "size": [
+        675,
+        480
+      ],
+      "sha256": "3d4ca3ba899c17a5b7a447751a0a9bfe43ebda9341dc89885ee806ffb52eb1b8",
+      "gt": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/masks/A71_step2_sample1_mask.png",
+      "high_family": "restart61"
+    },
+    {
+      "name": "A72_step4_sample4",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/images/A72_step4_sample4_image.png",
+      "size": [
+        675,
+        480
+      ],
+      "sha256": "48f692d2ffc41abadd8f6e0f8cc379d922097f4a20b52f502976eb11417f9283",
+      "gt": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/masks/A72_step4_sample4_mask.png",
+      "high_family": "restart51"
+    },
+    {
+      "name": "A74_step3_sample4",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/images/A74_step3_sample4_image.png",
+      "size": [
+        675,
+        480
+      ],
+      "sha256": "7948fed4105460bd18c367aa1032f0309687f9299183b277003e15095efecb77",
+      "gt": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/masks/A74_step3_sample4_mask.png",
+      "high_family": "restart51"
+    },
+    {
+      "name": "A7_step1_sample4",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/images/A7_step1_sample4_image.png",
+      "size": [
+        1278,
+        909
+      ],
+      "sha256": "48f0925a9df4312a9cb3c5d64cb5519950339f93b791e9daef6e031fd2dc03e6",
+      "gt": "/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/data/valid/masks/A7_step1_sample4_mask.png",
+      "high_family": "restart51"
+    }
+  ]
+}

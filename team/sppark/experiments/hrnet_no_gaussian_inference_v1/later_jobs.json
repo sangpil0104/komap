@@ -1,0 +1,76 @@
+[
+  {
+    "id": "gamma_interactions",
+    "script": "parallel_expandable.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/gamma_interaction_plan.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "gamma_interactions.log"
+  },
+  {
+    "id": "fresh_reproduction_GP05",
+    "script": "parallel_reproduce_expandable.py",
+    "args": [
+      "--id",
+      "GP05_sharpen"
+    ],
+    "log": "fresh_reproduction_GP05.log"
+  },
+  {
+    "id": "full_extended",
+    "script": "parallel_expandable.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/full_extended_plan.json",
+      "--batch",
+      "1",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "full_extended.log"
+  },
+  {
+    "id": "normalization",
+    "script": "parallel_inference.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/normalization_plan.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "normalization.log"
+  },
+  {
+    "id": "full_gamma",
+    "script": "parallel_expandable.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/full_gamma_plan.json",
+      "--batch",
+      "1",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "full_gamma.log"
+  },
+  {
+    "id": "canvas_order",
+    "script": "parallel_expandable.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/canvas_plan.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "canvas_order.log"
+  }
+]

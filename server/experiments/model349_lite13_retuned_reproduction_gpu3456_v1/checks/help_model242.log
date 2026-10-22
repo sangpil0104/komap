@@ -1,0 +1,36 @@
+usage: model242_ema_continuation.py [-h] --data-dir DATA_DIR --checkpoint
+                                    CHECKPOINT --output-dir OUTPUT_DIR
+                                    [--patch-size PATCH_SIZE]
+                                    [--patches-per-image PATCHES_PER_IMAGE]
+                                    [--batch-size BATCH_SIZE]
+                                    [--epochs EPOCHS] [--ema-decay EMA_DECAY]
+                                    [--encoder-lr ENCODER_LR]
+                                    [--decoder-lr DECODER_LR]
+                                    [--native-lr NATIVE_LR]
+                                    [--weight-decay WEIGHT_DECAY]
+                                    [--val-stride VAL_STRIDE]
+                                    [--tile-batch-size TILE_BATCH_SIZE]
+                                    [--selection-metric {image_mean_miou,image_mean_miou_exclude}]
+                                    [--num-workers NUM_WORKERS] [--seed SEED]
+                                    [--no-amp]
+
+options:
+  -h, --help            show this help message and exit
+  --data-dir DATA_DIR
+  --checkpoint CHECKPOINT
+  --output-dir OUTPUT_DIR
+  --patch-size PATCH_SIZE
+  --patches-per-image PATCHES_PER_IMAGE
+  --batch-size BATCH_SIZE
+  --epochs EPOCHS
+  --ema-decay EMA_DECAY
+  --encoder-lr ENCODER_LR
+  --decoder-lr DECODER_LR
+  --native-lr NATIVE_LR
+  --weight-decay WEIGHT_DECAY
+  --val-stride VAL_STRIDE
+  --tile-batch-size TILE_BATCH_SIZE
+  --selection-metric {image_mean_miou,image_mean_miou_exclude}
+  --num-workers NUM_WORKERS
+  --seed SEED
+  --no-amp

@@ -1,0 +1,31 @@
+{
+  "data_root": "/Data3/sppark/komap/experiments/model349_train_route_v2/outputs/runs/model349_train_20260930T143930_234475Z/data",
+  "output_dir": "/Data3/sppark/komap/experiments/model349_seed100_gpu4567_v1/outputs/runs/seed100_20261007T103906_646909Z/jobs/m347_s3447/attempt_1/training",
+  "device": "cuda:0",
+  "architecture": "UnetPlusPlus",
+  "encoder_name": "tu-hrnet_w48",
+  "encoder_weights": "imagenet",
+  "patch_size": 512,
+  "input_scale": 2.0,
+  "samples_per_image": 12,
+  "batch_size": 4,
+  "accumulation_steps": 2,
+  "num_workers": 4,
+  "epochs": 12,
+  "lr": 0.0001,
+  "encoder_lr_mult": 0.3,
+  "weight_decay": 0.0001,
+  "ce_class_weights": [
+    0.22906544,
+    0.49862612,
+    1.3916657,
+    1.88064275
+  ],
+  "init_checkpoint": "/Data3/sppark/komap/experiments/model349_seed100_gpu4567_v1/outputs/runs/seed100_20261007T103906_646909Z/jobs/m336_s3438/attempt_1/training/last.pt",
+  "no_boundary_head": false,
+  "boundary_head_weight": 1.0,
+  "seed": 3447,
+  "val_every": 0,
+  "no_amp": false,
+  "resume": false
+}

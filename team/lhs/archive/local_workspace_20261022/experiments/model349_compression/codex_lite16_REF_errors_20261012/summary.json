@@ -1,0 +1,1783 @@
+{
+  "images": 20,
+  "palette": [
+    [
+      25,
+      76,
+      153
+    ],
+    [
+      76,
+      178,
+      76
+    ],
+    [
+      153,
+      127,
+      76
+    ],
+    [
+      204,
+      204,
+      204
+    ]
+  ],
+  "class_names": [
+    "Al3Ni",
+    "Primary Si",
+    "Al",
+    "Eutectic Si"
+  ],
+  "stages": {
+    "R": {
+      "miou_percent": 79.79930889538245,
+      "mean_class_iou_percent": [
+        76.65932084673508,
+        86.99453712858781,
+        94.17530966779017,
+        61.36806793841673
+      ],
+      "error_pixels": 989615
+    },
+    "E": {
+      "miou_percent": 80.50419733010065,
+      "mean_class_iou_percent": [
+        77.91684612181317,
+        87.23652157464589,
+        94.40811184918634,
+        62.45530977475724
+      ],
+      "error_pixels": 928675
+    },
+    "F": {
+      "miou_percent": 80.55464328764197,
+      "mean_class_iou_percent": [
+        77.96055864169064,
+        87.25303444671513,
+        94.47823548770499,
+        62.526744574457084
+      ],
+      "error_pixels": 923196
+    }
+  },
+  "transitions": {
+    "R->E": {
+      "corrected": 166329,
+      "new_errors": 105389,
+      "wrong_to_other_wrong": 24426,
+      "changed": 296144,
+      "corrected_near_boundary": 154074,
+      "new_errors_near_boundary": 104039,
+      "by_gt_class": [
+        {
+          "corrected": 74749,
+          "new_errors": 29841,
+          "wrong_to_other_wrong": 10950
+        },
+        {
+          "corrected": 0,
+          "new_errors": 5421,
+          "wrong_to_other_wrong": 3647
+        },
+        {
+          "corrected": 91580,
+          "new_errors": 23300,
+          "wrong_to_other_wrong": 2211
+        },
+        {
+          "corrected": 0,
+          "new_errors": 46827,
+          "wrong_to_other_wrong": 7618
+        }
+      ],
+      "gt_old_new": [
+        [
+          [
+            0,
+            0,
+            29841,
+            0
+          ],
+          [
+            6264,
+            0,
+            248,
+            0
+          ],
+          [
+            19106,
+            0,
+            0,
+            0
+          ],
+          [
+            49379,
+            0,
+            10702,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            1390,
+            0
+          ],
+          [
+            3170,
+            0,
+            2251,
+            0
+          ],
+          [
+            151,
+            0,
+            0,
+            0
+          ],
+          [
+            1403,
+            0,
+            703,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            49563,
+            0
+          ],
+          [
+            67,
+            0,
+            3858,
+            0
+          ],
+          [
+            23300,
+            0,
+            0,
+            0
+          ],
+          [
+            2144,
+            0,
+            38159,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            6655,
+            0
+          ],
+          [
+            174,
+            0,
+            208,
+            0
+          ],
+          [
+            581,
+            0,
+            0,
+            0
+          ],
+          [
+            27001,
+            0,
+            19826,
+            0
+          ]
+        ]
+      ],
+      "worst_images": [
+        {
+          "image": "A186_step2_sample2",
+          "corrected": 4884,
+          "new_errors": 3677,
+          "wrong_to_other_wrong": 242,
+          "changed": 8803,
+          "by_gt_class": [
+            {
+              "corrected": 4107,
+              "new_errors": 196,
+              "wrong_to_other_wrong": 9
+            },
+            {
+              "corrected": 0,
+              "new_errors": 1137,
+              "wrong_to_other_wrong": 129
+            },
+            {
+              "corrected": 777,
+              "new_errors": 1909,
+              "wrong_to_other_wrong": 2
+            },
+            {
+              "corrected": 0,
+              "new_errors": 435,
+              "wrong_to_other_wrong": 102
+            }
+          ],
+          "corrected_near_boundary": 4642,
+          "new_errors_near_boundary": 3591,
+          "gt_old_new": [
+            [
+              [
+                0,
+                0,
+                196,
+                0
+              ],
+              [
+                982,
+                0,
+                4,
+                0
+              ],
+              [
+                2583,
+                0,
+                0,
+                0
+              ],
+              [
+                542,
+                0,
+                5,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                73,
+                0
+              ],
+              [
+                579,
+                0,
+                558,
+                0
+              ],
+              [
+                15,
+                0,
+                0,
+                0
+              ],
+              [
+                4,
+                0,
+                37,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                285,
+                0
+              ],
+              [
+                0,
+                0,
+                451,
+                0
+              ],
+              [
+                1909,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                41,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                51,
+                0
+              ],
+              [
+                17,
+                0,
+                29,
+                0
+              ],
+              [
+                5,
+                0,
+                0,
+                0
+              ],
+              [
+                415,
+                0,
+                20,
+                0
+              ]
+            ]
+          ],
+          "delta_pp": 0.03905554653270693,
+          "crop_box": [
+            1022,
+            653,
+            1278,
+            909
+          ]
+        },
+        {
+          "image": "A11_step1_sample4",
+          "corrected": 971,
+          "new_errors": 774,
+          "wrong_to_other_wrong": 166,
+          "changed": 1911,
+          "by_gt_class": [
+            {
+              "corrected": 236,
+              "new_errors": 418,
+              "wrong_to_other_wrong": 57
+            },
+            {
+              "corrected": 0,
+              "new_errors": 23,
+              "wrong_to_other_wrong": 16
+            },
+            {
+              "corrected": 735,
+              "new_errors": 214,
+              "wrong_to_other_wrong": 5
+            },
+            {
+              "corrected": 0,
+              "new_errors": 119,
+              "wrong_to_other_wrong": 88
+            }
+          ],
+          "corrected_near_boundary": 971,
+          "new_errors_near_boundary": 769,
+          "gt_old_new": [
+            [
+              [
+                0,
+                0,
+                418,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                222,
+                0,
+                0,
+                0
+              ],
+              [
+                14,
+                0,
+                57,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                10,
+                0
+              ],
+              [
+                0,
+                0,
+                23,
+                0
+              ],
+              [
+                4,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                2,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                422,
+                0
+              ],
+              [
+                0,
+                0,
+                34,
+                0
+              ],
+              [
+                214,
+                0,
+                0,
+                0
+              ],
+              [
+                5,
+                0,
+                279,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                53,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                35,
+                0,
+                0,
+                0
+              ],
+              [
+                3,
+                0,
+                116,
+                0
+              ]
+            ]
+          ],
+          "delta_pp": 0.054041195352927396,
+          "crop_box": [
+            0,
+            0,
+            256,
+            256
+          ]
+        },
+        {
+          "image": "A170_step4_sample3",
+          "corrected": 1495,
+          "new_errors": 1184,
+          "wrong_to_other_wrong": 102,
+          "changed": 2781,
+          "by_gt_class": [
+            {
+              "corrected": 1107,
+              "new_errors": 125,
+              "wrong_to_other_wrong": 7
+            },
+            {
+              "corrected": 0,
+              "new_errors": 202,
+              "wrong_to_other_wrong": 30
+            },
+            {
+              "corrected": 388,
+              "new_errors": 617,
+              "wrong_to_other_wrong": 3
+            },
+            {
+              "corrected": 0,
+              "new_errors": 240,
+              "wrong_to_other_wrong": 62
+            }
+          ],
+          "corrected_near_boundary": 1459,
+          "new_errors_near_boundary": 1175,
+          "gt_old_new": [
+            [
+              [
+                0,
+                0,
+                125,
+                0
+              ],
+              [
+                274,
+                0,
+                1,
+                0
+              ],
+              [
+                702,
+                0,
+                0,
+                0
+              ],
+              [
+                131,
+                0,
+                6,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                4,
+                0
+              ],
+              [
+                187,
+                0,
+                15,
+                0
+              ],
+              [
+                6,
+                0,
+                0,
+                0
+              ],
+              [
+                13,
+                0,
+                7,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                267,
+                0
+              ],
+              [
+                0,
+                0,
+                14,
+                0
+              ],
+              [
+                617,
+                0,
+                0,
+                0
+              ],
+              [
+                3,
+                0,
+                107,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                54,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                0,
+                0,
+                0
+              ],
+              [
+                151,
+                0,
+                89,
+                0
+              ]
+            ]
+          ],
+          "delta_pp": 0.1236638787775246,
+          "crop_box": [
+            419,
+            0,
+            675,
+            256
+          ]
+        },
+        {
+          "image": "A42_step2_sample4",
+          "corrected": 4457,
+          "new_errors": 3985,
+          "wrong_to_other_wrong": 547,
+          "changed": 8989,
+          "by_gt_class": [
+            {
+              "corrected": 2454,
+              "new_errors": 1116,
+              "wrong_to_other_wrong": 214
+            },
+            {
+              "corrected": 0,
+              "new_errors": 176,
+              "wrong_to_other_wrong": 83
+            },
+            {
+              "corrected": 2003,
+              "new_errors": 1017,
+              "wrong_to_other_wrong": 28
+            },
+            {
+              "corrected": 0,
+              "new_errors": 1676,
+              "wrong_to_other_wrong": 222
+            }
+          ],
+          "corrected_near_boundary": 4371,
+          "new_errors_near_boundary": 3952,
+          "gt_old_new": [
+            [
+              [
+                0,
+                0,
+                1116,
+                0
+              ],
+              [
+                218,
+                0,
+                21,
+                0
+              ],
+              [
+                780,
+                0,
+                0,
+                0
+              ],
+              [
+                1456,
+                0,
+                193,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                28,
+                0
+              ],
+              [
+                58,
+                0,
+                118,
+                0
+              ],
+              [
+                6,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                47,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                619,
+                0
+              ],
+              [
+                1,
+                0,
+                138,
+                0
+              ],
+              [
+                1017,
+                0,
+                0,
+                0
+              ],
+              [
+                27,
+                0,
+                1246,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                110,
+                0
+              ],
+              [
+                57,
+                0,
+                53,
+                0
+              ],
+              [
+                2,
+                0,
+                0,
+                0
+              ],
+              [
+                706,
+                0,
+                970,
+                0
+              ]
+            ]
+          ],
+          "delta_pp": 0.15028094634288447,
+          "crop_box": [
+            353,
+            117,
+            609,
+            373
+          ]
+        },
+        {
+          "image": "A71_step2_sample1",
+          "corrected": 2690,
+          "new_errors": 1721,
+          "wrong_to_other_wrong": 75,
+          "changed": 4486,
+          "by_gt_class": [
+            {
+              "corrected": 98,
+              "new_errors": 1110,
+              "wrong_to_other_wrong": 17
+            },
+            {
+              "corrected": 0,
+              "new_errors": 0,
+              "wrong_to_other_wrong": 0
+            },
+            {
+              "corrected": 2592,
+              "new_errors": 572,
+              "wrong_to_other_wrong": 2
+            },
+            {
+              "corrected": 0,
+              "new_errors": 39,
+              "wrong_to_other_wrong": 56
+            }
+          ],
+          "corrected_near_boundary": 2642,
+          "new_errors_near_boundary": 1655,
+          "gt_old_new": [
+            [
+              [
+                0,
+                0,
+                1110,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                98,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                17,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                2425,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                572,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                167,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                50,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                6,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                39,
+                0
+              ]
+            ]
+          ],
+          "delta_pp": 0.21139866608014257,
+          "crop_box": [
+            355,
+            224,
+            611,
+            480
+          ]
+        }
+      ]
+    },
+    "E->F": {
+      "corrected": 12757,
+      "new_errors": 7278,
+      "wrong_to_other_wrong": 661,
+      "changed": 20696,
+      "corrected_near_boundary": 12699,
+      "new_errors_near_boundary": 7260,
+      "by_gt_class": [
+        {
+          "corrected": 0,
+          "new_errors": 3181,
+          "wrong_to_other_wrong": 406
+        },
+        {
+          "corrected": 0,
+          "new_errors": 390,
+          "wrong_to_other_wrong": 50
+        },
+        {
+          "corrected": 12757,
+          "new_errors": 0,
+          "wrong_to_other_wrong": 0
+        },
+        {
+          "corrected": 0,
+          "new_errors": 3707,
+          "wrong_to_other_wrong": 205
+        }
+      ],
+      "gt_old_new": [
+        [
+          [
+            0,
+            0,
+            3181,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            402,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            7,
+            0
+          ],
+          [
+            0,
+            0,
+            390,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            43,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            5611,
+            0
+          ],
+          [
+            0,
+            0,
+            695,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            6451,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            196,
+            0
+          ],
+          [
+            0,
+            0,
+            9,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            3707,
+            0
+          ]
+        ]
+      ],
+      "worst_images": [
+        {
+          "image": "A170_step4_sample3",
+          "corrected": 693,
+          "new_errors": 701,
+          "wrong_to_other_wrong": 11,
+          "changed": 1405,
+          "by_gt_class": [
+            {
+              "corrected": 0,
+              "new_errors": 487,
+              "wrong_to_other_wrong": 4
+            },
+            {
+              "corrected": 0,
+              "new_errors": 26,
+              "wrong_to_other_wrong": 3
+            },
+            {
+              "corrected": 693,
+              "new_errors": 0,
+              "wrong_to_other_wrong": 0
+            },
+            {
+              "corrected": 0,
+              "new_errors": 188,
+              "wrong_to_other_wrong": 4
+            }
+          ],
+          "corrected_near_boundary": 693,
+          "new_errors_near_boundary": 700,
+          "gt_old_new": [
+            [
+              [
+                0,
+                0,
+                487,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                4,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                26,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                3,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                463,
+                0
+              ],
+              [
+                0,
+                0,
+                28,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                202,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                4,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                188,
+                0
+              ]
+            ]
+          ],
+          "delta_pp": -0.03907128913083202,
+          "crop_box": [
+            367,
+            201,
+            623,
+            457
+          ]
+        },
+        {
+          "image": "A74_step3_sample4",
+          "corrected": 377,
+          "new_errors": 297,
+          "wrong_to_other_wrong": 29,
+          "changed": 703,
+          "by_gt_class": [
+            {
+              "corrected": 0,
+              "new_errors": 230,
+              "wrong_to_other_wrong": 9
+            },
+            {
+              "corrected": 0,
+              "new_errors": 11,
+              "wrong_to_other_wrong": 0
+            },
+            {
+              "corrected": 377,
+              "new_errors": 0,
+              "wrong_to_other_wrong": 0
+            },
+            {
+              "corrected": 0,
+              "new_errors": 56,
+              "wrong_to_other_wrong": 20
+            }
+          ],
+          "corrected_near_boundary": 377,
+          "new_errors_near_boundary": 297,
+          "gt_old_new": [
+            [
+              [
+                0,
+                0,
+                230,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                9,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                11,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                324,
+                0
+              ],
+              [
+                0,
+                0,
+                7,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                46,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                19,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                56,
+                0
+              ]
+            ]
+          ],
+          "delta_pp": -0.03126310123030551,
+          "crop_box": [
+            331,
+            224,
+            587,
+            480
+          ]
+        },
+        {
+          "image": "A72_step4_sample4",
+          "corrected": 595,
+          "new_errors": 554,
+          "wrong_to_other_wrong": 27,
+          "changed": 1176,
+          "by_gt_class": [
+            {
+              "corrected": 0,
+              "new_errors": 221,
+              "wrong_to_other_wrong": 21
+            },
+            {
+              "corrected": 0,
+              "new_errors": 2,
+              "wrong_to_other_wrong": 1
+            },
+            {
+              "corrected": 595,
+              "new_errors": 0,
+              "wrong_to_other_wrong": 0
+            },
+            {
+              "corrected": 0,
+              "new_errors": 331,
+              "wrong_to_other_wrong": 5
+            }
+          ],
+          "corrected_near_boundary": 595,
+          "new_errors_near_boundary": 554,
+          "gt_old_new": [
+            [
+              [
+                0,
+                0,
+                221,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                21,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                178,
+                0
+              ],
+              [
+                0,
+                0,
+                6,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                411,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                5,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                331,
+                0
+              ]
+            ]
+          ],
+          "delta_pp": -0.016242217415052274,
+          "crop_box": [
+            419,
+            127,
+            675,
+            383
+          ]
+        },
+        {
+          "image": "A11_step1_sample4",
+          "corrected": 243,
+          "new_errors": 200,
+          "wrong_to_other_wrong": 31,
+          "changed": 474,
+          "by_gt_class": [
+            {
+              "corrected": 0,
+              "new_errors": 39,
+              "wrong_to_other_wrong": 31
+            },
+            {
+              "corrected": 0,
+              "new_errors": 47,
+              "wrong_to_other_wrong": 0
+            },
+            {
+              "corrected": 243,
+              "new_errors": 0,
+              "wrong_to_other_wrong": 0
+            },
+            {
+              "corrected": 0,
+              "new_errors": 114,
+              "wrong_to_other_wrong": 0
+            }
+          ],
+          "corrected_near_boundary": 243,
+          "new_errors_near_boundary": 200,
+          "gt_old_new": [
+            [
+              [
+                0,
+                0,
+                39,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                31,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                47,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                34,
+                0
+              ],
+              [
+                0,
+                0,
+                41,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                168,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                114,
+                0
+              ]
+            ]
+          ],
+          "delta_pp": -0.005431997491567309,
+          "crop_box": [
+            0,
+            215,
+            256,
+            471
+          ]
+        },
+        {
+          "image": "A186_step2_sample2",
+          "corrected": 21,
+          "new_errors": 23,
+          "wrong_to_other_wrong": 0,
+          "changed": 44,
+          "by_gt_class": [
+            {
+              "corrected": 0,
+              "new_errors": 8,
+              "wrong_to_other_wrong": 0
+            },
+            {
+              "corrected": 0,
+              "new_errors": 13,
+              "wrong_to_other_wrong": 0
+            },
+            {
+              "corrected": 21,
+              "new_errors": 0,
+              "wrong_to_other_wrong": 0
+            },
+            {
+              "corrected": 0,
+              "new_errors": 2,
+              "wrong_to_other_wrong": 0
+            }
+          ],
+          "corrected_near_boundary": 21,
+          "new_errors_near_boundary": 23,
+          "gt_old_new": [
+            [
+              [
+                0,
+                0,
+                8,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                13,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                5,
+                0
+              ],
+              [
+                0,
+                0,
+                16,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                2,
+                0
+              ]
+            ]
+          ],
+          "delta_pp": -0.0018312966973077494,
+          "crop_box": [
+            420,
+            325,
+            676,
+            581
+          ]
+        }
+      ]
+    }
+  },
+  "valid_development_diagnostic": true,
+  "GPU_rerun": false
+}

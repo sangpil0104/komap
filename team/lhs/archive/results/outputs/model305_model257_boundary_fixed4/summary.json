@@ -1,0 +1,46 @@
+{
+  "model": 301,
+  "method": "Model257 fine-tuned with shared boundary enhancement on U-Net++ fine decoder stages",
+  "metric": "per-image mean of four class IoUs; empty union is 0",
+  "loss": "weighted cross-entropy + Dice",
+  "train_images": 70,
+  "valid_masks_used_for_epoch_selection": false,
+  "checkpoint_selection": "fixed final epoch",
+  "baseline_model257_image_mean_miou": 0.7720750168508469,
+  "best_record": {
+    "epoch": 4,
+    "train_loss": 0.33993045426905155,
+    "seconds": 1029.8568999767303
+  },
+  "final": {
+    "image_mean_miou": 0.7667967078936675,
+    "image_scores": [
+      0.8627277675924382,
+      0.6456777347781412,
+      0.7376438808335748,
+      0.7867485087347414,
+      0.6748450876724518,
+      0.871363693666844,
+      0.804825198025923,
+      0.7513391506560927,
+      0.7930584946178281,
+      0.8147582111896581,
+      0.829394158754908,
+      0.88237902706749,
+      0.8079521388665175,
+      0.8211975670450513,
+      0.8335190728597158,
+      0.7300986342516022,
+      0.34444582515808086,
+      0.8638547490365126,
+      0.7133897288089155,
+      0.7667155282568644
+    ]
+  },
+  "elapsed_seconds": 1121.3893511295319,
+  "checkpoint_epoch": 4,
+  "artifacts": {
+    "checkpoint": "outputs/model305_model257_boundary_fixed4/last.pt",
+    "valid_probs": "outputs/model305_model257_boundary_fixed4/valid_probs.npz"
+  }
+}

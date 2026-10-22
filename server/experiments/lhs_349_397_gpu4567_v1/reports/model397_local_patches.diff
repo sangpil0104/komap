@@ -1,0 +1,113 @@
+--- experiments/lhs_349_397_gpu4567_v1/upstream397/model397_reproduction_bundle/model392/evaluate_image_mean.py
++++ experiments/lhs_349_397_gpu4567_v1/model397/source/model392/evaluate_image_mean.py
+@@ -8,6 +8,7 @@
+ 
+ from __future__ import annotations
+ 
++from tqdm import tqdm
+ import argparse
+ import csv
+ import json
+@@ -79,8 +80,7 @@
+ 
+     probabilities: dict[str, np.ndarray] = {}
+     rows: list[dict[str, object]] = []
+-    pooled = np.zeros((NUM_CLASSES, NUM_CLASSES), dtype=np.int64)
+-    for sample in ds:
++    for sample in tqdm(ds, desc="HRNet inference", mininterval=15):
+         sample_scale = effective_input_scale(
+             preprocessing["input_scale"], preprocessing["target_width"], sample["width"]
+         )
+@@ -119,10 +119,6 @@
+             })
+             for class_id, name in enumerate(CLASS_NAMES):
+                 row[f"iou_{name}"] = ious[class_id]
+-            bins = target.reshape(-1) * NUM_CLASSES + pred.reshape(-1)
+-            pooled += np.bincount(bins, minlength=NUM_CLASSES**2).reshape(
+-                NUM_CLASSES, NUM_CLASSES
+-            )
+         rows.append(row)
+         if args.split == "valid":
+             print(
+@@ -176,13 +172,6 @@
+                               ("empty_one", "image_miou_empty_one")):
+             vals = [float(row[field]) for row in rows if np.isfinite(float(row[field]))]
+             summary[field] = float(np.mean(vals))
+-        intersection = np.diag(pooled).astype(np.float64)
+-        union = pooled.sum(0) + pooled.sum(1) - intersection
+-        global_iou = np.divide(intersection, union, out=np.zeros_like(intersection), where=union > 0)
+-        summary["pooled_global_miou_diagnostic_only"] = float(global_iou.mean())
+-        summary["pooled_global_iou_by_class"] = {
+-            name: float(value) for name, value in zip(CLASS_NAMES, global_iou)
+-        }
+     (output / f"{args.split}_summary.json").write_text(
+         json.dumps(summary, ensure_ascii=False, indent=2, allow_nan=True), encoding="utf-8"
+     )
+--- experiments/lhs_349_397_gpu4567_v1/upstream397/model397_reproduction_bundle/model392/train.py
++++ experiments/lhs_349_397_gpu4567_v1/model397/source/model392/train.py
+@@ -11,6 +11,7 @@
+ the actual mIoU.
+ """
+ 
++from tqdm import tqdm
+ import argparse
+ import json
+ import random
+@@ -215,7 +216,7 @@
+         f"target_width={args.target_width}", flush=True
+     )
+ 
+-    for epoch in range(start_epoch, args.epochs + 1):
++    for epoch in tqdm(range(start_epoch, args.epochs + 1), desc="HRNet epochs", mininterval=15):
+         train_ds.set_epoch(epoch)
+         model.train()
+         epoch_loss = 0.0
+--- experiments/lhs_349_397_gpu4567_v1/upstream397/model397_reproduction_bundle/model329/train.py
++++ experiments/lhs_349_397_gpu4567_v1/model397/source/model329/train.py
+@@ -2,6 +2,7 @@
+ 
+ No checkpoint selection on valid: the last checkpoint is saved and valid is only reported.
+ """
++from tqdm import tqdm
+ import argparse
+ import json
+ import math
+@@ -227,7 +228,7 @@
+ scaler = torch.amp.GradScaler("cuda", init_scale=args.amp_init_scale)
+ t0 = time.time()
+ run = 0.0
+-for it, (x, y) in enumerate(dl):
++for it, (x, y) in enumerate(tqdm(dl, total=args.iters, desc="B4 training", mininterval=15)):
+     x, y = x.cuda(non_blocking=True), y.cuda(non_blocking=True)
+     with torch.autocast("cuda", dtype=torch.float16):
+         logits = model(x)
+--- experiments/lhs_349_397_gpu4567_v1/upstream397/model397_reproduction_bundle/model329/predict.py
++++ experiments/lhs_349_397_gpu4567_v1/model397/source/model329/predict.py
+@@ -1,4 +1,5 @@
+ """Ensemble inference: writes color masks and (if GT exists) per-image mIoU."""
++from tqdm import tqdm
+ import argparse
+ import json
+ import os
+@@ -28,7 +29,7 @@
+ os.makedirs(args.out, exist_ok=True)
+ scores = {}
+ prob_archive = {}
+-for img_path, mask_path in list_split(args.data, args.split):
++for img_path, mask_path in tqdm(list_split(args.data, args.split), desc="B4 inference", mininterval=15):
+     name = os.path.basename(img_path).replace("_image.png", "")
+     probs = predict_probs(members, load_gray(img_path), tta=not args.no_tta,
+                           device=args.device).cpu().numpy().astype(np.float32)
+--- experiments/lhs_349_397_gpu4567_v1/upstream397/model397_reproduction_bundle/model329/common.py
++++ experiments/lhs_349_397_gpu4567_v1/model397/source/model329/common.py
+@@ -120,8 +120,8 @@
+     cm = confusion(pred, gt)
+     inter = np.diag(cm).astype(np.float64)
+     union = cm.sum(0) + cm.sum(1) - inter
+-    iou = np.where(union > 0, inter / np.maximum(union, 1), np.nan)
+-    return np.nanmean(iou), np.nanmean(np.where(np.isnan(iou), 1.0, iou)), iou
++    iou = np.where(union > 0, inter / np.maximum(union, 1), 0.0)
++    return np.mean(iou), np.nanmean(np.where(np.isnan(iou), 1.0, iou)), iou
+ 
+ 
+ # ---------------------------------------------------------------- inference

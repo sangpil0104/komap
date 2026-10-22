@@ -1,0 +1,134 @@
+{
+  "method": "divide final route softmax probabilities by reciprocal train-mask pixel prevalence before argmax",
+  "class_order_team": [
+    "Al",
+    "Al3Ni",
+    "Primary_Si",
+    "Eutectic_Si"
+  ],
+  "class_order_route": [
+    "Al3Ni",
+    "Primary_Si",
+    "Al",
+    "Eutectic_Si"
+  ],
+  "train_mask_count": 70,
+  "train_pixel_counts_team_order": [
+    39056688,
+    17942376,
+    6428654,
+    4757170
+  ],
+  "train_pixel_prevalence_team_order": [
+    0.5728056339991349,
+    0.2631430002495568,
+    0.09428268034993326,
+    0.06976868540137515
+  ],
+  "class_weights_inverse_prevalence_team_order": [
+    1.745792884435055,
+    3.800215088570209,
+    10.606401899993374,
+    14.333077859315518
+  ],
+  "class_weights_inverse_prevalence_route_order": [
+    3.800215088570209,
+    10.606401899993374,
+    1.745792884435055,
+    14.333077859315518
+  ],
+  "logit_offsets_route_order": [
+    -1.335057667385811,
+    -2.361457771641474,
+    -0.557208827491729,
+    -2.6625700030979225
+  ],
+  "route_candidate": "classwise=['Al3Ni:0.50', 'Primary Si:0.70', 'Al:0.70']",
+  "recorded_model327_miou": 0.7918981300014838,
+  "uncorrected_reproduction": {
+    "image_mean_miou_empty_zero": 0.7918981300014838,
+    "image_mean_miou_exclude_empty": 0.80032968759977,
+    "image_mean_iou_per_class_empty_zero": {
+      "Al3Ni": 0.7636200743037247,
+      "Primary_Si": 0.8636563761583306,
+      "Al": 0.9400977166341118,
+      "Eutectic_Si": 0.6002183529097682
+    },
+    "global_iou_per_class": {
+      "Al3Ni": 0.8036071528681742,
+      "Primary_Si": 0.8986604365644334,
+      "Al": 0.9445906634989722,
+      "Eutectic_Si": 0.6256270456719022
+    },
+    "images": 20,
+    "confusion": [
+      [
+        2929934,
+        19989,
+        213112,
+        170651
+      ],
+      [
+        23788,
+        1506686,
+        28336,
+        43543
+      ],
+      [
+        147387,
+        9972,
+        9402685,
+        54792
+      ],
+      [
+        141117,
+        44277,
+        97959,
+        923032
+      ]
+    ]
+  },
+  "corrected": {
+    "image_mean_miou_empty_zero": 0.7487450111729739,
+    "image_mean_miou_exclude_empty": 0.7569379845918685,
+    "image_mean_iou_per_class_empty_zero": {
+      "Al3Ni": 0.7440536592712481,
+      "Primary_Si": 0.8512908303427213,
+      "Al": 0.9196181941706325,
+      "Eutectic_Si": 0.48001736090729336
+    },
+    "global_iou_per_class": {
+      "Al3Ni": 0.7911375430604304,
+      "Primary_Si": 0.8862094021030149,
+      "Al": 0.9302747160619691,
+      "Eutectic_Si": 0.5173778074421691
+    },
+    "images": 20,
+    "confusion": [
+      [
+        2920345,
+        11641,
+        337056,
+        64644
+      ],
+      [
+        32678,
+        1472117,
+        66823,
+        30735
+      ],
+      [
+        73202,
+        1114,
+        9537315,
+        3205
+      ],
+      [
+        251758,
+        46031,
+        233434,
+        675162
+      ]
+    ]
+  }
+}

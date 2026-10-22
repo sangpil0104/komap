@@ -1,0 +1,246 @@
+{
+  "experiment": "Model392 fold geometry audit",
+  "scope": "fixed train grouped split image filenames and native widths only",
+  "excluded": [
+    "masks/labels",
+    "OOF probabilities/scores",
+    "official valid",
+    "test"
+  ],
+  "geometry": {
+    "patch_size": 512,
+    "base_input_scale": 2.0,
+    "base_overlap": 170,
+    "target_rule": "per-fold train image width mode; ties choose smaller width"
+  },
+  "folds": {
+    "1": {
+      "fold": 1,
+      "train_images": 52,
+      "heldout_images": 18,
+      "train_groups": 44,
+      "heldout_groups": 15,
+      "group_overlap": [],
+      "training_width_counts": {
+        "675": 9,
+        "1230": 18,
+        "1278": 17,
+        "1440": 8
+      },
+      "heldout_width_counts": {
+        "675": 8,
+        "1230": 2,
+        "1278": 7,
+        "1440": 1
+      },
+      "target_width_from_training_mode": 1230,
+      "heldout_target_width_control_images": 2,
+      "geometry_by_native_width": {
+        "675": {
+          "train_images": 9,
+          "heldout_images": 8,
+          "effective_scale": 3.6444444444444444,
+          "native_crop_and_tile_px": 140,
+          "inference_overlap_px": 93,
+          "overlap_to_tile_ratio": 0.6642857142857143
+        },
+        "1230": {
+          "train_images": 18,
+          "heldout_images": 2,
+          "effective_scale": 2.0,
+          "native_crop_and_tile_px": 256,
+          "inference_overlap_px": 170,
+          "overlap_to_tile_ratio": 0.6640625
+        },
+        "1278": {
+          "train_images": 17,
+          "heldout_images": 7,
+          "effective_scale": 1.9248826291079812,
+          "native_crop_and_tile_px": 266,
+          "inference_overlap_px": 177,
+          "overlap_to_tile_ratio": 0.6654135338345865
+        },
+        "1440": {
+          "train_images": 8,
+          "heldout_images": 1,
+          "effective_scale": 1.7083333333333333,
+          "native_crop_and_tile_px": 300,
+          "inference_overlap_px": 199,
+          "overlap_to_tile_ratio": 0.6633333333333333
+        }
+      },
+      "image_id_width_manifest_sha256": "650803f32dff0bc68d294d2476392d05fe4ebadc1f760f91eb9991b86077c88b"
+    },
+    "2": {
+      "fold": 2,
+      "train_images": 52,
+      "heldout_images": 18,
+      "train_groups": 44,
+      "heldout_groups": 15,
+      "group_overlap": [],
+      "training_width_counts": {
+        "675": 14,
+        "1230": 15,
+        "1278": 17,
+        "1440": 6
+      },
+      "heldout_width_counts": {
+        "675": 3,
+        "1230": 5,
+        "1278": 7,
+        "1440": 3
+      },
+      "target_width_from_training_mode": 1278,
+      "heldout_target_width_control_images": 7,
+      "geometry_by_native_width": {
+        "675": {
+          "train_images": 14,
+          "heldout_images": 3,
+          "effective_scale": 3.7866666666666666,
+          "native_crop_and_tile_px": 135,
+          "inference_overlap_px": 90,
+          "overlap_to_tile_ratio": 0.6666666666666666
+        },
+        "1230": {
+          "train_images": 15,
+          "heldout_images": 5,
+          "effective_scale": 2.078048780487805,
+          "native_crop_and_tile_px": 246,
+          "inference_overlap_px": 163,
+          "overlap_to_tile_ratio": 0.6626016260162602
+        },
+        "1278": {
+          "train_images": 17,
+          "heldout_images": 7,
+          "effective_scale": 2.0,
+          "native_crop_and_tile_px": 256,
+          "inference_overlap_px": 170,
+          "overlap_to_tile_ratio": 0.6640625
+        },
+        "1440": {
+          "train_images": 6,
+          "heldout_images": 3,
+          "effective_scale": 1.775,
+          "native_crop_and_tile_px": 288,
+          "inference_overlap_px": 191,
+          "overlap_to_tile_ratio": 0.6631944444444444
+        }
+      },
+      "image_id_width_manifest_sha256": "5fce2b4159a48e685e3753cea95f73e3d75072263c8160bf2f8dc6101479bcc2"
+    },
+    "3": {
+      "fold": 3,
+      "train_images": 53,
+      "heldout_images": 17,
+      "train_groups": 45,
+      "heldout_groups": 14,
+      "group_overlap": [],
+      "training_width_counts": {
+        "675": 15,
+        "1230": 12,
+        "1278": 20,
+        "1440": 6
+      },
+      "heldout_width_counts": {
+        "675": 2,
+        "1230": 8,
+        "1278": 4,
+        "1440": 3
+      },
+      "target_width_from_training_mode": 1278,
+      "heldout_target_width_control_images": 4,
+      "geometry_by_native_width": {
+        "675": {
+          "train_images": 15,
+          "heldout_images": 2,
+          "effective_scale": 3.7866666666666666,
+          "native_crop_and_tile_px": 135,
+          "inference_overlap_px": 90,
+          "overlap_to_tile_ratio": 0.6666666666666666
+        },
+        "1230": {
+          "train_images": 12,
+          "heldout_images": 8,
+          "effective_scale": 2.078048780487805,
+          "native_crop_and_tile_px": 246,
+          "inference_overlap_px": 163,
+          "overlap_to_tile_ratio": 0.6626016260162602
+        },
+        "1278": {
+          "train_images": 20,
+          "heldout_images": 4,
+          "effective_scale": 2.0,
+          "native_crop_and_tile_px": 256,
+          "inference_overlap_px": 170,
+          "overlap_to_tile_ratio": 0.6640625
+        },
+        "1440": {
+          "train_images": 6,
+          "heldout_images": 3,
+          "effective_scale": 1.775,
+          "native_crop_and_tile_px": 288,
+          "inference_overlap_px": 191,
+          "overlap_to_tile_ratio": 0.6631944444444444
+        }
+      },
+      "image_id_width_manifest_sha256": "b16268180fbd731e0337688bff26ed5a78075adbab2b3ae959b611d68aea0348"
+    },
+    "4": {
+      "fold": 4,
+      "train_images": 53,
+      "heldout_images": 17,
+      "train_groups": 44,
+      "heldout_groups": 15,
+      "group_overlap": [],
+      "training_width_counts": {
+        "675": 13,
+        "1230": 15,
+        "1278": 18,
+        "1440": 7
+      },
+      "heldout_width_counts": {
+        "675": 4,
+        "1230": 5,
+        "1278": 6,
+        "1440": 2
+      },
+      "target_width_from_training_mode": 1278,
+      "heldout_target_width_control_images": 6,
+      "geometry_by_native_width": {
+        "675": {
+          "train_images": 13,
+          "heldout_images": 4,
+          "effective_scale": 3.7866666666666666,
+          "native_crop_and_tile_px": 135,
+          "inference_overlap_px": 90,
+          "overlap_to_tile_ratio": 0.6666666666666666
+        },
+        "1230": {
+          "train_images": 15,
+          "heldout_images": 5,
+          "effective_scale": 2.078048780487805,
+          "native_crop_and_tile_px": 246,
+          "inference_overlap_px": 163,
+          "overlap_to_tile_ratio": 0.6626016260162602
+        },
+        "1278": {
+          "train_images": 18,
+          "heldout_images": 6,
+          "effective_scale": 2.0,
+          "native_crop_and_tile_px": 256,
+          "inference_overlap_px": 170,
+          "overlap_to_tile_ratio": 0.6640625
+        },
+        "1440": {
+          "train_images": 7,
+          "heldout_images": 2,
+          "effective_scale": 1.775,
+          "native_crop_and_tile_px": 288,
+          "inference_overlap_px": 191,
+          "overlap_to_tile_ratio": 0.6631944444444444
+        }
+      },
+      "image_id_width_manifest_sha256": "2b879d7cb23b51ea4b48e71c208d3b5f62831ae82359b195ea357d85d570e0bb"
+    }
+  }
+}

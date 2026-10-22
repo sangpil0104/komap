@@ -1,0 +1,2654 @@
+{
+  "method": "adaptive_multi_otsu_4_v1",
+  "version": 1,
+  "classes": [
+    "Primary Si",
+    "Al3Ni",
+    "Eutectic Si",
+    "Al"
+  ],
+  "palette": [
+    [
+      76,
+      178,
+      76
+    ],
+    [
+      25,
+      76,
+      153
+    ],
+    [
+      204,
+      204,
+      204
+    ],
+    [
+      153,
+      127,
+      76
+    ]
+  ],
+  "grayscale": "PIL RGB.convert('L'), uint8",
+  "threshold_rule": "per-image four-level Otsu; lower bin includes cut",
+  "bin_to_class": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "fallback_thresholds": [
+    87.0,
+    152.25,
+    201.25
+  ],
+  "empty_class_policy": "one",
+  "selection_metric": "train_image_miou_one",
+  "train_image_miou_one": 47.46049163512403,
+  "train_image_count": 70,
+  "train_images": [
+    {
+      "image_id": "A101_step3_sample3",
+      "thresholds": [
+        127.0,
+        176.0,
+        217.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "886e270faed10a612bd02ed09a101c694b5788b57e35674a087949323641046d",
+      "mask_sha256": "b9e9c4101788fe3829759072475ff1cd93ee8f0cc23f743aecafe177d96f5e15",
+      "target_vs_bin_confusion": [
+        [
+          54654,
+          1066,
+          150,
+          6
+        ],
+        [
+          19471,
+          283677,
+          20299,
+          957
+        ],
+        [
+          31832,
+          23890,
+          3006,
+          239
+        ],
+        [
+          1357,
+          34628,
+          133802,
+          467216
+        ]
+      ]
+    },
+    {
+      "image_id": "A106_step4_sample1",
+      "thresholds": [
+        139.0,
+        184.5,
+        216.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "36c43147b0a742e863c7e0837172dca03591110b228e5894f715452e182a6cda",
+      "mask_sha256": "eb81fb8de655ce3c30c292dcafd1a2616ebdd46e20cf911421c5838adf71321a",
+      "target_vs_bin_confusion": [
+        [
+          61683,
+          5457,
+          551,
+          4
+        ],
+        [
+          11356,
+          274910,
+          42645,
+          520
+        ],
+        [
+          27730,
+          24468,
+          2439,
+          71
+        ],
+        [
+          558,
+          31130,
+          163782,
+          428946
+        ]
+      ]
+    },
+    {
+      "image_id": "A108_step2_sample2",
+      "thresholds": [
+        132.0,
+        183.0,
+        220.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "984ad8d2a5f1fd28823c6bcd8e83b9978ccfbef88cfae0fbe1acb7a103acb187",
+      "mask_sha256": "b234c8d5b408dc6109d36fa070039c17879e7ba420cf68ee482ea65ec487fd49",
+      "target_vs_bin_confusion": [
+        [
+          79403,
+          2448,
+          130,
+          0
+        ],
+        [
+          9124,
+          331288,
+          9623,
+          67
+        ],
+        [
+          48578,
+          26471,
+          2079,
+          28
+        ],
+        [
+          504,
+          28686,
+          106868,
+          430953
+        ]
+      ]
+    },
+    {
+      "image_id": "A109_step1_sample3",
+      "thresholds": [
+        139.0,
+        187.0,
+        220.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "dac0ab5313f800b20bc9ce507901d28d1594deadcfb9903548d90a30193bdb9c",
+      "mask_sha256": "70d86b9d7f63363262a4ab24958f14fb869a6885f1c7c478ca18fd4796077f14",
+      "target_vs_bin_confusion": [
+        [
+          54556,
+          731,
+          55,
+          0
+        ],
+        [
+          13281,
+          320214,
+          18737,
+          138
+        ],
+        [
+          55283,
+          22653,
+          1975,
+          34
+        ],
+        [
+          734,
+          27410,
+          101188,
+          459261
+        ]
+      ]
+    },
+    {
+      "image_id": "A111_step1_sample2",
+      "thresholds": [
+        135.0,
+        176.5,
+        212.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "ff7eabac418a32cc92b234f4d246d9afbdff208cd70ae4d2e65582ba0938a475",
+      "mask_sha256": "9b814afc3d72a7458773f032711b69dce9fd1177d5076e7d884f0f1639938a58",
+      "target_vs_bin_confusion": [
+        [
+          16169,
+          287,
+          5,
+          0
+        ],
+        [
+          5886,
+          170740,
+          16878,
+          337
+        ],
+        [
+          56443,
+          48550,
+          5914,
+          128
+        ],
+        [
+          633,
+          35718,
+          168725,
+          549837
+        ]
+      ]
+    },
+    {
+      "image_id": "A111_step3_sample4",
+      "thresholds": [
+        111.5,
+        163.5,
+        203.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "74e9eb8a216fd300b2ecd857ba68ae35700276f5465bce9c868eb1a93b69b93b",
+      "mask_sha256": "c08a4f2fa8d5c7375cb4fa9d802f92d41af644b7019dec969b90091cf2bdc87d",
+      "target_vs_bin_confusion": [
+        [
+          64700,
+          941,
+          27,
+          0
+        ],
+        [
+          4083,
+          201665,
+          25935,
+          384
+        ],
+        [
+          42910,
+          49184,
+          5965,
+          107
+        ],
+        [
+          144,
+          33979,
+          152835,
+          493391
+        ]
+      ]
+    },
+    {
+      "image_id": "A118_step2_sample1",
+      "thresholds": [
+        140.0,
+        185.0,
+        219.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "bb178fa2289f0bba70f21399edd777de3142e4e7f1023f86d6ebe20b56abf780",
+      "mask_sha256": "d09e568203a119414bcd19459cefbe96dd595b288850c0b60d15960aa4b24dab",
+      "target_vs_bin_confusion": [
+        [
+          51925,
+          1492,
+          127,
+          0
+        ],
+        [
+          10460,
+          194797,
+          23494,
+          246
+        ],
+        [
+          60093,
+          28040,
+          3337,
+          55
+        ],
+        [
+          1251,
+          32786,
+          116238,
+          551909
+        ]
+      ]
+    },
+    {
+      "image_id": "A121_step2_sample2",
+      "thresholds": [
+        119.0,
+        174.0,
+        214.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "440ef8ebe9b7446c97e412d201389e14032d5a58f4de215c28f87e9e766d965f",
+      "mask_sha256": "e30574993cca8e0b0cfd8ead910226dc597f8f811a31d0dbc854dc47f72d9364",
+      "target_vs_bin_confusion": [
+        [
+          84809,
+          1261,
+          75,
+          0
+        ],
+        [
+          25636,
+          265542,
+          8001,
+          40
+        ],
+        [
+          66717,
+          31041,
+          2151,
+          27
+        ],
+        [
+          1019,
+          32881,
+          149278,
+          407772
+        ]
+      ]
+    },
+    {
+      "image_id": "A123_step1_sample1",
+      "thresholds": [
+        96.0,
+        144.0,
+        198.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "e81664980cf339b3a74feaaf02b11f961dcda3be4557eafb39b40fdc3127aed5",
+      "mask_sha256": "7dd29738ab4f39a05322820460077daaaeea6c9af864356c8fdc8e35a7a91d6b",
+      "target_vs_bin_confusion": [
+        [
+          27787,
+          80946,
+          2621,
+          170
+        ],
+        [
+          11830,
+          79594,
+          231608,
+          3644
+        ],
+        [
+          26694,
+          65692,
+          18147,
+          1061
+        ],
+        [
+          326,
+          9151,
+          76617,
+          440362
+        ]
+      ]
+    },
+    {
+      "image_id": "A123_step4_sample2",
+      "thresholds": [
+        115.5,
+        168.5,
+        205.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "24acfcf2f03887df086f09a7090ebd4fc068605eecb514d96a8686fc4e7af0fe",
+      "mask_sha256": "fc15bf9cb29d0e1d1021c7748f2c9704e4f8c721e76a59a12bc98be5ff368eb5",
+      "target_vs_bin_confusion": [
+        [
+          24705,
+          337,
+          2,
+          0
+        ],
+        [
+          8741,
+          295923,
+          10975,
+          14
+        ],
+        [
+          66568,
+          38335,
+          1963,
+          10
+        ],
+        [
+          693,
+          38353,
+          210194,
+          379437
+        ]
+      ]
+    },
+    {
+      "image_id": "A125_step2_sample1",
+      "thresholds": [
+        127.0,
+        168.5,
+        206.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "60cda357eb414ce6c93f5ca72bc31c8d3e1438ba19f5055336d8c139e7c0194c",
+      "mask_sha256": "1ee9cc4da1916a27d8ad51684b009806e2f9503e0a24384ec65cd274080e3f83",
+      "target_vs_bin_confusion": [
+        [
+          24538,
+          1471,
+          60,
+          0
+        ],
+        [
+          30412,
+          225122,
+          10854,
+          208
+        ],
+        [
+          80506,
+          56462,
+          5222,
+          73
+        ],
+        [
+          732,
+          33214,
+          145294,
+          462082
+        ]
+      ]
+    },
+    {
+      "image_id": "A130_step1_sample1",
+      "thresholds": [
+        90.0,
+        154.0,
+        209.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "39f519cd15d0f85f72ad585c6c3811f5f690e76418e75ab85122b3930412e8e8",
+      "mask_sha256": "5d79d43f9ad87dd5ed904f2570a3fc13381b53f9abc5054bab77ae977d90dfc6",
+      "target_vs_bin_confusion": [
+        [
+          7730,
+          186776,
+          4600,
+          34
+        ],
+        [
+          1013,
+          17994,
+          441402,
+          3249
+        ],
+        [
+          4774,
+          63795,
+          16435,
+          244
+        ],
+        [
+          21,
+          2189,
+          52176,
+          672128
+        ]
+      ]
+    },
+    {
+      "image_id": "A137_step4_sample2",
+      "thresholds": [
+        128.0,
+        174.0,
+        207.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "4294579c0fc30b272eede1075d5e3c2a83e1c7a8a589e39cec1c5dd40fe481ae",
+      "mask_sha256": "d545725253e515cfd4260b0add4ca07d48c22fad65dcd3c88dcae59df349c45f",
+      "target_vs_bin_confusion": [
+        [
+          99147,
+          2313,
+          148,
+          2
+        ],
+        [
+          8237,
+          206589,
+          36688,
+          527
+        ],
+        [
+          48797,
+          44923,
+          6019,
+          137
+        ],
+        [
+          276,
+          21092,
+          117995,
+          483360
+        ]
+      ]
+    },
+    {
+      "image_id": "A138_step4_sample3",
+      "thresholds": [
+        144.0,
+        182.0,
+        212.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "a317ac3842b67361311e4531efa64b0c9807ad9b082e70c57a5596e3a0f3b88e",
+      "mask_sha256": "7c92d33645a3cbed978eaa6fe42a29b8b635979b134197529ec0c027af61a3f9",
+      "target_vs_bin_confusion": [
+        [
+          95449,
+          11267,
+          1610,
+          41
+        ],
+        [
+          10282,
+          180318,
+          92652,
+          4412
+        ],
+        [
+          8697,
+          9536,
+          1974,
+          89
+        ],
+        [
+          530,
+          23237,
+          168357,
+          467799
+        ]
+      ]
+    },
+    {
+      "image_id": "A139_step3_sample4",
+      "thresholds": [
+        123.0,
+        169.0,
+        206.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "38fc1908db570e9d2f2bd4fcb980a993b4479510a9b6012b1741621834392f58",
+      "mask_sha256": "f3cfa487959925b6a4d5073a4fbd25754f3f0353d1980fef0206308c0e7611b1",
+      "target_vs_bin_confusion": [
+        [
+          77195,
+          3283,
+          246,
+          0
+        ],
+        [
+          23038,
+          366258,
+          67069,
+          2770
+        ],
+        [
+          9870,
+          10319,
+          1187,
+          36
+        ],
+        [
+          244,
+          22722,
+          171005,
+          719318
+        ]
+      ]
+    },
+    {
+      "image_id": "A139_step4_sample3",
+      "thresholds": [
+        132.0,
+        175.0,
+        207.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "bf161fccb9e31296af4bc460e7bb60e93ebf59dc2a23559860442ce8645fb49e",
+      "mask_sha256": "6dcaafd00ad6757984f6d9accb691aba5d1d7d67f3d6647602cb41e751ab4d1d",
+      "target_vs_bin_confusion": [
+        [
+          103322,
+          1552,
+          189,
+          2
+        ],
+        [
+          12751,
+          269217,
+          69905,
+          1315
+        ],
+        [
+          53309,
+          43551,
+          6191,
+          159
+        ],
+        [
+          194,
+          23899,
+          137783,
+          751221
+        ]
+      ]
+    },
+    {
+      "image_id": "A140_step4_sample2",
+      "thresholds": [
+        141.0,
+        187.0,
+        219.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "cccdfbfcf23fc43db315a28e52288af08f4e9d35ed9713db3c2e2f3c05906f75",
+      "mask_sha256": "516b5863fa4b60097320be56dd66010d64550df4aaf1e750f8d7c7ddce6c4a8c",
+      "target_vs_bin_confusion": [
+        [
+          139214,
+          9019,
+          1361,
+          2
+        ],
+        [
+          6568,
+          354315,
+          33587,
+          223
+        ],
+        [
+          60145,
+          35624,
+          5088,
+          14
+        ],
+        [
+          154,
+          24511,
+          127173,
+          677562
+        ]
+      ]
+    },
+    {
+      "image_id": "A146_step2_sample1",
+      "thresholds": [
+        146.0,
+        187.0,
+        216.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "716123a629a41b005c0d2836984d12ac1c4b0b2bc355967cb60df0e2b3f25745",
+      "mask_sha256": "1119380aa7e90082b599359b65aafe25b57d7f113d0f69059a05a66fc66984c1",
+      "target_vs_bin_confusion": [
+        [
+          120761,
+          7124,
+          644,
+          3
+        ],
+        [
+          11398,
+          355484,
+          25383,
+          67
+        ],
+        [
+          52468,
+          23018,
+          2259,
+          29
+        ],
+        [
+          949,
+          26401,
+          131364,
+          404350
+        ]
+      ]
+    },
+    {
+      "image_id": "A147_step4_sample4",
+      "thresholds": [
+        128.0,
+        165.0,
+        195.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "d268c7cd5e1bcd06721dee3efe7aaf3a234bc7f6b31d2b4093b31b591de6a624",
+      "mask_sha256": "9a09feaf5e664f077bcc848c9ac3391c092becd1f7d9889195f7010f20403d27",
+      "target_vs_bin_confusion": [
+        [
+          148030,
+          11909,
+          1201,
+          26
+        ],
+        [
+          26919,
+          313638,
+          158568,
+          3995
+        ],
+        [
+          9492,
+          8794,
+          1590,
+          71
+        ],
+        [
+          322,
+          17975,
+          166538,
+          292634
+        ]
+      ]
+    },
+    {
+      "image_id": "A150_step4_sample1",
+      "thresholds": [
+        117.0,
+        150.5,
+        188.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "15c74d98c4c291a4cba99e9018384a65da2e825e5656a118cbd392a5e0cd9cb4",
+      "mask_sha256": "613fa2873b806374a27353df97e9299c265596f275a384c83006d27ffd986b6b",
+      "target_vs_bin_confusion": [
+        [
+          161561,
+          25553,
+          3661,
+          101
+        ],
+        [
+          42634,
+          245199,
+          187700,
+          908
+        ],
+        [
+          69171,
+          37027,
+          6570,
+          216
+        ],
+        [
+          313,
+          11565,
+          78400,
+          603981
+        ]
+      ]
+    },
+    {
+      "image_id": "A152_step2_sample1",
+      "thresholds": [
+        82.5,
+        152.0,
+        202.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "e1ae23b6d9e78f8545cbc7c5b579f97a24a18e7d5cc905563d4c39d0db10a861",
+      "mask_sha256": "d857d184ddff3b3ed5739e1d6cda84f8dd9b11a7e64de3636230cb0354f48031",
+      "target_vs_bin_confusion": [
+        [
+          110912,
+          11274,
+          1359,
+          39
+        ],
+        [
+          8493,
+          215833,
+          26176,
+          727
+        ],
+        [
+          37358,
+          35192,
+          4325,
+          185
+        ],
+        [
+          847,
+          31171,
+          120634,
+          557177
+        ]
+      ]
+    },
+    {
+      "image_id": "A153_step1_sample4",
+      "thresholds": [
+        88.5,
+        152.5,
+        201.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "2967165d7ee874f2cfce1e34d8710d8296e379ddd3fb8e628f703fadea298b4a",
+      "mask_sha256": "6c92d52bbd213f368e671bc09290557cfe43b2be644f67faf0c337ff6dab7a1f",
+      "target_vs_bin_confusion": [
+        [
+          76156,
+          1209,
+          219,
+          5
+        ],
+        [
+          17981,
+          184146,
+          32515,
+          1370
+        ],
+        [
+          60453,
+          35330,
+          6955,
+          521
+        ],
+        [
+          3323,
+          39155,
+          146805,
+          555559
+        ]
+      ]
+    },
+    {
+      "image_id": "A154_step2_sample3",
+      "thresholds": [
+        87.0,
+        151.5,
+        201.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "109cb70e5c9da8e915545a27b85badab7951f893551248ad474014a9492716ad",
+      "mask_sha256": "34646cb2086f58342c07ec136dc728113c1e314d9a70a2957ffa0d4405f2a8e2",
+      "target_vs_bin_confusion": [
+        [
+          102866,
+          9889,
+          1323,
+          20
+        ],
+        [
+          9421,
+          185291,
+          34414,
+          489
+        ],
+        [
+          58454,
+          32987,
+          4228,
+          68
+        ],
+        [
+          1606,
+          35847,
+          151625,
+          533174
+        ]
+      ]
+    },
+    {
+      "image_id": "A155_step3_sample2",
+      "thresholds": [
+        86.5,
+        136.5,
+        190.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "ad08a87fbb84a86f326bc44002cedf67f28cc577eb90726ff6d6318ea0cc7106",
+      "mask_sha256": "f28bb39cec5b5fc63a58cba89f29618fa01521bfc372c572007f1125b8855e7e",
+      "target_vs_bin_confusion": [
+        [
+          136309,
+          4764,
+          1027,
+          38
+        ],
+        [
+          15429,
+          136830,
+          249875,
+          1205
+        ],
+        [
+          43982,
+          18967,
+          3942,
+          151
+        ],
+        [
+          313,
+          7194,
+          50134,
+          491542
+        ]
+      ]
+    },
+    {
+      "image_id": "A156_step4_sample1",
+      "thresholds": [
+        83.5,
+        149.0,
+        194.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "66a6323dc53fdbc4c17bb715b0841ae9a243655489aadfbdbe2fd0b973da82cd",
+      "mask_sha256": "86d32434977ec5b898eed7bd6b07f62ba90a110fd58b07ab4ac9d0ae06c4849f",
+      "target_vs_bin_confusion": [
+        [
+          90215,
+          6054,
+          646,
+          7
+        ],
+        [
+          13608,
+          218408,
+          59557,
+          1799
+        ],
+        [
+          26235,
+          21284,
+          3031,
+          153
+        ],
+        [
+          945,
+          35711,
+          173927,
+          510122
+        ]
+      ]
+    },
+    {
+      "image_id": "A156_step4_sample2",
+      "thresholds": [
+        87.0,
+        157.0,
+        204.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "ef1ba00863832f7b3950eaa55a3660a8bcb4c69bfa3f13d70d6e0f87b8ea3dbb",
+      "mask_sha256": "c69294cb5bd5ff6aacb6b8a1cfad9d0156841c9f40fab2a0ca9233e5584ced6e",
+      "target_vs_bin_confusion": [
+        [
+          101969,
+          6180,
+          715,
+          19
+        ],
+        [
+          13524,
+          251085,
+          48520,
+          1115
+        ],
+        [
+          21731,
+          20933,
+          3036,
+          148
+        ],
+        [
+          1172,
+          40482,
+          184227,
+          466846
+        ]
+      ]
+    },
+    {
+      "image_id": "A159_step4_sample4",
+      "thresholds": [
+        84.5,
+        148.5,
+        193.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "5346c61a5a97e7d88e17521cffa6a2a4a45390b1e8f47e41e4a047a20519e541",
+      "mask_sha256": "46e77b42cb87829a70e0c63c77ce90c7226959f8915403a702e5bee275eb369e",
+      "target_vs_bin_confusion": [
+        [
+          141548,
+          4874,
+          620,
+          6
+        ],
+        [
+          17805,
+          284766,
+          78536,
+          2739
+        ],
+        [
+          11397,
+          11479,
+          1859,
+          88
+        ],
+        [
+          798,
+          32322,
+          171755,
+          401110
+        ]
+      ]
+    },
+    {
+      "image_id": "A15_step1_sample1",
+      "thresholds": [
+        79.5,
+        153.5,
+        209.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "29fe41bfb683e422e3643583c774fcb904b1f4d2b2ac4d44d40cbf8243c8bf04",
+      "mask_sha256": "d5883f84db9158a9a7d6b8edac9a6b9f41be7897f2acfaa00a07db54719a1547",
+      "target_vs_bin_confusion": [
+        [
+          54027,
+          1715,
+          177,
+          231
+        ],
+        [
+          3076,
+          66677,
+          2266,
+          8
+        ],
+        [
+          18766,
+          6073,
+          395,
+          6
+        ],
+        [
+          307,
+          8216,
+          29061,
+          132999
+        ]
+      ]
+    },
+    {
+      "image_id": "A164_step1_sample2",
+      "thresholds": [
+        85.5,
+        154.0,
+        200.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "b84c493e26c49e0c18bafd68182425caa8267a55523628eb08e49744b16d0768",
+      "mask_sha256": "73dc24306039e0c85289949ae80478bed121bd0fb07c856e96c13ff771a07a0c",
+      "target_vs_bin_confusion": [
+        [
+          104255,
+          15223,
+          185,
+          0
+        ],
+        [
+          3674,
+          302727,
+          12229,
+          8
+        ],
+        [
+          13525,
+          8050,
+          239,
+          0
+        ],
+        [
+          58,
+          12637,
+          109280,
+          579612
+        ]
+      ]
+    },
+    {
+      "image_id": "A164_step4_sample1",
+      "thresholds": [
+        78.5,
+        151.0,
+        194.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "e3e691ba6b3878eb210c70dd84c2172c7737eb3ff607fc850e62c3cfe6607d31",
+      "mask_sha256": "4bab8ff4491a95316b8da42f250e54a6192b9a3c3b27801316fceaf54c1c9183",
+      "target_vs_bin_confusion": [
+        [
+          134541,
+          8282,
+          157,
+          3
+        ],
+        [
+          6535,
+          316815,
+          19281,
+          89
+        ],
+        [
+          33135,
+          33971,
+          1415,
+          7
+        ],
+        [
+          221,
+          26998,
+          163939,
+          416313
+        ]
+      ]
+    },
+    {
+      "image_id": "A166_step4_sample3",
+      "thresholds": [
+        83.5,
+        153.0,
+        197.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "b541e1709888380d948d53b232b251dcd2c684feb0edc52f13b0f3301b723886",
+      "mask_sha256": "eeaaca8cb0a415a76f4f1dc103810e24309d9ad4d25d7dff233838ff0bde9f5e",
+      "target_vs_bin_confusion": [
+        [
+          81670,
+          6207,
+          82,
+          0
+        ],
+        [
+          4696,
+          278067,
+          19307,
+          14
+        ],
+        [
+          38330,
+          42127,
+          1305,
+          0
+        ],
+        [
+          195,
+          23772,
+          223058,
+          442872
+        ]
+      ]
+    },
+    {
+      "image_id": "A167_step3_sample4",
+      "thresholds": [
+        97.5,
+        153.5,
+        198.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "59e5dd4f336fdf16efcea8c73bed6598f9fdea1f1217651291d17ae2cf46be71",
+      "mask_sha256": "ab6e88bd0cf86995078d1979898728c0e5af2dd4ad29e041c62403091077fb56",
+      "target_vs_bin_confusion": [
+        [
+          128980,
+          4649,
+          633,
+          17
+        ],
+        [
+          38214,
+          336675,
+          66345,
+          1064
+        ],
+        [
+          35007,
+          21143,
+          2974,
+          160
+        ],
+        [
+          2946,
+          34550,
+          138909,
+          349436
+        ]
+      ]
+    },
+    {
+      "image_id": "A16_step4_sample4",
+      "thresholds": [
+        68.5,
+        135.5,
+        191.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "1b290ff1b1cf7977ac7843d659fa2f193c819fddd918ab5f8ba9e472a99b2b5e",
+      "mask_sha256": "28326fe36f95a2e1b80adcdddc2eb99cacefb40d69a964d0889e0d75fafdcdda",
+      "target_vs_bin_confusion": [
+        [
+          41729,
+          4899,
+          896,
+          0
+        ],
+        [
+          99,
+          11021,
+          26339,
+          276
+        ],
+        [
+          6961,
+          12918,
+          2945,
+          17
+        ],
+        [
+          20,
+          3223,
+          32531,
+          180126
+        ]
+      ]
+    },
+    {
+      "image_id": "A181_step4_sample4",
+      "thresholds": [
+        112.0,
+        161.0,
+        199.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "50f07eb173f45f3587146f40ceae28b2d6ac4af9169f208434ef45eadfe07f9d",
+      "mask_sha256": "165971724eb7cca69b23618aa41762a1f76eadc16462f9fea188afd4a00dfbae",
+      "target_vs_bin_confusion": [
+        [
+          34423,
+          448,
+          23,
+          0
+        ],
+        [
+          19264,
+          429818,
+          43076,
+          1710
+        ],
+        [
+          27275,
+          22431,
+          2115,
+          45
+        ],
+        [
+          587,
+          57055,
+          313297,
+          522993
+        ]
+      ]
+    },
+    {
+      "image_id": "A182_step4_sample3",
+      "thresholds": [
+        76.5,
+        145.5,
+        193.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "8a94b055a96942b112886e77332b76ed3a6cfdac00102ed1d296e9cdb8aa59ee",
+      "mask_sha256": "2eb4a49d5ffee6f948c34b47d42cba2086eb3e617662d66b3ed323f8e9463973",
+      "target_vs_bin_confusion": [
+        [
+          92498,
+          11687,
+          191,
+          0
+        ],
+        [
+          5142,
+          357224,
+          19486,
+          24
+        ],
+        [
+          59714,
+          49835,
+          1894,
+          0
+        ],
+        [
+          94,
+          38406,
+          319695,
+          518670
+        ]
+      ]
+    },
+    {
+      "image_id": "A187_step2_sample1",
+      "thresholds": [
+        80.5,
+        153.5,
+        204.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "61b448d2125beb1edde4f71f56925d5031ce39ab0b9d620c09985a6f70cb4795",
+      "mask_sha256": "8e7919ef66598d795f895b8fa920174ae0d7008fdaef6961ae530cbfff05df83",
+      "target_vs_bin_confusion": [
+        [
+          100186,
+          1562,
+          100,
+          0
+        ],
+        [
+          8677,
+          306084,
+          20149,
+          313
+        ],
+        [
+          29700,
+          28555,
+          2586,
+          49
+        ],
+        [
+          625,
+          30081,
+          123349,
+          424234
+        ]
+      ]
+    },
+    {
+      "image_id": "A187_step4_sample4",
+      "thresholds": [
+        73.5,
+        145.5,
+        194.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "e50032b66e6438165251d6da79e430063fb73be82940ed5d39416e4807ca31bd",
+      "mask_sha256": "f073400613b958b84cd4c545d506cc02ad5115ba639c387a54d764cf85cce741",
+      "target_vs_bin_confusion": [
+        [
+          57684,
+          1424,
+          80,
+          0
+        ],
+        [
+          6808,
+          332990,
+          26558,
+          537
+        ],
+        [
+          8965,
+          11688,
+          945,
+          31
+        ],
+        [
+          520,
+          48504,
+          224809,
+          354707
+        ]
+      ]
+    },
+    {
+      "image_id": "A188_step4_sample1",
+      "thresholds": [
+        77.0,
+        147.5,
+        196.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "abe6715455d70b14536cafd083725ee125bb4c6b6566c336b9065037a3318543",
+      "mask_sha256": "19797631b1e8644e23ab14b9896836f9311802f00326eae79a3933ac573b0af0",
+      "target_vs_bin_confusion": [
+        [
+          84045,
+          4667,
+          249,
+          0
+        ],
+        [
+          12170,
+          344533,
+          16270,
+          58
+        ],
+        [
+          34183,
+          26431,
+          1799,
+          14
+        ],
+        [
+          344,
+          34803,
+          244978,
+          357158
+        ]
+      ]
+    },
+    {
+      "image_id": "A18_step2_sample1",
+      "thresholds": [
+        73.0,
+        150.5,
+        206.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "23d4785e0754a141bbb3632a4f59fbcd016ccb4fad5c20fe35a275da6e024f41",
+      "mask_sha256": "73ccc11a6c888b58d1b54a47800679ce97f65084469e7b66a06ceb43eb3a9a70",
+      "target_vs_bin_confusion": [
+        [
+          66110,
+          2925,
+          60,
+          0
+        ],
+        [
+          791,
+          47631,
+          853,
+          1
+        ],
+        [
+          12720,
+          3956,
+          115,
+          0
+        ],
+        [
+          28,
+          4741,
+          41086,
+          142983
+        ]
+      ]
+    },
+    {
+      "image_id": "A191_step3_sample1",
+      "thresholds": [
+        135.5,
+        188.5,
+        223.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "6e03873b8895cdca25d0951772b4d9deda912a1060b992990389c71f2b72d2b3",
+      "mask_sha256": "5913ba6531e7818ac9d53e7903dacb0b7bcd0ba686b0f7b758107998f7d217e4",
+      "target_vs_bin_confusion": [
+        [
+          96599,
+          1752,
+          161,
+          0
+        ],
+        [
+          6496,
+          268940,
+          11279,
+          13
+        ],
+        [
+          113068,
+          43280,
+          3768,
+          0
+        ],
+        [
+          500,
+          47693,
+          210533,
+          670478
+        ]
+      ]
+    },
+    {
+      "image_id": "A191_step4_sample1",
+      "thresholds": [
+        125.5,
+        173.5,
+        208.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "3c054e45cb2fb136e96e4e17b9a1c3cfd8effb18ba82ff5a7723cb16a03150d4",
+      "mask_sha256": "d9bda68a64c6350a841cfdb29e1933433b9271341deed6bcf2e18f83ce91495b",
+      "target_vs_bin_confusion": [
+        [
+          44612,
+          726,
+          55,
+          0
+        ],
+        [
+          15302,
+          285401,
+          31370,
+          477
+        ],
+        [
+          77269,
+          51061,
+          5891,
+          64
+        ],
+        [
+          1071,
+          57586,
+          203267,
+          700408
+        ]
+      ]
+    },
+    {
+      "image_id": "A200_step4_sample3",
+      "thresholds": [
+        120.0,
+        170.5,
+        206.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "cf13861d4a8c473129ffadfcbfe99df563313d9d3fac6918a35fb72c94ac6042",
+      "mask_sha256": "9cec89f1bef0ff472a8db56878c22154337b68bd8893d6f5844ab5639709493c",
+      "target_vs_bin_confusion": [
+        [
+          92147,
+          29869,
+          783,
+          0
+        ],
+        [
+          5828,
+          292246,
+          24225,
+          43
+        ],
+        [
+          15982,
+          24263,
+          1052,
+          2
+        ],
+        [
+          87,
+          20474,
+          220760,
+          433941
+        ]
+      ]
+    },
+    {
+      "image_id": "A201_step3_sample1",
+      "thresholds": [
+        91.0,
+        153.0,
+        198.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "a392e665326e5c4b9f1e8eb04f50ae5878babf6939702c2109215cdb3cf7f6f7",
+      "mask_sha256": "fc3140aa01b296849eec6b5a71a88ca5150b6cf303ffaa3febed3f750425dc9f",
+      "target_vs_bin_confusion": [
+        [
+          71123,
+          2916,
+          609,
+          24
+        ],
+        [
+          24228,
+          261071,
+          43758,
+          1692
+        ],
+        [
+          50938,
+          26034,
+          5105,
+          486
+        ],
+        [
+          3416,
+          36466,
+          114182,
+          434202
+        ]
+      ]
+    },
+    {
+      "image_id": "A201_step3_sample4",
+      "thresholds": [
+        91.5,
+        154.5,
+        202.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "8ae9b3a9f5706ff4e26e0b0e8dc7ab3a869e6d45b9d9e4701db3d05cd670afb4",
+      "mask_sha256": "849ec291195a451aca342fec455bc43ffe7dda6412efc7abbeb27a57f210d185",
+      "target_vs_bin_confusion": [
+        [
+          50032,
+          1690,
+          256,
+          10
+        ],
+        [
+          26739,
+          263025,
+          35899,
+          1907
+        ],
+        [
+          39648,
+          24940,
+          4938,
+          467
+        ],
+        [
+          3838,
+          40476,
+          134507,
+          447878
+        ]
+      ]
+    },
+    {
+      "image_id": "A21_step2_sample4",
+      "thresholds": [
+        122.0,
+        169.0,
+        209.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "25acb5e3d5411d3833da7930c878d2eae3408f9502da17b24da73594fd60df65",
+      "mask_sha256": "03b8dbaa0e5669708bd40cb5a43f347787b36e565f9a668df94ddb82cfdef50f",
+      "target_vs_bin_confusion": [
+        [
+          124330,
+          11380,
+          2125,
+          2
+        ],
+        [
+          456,
+          9628,
+          98918,
+          1848
+        ],
+        [
+          62508,
+          60456,
+          13004,
+          186
+        ],
+        [
+          197,
+          13919,
+          85875,
+          676870
+        ]
+      ]
+    },
+    {
+      "image_id": "A222_step2_sample2",
+      "thresholds": [
+        93.5,
+        141.5,
+        194.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "fe9dd3d297fb092102229df603f2d2b277ee6ecfc228aef2a2c8ee23f42d7162",
+      "mask_sha256": "8967c3ede7e0cd195cbe3d9a8a227ff4dc5d8c5c76e0d378aedbe428f9dcd19b",
+      "target_vs_bin_confusion": [
+        [
+          101489,
+          10156,
+          2044,
+          95
+        ],
+        [
+          20177,
+          104889,
+          100993,
+          1516
+        ],
+        [
+          56930,
+          52194,
+          8629,
+          546
+        ],
+        [
+          1213,
+          17395,
+          70259,
+          527725
+        ]
+      ]
+    },
+    {
+      "image_id": "A224_step1_sample2",
+      "thresholds": [
+        92.5,
+        147.5,
+        199.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "7adb1c216d3884e3d30a774229e390fc57de3f9680da1f5d9196f978b41a7270",
+      "mask_sha256": "cb664c26fa6f9271fe8877025c90c35c7ef2d78dfc64459efc1bc0dfd98d92ab",
+      "target_vs_bin_confusion": [
+        [
+          109701,
+          27841,
+          8057,
+          168
+        ],
+        [
+          23188,
+          111094,
+          192437,
+          1685
+        ],
+        [
+          67171,
+          42785,
+          9941,
+          200
+        ],
+        [
+          1313,
+          21212,
+          101308,
+          358149
+        ]
+      ]
+    },
+    {
+      "image_id": "A224_step4_sample2",
+      "thresholds": [
+        91.5,
+        146.5,
+        191.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "e799a1711b4b9969ea21f60b2ad600fc22949869e14ca9fa0b1c990ed35b4f35",
+      "mask_sha256": "d3d2b2cd031645c9e066bd80f009a71fde8acc04d030f681e252332534724df1",
+      "target_vs_bin_confusion": [
+        [
+          100298,
+          10547,
+          2339,
+          5
+        ],
+        [
+          20183,
+          211148,
+          183621,
+          953
+        ],
+        [
+          35397,
+          21126,
+          3551,
+          14
+        ],
+        [
+          193,
+          11987,
+          155223,
+          319665
+        ]
+      ]
+    },
+    {
+      "image_id": "A2_step4_sample1",
+      "thresholds": [
+        76.5,
+        124.5,
+        172.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "296ae0aa58dead59ffb90f3dd77e9f9633c9e9a2f263beeabb071e644931313e",
+      "mask_sha256": "8b94b37c197d94d16063ab98e53824da06aef8ba6117105aea06780f869371f5",
+      "target_vs_bin_confusion": [
+        [
+          142614,
+          22579,
+          7905,
+          154
+        ],
+        [
+          11668,
+          106145,
+          187552,
+          8052
+        ],
+        [
+          49705,
+          60416,
+          20354,
+          739
+        ],
+        [
+          1032,
+          22180,
+          152143,
+          368464
+        ]
+      ]
+    },
+    {
+      "image_id": "A39_step2_sample3",
+      "thresholds": [
+        71.5,
+        137.5,
+        190.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "9d3be7ae57b48b6dd43b833698c8c5dc8716bbed6bb293f3a57791b95ab6e1c8",
+      "mask_sha256": "eb863ec019f70ec40778ac29287eed77bcea9798936fbcd697f1f0e15a8fbeeb",
+      "target_vs_bin_confusion": [
+        [
+          144313,
+          8045,
+          830,
+          4
+        ],
+        [
+          9346,
+          170027,
+          40133,
+          201
+        ],
+        [
+          59540,
+          25198,
+          2764,
+          68
+        ],
+        [
+          1124,
+          30678,
+          134471,
+          534960
+        ]
+      ]
+    },
+    {
+      "image_id": "A40_step3_sample4",
+      "thresholds": [
+        83.5,
+        148.5,
+        199.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "bcad1c7e9783bcfda33553f78599a3ac490df98a99a4f8facc8d697c0b73005c",
+      "mask_sha256": "802c3c94845250d4086c7fc23abb3d6cad3c143218e512947aa2fc7a0bcf65e6",
+      "target_vs_bin_confusion": [
+        [
+          168200,
+          6212,
+          804,
+          10
+        ],
+        [
+          21067,
+          209097,
+          46000,
+          270
+        ],
+        [
+          62739,
+          18933,
+          2418,
+          50
+        ],
+        [
+          1580,
+          31624,
+          130689,
+          462009
+        ]
+      ]
+    },
+    {
+      "image_id": "A49_step2_sample2",
+      "thresholds": [
+        74.5,
+        133.5,
+        189.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "20d32a609033398d6a0317800eca0b549c3e8b8cc9537958a19adeba67017726",
+      "mask_sha256": "d0980e1c2ebcfd9777f8555e535c3fbf1ca2f8d4dbbc2072e2e6467c2bea362e",
+      "target_vs_bin_confusion": [
+        [
+          234280,
+          15330,
+          1198,
+          17
+        ],
+        [
+          27681,
+          201366,
+          19336,
+          331
+        ],
+        [
+          41009,
+          27162,
+          2765,
+          73
+        ],
+        [
+          716,
+          24171,
+          113049,
+          453218
+        ]
+      ]
+    },
+    {
+      "image_id": "A51_step4_sample4",
+      "thresholds": [
+        69.0,
+        137.0,
+        194.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "3eca5de12d4bfb92e248c2cbd7d813710008f10c886093a49fabc597f4d8bb5f",
+      "mask_sha256": "55d3ef786a53d42402e868880fe51e70b1d96a7222be78830b47265ac4c27fa2",
+      "target_vs_bin_confusion": [
+        [
+          116441,
+          6806,
+          1153,
+          1
+        ],
+        [
+          745,
+          64754,
+          116755,
+          730
+        ],
+        [
+          39166,
+          56671,
+          13001,
+          71
+        ],
+        [
+          194,
+          14937,
+          137119,
+          593158
+        ]
+      ]
+    },
+    {
+      "image_id": "A55_step3_sample4",
+      "thresholds": [
+        72.5,
+        144.5,
+        197.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "616720fda47e4f5726a52d259ec5c5556f46776b554c29a2c0608b2669bf4fec",
+      "mask_sha256": "2a67d465f32ec4d5d18f5cbe26707ec9413621c31cc92d215a5c5cfc49beffe3",
+      "target_vs_bin_confusion": [
+        [
+          120323,
+          4102,
+          235,
+          1
+        ],
+        [
+          7478,
+          284761,
+          16293,
+          427
+        ],
+        [
+          25082,
+          37091,
+          3858,
+          121
+        ],
+        [
+          704,
+          32817,
+          135217,
+          493192
+        ]
+      ]
+    },
+    {
+      "image_id": "A57_step1_sample3",
+      "thresholds": [
+        75.5,
+        141.5,
+        198.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "7aa09ac0e9dc66a76d097b42a614172f77c018ec0189d20534f9131dfdcba75a",
+      "mask_sha256": "61e363c0ee6f6644aceb9411fcb1105235ed89b3e7ac9a0675f26f23142ecf6c",
+      "target_vs_bin_confusion": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2628,
+          21722,
+          5990,
+          80
+        ],
+        [
+          36020,
+          20003,
+          2325,
+          42
+        ],
+        [
+          1129,
+          16231,
+          64729,
+          153101
+        ]
+      ]
+    },
+    {
+      "image_id": "A61_step2_sample2",
+      "thresholds": [
+        76.0,
+        146.0,
+        207.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "440b97cbb1967ee50b40273d1a2d2232fb061e5d37b62c8a62f1b2b7b92e7abb",
+      "mask_sha256": "3a0abeb32bfe1fc8cae1d0008295b7bb3a6118d463e6827142f13f0f96b2870f",
+      "target_vs_bin_confusion": [
+        [
+          11174,
+          805,
+          320,
+          6
+        ],
+        [
+          778,
+          11453,
+          30543,
+          1080
+        ],
+        [
+          15966,
+          24762,
+          8553,
+          325
+        ],
+        [
+          207,
+          6478,
+          29349,
+          182201
+        ]
+      ]
+    },
+    {
+      "image_id": "A64_step2_sample3",
+      "thresholds": [
+        64.5,
+        136.0,
+        199.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "da60412ee95a2cc0e74b21317326b26f87f1cf2364cf32d2960a8596942de547",
+      "mask_sha256": "ac69845b829833c9f2636889eac7def92346962d67e8c1737517032046dc089b",
+      "target_vs_bin_confusion": [
+        [
+          53906,
+          2087,
+          136,
+          0
+        ],
+        [
+          3227,
+          53204,
+          4353,
+          68
+        ],
+        [
+          8804,
+          9710,
+          856,
+          21
+        ],
+        [
+          104,
+          9496,
+          45402,
+          132626
+        ]
+      ]
+    },
+    {
+      "image_id": "A66_step3_sample2",
+      "thresholds": [
+        89.5,
+        152.5,
+        201.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "161977a527ac75ce0c38d79206b53e6494cd460ad9d9920b7b75576231397bce",
+      "mask_sha256": "07f108e638c26f2760e58ee95838862ef73d06684a867fdea8cddb3a501e9462",
+      "target_vs_bin_confusion": [
+        [
+          28997,
+          1013,
+          39,
+          1
+        ],
+        [
+          6494,
+          44136,
+          6168,
+          130
+        ],
+        [
+          6912,
+          1983,
+          151,
+          2
+        ],
+        [
+          645,
+          15286,
+          61653,
+          150390
+        ]
+      ]
+    },
+    {
+      "image_id": "A69_step4_sample4",
+      "thresholds": [
+        74.5,
+        142.0,
+        197.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "894141543f28cf6b2beb97b24541ac6bfd911ae6ca09e41ad61320c5d40dd30b",
+      "mask_sha256": "80d41898b4dadfcf15d596c6409f916003a50f94583f20cb0b2b5460e4d9e40f",
+      "target_vs_bin_confusion": [
+        [
+          23523,
+          1146,
+          59,
+          0
+        ],
+        [
+          940,
+          64365,
+          11292,
+          39
+        ],
+        [
+          4116,
+          9252,
+          1075,
+          2
+        ],
+        [
+          6,
+          4455,
+          53844,
+          149886
+        ]
+      ]
+    },
+    {
+      "image_id": "A78_step4_sample1",
+      "thresholds": [
+        75.5,
+        145.0,
+        191.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "619410bc6da68ab2d167c60685dcece32f0839c06c701c49fc3c86b9ac12ae3c",
+      "mask_sha256": "37aea64a589c4c1c7b1d8959ddf69b9546d7c759c1207b1a7fc19e1138c4312b",
+      "target_vs_bin_confusion": [
+        [
+          27061,
+          611,
+          82,
+          0
+        ],
+        [
+          336,
+          40381,
+          70601,
+          979
+        ],
+        [
+          3992,
+          7680,
+          1506,
+          27
+        ],
+        [
+          18,
+          4805,
+          51373,
+          114548
+        ]
+      ]
+    },
+    {
+      "image_id": "A7_step1_sample2",
+      "thresholds": [
+        69.5,
+        148.5,
+        207.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "c957addb26b1edc9262b3684b83f277f47f6449f5240d456aa73af4e6a1642c5",
+      "mask_sha256": "c484ec29f51bda56a6a1e922918ecec65bb40d6a4cdec00b01cf86d070356d89",
+      "target_vs_bin_confusion": [
+        [
+          221568,
+          13573,
+          1130,
+          12
+        ],
+        [
+          4733,
+          90629,
+          6717,
+          44
+        ],
+        [
+          52446,
+          21609,
+          1663,
+          28
+        ],
+        [
+          843,
+          45981,
+          162491,
+          538235
+        ]
+      ]
+    },
+    {
+      "image_id": "A7_step4_sample3",
+      "thresholds": [
+        72.5,
+        142.5,
+        194.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "98c8b25261fab124da9727a1656754b3c5157448f5cdea9a82f9308dbe15e7a1",
+      "mask_sha256": "24b2b53b8bb634e1761d4e045f5308047c326237aca8299fe23e488394f264cc",
+      "target_vs_bin_confusion": [
+        [
+          120820,
+          12227,
+          3419,
+          74
+        ],
+        [
+          2752,
+          114181,
+          135543,
+          5557
+        ],
+        [
+          16699,
+          39301,
+          10094,
+          293
+        ],
+        [
+          672,
+          32439,
+          210065,
+          457566
+        ]
+      ]
+    },
+    {
+      "image_id": "A83_step1_sample2",
+      "thresholds": [
+        68.0,
+        134.5,
+        189.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "3a174db21ac64245a558be8ed58700926ce491be21e680721bcd13a25a13142f",
+      "mask_sha256": "6911b34ee058ac03ce391d4401e626da9114d4be1974477a042393c25985e74e",
+      "target_vs_bin_confusion": [
+        [
+          39974,
+          1195,
+          137,
+          2
+        ],
+        [
+          1810,
+          45908,
+          10733,
+          237
+        ],
+        [
+          11822,
+          9568,
+          1388,
+          101
+        ],
+        [
+          385,
+          8176,
+          33027,
+          159537
+        ]
+      ]
+    },
+    {
+      "image_id": "A87_step2_sample2",
+      "thresholds": [
+        64.0,
+        130.5,
+        189.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "be608c1c417e67a87c62001eec3dddacfa7a2073d147f8749ff45ff6ef3c2e38",
+      "mask_sha256": "83e34acf5aa99c63134d2e7c3d59525f8f27dafc0cb7f3d9cd7443dd1021b548",
+      "target_vs_bin_confusion": [
+        [
+          16034,
+          484,
+          129,
+          0
+        ],
+        [
+          565,
+          14884,
+          37639,
+          404
+        ],
+        [
+          15933,
+          19305,
+          4500,
+          139
+        ],
+        [
+          99,
+          6426,
+          34110,
+          173349
+        ]
+      ]
+    },
+    {
+      "image_id": "A89_step1_sample2",
+      "thresholds": [
+        71.5,
+        132.0,
+        190.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "fa9f141e81982385de71c2d39564367b52192d1d1c01c3228209e153265446d6",
+      "mask_sha256": "bb08649c239f2c6aa1cde29c9c7754c78cfb7b2947b5978b2e2bbbf300ab6f0c",
+      "target_vs_bin_confusion": [
+        [
+          33285,
+          2732,
+          323,
+          10
+        ],
+        [
+          3964,
+          51721,
+          17841,
+          312
+        ],
+        [
+          16615,
+          10742,
+          1824,
+          70
+        ],
+        [
+          407,
+          8516,
+          35437,
+          140201
+        ]
+      ]
+    },
+    {
+      "image_id": "A8_step2_sample3",
+      "thresholds": [
+        91.0,
+        149.5,
+        202.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "b2c4076335d0c4773ca3d92413c08e1ddcb273aa0be37660d9ed068f83b3cccf",
+      "mask_sha256": "d1b41d050d8baadd9d838266b9f228c7f9d70fa5860e19653472d3fa09b69088",
+      "target_vs_bin_confusion": [
+        [
+          41888,
+          4163,
+          1237,
+          12
+        ],
+        [
+          2121,
+          21123,
+          42012,
+          464
+        ],
+        [
+          23261,
+          9553,
+          2438,
+          34
+        ],
+        [
+          656,
+          6765,
+          30768,
+          137505
+        ]
+      ]
+    },
+    {
+      "image_id": "A8_step3_sample3",
+      "thresholds": [
+        86.5,
+        148.5,
+        201.0
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "e97c9ee945dd509d807604f13bb9209ba80e71835281f8658d57dfbc5dc12c61",
+      "mask_sha256": "b1aea239f2433c7fc91d9b2edce293994da2ad97154ba978a848ae8d71aeae1c",
+      "target_vs_bin_confusion": [
+        [
+          57594,
+          5607,
+          1294,
+          50
+        ],
+        [
+          2721,
+          32719,
+          32242,
+          428
+        ],
+        [
+          22162,
+          8503,
+          1767,
+          42
+        ],
+        [
+          567,
+          7740,
+          35807,
+          114757
+        ]
+      ]
+    },
+    {
+      "image_id": "A94_step4_sample2",
+      "thresholds": [
+        84.5,
+        150.5,
+        199.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "e74ddb90f5dd618ec4421bed804d1b4d0b2288f6b920482aaef5312044c1620a",
+      "mask_sha256": "44c99de80ead70a3cb3b05b5e8bf9cbda01e1415d4f02c9087b3092f30d7a0fd",
+      "target_vs_bin_confusion": [
+        [
+          17737,
+          2441,
+          186,
+          0
+        ],
+        [
+          1597,
+          58366,
+          8200,
+          43
+        ],
+        [
+          13681,
+          10318,
+          1079,
+          13
+        ],
+        [
+          144,
+          7422,
+          47612,
+          155161
+        ]
+      ]
+    },
+    {
+      "image_id": "A96_step1_sample1",
+      "thresholds": [
+        77.5,
+        156.5,
+        210.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "a61844558afb7e63637e7103ac0093dde86c42c1880aac0ba9cc0bf0dc2f3d13",
+      "mask_sha256": "6cdb047587366c3160780416e6767e37ed0ca4165d41eb0f1e38b8ddf18e02bf",
+      "target_vs_bin_confusion": [
+        [
+          16268,
+          915,
+          8,
+          0
+        ],
+        [
+          1327,
+          83643,
+          1691,
+          10
+        ],
+        [
+          15695,
+          7894,
+          307,
+          6
+        ],
+        [
+          133,
+          9117,
+          49571,
+          137415
+        ]
+      ]
+    },
+    {
+      "image_id": "A98_step2_sample4",
+      "thresholds": [
+        79.5,
+        157.5,
+        210.5
+      ],
+      "threshold_source": "multi_otsu",
+      "image_sha256": "1f41d9cb6947d9ab1f5c8c05853f48ba92698d4cc3fb05bb8b42b1d43bedc831",
+      "mask_sha256": "f3e103a443bc9c744b97f458848a474101188677acf72616bfd93a425242cc22",
+      "target_vs_bin_confusion": [
+        [
+          27447,
+          596,
+          12,
+          0
+        ],
+        [
+          1704,
+          61963,
+          997,
+          2
+        ],
+        [
+          21860,
+          5405,
+          258,
+          5
+        ],
+        [
+          668,
+          14089,
+          57288,
+          131706
+        ]
+      ]
+    }
+  ],
+  "created_at": "2026-09-24T11:04:04+00:00",
+  "manifest_sha256": "da86bc30e396b26f1c9a843a036d5d9f9a4e456b01e34161f4bb353e265f608c",
+  "source_sha256": {
+    "BUILD_REPORT.md": "5719fcfddb052ef3009cbe46b46d2d730a52832ef670c473005e5e7a7276b585",
+    "README.md": "8fb9f152d4bab2828fbf7a7431840f39e4395ad8538de6e7b4289c1c53f4e7cf",
+    "core.py": "688de87bce393a77781bebb6e6b102fe2efbb54303dc5161b48061f7aea1aa97",
+    "reporting.py": "19a30795819928af762e3fb486e90c52aff8317e542740c8d11ee97a1d5886c5",
+    "requirements.txt": "b88b6839628b6a71e092788e068c6cfb75666ad3acbac585dc47ad3e0c709ec1",
+    "run.py": "83306a2bb094025ed6074cc8e511e33b97f6583e4bb6449ebd8cbe8e28d2210b",
+    "run_cpu.sh": "ec25d52e9575a199e76df09a01d7d85b8c6f754f8e03a8cd1655d4b7e6b97861",
+    "start_nohup.sh": "adfe7cc8c41268b03d87fba43bfb29ee0582ccbed9946e6f01fe191fc60651c2",
+    "tests/test_threshold.py": "fd86c5d1b665f6a8fb0dc5cef0327b5aa2d2ef1ce7d9be698dfadf1e9b61deaa"
+  }
+}

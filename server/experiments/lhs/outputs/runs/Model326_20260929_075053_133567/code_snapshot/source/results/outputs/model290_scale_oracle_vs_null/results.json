@@ -1,0 +1,254 @@
+{
+  "metric": "per-image mean of four class IoUs; empty union is 0",
+  "image_count": 20,
+  "specimen_group_count": 19,
+  "scale_candidates": [
+    "model257_full_image_stats_1x",
+    "model259_fullstats_2x",
+    "model265_highres_fullstats_3x",
+    "model273_highres_3x_longer_finetune",
+    "model275_3x_uniform_area_sampling",
+    "model277_3x_high_lr_finetune"
+  ],
+  "null_candidates": [
+    "model257_full_image_stats_1x",
+    "model261_fullstats_seed261",
+    "model269_fullstats_1x_extended",
+    "model272_microstructure_augmentation_1x",
+    "model283_model257_imagewise_lovasz",
+    "model286_model257_imagewise_softiou"
+  ],
+  "candidate_count_matched": true,
+  "individual_scale_means": {
+    "model257_full_image_stats_1x": 0.7720750168508469,
+    "model259_fullstats_2x": 0.7681025332833725,
+    "model265_highres_fullstats_3x": 0.7505338196124477,
+    "model273_highres_3x_longer_finetune": 0.7568355558817824,
+    "model275_3x_uniform_area_sampling": 0.7557614859622926,
+    "model277_3x_high_lr_finetune": 0.7576979735279166
+  },
+  "individual_null_means": {
+    "model257_full_image_stats_1x": 0.7720750168508469,
+    "model261_fullstats_seed261": 0.7709640983967178,
+    "model269_fullstats_1x_extended": 0.7698530074546982,
+    "model272_microstructure_augmentation_1x": 0.7698084352329724,
+    "model283_model257_imagewise_lovasz": 0.773346949890023,
+    "model286_model257_imagewise_softiou": 0.7739515232625814
+  },
+  "best_single_scale": {
+    "name": "model257_full_image_stats_1x",
+    "score": 0.7720750168508469
+  },
+  "best_single_null": {
+    "name": "model286_model257_imagewise_softiou",
+    "score": 0.7739515232625814
+  },
+  "scale_oracle_mean": 0.7764244837684272,
+  "scale_oracle_gain_vs_best_single_pp": 0.43494669175803136,
+  "null_oracle_mean": 0.776972022832531,
+  "null_oracle_gain_vs_best_single_pp": 0.3020499569949542,
+  "scale_oracle_delta_vs_null_pp": -0.054753906410381914,
+  "group_bootstrap_95ci_delta_pp": [
+    -0.27303898318699055,
+    0.17588270854923196
+  ],
+  "scale_winner_counts": {
+    "model257_full_image_stats_1x": 10,
+    "model259_fullstats_2x": 8,
+    "model265_highres_fullstats_3x": 0,
+    "model273_highres_3x_longer_finetune": 0,
+    "model275_3x_uniform_area_sampling": 1,
+    "model277_3x_high_lr_finetune": 1
+  },
+  "null_winner_counts": {
+    "model257_full_image_stats_1x": 0,
+    "model261_fullstats_seed261": 1,
+    "model269_fullstats_1x_extended": 1,
+    "model272_microstructure_augmentation_1x": 5,
+    "model283_model257_imagewise_lovasz": 0,
+    "model286_model257_imagewise_softiou": 13
+  },
+  "per_image": [
+    {
+      "name": "A117_step4_sample2_image",
+      "specimen": "A117",
+      "scale_oracle": 0.8637964090249189,
+      "null_oracle": 0.8637712578964943,
+      "delta_pp": 0.002515112842460532,
+      "scale_winner": "model259_fullstats_2x",
+      "null_winner": "model286_model257_imagewise_softiou"
+    },
+    {
+      "name": "A11_step1_sample4_image",
+      "specimen": "A11",
+      "scale_oracle": 0.6707544510081281,
+      "null_oracle": 0.6719560967972191,
+      "delta_pp": -0.12016457890909882,
+      "scale_winner": "model257_full_image_stats_1x",
+      "null_winner": "model286_model257_imagewise_softiou"
+    },
+    {
+      "name": "A11_step2_sample4_image",
+      "specimen": "A11",
+      "scale_oracle": 0.7482557305349413,
+      "null_oracle": 0.7633700773306407,
+      "delta_pp": -1.511434679569934,
+      "scale_winner": "model257_full_image_stats_1x",
+      "null_winner": "model272_microstructure_augmentation_1x"
+    },
+    {
+      "name": "A125_step1_sample4_image",
+      "specimen": "A125",
+      "scale_oracle": 0.7809580899300904,
+      "null_oracle": 0.7804875561223441,
+      "delta_pp": 0.04705338077463095,
+      "scale_winner": "model259_fullstats_2x",
+      "null_winner": "model286_model257_imagewise_softiou"
+    },
+    {
+      "name": "A153_step3_sample3_image",
+      "specimen": "A153",
+      "scale_oracle": 0.6956301271849286,
+      "null_oracle": 0.6854330247056701,
+      "delta_pp": 1.0197102479258424,
+      "scale_winner": "model259_fullstats_2x",
+      "null_winner": "model272_microstructure_augmentation_1x"
+    },
+    {
+      "name": "A170_step4_sample3_image",
+      "specimen": "A170",
+      "scale_oracle": 0.8737731763318087,
+      "null_oracle": 0.8750347272826462,
+      "delta_pp": -0.12615509508374645,
+      "scale_winner": "model257_full_image_stats_1x",
+      "null_winner": "model272_microstructure_augmentation_1x"
+    },
+    {
+      "name": "A181_step1_sample1_image",
+      "specimen": "A181",
+      "scale_oracle": 0.802173474530923,
+      "null_oracle": 0.8040725826929782,
+      "delta_pp": -0.18991081620551853,
+      "scale_winner": "model257_full_image_stats_1x",
+      "null_winner": "model286_model257_imagewise_softiou"
+    },
+    {
+      "name": "A186_step2_sample2_image",
+      "specimen": "A186",
+      "scale_oracle": 0.7956042276866108,
+      "null_oracle": 0.788318194398918,
+      "delta_pp": 0.7286033287692728,
+      "scale_winner": "model277_3x_high_lr_finetune",
+      "null_winner": "model272_microstructure_augmentation_1x"
+    },
+    {
+      "name": "A191_step4_sample3_image",
+      "specimen": "A191",
+      "scale_oracle": 0.8083226443802743,
+      "null_oracle": 0.8103014918244716,
+      "delta_pp": -0.19788474441972959,
+      "scale_winner": "model257_full_image_stats_1x",
+      "null_winner": "model286_model257_imagewise_softiou"
+    },
+    {
+      "name": "A40_step3_sample3_image",
+      "specimen": "A40",
+      "scale_oracle": 0.8179172916832306,
+      "null_oracle": 0.8151559593551412,
+      "delta_pp": 0.2761332328089394,
+      "scale_winner": "model259_fullstats_2x",
+      "null_winner": "model286_model257_imagewise_softiou"
+    },
+    {
+      "name": "A42_step2_sample4_image",
+      "specimen": "A42",
+      "scale_oracle": 0.8254892573166486,
+      "null_oracle": 0.8186745838850185,
+      "delta_pp": 0.6814673431630114,
+      "scale_winner": "model259_fullstats_2x",
+      "null_winner": "model269_fullstats_1x_extended"
+    },
+    {
+      "name": "A44_step4_sample3_image",
+      "specimen": "A44",
+      "scale_oracle": 0.8824476779058499,
+      "null_oracle": 0.8843556146291444,
+      "delta_pp": -0.19079367232944788,
+      "scale_winner": "model257_full_image_stats_1x",
+      "null_winner": "model286_model257_imagewise_softiou"
+    },
+    {
+      "name": "A55_step2_sample1_image",
+      "specimen": "A55",
+      "scale_oracle": 0.8077889727530088,
+      "null_oracle": 0.8097172123346805,
+      "delta_pp": -0.19282395816717646,
+      "scale_winner": "model257_full_image_stats_1x",
+      "null_winner": "model286_model257_imagewise_softiou"
+    },
+    {
+      "name": "A59_step3_sample1_image",
+      "specimen": "A59",
+      "scale_oracle": 0.8221099128453189,
+      "null_oracle": 0.8237563718439949,
+      "delta_pp": -0.16464589986759925,
+      "scale_winner": "model259_fullstats_2x",
+      "null_winner": "model286_model257_imagewise_softiou"
+    },
+    {
+      "name": "A63_step1_sample4_image",
+      "specimen": "A63",
+      "scale_oracle": 0.8287908508212817,
+      "null_oracle": 0.830117979865243,
+      "delta_pp": -0.13271290439613725,
+      "scale_winner": "model275_3x_uniform_area_sampling",
+      "null_winner": "model286_model257_imagewise_softiou"
+    },
+    {
+      "name": "A67_step1_sample1_image",
+      "specimen": "A67",
+      "scale_oracle": 0.7350945303607077,
+      "null_oracle": 0.73908852214811,
+      "delta_pp": -0.399399178740234,
+      "scale_winner": "model257_full_image_stats_1x",
+      "null_winner": "model261_fullstats_seed261"
+    },
+    {
+      "name": "A71_step2_sample1_image",
+      "specimen": "A71",
+      "scale_oracle": 0.3762688949786518,
+      "null_oracle": 0.3742160107418633,
+      "delta_pp": 0.20528842367885103,
+      "scale_winner": "model259_fullstats_2x",
+      "null_winner": "model286_model257_imagewise_softiou"
+    },
+    {
+      "name": "A72_step4_sample4_image",
+      "specimen": "A72",
+      "scale_oracle": 0.8606770599972505,
+      "null_oracle": 0.861301058537359,
+      "delta_pp": -0.062399854010852795,
+      "scale_winner": "model259_fullstats_2x",
+      "null_winner": "model286_model257_imagewise_softiou"
+    },
+    {
+      "name": "A74_step3_sample4_image",
+      "specimen": "A74",
+      "scale_oracle": 0.7484391579320948,
+      "null_oracle": 0.7540198890922853,
+      "delta_pp": -0.5580731160190533,
+      "scale_winner": "model257_full_image_stats_1x",
+      "null_winner": "model286_model257_imagewise_softiou"
+    },
+    {
+      "name": "A7_step1_sample4_image",
+      "specimen": "A7",
+      "scale_oracle": 0.784197738161876,
+      "null_oracle": 0.7862922451663972,
+      "delta_pp": -0.20945070045211844,
+      "scale_winner": "model257_full_image_stats_1x",
+      "null_winner": "model272_microstructure_augmentation_1x"
+    }
+  ],
+  "caveat": "GT-best scale is an unattainable oracle; equal-count 1x oracle estimates max-selection bias."
+}

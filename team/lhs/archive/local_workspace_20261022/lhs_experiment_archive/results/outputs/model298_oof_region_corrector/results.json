@@ -1,0 +1,222 @@
+{
+  "model": 298,
+  "method": "train-only grouped OOF region MLP; soft component posterior blend",
+  "metric": "per-image mean of four class IoUs; empty union is 0",
+  "region_target": "ground-truth majority class in predicted 4-connected component",
+  "ground_truth_use": "train OOF/meta-CV fit; valid used only for final evaluation",
+  "train_image_count": 70,
+  "train_component_count": 244400,
+  "valid_image_count": 20,
+  "valid_component_count": 65497,
+  "meta_fold_count": 4,
+  "mlp_epochs": 25,
+  "soft_blend": 0.5,
+  "threshold_selected_on_train_oof_group_cv": 0.6,
+  "train_meta_cv_thresholds": {
+    "0.6": {
+      "image_mean_miou": 0.7726204342490397,
+      "delta_pp_vs_base": 0.035421047781956094,
+      "positive_image_count": 44,
+      "group_bootstrap_95ci_delta_pp": [
+        -0.04164253993268876,
+        0.12898642244245984
+      ]
+    },
+    "0.75": {
+      "image_mean_miou": 0.7723095432318944,
+      "delta_pp_vs_base": 0.004331946067416905,
+      "positive_image_count": 37,
+      "group_bootstrap_95ci_delta_pp": [
+        -0.02627092103382476,
+        0.034034556482025274
+      ]
+    },
+    "0.85": {
+      "image_mean_miou": 0.7721842355751547,
+      "delta_pp_vs_base": -0.008198819606560293,
+      "positive_image_count": 11,
+      "group_bootstrap_95ci_delta_pp": [
+        -0.024082229415451174,
+        0.005237262860303615
+      ]
+    },
+    "0.9": {
+      "image_mean_miou": 0.7722199580848966,
+      "delta_pp_vs_base": -0.0046265686323548084,
+      "positive_image_count": 2,
+      "group_bootstrap_95ci_delta_pp": [
+        -0.017008017218385553,
+        0.005383147236793926
+      ]
+    },
+    "0.95": {
+      "image_mean_miou": 0.7722950840055316,
+      "delta_pp_vs_base": 0.0028860234311245403,
+      "positive_image_count": 1,
+      "group_bootstrap_95ci_delta_pp": [
+        0.0,
+        0.009324075700556208
+      ]
+    }
+  },
+  "valid_base_image_mean_miou": 0.7425459240078258,
+  "valid_corrected_image_mean_miou": 0.7428967603129646,
+  "valid_delta_pp": 0.03508363051389185,
+  "valid_positive_image_count": 9,
+  "valid_group_bootstrap_95ci_delta_pp": [
+    -0.08475875801589322,
+    0.18311796710781156
+  ],
+  "valid_train_specimen_overlap": {
+    "image_count": 7,
+    "delta_pp": 0.025344978353863165
+  },
+  "valid_train_specimen_independent": {
+    "image_count": 13,
+    "delta_pp": 0.040327520138522685
+  },
+  "valid_images": [
+    {
+      "name": "A117_step4_sample2_image",
+      "specimen": "A117",
+      "baseline": 0.8575033551964525,
+      "corrected": 0.8583626886709901,
+      "delta_pp": 0.08593334745375936
+    },
+    {
+      "name": "A11_step1_sample4_image",
+      "specimen": "A11",
+      "baseline": 0.6316718679777165,
+      "corrected": 0.6321130143604471,
+      "delta_pp": 0.044114638273062834
+    },
+    {
+      "name": "A11_step2_sample4_image",
+      "specimen": "A11",
+      "baseline": 0.6568397392550005,
+      "corrected": 0.6546995932057107,
+      "delta_pp": -0.2140146049289804
+    },
+    {
+      "name": "A125_step1_sample4_image",
+      "specimen": "A125",
+      "baseline": 0.7713331472000684,
+      "corrected": 0.7721101730798919,
+      "delta_pp": 0.07770258798235341
+    },
+    {
+      "name": "A153_step3_sample3_image",
+      "specimen": "A153",
+      "baseline": 0.6264441619281789,
+      "corrected": 0.624193738194913,
+      "delta_pp": -0.22504237332658938
+    },
+    {
+      "name": "A170_step4_sample3_image",
+      "specimen": "A170",
+      "baseline": 0.8427200057408097,
+      "corrected": 0.8465410875782161,
+      "delta_pp": 0.38210818374063704
+    },
+    {
+      "name": "A181_step1_sample1_image",
+      "specimen": "A181",
+      "baseline": 0.7425546407428192,
+      "corrected": 0.742470176554824,
+      "delta_pp": -0.00844641879952368
+    },
+    {
+      "name": "A186_step2_sample2_image",
+      "specimen": "A186",
+      "baseline": 0.7782602543568902,
+      "corrected": 0.7740031006249615,
+      "delta_pp": -0.4257153731928698
+    },
+    {
+      "name": "A191_step4_sample3_image",
+      "specimen": "A191",
+      "baseline": 0.7745367687407165,
+      "corrected": 0.771610448673518,
+      "delta_pp": -0.2926320067198507
+    },
+    {
+      "name": "A40_step3_sample3_image",
+      "specimen": "A40",
+      "baseline": 0.7915589446296429,
+      "corrected": 0.7955430223629694,
+      "delta_pp": 0.398407773332643
+    },
+    {
+      "name": "A42_step2_sample4_image",
+      "specimen": "A42",
+      "baseline": 0.8147960203633589,
+      "corrected": 0.8147334348002394,
+      "delta_pp": -0.0062585563119443854
+    },
+    {
+      "name": "A44_step4_sample3_image",
+      "specimen": "A44",
+      "baseline": 0.8686030470017665,
+      "corrected": 0.868769046967577,
+      "delta_pp": 0.01659999658104594
+    },
+    {
+      "name": "A55_step2_sample1_image",
+      "specimen": "A55",
+      "baseline": 0.7938233679468208,
+      "corrected": 0.7937573052982223,
+      "delta_pp": -0.006606264859854161
+    },
+    {
+      "name": "A59_step3_sample1_image",
+      "specimen": "A59",
+      "baseline": 0.7914939267678671,
+      "corrected": 0.7910089869635163,
+      "delta_pp": -0.04849398043508257
+    },
+    {
+      "name": "A63_step1_sample4_image",
+      "specimen": "A63",
+      "baseline": 0.785669359138709,
+      "corrected": 0.7961917305850378,
+      "delta_pp": 1.0522371446328838
+    },
+    {
+      "name": "A67_step1_sample1_image",
+      "specimen": "A67",
+      "baseline": 0.7259959368593656,
+      "corrected": 0.7266409305395388,
+      "delta_pp": 0.06449936801732337
+    },
+    {
+      "name": "A71_step2_sample1_image",
+      "specimen": "A71",
+      "baseline": 0.3358494032806927,
+      "corrected": 0.3347175624838581,
+      "delta_pp": -0.11318407968345934
+    },
+    {
+      "name": "A72_step4_sample4_image",
+      "specimen": "A72",
+      "baseline": 0.8421789208176265,
+      "corrected": 0.8414035110116438,
+      "delta_pp": -0.07754098059826742
+    },
+    {
+      "name": "A74_step3_sample4_image",
+      "specimen": "A74",
+      "baseline": 0.6568440921796969,
+      "corrected": 0.6544838187622237,
+      "delta_pp": -0.23602734174731355
+    },
+    {
+      "name": "A7_step1_sample4_image",
+      "specimen": "A7",
+      "baseline": 0.7622415200323163,
+      "corrected": 0.7645818355409949,
+      "delta_pp": 0.23403155086786365
+    }
+  ],
+  "corrected_probabilities": "outputs/model298_oof_region_corrector/valid_probs_region_corrected.npz",
+  "elapsed_seconds": 193.9466369152069
+}

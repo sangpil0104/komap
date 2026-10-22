@@ -1,0 +1,188 @@
+project: alphase
+experiment: hybrid_large_v1
+seed: 2026
+data:
+  root: dataset
+  manifest: data/processed/manifest.csv
+  folds: data/processed/folds.json
+  classes:
+  - primary_si
+  - al3ni
+  - eutectic_si
+  - al
+  palette:
+  - - 76
+    - 178
+    - 76
+  - - 25
+    - 76
+    - 153
+  - - 204
+    - 204
+    - 204
+  - - 153
+    - 127
+    - 76
+  ignore_index: 255
+  image_channels:
+  - gray
+  - image_zscore
+  - image_cdf
+  pad_multiple: 32
+  image_pad_mode: reflect
+  mask_pad_value: 255
+model:
+  name: alphase_hybrid_v1
+  dino_repo: third_party/dinov3
+  backbone_name: dinov3_vitl16
+  pretrained_checkpoint: null
+  dino_embed_dim: 1024
+  dino_layers:
+  - 5
+  - 11
+  - 17
+  - 23
+  dino_eval_mode: true
+  context_scale: 1.0
+  context_channels: 256
+  detail_channels:
+  - 32
+  - 64
+  - 128
+  - 256
+  - 384
+  residual_blocks_per_stage: 2
+  fusion_strides:
+  - 4
+  - 8
+  - 16
+  norm: groupnorm
+  norm_groups: 8
+  upsample_mode: bilinear
+  align_corners: false
+  aux_head: true
+  boundary_head: true
+sampling:
+  sample_image_uniformly: true
+  core_sizes:
+  - 512
+  - 768
+  halo: 64
+  mix:
+    uniform: 0.6
+    eutectic_center: 0.25
+    error_or_boundary: 0.15
+augmentation:
+  d4: true
+  scales:
+  - 1.0
+  photometric_probability: 0.5
+  brightness_offset:
+  - -0.04
+  - 0.04
+  contrast_gain:
+  - 0.9
+  - 1.1
+  gamma:
+  - 0.9
+  - 1.1
+  gaussian_noise_std:
+  - 0.0
+  - 0.0
+  strong_blur: false
+  elastic: false
+  mixup: false
+  cutmix: false
+loss:
+  ce: 1.0
+  dice: 0.5
+  lovasz: 0.5
+  per_image: true
+  dice_classes: present
+  lovasz_classes: present
+  class_weights: null
+  auxiliary: 0.0
+  auxiliary_target: area_fraction
+  boundary: 0.0
+  float32_reductions: true
+train:
+  optimizer: adamw
+  new_weight_decay: 0.01
+  backbone_weight_decay: 0.05
+  norm_bias_weight_decay: 0.0
+  effective_batch_size: 8
+  micro_batch_size: 1
+  precision: bf16
+  gradient_clip_norm: 1.0
+  ema_decay: 0.999
+  eval_every_updates: 500
+  no_improvement_checks: 12
+  stages:
+  - name: s0_frozen
+    max_updates: 2000
+    mode: local_detail_global_context
+    core_sizes:
+    - 512
+    backbone_last_n: 0
+    new_lr: 0.0003
+    backbone_lr: 0.0
+    warmup_updates: 200
+  - name: s1_last_quarter
+    max_updates: 12000
+    mode: local_detail_global_context
+    core_sizes:
+    - 512
+    - 768
+    backbone_last_n: 8
+    new_lr: 0.0001
+    backbone_lr: 5.0e-06
+    warmup_updates: 600
+  - name: s2_finetune
+    max_updates: 8000
+    mode: local_detail_global_context
+    core_sizes:
+    - 768
+    backbone_last_n: -1
+    layer_lr_decay: 0.9
+    new_lr: 5.0e-05
+    backbone_lr: 2.0e-06
+    warmup_updates: 400
+  - name: s3_fullframe
+    max_updates: 3000
+    mode: full_frame
+    backbone_last_n: -1
+    new_lr: 1.0e-05
+    backbone_lr: 5.0e-07
+    warmup_updates: 150
+    photometric_probability: 0.0
+  num_workers: 2
+  cpu_threads: 4
+  checkpoint_every_updates: 100
+  log_every_updates: 10
+evaluation:
+  primary_metric: image_mean_miou
+  empty_union: exclude
+  report_empty_policies:
+  - exclude
+  - one
+  - zero
+  restore_original_resolution: true
+  compute_on_all_pixels: true
+  validation_tta: false
+inference:
+  mode: full_frame
+  local_core_size: 768
+  halo: 64
+  overlap_fraction: 0.5
+  tile_weight: gaussian
+  d4: false
+  scales:
+  - 1.0
+  probability_dtype: float32
+  refiner_enabled: false
+  class_logit_bias:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  output_mode: RGBA

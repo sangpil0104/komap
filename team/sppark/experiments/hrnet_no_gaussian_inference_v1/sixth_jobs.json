@@ -1,0 +1,28 @@
+[
+  {
+    "id": "normalized_context",
+    "script": "parallel_expandable.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/normalized_context_plan.json",
+      "--batch",
+      "1",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "normalized_context.log"
+  },
+  {
+    "id": "normalized_overlap",
+    "script": "parallel_expandable.py",
+    "args": [
+      "--plan",
+      "/Data3/sppark/komap/experiments/hrnet_no_gaussian_inference_v1/normalized_overlap_plan.json",
+      "--batch",
+      "4",
+      "--gpus",
+      "0,1,2,3,4,5,6,7"
+    ],
+    "log": "normalized_overlap.log"
+  }
+]

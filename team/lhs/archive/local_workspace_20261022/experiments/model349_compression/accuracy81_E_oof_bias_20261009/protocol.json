@@ -1,0 +1,25 @@
+{
+  "scope": "train70 grouped OOF of full E; no valid/test reads",
+  "bias_class_order": [
+    "Al3Ni",
+    "Al",
+    "Eutectic Si"
+  ],
+  "bias_values": [
+    -0.1,
+    0,
+    0.1
+  ],
+  "settings": 27,
+  "selection": "for each held fold select bias on other3folds; same group cannot cross folds",
+  "gate": {
+    "nested_mean_gain_pp": 0.1,
+    "positive_folds": 3,
+    "worst_fold_min_pp": -0.1
+  },
+  "baseline_parity_percent": 79.9858620080774,
+  "gpu_used": false,
+  "cpu_threads": 2,
+  "existing_stage1_fresh_recipe_changed": false,
+  "source_sha256": "bdd6d36913f2c7cc4db08880ef2b4257f248e9c036bae0b9ccbe6c6ba9e3d709"
+}

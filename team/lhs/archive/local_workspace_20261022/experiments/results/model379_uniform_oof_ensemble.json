@@ -1,0 +1,249 @@
+{
+  "model": 379,
+  "scope": "70 training images, exactly-once specimen-grouped OOF; valid/test excluded",
+  "recipe": "fixed arithmetic mean of same-fold Model374/376/377 probabilities, 1/3 each; argmax",
+  "metric": "per-image arithmetic mean of four class IoUs; empty union=0",
+  "images": 70,
+  "specimen_groups": 59,
+  "model_scores": {
+    "Model374": {
+      "images": 70,
+      "specimen_groups": 59,
+      "image_mean_miou_empty0_pct": 79.28232907274607,
+      "group_bootstrap_95ci_pct": [
+        77.31734142256323,
+        81.10934494009604
+      ],
+      "class_mean_iou_pct": {
+        "Al": 92.93396553195518,
+        "Al3Ni": 79.61652921881885,
+        "Primary_Si": 86.3516403679272,
+        "Eutectic_Si": 58.227181172283025
+      },
+      "fold_image_mean_miou_pct": {
+        "1": 76.43494768394258,
+        "2": 78.34180785516752,
+        "3": 83.97334764047636,
+        "4": 78.60203091177328
+      }
+    },
+    "Model379": {
+      "images": 70,
+      "specimen_groups": 59,
+      "image_mean_miou_empty0_pct": 79.68571623644448,
+      "group_bootstrap_95ci_pct": [
+        77.72460832057281,
+        81.50319219175077
+      ],
+      "class_mean_iou_pct": {
+        "Al": 93.04404967232051,
+        "Al3Ni": 79.89942168792912,
+        "Primary_Si": 86.6307556786136,
+        "Eutectic_Si": 59.16863790691463
+      },
+      "fold_image_mean_miou_pct": {
+        "1": 77.28235201611967,
+        "2": 78.57474296012997,
+        "3": 84.16534750843095,
+        "4": 78.92714819619368
+      }
+    }
+  },
+  "comparison_vs_model374": {
+    "reference_image_mean_miou_empty0_pct": 79.28232907274607,
+    "candidate_image_mean_miou_empty0_pct": 79.68571623644448,
+    "delta_pp": 0.4033871636983898,
+    "paired_group_bootstrap_95ci_delta_pp": [
+      0.19632862293427958,
+      0.631778566597268
+    ],
+    "class_mean_iou_delta_pp": {
+      "Al": 0.11008414036532506,
+      "Al3Ni": 0.2828924691102519,
+      "Primary_Si": 0.27911531068638656,
+      "Eutectic_Si": 0.941456734631597
+    },
+    "fold_delta_pp": {
+      "1": 0.8474043321770961,
+      "2": 0.2329351049624753,
+      "3": 0.19199986795460644,
+      "4": 0.3251172844203934
+    },
+    "resolution_stratified": {
+      "1230x875": {
+        "images": 20,
+        "specimen_groups": 15,
+        "reference_image_mean_miou_pct": 79.8427670046187,
+        "candidate_image_mean_miou_pct": 80.22851335753109,
+        "delta_pp": 0.38574635291237336,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          0.023254591560305852,
+          0.9481109766952664
+        ]
+      },
+      "1278x909": {
+        "images": 24,
+        "specimen_groups": 21,
+        "reference_image_mean_miou_pct": 79.40885861784346,
+        "candidate_image_mean_miou_pct": 79.42820294887693,
+        "delta_pp": 0.01934433103346067,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -0.2800167095436287,
+          0.24353788662122722
+        ]
+      },
+      "1440x1024": {
+        "images": 9,
+        "specimen_groups": 7,
+        "reference_image_mean_miou_pct": 79.7981871932616,
+        "candidate_image_mean_miou_pct": 80.69072714414399,
+        "delta_pp": 0.8925399508823947,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          0.2064635500634364,
+          1.8978677855091528
+        ]
+      },
+      "675x480": {
+        "images": 17,
+        "specimen_groups": 16,
+        "reference_image_mean_miou_pct": 78.17125902542669,
+        "candidate_image_mean_miou_pct": 78.87861496059699,
+        "delta_pp": 0.7073559351703063,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          0.44637421765736013,
+          1.0313221086053708
+        ]
+      }
+    },
+    "specimen_group_delta_summary_pp": {
+      "mean": 0.4421211997544276,
+      "median": 0.29691744015242216,
+      "minimum": -2.68012211598907,
+      "maximum": 4.372942243992107,
+      "positive_groups": 46,
+      "total_groups": 59
+    },
+    "per_specimen_group_delta_pp": {
+      "A101": 0.33217822710802647,
+      "A106": -0.6099541939839304,
+      "A108": -0.37658146593850805,
+      "A109": 0.12061808951716602,
+      "A111": 0.12103025667412615,
+      "A118": 0.983915364322907,
+      "A121": 0.3332669276720268,
+      "A123": -0.023658883378352424,
+      "A125": 0.9751775950965991,
+      "A130": -0.606549839342696,
+      "A137": 1.2576438938330936,
+      "A138": 4.372942243992107,
+      "A139": 0.721466471383081,
+      "A140": 3.9260318777696535,
+      "A146": 1.060820086405101,
+      "A147": 0.18658920546793523,
+      "A15": 0.5608400100133859,
+      "A150": 0.8191390086026651,
+      "A152": 0.3982819347013167,
+      "A153": 0.08059650193632528,
+      "A154": 0.2090438785795956,
+      "A155": 0.07527322080638221,
+      "A156": 0.026417208779133672,
+      "A159": -0.17480291267455428,
+      "A16": 0.6426740330230496,
+      "A164": 0.3256829847333387,
+      "A166": 0.23756270349203357,
+      "A167": 0.4564755601281001,
+      "A18": 1.2726654815240934,
+      "A181": 0.2597611457024973,
+      "A182": 1.5977095421384258,
+      "A187": 0.17414836350732044,
+      "A188": 0.1334003882442425,
+      "A191": 0.29691744015242216,
+      "A2": -0.12602059904607277,
+      "A200": 0.173823644156057,
+      "A201": 0.2360719266682909,
+      "A21": -2.68012211598907,
+      "A222": -0.24888886709243385,
+      "A224": -0.22028704161117796,
+      "A39": 0.08818513648145565,
+      "A40": 0.6281412441149881,
+      "A49": -0.7291427627660552,
+      "A51": -0.16547599105408706,
+      "A55": 0.04295491188358591,
+      "A57": 0.41088401975341027,
+      "A61": 0.8207176601052524,
+      "A64": 0.6770014168760885,
+      "A66": -0.32465459643485906,
+      "A69": 0.5543176059015997,
+      "A7": -0.06776023854458413,
+      "A78": 2.5915968227161024,
+      "A8": 0.5619221850124534,
+      "A83": 0.4264981615680563,
+      "A87": 0.40548560746213047,
+      "A89": 0.38799696092384206,
+      "A94": 1.556715073776016,
+      "A96": 0.6454456483155568,
+      "A98": 0.2730226223465748
+    },
+    "predicted_area_fraction_comparison": {
+      "Al": {
+        "reference_predicted_fraction_pct": 59.344192815966714,
+        "candidate_predicted_fraction_pct": 59.248376182461946,
+        "ground_truth_fraction_pct": 57.91192148191882,
+        "candidate_minus_reference_pp": -0.09581663350475254,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -0.22965365613858216,
+          0.008260496904790141
+        ]
+      },
+      "Al3Ni": {
+        "reference_predicted_fraction_pct": 24.36885777127183,
+        "candidate_predicted_fraction_pct": 24.352938152416147,
+        "ground_truth_fraction_pct": 25.140569863715257,
+        "candidate_minus_reference_pp": -0.015919618855689426,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -0.120919681910877,
+          0.1133624146671245
+        ]
+      },
+      "Primary_Si": {
+        "reference_predicted_fraction_pct": 9.4359531242749,
+        "candidate_predicted_fraction_pct": 9.395132637736005,
+        "ground_truth_fraction_pct": 9.683654638828978,
+        "candidate_minus_reference_pp": -0.04082048653889371,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -0.07740088656857269,
+          -0.00829752094387756
+        ]
+      },
+      "Eutectic_Si": {
+        "reference_predicted_fraction_pct": 6.850996288486555,
+        "candidate_predicted_fraction_pct": 7.003553027385892,
+        "ground_truth_fraction_pct": 7.2638540155369675,
+        "candidate_minus_reference_pp": 0.15255673889933555,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          0.08326799960245729,
+          0.22494071593649823
+        ]
+      }
+    },
+    "improved_images": 55,
+    "improved_specimen_groups": 46
+  },
+  "step4_subset": {
+    "images": 27,
+    "specimen_groups": 26,
+    "model374_image_mean_miou_pct": 76.6761071010979,
+    "model379_image_mean_miou_pct": 77.3634873747818,
+    "delta_pp": 0.6873802736838996
+  },
+  "adoption_gate": {
+    "gain_at_least_0_5pp": false,
+    "group_bootstrap_ci_lower_above_zero": true,
+    "at_least_3_of_4_folds_positive": true,
+    "worst_fold_at_least_minus_0_3pp": true,
+    "no_class_mean_iou_drop_over_0_5pp": true,
+    "step4_delta_at_least_minus_0_5pp": true
+  },
+  "adoption_gate_passed": false,
+  "interpretation_guard": "This fixed ensemble is conditional on prior recipe/model selection; OOF is not an independent test. No ensemble weights, class calibration, TTA, routing, morphology, valid, or test labels were tuned."
+}

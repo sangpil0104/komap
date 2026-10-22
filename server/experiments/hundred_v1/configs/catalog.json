@@ -1,0 +1,2243 @@
+{
+  "m001_recommended_fullframe": {
+    "id": "m001_recommended_fullframe",
+    "number": 1,
+    "group": "recommended1",
+    "description": "추천: 부모 CNN에서 패치 없이 전체 영상 600 updates"
+  },
+  "m002_ff_short": {
+    "id": "m002_ff_short",
+    "number": 2,
+    "group": "local19",
+    "description": "전체 영상 300 updates, LR 1e-6",
+    "stages": [
+      {
+        "max_updates": 300,
+        "new_lr": 1e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m003_ff_gentle_long": {
+    "id": "m003_ff_gentle_long",
+    "number": 3,
+    "group": "local19",
+    "description": "전체 영상 1000 updates, LR 1e-6",
+    "stages": [
+      {
+        "max_updates": 1000,
+        "new_lr": 1e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m004_ff_lr5e6": {
+    "id": "m004_ff_lr5e6",
+    "number": 4,
+    "group": "local19",
+    "description": "전체 영상 600 updates, LR 5e-6",
+    "stages": [
+      {
+        "max_updates": 600,
+        "new_lr": 5e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m005_ff_lr1e5": {
+    "id": "m005_ff_lr1e5",
+    "number": 5,
+    "group": "local19",
+    "description": "전체 영상 1000 updates, LR 1e-5",
+    "stages": [
+      {
+        "max_updates": 1000,
+        "new_lr": 1e-05,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m006_ema999": {
+    "id": "m006_ema999",
+    "number": 6,
+    "group": "local19",
+    "description": "추천 일정 + EMA 0.999",
+    "train": {
+      "ema_decay": 0.999
+    }
+  },
+  "m007_ema95": {
+    "id": "m007_ema95",
+    "number": 7,
+    "group": "local19",
+    "description": "추천 일정 + EMA 0.95",
+    "train": {
+      "ema_decay": 0.95
+    }
+  },
+  "m008_decoder_only": {
+    "id": "m008_decoder_only",
+    "number": 8,
+    "group": "local19",
+    "description": "encoder 고정, decoder와 classifier 미세조정",
+    "stages": [
+      {
+        "max_updates": 600,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "policy": "decoder"
+      }
+    ]
+  },
+  "m009_head_only": {
+    "id": "m009_head_only",
+    "number": 9,
+    "group": "local19",
+    "description": "classifier만 미세조정",
+    "stages": [
+      {
+        "max_updates": 600,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "policy": "head"
+      }
+    ]
+  },
+  "m010_encoder_slow": {
+    "id": "m010_encoder_slow",
+    "number": 10,
+    "group": "local19",
+    "description": "encoder LR은 decoder의 0.1배",
+    "stages": [
+      {
+        "max_updates": 600,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "encoder_multiplier": 0.1
+      }
+    ]
+  },
+  "m011_seed2028_parent": {
+    "id": "m011_seed2028_parent",
+    "number": 11,
+    "group": "local19",
+    "description": "과거 seed2028 최고점에서 전체 영상 미세조정",
+    "parent": "seed2028"
+  },
+  "m012_photo_parent": {
+    "id": "m012_photo_parent",
+    "number": 12,
+    "group": "local19",
+    "description": "과거 photo_mild 모델에서 전체 영상 미세조정",
+    "parent": "photo"
+  },
+  "m013_fullframe_parent": {
+    "id": "m013_fullframe_parent",
+    "number": 13,
+    "group": "local19",
+    "description": "과거 fullframe 모델에서 전체 영상 미세조정",
+    "parent": "fullframe"
+  },
+  "m014_mild_photo": {
+    "id": "m014_mild_photo",
+    "number": 14,
+    "group": "local19",
+    "description": "전체 영상에서 약한 광도 증강 확률 0.3",
+    "augmentation": {
+      "photometric_probability": 0.3
+    }
+  },
+  "m015_aspp_w32_staged": {
+    "id": "m015_aspp_w32_staged",
+    "number": 15,
+    "group": "local19",
+    "description": "ASPP width 32: 새 블록 선행 학습 후 분리 LR",
+    "model": {
+      "adapter": "aspp",
+      "adapter_width": 32,
+      "rates": [
+        1,
+        2,
+        3,
+        6
+      ]
+    },
+    "stages": [
+      {
+        "max_updates": 300,
+        "new_lr": 1e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "policy": "new",
+        "adapter_lr": 0.0001
+      },
+      {
+        "max_updates": 600,
+        "new_lr": 1e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "adapter_lr": 2e-05
+      }
+    ]
+  },
+  "m016_aspp_w64_staged": {
+    "id": "m016_aspp_w64_staged",
+    "number": 16,
+    "group": "local19",
+    "description": "ASPP width 64: 새 블록 선행 학습 후 분리 LR",
+    "model": {
+      "adapter": "aspp",
+      "adapter_width": 64,
+      "rates": [
+        1,
+        3,
+        6,
+        9
+      ]
+    },
+    "stages": [
+      {
+        "max_updates": 300,
+        "new_lr": 1e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "policy": "new",
+        "adapter_lr": 0.0001
+      },
+      {
+        "max_updates": 600,
+        "new_lr": 1e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "adapter_lr": 2e-05
+      }
+    ]
+  },
+  "m017_light_boundary_ce": {
+    "id": "m017_light_boundary_ce",
+    "number": 17,
+    "group": "local19",
+    "description": "경계 픽셀 CE 가중치 +0.2",
+    "loss": {
+      "edge_weight": 0.2
+    }
+  },
+  "m018_light_class_weights": {
+    "id": "m018_light_class_weights",
+    "number": 18,
+    "group": "local19",
+    "description": "강한 가중치 대신 CE [1,1.05,1.1,1]",
+    "loss": {
+      "class_weights": [
+        1.0,
+        1.05,
+        1.1,
+        1.0
+      ]
+    }
+  },
+  "m019_short_hard_patch": {
+    "id": "m019_short_hard_patch",
+    "number": 19,
+    "group": "local19",
+    "description": "낮은 LR 768 hard patch 200 후 전체 영상 600",
+    "hard": true,
+    "sampling": {
+      "mix": {
+        "uniform": 0.65,
+        "eutectic_center": 0.25,
+        "error_or_boundary": 0.1
+      }
+    },
+    "stages": [
+      {
+        "max_updates": 200,
+        "new_lr": 1e-06,
+        "mode": "local_detail_global_context",
+        "warmup_updates": 25,
+        "core_sizes": [
+          768
+        ]
+      },
+      {
+        "max_updates": 600,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m020_aux_light": {
+    "id": "m020_aux_light",
+    "number": 20,
+    "group": "local19",
+    "description": "낮은 비중 0.05의 다중 해상도 보조 학습",
+    "loss": {
+      "auxiliary": 0.05
+    }
+  },
+  "m021_aspp_v1": {
+    "id": "m021_aspp_v1",
+    "number": 21,
+    "group": "explore80",
+    "description": "aspp 경량 변형 1, 전체 영상 학습",
+    "family": "architecture",
+    "reference": "aspp",
+    "model": {
+      "adapter": "aspp",
+      "variant": 1
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "adapter_lr": 2e-05
+      }
+    ]
+  },
+  "m022_aspp_v2": {
+    "id": "m022_aspp_v2",
+    "number": 22,
+    "group": "explore80",
+    "description": "aspp 경량 변형 2, 전체 영상 학습",
+    "family": "architecture",
+    "reference": "aspp",
+    "model": {
+      "adapter": "aspp",
+      "variant": 2
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "adapter_lr": 2e-05
+      }
+    ]
+  },
+  "m023_ppm_v1": {
+    "id": "m023_ppm_v1",
+    "number": 23,
+    "group": "explore80",
+    "description": "ppm 경량 변형 1, 전체 영상 학습",
+    "family": "architecture",
+    "reference": "ppm",
+    "model": {
+      "adapter": "ppm",
+      "variant": 1
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "adapter_lr": 2e-05
+      }
+    ]
+  },
+  "m024_ppm_v2": {
+    "id": "m024_ppm_v2",
+    "number": 24,
+    "group": "explore80",
+    "description": "ppm 경량 변형 2, 전체 영상 학습",
+    "family": "architecture",
+    "reference": "ppm",
+    "model": {
+      "adapter": "ppm",
+      "variant": 2
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "adapter_lr": 2e-05
+      }
+    ]
+  },
+  "m025_large_kernel_v1": {
+    "id": "m025_large_kernel_v1",
+    "number": 25,
+    "group": "explore80",
+    "description": "large_kernel 경량 변형 1, 전체 영상 학습",
+    "family": "architecture",
+    "reference": "convnext",
+    "model": {
+      "adapter": "large_kernel",
+      "variant": 1
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "adapter_lr": 2e-05
+      }
+    ]
+  },
+  "m026_large_kernel_v2": {
+    "id": "m026_large_kernel_v2",
+    "number": 26,
+    "group": "explore80",
+    "description": "large_kernel 경량 변형 2, 전체 영상 학습",
+    "family": "architecture",
+    "reference": "convnext",
+    "model": {
+      "adapter": "large_kernel",
+      "variant": 2
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "adapter_lr": 2e-05
+      }
+    ]
+  },
+  "m027_axial_v1": {
+    "id": "m027_axial_v1",
+    "number": 27,
+    "group": "explore80",
+    "description": "axial 경량 변형 1, 전체 영상 학습",
+    "family": "architecture",
+    "reference": "own",
+    "model": {
+      "adapter": "axial",
+      "variant": 1
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "adapter_lr": 2e-05
+      }
+    ]
+  },
+  "m028_axial_v2": {
+    "id": "m028_axial_v2",
+    "number": 28,
+    "group": "explore80",
+    "description": "axial 경량 변형 2, 전체 영상 학습",
+    "family": "architecture",
+    "reference": "own",
+    "model": {
+      "adapter": "axial",
+      "variant": 2
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "adapter_lr": 2e-05
+      }
+    ]
+  },
+  "m029_bottleneck_v1": {
+    "id": "m029_bottleneck_v1",
+    "number": 29,
+    "group": "explore80",
+    "description": "bottleneck 경량 변형 1, 전체 영상 학습",
+    "family": "architecture",
+    "reference": "own",
+    "model": {
+      "adapter": "bottleneck",
+      "variant": 1
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "adapter_lr": 2e-05
+      }
+    ]
+  },
+  "m030_bottleneck_v2": {
+    "id": "m030_bottleneck_v2",
+    "number": 30,
+    "group": "explore80",
+    "description": "bottleneck 경량 변형 2, 전체 영상 학습",
+    "family": "architecture",
+    "reference": "own",
+    "model": {
+      "adapter": "bottleneck",
+      "variant": 2
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "adapter_lr": 2e-05
+      }
+    ]
+  },
+  "m031_se_v1": {
+    "id": "m031_se_v1",
+    "number": 31,
+    "group": "explore80",
+    "description": "se 경량 변형 1, 전체 영상 학습",
+    "family": "architecture",
+    "reference": "se",
+    "model": {
+      "adapter": "se",
+      "variant": 1
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "adapter_lr": 2e-05
+      }
+    ]
+  },
+  "m032_se_v2": {
+    "id": "m032_se_v2",
+    "number": 32,
+    "group": "explore80",
+    "description": "se 경량 변형 2, 전체 영상 학습",
+    "family": "architecture",
+    "reference": "se",
+    "model": {
+      "adapter": "se",
+      "variant": 2
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "adapter_lr": 2e-05
+      }
+    ]
+  },
+  "m033_eca_v1": {
+    "id": "m033_eca_v1",
+    "number": 33,
+    "group": "explore80",
+    "description": "eca 경량 변형 1, 전체 영상 학습",
+    "family": "architecture",
+    "reference": "eca",
+    "model": {
+      "adapter": "eca",
+      "variant": 1
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "adapter_lr": 2e-05
+      }
+    ]
+  },
+  "m034_eca_v2": {
+    "id": "m034_eca_v2",
+    "number": 34,
+    "group": "explore80",
+    "description": "eca 경량 변형 2, 전체 영상 학습",
+    "family": "architecture",
+    "reference": "eca",
+    "model": {
+      "adapter": "eca",
+      "variant": 2
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "adapter_lr": 2e-05
+      }
+    ]
+  },
+  "m035_cbam_v1": {
+    "id": "m035_cbam_v1",
+    "number": 35,
+    "group": "explore80",
+    "description": "cbam 경량 변형 1, 전체 영상 학습",
+    "family": "architecture",
+    "reference": "cbam",
+    "model": {
+      "adapter": "cbam",
+      "variant": 1
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "adapter_lr": 2e-05
+      }
+    ]
+  },
+  "m036_cbam_v2": {
+    "id": "m036_cbam_v2",
+    "number": 36,
+    "group": "explore80",
+    "description": "cbam 경량 변형 2, 전체 영상 학습",
+    "family": "architecture",
+    "reference": "cbam",
+    "model": {
+      "adapter": "cbam",
+      "variant": 2
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "adapter_lr": 2e-05
+      }
+    ]
+  },
+  "m037_skip_gate_v1": {
+    "id": "m037_skip_gate_v1",
+    "number": 37,
+    "group": "explore80",
+    "description": "skip_gate 경량 변형 1, 전체 영상 학습",
+    "family": "architecture",
+    "reference": "attention",
+    "model": {
+      "adapter": "skip_gate",
+      "variant": 1
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "adapter_lr": 2e-05
+      }
+    ]
+  },
+  "m038_skip_gate_v2": {
+    "id": "m038_skip_gate_v2",
+    "number": 38,
+    "group": "explore80",
+    "description": "skip_gate 경량 변형 2, 전체 영상 학습",
+    "family": "architecture",
+    "reference": "attention",
+    "model": {
+      "adapter": "skip_gate",
+      "variant": 2
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "adapter_lr": 2e-05
+      }
+    ]
+  },
+  "m039_decoder_refine_v1": {
+    "id": "m039_decoder_refine_v1",
+    "number": 39,
+    "group": "explore80",
+    "description": "decoder_refine 경량 변형 1, 전체 영상 학습",
+    "family": "architecture",
+    "reference": "own",
+    "model": {
+      "adapter": "decoder_refine",
+      "variant": 1
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "adapter_lr": 2e-05
+      }
+    ]
+  },
+  "m040_decoder_refine_v2": {
+    "id": "m040_decoder_refine_v2",
+    "number": 40,
+    "group": "explore80",
+    "description": "decoder_refine 경량 변형 2, 전체 영상 학습",
+    "family": "architecture",
+    "reference": "own",
+    "model": {
+      "adapter": "decoder_refine",
+      "variant": 2
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "adapter_lr": 2e-05
+      }
+    ]
+  },
+  "m041_highres_v1": {
+    "id": "m041_highres_v1",
+    "number": 41,
+    "group": "explore80",
+    "description": "highres 경량 변형 1, 전체 영상 학습",
+    "family": "architecture",
+    "reference": "own",
+    "model": {
+      "adapter": "highres",
+      "variant": 1
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "adapter_lr": 2e-05
+      }
+    ]
+  },
+  "m042_highres_v2": {
+    "id": "m042_highres_v2",
+    "number": 42,
+    "group": "explore80",
+    "description": "highres 경량 변형 2, 전체 영상 학습",
+    "family": "architecture",
+    "reference": "own",
+    "model": {
+      "adapter": "highres",
+      "variant": 2
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "adapter_lr": 2e-05
+      }
+    ]
+  },
+  "m043_channel_adapter_v1": {
+    "id": "m043_channel_adapter_v1",
+    "number": 43,
+    "group": "explore80",
+    "description": "channel_adapter 경량 변형 1, 전체 영상 학습",
+    "family": "architecture",
+    "reference": "own",
+    "model": {
+      "adapter": "channel_adapter",
+      "variant": 1
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "adapter_lr": 2e-05
+      }
+    ]
+  },
+  "m044_channel_adapter_v2": {
+    "id": "m044_channel_adapter_v2",
+    "number": 44,
+    "group": "explore80",
+    "description": "channel_adapter 경량 변형 2, 전체 영상 학습",
+    "family": "architecture",
+    "reference": "own",
+    "model": {
+      "adapter": "channel_adapter",
+      "variant": 2
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25,
+        "adapter_lr": 2e-05
+      }
+    ]
+  },
+  "m045_ce_half": {
+    "id": "m045_ce_half",
+    "number": 45,
+    "group": "explore80",
+    "description": "손실 탐색: ce_half",
+    "family": "loss",
+    "reference": "own",
+    "loss": {
+      "ce": 0.5
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m046_dice_one": {
+    "id": "m046_dice_one",
+    "number": 46,
+    "group": "explore80",
+    "description": "손실 탐색: dice_one",
+    "family": "loss",
+    "reference": "own",
+    "loss": {
+      "dice": 1.0
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m047_lovasz_quarter": {
+    "id": "m047_lovasz_quarter",
+    "number": 47,
+    "group": "explore80",
+    "description": "손실 탐색: lovasz_quarter",
+    "family": "loss",
+    "reference": "own",
+    "loss": {
+      "lovasz": 0.25
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m048_focal_0p5": {
+    "id": "m048_focal_0p5",
+    "number": 48,
+    "group": "explore80",
+    "description": "손실 탐색: focal_0.5",
+    "family": "loss",
+    "reference": "focal",
+    "loss": {
+      "focal_gamma": 0.5
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m049_focal_1p0": {
+    "id": "m049_focal_1p0",
+    "number": 49,
+    "group": "explore80",
+    "description": "손실 탐색: focal_1.0",
+    "family": "loss",
+    "reference": "focal",
+    "loss": {
+      "focal_gamma": 1.0
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m050_focal_2p0": {
+    "id": "m050_focal_2p0",
+    "number": 50,
+    "group": "explore80",
+    "description": "손실 탐색: focal_2.0",
+    "family": "loss",
+    "reference": "focal",
+    "loss": {
+      "focal_gamma": 2.0
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m051_tversky_0p3": {
+    "id": "m051_tversky_0p3",
+    "number": 51,
+    "group": "explore80",
+    "description": "손실 탐색: tversky_0.3",
+    "family": "loss",
+    "reference": "tversky",
+    "loss": {
+      "overlap_kind": "tversky",
+      "tversky_alpha": 0.3
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m052_tversky_0p7": {
+    "id": "m052_tversky_0p7",
+    "number": 52,
+    "group": "explore80",
+    "description": "손실 탐색: tversky_0.7",
+    "family": "loss",
+    "reference": "tversky",
+    "loss": {
+      "overlap_kind": "tversky",
+      "tversky_alpha": 0.7
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m053_generalized_dice": {
+    "id": "m053_generalized_dice",
+    "number": 53,
+    "group": "explore80",
+    "description": "손실 탐색: generalized_dice",
+    "family": "loss",
+    "reference": "gdice",
+    "loss": {
+      "overlap_kind": "generalized_dice"
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m054_smooth_0p01": {
+    "id": "m054_smooth_0p01",
+    "number": 54,
+    "group": "explore80",
+    "description": "손실 탐색: smooth_0.01",
+    "family": "loss",
+    "reference": "ce",
+    "loss": {
+      "label_smoothing": 0.01
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m055_smooth_0p03": {
+    "id": "m055_smooth_0p03",
+    "number": 55,
+    "group": "explore80",
+    "description": "손실 탐색: smooth_0.03",
+    "family": "loss",
+    "reference": "ce",
+    "loss": {
+      "label_smoothing": 0.03
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m056_smooth_0p05": {
+    "id": "m056_smooth_0p05",
+    "number": 56,
+    "group": "explore80",
+    "description": "손실 탐색: smooth_0.05",
+    "family": "loss",
+    "reference": "ce",
+    "loss": {
+      "label_smoothing": 0.05
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m057_hard_pixels_0p75": {
+    "id": "m057_hard_pixels_0p75",
+    "number": 57,
+    "group": "explore80",
+    "description": "손실 탐색: hard_pixels_0.75",
+    "family": "loss",
+    "reference": "ohem",
+    "loss": {
+      "ohem_fraction": 0.75
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m058_hard_pixels_0p5": {
+    "id": "m058_hard_pixels_0p5",
+    "number": 58,
+    "group": "explore80",
+    "description": "손실 탐색: hard_pixels_0.5",
+    "family": "loss",
+    "reference": "ohem",
+    "loss": {
+      "ohem_fraction": 0.5
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m059_hard_pixels_0p25": {
+    "id": "m059_hard_pixels_0p25",
+    "number": 59,
+    "group": "explore80",
+    "description": "손실 탐색: hard_pixels_0.25",
+    "family": "loss",
+    "reference": "ohem",
+    "loss": {
+      "ohem_fraction": 0.25
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m060_edge_ce_half": {
+    "id": "m060_edge_ce_half",
+    "number": 60,
+    "group": "explore80",
+    "description": "손실 탐색: edge_ce_half",
+    "family": "loss",
+    "reference": "own",
+    "loss": {
+      "edge_weight": 0.5
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m061_edge_ce_one": {
+    "id": "m061_edge_ce_one",
+    "number": 61,
+    "group": "explore80",
+    "description": "손실 탐색: edge_ce_one",
+    "family": "loss",
+    "reference": "own",
+    "loss": {
+      "edge_weight": 1.0
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m062_aux_01": {
+    "id": "m062_aux_01",
+    "number": 62,
+    "group": "explore80",
+    "description": "손실 탐색: aux_01",
+    "family": "loss",
+    "reference": "own",
+    "loss": {
+      "auxiliary": 0.1
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m063_aux_02": {
+    "id": "m063_aux_02",
+    "number": 63,
+    "group": "explore80",
+    "description": "손실 탐색: aux_02",
+    "family": "loss",
+    "reference": "own",
+    "loss": {
+      "auxiliary": 0.2
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m064_boundary_005": {
+    "id": "m064_boundary_005",
+    "number": 64,
+    "group": "explore80",
+    "description": "손실 탐색: boundary_005",
+    "family": "loss",
+    "reference": "own",
+    "loss": {
+      "boundary": 0.05
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m065_wd_zero": {
+    "id": "m065_wd_zero",
+    "number": 65,
+    "group": "explore80",
+    "description": "최적화 탐색: wd_zero",
+    "family": "optimizer",
+    "reference": "torch",
+    "train": {
+      "new_weight_decay": 0.0
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m066_wd_0001": {
+    "id": "m066_wd_0001",
+    "number": 66,
+    "group": "explore80",
+    "description": "최적화 탐색: wd_0001",
+    "family": "optimizer",
+    "reference": "torch",
+    "train": {
+      "new_weight_decay": 0.0001
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m067_wd_001": {
+    "id": "m067_wd_001",
+    "number": 67,
+    "group": "explore80",
+    "description": "최적화 탐색: wd_001",
+    "family": "optimizer",
+    "reference": "torch",
+    "train": {
+      "new_weight_decay": 0.001
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m068_wd_05": {
+    "id": "m068_wd_05",
+    "number": 68,
+    "group": "explore80",
+    "description": "최적화 탐색: wd_05",
+    "family": "optimizer",
+    "reference": "torch",
+    "train": {
+      "new_weight_decay": 0.05
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m069_beta2_99": {
+    "id": "m069_beta2_99",
+    "number": 69,
+    "group": "explore80",
+    "description": "최적화 탐색: beta2_99",
+    "family": "optimizer",
+    "reference": "torch",
+    "train": {
+      "betas": [
+        0.9,
+        0.99
+      ]
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m070_beta1_95": {
+    "id": "m070_beta1_95",
+    "number": 70,
+    "group": "explore80",
+    "description": "최적화 탐색: beta1_95",
+    "family": "optimizer",
+    "reference": "torch",
+    "train": {
+      "betas": [
+        0.95,
+        0.999
+      ]
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m071_sgd_001": {
+    "id": "m071_sgd_001",
+    "number": 71,
+    "group": "explore80",
+    "description": "최적화 탐색: sgd_001",
+    "family": "optimizer",
+    "reference": "torch",
+    "train": {
+      "optimizer": "sgd"
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 0.001,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m072_sgd_003": {
+    "id": "m072_sgd_003",
+    "number": 72,
+    "group": "explore80",
+    "description": "최적화 탐색: sgd_003",
+    "family": "optimizer",
+    "reference": "torch",
+    "train": {
+      "optimizer": "sgd"
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 0.003,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m073_adam": {
+    "id": "m073_adam",
+    "number": 73,
+    "group": "explore80",
+    "description": "최적화 탐색: adam",
+    "family": "optimizer",
+    "reference": "torch",
+    "train": {
+      "optimizer": "adam"
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m074_amsgrad": {
+    "id": "m074_amsgrad",
+    "number": 74,
+    "group": "explore80",
+    "description": "최적화 탐색: amsgrad",
+    "family": "optimizer",
+    "reference": "torch",
+    "train": {
+      "amsgrad": true
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m075_constant_lr": {
+    "id": "m075_constant_lr",
+    "number": 75,
+    "group": "explore80",
+    "description": "최적화 탐색: constant_lr",
+    "family": "optimizer",
+    "reference": "torch",
+    "train": {
+      "schedule": "constant"
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m076_poly_lr": {
+    "id": "m076_poly_lr",
+    "number": 76,
+    "group": "explore80",
+    "description": "최적화 탐색: poly_lr",
+    "family": "optimizer",
+    "reference": "torch",
+    "train": {
+      "schedule": "poly"
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m077_brightness": {
+    "id": "m077_brightness",
+    "number": 77,
+    "group": "explore80",
+    "description": "데이터 탐색: brightness",
+    "family": "data",
+    "reference": "own",
+    "augmentation": {
+      "photometric_probability": 0.35,
+      "extra_probability": 0.25,
+      "brightness_offset": [
+        -0.025,
+        0.025
+      ],
+      "contrast_gain": [
+        1.0,
+        1.0
+      ],
+      "gamma": [
+        1.0,
+        1.0
+      ]
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m078_contrast": {
+    "id": "m078_contrast",
+    "number": 78,
+    "group": "explore80",
+    "description": "데이터 탐색: contrast",
+    "family": "data",
+    "reference": "own",
+    "augmentation": {
+      "photometric_probability": 0.35,
+      "extra_probability": 0.25,
+      "brightness_offset": [
+        0.0,
+        0.0
+      ],
+      "contrast_gain": [
+        0.85,
+        1.15
+      ],
+      "gamma": [
+        1.0,
+        1.0
+      ]
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m079_gamma": {
+    "id": "m079_gamma",
+    "number": 79,
+    "group": "explore80",
+    "description": "데이터 탐색: gamma",
+    "family": "data",
+    "reference": "own",
+    "augmentation": {
+      "photometric_probability": 0.35,
+      "extra_probability": 0.25,
+      "brightness_offset": [
+        0.0,
+        0.0
+      ],
+      "contrast_gain": [
+        1.0,
+        1.0
+      ],
+      "gamma": [
+        0.85,
+        1.15
+      ]
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m080_noise": {
+    "id": "m080_noise",
+    "number": 80,
+    "group": "explore80",
+    "description": "데이터 탐색: noise",
+    "family": "data",
+    "reference": "own",
+    "augmentation": {
+      "photometric_probability": 0.0,
+      "extra_probability": 0.25,
+      "noise_std": 0.005
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m081_blur": {
+    "id": "m081_blur",
+    "number": 81,
+    "group": "explore80",
+    "description": "데이터 탐색: blur",
+    "family": "data",
+    "reference": "own",
+    "augmentation": {
+      "photometric_probability": 0.0,
+      "extra_probability": 0.25,
+      "blur_sigma": 0.6
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m082_drop_zscore": {
+    "id": "m082_drop_zscore",
+    "number": 82,
+    "group": "explore80",
+    "description": "데이터 탐색: drop_zscore",
+    "family": "data",
+    "reference": "own",
+    "augmentation": {
+      "photometric_probability": 0.0,
+      "extra_probability": 0.25,
+      "drop_channel": 1
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m083_drop_cdf": {
+    "id": "m083_drop_cdf",
+    "number": 83,
+    "group": "explore80",
+    "description": "데이터 탐색: drop_cdf",
+    "family": "data",
+    "reference": "own",
+    "augmentation": {
+      "photometric_probability": 0.0,
+      "extra_probability": 0.25,
+      "drop_channel": 2
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m084_sharpen": {
+    "id": "m084_sharpen",
+    "number": 84,
+    "group": "explore80",
+    "description": "데이터 탐색: sharpen",
+    "family": "data",
+    "reference": "own",
+    "augmentation": {
+      "photometric_probability": 0.0,
+      "extra_probability": 0.25,
+      "sharpen": 0.2
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m085_local_contrast": {
+    "id": "m085_local_contrast",
+    "number": 85,
+    "group": "explore80",
+    "description": "데이터 탐색: local_contrast",
+    "family": "data",
+    "reference": "own",
+    "augmentation": {
+      "photometric_probability": 0.0,
+      "extra_probability": 0.25,
+      "local_contrast": 0.2
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m086_erase": {
+    "id": "m086_erase",
+    "number": 86,
+    "group": "explore80",
+    "description": "데이터 탐색: erase",
+    "family": "data",
+    "reference": "own",
+    "augmentation": {
+      "photometric_probability": 0.0,
+      "extra_probability": 0.25,
+      "erase_fraction": 0.02
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m087_sample_al3ni": {
+    "id": "m087_sample_al3ni",
+    "number": 87,
+    "group": "explore80",
+    "description": "데이터 탐색: sample_al3ni",
+    "family": "data",
+    "reference": "own",
+    "augmentation": {
+      "photometric_probability": 0.0,
+      "extra_probability": 0.25,
+      "sample_class": 1
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m088_sample_eutectic": {
+    "id": "m088_sample_eutectic",
+    "number": 88,
+    "group": "explore80",
+    "description": "데이터 탐색: sample_eutectic",
+    "family": "data",
+    "reference": "own",
+    "augmentation": {
+      "photometric_probability": 0.0,
+      "extra_probability": 0.25,
+      "sample_class": 2
+    },
+    "stages": [
+      {
+        "max_updates": 1200,
+        "new_lr": 2e-06,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m089_scratch_residual_w16": {
+    "id": "m089_scratch_residual_w16",
+    "number": 89,
+    "group": "explore80",
+    "description": "처음부터 학습: residual U-Net, base width 16",
+    "family": "scratch",
+    "reference": "unet",
+    "parent": null,
+    "model": {
+      "architecture": "scratch",
+      "block": "residual",
+      "width": 16
+    },
+    "augmentation": {
+      "photometric_probability": 0.5
+    },
+    "train": {
+      "ema_decay": 0.999
+    },
+    "stages": [
+      {
+        "max_updates": 1600,
+        "new_lr": 0.0003,
+        "mode": "local_detail_global_context",
+        "warmup_updates": 100,
+        "core_sizes": [
+          512
+        ]
+      },
+      {
+        "max_updates": 1400,
+        "new_lr": 0.0001,
+        "mode": "local_detail_global_context",
+        "warmup_updates": 100,
+        "core_sizes": [
+          768
+        ]
+      },
+      {
+        "max_updates": 1500,
+        "new_lr": 3e-05,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m090_scratch_residual_w24": {
+    "id": "m090_scratch_residual_w24",
+    "number": 90,
+    "group": "explore80",
+    "description": "처음부터 학습: residual U-Net, base width 24",
+    "family": "scratch",
+    "reference": "unet",
+    "parent": null,
+    "model": {
+      "architecture": "scratch",
+      "block": "residual",
+      "width": 24
+    },
+    "augmentation": {
+      "photometric_probability": 0.5
+    },
+    "train": {
+      "ema_decay": 0.999
+    },
+    "stages": [
+      {
+        "max_updates": 1600,
+        "new_lr": 0.0003,
+        "mode": "local_detail_global_context",
+        "warmup_updates": 100,
+        "core_sizes": [
+          512
+        ]
+      },
+      {
+        "max_updates": 1400,
+        "new_lr": 0.0001,
+        "mode": "local_detail_global_context",
+        "warmup_updates": 100,
+        "core_sizes": [
+          768
+        ]
+      },
+      {
+        "max_updates": 1500,
+        "new_lr": 3e-05,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m091_scratch_residual_w32": {
+    "id": "m091_scratch_residual_w32",
+    "number": 91,
+    "group": "explore80",
+    "description": "처음부터 학습: residual U-Net, base width 32",
+    "family": "scratch",
+    "reference": "unet",
+    "parent": null,
+    "model": {
+      "architecture": "scratch",
+      "block": "residual",
+      "width": 32
+    },
+    "augmentation": {
+      "photometric_probability": 0.5
+    },
+    "train": {
+      "ema_decay": 0.999
+    },
+    "stages": [
+      {
+        "max_updates": 1600,
+        "new_lr": 0.0003,
+        "mode": "local_detail_global_context",
+        "warmup_updates": 100,
+        "core_sizes": [
+          512
+        ]
+      },
+      {
+        "max_updates": 1400,
+        "new_lr": 0.0001,
+        "mode": "local_detail_global_context",
+        "warmup_updates": 100,
+        "core_sizes": [
+          768
+        ]
+      },
+      {
+        "max_updates": 1500,
+        "new_lr": 3e-05,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m092_scratch_separable_w16": {
+    "id": "m092_scratch_separable_w16",
+    "number": 92,
+    "group": "explore80",
+    "description": "처음부터 학습: separable U-Net, base width 16",
+    "family": "scratch",
+    "reference": "unet",
+    "parent": null,
+    "model": {
+      "architecture": "scratch",
+      "block": "separable",
+      "width": 16
+    },
+    "augmentation": {
+      "photometric_probability": 0.5
+    },
+    "train": {
+      "ema_decay": 0.999
+    },
+    "stages": [
+      {
+        "max_updates": 1600,
+        "new_lr": 0.0003,
+        "mode": "local_detail_global_context",
+        "warmup_updates": 100,
+        "core_sizes": [
+          512
+        ]
+      },
+      {
+        "max_updates": 1400,
+        "new_lr": 0.0001,
+        "mode": "local_detail_global_context",
+        "warmup_updates": 100,
+        "core_sizes": [
+          768
+        ]
+      },
+      {
+        "max_updates": 1500,
+        "new_lr": 3e-05,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m093_scratch_separable_w24": {
+    "id": "m093_scratch_separable_w24",
+    "number": 93,
+    "group": "explore80",
+    "description": "처음부터 학습: separable U-Net, base width 24",
+    "family": "scratch",
+    "reference": "unet",
+    "parent": null,
+    "model": {
+      "architecture": "scratch",
+      "block": "separable",
+      "width": 24
+    },
+    "augmentation": {
+      "photometric_probability": 0.5
+    },
+    "train": {
+      "ema_decay": 0.999
+    },
+    "stages": [
+      {
+        "max_updates": 1600,
+        "new_lr": 0.0003,
+        "mode": "local_detail_global_context",
+        "warmup_updates": 100,
+        "core_sizes": [
+          512
+        ]
+      },
+      {
+        "max_updates": 1400,
+        "new_lr": 0.0001,
+        "mode": "local_detail_global_context",
+        "warmup_updates": 100,
+        "core_sizes": [
+          768
+        ]
+      },
+      {
+        "max_updates": 1500,
+        "new_lr": 3e-05,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m094_scratch_separable_w32": {
+    "id": "m094_scratch_separable_w32",
+    "number": 94,
+    "group": "explore80",
+    "description": "처음부터 학습: separable U-Net, base width 32",
+    "family": "scratch",
+    "reference": "unet",
+    "parent": null,
+    "model": {
+      "architecture": "scratch",
+      "block": "separable",
+      "width": 32
+    },
+    "augmentation": {
+      "photometric_probability": 0.5
+    },
+    "train": {
+      "ema_decay": 0.999
+    },
+    "stages": [
+      {
+        "max_updates": 1600,
+        "new_lr": 0.0003,
+        "mode": "local_detail_global_context",
+        "warmup_updates": 100,
+        "core_sizes": [
+          512
+        ]
+      },
+      {
+        "max_updates": 1400,
+        "new_lr": 0.0001,
+        "mode": "local_detail_global_context",
+        "warmup_updates": 100,
+        "core_sizes": [
+          768
+        ]
+      },
+      {
+        "max_updates": 1500,
+        "new_lr": 3e-05,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m095_scratch_convnext_w16": {
+    "id": "m095_scratch_convnext_w16",
+    "number": 95,
+    "group": "explore80",
+    "description": "처음부터 학습: convnext U-Net, base width 16",
+    "family": "scratch",
+    "reference": "convnext",
+    "parent": null,
+    "model": {
+      "architecture": "scratch",
+      "block": "convnext",
+      "width": 16
+    },
+    "augmentation": {
+      "photometric_probability": 0.5
+    },
+    "train": {
+      "ema_decay": 0.999
+    },
+    "stages": [
+      {
+        "max_updates": 1600,
+        "new_lr": 0.0003,
+        "mode": "local_detail_global_context",
+        "warmup_updates": 100,
+        "core_sizes": [
+          512
+        ]
+      },
+      {
+        "max_updates": 1400,
+        "new_lr": 0.0001,
+        "mode": "local_detail_global_context",
+        "warmup_updates": 100,
+        "core_sizes": [
+          768
+        ]
+      },
+      {
+        "max_updates": 1500,
+        "new_lr": 3e-05,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m096_scratch_convnext_w24": {
+    "id": "m096_scratch_convnext_w24",
+    "number": 96,
+    "group": "explore80",
+    "description": "처음부터 학습: convnext U-Net, base width 24",
+    "family": "scratch",
+    "reference": "convnext",
+    "parent": null,
+    "model": {
+      "architecture": "scratch",
+      "block": "convnext",
+      "width": 24
+    },
+    "augmentation": {
+      "photometric_probability": 0.5
+    },
+    "train": {
+      "ema_decay": 0.999
+    },
+    "stages": [
+      {
+        "max_updates": 1600,
+        "new_lr": 0.0003,
+        "mode": "local_detail_global_context",
+        "warmup_updates": 100,
+        "core_sizes": [
+          512
+        ]
+      },
+      {
+        "max_updates": 1400,
+        "new_lr": 0.0001,
+        "mode": "local_detail_global_context",
+        "warmup_updates": 100,
+        "core_sizes": [
+          768
+        ]
+      },
+      {
+        "max_updates": 1500,
+        "new_lr": 3e-05,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m097_scratch_convnext_w32": {
+    "id": "m097_scratch_convnext_w32",
+    "number": 97,
+    "group": "explore80",
+    "description": "처음부터 학습: convnext U-Net, base width 32",
+    "family": "scratch",
+    "reference": "convnext",
+    "parent": null,
+    "model": {
+      "architecture": "scratch",
+      "block": "convnext",
+      "width": 32
+    },
+    "augmentation": {
+      "photometric_probability": 0.5
+    },
+    "train": {
+      "ema_decay": 0.999
+    },
+    "stages": [
+      {
+        "max_updates": 1600,
+        "new_lr": 0.0003,
+        "mode": "local_detail_global_context",
+        "warmup_updates": 100,
+        "core_sizes": [
+          512
+        ]
+      },
+      {
+        "max_updates": 1400,
+        "new_lr": 0.0001,
+        "mode": "local_detail_global_context",
+        "warmup_updates": 100,
+        "core_sizes": [
+          768
+        ]
+      },
+      {
+        "max_updates": 1500,
+        "new_lr": 3e-05,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m098_scratch_attention_w16": {
+    "id": "m098_scratch_attention_w16",
+    "number": 98,
+    "group": "explore80",
+    "description": "처음부터 학습: attention U-Net, base width 16",
+    "family": "scratch",
+    "reference": "unet",
+    "parent": null,
+    "model": {
+      "architecture": "scratch",
+      "block": "attention",
+      "width": 16
+    },
+    "augmentation": {
+      "photometric_probability": 0.5
+    },
+    "train": {
+      "ema_decay": 0.999
+    },
+    "stages": [
+      {
+        "max_updates": 1600,
+        "new_lr": 0.0003,
+        "mode": "local_detail_global_context",
+        "warmup_updates": 100,
+        "core_sizes": [
+          512
+        ]
+      },
+      {
+        "max_updates": 1400,
+        "new_lr": 0.0001,
+        "mode": "local_detail_global_context",
+        "warmup_updates": 100,
+        "core_sizes": [
+          768
+        ]
+      },
+      {
+        "max_updates": 1500,
+        "new_lr": 3e-05,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m099_scratch_attention_w24": {
+    "id": "m099_scratch_attention_w24",
+    "number": 99,
+    "group": "explore80",
+    "description": "처음부터 학습: attention U-Net, base width 24",
+    "family": "scratch",
+    "reference": "unet",
+    "parent": null,
+    "model": {
+      "architecture": "scratch",
+      "block": "attention",
+      "width": 24
+    },
+    "augmentation": {
+      "photometric_probability": 0.5
+    },
+    "train": {
+      "ema_decay": 0.999
+    },
+    "stages": [
+      {
+        "max_updates": 1600,
+        "new_lr": 0.0003,
+        "mode": "local_detail_global_context",
+        "warmup_updates": 100,
+        "core_sizes": [
+          512
+        ]
+      },
+      {
+        "max_updates": 1400,
+        "new_lr": 0.0001,
+        "mode": "local_detail_global_context",
+        "warmup_updates": 100,
+        "core_sizes": [
+          768
+        ]
+      },
+      {
+        "max_updates": 1500,
+        "new_lr": 3e-05,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  },
+  "m100_scratch_attention_w32": {
+    "id": "m100_scratch_attention_w32",
+    "number": 100,
+    "group": "explore80",
+    "description": "처음부터 학습: attention U-Net, base width 32",
+    "family": "scratch",
+    "reference": "unet",
+    "parent": null,
+    "model": {
+      "architecture": "scratch",
+      "block": "attention",
+      "width": 32
+    },
+    "augmentation": {
+      "photometric_probability": 0.5
+    },
+    "train": {
+      "ema_decay": 0.999
+    },
+    "stages": [
+      {
+        "max_updates": 1600,
+        "new_lr": 0.0003,
+        "mode": "local_detail_global_context",
+        "warmup_updates": 100,
+        "core_sizes": [
+          512
+        ]
+      },
+      {
+        "max_updates": 1400,
+        "new_lr": 0.0001,
+        "mode": "local_detail_global_context",
+        "warmup_updates": 100,
+        "core_sizes": [
+          768
+        ]
+      },
+      {
+        "max_updates": 1500,
+        "new_lr": 3e-05,
+        "mode": "full_frame",
+        "warmup_updates": 25
+      }
+    ]
+  }
+}

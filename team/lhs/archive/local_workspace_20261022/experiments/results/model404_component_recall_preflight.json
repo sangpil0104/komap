@@ -1,0 +1,259 @@
+{
+  "experiment": "Model404 preflight: 50%-recall recheck of Model397 Eutectic-Si OOF components",
+  "prediction": "fixed 0.50 Model329 B4 + 0.25 Model392 seed1 + 0.25 Model392 seed2 probabilities; argmax",
+  "component_definition": "native-grid GT class 3; 8-connectivity",
+  "hit_definition": "component recall >= 50%; separate any-FN and complete-miss definitions",
+  "images": 70,
+  "groups": 59,
+  "valid_read": false,
+  "test_read": false,
+  "mIoU_tuned_or_scored": false,
+  "bootstrap_draws": 20000,
+  "bootstrap_seed": 404502,
+  "input_sha256": {
+    "outputs/model329_fullstats_width4000_uniform_group_oof/fold1_oof/probabilities.npz": "b3680bc39f36eb22d6b59d4aaee5d15c4f1ca95dd88866a27d225540cd5d95d0",
+    "outputs/model392_widthnorm/seed1/fold1_oof/valid_probabilities.npz": "d6e4d7135ca89d7672a6a676cbb065f63c85ac97849f801524e04fb9d5d020d0",
+    "outputs/model392_widthnorm/seed2/fold1_oof/valid_probabilities.npz": "656f241166aeb8f986339343ba9e7eea26cbd0fbe0ba1bfb0974c118503a6572",
+    "outputs/model329_fullstats_width4000_uniform_group_oof/fold2_oof/probabilities.npz": "1ed378d13439aa78111634b1bd84e6c957cfeb60f9cc93024a19629f111c0c8c",
+    "outputs/model392_widthnorm/seed1/fold2_oof/valid_probabilities.npz": "4d803f8991629c5a85b08d7e9f6d8628ca1ac38cafda4a0e425689d11ff82b71",
+    "outputs/model392_widthnorm/seed2/fold2_oof/valid_probabilities.npz": "6d8673e039f48bf4f8acfeb8bb4303617ed9871dc9b13a40ac1e3e25efefb594",
+    "outputs/model329_fullstats_width4000_uniform_group_oof/fold3_oof/probabilities.npz": "8ce76e0207e2215b29d68896c000816c1f178abe86867274e2f68537710eaf14",
+    "outputs/model392_widthnorm/seed1/fold3_oof/valid_probabilities.npz": "041d98729362d8460e4cfcd5e2ba852b19673637f756484f8fcbb31b65612492",
+    "outputs/model392_widthnorm/seed2/fold3_oof/valid_probabilities.npz": "44c8795dc6a22130ed023c51d80a26d4f2fa516b27ec1c2229a7613431e7a7fb",
+    "outputs/model329_fullstats_width4000_uniform_group_oof/fold4_oof/probabilities.npz": "2ec5ba5bbdf0d7ad7352005e539e0d098d3b2c3aa470a9b99a71cbc2933a44f0",
+    "outputs/model392_widthnorm/seed1/fold4_oof/valid_probabilities.npz": "3d4610185438347c9f9b5324118e9584a05d6fee0ed5ea48f7b56d01e04646d6",
+    "outputs/model392_widthnorm/seed2/fold4_oof/valid_probabilities.npz": "7912be83fcb87976a2876d8970157bf17b5de3be493e28c56d566fa1eaf4b8e6"
+  },
+  "area_bins": {
+    "1_to_lt64": {
+      "components": 43545,
+      "groups": 59,
+      "images": 70,
+      "mean_component_recall_percent": 59.95863029935117,
+      "median_component_recall_percent": 76.0,
+      "p10_component_recall_percent": 0.0,
+      "component_any_fn_rate_percent": 89.83350556895165,
+      "component_majority_miss_rate_recall_lt_50_percent": 31.898036513951084,
+      "component_complete_miss_rate_recall_eq_0_percent": 21.50648754162361,
+      "component_hit_rate_recall_ge_50_group_bootstrap_95ci_percent": [
+        64.79737971429263,
+        71.34746013483951
+      ],
+      "complete_miss_rate_group_bootstrap_95ci_percent": [
+        18.926321470163717,
+        24.271620840036967
+      ],
+      "pixel_support_weighted_recall_percent": 66.05576788217195,
+      "folds": {
+        "1": {
+          "components": 11075,
+          "groups": 15,
+          "mean_recall_percent": 61.23327468465266,
+          "hit_rate_recall_ge_50_percent": 69.31828442437923
+        },
+        "2": {
+          "components": 11027,
+          "groups": 15,
+          "mean_recall_percent": 56.25175870192825,
+          "hit_rate_recall_ge_50_percent": 64.16976512197334
+        },
+        "3": {
+          "components": 10752,
+          "groups": 14,
+          "mean_recall_percent": 62.889198365839114,
+          "hit_rate_recall_ge_50_percent": 71.51227678571429
+        },
+        "4": {
+          "components": 10691,
+          "groups": 15,
+          "mean_recall_percent": 59.514286335894994,
+          "hit_rate_recall_ge_50_percent": 67.4679637077916
+        }
+      }
+    },
+    "64_to_lt256": {
+      "components": 16336,
+      "groups": 59,
+      "images": 70,
+      "mean_component_recall_percent": 77.82627738281982,
+      "median_component_recall_percent": 87.5,
+      "p10_component_recall_percent": 42.18734429496761,
+      "component_any_fn_rate_percent": 99.19196865817825,
+      "component_majority_miss_rate_recall_lt_50_percent": 12.132713026444662,
+      "component_complete_miss_rate_recall_eq_0_percent": 3.3178256611165526,
+      "component_hit_rate_recall_ge_50_group_bootstrap_95ci_percent": [
+        84.71521835857877,
+        90.68696544619988
+      ],
+      "complete_miss_rate_group_bootstrap_95ci_percent": [
+        2.33966142838095,
+        4.465285660797578
+      ],
+      "pixel_support_weighted_recall_percent": 78.58358298139949,
+      "folds": {
+        "1": {
+          "components": 3073,
+          "groups": 15,
+          "mean_recall_percent": 79.79721815766318,
+          "hit_rate_recall_ge_50_percent": 89.71688903351773
+        },
+        "2": {
+          "components": 4844,
+          "groups": 15,
+          "mean_recall_percent": 77.37961745554107,
+          "hit_rate_recall_ge_50_percent": 88.0057803468208
+        },
+        "3": {
+          "components": 4785,
+          "groups": 14,
+          "mean_recall_percent": 80.2360049612456,
+          "hit_rate_recall_ge_50_percent": 90.65830721003135
+        },
+        "4": {
+          "components": 3634,
+          "groups": 15,
+          "mean_recall_percent": 73.5820212529017,
+          "hit_rate_recall_ge_50_percent": 82.44358833241607
+        }
+      }
+    },
+    "256_to_lt1024": {
+      "components": 3338,
+      "groups": 58,
+      "images": 68,
+      "mean_component_recall_percent": 78.67089038497114,
+      "median_component_recall_percent": 89.22419357652518,
+      "p10_component_recall_percent": 40.28210508761935,
+      "component_any_fn_rate_percent": 99.9700419412822,
+      "component_majority_miss_rate_recall_lt_50_percent": 11.983223487118035,
+      "component_complete_miss_rate_recall_eq_0_percent": 4.164170161773518,
+      "component_hit_rate_recall_ge_50_group_bootstrap_95ci_percent": [
+        83.5141690466661,
+        91.7681126262164
+      ],
+      "complete_miss_rate_group_bootstrap_95ci_percent": [
+        2.608410158339987,
+        6.460321376675668
+      ],
+      "pixel_support_weighted_recall_percent": 78.01081259426178,
+      "folds": {
+        "1": {
+          "components": 593,
+          "groups": 15,
+          "mean_recall_percent": 83.16802991933213,
+          "hit_rate_recall_ge_50_percent": 92.0741989881956
+        },
+        "2": {
+          "components": 957,
+          "groups": 15,
+          "mean_recall_percent": 79.56634133070453,
+          "hit_rate_recall_ge_50_percent": 88.81922675026124
+        },
+        "3": {
+          "components": 934,
+          "groups": 14,
+          "mean_recall_percent": 83.09534364397143,
+          "hit_rate_recall_ge_50_percent": 93.14775160599572
+        },
+        "4": {
+          "components": 854,
+          "groups": 14,
+          "mean_recall_percent": 69.70579712636558,
+          "hit_rate_recall_ge_50_percent": 78.68852459016394
+        }
+      }
+    },
+    "1024_to_lt4096": {
+      "components": 170,
+      "groups": 28,
+      "images": 32,
+      "mean_component_recall_percent": 63.89905367899019,
+      "median_component_recall_percent": 84.93340350760866,
+      "p10_component_recall_percent": 0.0,
+      "component_any_fn_rate_percent": 100.0,
+      "component_majority_miss_rate_recall_lt_50_percent": 31.176470588235293,
+      "component_complete_miss_rate_recall_eq_0_percent": 12.941176470588237,
+      "component_hit_rate_recall_ge_50_group_bootstrap_95ci_percent": [
+        54.929577464788736,
+        79.0962560080951
+      ],
+      "complete_miss_rate_group_bootstrap_95ci_percent": [
+        8.187134502923977,
+        18.58407079646018
+      ],
+      "pixel_support_weighted_recall_percent": 61.628421646776005,
+      "folds": {
+        "1": {
+          "components": 39,
+          "groups": 7,
+          "mean_recall_percent": 72.72673412736734,
+          "hit_rate_recall_ge_50_percent": 82.05128205128204
+        },
+        "2": {
+          "components": 50,
+          "groups": 7,
+          "mean_recall_percent": 59.619813596454684,
+          "hit_rate_recall_ge_50_percent": 64.0
+        },
+        "3": {
+          "components": 38,
+          "groups": 8,
+          "mean_recall_percent": 67.94723162015437,
+          "hit_rate_recall_ge_50_percent": 71.05263157894737
+        },
+        "4": {
+          "components": 43,
+          "groups": 6,
+          "mean_recall_percent": 57.290953792381536,
+          "hit_rate_recall_ge_50_percent": 60.46511627906976
+        }
+      }
+    },
+    "4096_or_more": {
+      "components": 4,
+      "groups": 2,
+      "images": 2,
+      "mean_component_recall_percent": 21.550101928806647,
+      "median_component_recall_percent": 0.0,
+      "p10_component_recall_percent": 0.0,
+      "component_any_fn_rate_percent": 100.0,
+      "component_majority_miss_rate_recall_lt_50_percent": 75.0,
+      "component_complete_miss_rate_recall_eq_0_percent": 75.0,
+      "component_hit_rate_recall_ge_50_group_bootstrap_95ci_percent": [
+        0.0,
+        100.0
+      ],
+      "complete_miss_rate_group_bootstrap_95ci_percent": [
+        0.0,
+        100.0
+      ],
+      "pixel_support_weighted_recall_percent": 18.393843065082816,
+      "folds": {
+        "1": {
+          "components": 0,
+          "groups": 0,
+          "mean_recall_percent": null,
+          "hit_rate_recall_ge_50_percent": null
+        },
+        "2": {
+          "components": 4,
+          "groups": 2,
+          "mean_recall_percent": 21.550101928806647,
+          "hit_rate_recall_ge_50_percent": 25.0
+        },
+        "3": {
+          "components": 0,
+          "groups": 0,
+          "mean_recall_percent": null,
+          "hit_rate_recall_ge_50_percent": null
+        },
+        "4": {
+          "components": 0,
+          "groups": 0,
+          "mean_recall_percent": null,
+          "hit_rate_recall_ge_50_percent": null
+        }
+      }
+    }
+  }
+}

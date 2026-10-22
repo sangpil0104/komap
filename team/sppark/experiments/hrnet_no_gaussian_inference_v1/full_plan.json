@@ -1,0 +1,86 @@
+[
+  {
+    "id": "F_full2",
+    "contrast": "A00_control",
+    "change": {
+      "context": "whole_image"
+    },
+    "config": {
+      "scale": 2.0,
+      "tta": "flip4",
+      "precision": "fp32"
+    }
+  },
+  {
+    "id": "F_full_1.0",
+    "contrast": "F_full2",
+    "change": {
+      "scale": 1.0
+    },
+    "config": {
+      "scale": 1.0,
+      "tta": "flip4",
+      "precision": "fp32"
+    }
+  },
+  {
+    "id": "F_full_1.5",
+    "contrast": "F_full2",
+    "change": {
+      "scale": 1.5
+    },
+    "config": {
+      "scale": 1.5,
+      "tta": "flip4",
+      "precision": "fp32"
+    }
+  },
+  {
+    "id": "F_full_1.75",
+    "contrast": "F_full2",
+    "change": {
+      "scale": 1.75
+    },
+    "config": {
+      "scale": 1.75,
+      "tta": "flip4",
+      "precision": "fp32"
+    }
+  },
+  {
+    "id": "F_full_2.25",
+    "contrast": "F_full2",
+    "change": {
+      "scale": 2.25
+    },
+    "config": {
+      "scale": 2.25,
+      "tta": "flip4",
+      "precision": "fp32"
+    }
+  },
+  {
+    "id": "F_full2_bf16",
+    "contrast": "F_full2",
+    "change": {
+      "precision": "bf16"
+    },
+    "config": {
+      "scale": 2.0,
+      "tta": "flip4",
+      "precision": "bf16"
+    }
+  },
+  {
+    "id": "F_full2_d4",
+    "contrast": "F_full2",
+    "change": {
+      "tta": "d4"
+    },
+    "config": {
+      "scale": 2.0,
+      "tta": "d4",
+      "precision": "fp32"
+    }
+  }
+]

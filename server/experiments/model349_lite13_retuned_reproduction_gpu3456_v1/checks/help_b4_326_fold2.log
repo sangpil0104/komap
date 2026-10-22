@@ -1,0 +1,82 @@
+usage: train_ema.py [-h] [--data DATA] --out OUT [--train_splits TRAIN_SPLITS]
+                    [--arch ARCH] [--encoder ENCODER]
+                    [--norm {imagenet,image,image_global}] [--crop CROP]
+                    [--scale SCALE] [--target_width TARGET_WIDTH]
+                    [--sample {area,uniform}] [--bs BS] [--iters ITERS]
+                    [--lr LR] [--wd WD] [--dice_w DICE_W]
+                    [--lovasz_w LOVASZ_W]
+                    [--lovasz_max_pixels LOVASZ_MAX_PIXELS]
+                    [--init_checkpoint INIT_CHECKPOINT]
+                    [--deterministic_workers] [--cldice_w CLDICE_W]
+                    [--cldice_classes CLDICE_CLASSES]
+                    [--cldice_iters CLDICE_ITERS] [--cldice_pool CLDICE_POOL]
+                    [--grad_ckpt] [--ema EMA] [--accum ACCUM]
+                    [--eval_every EVAL_EVERY] [--no_valid_eval]
+                    [--amp_init_scale AMP_INIT_SCALE] [--workers WORKERS]
+                    [--seed SEED] [--input {gray3,feat3,zcdf3}]
+                    [--ema_start EMA_START] [--bn_batches BN_BATCHES]
+                    [--bn_seed BN_SEED]
+
+options:
+  -h, --help            show this help message and exit
+  --data DATA
+  --out OUT
+  --train_splits TRAIN_SPLITS
+  --arch ARCH
+  --encoder ENCODER
+  --norm {imagenet,image,image_global}
+  --crop CROP
+  --scale SCALE         train/infer on the image resized by this factor
+  --target_width TARGET_WIDTH
+                        per-image magnification normalization: resize each
+                        image to this width (overrides --scale)
+  --sample {area,uniform}
+                        crop sampling: proportional to image area, or one
+                        image at a time (matches the per-image metric)
+  --bs BS
+  --iters ITERS
+  --lr LR
+  --wd WD
+  --dice_w DICE_W
+  --lovasz_w LOVASZ_W   weight for present-class, per-image Lovasz-Softmax
+                        loss
+  --lovasz_max_pixels LOVASZ_MAX_PIXELS
+                        uniform pixels per image used to approximate Lovasz on
+                        large crops
+  --init_checkpoint INIT_CHECKPOINT
+                        optional segmentation state_dict used to initialize
+                        fine-tuning
+  --deterministic_workers
+                        seed each data-loader worker deterministically from
+                        --seed
+  --cldice_w CLDICE_W   weight of clDice topology loss (0 = off)
+  --cldice_classes CLDICE_CLASSES
+                        elongated phases: 1 Al3Ni rods, 3 eutectic Si needles
+  --cldice_iters CLDICE_ITERS
+                        soft-skeleton iterations (~max half-thickness in px)
+  --cldice_pool CLDICE_POOL
+                        avg-pool factor before skeletonizing (memory)
+  --grad_ckpt           encoder gradient checkpointing (~40{'option_strings':
+                        ['--grad_ckpt'], 'dest': 'grad_ckpt', 'nargs': 0,
+                        'const': True, 'default': False, 'type': None,
+                        'choices': None, 'required': False, 'help': 'encoder
+                        gradient checkpointing (~40% slower, much less
+                        memory)', 'metavar': None, 'container':
+                        <argparse._ArgumentGroup object at 0x7fb5e6d10a90>,
+                        'prog': 'train_ema.py'}lower, much less memory)
+  --ema EMA             EMA decay for a shadow copy of the weights (0 = off)
+  --accum ACCUM         gradient accumulation steps (effective batch = bs *
+                        accum)
+  --eval_every EVAL_EVERY
+  --no_valid_eval       do not inspect official validation masks during this
+                        fixed-epoch CV run
+  --amp_init_scale AMP_INIT_SCALE
+                        initial FP16 GradScaler scale (P100-safe default)
+  --workers WORKERS
+  --seed SEED
+  --input {gray3,feat3,zcdf3}
+                        gray3, feat3: [gray, Hessian ridge, high-pass], or
+                        zcdf3: [raw, full-image z-score, full-image CDF]
+  --ema_start EMA_START
+  --bn_batches BN_BATCHES
+  --bn_seed BN_SEED

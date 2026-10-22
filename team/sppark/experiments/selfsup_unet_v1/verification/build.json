@@ -1,0 +1,47 @@
+{
+  "source_hashes": {
+    "configs/base.yaml": "ea30969d096cc7d29d26b687f46ca1c5f88e0f39322d0e0a7df85d11f576e137",
+    "run.py": "4c19c5e11a8796c70e295f654a5ab4bcd46207ff60ba663d7871dfa6e675fded",
+    "run_6gpu.sh": "a5492a7aeb2940784eefadf08d07b4c747bc9b7fc0a595432edb3a9eb2feae21",
+    "sslab/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "sslab/common.py": "a63f705da337d601a772354b45f29817857cad1542d2b5573b942fb105ec955f",
+    "sslab/data.py": "3fb9b6b7b0073f353e882ba65b331029407f6a150074ec02bd1cd26eccb529b1",
+    "sslab/engine.py": "6d3f26cf6a0da586a51b0f7d7b84031dac6675fff2bd1b1608fb44cd65f30c86",
+    "sslab/evaluation.py": "e5f07a446ec4a01b8076a6e6215bd7710c85ec684150042942bb32aa83acc3f5",
+    "sslab/inference.py": "36f9d637c933d342c552b569436731d3ff8a82acc8056330e3271082a21335ae",
+    "sslab/loss.py": "a648044c6770210ce9826ee8c88c6cb320c13cf981ea02490ccfae5ca2ebf6d9",
+    "sslab/metrics.py": "9e5322ce3beefdba265c3e11efb514e9d78d760b0218c20e7b5ddb3be1c9c048",
+    "sslab/model.py": "02f74beafa9db42950a72e4f2cdda70e8923cdb4fbdfb39609811eeb5998f11f",
+    "sslab/panels.py": "fabf64531df2b92a4d212883fca159d46fbc2325a4cc4d6bc97e36c5f25b2093",
+    "sslab/parallel.py": "b562a897d82220b9181b2f8d589c5f4b1e461afdfcc9d6a7d55ae9b4d254cba8",
+    "start_nohup_6gpu.sh": "a9b6e4f5b883db9c94b99dd685fc91b1160f1945dfa2a9615746a2b1de03a321"
+  },
+  "actual_training_started": false,
+  "prepared_weights": "/Data3/sppark/komap/experiments/selfsup_unet_v1/weights/resnet18-f37072fd.pth",
+  "weights_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+  "unit_integration_tests": 8,
+  "test_log": "verification/tests_deterministic_cpu.log",
+  "ddp_log": "verification/ddp_native.log",
+  "ddp_gpus": [
+    0,
+    1,
+    2,
+    5,
+    6,
+    7
+  ],
+  "ddp_input_size": [
+    640,
+    640
+  ],
+  "ddp_microbatches_per_rank": 2,
+  "dependencies": {
+    "torch": "2.7.1+cu128",
+    "torchvision": "0.22.1+cu128",
+    "numpy": "2.4.6",
+    "Pillow": "12.3.0",
+    "scipy": "1.17.1",
+    "PyYAML": "6.0.3",
+    "tqdm": "4.70.1"
+  }
+}

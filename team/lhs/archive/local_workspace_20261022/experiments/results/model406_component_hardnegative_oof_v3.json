@@ -1,0 +1,251 @@
+{
+  "experiment": "Model406 v3 small-component recall with hard-negative island suppression",
+  "metric": "image-wise mean of four class IoUs; empty-union=0",
+  "class_order": [
+    "Al",
+    "Al3Ni",
+    "Primary Si",
+    "Eutectic Si"
+  ],
+  "images": 70,
+  "specimen_groups": 59,
+  "folds": 4,
+  "primary_comparison": "component treatment vs compute-matched continuation control",
+  "candidate_scores": {
+    "image_mean_miou_percent": 79.03106796536265,
+    "class_image_mean_iou_percent": {
+      "Al": 92.68506934891464,
+      "Al3Ni": 79.75509614584405,
+      "Primary Si": 86.05322901077416,
+      "Eutectic Si": 57.63087735591779
+    }
+  },
+  "control_scores": {
+    "image_mean_miou_percent": 79.01122142166571,
+    "class_image_mean_iou_percent": {
+      "Al": 92.67247029284577,
+      "Al3Ni": 79.74184817364043,
+      "Primary Si": 86.03448544507928,
+      "Eutectic Si": 57.596081775097296
+    }
+  },
+  "model392_parent_scores": {
+    "image_mean_miou_percent": 78.97749376443203,
+    "class_image_mean_iou_percent": {
+      "Al": 92.67051959997215,
+      "Al3Ni": 79.7171347461918,
+      "Primary Si": 85.92128581598246,
+      "Eutectic Si": 57.60103489558174
+    }
+  },
+  "paired_candidate_vs_control": {
+    "delta_image_mean_pp": 0.019846543696952653,
+    "paired_group_bootstrap_95ci_pp": [
+      0.007513028068554345,
+      0.032663015185300244
+    ],
+    "positive_images": 40,
+    "positive_folds": 4,
+    "fold_delta_pp": {
+      "1": 0.04371083223134222,
+      "2": 0.013864245748746552,
+      "3": 0.008027393523009883,
+      "4": 0.012731821485524679
+    },
+    "class_delta_pp": {
+      "Al": 0.012599056068845245,
+      "Al3Ni": 0.013247972203614082,
+      "Primary Si": 0.018743565694873596,
+      "Eutectic Si": 0.034795580820477665
+    },
+    "step4_delta_pp": 0.03707294855328177,
+    "largest_group_positive_contribution_share": 0.13781689022130247
+  },
+  "paired_candidate_vs_model392_parent": {
+    "delta_image_mean_pp": 0.05357420093062518,
+    "paired_group_bootstrap_95ci_pp": [
+      -0.14385781123031488,
+      0.2663206826013847
+    ],
+    "positive_images": 36,
+    "positive_folds": 3,
+    "fold_delta_pp": {
+      "1": -0.2280422736309943,
+      "2": 0.03807753543130919,
+      "3": 0.15463740512030008,
+      "4": 0.26710138033488184
+    },
+    "class_delta_pp": {
+      "Al": 0.014549748942500924,
+      "Al3Ni": 0.03796139965224449,
+      "Primary Si": 0.13194319479170474,
+      "Eutectic Si": 0.029842460336050574
+    },
+    "step4_delta_pp": -0.14871202193333755,
+    "largest_group_positive_contribution_share": 0.8248376452988778
+  },
+  "paired_control_vs_model392_parent": {
+    "delta_image_mean_pp": 0.03372765723367252,
+    "paired_group_bootstrap_95ci_pp": [
+      -0.1648162587709471,
+      0.246003317679307
+    ],
+    "positive_images": 38,
+    "positive_folds": 3,
+    "fold_delta_pp": {
+      "1": -0.27175310586233653,
+      "2": 0.024213289682562644,
+      "3": 0.1466100115972902,
+      "4": 0.2543695588493572
+    },
+    "class_delta_pp": {
+      "Al": 0.0019506928736556794,
+      "Al3Ni": 0.024713427448630393,
+      "Primary Si": 0.11319962909683115,
+      "Eutectic Si": -0.004953120484427138
+    },
+    "step4_delta_pp": -0.18578497048661927,
+    "largest_group_positive_contribution_share": 1.2830730861900619
+  },
+  "preregistered_gate": {
+    "checks": {
+      "candidate_vs_matched_control_gain_ge_0_20pp": false,
+      "candidate_vs_control_group_ci_lower_gt_zero": true,
+      "candidate_vs_control_positive_at_least_3_folds": true,
+      "candidate_vs_control_worst_fold_ge_minus_0_30pp": true,
+      "step4_delta_ge_minus_0_30pp": true,
+      "tiny_and_small_medium_component_hit_rates_safe": true,
+      "targeted_class_iou_delta_nonnegative": true,
+      "all_class_delta_ge_minus_0_50pp_and_targeted_classes_nonnegative": true,
+      "candidate_vs_model392_parent_point_delta_nonnegative": true,
+      "unmatched_tiny_pred_components_non_increasing_both_targets": false
+    },
+    "pass": false
+  },
+  "valid_read": false,
+  "test_read": false,
+  "fold_manifest_sha256": "75f3b3c7dda46ba896a94ff61701bc9e3e11b74f494c82763d988c130f9f713c",
+  "interpretation": "Selection-conditional train-OOF development evidence; not official validation/test performance.",
+  "native_targeted_component_hit_rates": {
+    "Al3Ni_tiny_1_to_lt64": {
+      "components": 66342,
+      "candidate_hit_rate_percent": 61.44674565132193,
+      "control_hit_rate_percent": 60.44888607518616,
+      "delta_pp": 0.9978595761357734,
+      "paired_group_bootstrap_95ci_pp": [
+        0.8442984258628037,
+        1.1314351277276222
+      ],
+      "hit_definition": "at least 50% of native-grid GT component pixels predicted as Al3Ni; area [1,64)",
+      "connectivity": 8
+    },
+    "Al3Ni_medium_64_to_lt256": {
+      "components": 13340,
+      "candidate_hit_rate_percent": 85.03748125937032,
+      "control_hit_rate_percent": 84.85007496251875,
+      "delta_pp": 0.18740629685157772,
+      "paired_group_bootstrap_95ci_pp": [
+        0.05601704786679096,
+        0.3139610636047396
+      ],
+      "hit_definition": "at least 50% of native-grid GT component pixels predicted as Al3Ni; area [64,256)",
+      "connectivity": 8
+    },
+    "Eutectic Si_tiny_1_to_lt64": {
+      "components": 43545,
+      "candidate_hit_rate_percent": 68.6921575381789,
+      "control_hit_rate_percent": 67.58066368124929,
+      "delta_pp": 1.1114938569296129,
+      "paired_group_bootstrap_95ci_pp": [
+        0.9344705749733642,
+        1.2933433101361682
+      ],
+      "hit_definition": "at least 50% of native-grid GT component pixels predicted as Eutectic Si; area [1,64)",
+      "connectivity": 8
+    },
+    "Eutectic Si_medium_64_to_lt256": {
+      "components": 16336,
+      "candidate_hit_rate_percent": 86.31243878550441,
+      "control_hit_rate_percent": 86.26346718903037,
+      "delta_pp": 0.04897159647404559,
+      "paired_group_bootstrap_95ci_pp": [
+        -0.08532520322044657,
+        0.17827182624316207
+      ],
+      "hit_definition": "at least 50% of native-grid GT component pixels predicted as Eutectic Si; area [64,256)",
+      "connectivity": 8
+    }
+  },
+  "targeted_component_classes": [
+    "Al3Ni",
+    "Eutectic Si"
+  ],
+  "scorer_revision": "v6 adds a non-regression gate versus the fixed Model392 seed1 OOF parent; training objective and treatment-control gates are unchanged",
+  "parent_nonregression_gate": {
+    "reference": "fixed Model392 seed1 OOF, the candidate initialization parent",
+    "candidate_delta_pp": 0.05357420093062518,
+    "paired_group_bootstrap_95ci_pp": [
+      -0.14385781123031488,
+      0.2663206826013847
+    ],
+    "required_point_delta_pp": ">= 0.0",
+    "pass": true
+  },
+  "status": "NO_GO",
+  "objective": "Model404 v4 balanced tiny-component recall + top-0.1% target-class hard negatives outside a one-pixel GT halo; combined auxiliary gradient calibrated to 10%",
+  "small_island_false_positive_diagnostics": {
+    "definition": "8-connected target-class predicted components of 1–63 native pixels with zero overlap with same-class GT",
+    "images": 70,
+    "specimen_groups": 59,
+    "valid_read": false,
+    "test_read": false,
+    "classes": {
+      "Al3Ni": {
+        "control": {
+          "unmatched_tiny_pred_components_per_image": 317.87142857142857,
+          "tiny_pred_components_per_image": 1166.7571428571428,
+          "target_fp_pixels_per_image": 22554.27142857143
+        },
+        "candidate": {
+          "unmatched_tiny_pred_components_per_image": 336.3,
+          "tiny_pred_components_per_image": 1196.8142857142857,
+          "target_fp_pixels_per_image": 22569.942857142858
+        },
+        "candidate_vs_control": {
+          "unmatched_tiny_pred_components_per_image_delta": 18.428571428571427,
+          "paired_group_bootstrap_95ci": [
+            15.359345848880597,
+            21.62504664179104
+          ],
+          "target_fp_pixels_per_image_delta": 15.67142857142857
+        }
+      },
+      "Eutectic Si": {
+        "control": {
+          "unmatched_tiny_pred_components_per_image": 207.44285714285715,
+          "tiny_pred_components_per_image": 743.5,
+          "target_fp_pixels_per_image": 16351.985714285714
+        },
+        "candidate": {
+          "unmatched_tiny_pred_components_per_image": 225.35714285714286,
+          "tiny_pred_components_per_image": 773.4285714285714,
+          "target_fp_pixels_per_image": 16500.67142857143
+        },
+        "candidate_vs_control": {
+          "unmatched_tiny_pred_components_per_image_delta": 17.914285714285715,
+          "paired_group_bootstrap_95ci": [
+            14.074626865671641,
+            21.89338805970149
+          ],
+          "target_fp_pixels_per_image_delta": 148.68571428571428
+        }
+      }
+    }
+  },
+  "valid_stage_allowed": false,
+  "decision_note": "No valid/test look is authorized. A passing result only permits a separately locked independent-seed grouped-OOF confirmation.",
+  "source_lock_sha256": "3cfd15afd61620787285feaf63f7bf32e1ee00b2a0f9f4036189dd08c6dc90d0",
+  "calibration_lock_sha256": "17156f9216375d709fd459c1e561fec595dffc08ef885b1158bab93b4997ee63",
+  "oof_lock_sha256": "21b3152353958adade3a3d1690b08c2e7567adea9bdd03fb1d41d9e76dec43c3",
+  "claim_sha256": "dc1bf1ea9ab5080b185325670633b936d3d132d5147b09889d478d19225d36d6"
+}

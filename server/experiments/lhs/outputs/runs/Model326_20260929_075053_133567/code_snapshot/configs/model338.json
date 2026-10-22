@@ -1,0 +1,27 @@
+{
+  "description": "Model338 fixed strict-image-mIoU best route; no local validation search",
+  "upstream_recorded_image_miou": 0.7933996345357988,
+  "artifacts": {
+    "entries": "artifacts/model338/entries.pkl",
+    "269": "artifacts/model338/model269_valid_probs.npz",
+    "322": "artifacts/model338/model322_probabilities.npz",
+    "326": "artifacts/model338/model326_probabilities.npz"
+  },
+  "setting": {
+    "primary_source": "326",
+    "primary_gamma": 1.0,
+    "al3ni_source": "b4mean",
+    "al3ni_gamma": 0.5,
+    "al_source": "322",
+    "al_gamma": 0.5,
+    "eutectic_source": "269",
+    "eutectic_gamma": 0.9,
+    "prior_scale": 1.25,
+    "beta_scale": 0.8,
+    "al_delta": 0.0,
+    "eut_delta": 0.15,
+    "gaussian_blend": 0.5,
+    "eut_edge_blend": 0.25,
+    "cleanup_threshold": 128
+  }
+}

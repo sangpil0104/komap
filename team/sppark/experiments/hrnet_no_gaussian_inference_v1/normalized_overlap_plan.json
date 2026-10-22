@@ -1,0 +1,365 @@
+[
+  {
+    "id": "NO_170_sigma025",
+    "contrast": "ZN_combine_Y_gamma0.9_halo16_0.05",
+    "change": {
+      "sigma": 0.25
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.25,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 16,
+      "precision": "fp32",
+      "gamma": 0.9,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    },
+    "forward_transform": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.05
+      }
+    }
+  },
+  {
+    "id": "NO_170_uniform",
+    "contrast": "ZN_combine_Y_gamma0.9_halo16_0.05",
+    "change": {
+      "window": "uniform"
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "uniform",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 16,
+      "precision": "fp32",
+      "gamma": 0.9,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    },
+    "forward_transform": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.05
+      }
+    }
+  },
+  {
+    "id": "NO_overlap192",
+    "contrast": "ZN_combine_Y_gamma0.9_halo16_0.05",
+    "change": {
+      "overlap": 192
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 192,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 16,
+      "precision": "fp32",
+      "gamma": 0.9,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    },
+    "forward_transform": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.05
+      }
+    }
+  },
+  {
+    "id": "NO_192_sigma025",
+    "contrast": "NO_overlap192",
+    "change": {
+      "sigma": 0.25
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 192,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.25,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 16,
+      "precision": "fp32",
+      "gamma": 0.9,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    },
+    "forward_transform": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.05
+      }
+    }
+  },
+  {
+    "id": "NO_192_uniform",
+    "contrast": "NO_overlap192",
+    "change": {
+      "window": "uniform"
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 192,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "uniform",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 16,
+      "precision": "fp32",
+      "gamma": 0.9,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    },
+    "forward_transform": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.05
+      }
+    }
+  },
+  {
+    "id": "NO_overlap224",
+    "contrast": "ZN_combine_Y_gamma0.9_halo16_0.05",
+    "change": {
+      "overlap": 224
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 224,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 16,
+      "precision": "fp32",
+      "gamma": 0.9,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    },
+    "forward_transform": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.05
+      }
+    }
+  },
+  {
+    "id": "NO_224_sigma025",
+    "contrast": "NO_overlap224",
+    "change": {
+      "sigma": 0.25
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 224,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.25,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 16,
+      "precision": "fp32",
+      "gamma": 0.9,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    },
+    "forward_transform": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.05
+      }
+    }
+  },
+  {
+    "id": "NO_224_uniform",
+    "contrast": "NO_overlap224",
+    "change": {
+      "window": "uniform"
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 224,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "uniform",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 16,
+      "precision": "fp32",
+      "gamma": 0.9,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    },
+    "forward_transform": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.05
+      }
+    }
+  },
+  {
+    "id": "NO_overlap256",
+    "contrast": "ZN_combine_Y_gamma0.9_halo16_0.05",
+    "change": {
+      "overlap": 256
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 256,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 16,
+      "precision": "fp32",
+      "gamma": 0.9,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    },
+    "forward_transform": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.05
+      }
+    }
+  },
+  {
+    "id": "NO_256_sigma025",
+    "contrast": "NO_overlap256",
+    "change": {
+      "sigma": 0.25
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 256,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.25,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 16,
+      "precision": "fp32",
+      "gamma": 0.9,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    },
+    "forward_transform": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.05
+      }
+    }
+  },
+  {
+    "id": "NO_256_uniform",
+    "contrast": "NO_overlap256",
+    "change": {
+      "window": "uniform"
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 256,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bicubic",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "uniform",
+      "sigma": 0.125,
+      "tta": "d4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 16,
+      "precision": "fp32",
+      "gamma": 0.9,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    },
+    "forward_transform": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.05
+      }
+    }
+  }
+]

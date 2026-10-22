@@ -1,0 +1,234 @@
+{
+  "model": "Model349",
+  "config": {
+    "model": "Model349",
+    "original_run": "model349_train_20260930T143930_234475Z",
+    "validation_image_miou": null,
+    "class_order": [
+      "Al3Ni",
+      "Primary Si",
+      "Al",
+      "Eutectic Si"
+    ],
+    "palette": [
+      [
+        25,
+        76,
+        153
+      ],
+      [
+        76,
+        178,
+        76
+      ],
+      [
+        153,
+        127,
+        76
+      ],
+      [
+        204,
+        204,
+        204
+      ]
+    ],
+    "calibration": "configs/calibration.json",
+    "weights_dir": "weights",
+    "route": {
+      "base": {
+        "primary_source": "326",
+        "primary_gamma": 1.0,
+        "al3ni_source": "326",
+        "al3ni_gamma": 0.7,
+        "al_source": "322",
+        "al_gamma": 0.6,
+        "eutectic_source": "269",
+        "eutectic_gamma": 0.7,
+        "prior_scale": 1.25,
+        "beta_scale": 0.8,
+        "al_delta": 0.0,
+        "eut_delta": 0.15,
+        "gaussian_blend": 0.5,
+        "eut_edge_blend": 0.25,
+        "cleanup_threshold": 128
+      },
+      "gamma329": [
+        0.5,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "gamma336": [
+        0.0,
+        0.25,
+        0.75,
+        0.75
+      ],
+      "gamma347": [
+        0.0,
+        0.0,
+        0.25,
+        0.0
+      ]
+    },
+    "inference": {
+      "device": "cuda",
+      "threads": 2,
+      "probability_storage_dtype": "float16",
+      "weight_storage_dtype": "float32",
+      "b4_folds": 4,
+      "b4_fold_ids": {
+        "322": [
+          3
+        ],
+        "326": [
+          1,
+          2
+        ],
+        "329": [
+          1,
+          3,
+          4
+        ]
+      },
+      "active_components": [
+        "322",
+        "326",
+        "329",
+        "base",
+        "336",
+        "347",
+        "269"
+      ],
+      "b4_tta": "d4",
+      "native": {
+        "patch": 1024,
+        "stride": 576,
+        "scale": 1.0,
+        "tta": "d4"
+      },
+      "hrnet": {
+        "patch": 512,
+        "overlap": 170,
+        "batch_size": 2,
+        "input_scale": 2.0,
+        "tta": "flip4"
+      },
+      "tent": {
+        "steps": 5,
+        "lr": 1e-05
+      },
+      "ema_pruned": true,
+      "pruned_high_bands": [
+        "model109",
+        "seed456"
+      ]
+    }
+  },
+  "images": [
+    {
+      "name": "A107_step1_sample3",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_r70_retrain_gpu4567_v1/data/test/images/A107_step1_sample3_image.png",
+      "size": [
+        1230,
+        875
+      ],
+      "sha256": "ebf196b950d59d574c8828442bf5bcd50c218d9064451c5faee605e19ae6e9b5"
+    },
+    {
+      "name": "A122_step4_sample1",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_r70_retrain_gpu4567_v1/data/test/images/A122_step4_sample1_image.png",
+      "size": [
+        1230,
+        875
+      ],
+      "sha256": "f729aa1d44010a88389806ab0aa243587de39d4857a7ef8aa851b263aebc3f77"
+    },
+    {
+      "name": "A124_step4_sample3",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_r70_retrain_gpu4567_v1/data/test/images/A124_step4_sample3_image.png",
+      "size": [
+        1230,
+        875
+      ],
+      "sha256": "0b536d06b7ad6b0659d1de32b618d3f075babadaa32df407b7452ef493101e6b"
+    },
+    {
+      "name": "A127_step3_sample2",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_r70_retrain_gpu4567_v1/data/test/images/A127_step3_sample2_image.png",
+      "size": [
+        1440,
+        1024
+      ],
+      "sha256": "a9226a1249996d9fee7406f5a3078c5f4819681e595ba73aa7dbfac2bdf28e9c"
+    },
+    {
+      "name": "A133_step4_sample1",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_r70_retrain_gpu4567_v1/data/test/images/A133_step4_sample1_image.png",
+      "size": [
+        1230,
+        875
+      ],
+      "sha256": "2cac1de148308c86b92fa042221a5084f4d7e396c15ead62894a28b59e5d9aea"
+    },
+    {
+      "name": "A167_step3_sample3",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_r70_retrain_gpu4567_v1/data/test/images/A167_step3_sample3_image.png",
+      "size": [
+        1278,
+        909
+      ],
+      "sha256": "fffdedce30778a61162873e0edcee46b905be46c542d10facb135d14ef8dd50a"
+    },
+    {
+      "name": "A38_step2_sample2",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_r70_retrain_gpu4567_v1/data/test/images/A38_step2_sample2_image.png",
+      "size": [
+        675,
+        480
+      ],
+      "sha256": "db99f13b261a16b5cbf94f729a7cd4f75a70608d070a2f16d054404e772c8fa9"
+    },
+    {
+      "name": "A51_step3_sample3",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_r70_retrain_gpu4567_v1/data/test/images/A51_step3_sample3_image.png",
+      "size": [
+        1278,
+        909
+      ],
+      "sha256": "dee722162651dff90d41092498456bbe7d241f9ae3c1f47af57720bd790c917b"
+    },
+    {
+      "name": "A63_step2_sample3",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_r70_retrain_gpu4567_v1/data/test/images/A63_step2_sample3_image.png",
+      "size": [
+        675,
+        480
+      ],
+      "sha256": "7a32e3d30e2074cb341d103da931dc6bc8be7aa2fe8ef461b8a166a7f0ba08b2"
+    },
+    {
+      "name": "A87_step1_sample4",
+      "path": "/Data3/sppark/komap/experiments/model349_lite20_r70_retrain_gpu4567_v1/data/test/images/A87_step1_sample4_image.png",
+      "size": [
+        675,
+        480
+      ],
+      "sha256": "14c92a138ee9e4bdfb8278b7e2bbf27e9b8e1e6a603741a3abd69964442bb0c3"
+    }
+  ],
+  "calibration_sha256": "9dd33a9aacbe83ed005023b0538bec70023c87c45ea03b419f7f007aabbdd056",
+  "required_weights": [
+    "weights/model322_team_b4_group_oof/fold3/last.pt",
+    "weights/model326_hybrid_fullstats_group_oof/fold1/last.pt",
+    "weights/model326_hybrid_fullstats_group_oof/fold2/last.pt",
+    "weights/model329_fullstats_width4000_uniform_group_oof/fold1/last.pt",
+    "weights/model329_fullstats_width4000_uniform_group_oof/fold3/last.pt",
+    "weights/model329_fullstats_width4000_uniform_group_oof/fold4/last.pt",
+    "weights/model336_hrnet_best/last.pt",
+    "weights/model347_hrnet_inverse_ce_finetune/last.pt",
+    "weights/model269_fullstats_1x_extended/best.pt",
+    "weights/restart51_aspp_768_finetune/best.pt",
+    "weights/restart61_pairwise_margin/best.pt"
+  ]
+}

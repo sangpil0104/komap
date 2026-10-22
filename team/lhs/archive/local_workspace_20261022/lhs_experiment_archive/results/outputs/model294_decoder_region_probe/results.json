@@ -1,0 +1,66 @@
+{
+  "method": "frozen decoder hidden feature + mask-pooled region MLP probe",
+  "train_image_count": 70,
+  "train_component_count": 180865,
+  "valid_image_count": 20,
+  "feature_count": 96,
+  "baseline_image_mean_miou": 0.7720750168508469,
+  "thresholds": {
+    "0.75": {
+      "image_mean_miou": 0.7713662652955084,
+      "delta_pp_vs_baseline": -0.07087515553383938,
+      "positive_image_count": 9
+    },
+    "0.85": {
+      "image_mean_miou": 0.7710468169060924,
+      "delta_pp_vs_baseline": -0.10281999447544599,
+      "positive_image_count": 7
+    },
+    "0.9": {
+      "image_mean_miou": 0.7708755174121562,
+      "delta_pp_vs_baseline": -0.11994994386905129,
+      "positive_image_count": 8
+    },
+    "0.95": {
+      "image_mean_miou": 0.7711101078579109,
+      "delta_pp_vs_baseline": -0.0964908992936056,
+      "positive_image_count": 7
+    }
+  },
+  "group_cv": {
+    "image_mean_miou": 0.7705308372939934,
+    "delta_pp_vs_baseline": -0.15441795568534533,
+    "positive_image_count": 8,
+    "group_bootstrap_95ci_delta_pp": [
+      -0.3354989344655046,
+      0.0037387255333050026
+    ],
+    "threshold_by_heldout_group": {
+      "A117": 0.75,
+      "A11": 0.75,
+      "A125": 0.75,
+      "A153": 0.75,
+      "A170": 0.75,
+      "A181": 0.75,
+      "A186": 0.95,
+      "A191": 0.75,
+      "A40": 0.75,
+      "A42": 0.95,
+      "A44": 0.75,
+      "A55": 0.75,
+      "A59": 0.75,
+      "A63": 0.75,
+      "A67": 0.75,
+      "A71": 0.75,
+      "A72": 0.75,
+      "A74": 0.75,
+      "A7": 0.75
+    },
+    "nonoverlap_image_count": 13,
+    "nonoverlap_delta_pp": -0.08385303808462304,
+    "overlap_image_count": 7,
+    "overlap_delta_pp": -0.28546708837240103
+  },
+  "fixed_threshold": 0.9,
+  "elapsed_seconds": 371.588472366333
+}

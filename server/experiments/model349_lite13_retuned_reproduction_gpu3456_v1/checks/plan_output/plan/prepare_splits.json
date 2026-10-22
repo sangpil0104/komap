@@ -1,0 +1,20 @@
+{
+  "name": "prepare_splits",
+  "artifact": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/checks/plan_output/E/splits/model397_split_manifest.json",
+  "command": [
+    "/home/sppark/miniconda3/envs/komap/bin/python",
+    "-B",
+    "-u",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/source/training/Model349_fusion805/model397_reproduction_bundle/scripts/prepare_oof_splits.py",
+    "--data-root",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/data",
+    "--output-root",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/checks/plan_output/E/splits"
+  ],
+  "cwd": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/source",
+  "env": {
+    "CUDA_VISIBLE_DEVICES": null,
+    "PYTHONPATH": null,
+    "OMP_NUM_THREADS": null
+  }
+}

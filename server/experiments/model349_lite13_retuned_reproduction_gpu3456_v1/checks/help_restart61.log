@@ -1,0 +1,34 @@
+usage: pairwise_margin_finetune.py [-h] --data-dir DATA_DIR --checkpoint
+                                   CHECKPOINT --output-dir OUTPUT_DIR
+                                   [--patch-size PATCH_SIZE]
+                                   [--val-stride VAL_STRIDE]
+                                   [--tile-batch-size TILE_BATCH_SIZE]
+                                   [--patches-per-image PATCHES_PER_IMAGE]
+                                   [--epochs EPOCHS] [--batch-size BATCH_SIZE]
+                                   [--num-workers NUM_WORKERS] [--lr LR]
+                                   [--weight-decay WEIGHT_DECAY]
+                                   [--pair-lambda PAIR_LAMBDA]
+                                   [--margin MARGIN] [--tta {legacy,d4}]
+                                   [--blend {uniform,gaussian}] [--seed SEED]
+                                   [--no-amp]
+
+options:
+  -h, --help            show this help message and exit
+  --data-dir DATA_DIR
+  --checkpoint CHECKPOINT
+  --output-dir OUTPUT_DIR
+  --patch-size PATCH_SIZE
+  --val-stride VAL_STRIDE
+  --tile-batch-size TILE_BATCH_SIZE
+  --patches-per-image PATCHES_PER_IMAGE
+  --epochs EPOCHS
+  --batch-size BATCH_SIZE
+  --num-workers NUM_WORKERS
+  --lr LR
+  --weight-decay WEIGHT_DECAY
+  --pair-lambda PAIR_LAMBDA
+  --margin MARGIN
+  --tta {legacy,d4}
+  --blend {uniform,gaussian}
+  --seed SEED
+  --no-amp

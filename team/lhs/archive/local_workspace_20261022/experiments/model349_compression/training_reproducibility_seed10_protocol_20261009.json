@@ -1,0 +1,44 @@
+{
+  "status": "planned_not_started",
+  "comparison": "paired original Model349 vs frozen candidate recipe",
+  "seed_count": 10,
+  "seed_values": "not assigned yet; freeze before launch",
+  "supervised_data": "train70 only",
+  "requirements": [
+    "Same 10 seed identifiers for both arms; all 10 results retained",
+    "Same data hashes, grouped folds, initialization assets, training budget and environment where arm definitions allow",
+    "For subset-only comparisons, reuse corresponding checkpoints of the same training run instead of training duplicate shared members",
+    "Freeze subset, fusion and postprocessing before scoring; do not reselect on valid for each seed",
+    "Report each arm mean and sample standard deviation, paired delta mean and 95% t interval, all per-seed scores",
+    "Seed variation interval does not estimate uncertainty across new specimens; valid20 remains repeatedly used",
+    "Training reproducibility is separate from fixed-weight inference reproducibility"
+  ],
+  "compute_launch_authorized_by_this_record": false,
+  "note": "User agreed 10 seeds is a reasonable initial comparison size; actual sufficiency depends on paired score variation. No new job launched.",
+  "existing_runner_audit": {
+    "bundle": "Model349_train_route_code.zip",
+    "runner": "experiments/run_model349_pipeline.sh",
+    "runner_sha256": "3b9766d8f33bd9230d26bcc472d2f85cf2112b70b648b51494e1d9cef8f4b098",
+    "hardcoded_component_seeds": [
+      42,
+      123,
+      456,
+      181,
+      2028,
+      239,
+      242,
+      257,
+      269,
+      0,
+      347
+    ],
+    "global_seed_override_present": false,
+    "final_route_reselected_on_valid": true,
+    "required_before_launch": [
+      "Introduce deterministic recorded per-run seed mapping for every stochastic training component; preserve intentional diversity between components",
+      "Do not count repeated fixed-seed executions as independent 10-seed experiment",
+      "Distinguish complete procedure reproduction with route reselection from frozen recipe performance comparison; report these as separate endpoints",
+      "Verify seed handling in each trainer before launching, not just shell arguments"
+    ]
+  }
+}

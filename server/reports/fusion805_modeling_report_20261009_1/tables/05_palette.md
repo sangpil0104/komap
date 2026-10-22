@@ -1,0 +1,10 @@
+**표 5. 클래스 ID와 정답 팔레트**
+
+| route ID | 클래스 | RGB | 의미 |
+| --- | --- | --- | --- |
+| 0 | Al3Ni | (25, 76, 153) | Al₃Ni 상 |
+| 1 | Primary Si | (76, 178, 76) | Primary Si 상 |
+| 2 | Al | (153, 127, 76) | Al 상 |
+| 3 | Eutectic Si | (204, 204, 204) | Eutectic Si 상 |
+
+B4/HRNet 팀 순서는 [Al, Al3Ni, Primary Si, Eutectic Si]이며 route 순서와 다르다. 변환을 생략하면 평가가 잘못된다. [S04, S05]

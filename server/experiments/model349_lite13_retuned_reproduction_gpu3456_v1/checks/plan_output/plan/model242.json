@@ -1,0 +1,34 @@
+{
+  "name": "model242",
+  "artifact": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/checks/plan_output/R/model242_native_stem_ema/best_ema.pt",
+  "command": [
+    "/home/sppark/miniconda3/envs/komap/bin/python",
+    "-B",
+    "-u",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/source/training/train_route/experiments/historical_scripts/model242_ema_continuation.py",
+    "--data-dir",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/data",
+    "--checkpoint",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/checks/plan_output/R/model239_native_stem/best.pt",
+    "--output-dir",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/checks/plan_output/R/model242_native_stem_ema",
+    "--epochs",
+    "4",
+    "--ema-decay",
+    "0.99",
+    "--encoder-lr",
+    "5e-6",
+    "--decoder-lr",
+    "1.5e-5",
+    "--native-lr",
+    "1e-4",
+    "--seed",
+    "242"
+  ],
+  "cwd": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/source",
+  "env": {
+    "CUDA_VISIBLE_DEVICES": null,
+    "PYTHONPATH": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/source/training/train_route/experiments:/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/source/training/train_route/experiments/historical_scripts",
+    "OMP_NUM_THREADS": null
+  }
+}

@@ -1,0 +1,674 @@
+{
+  "model": 380,
+  "purpose": "read-only decomposition of saved route matrices; no new search or training",
+  "scope": "20 official validation images, 19 specimen groups; conditional on the historical Model341 anchor",
+  "metric": "image-wise mean of four class IoUs; empty union=0",
+  "full_valid_gamma336": [
+    0.0,
+    0.0,
+    1.0,
+    0.25
+  ],
+  "full_valid_gamma347_modal": [
+    0.0,
+    0.0,
+    0.25,
+    0.0
+  ],
+  "crossfit_incremental_delta_pp": -0.07377878109358749,
+  "full_valid_incremental_delta_pp": 0.015505145958298883,
+  "full_valid_minus_crossfit_incremental_delta_pp": 0.08928392705188637,
+  "crossfit_candidate_minus_full_valid_candidate_pp": -0.1555837409179936,
+  "groups_with_parameter_choice_different_from_full_valid": [
+    "A11",
+    "A71"
+  ],
+  "images_with_parameter_choice_different_from_full_valid": 3,
+  "interpretation": [
+    "The cross-fit-minus-reference delta is the conditional held-out estimate for adding gamma347 on each fold's gamma336 route.",
+    "The full-valid-minus-crossfit gap is descriptive selection sensitivity, not an independent-test estimate; Model341 anchor selection remains uncorrected.",
+    "Per-image route-choice differences occur only where the cross-fit gamma settings differ from the full-valid setting; do not infer generalizable routing bias from this 20-image pool."
+  ],
+  "per_image": [
+    {
+      "image": "A117_step4_sample2",
+      "group": "A117",
+      "gamma336_crossfit": [
+        0.0,
+        0.0,
+        1.0,
+        0.25
+      ],
+      "gamma347_crossfit": [
+        0.0,
+        0.0,
+        0.25,
+        0.0
+      ],
+      "route_setting_differs_from_full_valid": false,
+      "crossfit_candidate_minus_crossfit_reference_miou_pp": 0.03347130065913806,
+      "crossfit_candidate_minus_full_valid_candidate_miou_pp": 0.0,
+      "full_valid_candidate_minus_full_valid_reference_miou_pp": 0.03347130065913806,
+      "crossfit_candidate_minus_crossfit_reference_class_iou_pp": {
+        "Al3Ni": 0.08095496021552906,
+        "Primary_Si": -0.0013176154158189846,
+        "Al": 0.04916015307505628,
+        "Eutectic_Si": 0.005087704761796985
+      },
+      "crossfit_candidate_minus_full_valid_candidate_class_iou_pp": {
+        "Al3Ni": 0.0,
+        "Primary_Si": 0.0,
+        "Al": 0.0,
+        "Eutectic_Si": 0.0
+      }
+    },
+    {
+      "image": "A11_step1_sample4",
+      "group": "A11",
+      "gamma336_crossfit": [
+        0.0,
+        0.0,
+        1.0,
+        0.25
+      ],
+      "gamma347_crossfit": [
+        0.25,
+        0.0,
+        0.25,
+        0.0
+      ],
+      "route_setting_differs_from_full_valid": true,
+      "crossfit_candidate_minus_crossfit_reference_miou_pp": -0.6074534540041143,
+      "crossfit_candidate_minus_full_valid_candidate_miou_pp": -0.7092784923324769,
+      "full_valid_candidate_minus_full_valid_reference_miou_pp": 0.10182503832836254,
+      "crossfit_candidate_minus_crossfit_reference_class_iou_pp": {
+        "Al3Ni": -2.357348136185622,
+        "Primary_Si": 0.06059785678784735,
+        "Al": 0.09034183870951784,
+        "Eutectic_Si": -0.2234053753281673
+      },
+      "crossfit_candidate_minus_full_valid_candidate_class_iou_pp": {
+        "Al3Ni": -2.4615453219135386,
+        "Primary_Si": -0.018590153009934163,
+        "Al": -0.02303310021558591,
+        "Eutectic_Si": -0.3339453941908266
+      }
+    },
+    {
+      "image": "A11_step2_sample4",
+      "group": "A11",
+      "gamma336_crossfit": [
+        0.0,
+        0.0,
+        1.0,
+        0.25
+      ],
+      "gamma347_crossfit": [
+        0.25,
+        0.0,
+        0.25,
+        0.0
+      ],
+      "route_setting_differs_from_full_valid": true,
+      "crossfit_candidate_minus_crossfit_reference_miou_pp": 0.031013431319504292,
+      "crossfit_candidate_minus_full_valid_candidate_miou_pp": 0.043960368093076685,
+      "full_valid_candidate_minus_full_valid_reference_miou_pp": -0.012946936773572393,
+      "crossfit_candidate_minus_crossfit_reference_class_iou_pp": {
+        "Al3Ni": 0.002848821541057145,
+        "Primary_Si": 0.06192668934769108,
+        "Al": 0.013730182493043586,
+        "Eutectic_Si": 0.04554803189621426
+      },
+      "crossfit_candidate_minus_full_valid_candidate_class_iou_pp": {
+        "Al3Ni": -0.021553879145219668,
+        "Primary_Si": 0.02954323981120277,
+        "Al": -0.020069964406776997,
+        "Eutectic_Si": 0.18792207611310063
+      }
+    },
+    {
+      "image": "A125_step1_sample4",
+      "group": "A125",
+      "gamma336_crossfit": [
+        0.0,
+        0.0,
+        1.0,
+        0.25
+      ],
+      "gamma347_crossfit": [
+        0.0,
+        0.0,
+        0.25,
+        0.0
+      ],
+      "route_setting_differs_from_full_valid": false,
+      "crossfit_candidate_minus_crossfit_reference_miou_pp": -0.025341808074963446,
+      "crossfit_candidate_minus_full_valid_candidate_miou_pp": 0.0,
+      "full_valid_candidate_minus_full_valid_reference_miou_pp": -0.025341808074963446,
+      "crossfit_candidate_minus_crossfit_reference_class_iou_pp": {
+        "Al3Ni": -0.068090889725414,
+        "Primary_Si": -0.017662587545674846,
+        "Al": -0.003974628980762951,
+        "Eutectic_Si": -0.011639126048035298
+      },
+      "crossfit_candidate_minus_full_valid_candidate_class_iou_pp": {
+        "Al3Ni": 0.0,
+        "Primary_Si": 0.0,
+        "Al": 0.0,
+        "Eutectic_Si": 0.0
+      }
+    },
+    {
+      "image": "A153_step3_sample3",
+      "group": "A153",
+      "gamma336_crossfit": [
+        0.0,
+        0.0,
+        1.0,
+        0.25
+      ],
+      "gamma347_crossfit": [
+        0.0,
+        0.0,
+        0.25,
+        0.0
+      ],
+      "route_setting_differs_from_full_valid": false,
+      "crossfit_candidate_minus_crossfit_reference_miou_pp": -0.13502434871559554,
+      "crossfit_candidate_minus_full_valid_candidate_miou_pp": 0.0,
+      "full_valid_candidate_minus_full_valid_reference_miou_pp": -0.13502434871559554,
+      "crossfit_candidate_minus_crossfit_reference_class_iou_pp": {
+        "Al3Ni": -0.2966606639688396,
+        "Primary_Si": -0.01700726941493702,
+        "Al": -0.20940645164789773,
+        "Eutectic_Si": -0.01702300983069671
+      },
+      "crossfit_candidate_minus_full_valid_candidate_class_iou_pp": {
+        "Al3Ni": 0.0,
+        "Primary_Si": 0.0,
+        "Al": 0.0,
+        "Eutectic_Si": 0.0
+      }
+    },
+    {
+      "image": "A170_step4_sample3",
+      "group": "A170",
+      "gamma336_crossfit": [
+        0.0,
+        0.0,
+        1.0,
+        0.25
+      ],
+      "gamma347_crossfit": [
+        0.0,
+        0.0,
+        0.25,
+        0.0
+      ],
+      "route_setting_differs_from_full_valid": false,
+      "crossfit_candidate_minus_crossfit_reference_miou_pp": 0.13678867524911098,
+      "crossfit_candidate_minus_full_valid_candidate_miou_pp": 0.0,
+      "full_valid_candidate_minus_full_valid_reference_miou_pp": 0.13678867524911098,
+      "crossfit_candidate_minus_crossfit_reference_class_iou_pp": {
+        "Al3Ni": 0.023932890298516973,
+        "Primary_Si": 0.019745406865134818,
+        "Al": 0.10004607907080354,
+        "Eutectic_Si": 0.4034303247620108
+      },
+      "crossfit_candidate_minus_full_valid_candidate_class_iou_pp": {
+        "Al3Ni": 0.0,
+        "Primary_Si": 0.0,
+        "Al": 0.0,
+        "Eutectic_Si": 0.0
+      }
+    },
+    {
+      "image": "A181_step1_sample1",
+      "group": "A181",
+      "gamma336_crossfit": [
+        0.0,
+        0.0,
+        1.0,
+        0.25
+      ],
+      "gamma347_crossfit": [
+        0.0,
+        0.0,
+        0.25,
+        0.0
+      ],
+      "route_setting_differs_from_full_valid": false,
+      "crossfit_candidate_minus_crossfit_reference_miou_pp": -0.04064574305974178,
+      "crossfit_candidate_minus_full_valid_candidate_miou_pp": 0.0,
+      "full_valid_candidate_minus_full_valid_reference_miou_pp": -0.04064574305974178,
+      "crossfit_candidate_minus_crossfit_reference_class_iou_pp": {
+        "Al3Ni": -0.03682207030427653,
+        "Primary_Si": -0.029576876763393045,
+        "Al": -0.018633718136096267,
+        "Eutectic_Si": -0.07755030703517907
+      },
+      "crossfit_candidate_minus_full_valid_candidate_class_iou_pp": {
+        "Al3Ni": 0.0,
+        "Primary_Si": 0.0,
+        "Al": 0.0,
+        "Eutectic_Si": 0.0
+      }
+    },
+    {
+      "image": "A186_step2_sample2",
+      "group": "A186",
+      "gamma336_crossfit": [
+        0.0,
+        0.0,
+        1.0,
+        0.25
+      ],
+      "gamma347_crossfit": [
+        0.0,
+        0.0,
+        0.25,
+        0.0
+      ],
+      "route_setting_differs_from_full_valid": false,
+      "crossfit_candidate_minus_crossfit_reference_miou_pp": 0.06855724182144307,
+      "crossfit_candidate_minus_full_valid_candidate_miou_pp": 0.0,
+      "full_valid_candidate_minus_full_valid_reference_miou_pp": 0.06855724182144307,
+      "crossfit_candidate_minus_crossfit_reference_class_iou_pp": {
+        "Al3Ni": 0.03674019189497946,
+        "Primary_Si": 0.05641909595098804,
+        "Al": 0.05358769017623777,
+        "Eutectic_Si": 0.12748198926357257
+      },
+      "crossfit_candidate_minus_full_valid_candidate_class_iou_pp": {
+        "Al3Ni": 0.0,
+        "Primary_Si": 0.0,
+        "Al": 0.0,
+        "Eutectic_Si": 0.0
+      }
+    },
+    {
+      "image": "A191_step4_sample3",
+      "group": "A191",
+      "gamma336_crossfit": [
+        0.0,
+        0.0,
+        1.0,
+        0.25
+      ],
+      "gamma347_crossfit": [
+        0.0,
+        0.0,
+        0.25,
+        0.0
+      ],
+      "route_setting_differs_from_full_valid": false,
+      "crossfit_candidate_minus_crossfit_reference_miou_pp": 0.02767914066643673,
+      "crossfit_candidate_minus_full_valid_candidate_miou_pp": 0.0,
+      "full_valid_candidate_minus_full_valid_reference_miou_pp": 0.02767914066643673,
+      "crossfit_candidate_minus_crossfit_reference_class_iou_pp": {
+        "Al3Ni": 0.16099583543670581,
+        "Primary_Si": -3.4958303907206556e-05,
+        "Al": 0.05137649066176975,
+        "Eutectic_Si": -0.10162080512885474
+      },
+      "crossfit_candidate_minus_full_valid_candidate_class_iou_pp": {
+        "Al3Ni": 0.0,
+        "Primary_Si": 0.0,
+        "Al": 0.0,
+        "Eutectic_Si": 0.0
+      }
+    },
+    {
+      "image": "A40_step3_sample3",
+      "group": "A40",
+      "gamma336_crossfit": [
+        0.0,
+        0.0,
+        1.0,
+        0.25
+      ],
+      "gamma347_crossfit": [
+        0.0,
+        0.0,
+        0.25,
+        0.0
+      ],
+      "route_setting_differs_from_full_valid": false,
+      "crossfit_candidate_minus_crossfit_reference_miou_pp": 0.014619226884116099,
+      "crossfit_candidate_minus_full_valid_candidate_miou_pp": 0.0,
+      "full_valid_candidate_minus_full_valid_reference_miou_pp": 0.014619226884116099,
+      "crossfit_candidate_minus_crossfit_reference_class_iou_pp": {
+        "Al3Ni": -0.11503066265599049,
+        "Primary_Si": -0.027548880277794563,
+        "Al": 0.013176169394579773,
+        "Eutectic_Si": 0.18788028107564747
+      },
+      "crossfit_candidate_minus_full_valid_candidate_class_iou_pp": {
+        "Al3Ni": 0.0,
+        "Primary_Si": 0.0,
+        "Al": 0.0,
+        "Eutectic_Si": 0.0
+      }
+    },
+    {
+      "image": "A42_step2_sample4",
+      "group": "A42",
+      "gamma336_crossfit": [
+        0.0,
+        0.0,
+        1.0,
+        0.25
+      ],
+      "gamma347_crossfit": [
+        0.0,
+        0.0,
+        0.25,
+        0.0
+      ],
+      "route_setting_differs_from_full_valid": false,
+      "crossfit_candidate_minus_crossfit_reference_miou_pp": -0.04397986085787897,
+      "crossfit_candidate_minus_full_valid_candidate_miou_pp": 0.0,
+      "full_valid_candidate_minus_full_valid_reference_miou_pp": -0.04397986085787897,
+      "crossfit_candidate_minus_crossfit_reference_class_iou_pp": {
+        "Al3Ni": -0.17197521765351942,
+        "Primary_Si": -0.019436687272123,
+        "Al": -0.01932835151560175,
+        "Eutectic_Si": 0.03482081300968387
+      },
+      "crossfit_candidate_minus_full_valid_candidate_class_iou_pp": {
+        "Al3Ni": 0.0,
+        "Primary_Si": 0.0,
+        "Al": 0.0,
+        "Eutectic_Si": 0.0
+      }
+    },
+    {
+      "image": "A44_step4_sample3",
+      "group": "A44",
+      "gamma336_crossfit": [
+        0.0,
+        0.0,
+        1.0,
+        0.25
+      ],
+      "gamma347_crossfit": [
+        0.0,
+        0.0,
+        0.25,
+        0.0
+      ],
+      "route_setting_differs_from_full_valid": false,
+      "crossfit_candidate_minus_crossfit_reference_miou_pp": -0.041257743615197295,
+      "crossfit_candidate_minus_full_valid_candidate_miou_pp": 0.0,
+      "full_valid_candidate_minus_full_valid_reference_miou_pp": -0.041257743615197295,
+      "crossfit_candidate_minus_crossfit_reference_class_iou_pp": {
+        "Al3Ni": -0.021810387184006963,
+        "Primary_Si": -0.04906521312116885,
+        "Al": -0.024305136264346494,
+        "Eutectic_Si": -0.06985023789127798
+      },
+      "crossfit_candidate_minus_full_valid_candidate_class_iou_pp": {
+        "Al3Ni": 0.0,
+        "Primary_Si": 0.0,
+        "Al": 0.0,
+        "Eutectic_Si": 0.0
+      }
+    },
+    {
+      "image": "A55_step2_sample1",
+      "group": "A55",
+      "gamma336_crossfit": [
+        0.0,
+        0.0,
+        1.0,
+        0.25
+      ],
+      "gamma347_crossfit": [
+        0.0,
+        0.0,
+        0.25,
+        0.0
+      ],
+      "route_setting_differs_from_full_valid": false,
+      "crossfit_candidate_minus_crossfit_reference_miou_pp": -0.0005837232389782621,
+      "crossfit_candidate_minus_full_valid_candidate_miou_pp": 0.0,
+      "full_valid_candidate_minus_full_valid_reference_miou_pp": -0.0005837232389782621,
+      "crossfit_candidate_minus_crossfit_reference_class_iou_pp": {
+        "Al3Ni": -0.019930357661579468,
+        "Primary_Si": 0.0010476974585005294,
+        "Al": 0.016449750356140047,
+        "Eutectic_Si": 9.801689104804723e-05
+      },
+      "crossfit_candidate_minus_full_valid_candidate_class_iou_pp": {
+        "Al3Ni": 0.0,
+        "Primary_Si": 0.0,
+        "Al": 0.0,
+        "Eutectic_Si": 0.0
+      }
+    },
+    {
+      "image": "A59_step3_sample1",
+      "group": "A59",
+      "gamma336_crossfit": [
+        0.0,
+        0.0,
+        1.0,
+        0.25
+      ],
+      "gamma347_crossfit": [
+        0.0,
+        0.0,
+        0.25,
+        0.0
+      ],
+      "route_setting_differs_from_full_valid": false,
+      "crossfit_candidate_minus_crossfit_reference_miou_pp": 0.029361356256196736,
+      "crossfit_candidate_minus_full_valid_candidate_miou_pp": 0.0,
+      "full_valid_candidate_minus_full_valid_reference_miou_pp": 0.029361356256196736,
+      "crossfit_candidate_minus_crossfit_reference_class_iou_pp": {
+        "Al3Ni": 0.10099277355496428,
+        "Primary_Si": -0.01330901588848521,
+        "Al": 0.040850954218596414,
+        "Eutectic_Si": -0.011089286860288539
+      },
+      "crossfit_candidate_minus_full_valid_candidate_class_iou_pp": {
+        "Al3Ni": 0.0,
+        "Primary_Si": 0.0,
+        "Al": 0.0,
+        "Eutectic_Si": 0.0
+      }
+    },
+    {
+      "image": "A63_step1_sample4",
+      "group": "A63",
+      "gamma336_crossfit": [
+        0.0,
+        0.0,
+        1.0,
+        0.25
+      ],
+      "gamma347_crossfit": [
+        0.0,
+        0.0,
+        0.25,
+        0.0
+      ],
+      "route_setting_differs_from_full_valid": false,
+      "crossfit_candidate_minus_crossfit_reference_miou_pp": -0.06928505390035866,
+      "crossfit_candidate_minus_full_valid_candidate_miou_pp": 0.0,
+      "full_valid_candidate_minus_full_valid_reference_miou_pp": -0.06928505390035866,
+      "crossfit_candidate_minus_crossfit_reference_class_iou_pp": {
+        "Al3Ni": -0.10379939716316233,
+        "Primary_Si": -0.03426187228224853,
+        "Al": -0.032608704417957934,
+        "Eutectic_Si": -0.10647024173806585
+      },
+      "crossfit_candidate_minus_full_valid_candidate_class_iou_pp": {
+        "Al3Ni": 0.0,
+        "Primary_Si": 0.0,
+        "Al": 0.0,
+        "Eutectic_Si": 0.0
+      }
+    },
+    {
+      "image": "A67_step1_sample1",
+      "group": "A67",
+      "gamma336_crossfit": [
+        0.0,
+        0.0,
+        1.0,
+        0.25
+      ],
+      "gamma347_crossfit": [
+        0.0,
+        0.0,
+        0.25,
+        0.0
+      ],
+      "route_setting_differs_from_full_valid": false,
+      "crossfit_candidate_minus_crossfit_reference_miou_pp": -0.017294770737841247,
+      "crossfit_candidate_minus_full_valid_candidate_miou_pp": 0.0,
+      "full_valid_candidate_minus_full_valid_reference_miou_pp": -0.017294770737841247,
+      "crossfit_candidate_minus_crossfit_reference_class_iou_pp": {
+        "Al3Ni": 0.13688805650409197,
+        "Primary_Si": 0.029264738480383468,
+        "Al": 0.053063356182714294,
+        "Eutectic_Si": -0.2883952341185103
+      },
+      "crossfit_candidate_minus_full_valid_candidate_class_iou_pp": {
+        "Al3Ni": 0.0,
+        "Primary_Si": 0.0,
+        "Al": 0.0,
+        "Eutectic_Si": 0.0
+      }
+    },
+    {
+      "image": "A71_step2_sample1",
+      "group": "A71",
+      "gamma336_crossfit": [
+        0.25,
+        0.0,
+        1.0,
+        0.25
+      ],
+      "gamma347_crossfit": [
+        0.25,
+        0.0,
+        0.25,
+        0.0
+      ],
+      "route_setting_differs_from_full_valid": true,
+      "crossfit_candidate_minus_crossfit_reference_miou_pp": -1.07263073864321,
+      "crossfit_candidate_minus_full_valid_candidate_miou_pp": -2.446356694120472,
+      "full_valid_candidate_minus_full_valid_reference_miou_pp": 0.047729678155117305,
+      "crossfit_candidate_minus_crossfit_reference_class_iou_pp": {
+        "Al3Ni": -2.4082394563158696,
+        "Primary_Si": 0.0,
+        "Al": 0.09867638788456645,
+        "Eutectic_Si": -1.9809598861415534
+      },
+      "crossfit_candidate_minus_full_valid_candidate_class_iou_pp": {
+        "Al3Ni": -5.608052912852446,
+        "Primary_Si": 0.0,
+        "Al": 0.002358339605723625,
+        "Eutectic_Si": -4.179732203235198
+      }
+    },
+    {
+      "image": "A72_step4_sample4",
+      "group": "A72",
+      "gamma336_crossfit": [
+        0.0,
+        0.0,
+        1.0,
+        0.25
+      ],
+      "gamma347_crossfit": [
+        0.0,
+        0.0,
+        0.25,
+        0.0
+      ],
+      "route_setting_differs_from_full_valid": false,
+      "crossfit_candidate_minus_crossfit_reference_miou_pp": 0.09681434435632186,
+      "crossfit_candidate_minus_full_valid_candidate_miou_pp": 0.0,
+      "full_valid_candidate_minus_full_valid_reference_miou_pp": 0.09681434435632186,
+      "crossfit_candidate_minus_crossfit_reference_class_iou_pp": {
+        "Al3Ni": 0.37556424159739255,
+        "Primary_Si": -0.03719746627333098,
+        "Al": 0.08759881569624373,
+        "Eutectic_Si": -0.03870821359501786
+      },
+      "crossfit_candidate_minus_full_valid_candidate_class_iou_pp": {
+        "Al3Ni": 0.0,
+        "Primary_Si": 0.0,
+        "Al": 0.0,
+        "Eutectic_Si": 0.0
+      }
+    },
+    {
+      "image": "A74_step3_sample4",
+      "group": "A74",
+      "gamma336_crossfit": [
+        0.0,
+        0.0,
+        1.0,
+        0.25
+      ],
+      "gamma347_crossfit": [
+        0.0,
+        0.0,
+        0.25,
+        0.0
+      ],
+      "route_setting_differs_from_full_valid": false,
+      "crossfit_candidate_minus_crossfit_reference_miou_pp": 0.08085704483332679,
+      "crossfit_candidate_minus_full_valid_candidate_miou_pp": 0.0,
+      "full_valid_candidate_minus_full_valid_reference_miou_pp": 0.08085704483332679,
+      "crossfit_candidate_minus_crossfit_reference_class_iou_pp": {
+        "Al3Ni": 0.03971145220036387,
+        "Primary_Si": -0.006297648082120855,
+        "Al": 0.03802877846728059,
+        "Eutectic_Si": 0.25198559674780574
+      },
+      "crossfit_candidate_minus_full_valid_candidate_class_iou_pp": {
+        "Al3Ni": 0.0,
+        "Primary_Si": 0.0,
+        "Al": 0.0,
+        "Eutectic_Si": 0.0
+      }
+    },
+    {
+      "image": "A7_step1_sample4",
+      "group": "A7",
+      "gamma336_crossfit": [
+        0.0,
+        0.0,
+        1.0,
+        0.25
+      ],
+      "gamma347_crossfit": [
+        0.0,
+        0.0,
+        0.25,
+        0.0
+      ],
+      "route_setting_differs_from_full_valid": false,
+      "crossfit_candidate_minus_crossfit_reference_miou_pp": 0.05875986093053509,
+      "crossfit_candidate_minus_full_valid_candidate_miou_pp": 0.0,
+      "full_valid_candidate_minus_full_valid_reference_miou_pp": 0.05875986093053509,
+      "crossfit_candidate_minus_crossfit_reference_class_iou_pp": {
+        "Al3Ni": 0.04054024840414172,
+        "Primary_Si": -0.028291365468435803,
+        "Al": 0.06701039292132949,
+        "Eutectic_Si": 0.15578016786507165
+      },
+      "crossfit_candidate_minus_full_valid_candidate_class_iou_pp": {
+        "Al3Ni": 0.0,
+        "Primary_Si": 0.0,
+        "Al": 0.0,
+        "Eutectic_Si": 0.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "hypothesis": "Larger spatial image context corrects shared Eutectic errors",
+  "input": "Frozen train70 base OOF log probabilities and image gray",
+  "model": "Four dilated convolutions d1/2/4/8 width16; RF31; zero initialized scalar Eutectic residual bounded +/-1",
+  "training": "4 grouped meta-folds; hold one fold out; 400 updates per fold; batch4 patch192; AdamW1e-3; fixed last checkpoint; seed81900+fold",
+  "loss": ".5 fourclass CE + .5 Eutectic binary CE + .05 residual squared",
+  "validation": "train70 held-fold meta OOF only; no valid/test reads",
+  "gate": {
+    "mean_gain_pp": 0.1,
+    "positive_folds": 3,
+    "worst_fold_min_pp": -0.1
+  },
+  "limitation": "Base OOF is reused, not retrained inside meta split. This is exploratory meta-OOF, not independent nested generalization evidence.",
+  "gpu": "3 only if idle; sibling fcntl locks; stop our child on foreign compute",
+  "base_changed": false
+}

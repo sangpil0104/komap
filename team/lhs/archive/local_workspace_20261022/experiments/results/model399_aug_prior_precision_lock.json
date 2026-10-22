@@ -1,0 +1,32 @@
+{
+  "experiment": "Model399 crop-prior augmentation precision audit",
+  "status": "locked before ten-epoch probe; no mIoU or candidate score authorized",
+  "locked_at_utc": "2026-10-04T12:21:18Z",
+  "protocol": {
+    "path": "experiments/model399_aug_prior_precision_preregistration.md",
+    "sha256": "66ee18c97af02953d75cdac19bd42fd67f70d1ddde6c71fef65a894563ad4b02"
+  },
+  "source": {
+    "path": "experiments/model399_crop_prior_audit.py",
+    "sha256": "2a96b0dfaba36db1cd9fbbabbf683fe6a63da75db80ca8540a7ee18a30ca3ddf"
+  },
+  "one_epoch_reference": {
+    "path": "experiments/results/model399_crop_prior_audit.json",
+    "sha256": "696c322f26917d45db49d9ab0054a688f1d1e1372f2e86ba7a2b82593e0bc052"
+  },
+  "configuration": {
+    "folds": [1, 2, 3, 4],
+    "coordinate_cap_seeds": [1, 2],
+    "native_crop_epochs": 70,
+    "augmentation_probe_epochs": 10,
+    "device": "CPU; CUDA_VISIBLE_DEVICES empty",
+    "output": "experiments/results/model399_crop_prior_audit_aug10.json"
+  },
+  "scope": {
+    "training_data_only": true,
+    "oof_data_or_predictions_read": false,
+    "official_valid_or_test_read": false,
+    "training_started": false,
+    "mIoU_computed": false
+  }
+}

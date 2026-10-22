@@ -1,0 +1,708 @@
+{
+  "model": 371,
+  "audit": "train-OOF Al3Ni neighborhood feature ranking for Eutectic false positives; no correction trained",
+  "metric_scope": "group-macro AUC over held-out train OOF predictions; bootstrap resamples 59 specimen groups, not pixels",
+  "class_order": [
+    "Al",
+    "Al3Ni",
+    "Primary Si",
+    "Eutectic Si"
+  ],
+  "inputs": {
+    "322": "/workspace/komap_model1/outputs/model322_team_b4_group_oof/train_oof_probs.npz",
+    "329": "/workspace/komap_model1/outputs/model329_fullstats_width4000_uniform_group_oof/train_oof_probs.npz",
+    "333_control": "/workspace/komap_model1/outputs/model333_b4_imagewise_lovasz_group_oof/control/train_oof_probs.npz",
+    "333_lovasz": "/workspace/komap_model1/outputs/model333_b4_imagewise_lovasz_group_oof/lovasz/train_oof_probs.npz"
+  },
+  "input_scope": "grouped train-OOF probabilities plus data/train/masks only; no valid/test files read",
+  "images": 70,
+  "specimen_groups": 59,
+  "features": {
+    "low_eut_vs_al3ni_margin": "negative log(p_Eut)-log(p_Al3Ni); larger should indicate Al3Ni confusion",
+    "low_eut_vs_any_other_margin": "negative log(p_Eut)-max(log(p_Al),log(p_Al3Ni),log(p_Primary)); larger should indicate any Eutectic FP",
+    "neighbor_al3ni_probability_r7_r15_r31": "mean p_Al3Ni in a square neighborhood of radius r, with candidate-center pixel excluded"
+  },
+  "far_fp_definition": "predicted Eutectic false positives outside the 2px 8-connected dilation of the GT Eutectic inner boundary",
+  "totals": {
+    "322": {
+      "pred_eut_pixels": 4482330,
+      "true_eut_pixels": 3357248,
+      "eut_fp_pixels": 1125082,
+      "far_eut_fp_pixels": 711927,
+      "al3ni_source_fp_pixels": 603093
+    },
+    "329": {
+      "pred_eut_pixels": 4636063,
+      "true_eut_pixels": 3472822,
+      "eut_fp_pixels": 1163241,
+      "far_eut_fp_pixels": 725729,
+      "al3ni_source_fp_pixels": 638026
+    },
+    "333_control": {
+      "pred_eut_pixels": 4569404,
+      "true_eut_pixels": 3414360,
+      "eut_fp_pixels": 1155044,
+      "far_eut_fp_pixels": 745353,
+      "al3ni_source_fp_pixels": 648509
+    },
+    "333_lovasz": {
+      "pred_eut_pixels": 4606713,
+      "true_eut_pixels": 3413192,
+      "eut_fp_pixels": 1193521,
+      "far_eut_fp_pixels": 757414,
+      "al3ni_source_fp_pixels": 663467
+    }
+  },
+  "group_macro_auc": {
+    "322": {
+      "al3ni_source_fp_vs_tp": {
+        "low_eut_vs_al3ni_margin": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.8260240131917413,
+          "group_bootstrap_95ci": [
+            0.8132521020480109,
+            0.8393061217986744
+          ]
+        },
+        "low_eut_vs_any_other_margin": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.7773826808819269,
+          "group_bootstrap_95ci": [
+            0.7668519559118416,
+            0.788037151185792
+          ]
+        },
+        "neighbor_al3ni_probability_r15": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.6196735966963158,
+          "group_bootstrap_95ci": [
+            0.6047052926371231,
+            0.6352803362075207
+          ]
+        },
+        "neighbor_al3ni_probability_r31": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.5755890164019192,
+          "group_bootstrap_95ci": [
+            0.561273172458844,
+            0.590156923330691
+          ]
+        },
+        "neighbor_al3ni_probability_r7": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.6841868818157033,
+          "group_bootstrap_95ci": [
+            0.6674304685113535,
+            0.7008553057467208
+          ]
+        }
+      },
+      "all_eutectic_fp_vs_tp": {
+        "low_eut_vs_al3ni_margin": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.7046258491640895,
+          "group_bootstrap_95ci": [
+            0.6844717853312622,
+            0.7227624366114883
+          ]
+        },
+        "low_eut_vs_any_other_margin": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.7661717573853895,
+          "group_bootstrap_95ci": [
+            0.746432406479099,
+            0.7843128503051393
+          ]
+        },
+        "neighbor_al3ni_probability_r15": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.5381149830168471,
+          "group_bootstrap_95ci": [
+            0.5251244148366322,
+            0.5506989750838791
+          ]
+        },
+        "neighbor_al3ni_probability_r31": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.5151497510692434,
+          "group_bootstrap_95ci": [
+            0.5028378933827596,
+            0.5272008033981463
+          ]
+        },
+        "neighbor_al3ni_probability_r7": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.573947897169903,
+          "group_bootstrap_95ci": [
+            0.5603645398520003,
+            0.5873991103084883
+          ]
+        }
+      },
+      "far_eutectic_fp_vs_tp": {
+        "low_eut_vs_al3ni_margin": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.69031436981137,
+          "group_bootstrap_95ci": [
+            0.658781146766555,
+            0.7191263278286136
+          ]
+        },
+        "low_eut_vs_any_other_margin": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.7145054432681884,
+          "group_bootstrap_95ci": [
+            0.6938246515221299,
+            0.7343359137564068
+          ],
+          "paired_delta_vs_pair_margin": 0.024191073456818358,
+          "paired_delta_group_bootstrap_95ci": [
+            0.0074874516814488834,
+            0.04213502576933454
+          ],
+          "paired_groups": 59
+        },
+        "neighbor_al3ni_probability_r15": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.5563208920579725,
+          "group_bootstrap_95ci": [
+            0.5318207584087036,
+            0.5798617839317012
+          ],
+          "paired_delta_vs_pair_margin": -0.1339934777533975,
+          "paired_delta_group_bootstrap_95ci": [
+            -0.15589671215669662,
+            -0.11163049171956553
+          ],
+          "paired_groups": 59
+        },
+        "neighbor_al3ni_probability_r31": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.5155355884134971,
+          "group_bootstrap_95ci": [
+            0.49276909650565404,
+            0.5381618795608266
+          ],
+          "paired_delta_vs_pair_margin": -0.17477878139787306,
+          "paired_delta_group_bootstrap_95ci": [
+            -0.19988832890417105,
+            -0.15063831799972316
+          ],
+          "paired_groups": 59
+        },
+        "neighbor_al3ni_probability_r7": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.6028958790592777,
+          "group_bootstrap_95ci": [
+            0.5787423242610319,
+            0.6269562853139787
+          ],
+          "paired_delta_vs_pair_margin": -0.08741849075209245,
+          "paired_delta_group_bootstrap_95ci": [
+            -0.1028831016989728,
+            -0.0713259913091189
+          ],
+          "paired_groups": 59
+        }
+      }
+    },
+    "329": {
+      "al3ni_source_fp_vs_tp": {
+        "low_eut_vs_al3ni_margin": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.8346083544576248,
+          "group_bootstrap_95ci": [
+            0.8207906938212912,
+            0.8478801469179071
+          ]
+        },
+        "low_eut_vs_any_other_margin": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.7556892842150394,
+          "group_bootstrap_95ci": [
+            0.7451351000952107,
+            0.7662235990528136
+          ]
+        },
+        "neighbor_al3ni_probability_r15": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.6348656816757017,
+          "group_bootstrap_95ci": [
+            0.6192550925734952,
+            0.6504287206646231
+          ]
+        },
+        "neighbor_al3ni_probability_r31": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.5851924040479384,
+          "group_bootstrap_95ci": [
+            0.5694980633431661,
+            0.6020096597331411
+          ]
+        },
+        "neighbor_al3ni_probability_r7": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.6994868805519904,
+          "group_bootstrap_95ci": [
+            0.6830125395229372,
+            0.71560530717882
+          ]
+        }
+      },
+      "all_eutectic_fp_vs_tp": {
+        "low_eut_vs_al3ni_margin": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.6992118212782956,
+          "group_bootstrap_95ci": [
+            0.6758184148734079,
+            0.7202113002840618
+          ]
+        },
+        "low_eut_vs_any_other_margin": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.7625751399900526,
+          "group_bootstrap_95ci": [
+            0.74316910965804,
+            0.7794872707484446
+          ]
+        },
+        "neighbor_al3ni_probability_r15": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.5468518979766795,
+          "group_bootstrap_95ci": [
+            0.532226023364244,
+            0.5623769139578696
+          ]
+        },
+        "neighbor_al3ni_probability_r31": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.5217482144359185,
+          "group_bootstrap_95ci": [
+            0.5069463241812757,
+            0.5372525873862122
+          ]
+        },
+        "neighbor_al3ni_probability_r7": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.5805250069771359,
+          "group_bootstrap_95ci": [
+            0.5649263105524112,
+            0.5959707562243403
+          ]
+        }
+      },
+      "far_eutectic_fp_vs_tp": {
+        "low_eut_vs_al3ni_margin": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.6900460158583913,
+          "group_bootstrap_95ci": [
+            0.6589623653274599,
+            0.7186423697701189
+          ]
+        },
+        "low_eut_vs_any_other_margin": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.7041705082966061,
+          "group_bootstrap_95ci": [
+            0.6857411414436609,
+            0.7198921103938725
+          ],
+          "paired_delta_vs_pair_margin": 0.014124492438214793,
+          "paired_delta_group_bootstrap_95ci": [
+            -0.0046464643627337375,
+            0.0338201294688888
+          ],
+          "paired_groups": 59
+        },
+        "neighbor_al3ni_probability_r15": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.5684364392618747,
+          "group_bootstrap_95ci": [
+            0.5447375532093298,
+            0.5931782778594413
+          ],
+          "paired_delta_vs_pair_margin": -0.1216095765965165,
+          "paired_delta_group_bootstrap_95ci": [
+            -0.14090769299628245,
+            -0.1015253608962683
+          ],
+          "paired_groups": 59
+        },
+        "neighbor_al3ni_probability_r31": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.5282951310525856,
+          "group_bootstrap_95ci": [
+            0.5052753909649147,
+            0.5527232890948435
+          ],
+          "paired_delta_vs_pair_margin": -0.16175088480580568,
+          "paired_delta_group_bootstrap_95ci": [
+            -0.18609253904840842,
+            -0.13719475775947798
+          ],
+          "paired_groups": 59
+        },
+        "neighbor_al3ni_probability_r7": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.6133221329118955,
+          "group_bootstrap_95ci": [
+            0.5875612679940391,
+            0.6382426624313056
+          ],
+          "paired_delta_vs_pair_margin": -0.0767238829464957,
+          "paired_delta_group_bootstrap_95ci": [
+            -0.09285814042115456,
+            -0.06015141581622777
+          ],
+          "paired_groups": 59
+        }
+      }
+    },
+    "333_control": {
+      "al3ni_source_fp_vs_tp": {
+        "low_eut_vs_al3ni_margin": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.8278223632761368,
+          "group_bootstrap_95ci": [
+            0.8143422775541477,
+            0.840764083405464
+          ]
+        },
+        "low_eut_vs_any_other_margin": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.7759727080873983,
+          "group_bootstrap_95ci": [
+            0.7649460794646302,
+            0.7867632201877482
+          ]
+        },
+        "neighbor_al3ni_probability_r15": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.6202317521873764,
+          "group_bootstrap_95ci": [
+            0.6045005731835369,
+            0.6367472587556182
+          ]
+        },
+        "neighbor_al3ni_probability_r31": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.575145477177289,
+          "group_bootstrap_95ci": [
+            0.5599604879234421,
+            0.590546178175733
+          ]
+        },
+        "neighbor_al3ni_probability_r7": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.6848727281158586,
+          "group_bootstrap_95ci": [
+            0.6675760054880175,
+            0.7022025894994744
+          ]
+        }
+      },
+      "all_eutectic_fp_vs_tp": {
+        "low_eut_vs_al3ni_margin": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.7145220742443834,
+          "group_bootstrap_95ci": [
+            0.6951394195094431,
+            0.7325753266227414
+          ]
+        },
+        "low_eut_vs_any_other_margin": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.7674874332934262,
+          "group_bootstrap_95ci": [
+            0.7488918525855377,
+            0.7848133925487969
+          ]
+        },
+        "neighbor_al3ni_probability_r15": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.5423595899143158,
+          "group_bootstrap_95ci": [
+            0.5295525629532457,
+            0.5545486190274548
+          ]
+        },
+        "neighbor_al3ni_probability_r31": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.5168674021114293,
+          "group_bootstrap_95ci": [
+            0.5046624920691879,
+            0.5288679066972215
+          ]
+        },
+        "neighbor_al3ni_probability_r7": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.5801861209057166,
+          "group_bootstrap_95ci": [
+            0.566026357641174,
+            0.5942304317687791
+          ]
+        }
+      },
+      "far_eutectic_fp_vs_tp": {
+        "low_eut_vs_al3ni_margin": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.7004285517330058,
+          "group_bootstrap_95ci": [
+            0.6715424034361157,
+            0.7282004419463712
+          ]
+        },
+        "low_eut_vs_any_other_margin": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.7177045306967593,
+          "group_bootstrap_95ci": [
+            0.6976271771022762,
+            0.7375014931781212
+          ],
+          "paired_delta_vs_pair_margin": 0.017275978963753467,
+          "paired_delta_group_bootstrap_95ci": [
+            0.0015178294482122484,
+            0.03457983981099184
+          ],
+          "paired_groups": 59
+        },
+        "neighbor_al3ni_probability_r15": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.5565570412155287,
+          "group_bootstrap_95ci": [
+            0.5336412559988941,
+            0.5782280655979486
+          ],
+          "paired_delta_vs_pair_margin": -0.14387151051747696,
+          "paired_delta_group_bootstrap_95ci": [
+            -0.16534006844336388,
+            -0.12270748478370931
+          ],
+          "paired_groups": 59
+        },
+        "neighbor_al3ni_probability_r31": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.5149216390664451,
+          "group_bootstrap_95ci": [
+            0.49322705118230775,
+            0.5368509246127825
+          ],
+          "paired_delta_vs_pair_margin": -0.1855069126665607,
+          "paired_delta_group_bootstrap_95ci": [
+            -0.20997030789059118,
+            -0.161518277273806
+          ],
+          "paired_groups": 59
+        },
+        "neighbor_al3ni_probability_r7": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.6053239099781936,
+          "group_bootstrap_95ci": [
+            0.5816921384833831,
+            0.6272941242571112
+          ],
+          "paired_delta_vs_pair_margin": -0.09510464175481194,
+          "paired_delta_group_bootstrap_95ci": [
+            -0.11011901513556774,
+            -0.08017387726200319
+          ],
+          "paired_groups": 59
+        }
+      }
+    },
+    "333_lovasz": {
+      "al3ni_source_fp_vs_tp": {
+        "low_eut_vs_al3ni_margin": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.8280438020393364,
+          "group_bootstrap_95ci": [
+            0.8148461185402276,
+            0.8411244024714065
+          ]
+        },
+        "low_eut_vs_any_other_margin": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.7766605258086114,
+          "group_bootstrap_95ci": [
+            0.7664087121862525,
+            0.7873079420654245
+          ]
+        },
+        "neighbor_al3ni_probability_r15": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.620937892584385,
+          "group_bootstrap_95ci": [
+            0.6054941071389758,
+            0.6368057906318837
+          ]
+        },
+        "neighbor_al3ni_probability_r31": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.5756694179289744,
+          "group_bootstrap_95ci": [
+            0.561040323045775,
+            0.5906144993404547
+          ]
+        },
+        "neighbor_al3ni_probability_r7": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.6849779196367896,
+          "group_bootstrap_95ci": [
+            0.6679034572309612,
+            0.7018982281153773
+          ]
+        }
+      },
+      "all_eutectic_fp_vs_tp": {
+        "low_eut_vs_al3ni_margin": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.7145755163198759,
+          "group_bootstrap_95ci": [
+            0.6956317774381862,
+            0.7319571669151772
+          ]
+        },
+        "low_eut_vs_any_other_margin": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.7708075987104669,
+          "group_bootstrap_95ci": [
+            0.75257784279512,
+            0.7879062623451403
+          ]
+        },
+        "neighbor_al3ni_probability_r15": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.5419998250512178,
+          "group_bootstrap_95ci": [
+            0.5295791953616419,
+            0.5540284962646159
+          ]
+        },
+        "neighbor_al3ni_probability_r31": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.5174367829969166,
+          "group_bootstrap_95ci": [
+            0.5054822973303238,
+            0.5294583022770597
+          ]
+        },
+        "neighbor_al3ni_probability_r7": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.5784118649431156,
+          "group_bootstrap_95ci": [
+            0.5647394753200409,
+            0.5918617909509235
+          ]
+        }
+      },
+      "far_eutectic_fp_vs_tp": {
+        "low_eut_vs_al3ni_margin": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.7010965641445505,
+          "group_bootstrap_95ci": [
+            0.6723248297110466,
+            0.7289216959141488
+          ]
+        },
+        "low_eut_vs_any_other_margin": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.7214208531291723,
+          "group_bootstrap_95ci": [
+            0.7023848378252117,
+            0.7395342318663807
+          ],
+          "paired_delta_vs_pair_margin": 0.020324288984621894,
+          "paired_delta_group_bootstrap_95ci": [
+            0.0034251111437229023,
+            0.038783561888093676
+          ],
+          "paired_groups": 59
+        },
+        "neighbor_al3ni_probability_r15": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.5571314419519939,
+          "group_bootstrap_95ci": [
+            0.5348710310756561,
+            0.5785928883413445
+          ],
+          "paired_delta_vs_pair_margin": -0.14396512219255647,
+          "paired_delta_group_bootstrap_95ci": [
+            -0.16493990728210228,
+            -0.1231410767678629
+          ],
+          "paired_groups": 59
+        },
+        "neighbor_al3ni_probability_r31": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.5162507018279351,
+          "group_bootstrap_95ci": [
+            0.49450562208086324,
+            0.5381473342987375
+          ],
+          "paired_delta_vs_pair_margin": -0.18484586231661526,
+          "paired_delta_group_bootstrap_95ci": [
+            -0.208852329389172,
+            -0.16095990563734106
+          ],
+          "paired_groups": 59
+        },
+        "neighbor_al3ni_probability_r7": {
+          "groups_with_auc": 59,
+          "group_macro_auc": 0.6050963269695575,
+          "group_bootstrap_95ci": [
+            0.581735887403252,
+            0.6276855233682103
+          ],
+          "paired_delta_vs_pair_margin": -0.09600023717499269,
+          "paired_delta_group_bootstrap_95ci": [
+            -0.1106846432887502,
+            -0.08060429847461383
+          ],
+          "paired_groups": 59
+        }
+      }
+    }
+  },
+  "primary_screen": {
+    "feature": "neighbor_al3ni_probability_r15",
+    "comparison": "far Eutectic FP-vs-TP group-macro AUC gain over pointwise Eutectic-vs-Al3Ni margin",
+    "required_sources": [
+      "329",
+      "322"
+    ],
+    "pass_if_each_source_gain_at_least": 0.03,
+    "and_paired_59_group_bootstrap_lower_ci_above": 0.0,
+    "source_results": {
+      "329": {
+        "groups_with_auc": 59,
+        "group_macro_auc": 0.5684364392618747,
+        "group_bootstrap_95ci": [
+          0.5447375532093298,
+          0.5931782778594413
+        ],
+        "paired_delta_vs_pair_margin": -0.1216095765965165,
+        "paired_delta_group_bootstrap_95ci": [
+          -0.14090769299628245,
+          -0.1015253608962683
+        ],
+        "paired_groups": 59
+      },
+      "322": {
+        "groups_with_auc": 59,
+        "group_macro_auc": 0.5563208920579725,
+        "group_bootstrap_95ci": [
+          0.5318207584087036,
+          0.5798617839317012
+        ],
+        "paired_delta_vs_pair_margin": -0.1339934777533975,
+        "paired_delta_group_bootstrap_95ci": [
+          -0.15589671215669662,
+          -0.11163049171956553
+        ],
+        "paired_groups": 59
+      }
+    },
+    "continue_to_nested_group_cv": false
+  },
+  "caveat": "The OOF sources share training data and are not independent replications. AUC is diagnostic only; it does not establish mIoU gain or transfer to Model360. Any correction requires nested group-held-out threshold selection and a route-source transfer check before one final valid evaluation."
+}

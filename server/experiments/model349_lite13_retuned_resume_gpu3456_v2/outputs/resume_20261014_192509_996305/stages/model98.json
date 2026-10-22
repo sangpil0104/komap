@@ -1,0 +1,38 @@
+{
+  "name": "model98",
+  "artifact": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/outputs/retrain_20261014_062959_1791959399643234660/R/model98_hard_negative/best.pt",
+  "command": [
+    "/home/sppark/miniconda3/envs/komap/bin/python",
+    "-B",
+    "-u",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/outputs/retrain_20261014_062959_1791959399643234660/implementation/source/training/train_route/experiments/historical_scripts/hard_negative_finetune.py",
+    "--data-dir",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/data",
+    "--checkpoint",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/outputs/retrain_20261014_062959_1791959399643234660/R/model97_native_patch/best.pt",
+    "--output-dir",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/outputs/retrain_20261014_062959_1791959399643234660/R/model98_hard_negative",
+    "--epochs",
+    "4",
+    "--encoder-lr",
+    "1e-6",
+    "--decoder-lr",
+    "5e-5",
+    "--seed",
+    "42"
+  ],
+  "cwd": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/outputs/retrain_20261014_062959_1791959399643234660/implementation/source",
+  "env": {
+    "CUDA_VISIBLE_DEVICES": "GPU-2cbc38c2-5330-cfed-4e43-819c008330e7",
+    "PYTHONPATH": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/outputs/retrain_20261014_062959_1791959399643234660/implementation/source/training/train_route/experiments:/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/outputs/retrain_20261014_062959_1791959399643234660/implementation/source/training/train_route/experiments/historical_scripts",
+    "OMP_NUM_THREADS": "2"
+  },
+  "status": "done",
+  "started_at": "2026-10-14T15:38:19.052968+09:00",
+  "started_unix": 1791959899.0529864,
+  "log": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/outputs/retrain_20261014_062959_1791959399643234660/logs/model98.log",
+  "returncode": 0,
+  "wall_seconds": 169.67206309176981,
+  "finished_at": "2026-10-14T15:41:08.725317+09:00",
+  "artifact_sha256": "2e155b23ae173c84b6601d26f5e4f3169fa60c9682ede96fb23be82fae00faae"
+}

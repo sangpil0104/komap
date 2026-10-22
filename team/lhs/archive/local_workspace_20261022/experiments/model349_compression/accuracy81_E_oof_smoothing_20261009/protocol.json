@@ -1,0 +1,45 @@
+{
+  "hypothesis": "Native-pixel Gaussian probability mixing reduces local prediction noise in E",
+  "scope": "train70 grouped OOF only; no valid/test reads",
+  "grid": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0.1
+    ],
+    [
+      1,
+      0.25
+    ],
+    [
+      1,
+      0.5
+    ],
+    [
+      2,
+      0.1
+    ],
+    [
+      2,
+      0.25
+    ],
+    [
+      2,
+      0.5
+    ]
+  ],
+  "nested_selection": "Choose on other three grouped folds; evaluate held fold; identity preferred on ties",
+  "gate": {
+    "mean_delta_pp_min": 0.1,
+    "positive_folds_min": 3,
+    "worst_fold_delta_pp_min": -0.1
+  },
+  "parent": "fixed Model397 E OOF .5 B4 + .25 HR seed1 + .25 HR seed2",
+  "baseline_parity_percent": 79.9858620080774,
+  "resources": "CPU 2 threads, GPU hidden",
+  "valid_followup": "Only after gate passes; not part of current run",
+  "current_base_changed": false
+}

@@ -1,0 +1,671 @@
+{
+  "scope": "70 training images, exactly-once specimen-grouped OOF; official valid/test inputs, masks, and scores are excluded",
+  "metric": "per-image arithmetic mean of four class IoUs; empty union=0",
+  "boundary_metric": "unique GT pixels with an axial 4-neighbor of the paired class, grouped ratio then equal group mean",
+  "bootstrap": {
+    "unit": "specimen group",
+    "draws": 20000,
+    "seed_base": 377
+  },
+  "images": 70,
+  "specimen_groups": 59,
+  "model_scores": {
+    "Model374": {
+      "images": 70,
+      "specimen_groups": 59,
+      "image_mean_miou_empty0_pct": 79.28232907274607,
+      "group_bootstrap_95ci_pct": [
+        77.31734142256323,
+        81.10934494009604
+      ],
+      "class_mean_iou_pct": {
+        "Al": 92.93396553195518,
+        "Al3Ni": 79.61652921881885,
+        "Primary_Si": 86.3516403679272,
+        "Eutectic_Si": 58.227181172283025
+      },
+      "fold_image_mean_miou_pct": {
+        "1": 76.43494768394258,
+        "2": 78.34180785516752,
+        "3": 83.97334764047636,
+        "4": 78.60203091177328
+      }
+    },
+    "Model376": {
+      "images": 70,
+      "specimen_groups": 59,
+      "image_mean_miou_empty0_pct": 79.49890572776614,
+      "group_bootstrap_95ci_pct": [
+        77.50045020420919,
+        81.347845768344
+      ],
+      "class_mean_iou_pct": {
+        "Al": 93.02605308869809,
+        "Al3Ni": 79.71381586532402,
+        "Primary_Si": 86.44840890421213,
+        "Eutectic_Si": 58.80734505283029
+      },
+      "fold_image_mean_miou_pct": {
+        "1": 77.19910412009877,
+        "2": 78.23640660441917,
+        "3": 84.1753151413962,
+        "4": 78.59434414697478
+      }
+    },
+    "Model377": {
+      "images": 70,
+      "specimen_groups": 59,
+      "image_mean_miou_empty0_pct": 79.31710145274992,
+      "group_bootstrap_95ci_pct": [
+        77.347926224402,
+        81.14421319079548
+      ],
+      "class_mean_iou_pct": {
+        "Al": 92.92470074338301,
+        "Al3Ni": 79.34407725759029,
+        "Primary_Si": 86.1488600849412,
+        "Eutectic_Si": 58.85076772508512
+      },
+      "fold_image_mean_miou_pct": {
+        "1": 77.31757026563045,
+        "2": 78.34666652007884,
+        "3": 83.32664494869269,
+        "4": 78.45222796599711
+      }
+    }
+  },
+  "adoption_comparison_model377_vs_model374": {
+    "reference_image_mean_miou_empty0_pct": 79.28232907274607,
+    "candidate_image_mean_miou_empty0_pct": 79.31710145274992,
+    "delta_pp": 0.034772380003838456,
+    "paired_group_bootstrap_95ci_delta_pp": [
+      -0.47299024055287664,
+      0.48279229427945325
+    ],
+    "class_mean_iou_delta_pp": {
+      "Al": -0.009264788572192722,
+      "Al3Ni": -0.272451961228567,
+      "Primary_Si": -0.20278028298598322,
+      "Eutectic_Si": 0.6235865528021036
+    },
+    "fold_delta_pp": {
+      "1": 0.8826225816878752,
+      "2": 0.004858664911337894,
+      "3": -0.6467026917836601,
+      "4": -0.14980294577617195
+    },
+    "resolution_stratified": {
+      "1230x875": {
+        "images": 20,
+        "specimen_groups": 15,
+        "reference_image_mean_miou_pct": 79.8427670046187,
+        "candidate_image_mean_miou_pct": 80.08484789549313,
+        "delta_pp": 0.24208089087442153,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -0.39219547246677855,
+          1.1079577164194458
+        ]
+      },
+      "1278x909": {
+        "images": 24,
+        "specimen_groups": 21,
+        "reference_image_mean_miou_pct": 79.40885861784346,
+        "candidate_image_mean_miou_pct": 79.01625946068854,
+        "delta_pp": -0.39259915715491867,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -0.9493837568783904,
+          0.02785144432128867
+        ]
+      },
+      "1440x1024": {
+        "images": 9,
+        "specimen_groups": 7,
+        "reference_image_mean_miou_pct": 79.7981871932616,
+        "candidate_image_mean_miou_pct": 79.38601539268842,
+        "delta_pp": -0.4121718005731763,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -3.8825666346268246,
+          1.8797891188870293
+        ]
+      },
+      "675x480": {
+        "images": 17,
+        "specimen_groups": 16,
+        "reference_image_mean_miou_pct": 78.17125902542669,
+        "candidate_image_mean_miou_pct": 78.80210459952416,
+        "delta_pp": 0.6308455740974644,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          0.11608072462789652,
+          1.2470310020447313
+        ]
+      }
+    },
+    "specimen_group_delta_summary_pp": {
+      "mean": 0.036092062898649295,
+      "median": 0.08176959359114666,
+      "minimum": -11.958539149647107,
+      "maximum": 6.086998457809923,
+      "positive_groups": 34,
+      "total_groups": 59
+    },
+    "per_specimen_group_delta_pp": {
+      "A101": 0.10514973939542704,
+      "A106": -0.628875795882311,
+      "A108": -0.4469382191540694,
+      "A109": -0.13974199020135858,
+      "A111": 0.36218730457894255,
+      "A118": 0.8157423369848593,
+      "A121": -0.15957420121925914,
+      "A123": -0.5360420022805401,
+      "A125": 1.2021937505785285,
+      "A130": -11.958539149647107,
+      "A137": 1.6526617329794546,
+      "A138": 6.086998457809923,
+      "A139": 0.694427706396572,
+      "A140": 4.591491557366123,
+      "A146": 1.0419798579761386,
+      "A147": 0.4948236628650404,
+      "A15": 0.3119485796962529,
+      "A150": 0.10879797330366481,
+      "A152": -0.034728933712646626,
+      "A153": -0.31477139788136377,
+      "A154": 0.31204855471449466,
+      "A155": -1.0202802597585658,
+      "A156": 0.06609727733324355,
+      "A159": -0.5114673957316462,
+      "A16": 0.8966523824567751,
+      "A164": 0.23973955446304762,
+      "A166": 0.1357764970926767,
+      "A167": 0.05795219301291121,
+      "A18": -0.8723073032022577,
+      "A181": -0.28582651089523736,
+      "A182": 1.6504286755697484,
+      "A187": -0.07567916930316665,
+      "A188": -1.2680067093953196,
+      "A191": 0.39762291817553863,
+      "A2": -2.6516755912466716,
+      "A200": -0.05030258486320438,
+      "A201": 0.2942741851206243,
+      "A21": -4.73711472005085,
+      "A222": -0.3231008018697912,
+      "A224": -1.706188914082346,
+      "A39": -0.3375699481143024,
+      "A40": 0.05323575608585651,
+      "A49": -1.5144208306235418,
+      "A51": -0.4575964588555692,
+      "A55": -0.20478799733470998,
+      "A57": 0.24869692426102707,
+      "A61": 2.8280208184136346,
+      "A64": 0.032337137014837314,
+      "A66": -0.8461905054567564,
+      "A69": 0.6597625298398802,
+      "A7": 0.4864264352553216,
+      "A78": 3.6075218410868692,
+      "A8": 0.08176959359114666,
+      "A83": 0.47694551923567197,
+      "A87": 0.3481823613416646,
+      "A89": -0.5794150583698476,
+      "A94": 2.1196509201649727,
+      "A96": 0.748467086971738,
+      "A98": 0.5805623390201409
+    },
+    "predicted_area_fraction_comparison": {
+      "Al": {
+        "reference_predicted_fraction_pct": 59.344192815966714,
+        "candidate_predicted_fraction_pct": 59.2564174551211,
+        "ground_truth_fraction_pct": 57.91192148191882,
+        "candidate_minus_reference_pp": -0.0877753608455904,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -0.3257816252530485,
+          0.11988482462993513
+        ]
+      },
+      "Al3Ni": {
+        "reference_predicted_fraction_pct": 24.36885777127183,
+        "candidate_predicted_fraction_pct": 24.140881352181577,
+        "ground_truth_fraction_pct": 25.140569863715257,
+        "candidate_minus_reference_pp": -0.22797641909026875,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -0.4304244641842743,
+          0.0012747196787309932
+        ]
+      },
+      "Primary_Si": {
+        "reference_predicted_fraction_pct": 9.4359531242749,
+        "candidate_predicted_fraction_pct": 9.335597455310984,
+        "ground_truth_fraction_pct": 9.683654638828978,
+        "candidate_minus_reference_pp": -0.10035566896391668,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -0.20650830031037123,
+          -0.01938884649617322
+        ]
+      },
+      "Eutectic_Si": {
+        "reference_predicted_fraction_pct": 6.850996288486555,
+        "candidate_predicted_fraction_pct": 7.267103737386331,
+        "ground_truth_fraction_pct": 7.2638540155369675,
+        "candidate_minus_reference_pp": 0.41610744889977525,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          0.2781494350729737,
+          0.5642603491802316
+        ]
+      }
+    },
+    "improved_images": 41,
+    "improved_specimen_groups": 34
+  },
+  "adoption_gate": {
+    "vs_model374_gain_at_least_0_5pp": false,
+    "vs_model374_at_least_3_of_4_folds_positive": false,
+    "vs_model374_worst_fold_at_least_minus_0_3pp": false,
+    "vs_model374_group_bootstrap_ci_lower_above_zero": false
+  },
+  "adoption_gate_passed": false,
+  "incremental_comparison_model377_vs_model376": {
+    "reference_image_mean_miou_empty0_pct": 79.49890572776614,
+    "candidate_image_mean_miou_empty0_pct": 79.31710145274992,
+    "delta_pp": -0.18180427501622093,
+    "paired_group_bootstrap_95ci_delta_pp": [
+      -0.6557561748302114,
+      0.17274478854066252
+    ],
+    "class_mean_iou_delta_pp": {
+      "Al": -0.10135234531510155,
+      "Al3Ni": -0.36973860773372147,
+      "Primary_Si": -0.29954881927089094,
+      "Eutectic_Si": 0.043422672254835516
+    },
+    "fold_delta_pp": {
+      "1": 0.11846614553168587,
+      "2": 0.11025991565966435,
+      "3": -0.8486701927034993,
+      "4": -0.14211618097766354
+    },
+    "resolution_stratified": {
+      "1230x875": {
+        "images": 20,
+        "specimen_groups": 15,
+        "reference_image_mean_miou_pct": 80.13823571282697,
+        "candidate_image_mean_miou_pct": 80.08484789549313,
+        "delta_pp": -0.0533878173338409,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -0.4225874113830271,
+          0.31894370206532663
+        ]
+      },
+      "1278x909": {
+        "images": 24,
+        "specimen_groups": 21,
+        "reference_image_mean_miou_pct": 79.02770954786985,
+        "candidate_image_mean_miou_pct": 79.01625946068854,
+        "delta_pp": -0.011450087181286612,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -0.5387402081406926,
+          0.4501667953266793
+        ]
+      },
+      "1440x1024": {
+        "images": 9,
+        "specimen_groups": 7,
+        "reference_image_mean_miou_pct": 80.97078915375839,
+        "candidate_image_mean_miou_pct": 79.38601539268842,
+        "delta_pp": -1.58477376106996,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -4.776123693214257,
+          -0.1396555180307113
+        ]
+      },
+      "675x480": {
+        "images": 17,
+        "specimen_groups": 16,
+        "reference_image_mean_miou_pct": 78.63273853849347,
+        "candidate_image_mean_miou_pct": 78.80210459952416,
+        "delta_pp": 0.16936606103069834,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -0.31607042808493335,
+          0.7542320946729756
+        ]
+      }
+    },
+    "specimen_group_delta_summary_pp": {
+      "mean": -0.23105731466837257,
+      "median": -0.09022019362647793,
+      "minimum": -12.040946660004403,
+      "maximum": 3.385353874980501,
+      "positive_groups": 23,
+      "total_groups": 59
+    },
+    "per_specimen_group_delta_pp": {
+      "A101": -0.26128993641393317,
+      "A106": 1.7034922970843747,
+      "A108": -0.07634821250217527,
+      "A109": -0.154862579049464,
+      "A111": 0.6543306618110978,
+      "A118": -0.29573865927773335,
+      "A121": -0.7308631756730244,
+      "A123": -0.44521326113062254,
+      "A125": 0.30366801492447415,
+      "A130": -12.040946660004403,
+      "A137": 0.1367097867654432,
+      "A138": 0.6325995891300895,
+      "A139": -0.2346094483041794,
+      "A140": -0.3629833348853695,
+      "A146": 0.5468931292157864,
+      "A147": 0.8759684557503755,
+      "A15": 0.19800679825155987,
+      "A150": -0.23246361748907596,
+      "A152": -0.19346170354307413,
+      "A153": -0.07554506127468441,
+      "A154": 0.563855389568535,
+      "A155": -0.8631931565101336,
+      "A156": 0.5705687037947993,
+      "A159": -0.4971614737583452,
+      "A16": 0.23929139258622723,
+      "A164": 0.2391935067153128,
+      "A166": -0.4352631612385305,
+      "A167": -0.18551730948834777,
+      "A18": -1.9238750186405196,
+      "A181": -0.3576805173328035,
+      "A182": -0.9287982250584137,
+      "A187": -0.2573597984663112,
+      "A188": -1.28569494272337,
+      "A191": 0.06456370087439267,
+      "A2": -3.7745915756016823,
+      "A200": -0.01888345549342363,
+      "A201": 0.25374386124101256,
+      "A21": 0.6931217926387734,
+      "A222": 0.025847661956102108,
+      "A224": -1.3809870302656624,
+      "A39": -0.37981732790783873,
+      "A40": -0.802328927502094,
+      "A49": 0.3934937140951389,
+      "A51": -0.14880618051971162,
+      "A55": -0.15600973302146715,
+      "A57": 0.11275264496857229,
+      "A61": 3.385353874980501,
+      "A64": -0.31989438584942853,
+      "A66": -0.4081629361461947,
+      "A69": -0.08173441208161325,
+      "A7": 1.9243075069714954,
+      "A78": 0.24841178591999968,
+      "A8": -0.48245608894281755,
+      "A83": -0.03983549570519829,
+      "A87": -0.032889078358633306,
+      "A89": 1.7262741522553138,
+      "A94": -0.09022019362647793,
+      "A96": 1.181608990150096,
+      "A98": -0.35095290329669737
+    },
+    "predicted_area_fraction_comparison": {
+      "Al": {
+        "reference_predicted_fraction_pct": 59.17535251976862,
+        "candidate_predicted_fraction_pct": 59.2564174551211,
+        "ground_truth_fraction_pct": 57.91192148191882,
+        "candidate_minus_reference_pp": 0.08106493535251241,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -0.10968272323752834,
+          0.2829143179925626
+        ]
+      },
+      "Al3Ni": {
+        "reference_predicted_fraction_pct": 24.491741957000347,
+        "candidate_predicted_fraction_pct": 24.140881352181577,
+        "ground_truth_fraction_pct": 25.140569863715257,
+        "candidate_minus_reference_pp": -0.35086060481877307,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -0.5212585961980098,
+          -0.19335065051075473
+        ]
+      },
+      "Primary_Si": {
+        "reference_predicted_fraction_pct": 9.379582408969823,
+        "candidate_predicted_fraction_pct": 9.335597455310984,
+        "ground_truth_fraction_pct": 9.683654638828978,
+        "candidate_minus_reference_pp": -0.04398495365884189,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -0.1459350477434838,
+          0.028964705937832385
+        ]
+      },
+      "Eutectic_Si": {
+        "reference_predicted_fraction_pct": 6.953323114261231,
+        "candidate_predicted_fraction_pct": 7.267103737386331,
+        "ground_truth_fraction_pct": 7.2638540155369675,
+        "candidate_minus_reference_pp": 0.31378062312510224,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          0.1830788840610112,
+          0.44509653030591334
+        ]
+      }
+    },
+    "improved_images": 31,
+    "improved_specimen_groups": 23
+  },
+  "directional_mechanism_model377_vs_model376": {
+    "rates": {
+      "Al3Ni_interface_to_Al": {
+        "groups": 59,
+        "reference_mean_pct": 24.15413536976245,
+        "candidate_mean_pct": 24.41595590994846,
+        "delta_pp": 0.2618205401860086,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -0.628492519289475,
+          1.409875021936241
+        ]
+      },
+      "Al3Ni_interface_to_Eutectic": {
+        "groups": 59,
+        "reference_mean_pct": 19.336547121161168,
+        "candidate_mean_pct": 25.393397910290677,
+        "delta_pp": 6.056850789129511,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          5.306698142524076,
+          6.793406426101814
+        ]
+      },
+      "Al_interface_to_Al3Ni": {
+        "groups": 59,
+        "reference_mean_pct": 11.7344301993915,
+        "candidate_mean_pct": 11.495439383404912,
+        "delta_pp": -0.2389908159865859,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -0.7306025575507973,
+          0.24123244048876738
+        ]
+      },
+      "Al_interface_to_Primary_Si": {
+        "groups": 58,
+        "reference_mean_pct": 8.868023104166827,
+        "candidate_mean_pct": 8.84117130238675,
+        "delta_pp": -0.026851801780078195,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -0.5960405267200373,
+          0.4902128508046407
+        ]
+      },
+      "Eutectic_interface_to_Al": {
+        "groups": 59,
+        "reference_mean_pct": 18.84879607545597,
+        "candidate_mean_pct": 18.867554956964426,
+        "delta_pp": 0.018758881508460237,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -0.28054116061033424,
+          0.29366028425511137
+        ]
+      },
+      "Eutectic_interface_to_Al3Ni": {
+        "groups": 59,
+        "reference_mean_pct": 34.38766110656155,
+        "candidate_mean_pct": 27.31217587257886,
+        "delta_pp": -7.075485233982692,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -8.20175966106265,
+          -5.986581510679321
+        ]
+      },
+      "Eutectic_interface_to_Primary_Si": {
+        "groups": 12,
+        "reference_mean_pct": 22.17261904761905,
+        "candidate_mean_pct": 22.17261904761905,
+        "delta_pp": 0.0,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          0.0,
+          0.0
+        ]
+      },
+      "Primary_Si_interface_to_Al": {
+        "groups": 58,
+        "reference_mean_pct": 17.248801624009456,
+        "candidate_mean_pct": 17.098502212612505,
+        "delta_pp": -0.1502994113969596,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -0.5137670905201748,
+          0.16715899237354045
+        ]
+      }
+    },
+    "Eutectic_error_by_taxicab_distance_from_Al3Ni": {
+      "eutectic_gt_distance1_from_al3ni:Eutectic_to_Al": {
+        "groups": 59,
+        "reference_mean_pct": 4.409882194568775,
+        "candidate_mean_pct": 4.547410960387219,
+        "delta_pp": 0.13752876581844367,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -0.02820689954443814,
+          0.3064668289155297
+        ]
+      },
+      "eutectic_gt_distance1_from_al3ni:Eutectic_to_Al3Ni": {
+        "groups": 59,
+        "reference_mean_pct": 34.38766110656155,
+        "candidate_mean_pct": 27.31217587257886,
+        "delta_pp": -7.075485233982692,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -8.202029834047716,
+          -5.973868470088043
+        ]
+      },
+      "eutectic_gt_distance1_from_al3ni:Eutectic_to_Primary_Si": {
+        "groups": 59,
+        "reference_mean_pct": 2.4793940910938885,
+        "candidate_mean_pct": 2.516424091925558,
+        "delta_pp": 0.03703000083166862,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -0.13765185028871357,
+          0.20880254968695838
+        ]
+      },
+      "eutectic_gt_distance1_from_al3ni:correct_Eutectic": {
+        "groups": 59,
+        "reference_mean_pct": 58.72306260777579,
+        "candidate_mean_pct": 65.62398907510837,
+        "delta_pp": 6.900926467332582,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          5.738244441959068,
+          8.071402506412728
+        ]
+      },
+      "eutectic_gt_distance2_5_from_al3ni:Eutectic_to_Al": {
+        "groups": 59,
+        "reference_mean_pct": 9.03585910877806,
+        "candidate_mean_pct": 9.14361059112448,
+        "delta_pp": 0.1077514823464178,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -0.03983575118175726,
+          0.25199528635500046
+        ]
+      },
+      "eutectic_gt_distance2_5_from_al3ni:Eutectic_to_Al3Ni": {
+        "groups": 59,
+        "reference_mean_pct": 15.375423855882842,
+        "candidate_mean_pct": 13.665513385637635,
+        "delta_pp": -1.7099104702452061,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -2.696781573152732,
+          -0.7116450438663414
+        ]
+      },
+      "eutectic_gt_distance2_5_from_al3ni:Eutectic_to_Primary_Si": {
+        "groups": 59,
+        "reference_mean_pct": 3.4780998602351647,
+        "candidate_mean_pct": 3.5127549199062322,
+        "delta_pp": 0.03465505967106677,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -0.1893700126389363,
+          0.2618699342169382
+        ]
+      },
+      "eutectic_gt_distance2_5_from_al3ni:correct_Eutectic": {
+        "groups": 59,
+        "reference_mean_pct": 72.11061717510393,
+        "candidate_mean_pct": 73.67812110333166,
+        "delta_pp": 1.5675039282277223,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          0.47551952844428247,
+          2.612515999667401
+        ]
+      },
+      "eutectic_gt_distance_gt5_from_al3ni:Eutectic_to_Al": {
+        "groups": 59,
+        "reference_mean_pct": 9.569169266749919,
+        "candidate_mean_pct": 9.568975349943669,
+        "delta_pp": -0.00019391680624930666,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -0.15453435713508581,
+          0.15854799519709742
+        ]
+      },
+      "eutectic_gt_distance_gt5_from_al3ni:Eutectic_to_Al3Ni": {
+        "groups": 59,
+        "reference_mean_pct": 8.764533823074313,
+        "candidate_mean_pct": 8.147849912314808,
+        "delta_pp": -0.6166839107595056,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -1.4688299662731292,
+          0.2861685153289302
+        ]
+      },
+      "eutectic_gt_distance_gt5_from_al3ni:Eutectic_to_Primary_Si": {
+        "groups": 59,
+        "reference_mean_pct": 5.439408247708217,
+        "candidate_mean_pct": 5.563687717737835,
+        "delta_pp": 0.12427947002961892,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -0.23524639702299507,
+          0.5857955765027247
+        ]
+      },
+      "eutectic_gt_distance_gt5_from_al3ni:correct_Eutectic": {
+        "groups": 59,
+        "reference_mean_pct": 76.22688866246757,
+        "candidate_mean_pct": 76.71948702000368,
+        "delta_pp": 0.49259835753613496,
+        "paired_group_bootstrap_95ci_delta_pp": [
+          -0.5808652672011816,
+          1.4896787402286424
+        ]
+      }
+    },
+    "two_direction_swap_sum": {
+      "groups": 59,
+      "model376_two_direction_rate_sum_pct": 53.72420822772271,
+      "model377_two_direction_rate_sum_pct": 52.70557378286954,
+      "paired_delta_pp": -1.0186344448531812,
+      "paired_group_bootstrap_95ci_delta_pp": [
+        -1.7824974458813254,
+        -0.29376214151356417
+      ]
+    },
+    "gate": {
+      "two_direction_swap_sum_reduced_at_least_2pp": false,
+      "Eutectic_to_Al3Ni_paired_group_ci_upper_below_zero": true,
+      "reverse_Al3Ni_to_Eutectic_rate_increase_at_most_1_5pp": false,
+      "Eutectic_mean_IoU_not_lower_than_Model376": true,
+      "no_unintended_Eutectic_to_Al_or_Primary_leakage_increase": false,
+      "no_Al_or_Primary_boundary_swap_increase": true,
+      "no_Al_Al3Ni_boundary_swap_increase": false
+    },
+    "gate_passed": false
+  },
+  "interpretation_guard": "This is a single selection-conditional experiment: the direction was motivated by prior Model374/376 OOF. Passing grouped OOF gates does not establish official validation/test performance. Boundary rates count unique support pixels and are not physical phase widths. Distance rings are diagnostics, not gate inputs."
+}

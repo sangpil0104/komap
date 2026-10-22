@@ -1,0 +1,69 @@
+usage: train.py [-h] --data-root DATA_ROOT [--output-dir OUTPUT_DIR]
+                [--device DEVICE] [--architecture ARCHITECTURE]
+                [--encoder-name ENCODER_NAME]
+                [--encoder-weights ENCODER_WEIGHTS] [--patch-size PATCH_SIZE]
+                [--input-scale INPUT_SCALE] [--normalize-width]
+                [--samples-per-image SAMPLES_PER_IMAGE]
+                [--batch-size BATCH_SIZE]
+                [--accumulation-steps ACCUMULATION_STEPS]
+                [--num-workers NUM_WORKERS] [--epochs EPOCHS] [--lr LR]
+                [--encoder-lr-mult ENCODER_LR_MULT]
+                [--weight-decay WEIGHT_DECAY]
+                [--ce-class-weights AL AL3NI PRIMARY_SI EUTECTIC_SI]
+                [--init-checkpoint INIT_CHECKPOINT] [--no-boundary-head]
+                [--boundary-head-weight BOUNDARY_HEAD_WEIGHT] [--seed SEED]
+                [--rng-mode {legacy,per_item}] [--val-every VAL_EVERY]
+                [--no-amp] [--resume]
+
+Train the phase-segmentation model (defaults = the released best recipe).
+
+UNet++ + HRNet-W48 (ImageNet), 512 patches cut from 256 native px (input
+scale 2), CE + Dice without class weights, plus a training-only
+class-agnostic boundary head. The final model is `<output-dir>/last.pt`.
+
+The per-epoch validation printed here is only a quick progress signal: each
+valid image goes through the model in one padded pass at native scale,
+which doesn't match input_scale=2 training, so its numbers run well below
+the real metric. Use evaluate.py (overlap-tile, same as prediction) for
+the actual mIoU.
+
+options:
+  -h, --help            show this help message and exit
+  --data-root DATA_ROOT
+                        Folder with train/ and valid/ (see README).
+  --output-dir OUTPUT_DIR
+  --device DEVICE
+  --architecture ARCHITECTURE
+  --encoder-name ENCODER_NAME
+  --encoder-weights ENCODER_WEIGHTS
+  --patch-size PATCH_SIZE
+  --input-scale INPUT_SCALE
+                        Must match at evaluate/predict time.
+  --normalize-width     Use the training split's modal native width as the
+                        per-image pixel-scale target.
+  --samples-per-image SAMPLES_PER_IMAGE
+  --batch-size BATCH_SIZE
+  --accumulation-steps ACCUMULATION_STEPS
+                        Micro-batches per optimizer update (use 4 with batch-
+                        size 2 to keep effective batch 8).
+  --num-workers NUM_WORKERS
+  --epochs EPOCHS
+  --lr LR
+  --encoder-lr-mult ENCODER_LR_MULT
+  --weight-decay WEIGHT_DECAY
+  --ce-class-weights AL AL3NI PRIMARY_SI EUTECTIC_SI
+                        Optional weights for CE only, in the fixed class
+                        order.
+  --init-checkpoint INIT_CHECKPOINT
+                        Initialize model weights from an inference checkpoint
+                        and start a fresh optimizer.
+  --no-boundary-head    Train without the boundary auxiliary head.
+  --boundary-head-weight BOUNDARY_HEAD_WEIGHT
+  --seed SEED
+  --rng-mode {legacy,per_item}
+                        legacy preserves historical sampling; per_item seeds
+                        crop/augmentation by seed, epoch, and sample index.
+  --val-every VAL_EVERY
+                        0 = no per-epoch validation.
+  --no-amp              Disable CUDA FP16 autocast.
+  --resume              Resume from output-dir/train_state.pt when present.

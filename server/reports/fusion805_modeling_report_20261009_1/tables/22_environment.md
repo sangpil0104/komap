@@ -1,0 +1,21 @@
+**표 22. 현재 학습·평가 환경**
+
+| 항목 | 기록 |
+| --- | --- |
+| Conda | komap |
+| Python 경로 | /home/sppark/miniconda3/envs/komap/bin/python |
+| GPU | NVIDIA GeForce RTX 4090 × 6 (물리 2,3,4,5,6,7) |
+| torch | 2.7.1+cu128 |
+| torchvision | 0.22.1+cu128 |
+| segmentation-models-pytorch | 0.5.0 |
+| timm | 1.0.29 |
+| numpy | 2.4.6 |
+| albumentations | 2.0.8 |
+| tqdm | 4.70.1 |
+| 학습 작업 | R14 + E12 + F1 = 27 |
+| 전체 작업 | 학습27 + 준비/OOF/valid16 = 43 |
+| 전체 경과 | 3.0735시간 (11064.712초) |
+| 최종 패키징·평가·저장 | 126.360초 |
+| GPU 작업 경과 합계 | 15.2622 GPU·시간 |
+
+GPU 작업 경과 합계는 subprocess 시작~종료 합이며 순수 GPU kernel 시간/에너지/가격이 아니다. 최종 단계 시간도 순수 추론 지연이 아니다. [S10, S12]

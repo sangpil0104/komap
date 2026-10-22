@@ -1,0 +1,62 @@
+{
+  "time": 1791858389.2775514,
+  "roots": [
+    1729994,
+    1996784,
+    351745,
+    432346,
+    40249,
+    102285
+  ],
+  "paused": [
+    {
+      "pid": 40249,
+      "ppid": 40248,
+      "stat": "T",
+      "args": "/home/sangpil/miniforge3/envs/komap/bin/python -u run.py",
+      "cwd": "/home/sangpil/komap/codex_HR392_train70_N3_20261013"
+    },
+    {
+      "pid": 102285,
+      "ppid": 102284,
+      "stat": "Tl",
+      "args": "/home/sangpil/miniforge3/envs/komap/bin/python -u evaluate_326_single.py",
+      "cwd": "/home/sangpil/komap/codex_lite16N3_B4_subsets_20261013"
+    },
+    {
+      "pid": 351745,
+      "ppid": 351744,
+      "stat": "Sl",
+      "args": "/home/sangpil/miniforge3/envs/komap/bin/python -u /home/sangpil/komap/codex_r326_ema_seed4_20261012/evaluate_lite16.py",
+      "cwd": "/home/sangpil"
+    },
+    {
+      "pid": 432346,
+      "ppid": 432345,
+      "stat": "S",
+      "args": "/home/sangpil/miniforge3/envs/komap/bin/python -u /home/sangpil/komap/codex_hr392_set5_resume_20261012/run.py",
+      "cwd": "/home/sangpil/komap/codex_hr392_set5_resume_20261012"
+    },
+    {
+      "pid": 1729994,
+      "ppid": 1729993,
+      "stat": "S",
+      "args": "/home/sangpil/miniforge3/envs/komap/bin/python -u run.py",
+      "cwd": "/home/sangpil/komap/codex_N3_L2_then_resume_queue_20261013"
+    },
+    {
+      "pid": 1996784,
+      "ppid": 1996783,
+      "stat": "Sl",
+      "args": "/home/sangpil/miniforge3/envs/komap/bin/python -u /home/sangpil/komap/codex_r326_ema_seed4_20261012/run.py",
+      "cwd": "/home/sangpil/komap/codex_N3_L2_then_resume_queue_20261013"
+    },
+    {
+      "pid": 1996783,
+      "ppid": 1729994,
+      "stat": "S",
+      "args": "flock -n /home/sangpil/komap/codex_r326_ema_seed4_20261012/run.lock /home/sangpil/miniforge3/envs/komap/bin/python -u /home/sangpil/komap/codex_r326_ema_seed4_20261012/run.py",
+      "cwd": "/home/sangpil/komap/codex_N3_L2_then_resume_queue_20261013"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "model": 394,
+  "stage": "posthoc_scale_feature_robustness_diagnostics",
+  "status": "exploratory; diagnostics selected after reviewing Model394 results",
+  "input_scope": "Model394 group summary JSON only; no new train image, valid/test, OOF, checkpoint, or score read",
+  "groups": 59,
+  "raster_bin_group_counts": {
+    "1230x875": 15,
+    "1278x909": 21,
+    "1440x1024": 7,
+    "675x480": 16
+  },
+  "feature_boundary_saturation_proxy": {
+    "group_mean_scale_q10_q50_q90_px": [
+      45.46031746031746,
+      53.333333333333336,
+      64.0
+    ],
+    "group_means_ge_60px_of_64px_upper_bound": 10,
+    "group_means_le_2_75px_of_2_5px_lower_bound": 0,
+    "note": "group-mean proximity only; crop-level peak boundary rate was not stored"
+  },
+  "targets": {
+    "Eutectic_Si": {
+      "full_partial_rank_rho": 0.21739547985342358,
+      "raster_stratified_group_bootstrap_95pct": [
+        0.036095439529188394,
+        0.39022524019070226
+      ],
+      "bootstrap_replicates": 5000,
+      "within_bin_unadjusted_spearman": {
+        "1230x875": 0.3185981197445488,
+        "1278x909": 0.16310545949980124,
+        "1440x1024": -0.08574929257125442,
+        "675x480": 0.14377703093791788
+      },
+      "leave_one_bin_out_partial_rank_rho": {
+        "1230x875": 0.13151369665122334,
+        "1278x909": 0.25593322829562226,
+        "1440x1024": 0.2533946962154197,
+        "675x480": 0.23104091757860754
+      }
+    },
+    "Al3Ni": {
+      "full_partial_rank_rho": 0.20173642359774432,
+      "raster_stratified_group_bootstrap_95pct": [
+        -0.03854791169709649,
+        0.43804524931663125
+      ],
+      "bootstrap_replicates": 5000,
+      "within_bin_unadjusted_spearman": {
+        "1230x875": 0.36827330235196953,
+        "1278x909": 0.21697480383412632,
+        "1440x1024": -0.6669389422208677,
+        "675x480": 0.2183120064963927
+      },
+      "leave_one_bin_out_partial_rank_rho": {
+        "1230x875": 0.1416126645207369,
+        "1278x909": 0.21099760337909523,
+        "1440x1024": 0.23948657518445646,
+        "675x480": 0.16715846548679694
+      }
+    }
+  },
+  "bootstrap": {
+    "unit": "specimen group, resampled within fixed raster-size strata",
+    "replicates": 5000,
+    "seed": 39430,
+    "interval": "percentile 95%"
+  },
+  "interpretation_guard": "These post-hoc robustness checks do not validate physical scale, correct the exploratory p-value, establish error causation, or authorize model training.",
+  "source_model394_result_sha256": "84a61bb62357b20d6f4ef371c51674eaf77416b8d7c478303922bb885d033ae9",
+  "analyzed_at_utc": "2026-10-03T00:12:43Z"
+}

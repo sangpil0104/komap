@@ -1,0 +1,2522 @@
+{
+  "completed_at_utc": "2026-10-04T14:21:49.981758Z",
+  "config": {
+    "boundary_band": "3x3 neighborhood contains more than one of four classes",
+    "candidate_classes": {
+      "1": "Al3Ni",
+      "2": "Primary_Si"
+    },
+    "directions_clockwise_from_north": [
+      "N",
+      "NE",
+      "E",
+      "SE",
+      "S",
+      "SW",
+      "W",
+      "NW"
+    ],
+    "folds": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "interior_clearance_px": [
+      2,
+      4,
+      8
+    ],
+    "maximum_target_offset_px": [
+      4,
+      8,
+      16,
+      32
+    ],
+    "scope": "outer-train masks only; no OOF predictions or official valid/test"
+  },
+  "experiment": "Model392 direction-target support audit",
+  "fold_results": {
+    "1": {
+      "classes": {
+        "1": {
+          "boundary_source_pixels": 4625320,
+          "class_name": "Al3Ni",
+          "images_with_boundary_pixels": 52,
+          "interior_seed_pixels_by_clearance": {
+            "2": 9968789,
+            "4": 5629766,
+            "8": 2057452
+          },
+          "support_by_clearance_and_max_offset": {
+            "2": {
+              "16": {
+                "direction_counts": {
+                  "E": 582836,
+                  "N": 797264,
+                  "NE": 354611,
+                  "NW": 368185,
+                  "S": 799241,
+                  "SE": 360019,
+                  "SW": 357738,
+                  "W": 956457
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.9894128406250811,
+                "supported_source_pixels": 4576351
+              },
+              "32": {
+                "direction_counts": {
+                  "E": 588613,
+                  "N": 803366,
+                  "NE": 359458,
+                  "NW": 373766,
+                  "S": 805149,
+                  "SE": 365750,
+                  "SW": 362706,
+                  "W": 962126
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.9990517412849274,
+                "supported_source_pixels": 4620934
+              },
+              "4": {
+                "direction_counts": {
+                  "E": 522513,
+                  "N": 734002,
+                  "NE": 297038,
+                  "NW": 307969,
+                  "S": 735651,
+                  "SE": 302720,
+                  "SW": 299570,
+                  "W": 893303
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.8848611555524807,
+                "supported_source_pixels": 4092766
+              },
+              "8": {
+                "direction_counts": {
+                  "E": 560250,
+                  "N": 772970,
+                  "NE": 332180,
+                  "NW": 344731,
+                  "S": 774962,
+                  "SE": 337844,
+                  "SW": 335442,
+                  "W": 932367
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.9492848062404331,
+                "supported_source_pixels": 4390746
+              }
+            },
+            "4": {
+              "16": {
+                "direction_counts": {
+                  "E": 440168,
+                  "N": 463642,
+                  "NE": 409618,
+                  "NW": 430401,
+                  "S": 465879,
+                  "SE": 423382,
+                  "SW": 408830,
+                  "W": 441507
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.7531212975534666,
+                "supported_source_pixels": 3483427
+              },
+              "32": {
+                "direction_counts": {
+                  "E": 528394,
+                  "N": 553119,
+                  "NE": 492855,
+                  "NW": 514479,
+                  "S": 556864,
+                  "SE": 504862,
+                  "SW": 492827,
+                  "W": 530753
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.9024571272906523,
+                "supported_source_pixels": 4174153
+              },
+              "4": {
+                "direction_counts": {
+                  "E": 239227,
+                  "N": 258834,
+                  "NE": 219456,
+                  "NW": 236549,
+                  "S": 261363,
+                  "SE": 232989,
+                  "SW": 220411,
+                  "W": 237430
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.41213559278060763,
+                "supported_source_pixels": 1906259
+              },
+              "8": {
+                "direction_counts": {
+                  "E": 339181,
+                  "N": 360971,
+                  "NE": 314997,
+                  "NW": 336990,
+                  "S": 362089,
+                  "SE": 331205,
+                  "SW": 315037,
+                  "W": 338146
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.5834441725113073,
+                "supported_source_pixels": 2698616
+              }
+            },
+            "8": {
+              "16": {
+                "direction_counts": {
+                  "E": 152575,
+                  "N": 166197,
+                  "NE": 180677,
+                  "NW": 196296,
+                  "S": 167615,
+                  "SE": 192883,
+                  "SW": 178018,
+                  "W": 152290
+                },
+                "groups_by_direction": {
+                  "E": 42,
+                  "N": 42,
+                  "NE": 42,
+                  "NW": 42,
+                  "S": 42,
+                  "SE": 42,
+                  "SW": 42,
+                  "W": 42
+                },
+                "support_fraction": 0.2997740696859893,
+                "supported_source_pixels": 1386551
+              },
+              "32": {
+                "direction_counts": {
+                  "E": 269535,
+                  "N": 285605,
+                  "NE": 293333,
+                  "NW": 304395,
+                  "S": 286970,
+                  "SE": 299241,
+                  "SW": 287507,
+                  "W": 272940
+                },
+                "groups_by_direction": {
+                  "E": 42,
+                  "N": 42,
+                  "NE": 42,
+                  "NW": 42,
+                  "S": 42,
+                  "SE": 42,
+                  "SW": 42,
+                  "W": 42
+                },
+                "support_fraction": 0.4971604126849602,
+                "supported_source_pixels": 2299526
+              },
+              "4": {
+                "direction_counts": {
+                  "E": 0,
+                  "N": 0,
+                  "NE": 0,
+                  "NW": 0,
+                  "S": 0,
+                  "SE": 0,
+                  "SW": 0,
+                  "W": 0
+                },
+                "groups_by_direction": {
+                  "E": 0,
+                  "N": 0,
+                  "NE": 0,
+                  "NW": 0,
+                  "S": 0,
+                  "SE": 0,
+                  "SW": 0,
+                  "W": 0
+                },
+                "support_fraction": 0.0,
+                "supported_source_pixels": 0
+              },
+              "8": {
+                "direction_counts": {
+                  "E": 58695,
+                  "N": 68752,
+                  "NE": 87635,
+                  "NW": 100077,
+                  "S": 71659,
+                  "SE": 97967,
+                  "SW": 86534,
+                  "W": 57876
+                },
+                "groups_by_direction": {
+                  "E": 42,
+                  "N": 42,
+                  "NE": 42,
+                  "NW": 42,
+                  "S": 42,
+                  "SE": 42,
+                  "SW": 42,
+                  "W": 42
+                },
+                "support_fraction": 0.13603275016647498,
+                "supported_source_pixels": 629195
+              }
+            }
+          }
+        },
+        "2": {
+          "boundary_source_pixels": 780379,
+          "class_name": "Primary_Si",
+          "images_with_boundary_pixels": 52,
+          "interior_seed_pixels_by_clearance": {
+            "2": 4021226,
+            "4": 2975101,
+            "8": 1693689
+          },
+          "support_by_clearance_and_max_offset": {
+            "2": {
+              "16": {
+                "direction_counts": {
+                  "E": 97908,
+                  "N": 143445,
+                  "NE": 52682,
+                  "NW": 54952,
+                  "S": 142027,
+                  "SE": 53990,
+                  "SW": 52761,
+                  "W": 182424
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.9997565285585593,
+                "supported_source_pixels": 780189
+              },
+              "32": {
+                "direction_counts": {
+                  "E": 97919,
+                  "N": 143462,
+                  "NE": 52690,
+                  "NW": 54966,
+                  "S": 142041,
+                  "SE": 54048,
+                  "SW": 52794,
+                  "W": 182455
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.9999948742854433,
+                "supported_source_pixels": 780375
+              },
+              "4": {
+                "direction_counts": {
+                  "E": 95848,
+                  "N": 141089,
+                  "NE": 50910,
+                  "NW": 52545,
+                  "S": 139824,
+                  "SE": 51730,
+                  "SW": 51126,
+                  "W": 180140
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.9780017145515192,
+                "supported_source_pixels": 763212
+              },
+              "8": {
+                "direction_counts": {
+                  "E": 97616,
+                  "N": 143040,
+                  "NE": 52367,
+                  "NW": 54439,
+                  "S": 141699,
+                  "SE": 53513,
+                  "SW": 52482,
+                  "W": 182098
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.9959955355026212,
+                "supported_source_pixels": 777254
+              }
+            },
+            "4": {
+              "16": {
+                "direction_counts": {
+                  "E": 92494,
+                  "N": 96325,
+                  "NE": 88322,
+                  "NW": 91399,
+                  "S": 93726,
+                  "SE": 90720,
+                  "SW": 88325,
+                  "W": 93142
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.9411491083178815,
+                "supported_source_pixels": 734453
+              },
+              "32": {
+                "direction_counts": {
+                  "E": 97768,
+                  "N": 101942,
+                  "NE": 92602,
+                  "NW": 95749,
+                  "S": 98801,
+                  "SE": 95767,
+                  "SW": 92543,
+                  "W": 98072
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.9908570066595846,
+                "supported_source_pixels": 773244
+              },
+              "4": {
+                "direction_counts": {
+                  "E": 63957,
+                  "N": 66383,
+                  "NE": 61428,
+                  "NW": 64253,
+                  "S": 65508,
+                  "SE": 63705,
+                  "SW": 61791,
+                  "W": 64419
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.6553789889271752,
+                "supported_source_pixels": 511444
+              },
+              "8": {
+                "direction_counts": {
+                  "E": 81577,
+                  "N": 84515,
+                  "NE": 78803,
+                  "NW": 81979,
+                  "S": 82705,
+                  "SE": 80874,
+                  "SW": 78835,
+                  "W": 82105
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.8347136455491498,
+                "supported_source_pixels": 651393
+              }
+            },
+            "8": {
+              "16": {
+                "direction_counts": {
+                  "E": 59019,
+                  "N": 59608,
+                  "NE": 71847,
+                  "NW": 75424,
+                  "S": 57885,
+                  "SE": 74357,
+                  "SW": 71471,
+                  "W": 57717
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.6757332014316121,
+                "supported_source_pixels": 527328
+              },
+              "32": {
+                "direction_counts": {
+                  "E": 77678,
+                  "N": 78694,
+                  "NE": 89721,
+                  "NW": 91673,
+                  "S": 75450,
+                  "SE": 90667,
+                  "SW": 87784,
+                  "W": 75388
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.854783380895693,
+                "supported_source_pixels": 667055
+              },
+              "4": {
+                "direction_counts": {
+                  "E": 0,
+                  "N": 0,
+                  "NE": 0,
+                  "NW": 0,
+                  "S": 0,
+                  "SE": 0,
+                  "SW": 0,
+                  "W": 0
+                },
+                "groups_by_direction": {
+                  "E": 0,
+                  "N": 0,
+                  "NE": 0,
+                  "NW": 0,
+                  "S": 0,
+                  "SE": 0,
+                  "SW": 0,
+                  "W": 0
+                },
+                "support_fraction": 0.0,
+                "supported_source_pixels": 0
+              },
+              "8": {
+                "direction_counts": {
+                  "E": 28115,
+                  "N": 28164,
+                  "NE": 40600,
+                  "NW": 44507,
+                  "S": 27669,
+                  "SE": 43669,
+                  "SW": 41235,
+                  "W": 27535
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.36071447335205076,
+                "supported_source_pixels": 281494
+              }
+            }
+          }
+        }
+      },
+      "train_groups": 44,
+      "train_images": 52
+    },
+    "2": {
+      "classes": {
+        "1": {
+          "boundary_source_pixels": 4101615,
+          "class_name": "Al3Ni",
+          "images_with_boundary_pixels": 52,
+          "interior_seed_pixels_by_clearance": {
+            "2": 8891521,
+            "4": 5192904,
+            "8": 2086997
+          },
+          "support_by_clearance_and_max_offset": {
+            "2": {
+              "16": {
+                "direction_counts": {
+                  "E": 508629,
+                  "N": 702390,
+                  "NE": 317419,
+                  "NW": 333619,
+                  "S": 708274,
+                  "SE": 327743,
+                  "SW": 318509,
+                  "W": 832774
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.98725916498745,
+                "supported_source_pixels": 4049357
+              },
+              "32": {
+                "direction_counts": {
+                  "E": 514515,
+                  "N": 708455,
+                  "NE": 322426,
+                  "NW": 339456,
+                  "S": 714460,
+                  "SE": 333401,
+                  "SW": 323690,
+                  "W": 838638
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.9983972167061024,
+                "supported_source_pixels": 4095041
+              },
+              "4": {
+                "direction_counts": {
+                  "E": 450018,
+                  "N": 640860,
+                  "NE": 261511,
+                  "NW": 274323,
+                  "S": 646657,
+                  "SE": 270423,
+                  "SW": 263412,
+                  "W": 771213
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.8724409775173926,
+                "supported_source_pixels": 3578417
+              },
+              "8": {
+                "direction_counts": {
+                  "E": 486382,
+                  "N": 678662,
+                  "NE": 295444,
+                  "NW": 309887,
+                  "S": 684272,
+                  "SE": 304763,
+                  "SW": 297135,
+                  "W": 809520
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.9425714017527242,
+                "supported_source_pixels": 3866065
+              }
+            },
+            "4": {
+              "16": {
+                "direction_counts": {
+                  "E": 367377,
+                  "N": 396904,
+                  "NE": 352025,
+                  "NW": 368070,
+                  "S": 397844,
+                  "SE": 362752,
+                  "SW": 348417,
+                  "W": 369826
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.7224507907251169,
+                "supported_source_pixels": 2963215
+              },
+              "32": {
+                "direction_counts": {
+                  "E": 452239,
+                  "N": 489352,
+                  "NE": 434333,
+                  "NW": 455043,
+                  "S": 490543,
+                  "SE": 446888,
+                  "SW": 430134,
+                  "W": 456378
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.8910904607087696,
+                "supported_source_pixels": 3654910
+              },
+              "4": {
+                "direction_counts": {
+                  "E": 197420,
+                  "N": 220890,
+                  "NE": 185848,
+                  "NW": 198559,
+                  "S": 222755,
+                  "SE": 196717,
+                  "SW": 185299,
+                  "W": 197834
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.39138778261733487,
+                "supported_source_pixels": 1605322
+              },
+              "8": {
+                "direction_counts": {
+                  "E": 280324,
+                  "N": 305455,
+                  "NE": 267053,
+                  "NW": 282518,
+                  "S": 305794,
+                  "SE": 278599,
+                  "SW": 265774,
+                  "W": 281360
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.5526791276119285,
+                "supported_source_pixels": 2266877
+              }
+            },
+            "8": {
+              "16": {
+                "direction_counts": {
+                  "E": 130130,
+                  "N": 143337,
+                  "NE": 157643,
+                  "NW": 170554,
+                  "S": 143925,
+                  "SE": 167746,
+                  "SW": 154896,
+                  "W": 130561
+                },
+                "groups_by_direction": {
+                  "E": 41,
+                  "N": 41,
+                  "NE": 41,
+                  "NW": 41,
+                  "S": 41,
+                  "SE": 41,
+                  "SW": 41,
+                  "W": 41
+                },
+                "support_fraction": 0.2922731655701474,
+                "supported_source_pixels": 1198792
+              },
+              "32": {
+                "direction_counts": {
+                  "E": 215675,
+                  "N": 228869,
+                  "NE": 238379,
+                  "NW": 251607,
+                  "S": 230590,
+                  "SE": 248783,
+                  "SW": 233795,
+                  "W": 217886
+                },
+                "groups_by_direction": {
+                  "E": 41,
+                  "N": 41,
+                  "NE": 41,
+                  "NW": 41,
+                  "S": 41,
+                  "SE": 41,
+                  "SW": 41,
+                  "W": 41
+                },
+                "support_fraction": 0.45484132469771055,
+                "supported_source_pixels": 1865584
+              },
+              "4": {
+                "direction_counts": {
+                  "E": 0,
+                  "N": 0,
+                  "NE": 0,
+                  "NW": 0,
+                  "S": 0,
+                  "SE": 0,
+                  "SW": 0,
+                  "W": 0
+                },
+                "groups_by_direction": {
+                  "E": 0,
+                  "N": 0,
+                  "NE": 0,
+                  "NW": 0,
+                  "S": 0,
+                  "SE": 0,
+                  "SW": 0,
+                  "W": 0
+                },
+                "support_fraction": 0.0,
+                "supported_source_pixels": 0
+              },
+              "8": {
+                "direction_counts": {
+                  "E": 52857,
+                  "N": 63923,
+                  "NE": 81606,
+                  "NW": 89710,
+                  "S": 66443,
+                  "SE": 88836,
+                  "SW": 80392,
+                  "W": 52796
+                },
+                "groups_by_direction": {
+                  "E": 41,
+                  "N": 41,
+                  "NE": 41,
+                  "NW": 41,
+                  "S": 41,
+                  "SE": 41,
+                  "SW": 41,
+                  "W": 41
+                },
+                "support_fraction": 0.14056975118337534,
+                "supported_source_pixels": 576563
+              }
+            }
+          }
+        },
+        "2": {
+          "boundary_source_pixels": 779988,
+          "class_name": "Primary_Si",
+          "images_with_boundary_pixels": 51,
+          "interior_seed_pixels_by_clearance": {
+            "2": 3826962,
+            "4": 2788978,
+            "8": 1529277
+          },
+          "support_by_clearance_and_max_offset": {
+            "2": {
+              "16": {
+                "direction_counts": {
+                  "E": 98492,
+                  "N": 142059,
+                  "NE": 53171,
+                  "NW": 55266,
+                  "S": 141462,
+                  "SE": 54961,
+                  "SW": 52910,
+                  "W": 181518
+                },
+                "groups_by_direction": {
+                  "E": 43,
+                  "N": 43,
+                  "NE": 43,
+                  "NW": 43,
+                  "S": 43,
+                  "SE": 43,
+                  "SW": 43,
+                  "W": 43
+                },
+                "support_fraction": 0.9998089714200731,
+                "supported_source_pixels": 779839
+              },
+              "32": {
+                "direction_counts": {
+                  "E": 98504,
+                  "N": 142073,
+                  "NE": 53180,
+                  "NW": 55282,
+                  "S": 141463,
+                  "SE": 54987,
+                  "SW": 52935,
+                  "W": 181564
+                },
+                "groups_by_direction": {
+                  "E": 43,
+                  "N": 43,
+                  "NE": 43,
+                  "NW": 43,
+                  "S": 43,
+                  "SE": 43,
+                  "SW": 43,
+                  "W": 43
+                },
+                "support_fraction": 1.0,
+                "supported_source_pixels": 779988
+              },
+              "4": {
+                "direction_counts": {
+                  "E": 96067,
+                  "N": 139597,
+                  "NE": 51092,
+                  "NW": 52942,
+                  "S": 139290,
+                  "SE": 52751,
+                  "SW": 50999,
+                  "W": 179147
+                },
+                "groups_by_direction": {
+                  "E": 43,
+                  "N": 43,
+                  "NE": 43,
+                  "NW": 43,
+                  "S": 43,
+                  "SE": 43,
+                  "SW": 43,
+                  "W": 43
+                },
+                "support_fraction": 0.9767906685743883,
+                "supported_source_pixels": 761885
+              },
+              "8": {
+                "direction_counts": {
+                  "E": 98097,
+                  "N": 141655,
+                  "NE": 52762,
+                  "NW": 54774,
+                  "S": 141141,
+                  "SE": 54544,
+                  "SW": 52559,
+                  "W": 181110
+                },
+                "groups_by_direction": {
+                  "E": 43,
+                  "N": 43,
+                  "NE": 43,
+                  "NW": 43,
+                  "S": 43,
+                  "SE": 43,
+                  "SW": 43,
+                  "W": 43
+                },
+                "support_fraction": 0.9957101904131859,
+                "supported_source_pixels": 776642
+              }
+            },
+            "4": {
+              "16": {
+                "direction_counts": {
+                  "E": 93227,
+                  "N": 95394,
+                  "NE": 89044,
+                  "NW": 91506,
+                  "S": 92044,
+                  "SE": 91791,
+                  "SW": 88390,
+                  "W": 92722
+                },
+                "groups_by_direction": {
+                  "E": 43,
+                  "N": 43,
+                  "NE": 43,
+                  "NW": 43,
+                  "S": 43,
+                  "SE": 43,
+                  "SW": 43,
+                  "W": 43
+                },
+                "support_fraction": 0.9411914029446606,
+                "supported_source_pixels": 734118
+              },
+              "32": {
+                "direction_counts": {
+                  "E": 98546,
+                  "N": 101314,
+                  "NE": 93780,
+                  "NW": 96174,
+                  "S": 96746,
+                  "SE": 96487,
+                  "SW": 92623,
+                  "W": 98069
+                },
+                "groups_by_direction": {
+                  "E": 43,
+                  "N": 43,
+                  "NE": 43,
+                  "NW": 43,
+                  "S": 43,
+                  "SE": 43,
+                  "SW": 43,
+                  "W": 43
+                },
+                "support_fraction": 0.9919883382821274,
+                "supported_source_pixels": 773739
+              },
+              "4": {
+                "direction_counts": {
+                  "E": 63695,
+                  "N": 65149,
+                  "NE": 61581,
+                  "NW": 64488,
+                  "S": 64385,
+                  "SE": 64803,
+                  "SW": 61615,
+                  "W": 63640
+                },
+                "groups_by_direction": {
+                  "E": 43,
+                  "N": 43,
+                  "NE": 43,
+                  "NW": 43,
+                  "S": 43,
+                  "SE": 43,
+                  "SW": 43,
+                  "W": 43
+                },
+                "support_fraction": 0.6530305594445043,
+                "supported_source_pixels": 509356
+              },
+              "8": {
+                "direction_counts": {
+                  "E": 81628,
+                  "N": 83156,
+                  "NE": 79156,
+                  "NW": 82180,
+                  "S": 81756,
+                  "SE": 81905,
+                  "SW": 78799,
+                  "W": 81553
+                },
+                "groups_by_direction": {
+                  "E": 43,
+                  "N": 43,
+                  "NE": 43,
+                  "NW": 43,
+                  "S": 43,
+                  "SE": 43,
+                  "SW": 43,
+                  "W": 43
+                },
+                "support_fraction": 0.8335166694872229,
+                "supported_source_pixels": 650133
+              }
+            },
+            "8": {
+              "16": {
+                "direction_counts": {
+                  "E": 58764,
+                  "N": 58743,
+                  "NE": 71371,
+                  "NW": 74602,
+                  "S": 57569,
+                  "SE": 74758,
+                  "SW": 70511,
+                  "W": 58040
+                },
+                "groups_by_direction": {
+                  "E": 43,
+                  "N": 43,
+                  "NE": 43,
+                  "NW": 43,
+                  "S": 43,
+                  "SE": 43,
+                  "SW": 43,
+                  "W": 43
+                },
+                "support_fraction": 0.6722641886798258,
+                "supported_source_pixels": 524358
+              },
+              "32": {
+                "direction_counts": {
+                  "E": 76700,
+                  "N": 76811,
+                  "NE": 88254,
+                  "NW": 90566,
+                  "S": 73767,
+                  "SE": 90612,
+                  "SW": 86112,
+                  "W": 76175
+                },
+                "groups_by_direction": {
+                  "E": 43,
+                  "N": 43,
+                  "NE": 43,
+                  "NW": 43,
+                  "S": 43,
+                  "SE": 43,
+                  "SW": 43,
+                  "W": 43
+                },
+                "support_fraction": 0.8448809468863624,
+                "supported_source_pixels": 658997
+              },
+              "4": {
+                "direction_counts": {
+                  "E": 0,
+                  "N": 0,
+                  "NE": 0,
+                  "NW": 0,
+                  "S": 0,
+                  "SE": 0,
+                  "SW": 0,
+                  "W": 0
+                },
+                "groups_by_direction": {
+                  "E": 0,
+                  "N": 0,
+                  "NE": 0,
+                  "NW": 0,
+                  "S": 0,
+                  "SE": 0,
+                  "SW": 0,
+                  "W": 0
+                },
+                "support_fraction": 0.0,
+                "supported_source_pixels": 0
+              },
+              "8": {
+                "direction_counts": {
+                  "E": 27481,
+                  "N": 27377,
+                  "NE": 40552,
+                  "NW": 43625,
+                  "S": 27141,
+                  "SE": 44038,
+                  "SW": 40487,
+                  "W": 27158
+                },
+                "groups_by_direction": {
+                  "E": 43,
+                  "N": 43,
+                  "NE": 43,
+                  "NW": 43,
+                  "S": 43,
+                  "SE": 43,
+                  "SW": 43,
+                  "W": 43
+                },
+                "support_fraction": 0.35623496771745206,
+                "supported_source_pixels": 277859
+              }
+            }
+          }
+        }
+      },
+      "train_groups": 44,
+      "train_images": 52
+    },
+    "3": {
+      "classes": {
+        "1": {
+          "boundary_source_pixels": 4341323,
+          "class_name": "Al3Ni",
+          "images_with_boundary_pixels": 53,
+          "interior_seed_pixels_by_clearance": {
+            "2": 8664513,
+            "4": 4804242,
+            "8": 1857509
+          },
+          "support_by_clearance_and_max_offset": {
+            "2": {
+              "16": {
+                "direction_counts": {
+                  "E": 541148,
+                  "N": 746867,
+                  "NE": 339446,
+                  "NW": 347874,
+                  "S": 744151,
+                  "SE": 339446,
+                  "SW": 342975,
+                  "W": 884666
+                },
+                "groups_by_direction": {
+                  "E": 45,
+                  "N": 45,
+                  "NE": 45,
+                  "NW": 45,
+                  "S": 45,
+                  "SE": 45,
+                  "SW": 45,
+                  "W": 45
+                },
+                "support_fraction": 0.9873886370583346,
+                "supported_source_pixels": 4286573
+              },
+              "32": {
+                "direction_counts": {
+                  "E": 547507,
+                  "N": 753131,
+                  "NE": 344524,
+                  "NW": 354125,
+                  "S": 750536,
+                  "SE": 345701,
+                  "SW": 348236,
+                  "W": 890290
+                },
+                "groups_by_direction": {
+                  "E": 45,
+                  "N": 45,
+                  "NE": 45,
+                  "NW": 45,
+                  "S": 45,
+                  "SE": 45,
+                  "SW": 45,
+                  "W": 45
+                },
+                "support_fraction": 0.9983247042433838,
+                "supported_source_pixels": 4334050
+              },
+              "4": {
+                "direction_counts": {
+                  "E": 482247,
+                  "N": 685366,
+                  "NE": 283686,
+                  "NW": 287174,
+                  "S": 681630,
+                  "SE": 282203,
+                  "SW": 286179,
+                  "W": 822813
+                },
+                "groups_by_direction": {
+                  "E": 45,
+                  "N": 45,
+                  "NE": 45,
+                  "NW": 45,
+                  "S": 45,
+                  "SE": 45,
+                  "SW": 45,
+                  "W": 45
+                },
+                "support_fraction": 0.8779116412208905,
+                "supported_source_pixels": 3811298
+              },
+              "8": {
+                "direction_counts": {
+                  "E": 518630,
+                  "N": 723250,
+                  "NE": 317764,
+                  "NW": 323319,
+                  "S": 720164,
+                  "SE": 316560,
+                  "SW": 321233,
+                  "W": 861205
+                },
+                "groups_by_direction": {
+                  "E": 45,
+                  "N": 45,
+                  "NE": 45,
+                  "NW": 45,
+                  "S": 45,
+                  "SE": 45,
+                  "SW": 45,
+                  "W": 45
+                },
+                "support_fraction": 0.9449020494443744,
+                "supported_source_pixels": 4102125
+              }
+            },
+            "4": {
+              "16": {
+                "direction_counts": {
+                  "E": 390694,
+                  "N": 412550,
+                  "NE": 380805,
+                  "NW": 376698,
+                  "S": 412778,
+                  "SE": 370069,
+                  "SW": 378942,
+                  "W": 392332
+                },
+                "groups_by_direction": {
+                  "E": 45,
+                  "N": 45,
+                  "NE": 45,
+                  "NW": 45,
+                  "S": 45,
+                  "SE": 45,
+                  "SW": 45,
+                  "W": 45
+                },
+                "support_fraction": 0.7174928011576195,
+                "supported_source_pixels": 3114868
+              },
+              "32": {
+                "direction_counts": {
+                  "E": 485165,
+                  "N": 504486,
+                  "NE": 472744,
+                  "NW": 469485,
+                  "S": 505673,
+                  "SE": 459835,
+                  "SW": 471049,
+                  "W": 488158
+                },
+                "groups_by_direction": {
+                  "E": 45,
+                  "N": 45,
+                  "NE": 45,
+                  "NW": 45,
+                  "S": 45,
+                  "SE": 45,
+                  "SW": 45,
+                  "W": 45
+                },
+                "support_fraction": 0.8883455573335594,
+                "supported_source_pixels": 3856595
+              },
+              "4": {
+                "direction_counts": {
+                  "E": 204117,
+                  "N": 221286,
+                  "NE": 196295,
+                  "NW": 192172,
+                  "S": 222907,
+                  "SE": 190831,
+                  "SW": 197095,
+                  "W": 203074
+                },
+                "groups_by_direction": {
+                  "E": 45,
+                  "N": 45,
+                  "NE": 45,
+                  "NW": 45,
+                  "S": 45,
+                  "SE": 45,
+                  "SW": 45,
+                  "W": 45
+                },
+                "support_fraction": 0.37494952575516727,
+                "supported_source_pixels": 1627777
+              },
+              "8": {
+                "direction_counts": {
+                  "E": 294969,
+                  "N": 314700,
+                  "NE": 285591,
+                  "NW": 284170,
+                  "S": 314271,
+                  "SE": 279904,
+                  "SW": 286030,
+                  "W": 295090
+                },
+                "groups_by_direction": {
+                  "E": 45,
+                  "N": 45,
+                  "NE": 45,
+                  "NW": 45,
+                  "S": 45,
+                  "SE": 45,
+                  "SW": 45,
+                  "W": 45
+                },
+                "support_fraction": 0.5423980201427077,
+                "supported_source_pixels": 2354725
+              }
+            },
+            "8": {
+              "16": {
+                "direction_counts": {
+                  "E": 121562,
+                  "N": 137562,
+                  "NE": 154739,
+                  "NW": 152397,
+                  "S": 137097,
+                  "SE": 151382,
+                  "SW": 153855,
+                  "W": 120646
+                },
+                "groups_by_direction": {
+                  "E": 41,
+                  "N": 41,
+                  "NE": 41,
+                  "NW": 41,
+                  "S": 41,
+                  "SE": 41,
+                  "SW": 41,
+                  "W": 41
+                },
+                "support_fraction": 0.26011425549308353,
+                "supported_source_pixels": 1129240
+              },
+              "32": {
+                "direction_counts": {
+                  "E": 209841,
+                  "N": 229290,
+                  "NE": 243146,
+                  "NW": 233301,
+                  "S": 228678,
+                  "SE": 235018,
+                  "SW": 238767,
+                  "W": 208326
+                },
+                "groups_by_direction": {
+                  "E": 41,
+                  "N": 41,
+                  "NE": 41,
+                  "NW": 41,
+                  "S": 41,
+                  "SE": 41,
+                  "SW": 41,
+                  "W": 41
+                },
+                "support_fraction": 0.42069364569279916,
+                "supported_source_pixels": 1826367
+              },
+              "4": {
+                "direction_counts": {
+                  "E": 0,
+                  "N": 0,
+                  "NE": 0,
+                  "NW": 0,
+                  "S": 0,
+                  "SE": 0,
+                  "SW": 0,
+                  "W": 0
+                },
+                "groups_by_direction": {
+                  "E": 0,
+                  "N": 0,
+                  "NE": 0,
+                  "NW": 0,
+                  "S": 0,
+                  "SE": 0,
+                  "SW": 0,
+                  "W": 0
+                },
+                "support_fraction": 0.0,
+                "supported_source_pixels": 0
+              },
+              "8": {
+                "direction_counts": {
+                  "E": 46847,
+                  "N": 57905,
+                  "NE": 79187,
+                  "NW": 75588,
+                  "S": 59245,
+                  "SE": 74619,
+                  "SW": 79204,
+                  "W": 46209
+                },
+                "groups_by_direction": {
+                  "E": 41,
+                  "N": 41,
+                  "NE": 41,
+                  "NW": 41,
+                  "S": 41,
+                  "SE": 41,
+                  "SW": 41,
+                  "W": 41
+                },
+                "support_fraction": 0.11950366282352178,
+                "supported_source_pixels": 518804
+              }
+            }
+          }
+        },
+        "2": {
+          "boundary_source_pixels": 845101,
+          "class_name": "Primary_Si",
+          "images_with_boundary_pixels": 52,
+          "interior_seed_pixels_by_clearance": {
+            "2": 4024013,
+            "4": 2904049,
+            "8": 1584995
+          },
+          "support_by_clearance_and_max_offset": {
+            "2": {
+              "16": {
+                "direction_counts": {
+                  "E": 106045,
+                  "N": 155773,
+                  "NE": 57867,
+                  "NW": 58985,
+                  "S": 153606,
+                  "SE": 58057,
+                  "SW": 58117,
+                  "W": 196403
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.9997065439515513,
+                "supported_source_pixels": 844853
+              },
+              "32": {
+                "direction_counts": {
+                  "E": 106062,
+                  "N": 155795,
+                  "NE": 57873,
+                  "NW": 59011,
+                  "S": 153621,
+                  "SE": 58139,
+                  "SW": 58149,
+                  "W": 196447
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.9999952668379283,
+                "supported_source_pixels": 845097
+              },
+              "4": {
+                "direction_counts": {
+                  "E": 103600,
+                  "N": 153173,
+                  "NE": 55850,
+                  "NW": 56411,
+                  "S": 151197,
+                  "SE": 55572,
+                  "SW": 56061,
+                  "W": 193669
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.9768453711449874,
+                "supported_source_pixels": 825533
+              },
+              "8": {
+                "direction_counts": {
+                  "E": 105646,
+                  "N": 155330,
+                  "NE": 57488,
+                  "NW": 58392,
+                  "S": 153233,
+                  "SE": 57530,
+                  "SW": 57732,
+                  "W": 195968
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.9955247952611581,
+                "supported_source_pixels": 841319
+              }
+            },
+            "4": {
+              "16": {
+                "direction_counts": {
+                  "E": 100820,
+                  "N": 104185,
+                  "NE": 96032,
+                  "NW": 98674,
+                  "S": 101962,
+                  "SE": 97869,
+                  "SW": 96508,
+                  "W": 100780
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.9428813834086104,
+                "supported_source_pixels": 796830
+              },
+              "32": {
+                "direction_counts": {
+                  "E": 106655,
+                  "N": 109932,
+                  "NE": 100763,
+                  "NW": 103535,
+                  "S": 107102,
+                  "SE": 103203,
+                  "SW": 101138,
+                  "W": 106129
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.9921382177988193,
+                "supported_source_pixels": 838457
+              },
+              "4": {
+                "direction_counts": {
+                  "E": 68156,
+                  "N": 70998,
+                  "NE": 66453,
+                  "NW": 67835,
+                  "S": 70285,
+                  "SE": 66966,
+                  "SW": 66829,
+                  "W": 67998
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.6455086433455883,
+                "supported_source_pixels": 545520
+              },
+              "8": {
+                "direction_counts": {
+                  "E": 88271,
+                  "N": 91086,
+                  "NE": 85651,
+                  "NW": 87986,
+                  "S": 89866,
+                  "SE": 86496,
+                  "SW": 86084,
+                  "W": 88341
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.8327773840049888,
+                "supported_source_pixels": 703781
+              }
+            },
+            "8": {
+              "16": {
+                "direction_counts": {
+                  "E": 61947,
+                  "N": 61590,
+                  "NE": 74807,
+                  "NW": 77686,
+                  "S": 60474,
+                  "SE": 76410,
+                  "SW": 75131,
+                  "W": 60716
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.6493436879142256,
+                "supported_source_pixels": 548761
+              },
+              "32": {
+                "direction_counts": {
+                  "E": 82463,
+                  "N": 82530,
+                  "NE": 93671,
+                  "NW": 96289,
+                  "S": 79886,
+                  "SE": 94797,
+                  "SW": 93183,
+                  "W": 80165
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.8318343014621921,
+                "supported_source_pixels": 702984
+              },
+              "4": {
+                "direction_counts": {
+                  "E": 0,
+                  "N": 0,
+                  "NE": 0,
+                  "NW": 0,
+                  "S": 0,
+                  "SE": 0,
+                  "SW": 0,
+                  "W": 0
+                },
+                "groups_by_direction": {
+                  "E": 0,
+                  "N": 0,
+                  "NE": 0,
+                  "NW": 0,
+                  "S": 0,
+                  "SE": 0,
+                  "SW": 0,
+                  "W": 0
+                },
+                "support_fraction": 0.0,
+                "supported_source_pixels": 0
+              },
+              "8": {
+                "direction_counts": {
+                  "E": 28598,
+                  "N": 28238,
+                  "NE": 42212,
+                  "NW": 44669,
+                  "S": 27986,
+                  "SE": 43725,
+                  "SW": 42760,
+                  "W": 27809
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.33841753825874066,
+                "supported_source_pixels": 285997
+              }
+            }
+          }
+        }
+      },
+      "train_groups": 45,
+      "train_images": 53
+    },
+    "4": {
+      "classes": {
+        "1": {
+          "boundary_source_pixels": 4265469,
+          "class_name": "Al3Ni",
+          "images_with_boundary_pixels": 53,
+          "interior_seed_pixels_by_clearance": {
+            "2": 8804028,
+            "4": 4914799,
+            "8": 1766134
+          },
+          "support_by_clearance_and_max_offset": {
+            "2": {
+              "16": {
+                "direction_counts": {
+                  "E": 539450,
+                  "N": 731069,
+                  "NE": 336388,
+                  "NW": 336799,
+                  "S": 721433,
+                  "SE": 327520,
+                  "SW": 337594,
+                  "W": 880140
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.9870879380438587,
+                "supported_source_pixels": 4210393
+              },
+              "32": {
+                "direction_counts": {
+                  "E": 545791,
+                  "N": 737070,
+                  "NE": 341778,
+                  "NW": 342674,
+                  "S": 727545,
+                  "SE": 333525,
+                  "SW": 343043,
+                  "W": 886506
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.9982330196280877,
+                "supported_source_pixels": 4257932
+              },
+              "4": {
+                "direction_counts": {
+                  "E": 483432,
+                  "N": 672343,
+                  "NE": 282426,
+                  "NW": 279603,
+                  "S": 663236,
+                  "SE": 273677,
+                  "SW": 283699,
+                  "W": 821731
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.8815319018846463,
+                "supported_source_pixels": 3760147
+              },
+              "8": {
+                "direction_counts": {
+                  "E": 518508,
+                  "N": 708892,
+                  "NE": 315536,
+                  "NW": 314190,
+                  "S": 699051,
+                  "SE": 306728,
+                  "SW": 317242,
+                  "W": 858410
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.9468025673144032,
+                "supported_source_pixels": 4038557
+              }
+            },
+            "4": {
+              "16": {
+                "direction_counts": {
+                  "E": 396009,
+                  "N": 402515,
+                  "NE": 379458,
+                  "NW": 376419,
+                  "S": 406937,
+                  "SE": 368715,
+                  "SW": 375391,
+                  "W": 398734
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.7277459993262171,
+                "supported_source_pixels": 3104178
+              },
+              "32": {
+                "direction_counts": {
+                  "E": 487070,
+                  "N": 491324,
+                  "NE": 467325,
+                  "NW": 463158,
+                  "S": 496988,
+                  "SE": 451514,
+                  "SW": 463875,
+                  "W": 491868
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.8939514037026175,
+                "supported_source_pixels": 3813122
+              },
+              "4": {
+                "direction_counts": {
+                  "E": 215226,
+                  "N": 222384,
+                  "NE": 206391,
+                  "NW": 201287,
+                  "S": 226767,
+                  "SE": 197377,
+                  "SW": 203976,
+                  "W": 215114
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.39585846245746953,
+                "supported_source_pixels": 1688522
+              },
+              "8": {
+                "direction_counts": {
+                  "E": 303403,
+                  "N": 310740,
+                  "NE": 290323,
+                  "NW": 290268,
+                  "S": 312901,
+                  "SE": 283895,
+                  "SW": 287181,
+                  "W": 304025
+                },
+                "groups_by_direction": {
+                  "E": 44,
+                  "N": 44,
+                  "NE": 44,
+                  "NW": 44,
+                  "S": 44,
+                  "SE": 44,
+                  "SW": 44,
+                  "W": 44
+                },
+                "support_fraction": 0.5586105537280894,
+                "supported_source_pixels": 2382736
+              }
+            },
+            "8": {
+              "16": {
+                "direction_counts": {
+                  "E": 136387,
+                  "N": 141174,
+                  "NE": 161709,
+                  "NW": 173471,
+                  "S": 141751,
+                  "SE": 171050,
+                  "SW": 156875,
+                  "W": 136872
+                },
+                "groups_by_direction": {
+                  "E": 41,
+                  "N": 41,
+                  "NE": 41,
+                  "NW": 41,
+                  "S": 41,
+                  "SE": 41,
+                  "SW": 41,
+                  "W": 41
+                },
+                "support_fraction": 0.28585109867168185,
+                "supported_source_pixels": 1219289
+              },
+              "32": {
+                "direction_counts": {
+                  "E": 233155,
+                  "N": 241415,
+                  "NE": 256686,
+                  "NW": 264255,
+                  "S": 240537,
+                  "SE": 259065,
+                  "SW": 249284,
+                  "W": 236257
+                },
+                "groups_by_direction": {
+                  "E": 41,
+                  "N": 41,
+                  "NE": 41,
+                  "NW": 41,
+                  "S": 41,
+                  "SE": 41,
+                  "SW": 41,
+                  "W": 41
+                },
+                "support_fraction": 0.46434612465827324,
+                "supported_source_pixels": 1980654
+              },
+              "4": {
+                "direction_counts": {
+                  "E": 0,
+                  "N": 0,
+                  "NE": 0,
+                  "NW": 0,
+                  "S": 0,
+                  "SE": 0,
+                  "SW": 0,
+                  "W": 0
+                },
+                "groups_by_direction": {
+                  "E": 0,
+                  "N": 0,
+                  "NE": 0,
+                  "NW": 0,
+                  "S": 0,
+                  "SE": 0,
+                  "SW": 0,
+                  "W": 0
+                },
+                "support_fraction": 0.0,
+                "supported_source_pixels": 0
+              },
+              "8": {
+                "direction_counts": {
+                  "E": 54571,
+                  "N": 57499,
+                  "NE": 81734,
+                  "NW": 89345,
+                  "S": 61043,
+                  "SE": 87853,
+                  "SW": 78998,
+                  "W": 55072
+                },
+                "groups_by_direction": {
+                  "E": 41,
+                  "N": 41,
+                  "NE": 41,
+                  "NW": 41,
+                  "S": 41,
+                  "SE": 41,
+                  "SW": 41,
+                  "W": 41
+                },
+                "support_fraction": 0.13272045817236042,
+                "supported_source_pixels": 566115
+              }
+            }
+          }
+        },
+        "2": {
+          "boundary_source_pixels": 773113,
+          "class_name": "Primary_Si",
+          "images_with_boundary_pixels": 52,
+          "interior_seed_pixels_by_clearance": {
+            "2": 4176788,
+            "4": 3114240,
+            "8": 1794259
+          },
+          "support_by_clearance_and_max_offset": {
+            "2": {
+              "16": {
+                "direction_counts": {
+                  "E": 96153,
+                  "N": 142883,
+                  "NE": 52190,
+                  "NW": 53298,
+                  "S": 142205,
+                  "SE": 53312,
+                  "SW": 52467,
+                  "W": 180379
+                },
+                "groups_by_direction": {
+                  "E": 43,
+                  "N": 43,
+                  "NE": 43,
+                  "NW": 43,
+                  "S": 43,
+                  "SE": 43,
+                  "SW": 43,
+                  "W": 43
+                },
+                "support_fraction": 0.99970767533336,
+                "supported_source_pixels": 772887
+              },
+              "32": {
+                "direction_counts": {
+                  "E": 96164,
+                  "N": 142908,
+                  "NE": 52194,
+                  "NW": 53326,
+                  "S": 142220,
+                  "SE": 53392,
+                  "SW": 52506,
+                  "W": 180399
+                },
+                "groups_by_direction": {
+                  "E": 43,
+                  "N": 43,
+                  "NE": 43,
+                  "NW": 43,
+                  "S": 43,
+                  "SE": 43,
+                  "SW": 43,
+                  "W": 43
+                },
+                "support_fraction": 0.9999948261120949,
+                "supported_source_pixels": 773109
+              },
+              "4": {
+                "direction_counts": {
+                  "E": 94002,
+                  "N": 140722,
+                  "NE": 50387,
+                  "NW": 51219,
+                  "S": 140058,
+                  "SE": 51051,
+                  "SW": 50632,
+                  "W": 178048
+                },
+                "groups_by_direction": {
+                  "E": 43,
+                  "N": 43,
+                  "NE": 43,
+                  "NW": 43,
+                  "S": 43,
+                  "SE": 43,
+                  "SW": 43,
+                  "W": 43
+                },
+                "support_fraction": 0.9780187372350484,
+                "supported_source_pixels": 756119
+              },
+              "8": {
+                "direction_counts": {
+                  "E": 95802,
+                  "N": 142458,
+                  "NE": 51859,
+                  "NW": 52784,
+                  "S": 141841,
+                  "SE": 52792,
+                  "SW": 52132,
+                  "W": 179997
+                },
+                "groups_by_direction": {
+                  "E": 43,
+                  "N": 43,
+                  "NE": 43,
+                  "NW": 43,
+                  "S": 43,
+                  "SE": 43,
+                  "SW": 43,
+                  "W": 43
+                },
+                "support_fraction": 0.9955401086257766,
+                "supported_source_pixels": 769665
+              }
+            },
+            "4": {
+              "16": {
+                "direction_counts": {
+                  "E": 92365,
+                  "N": 95977,
+                  "NE": 90085,
+                  "NW": 91651,
+                  "S": 93892,
+                  "SE": 91380,
+                  "SW": 90158,
+                  "W": 92769
+                },
+                "groups_by_direction": {
+                  "E": 43,
+                  "N": 43,
+                  "NE": 43,
+                  "NW": 43,
+                  "S": 43,
+                  "SE": 43,
+                  "SW": 43,
+                  "W": 43
+                },
+                "support_fraction": 0.954940610234209,
+                "supported_source_pixels": 738277
+              },
+              "32": {
+                "direction_counts": {
+                  "E": 96622,
+                  "N": 100140,
+                  "NE": 93930,
+                  "NW": 95190,
+                  "S": 97005,
+                  "SE": 95200,
+                  "SW": 93643,
+                  "W": 96940
+                },
+                "groups_by_direction": {
+                  "E": 43,
+                  "N": 43,
+                  "NE": 43,
+                  "NW": 43,
+                  "S": 43,
+                  "SE": 43,
+                  "SW": 43,
+                  "W": 43
+                },
+                "support_fraction": 0.994253104009375,
+                "supported_source_pixels": 768670
+              },
+              "4": {
+                "direction_counts": {
+                  "E": 64589,
+                  "N": 67881,
+                  "NE": 63663,
+                  "NW": 65135,
+                  "S": 67203,
+                  "SE": 64869,
+                  "SW": 64045,
+                  "W": 64601
+                },
+                "groups_by_direction": {
+                  "E": 43,
+                  "N": 43,
+                  "NE": 43,
+                  "NW": 43,
+                  "S": 43,
+                  "SE": 43,
+                  "SW": 43,
+                  "W": 43
+                },
+                "support_fraction": 0.6751742630120047,
+                "supported_source_pixels": 521986
+              },
+              "8": {
+                "direction_counts": {
+                  "E": 82256,
+                  "N": 85475,
+                  "NE": 81056,
+                  "NW": 82850,
+                  "S": 84178,
+                  "SE": 82189,
+                  "SW": 81260,
+                  "W": 82336
+                },
+                "groups_by_direction": {
+                  "E": 43,
+                  "N": 43,
+                  "NE": 43,
+                  "NW": 43,
+                  "S": 43,
+                  "SE": 43,
+                  "SW": 43,
+                  "W": 43
+                },
+                "support_fraction": 0.8557610595087652,
+                "supported_source_pixels": 661600
+              }
+            },
+            "8": {
+              "16": {
+                "direction_counts": {
+                  "E": 59622,
+                  "N": 60683,
+                  "NE": 73962,
+                  "NW": 75828,
+                  "S": 59077,
+                  "SE": 75555,
+                  "SW": 73701,
+                  "W": 59225
+                },
+                "groups_by_direction": {
+                  "E": 43,
+                  "N": 43,
+                  "NE": 43,
+                  "NW": 43,
+                  "S": 43,
+                  "SE": 43,
+                  "SW": 43,
+                  "W": 43
+                },
+                "support_fraction": 0.6954390884644289,
+                "supported_source_pixels": 537653
+              },
+              "32": {
+                "direction_counts": {
+                  "E": 78012,
+                  "N": 79497,
+                  "NE": 91471,
+                  "NW": 91936,
+                  "S": 76051,
+                  "SE": 91877,
+                  "SW": 89531,
+                  "W": 76465
+                },
+                "groups_by_direction": {
+                  "E": 43,
+                  "N": 43,
+                  "NE": 43,
+                  "NW": 43,
+                  "S": 43,
+                  "SE": 43,
+                  "SW": 43,
+                  "W": 43
+                },
+                "support_fraction": 0.8728866284747507,
+                "supported_source_pixels": 674840
+              },
+              "4": {
+                "direction_counts": {
+                  "E": 0,
+                  "N": 0,
+                  "NE": 0,
+                  "NW": 0,
+                  "S": 0,
+                  "SE": 0,
+                  "SW": 0,
+                  "W": 0
+                },
+                "groups_by_direction": {
+                  "E": 0,
+                  "N": 0,
+                  "NE": 0,
+                  "NW": 0,
+                  "S": 0,
+                  "SE": 0,
+                  "SW": 0,
+                  "W": 0
+                },
+                "support_fraction": 0.0,
+                "supported_source_pixels": 0
+              },
+              "8": {
+                "direction_counts": {
+                  "E": 28273,
+                  "N": 28865,
+                  "NE": 42656,
+                  "NW": 44697,
+                  "S": 28357,
+                  "SE": 44515,
+                  "SW": 42891,
+                  "W": 27877
+                },
+                "groups_by_direction": {
+                  "E": 43,
+                  "N": 43,
+                  "NE": 43,
+                  "NW": 43,
+                  "S": 43,
+                  "SE": 43,
+                  "SW": 43,
+                  "W": 43
+                },
+                "support_fraction": 0.37268937399836766,
+                "supported_source_pixels": 288131
+              }
+            }
+          }
+        }
+      },
+      "train_groups": 44,
+      "train_images": 53
+    }
+  },
+  "interpretation_guard": "Geometric target availability only; not evidence that a model learns directions or improves semantic mIoU.",
+  "lock_sha256": "4779ca2e3dd5d6d04be7a7d409aefd3c12f5a69173fdd93ab3023dfbbb13579d",
+  "primary_cells": {
+    "interior_clearance_px": 4,
+    "maximum_target_offset_px": 16
+  },
+  "revision": 1,
+  "scope": "outer-train masks only; no OOF predictions or official valid/test",
+  "training_or_miou_computed": false
+}

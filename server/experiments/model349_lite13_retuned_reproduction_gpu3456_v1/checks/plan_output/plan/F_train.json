@@ -1,0 +1,22 @@
+{
+  "name": "F_train",
+  "artifact": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/checks/plan_output/F/training/epoch8.pt",
+  "command": [
+    "/home/sppark/miniconda3/envs/komap/bin/python",
+    "-B",
+    "-u",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/source/training/refiner_retrain/train_refiner.py",
+    "--parent-package",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/source/inference/parent_package",
+    "--features",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/checks/plan_output/F/features",
+    "--out",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/checks/plan_output/F/training"
+  ],
+  "cwd": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/source",
+  "env": {
+    "CUDA_VISIBLE_DEVICES": "3",
+    "PYTHONPATH": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/source/training/train_route/experiments:/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/source/training/train_route/experiments/historical_scripts",
+    "OMP_NUM_THREADS": null
+  }
+}

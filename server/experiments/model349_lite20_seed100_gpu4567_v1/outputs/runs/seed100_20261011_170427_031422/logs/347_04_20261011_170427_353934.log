@@ -1,0 +1,162 @@
+COMMAND: /home/sppark/miniconda3/envs/komap/bin/python -B -u /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/source/experiments/model336_hrnet_best/train.py --data-root /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/source/../data --output-dir /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/jobs/347_04/attempt_1/training --batch-size 4 --accumulation-steps 2 --epochs 12 --samples-per-image 12 --lr 1e-4 --encoder-lr-mult 0.3 --weight-decay 1e-4 --boundary-head-weight 1.0 --seed 3423 --val-every 0 --init-checkpoint /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/jobs/336_05/attempt_1/training/last.pt --ce-class-weights 0.22906544 0.49862612 1.39166570 1.88064275
+initialized from inference checkpoint /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/jobs/336_05/attempt_1/training/last.pt
+/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/source/experiments/model336_hrnet_best/train.py:155: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=use_amp)
+70 train images, 210 steps/epoch, device=cuda:0
+train:   0%|          | 0/12 [00:00<?, ?item/s]
+train:   0%|          | 0/210 [00:00<?, ?item/s][A/Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/implementation/source/experiments/model336_hrnet_best/train.py:181: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+
+train:  23%|██▎       | 48/210 [00:10<00:33,  4.80item/s][Aepoch   1/12 step   50/210 loss=0.8889
+epoch   1/12 step  100/210 loss=0.8962
+
+train:  57%|█████▋    | 119/210 [00:20<00:14,  6.14item/s][Aepoch   1/12 step  150/210 loss=0.8964
+
+train:  93%|█████████▎| 195/210 [00:30<00:02,  6.80item/s][Aepoch   1/12 step  200/210 loss=0.8906
+epoch   1/12 step  210/210 loss=0.8906
+train: 100%|██████████| 210/210 [00:32<00:00,  6.56item/s]
+epoch   1/12 train_loss=0.8906 time=32.0s
+train:   8%|▊         | 1/12 [00:33<06:13, 33.97s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch   2/12 step   50/210 loss=0.9060
+
+train:  35%|███▌      | 74/210 [00:10<00:18,  7.32item/s][Aepoch   2/12 step  100/210 loss=0.8921
+epoch   2/12 step  150/210 loss=0.8891
+
+train:  71%|███████▏  | 150/210 [00:20<00:08,  7.46item/s][Aepoch   2/12 step  200/210 loss=0.8887
+epoch   2/12 step  210/210 loss=0.8898
+train: 100%|██████████| 210/210 [00:28<00:00,  7.45item/s]
+epoch   2/12 train_loss=0.8898 time=28.2s
+train:  17%|█▋        | 2/12 [01:06<05:31, 33.12s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch   3/12 step   50/210 loss=0.8718
+
+train:  35%|███▌      | 74/210 [00:10<00:18,  7.34item/s][Aepoch   3/12 step  100/210 loss=0.8804
+
+train:  71%|███████   | 149/210 [00:20<00:08,  7.39item/s][Aepoch   3/12 step  150/210 loss=0.8837
+epoch   3/12 step  200/210 loss=0.8803
+epoch   3/12 step  210/210 loss=0.8825
+train: 100%|██████████| 210/210 [00:28<00:00,  7.31item/s]
+epoch   3/12 train_loss=0.8825 time=28.7s
+train:  25%|██▌       | 3/12 [01:39<04:59, 33.24s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch   4/12 step   50/210 loss=0.8810
+
+train:  31%|███▏      | 66/210 [00:10<00:21,  6.57item/s][Aepoch   4/12 step  100/210 loss=0.8779
+
+train:  65%|██████▍   | 136/210 [00:20<00:10,  6.79item/s][Aepoch   4/12 step  150/210 loss=0.8806
+epoch   4/12 step  200/210 loss=0.8755
+
+train:  65%|██████▍   | 136/210 [00:30<00:10,  6.79item/s][A
+train:  98%|█████████▊| 206/210 [00:30<00:00,  6.83item/s][Aepoch   4/12 step  210/210 loss=0.8782
+train: 100%|██████████| 210/210 [00:31<00:00,  6.77item/s]
+epoch   4/12 train_loss=0.8782 time=31.0s
+train:  33%|███▎      | 4/12 [02:18<04:41, 35.20s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch   5/12 step   50/210 loss=0.8781
+
+train:  32%|███▏      | 67/210 [00:10<00:21,  6.63item/s][Aepoch   5/12 step  100/210 loss=0.8849
+
+train:  65%|██████▌   | 137/210 [00:20<00:10,  6.81item/s][Aepoch   5/12 step  150/210 loss=0.8886
+epoch   5/12 step  200/210 loss=0.8841
+
+train:  99%|█████████▊| 207/210 [00:30<00:00,  6.79item/s][Aepoch   5/12 step  210/210 loss=0.8832
+train: 100%|██████████| 210/210 [00:31<00:00,  6.75item/s]
+epoch   5/12 train_loss=0.8832 time=31.1s
+train:  42%|████▏     | 5/12 [02:54<04:09, 35.66s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch   6/12 step   50/210 loss=0.8741
+
+train:  33%|███▎      | 69/210 [00:10<00:20,  6.84item/s][Aepoch   6/12 step  100/210 loss=0.8775
+
+train:  66%|██████▌   | 138/210 [00:20<00:10,  6.80item/s][Aepoch   6/12 step  150/210 loss=0.8727
+epoch   6/12 step  200/210 loss=0.8704
+
+train: 100%|█████████▉| 209/210 [00:30<00:00,  6.91item/s][Aepoch   6/12 step  210/210 loss=0.8711
+train: 100%|██████████| 210/210 [00:30<00:00,  6.84item/s]
+epoch   6/12 train_loss=0.8711 time=30.7s
+train:  50%|█████     | 6/12 [03:30<03:33, 35.67s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch   7/12 step   50/210 loss=0.8877
+
+train:  32%|███▏      | 67/210 [00:10<00:21,  6.65item/s][Aepoch   7/12 step  100/210 loss=0.8892
+
+train:  32%|███▏      | 67/210 [00:20<00:21,  6.65item/s][A
+train:  66%|██████▌   | 138/210 [00:20<00:10,  6.87item/s][Aepoch   7/12 step  150/210 loss=0.8785
+epoch   7/12 step  200/210 loss=0.8779
+epoch   7/12 step  210/210 loss=0.8750
+
+train:  66%|██████▌   | 138/210 [00:30<00:10,  6.87item/s][Atrain: 100%|██████████| 210/210 [00:30<00:00,  6.95item/s]
+epoch   7/12 train_loss=0.8750 time=30.2s
+train:  58%|█████▊    | 7/12 [04:05<02:57, 35.56s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch   8/12 step   50/210 loss=0.8737
+
+train:  35%|███▍      | 73/210 [00:10<00:18,  7.24item/s][Aepoch   8/12 step  100/210 loss=0.8700
+
+train:  71%|███████   | 149/210 [00:20<00:08,  7.44item/s][Aepoch   8/12 step  150/210 loss=0.8694
+epoch   8/12 step  200/210 loss=0.8691
+epoch   8/12 step  210/210 loss=0.8698
+train: 100%|██████████| 210/210 [00:28<00:00,  7.44item/s]
+epoch   8/12 train_loss=0.8698 time=28.2s
+train:  67%|██████▋   | 8/12 [04:39<02:19, 34.92s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch   9/12 step   50/210 loss=0.8656
+
+train:  34%|███▍      | 72/210 [00:10<00:19,  7.12item/s][Aepoch   9/12 step  100/210 loss=0.8765
+
+train:  69%|██████▊   | 144/210 [00:20<00:09,  6.99item/s][Aepoch   9/12 step  150/210 loss=0.8666
+epoch   9/12 step  200/210 loss=0.8701
+epoch   9/12 step  210/210 loss=0.8684
+train: 100%|██████████| 210/210 [00:29<00:00,  7.00item/s]
+epoch   9/12 train_loss=0.8684 time=30.0s
+train:  75%|███████▌  | 9/12 [05:13<01:44, 34.88s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  10/12 step   50/210 loss=0.8685
+
+train:  35%|███▌      | 74/210 [00:10<00:18,  7.30item/s][Aepoch  10/12 step  100/210 loss=0.8628
+epoch  10/12 step  150/210 loss=0.8655
+
+train:  72%|███████▏  | 151/210 [00:20<00:07,  7.48item/s][Aepoch  10/12 step  200/210 loss=0.8646
+epoch  10/12 step  210/210 loss=0.8622
+train: 100%|██████████| 210/210 [00:28<00:00,  7.45item/s]
+epoch  10/12 train_loss=0.8622 time=28.2s
+train:  83%|████████▎ | 10/12 [05:47<01:09, 34.52s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  11/12 step   50/210 loss=0.8501
+
+train:  32%|███▏      | 68/210 [00:10<00:20,  6.79item/s][Aepoch  11/12 step  100/210 loss=0.8678
+
+train:  68%|██████▊   | 143/210 [00:20<00:09,  7.17item/s][Aepoch  11/12 step  150/210 loss=0.8668
+epoch  11/12 step  200/210 loss=0.8681
+epoch  11/12 step  210/210 loss=0.8682
+train: 100%|██████████| 210/210 [00:29<00:00,  7.05item/s]
+epoch  11/12 train_loss=0.8682 time=29.8s
+train:  92%|█████████▏| 11/12 [06:23<00:34, 34.89s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  12/12 step   50/210 loss=0.8804
+
+train:  33%|███▎      | 69/210 [00:10<00:20,  6.82item/s][Aepoch  12/12 step  100/210 loss=0.8753
+
+train:  66%|██████▌   | 138/210 [00:20<00:10,  6.85item/s][Aepoch  12/12 step  150/210 loss=0.8751
+epoch  12/12 step  200/210 loss=0.8722
+epoch  12/12 step  210/210 loss=0.8720
+
+train: 100%|██████████| 210/210 [00:30<00:00,  7.01item/s][Atrain: 100%|██████████| 210/210 [00:30<00:00,  6.94item/s]
+epoch  12/12 train_loss=0.8720 time=30.3s
+train: 100%|██████████| 12/12 [07:01<00:00, 35.80s/item]train: 100%|██████████| 12/12 [07:01<00:00, 35.10s/item]
+done. final model: /Data3/sppark/komap/experiments/model349_lite20_seed100_gpu4567_v1/outputs/runs/seed100_20261011_170427_031422/jobs/347_04/attempt_1/training/last.pt (evaluate it with evaluate.py)
+CPU torch_threads=2 opencv_threads=2
+component=347 GPU=GPU-d7e94612-cce1-c1d5-78b5-3c538803e341 device=NVIDIA GeForce RTX 4090
+HRNet Model347:   0%|          | 0/20 [00:00<?, ?image/s]DONE 347 A117_step4_sample2
+HRNet Model347:   5%|▌         | 1/20 [00:02<00:41,  2.17s/image]DONE 347 A11_step1_sample4
+HRNet Model347:  10%|█         | 2/20 [00:02<00:20,  1.12s/image]DONE 347 A11_step2_sample4
+HRNet Model347:  15%|█▌        | 3/20 [00:02<00:13,  1.29image/s]DONE 347 A125_step1_sample4
+HRNet Model347:  20%|██        | 4/20 [00:04<00:17,  1.10s/image]DONE 347 A153_step3_sample3
+HRNet Model347:  25%|██▌       | 5/20 [00:06<00:19,  1.28s/image]DONE 347 A170_step4_sample3
+HRNet Model347:  30%|███       | 6/20 [00:06<00:13,  1.04image/s]DONE 347 A181_step1_sample1
+HRNet Model347:  35%|███▌      | 7/20 [00:08<00:17,  1.33s/image]DONE 347 A186_step2_sample2
+HRNet Model347:  40%|████      | 8/20 [00:10<00:17,  1.43s/image]DONE 347 A191_step4_sample3
+HRNet Model347:  45%|████▌     | 9/20 [00:12<00:17,  1.63s/image]DONE 347 A40_step3_sample3
+HRNet Model347:  50%|█████     | 10/20 [00:13<00:16,  1.63s/image]DONE 347 A42_step2_sample4
+HRNet Model347:  55%|█████▌    | 11/20 [00:15<00:14,  1.64s/image]DONE 347 A44_step4_sample3
+HRNet Model347:  60%|██████    | 12/20 [00:17<00:13,  1.65s/image]DONE 347 A55_step2_sample1
+HRNet Model347:  65%|██████▌   | 13/20 [00:18<00:10,  1.52s/image]DONE 347 A59_step3_sample1
+HRNet Model347:  70%|███████   | 14/20 [00:18<00:06,  1.16s/image]DONE 347 A63_step1_sample4
+HRNet Model347:  75%|███████▌  | 15/20 [00:19<00:04,  1.09image/s]DONE 347 A67_step1_sample1
+HRNet Model347:  80%|████████  | 16/20 [00:19<00:02,  1.35image/s]DONE 347 A71_step2_sample1
+HRNet Model347:  85%|████████▌ | 17/20 [00:19<00:01,  1.61image/s]DONE 347 A72_step4_sample4
+HRNet Model347:  90%|█████████ | 18/20 [00:20<00:01,  1.85image/s]DONE 347 A74_step3_sample4
+HRNet Model347:  95%|█████████▌| 19/20 [00:20<00:00,  2.09image/s]DONE 347 A7_step1_sample4
+HRNet Model347: 100%|██████████| 20/20 [00:22<00:00,  1.19image/s]HRNet Model347: 100%|██████████| 20/20 [00:22<00:00,  1.11s/image]
+Full R+E+F image mIoU:   0%|          | 0/20 [00:00<?, ?image/s]Full R+E+F image mIoU:  50%|█████     | 10/20 [00:05<00:05,  1.97image/s]Full R+E+F image mIoU: 100%|██████████| 20/20 [00:08<00:00,  2.41image/s]
+COMPLETE 347_04 image_miou=0.8036932857881018

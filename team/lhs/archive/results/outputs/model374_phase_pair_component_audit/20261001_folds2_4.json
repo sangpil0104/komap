@@ -1,0 +1,66 @@
+{
+  "diagnostic": "GT-informed predicted Al3Ni/Eutectic component majority; not deployable",
+  "metric": "image-wise mean of four class IoUs; empty union=0",
+  "class_order": [
+    "Al",
+    "Al3Ni",
+    "Primary_Si",
+    "Eutectic_Si"
+  ],
+  "folds": [
+    2,
+    3,
+    4
+  ],
+  "images": 52,
+  "specimen_groups": 44,
+  "base_image_mean_miou": 0.7988090486684841,
+  "gt_component_majority_image_mean_miou": 0.7246953103994375,
+  "delta_pp": -7.411373826904659,
+  "group_bootstrap_95_ci_delta_pp": [
+    -8.764207891283359,
+    -6.083467815021563
+  ],
+  "positive_images": 2,
+  "base_mean_per_image_class_iou": [
+    0.9265575751004673,
+    0.8098817898130767,
+    0.8850848901503411,
+    0.5737119396100515
+  ],
+  "diagnostic_mean_per_image_class_iou": [
+    0.9265575751004673,
+    0.7539438928773313,
+    0.8850848901503411,
+    0.33319488346961035
+  ],
+  "per_fold": {
+    "2": {
+      "images": 18,
+      "base_image_mean_miou": 0.7846884078056423,
+      "gt_component_majority_image_mean_miou": 0.7090160093039811,
+      "delta_pp": -7.567239850166117,
+      "positive_images": 1
+    },
+    "3": {
+      "images": 17,
+      "base_image_mean_miou": 0.8310186335743985,
+      "gt_component_majority_image_mean_miou": 0.7523436001805636,
+      "delta_pp": -7.867503339383493,
+      "positive_images": 0
+    },
+    "4": {
+      "images": 17,
+      "base_image_mean_miou": 0.7815507305585196,
+      "gt_component_majority_image_mean_miou": 0.7136486335429121,
+      "delta_pp": -6.790209701560753,
+      "positive_images": 1
+    }
+  },
+  "model329_probability_archive_sha256": {
+    "2": "1ed378d13439aa78111634b1bd84e6c957cfeb60f9cc93024a19629f111c0c8c",
+    "3": "8ce76e0207e2215b29d68896c000816c1f178abe86867274e2f68537710eaf14",
+    "4": "2ec5ba5bbdf0d7ad7352005e539e0d098d3b2c3aa470a9b99a71cbc2933a44f0"
+  },
+  "warning": "The correction uses each held-out ground-truth mask and is only a feasibility diagnostic for whole-component phase homogenization. It is neither a deployable score nor an upper bound for other rules."
+}

@@ -1,0 +1,38 @@
+{
+  "model": 393,
+  "stage": "posthoc_resolution_width_association",
+  "status": "exploratory; not preregistered before mask morphology was inspected",
+  "data_scope": "locked train.zip mask-derived geometry only; no images, valid/test, OOF, checkpoints, or scores read",
+  "group_aggregation": "average image-level raster diagonal and width proxy within each specimen group; correlate 59 group means",
+  "width_measure": "per-image doubled-distance-transform pixel-width q50 proxy, then group mean",
+  "bootstrap": {
+    "unit": "specimen group",
+    "replicates": 5000,
+    "seed": 393,
+    "interval": "percentile 95%"
+  },
+  "associations": {
+    "Eutectic_Si": {
+      "spearman_raster_diagonal_vs_group_mean_width_q50": 0.5736110844608974,
+      "group_bootstrap_percentile_95pct": [
+        0.35432673435073436,
+        0.7576646363671327
+      ],
+      "groups": 59,
+      "valid_bootstrap_replicates": 5000
+    },
+    "Al3Ni": {
+      "spearman_raster_diagonal_vs_group_mean_width_q50": 0.504313491641718,
+      "group_bootstrap_percentile_95pct": [
+        0.2560663884651976,
+        0.7123968751352391
+      ],
+      "groups": 59,
+      "valid_bootstrap_replicates": 5000
+    }
+  },
+  "interpretation_guard": "Association with raster diagonal cannot distinguish acquisition magnification from real morphology or group composition; it does not establish that test-time scale normalization will improve segmentation.",
+  "model393_lock_sha256": "e7477968cefbb725019e18885a599937a6b095ce8e3766923bf1a98e0fbca0e6",
+  "source_train_zip_sha256": "b2952c3bee58f4a1809d8999959d6448236f8efbd0caf439a1b11b39857a1f14",
+  "analyzed_at_utc": "2026-10-03T00:02:48Z"
+}

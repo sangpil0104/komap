@@ -1,0 +1,48 @@
+{
+  "model": 364,
+  "description": "Model360 fixed spatial + D4 route with a scale-3 HRNet-W48/U-Net++ expert entropy-gated into it",
+  "route_probability_class_order": ["Al3Ni", "Primary_Si", "Al", "Eutectic_Si"],
+  "metric": "image-wise mean of four class IoUs; empty union = 0; average images equally",
+  "training": {
+    "architecture": "UnetPlusPlus",
+    "encoder_name": "tu-hrnet_w48",
+    "encoder_weights": "imagenet",
+    "parent_checkpoint": "outputs/model336_hrnet_best/last.pt",
+    "patch_size": 512,
+    "input_scale": 3.0,
+    "samples_per_image": 12,
+    "batch_size": 4,
+    "accumulation_steps": 2,
+    "epochs": 12,
+    "learning_rate": 0.0001,
+    "encoder_learning_rate_multiplier": 0.3,
+    "weight_decay": 0.0001,
+    "boundary_head_weight": 1.0,
+    "seed": 361,
+    "validation_checkpoint_selection": false
+  },
+  "inference": {
+    "patch_size": 512,
+    "overlap": 170,
+    "input_scale": 3.0,
+    "tta_for_model361": "flip4 default",
+    "model351_parent": "Model336 checkpoint with 8-way D4 TTA"
+  },
+  "fixed_route_parameters": {
+    "model346_gamma336": [0.0, 0.0, 1.0, 0.25],
+    "model349_gamma347": [0.0, 0.0, 0.25, 0.0],
+    "model355_spatial_blend": [0.75, 0.0],
+    "model360_model351_entropy_gate_margin_strength": [0.0, 1.0],
+    "model364_model361_entropy_gate_margin_strength": [0.0, 0.25]
+  },
+  "recorded_validation": {
+    "images": 20,
+    "model360_image_mean_miou_percent": 79.94166196335197,
+    "model364_raw_best_image_mean_miou_percent": 79.94297272293409,
+    "raw_delta_percentage_points": 0.00131075895821249,
+    "model364_group_heldout_miou_percent": 79.93727495173389,
+    "group_heldout_delta_percentage_points": -0.004387011618074976,
+    "test_used": false,
+    "warning": "Repeatedly reused validation set; selection-conditional result, not an independent test estimate"
+  }
+}

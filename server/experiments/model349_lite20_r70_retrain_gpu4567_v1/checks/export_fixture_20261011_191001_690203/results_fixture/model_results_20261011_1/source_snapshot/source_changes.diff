@@ -1,0 +1,214 @@
+--- upstream/train_route/experiments/model322_team_b4/KoMaP/recalib_bn.py
++++ source/experiments/model322_team_b4/KoMaP/recalib_bn.py
+@@ -4,6 +4,7 @@
+ single crops, which makes inference unstable. This re-estimates them with forward passes
+ only -- weights are untouched -- and re-evaluates on valid.
+ """
++from local_image_metrics import progress as _local_progress
+ import argparse
+ import json
+ import os
+@@ -76,7 +77,7 @@
+ torch.save(model.state_dict(), os.path.join(args.run, args.out_weights))
+ 
+ rows = []
+-for ip, mp in list_split(args.data, "valid"):
++for ip, mp in _local_progress(list_split(args.data, "valid"), 'recalib_bn'):
+     pred = predict_probs([(model, norm, scale, a.get("input", "gray3"), a.get("feat_stats"))],
+                          load_gray(ip)).argmax(0).cpu().numpy()
+     rows.append(image_miou(pred, load_mask(mp)))
+--- upstream/train_route/experiments/model322_team_b4/KoMaP/evaluate_group_cv.py
++++ source/experiments/model322_team_b4/KoMaP/evaluate_group_cv.py
+@@ -1,5 +1,6 @@
+ #!/usr/bin/env python3
+ """Score B4 grouped-OOF predictions and test a small preregistered fusion grid."""
++from local_image_metrics import progress as _local_progress
+ import argparse
+ import json
+ import re
+@@ -172,7 +173,7 @@
+             p_branch = probability_for(branch_archive, name)
+             if args.candidate_order == "main":
+                 p_branch = p_branch[list(MAIN_TO_TEAM_ORDER)]
+-            for setting_index, setting in enumerate(settings):
++            for setting_index, setting in enumerate(_local_progress(settings, 'evaluate_group_cv')):
+                 p0 = p_base.copy()
+                 for class_id in class_ids:
+                     alpha = setting["gammas"][class_id]
+--- upstream/train_route/experiments/model322_team_b4/KoMaP/train.py
++++ source/experiments/model322_team_b4/KoMaP/train.py
+@@ -2,6 +2,7 @@
+ 
+ No checkpoint selection on valid: the last checkpoint is saved and valid is only reported.
+ """
++from local_image_metrics import progress as _local_progress
+ import argparse
+ import json
+ import math
+@@ -50,6 +51,7 @@
+                help="initial FP16 GradScaler scale (P100-safe default)")
+ p.add_argument("--workers", type=int, default=6)
+ p.add_argument("--seed", type=int, default=0)
++p.add_argument("--deterministic_workers", action="store_true")
+ p.add_argument("--input", default="gray3", choices=["gray3", "feat3"],
+                help="gray3: gray repeated x3; feat3: [gray, Hessian ridge, high-pass]")
+ args = p.parse_args()
+@@ -120,7 +122,14 @@
+ 
+ 
+ def worker_init(wid):
+-    np.random.seed((args.seed * 1000 + wid + int(time.time())) % 2**32)
++    seed = args.seed * 1000 + wid
++    if not args.deterministic_workers:
++        seed = (seed + int(time.time())) % 2**32
++    np.random.seed(seed)
++    random.seed(seed)
++    torch.manual_seed(seed)
++    if hasattr(aug, "set_random_seed"):
++        aug.set_random_seed(seed)
+ 
+ 
+ ds = CropDS(train_pairs, args.iters * args.bs)
+@@ -193,7 +202,7 @@
+     net = net or model
+     net.eval()
+     rows = []
+-    for name, g, gt in valid_data:
++    for name, g, gt in _local_progress(valid_data, 'train'):
+         member = make_member(net, args.norm, args.scale, args.input, args.feat_stats, args.target_width)
+         pred = predict_probs([member], g, tta=tta).argmax(0).cpu().numpy()
+         a, b, iou = image_miou(pred, gt)
+@@ -213,7 +222,7 @@
+ scaler = torch.amp.GradScaler("cuda", init_scale=args.amp_init_scale)
+ t0 = time.time()
+ run = 0.0
+-for it, (x, y) in enumerate(dl):
++for it, (x, y) in enumerate(_local_progress(dl, 'train', total=args.iters)):
+     x, y = x.cuda(non_blocking=True), y.cuda(non_blocking=True)
+     with torch.autocast("cuda", dtype=torch.float16):
+         logits = model(x)
+--- upstream/train_route/experiments/model322_team_b4/KoMaP/predict.py
++++ source/experiments/model322_team_b4/KoMaP/predict.py
+@@ -1,4 +1,5 @@
+ """Ensemble inference: writes color masks and (if GT exists) per-image mIoU."""
++from local_image_metrics import progress as _local_progress
+ import argparse
+ import json
+ import os
+@@ -28,7 +29,7 @@
+ os.makedirs(args.out, exist_ok=True)
+ scores = {}
+ prob_archive = {}
+-for img_path, mask_path in list_split(args.data, args.split):
++for img_path, mask_path in _local_progress(list_split(args.data, args.split), 'predict'):
+     name = os.path.basename(img_path).replace("_image.png", "")
+     probs = predict_probs(members, load_gray(img_path), tta=not args.no_tta,
+                           device=args.device).cpu().numpy().astype(np.float32)
+--- upstream/train_route/experiments/model322_team_b4/KoMaP/common.py
++++ source/experiments/model322_team_b4/KoMaP/common.py
+@@ -102,12 +102,9 @@
+ 
+ 
+ def image_miou(pred, gt):
+-    """Returns (miou_nan_skip, miou_absent_as_1, per-class IoU with nan)."""
+-    cm = confusion(pred, gt)
+-    inter = np.diag(cm).astype(np.float64)
+-    union = cm.sum(0) + cm.sum(1) - inter
+-    iou = np.where(union > 0, inter / np.maximum(union, 1), np.nan)
+-    return np.nanmean(iou), np.nanmean(np.where(np.isnan(iou), 1.0, iou)), iou
++    from local_image_metrics import class_ious
++    iou = class_ious(pred, gt)
++    return float(iou.mean()), float(iou.mean()), iou
+ 
+ 
+ # ---------------------------------------------------------------- inference
+--- upstream/train_route/experiments/model326_hybrid_fullstats/KoMaP/evaluate_group_cv.py
++++ source/experiments/model326_hybrid_fullstats/KoMaP/evaluate_group_cv.py
+@@ -1,5 +1,6 @@
+ #!/usr/bin/env python3
+ """Score B4 grouped-OOF predictions and test a small preregistered fusion grid."""
++from local_image_metrics import progress as _local_progress
+ import argparse
+ import json
+ import re
+@@ -172,7 +173,7 @@
+             p_branch = probability_for(branch_archive, name)
+             if args.candidate_order == "main":
+                 p_branch = p_branch[list(MAIN_TO_TEAM_ORDER)]
+-            for setting_index, setting in enumerate(settings):
++            for setting_index, setting in enumerate(_local_progress(settings, 'evaluate_group_cv')):
+                 p0 = p_base.copy()
+                 for class_id in class_ids:
+                     alpha = setting["gammas"][class_id]
+--- upstream/train_route/experiments/model326_hybrid_fullstats/KoMaP/train.py
++++ source/experiments/model326_hybrid_fullstats/KoMaP/train.py
+@@ -2,6 +2,7 @@
+ 
+ No checkpoint selection on valid: the last checkpoint is saved and valid is only reported.
+ """
++from local_image_metrics import progress as _local_progress
+ import argparse
+ import json
+ import math
+@@ -149,6 +150,8 @@
+     np.random.seed(seed)
+     random.seed(seed)
+     torch.manual_seed(seed)
++    if hasattr(aug, "set_random_seed"):
++        aug.set_random_seed(seed)
+ 
+ 
+ ds = CropDS(train_pairs, args.iters * args.bs)
+@@ -229,7 +232,7 @@
+     net = net or model
+     net.eval()
+     rows = []
+-    for name, g, gt in valid_data:
++    for name, g, gt in _local_progress(valid_data, 'train'):
+         member = make_member(net, args.norm, args.scale, args.input, args.feat_stats, args.target_width)
+         pred = predict_probs([member], g, tta=tta).argmax(0).cpu().numpy()
+         a, b, iou = image_miou(pred, gt)
+@@ -249,7 +252,7 @@
+ scaler = torch.amp.GradScaler("cuda", init_scale=args.amp_init_scale)
+ t0 = time.time()
+ run = 0.0
+-for it, (x, y) in enumerate(dl):
++for it, (x, y) in enumerate(_local_progress(dl, 'train', total=args.iters)):
+     x, y = x.cuda(non_blocking=True), y.cuda(non_blocking=True)
+     with torch.autocast("cuda", dtype=torch.float16):
+         logits = model(x)
+--- upstream/train_route/experiments/model326_hybrid_fullstats/KoMaP/predict.py
++++ source/experiments/model326_hybrid_fullstats/KoMaP/predict.py
+@@ -1,4 +1,5 @@
+ """Ensemble inference: writes color masks and (if GT exists) per-image mIoU."""
++from local_image_metrics import progress as _local_progress
+ import argparse
+ import json
+ import os
+@@ -28,7 +29,7 @@
+ os.makedirs(args.out, exist_ok=True)
+ scores = {}
+ prob_archive = {}
+-for img_path, mask_path in list_split(args.data, args.split):
++for img_path, mask_path in _local_progress(list_split(args.data, args.split), 'predict'):
+     name = os.path.basename(img_path).replace("_image.png", "")
+     probs = predict_probs(members, load_gray(img_path), tta=not args.no_tta,
+                           device=args.device).cpu().numpy().astype(np.float32)
+--- upstream/train_route/experiments/model326_hybrid_fullstats/KoMaP/common.py
++++ source/experiments/model326_hybrid_fullstats/KoMaP/common.py
+@@ -116,12 +116,9 @@
+ 
+ 
+ def image_miou(pred, gt):
+-    """Returns (miou_nan_skip, miou_absent_as_1, per-class IoU with nan)."""
+-    cm = confusion(pred, gt)
+-    inter = np.diag(cm).astype(np.float64)
+-    union = cm.sum(0) + cm.sum(1) - inter
+-    iou = np.where(union > 0, inter / np.maximum(union, 1), np.nan)
+-    return np.nanmean(iou), np.nanmean(np.where(np.isnan(iou), 1.0, iou)), iou
++    from local_image_metrics import class_ious
++    iou = class_ious(pred, gt)
++    return float(iou.mean()), float(iou.mean()), iou
+ 
+ 
+ # ---------------------------------------------------------------- inference

@@ -1,0 +1,1090 @@
+{
+  "model": 386,
+  "scope": "exploratory train-only grouped OOF folds1-2; not confirmatory and no model GO",
+  "metric": "Step4 GT Eutectic false-negative rate within each distance-to-any-GT-phase-boundary band",
+  "boundary_definition": "both pixels at every 4-neighbor GT class transition; exact L2 distance on native mask grid",
+  "distance_bins_native_pixels": [
+    "[0,2)",
+    "[2,4)",
+    "[4,8)",
+    "[8,infinity)"
+  ],
+  "official_valid_or_test_read": false,
+  "folds": [
+    1,
+    2
+  ],
+  "prediction_input_type_by_fold": {
+    "1": "uint8 argmax predictions deterministically exported from OOF probabilities",
+    "2": "uint8 argmax predictions deterministically exported from OOF probabilities"
+  },
+  "oof_images_total": 36,
+  "specimen_groups_total": 30,
+  "step4_images": 16,
+  "step4_groups": 16,
+  "gt_eutectic_pixels": 1009270,
+  "eutectic_false_negative_pixels": 352640,
+  "distance_bins": {
+    "0_to_lt2px": {
+      "gt_eutectic_pixels": 803688,
+      "eutectic_false_negative_pixels": 285465,
+      "false_negative_rate": 0.3551938065517962,
+      "share_of_gt_eutectic_pixels": 0.7963062411445897,
+      "share_of_eutectic_fn_pixels": 0.809508280399274
+    },
+    "2_to_lt4px": {
+      "gt_eutectic_pixels": 155590,
+      "eutectic_false_negative_pixels": 32208,
+      "false_negative_rate": 0.20700559161899865,
+      "share_of_gt_eutectic_pixels": 0.15416092819562655,
+      "share_of_eutectic_fn_pixels": 0.09133393829401089
+    },
+    "4_to_lt8px": {
+      "gt_eutectic_pixels": 30350,
+      "eutectic_false_negative_pixels": 15563,
+      "false_negative_rate": 0.5127841845140033,
+      "share_of_gt_eutectic_pixels": 0.03007123960882618,
+      "share_of_eutectic_fn_pixels": 0.04413282667876588
+    },
+    "8px_or_more": {
+      "gt_eutectic_pixels": 19642,
+      "eutectic_false_negative_pixels": 19404,
+      "false_negative_rate": 0.9878831076265147,
+      "share_of_gt_eutectic_pixels": 0.019461591050957624,
+      "share_of_eutectic_fn_pixels": 0.05502495462794919
+    }
+  },
+  "near_vs_interior": {
+    "near_0_to_lt4px_fn_rate": 0.3311584337387077,
+    "interior_ge8px_fn_rate": 0.9878831076265147,
+    "near_minus_interior_rate_difference": -0.656724673887807,
+    "near_to_interior_rate_ratio": 0.33522026156955764
+  },
+  "group_bootstrap": {
+    "unit": "specimen group resampled within each included fold; pooled pixel rates recomputed per draw",
+    "draws": 20000,
+    "seed": 386,
+    "near_minus_interior_rate_difference_95ci": [
+      -0.7237603200320795,
+      -0.47200579271334475
+    ],
+    "near_to_interior_rate_ratio_95ci": [
+      0.2629545627198991,
+      0.4477976767291199
+    ],
+    "finite_difference_draws": 20000,
+    "finite_ratio_draws": 19999
+  },
+  "per_fold": {
+    "1": {
+      "step4_images": 9,
+      "step4_groups": 9,
+      "bins": {
+        "0_to_lt2px": {
+          "gt_eutectic_pixels": 385837,
+          "false_negative_pixels": 137457,
+          "false_negative_rate": 0.3562566576041178
+        },
+        "2_to_lt4px": {
+          "gt_eutectic_pixels": 68694,
+          "false_negative_pixels": 9377,
+          "false_negative_rate": 0.1365039159169651
+        },
+        "4_to_lt8px": {
+          "gt_eutectic_pixels": 11809,
+          "false_negative_pixels": 3973,
+          "false_negative_rate": 0.3364383097637395
+        },
+        "8px_or_more": {
+          "gt_eutectic_pixels": 2327,
+          "false_negative_pixels": 2175,
+          "false_negative_rate": 0.9346798452943704
+        }
+      },
+      "near_0_to_lt4px_fn_rate": 0.3230450728333161,
+      "interior_ge8px_fn_rate": 0.9346798452943704,
+      "near_minus_interior_rate_difference": -0.6116347724610542,
+      "near_to_interior_rate_ratio": 0.3456210963140812
+    },
+    "2": {
+      "step4_images": 7,
+      "step4_groups": 7,
+      "bins": {
+        "0_to_lt2px": {
+          "gt_eutectic_pixels": 417851,
+          "false_negative_pixels": 148008,
+          "false_negative_rate": 0.3542123867120098
+        },
+        "2_to_lt4px": {
+          "gt_eutectic_pixels": 86896,
+          "false_negative_pixels": 22831,
+          "false_negative_rate": 0.26273936659915303
+        },
+        "4_to_lt8px": {
+          "gt_eutectic_pixels": 18541,
+          "false_negative_pixels": 11590,
+          "false_negative_rate": 0.6251011272315409
+        },
+        "8px_or_more": {
+          "gt_eutectic_pixels": 17315,
+          "false_negative_pixels": 17229,
+          "false_negative_rate": 0.9950332082009818
+        }
+      },
+      "near_0_to_lt4px_fn_rate": 0.33846461692689606,
+      "interior_ge8px_fn_rate": 0.9950332082009818,
+      "near_minus_interior_rate_difference": -0.6565685912740857,
+      "near_to_interior_rate_ratio": 0.3401540914788557
+    }
+  },
+  "fold_image_counts": {
+    "1": {
+      "all_oof_images": 18,
+      "step4_images": 9,
+      "step4_groups": 9
+    },
+    "2": {
+      "all_oof_images": 18,
+      "step4_images": 7,
+      "step4_groups": 7
+    }
+  },
+  "interpretation_guard": "Distance-bin rates correct the GT-support denominator but are still descriptive. Folds1-2 are exploratory because prior candidate decisions used them. No training GO follows from this script; any confirmatory-style report must use untouched folds3-4 and preserve the existing Model383 preregistered gate.",
+  "per_image": [
+    {
+      "image_id": "A138_step4_sample3",
+      "specimen_group": "A138",
+      "fold": 1,
+      "counts": {
+        "gt_eutectic_pixels": 20296,
+        "eutectic_false_negative_pixels": 16141,
+        "bins": {
+          "0_to_lt2px": {
+            "gt_eutectic_pixels": 18472,
+            "eutectic_false_negative_pixels": 15354,
+            "false_negative_rate": 0.831203984408835,
+            "fn_destination_counts_by_class_id": [
+              3246,
+              11876,
+              232,
+              0
+            ]
+          },
+          "2_to_lt4px": {
+            "gt_eutectic_pixels": 1584,
+            "eutectic_false_negative_pixels": 663,
+            "false_negative_rate": 0.4185606060606061,
+            "fn_destination_counts_by_class_id": [
+              33,
+              500,
+              130,
+              0
+            ]
+          },
+          "4_to_lt8px": {
+            "gt_eutectic_pixels": 225,
+            "eutectic_false_negative_pixels": 109,
+            "false_negative_rate": 0.48444444444444446,
+            "fn_destination_counts_by_class_id": [
+              0,
+              10,
+              99,
+              0
+            ]
+          },
+          "8px_or_more": {
+            "gt_eutectic_pixels": 15,
+            "eutectic_false_negative_pixels": 15,
+            "false_negative_rate": 1.0,
+            "fn_destination_counts_by_class_id": [
+              0,
+              0,
+              15,
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "image_id": "A140_step4_sample2",
+      "specimen_group": "A140",
+      "fold": 1,
+      "counts": {
+        "gt_eutectic_pixels": 100871,
+        "eutectic_false_negative_pixels": 35325,
+        "bins": {
+          "0_to_lt2px": {
+            "gt_eutectic_pixels": 72086,
+            "eutectic_false_negative_pixels": 30560,
+            "false_negative_rate": 0.42393807396720584,
+            "fn_destination_counts_by_class_id": [
+              11608,
+              18179,
+              773,
+              0
+            ]
+          },
+          "2_to_lt4px": {
+            "gt_eutectic_pixels": 23083,
+            "eutectic_false_negative_pixels": 3176,
+            "false_negative_rate": 0.13759043451891,
+            "fn_destination_counts_by_class_id": [
+              94,
+              2305,
+              777,
+              0
+            ]
+          },
+          "4_to_lt8px": {
+            "gt_eutectic_pixels": 5255,
+            "eutectic_false_negative_pixels": 1221,
+            "false_negative_rate": 0.2323501427212179,
+            "fn_destination_counts_by_class_id": [
+              16,
+              281,
+              924,
+              0
+            ]
+          },
+          "8px_or_more": {
+            "gt_eutectic_pixels": 447,
+            "eutectic_false_negative_pixels": 368,
+            "false_negative_rate": 0.8232662192393736,
+            "fn_destination_counts_by_class_id": [
+              0,
+              5,
+              363,
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "image_id": "A164_step4_sample1",
+      "specimen_group": "A164",
+      "fold": 1,
+      "counts": {
+        "gt_eutectic_pixels": 68528,
+        "eutectic_false_negative_pixels": 10312,
+        "bins": {
+          "0_to_lt2px": {
+            "gt_eutectic_pixels": 56249,
+            "eutectic_false_negative_pixels": 8762,
+            "false_negative_rate": 0.15577165816281177,
+            "fn_destination_counts_by_class_id": [
+              5288,
+              2402,
+              1072,
+              0
+            ]
+          },
+          "2_to_lt4px": {
+            "gt_eutectic_pixels": 10523,
+            "eutectic_false_negative_pixels": 509,
+            "false_negative_rate": 0.04837023662453673,
+            "fn_destination_counts_by_class_id": [
+              39,
+              34,
+              436,
+              0
+            ]
+          },
+          "4_to_lt8px": {
+            "gt_eutectic_pixels": 1110,
+            "eutectic_false_negative_pixels": 395,
+            "false_negative_rate": 0.35585585585585583,
+            "fn_destination_counts_by_class_id": [
+              0,
+              0,
+              395,
+              0
+            ]
+          },
+          "8px_or_more": {
+            "gt_eutectic_pixels": 646,
+            "eutectic_false_negative_pixels": 646,
+            "false_negative_rate": 1.0,
+            "fn_destination_counts_by_class_id": [
+              0,
+              0,
+              646,
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "image_id": "A16_step4_sample4",
+      "specimen_group": "A16",
+      "fold": 1,
+      "counts": {
+        "gt_eutectic_pixels": 22841,
+        "eutectic_false_negative_pixels": 8079,
+        "bins": {
+          "0_to_lt2px": {
+            "gt_eutectic_pixels": 21722,
+            "eutectic_false_negative_pixels": 7941,
+            "false_negative_rate": 0.3655740723690268,
+            "fn_destination_counts_by_class_id": [
+              3835,
+              3886,
+              220,
+              0
+            ]
+          },
+          "2_to_lt4px": {
+            "gt_eutectic_pixels": 1080,
+            "eutectic_false_negative_pixels": 120,
+            "false_negative_rate": 0.1111111111111111,
+            "fn_destination_counts_by_class_id": [
+              22,
+              18,
+              80,
+              0
+            ]
+          },
+          "4_to_lt8px": {
+            "gt_eutectic_pixels": 39,
+            "eutectic_false_negative_pixels": 18,
+            "false_negative_rate": 0.46153846153846156,
+            "fn_destination_counts_by_class_id": [
+              0,
+              0,
+              18,
+              0
+            ]
+          },
+          "8px_or_more": {
+            "gt_eutectic_pixels": 0,
+            "eutectic_false_negative_pixels": 0,
+            "false_negative_rate": null,
+            "fn_destination_counts_by_class_id": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "image_id": "A200_step4_sample3",
+      "specimen_group": "A200",
+      "fold": 1,
+      "counts": {
+        "gt_eutectic_pixels": 41299,
+        "eutectic_false_negative_pixels": 14659,
+        "bins": {
+          "0_to_lt2px": {
+            "gt_eutectic_pixels": 32175,
+            "eutectic_false_negative_pixels": 11638,
+            "false_negative_rate": 0.3617094017094017,
+            "fn_destination_counts_by_class_id": [
+              3407,
+              7725,
+              506,
+              0
+            ]
+          },
+          "2_to_lt4px": {
+            "gt_eutectic_pixels": 7393,
+            "eutectic_false_negative_pixels": 1530,
+            "false_negative_rate": 0.20695252265656702,
+            "fn_destination_counts_by_class_id": [
+              7,
+              1139,
+              384,
+              0
+            ]
+          },
+          "4_to_lt8px": {
+            "gt_eutectic_pixels": 917,
+            "eutectic_false_negative_pixels": 696,
+            "false_negative_rate": 0.7589967284623773,
+            "fn_destination_counts_by_class_id": [
+              0,
+              262,
+              434,
+              0
+            ]
+          },
+          "8px_or_more": {
+            "gt_eutectic_pixels": 814,
+            "eutectic_false_negative_pixels": 795,
+            "false_negative_rate": 0.9766584766584766,
+            "fn_destination_counts_by_class_id": [
+              0,
+              454,
+              341,
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "image_id": "A51_step4_sample4",
+      "specimen_group": "A51",
+      "fold": 1,
+      "counts": {
+        "gt_eutectic_pixels": 108909,
+        "eutectic_false_negative_pixels": 18428,
+        "bins": {
+          "0_to_lt2px": {
+            "gt_eutectic_pixels": 86658,
+            "eutectic_false_negative_pixels": 17239,
+            "false_negative_rate": 0.19893143160469892,
+            "fn_destination_counts_by_class_id": [
+              11628,
+              5456,
+              155,
+              0
+            ]
+          },
+          "2_to_lt4px": {
+            "gt_eutectic_pixels": 19375,
+            "eutectic_false_negative_pixels": 988,
+            "false_negative_rate": 0.05099354838709677,
+            "fn_destination_counts_by_class_id": [
+              291,
+              616,
+              81,
+              0
+            ]
+          },
+          "4_to_lt8px": {
+            "gt_eutectic_pixels": 2819,
+            "eutectic_false_negative_pixels": 198,
+            "false_negative_rate": 0.07023767293366442,
+            "fn_destination_counts_by_class_id": [
+              108,
+              87,
+              3,
+              0
+            ]
+          },
+          "8px_or_more": {
+            "gt_eutectic_pixels": 57,
+            "eutectic_false_negative_pixels": 3,
+            "false_negative_rate": 0.05263157894736842,
+            "fn_destination_counts_by_class_id": [
+              3,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "image_id": "A69_step4_sample4",
+      "specimen_group": "A69",
+      "fold": 1,
+      "counts": {
+        "gt_eutectic_pixels": 14445,
+        "eutectic_false_negative_pixels": 6115,
+        "bins": {
+          "0_to_lt2px": {
+            "gt_eutectic_pixels": 14202,
+            "eutectic_false_negative_pixels": 6059,
+            "false_negative_rate": 0.4266300521053373,
+            "fn_destination_counts_by_class_id": [
+              2564,
+              3407,
+              88,
+              0
+            ]
+          },
+          "2_to_lt4px": {
+            "gt_eutectic_pixels": 209,
+            "eutectic_false_negative_pixels": 56,
+            "false_negative_rate": 0.2679425837320574,
+            "fn_destination_counts_by_class_id": [
+              0,
+              35,
+              21,
+              0
+            ]
+          },
+          "4_to_lt8px": {
+            "gt_eutectic_pixels": 34,
+            "eutectic_false_negative_pixels": 0,
+            "false_negative_rate": 0.0,
+            "fn_destination_counts_by_class_id": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "8px_or_more": {
+            "gt_eutectic_pixels": 0,
+            "eutectic_false_negative_pixels": 0,
+            "false_negative_rate": null,
+            "fn_destination_counts_by_class_id": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "image_id": "A7_step4_sample3",
+      "specimen_group": "A7",
+      "fold": 1,
+      "counts": {
+        "gt_eutectic_pixels": 66387,
+        "eutectic_false_negative_pixels": 37304,
+        "bins": {
+          "0_to_lt2px": {
+            "gt_eutectic_pixels": 59829,
+            "eutectic_false_negative_pixels": 33340,
+            "false_negative_rate": 0.5572548429691286,
+            "fn_destination_counts_by_class_id": [
+              10390,
+              21072,
+              1878,
+              0
+            ]
+          },
+          "2_to_lt4px": {
+            "gt_eutectic_pixels": 4801,
+            "eutectic_false_negative_pixels": 2280,
+            "false_negative_rate": 0.47490106227869194,
+            "fn_destination_counts_by_class_id": [
+              119,
+              861,
+              1300,
+              0
+            ]
+          },
+          "4_to_lt8px": {
+            "gt_eutectic_pixels": 1409,
+            "eutectic_false_negative_pixels": 1336,
+            "false_negative_rate": 0.9481902058197303,
+            "fn_destination_counts_by_class_id": [
+              3,
+              15,
+              1318,
+              0
+            ]
+          },
+          "8px_or_more": {
+            "gt_eutectic_pixels": 348,
+            "eutectic_false_negative_pixels": 348,
+            "false_negative_rate": 1.0,
+            "fn_destination_counts_by_class_id": [
+              0,
+              1,
+              347,
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "image_id": "A94_step4_sample2",
+      "specimen_group": "A94",
+      "fold": 1,
+      "counts": {
+        "gt_eutectic_pixels": 25091,
+        "eutectic_false_negative_pixels": 6619,
+        "bins": {
+          "0_to_lt2px": {
+            "gt_eutectic_pixels": 24444,
+            "eutectic_false_negative_pixels": 6564,
+            "false_negative_rate": 0.26853215513009326,
+            "fn_destination_counts_by_class_id": [
+              3392,
+              3038,
+              134,
+              0
+            ]
+          },
+          "2_to_lt4px": {
+            "gt_eutectic_pixels": 646,
+            "eutectic_false_negative_pixels": 55,
+            "false_negative_rate": 0.08513931888544891,
+            "fn_destination_counts_by_class_id": [
+              7,
+              5,
+              43,
+              0
+            ]
+          },
+          "4_to_lt8px": {
+            "gt_eutectic_pixels": 1,
+            "eutectic_false_negative_pixels": 0,
+            "false_negative_rate": 0.0,
+            "fn_destination_counts_by_class_id": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "8px_or_more": {
+            "gt_eutectic_pixels": 0,
+            "eutectic_false_negative_pixels": 0,
+            "false_negative_rate": null,
+            "fn_destination_counts_by_class_id": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "image_id": "A106_step4_sample1",
+      "specimen_group": "A106",
+      "fold": 2,
+      "counts": {
+        "gt_eutectic_pixels": 54708,
+        "eutectic_false_negative_pixels": 18998,
+        "bins": {
+          "0_to_lt2px": {
+            "gt_eutectic_pixels": 49349,
+            "eutectic_false_negative_pixels": 17421,
+            "false_negative_rate": 0.35301627185961215,
+            "fn_destination_counts_by_class_id": [
+              4416,
+              11638,
+              1367,
+              0
+            ]
+          },
+          "2_to_lt4px": {
+            "gt_eutectic_pixels": 4803,
+            "eutectic_false_negative_pixels": 1207,
+            "false_negative_rate": 0.2513012700395586,
+            "fn_destination_counts_by_class_id": [
+              81,
+              395,
+              731,
+              0
+            ]
+          },
+          "4_to_lt8px": {
+            "gt_eutectic_pixels": 556,
+            "eutectic_false_negative_pixels": 370,
+            "false_negative_rate": 0.6654676258992805,
+            "fn_destination_counts_by_class_id": [
+              1,
+              36,
+              333,
+              0
+            ]
+          },
+          "8px_or_more": {
+            "gt_eutectic_pixels": 0,
+            "eutectic_false_negative_pixels": 0,
+            "false_negative_rate": null,
+            "fn_destination_counts_by_class_id": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "image_id": "A123_step4_sample2",
+      "specimen_group": "A123",
+      "fold": 2,
+      "counts": {
+        "gt_eutectic_pixels": 106876,
+        "eutectic_false_negative_pixels": 22551,
+        "bins": {
+          "0_to_lt2px": {
+            "gt_eutectic_pixels": 91045,
+            "eutectic_false_negative_pixels": 21688,
+            "false_negative_rate": 0.238211873249492,
+            "fn_destination_counts_by_class_id": [
+              8354,
+              12862,
+              472,
+              0
+            ]
+          },
+          "2_to_lt4px": {
+            "gt_eutectic_pixels": 14215,
+            "eutectic_false_negative_pixels": 710,
+            "false_negative_rate": 0.049947238832219486,
+            "fn_destination_counts_by_class_id": [
+              8,
+              460,
+              242,
+              0
+            ]
+          },
+          "4_to_lt8px": {
+            "gt_eutectic_pixels": 1616,
+            "eutectic_false_negative_pixels": 153,
+            "false_negative_rate": 0.09467821782178218,
+            "fn_destination_counts_by_class_id": [
+              0,
+              51,
+              102,
+              0
+            ]
+          },
+          "8px_or_more": {
+            "gt_eutectic_pixels": 0,
+            "eutectic_false_negative_pixels": 0,
+            "false_negative_rate": null,
+            "fn_destination_counts_by_class_id": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "image_id": "A139_step4_sample3",
+      "specimen_group": "A139",
+      "fold": 2,
+      "counts": {
+        "gt_eutectic_pixels": 103210,
+        "eutectic_false_negative_pixels": 12861,
+        "bins": {
+          "0_to_lt2px": {
+            "gt_eutectic_pixels": 80834,
+            "eutectic_false_negative_pixels": 12389,
+            "false_negative_rate": 0.15326471534255387,
+            "fn_destination_counts_by_class_id": [
+              8646,
+              2490,
+              1253,
+              0
+            ]
+          },
+          "2_to_lt4px": {
+            "gt_eutectic_pixels": 19956,
+            "eutectic_false_negative_pixels": 434,
+            "false_negative_rate": 0.021747845259571057,
+            "fn_destination_counts_by_class_id": [
+              2,
+              79,
+              353,
+              0
+            ]
+          },
+          "4_to_lt8px": {
+            "gt_eutectic_pixels": 2340,
+            "eutectic_false_negative_pixels": 38,
+            "false_negative_rate": 0.01623931623931624,
+            "fn_destination_counts_by_class_id": [
+              2,
+              23,
+              13,
+              0
+            ]
+          },
+          "8px_or_more": {
+            "gt_eutectic_pixels": 80,
+            "eutectic_false_negative_pixels": 0,
+            "false_negative_rate": 0.0,
+            "fn_destination_counts_by_class_id": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "image_id": "A147_step4_sample4",
+      "specimen_group": "A147",
+      "fold": 2,
+      "counts": {
+        "gt_eutectic_pixels": 19947,
+        "eutectic_false_negative_pixels": 14676,
+        "bins": {
+          "0_to_lt2px": {
+            "gt_eutectic_pixels": 17720,
+            "eutectic_false_negative_pixels": 12981,
+            "false_negative_rate": 0.7325620767494356,
+            "fn_destination_counts_by_class_id": [
+              1395,
+              10433,
+              1153,
+              0
+            ]
+          },
+          "2_to_lt4px": {
+            "gt_eutectic_pixels": 1514,
+            "eutectic_false_negative_pixels": 1013,
+            "false_negative_rate": 0.6690885072655218,
+            "fn_destination_counts_by_class_id": [
+              3,
+              224,
+              786,
+              0
+            ]
+          },
+          "4_to_lt8px": {
+            "gt_eutectic_pixels": 607,
+            "eutectic_false_negative_pixels": 576,
+            "false_negative_rate": 0.9489291598023064,
+            "fn_destination_counts_by_class_id": [
+              0,
+              31,
+              545,
+              0
+            ]
+          },
+          "8px_or_more": {
+            "gt_eutectic_pixels": 106,
+            "eutectic_false_negative_pixels": 106,
+            "false_negative_rate": 1.0,
+            "fn_destination_counts_by_class_id": [
+              0,
+              0,
+              106,
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "image_id": "A182_step4_sample3",
+      "specimen_group": "A182",
+      "fold": 2,
+      "counts": {
+        "gt_eutectic_pixels": 111443,
+        "eutectic_false_negative_pixels": 61292,
+        "bins": {
+          "0_to_lt2px": {
+            "gt_eutectic_pixels": 56687,
+            "eutectic_false_negative_pixels": 23458,
+            "false_negative_rate": 0.4138162188861644,
+            "fn_destination_counts_by_class_id": [
+              4191,
+              4885,
+              14382,
+              0
+            ]
+          },
+          "2_to_lt4px": {
+            "gt_eutectic_pixels": 26279,
+            "eutectic_false_negative_pixels": 11343,
+            "false_negative_rate": 0.431637429125918,
+            "fn_destination_counts_by_class_id": [
+              1,
+              907,
+              10435,
+              0
+            ]
+          },
+          "4_to_lt8px": {
+            "gt_eutectic_pixels": 11348,
+            "eutectic_false_negative_pixels": 9368,
+            "false_negative_rate": 0.8255199154035954,
+            "fn_destination_counts_by_class_id": [
+              0,
+              565,
+              8803,
+              0
+            ]
+          },
+          "8px_or_more": {
+            "gt_eutectic_pixels": 17129,
+            "eutectic_false_negative_pixels": 17123,
+            "false_negative_rate": 0.9996497168544574,
+            "fn_destination_counts_by_class_id": [
+              0,
+              455,
+              16668,
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "image_id": "A2_step4_sample1",
+      "specimen_group": "A2",
+      "fold": 2,
+      "counts": {
+        "gt_eutectic_pixels": 131214,
+        "eutectic_false_negative_pixels": 64015,
+        "bins": {
+          "0_to_lt2px": {
+            "gt_eutectic_pixels": 109075,
+            "eutectic_false_negative_pixels": 54816,
+            "false_negative_rate": 0.5025532890213156,
+            "fn_destination_counts_by_class_id": [
+              10741,
+              42014,
+              2061,
+              0
+            ]
+          },
+          "2_to_lt4px": {
+            "gt_eutectic_pixels": 20065,
+            "eutectic_false_negative_pixels": 8114,
+            "false_negative_rate": 0.40438574632444557,
+            "fn_destination_counts_by_class_id": [
+              415,
+              6736,
+              963,
+              0
+            ]
+          },
+          "4_to_lt8px": {
+            "gt_eutectic_pixels": 2074,
+            "eutectic_false_negative_pixels": 1085,
+            "false_negative_rate": 0.5231436837029894,
+            "fn_destination_counts_by_class_id": [
+              47,
+              565,
+              473,
+              0
+            ]
+          },
+          "8px_or_more": {
+            "gt_eutectic_pixels": 0,
+            "eutectic_false_negative_pixels": 0,
+            "false_negative_rate": null,
+            "fn_destination_counts_by_class_id": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "image_id": "A78_step4_sample1",
+      "specimen_group": "A78",
+      "fold": 2,
+      "counts": {
+        "gt_eutectic_pixels": 13205,
+        "eutectic_false_negative_pixels": 5265,
+        "bins": {
+          "0_to_lt2px": {
+            "gt_eutectic_pixels": 13141,
+            "eutectic_false_negative_pixels": 5255,
+            "false_negative_rate": 0.39989346320675745,
+            "fn_destination_counts_by_class_id": [
+              2374,
+              2815,
+              66,
+              0
+            ]
+          },
+          "2_to_lt4px": {
+            "gt_eutectic_pixels": 64,
+            "eutectic_false_negative_pixels": 10,
+            "false_negative_rate": 0.15625,
+            "fn_destination_counts_by_class_id": [
+              10,
+              0,
+              0,
+              0
+            ]
+          },
+          "4_to_lt8px": {
+            "gt_eutectic_pixels": 0,
+            "eutectic_false_negative_pixels": 0,
+            "false_negative_rate": null,
+            "fn_destination_counts_by_class_id": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "8px_or_more": {
+            "gt_eutectic_pixels": 0,
+            "eutectic_false_negative_pixels": 0,
+            "false_negative_rate": null,
+            "fn_destination_counts_by_class_id": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "input_manifest": {
+    "model": 386,
+    "source_model": 374,
+    "operation": "argmax over source OOF probabilities; no refit, resize, calibration, or postprocess",
+    "folds": {
+      "1": {
+        "images": 18,
+        "specimen_groups": [
+          "A118",
+          "A138",
+          "A140",
+          "A155",
+          "A16",
+          "A164",
+          "A200",
+          "A51",
+          "A57",
+          "A64",
+          "A69",
+          "A7",
+          "A8",
+          "A87",
+          "A94"
+        ],
+        "source_probabilities_sha256": "2176c5c2c2f5e230a911e246cdf894e74755f2ee81cdab8bb547b600adee457d",
+        "argmax_predictions_sha256": "dd27f38779935407ec3532b29f9cdefca2b30416e5e63175e20da0e245ba783c",
+        "prediction_archive": "fold1_oof/valid_predictions.npz"
+      },
+      "2": {
+        "images": 18,
+        "specimen_groups": [
+          "A106",
+          "A111",
+          "A123",
+          "A139",
+          "A147",
+          "A15",
+          "A152",
+          "A167",
+          "A182",
+          "A2",
+          "A21",
+          "A39",
+          "A49",
+          "A61",
+          "A78"
+        ],
+        "source_probabilities_sha256": "14362486e73c8e7af53f8eecae45147573b21c2c897eb8b217ea1e4caeb33614",
+        "argmax_predictions_sha256": "e84bd4cf5e26cb7a362d61e714b761ee8384b7968228ed46100725ce42f6788c",
+        "prediction_archive": "fold2_oof/valid_predictions.npz"
+      }
+    },
+    "total_images": 36,
+    "total_specimen_groups": 30
+  }
+}

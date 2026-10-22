@@ -1,0 +1,450 @@
+{
+  "model": 380,
+  "scope": "20 official validation images; leave-one-specimen-group-out route selection",
+  "metric": "image-wise mean of four class IoUs; empty union=0",
+  "conditional_anchor": "Model341/339 fixed historical route; its full-valid selection is not corrected",
+  "gamma336_full_valid": [
+    0.0,
+    0.0,
+    1.0,
+    0.25
+  ],
+  "gamma336_choices_by_heldout_group": {
+    "A11": [
+      0.0,
+      0.0,
+      1.0,
+      0.25
+    ],
+    "A117": [
+      0.0,
+      0.0,
+      1.0,
+      0.25
+    ],
+    "A125": [
+      0.0,
+      0.0,
+      1.0,
+      0.25
+    ],
+    "A153": [
+      0.0,
+      0.0,
+      1.0,
+      0.25
+    ],
+    "A170": [
+      0.0,
+      0.0,
+      1.0,
+      0.25
+    ],
+    "A181": [
+      0.0,
+      0.0,
+      1.0,
+      0.25
+    ],
+    "A186": [
+      0.0,
+      0.0,
+      1.0,
+      0.25
+    ],
+    "A191": [
+      0.0,
+      0.0,
+      1.0,
+      0.25
+    ],
+    "A40": [
+      0.0,
+      0.0,
+      1.0,
+      0.25
+    ],
+    "A42": [
+      0.0,
+      0.0,
+      1.0,
+      0.25
+    ],
+    "A44": [
+      0.0,
+      0.0,
+      1.0,
+      0.25
+    ],
+    "A55": [
+      0.0,
+      0.0,
+      1.0,
+      0.25
+    ],
+    "A59": [
+      0.0,
+      0.0,
+      1.0,
+      0.25
+    ],
+    "A63": [
+      0.0,
+      0.0,
+      1.0,
+      0.25
+    ],
+    "A67": [
+      0.0,
+      0.0,
+      1.0,
+      0.25
+    ],
+    "A7": [
+      0.0,
+      0.0,
+      1.0,
+      0.25
+    ],
+    "A71": [
+      0.25,
+      0.0,
+      1.0,
+      0.25
+    ],
+    "A72": [
+      0.0,
+      0.0,
+      1.0,
+      0.25
+    ],
+    "A74": [
+      0.0,
+      0.0,
+      1.0,
+      0.25
+    ]
+  },
+  "gamma347_choices_by_heldout_group": {
+    "A11": [
+      0.25,
+      0.0,
+      0.25,
+      0.0
+    ],
+    "A117": [
+      0.0,
+      0.0,
+      0.25,
+      0.0
+    ],
+    "A125": [
+      0.0,
+      0.0,
+      0.25,
+      0.0
+    ],
+    "A153": [
+      0.0,
+      0.0,
+      0.25,
+      0.0
+    ],
+    "A170": [
+      0.0,
+      0.0,
+      0.25,
+      0.0
+    ],
+    "A181": [
+      0.0,
+      0.0,
+      0.25,
+      0.0
+    ],
+    "A186": [
+      0.0,
+      0.0,
+      0.25,
+      0.0
+    ],
+    "A191": [
+      0.0,
+      0.0,
+      0.25,
+      0.0
+    ],
+    "A40": [
+      0.0,
+      0.0,
+      0.25,
+      0.0
+    ],
+    "A42": [
+      0.0,
+      0.0,
+      0.25,
+      0.0
+    ],
+    "A44": [
+      0.0,
+      0.0,
+      0.25,
+      0.0
+    ],
+    "A55": [
+      0.0,
+      0.0,
+      0.25,
+      0.0
+    ],
+    "A59": [
+      0.0,
+      0.0,
+      0.25,
+      0.0
+    ],
+    "A63": [
+      0.0,
+      0.0,
+      0.25,
+      0.0
+    ],
+    "A67": [
+      0.0,
+      0.0,
+      0.25,
+      0.0
+    ],
+    "A7": [
+      0.0,
+      0.0,
+      0.25,
+      0.0
+    ],
+    "A71": [
+      0.25,
+      0.0,
+      0.25,
+      0.0
+    ],
+    "A72": [
+      0.0,
+      0.0,
+      0.25,
+      0.0
+    ],
+    "A74": [
+      0.0,
+      0.0,
+      0.25,
+      0.0
+    ]
+  },
+  "gamma336_choice_counts": {
+    "(0.0, 0.0, 1.0, 0.25)": 18,
+    "(0.25, 0.0, 1.0, 0.25)": 1
+  },
+  "gamma347_choice_counts": {
+    "(0.0, 0.0, 0.25, 0.0)": 17,
+    "(0.25, 0.0, 0.25, 0.0)": 2
+  },
+  "paired_outer_group_comparison_349_vs_346": {
+    "images": 20,
+    "specimen_groups": 19,
+    "reference_image_mean_miou_empty0_pct": 79.82771391405959,
+    "candidate_image_mean_miou_empty0_pct": 79.75393513296598,
+    "paired_image_weighted_delta_pp": -0.07377878109358749,
+    "paired_group_bootstrap_95ci_delta_pp_image_weighted": [
+      -0.200390362985508,
+      0.022905335067999074
+    ],
+    "paired_group_equal_delta_pp": -0.0624924005541813,
+    "paired_group_bootstrap_95ci_delta_pp_group_equal": [
+      -0.19585823621478804,
+      0.02309259084473052
+    ],
+    "positive_images": 10,
+    "positive_groups": 9,
+    "step4_paired_delta_pp": 0.050699143463162066,
+    "class_mean_iou_delta_pp": {
+      "Al3Ni": -0.23002688835852686,
+      "Primary_Si": -0.0026002985609446805,
+      "Al": 0.02324200241726082,
+      "Eutectic_Si": -0.08572993987213978
+    },
+    "per_group_delta_pp": {
+      "A11": -0.288220011342305,
+      "A117": 0.03347130065913806,
+      "A125": -0.025341808074963446,
+      "A153": -0.13502434871559554,
+      "A170": 0.13678867524911098,
+      "A181": -0.04064574305974178,
+      "A186": 0.06855724182144307,
+      "A191": 0.02767914066643673,
+      "A40": 0.014619226884116099,
+      "A42": -0.04397986085787897,
+      "A44": -0.041257743615197295,
+      "A55": -0.0005837232389782621,
+      "A59": 0.029361356256196736,
+      "A63": -0.06928505390035866,
+      "A67": -0.017294770737841247,
+      "A7": 0.05875986093053509,
+      "A71": -1.07263073864321,
+      "A72": 0.09681434435632186,
+      "A74": 0.08085704483332679
+    },
+    "per_image": [
+      {
+        "image": "A117_step4_sample2",
+        "group": "A117",
+        "reference_miou": 86.35519293881364,
+        "candidate_miou": 86.38866423947277,
+        "delta_pp": 0.03347130065913806
+      },
+      {
+        "image": "A11_step1_sample4",
+        "group": "A11",
+        "reference_miou": 79.73627833943063,
+        "candidate_miou": 79.12882488542652,
+        "delta_pp": -0.6074534540041143
+      },
+      {
+        "image": "A11_step2_sample4",
+        "group": "A11",
+        "reference_miou": 76.60057633827846,
+        "candidate_miou": 76.63158976959797,
+        "delta_pp": 0.031013431319504292
+      },
+      {
+        "image": "A125_step1_sample4",
+        "group": "A125",
+        "reference_miou": 79.25043430998296,
+        "candidate_miou": 79.225092501908,
+        "delta_pp": -0.025341808074963446
+      },
+      {
+        "image": "A153_step3_sample3",
+        "group": "A153",
+        "reference_miou": 73.1406989978684,
+        "candidate_miou": 73.0056746491528,
+        "delta_pp": -0.13502434871559554
+      },
+      {
+        "image": "A170_step4_sample3",
+        "group": "A170",
+        "reference_miou": 88.5142118585619,
+        "candidate_miou": 88.65100053381101,
+        "delta_pp": 0.13678867524911098
+      },
+      {
+        "image": "A181_step1_sample1",
+        "group": "A181",
+        "reference_miou": 80.24046985930228,
+        "candidate_miou": 80.19982411624254,
+        "delta_pp": -0.04064574305974178
+      },
+      {
+        "image": "A186_step2_sample2",
+        "group": "A186",
+        "reference_miou": 81.9996409148377,
+        "candidate_miou": 82.06819815665915,
+        "delta_pp": 0.06855724182144307
+      },
+      {
+        "image": "A191_step4_sample3",
+        "group": "A191",
+        "reference_miou": 81.66869789778232,
+        "candidate_miou": 81.69637703844876,
+        "delta_pp": 0.02767914066643673
+      },
+      {
+        "image": "A40_step3_sample3",
+        "group": "A40",
+        "reference_miou": 82.05338830460803,
+        "candidate_miou": 82.06800753149214,
+        "delta_pp": 0.014619226884116099
+      },
+      {
+        "image": "A42_step2_sample4",
+        "group": "A42",
+        "reference_miou": 82.7112400049653,
+        "candidate_miou": 82.66726014410743,
+        "delta_pp": -0.04397986085787897
+      },
+      {
+        "image": "A44_step4_sample3",
+        "group": "A44",
+        "reference_miou": 90.24477183771106,
+        "candidate_miou": 90.20351409409587,
+        "delta_pp": -0.041257743615197295
+      },
+      {
+        "image": "A55_step2_sample1",
+        "group": "A55",
+        "reference_miou": 81.52958810118096,
+        "candidate_miou": 81.52900437794199,
+        "delta_pp": -0.0005837232389782621
+      },
+      {
+        "image": "A59_step3_sample1",
+        "group": "A59",
+        "reference_miou": 82.51436113920896,
+        "candidate_miou": 82.54372249546516,
+        "delta_pp": 0.029361356256196736
+      },
+      {
+        "image": "A63_step1_sample4",
+        "group": "A63",
+        "reference_miou": 83.79461406258567,
+        "candidate_miou": 83.7253290086853,
+        "delta_pp": -0.06928505390035866
+      },
+      {
+        "image": "A67_step1_sample1",
+        "group": "A67",
+        "reference_miou": 74.9742276646228,
+        "candidate_miou": 74.95693289388497,
+        "delta_pp": -0.017294770737841247
+      },
+      {
+        "image": "A71_step2_sample1",
+        "group": "A71",
+        "reference_miou": 48.655445707193564,
+        "candidate_miou": 47.58281496855035,
+        "delta_pp": -1.07263073864321
+      },
+      {
+        "image": "A72_step4_sample4",
+        "group": "A72",
+        "reference_miou": 85.9188848547422,
+        "candidate_miou": 86.01569919909852,
+        "delta_pp": 0.09681434435632186
+      },
+      {
+        "image": "A74_step3_sample4",
+        "group": "A74",
+        "reference_miou": 74.5702914400233,
+        "candidate_miou": 74.65114848485662,
+        "delta_pp": 0.08085704483332679
+      },
+      {
+        "image": "A7_step1_sample4",
+        "group": "A7",
+        "reference_miou": 82.08126370949138,
+        "candidate_miou": 82.14002357042192,
+        "delta_pp": 0.05875986093053509
+      }
+    ]
+  },
+  "raw_full_valid_model346_pct": 79.89401372792568,
+  "raw_full_valid_model349_pct": 79.90951887388398,
+  "alternate_gamma336_group": [
+    "A71"
+  ],
+  "limitations": [
+    "This cross-fit corrects gamma336/gamma347 selection conditional on Model341.",
+    "Model341/339 route choices were selected using the full validation set and remain a source of selection bias.",
+    "The 19-group interval is a small-sample uncertainty summary, not independent test performance."
+  ]
+}

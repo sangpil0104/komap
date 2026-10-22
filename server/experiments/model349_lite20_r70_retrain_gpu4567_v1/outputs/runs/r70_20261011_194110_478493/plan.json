@@ -1,0 +1,121 @@
+{
+  "model": "Model349_lite20_r70",
+  "training_count": 3,
+  "stage_count": 9,
+  "seed_index": 0,
+  "seed": 0,
+  "iterations": 21000,
+  "gpus": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "baseline": "/Data3/sppark/komap/experiments/model349_lite20_b4ws_retrain_gpu234567_v1/outputs/lite20_b4ws_train_20261011_130221_265591",
+  "baseline_result": "model_results_20261011_1",
+  "deployed_weights": 17,
+  "control_weights": 20,
+  "selection": "fixed last checkpoint; no valid/test selection",
+  "tasks": [
+    {
+      "id": "train_322",
+      "kind": "train",
+      "group": "322",
+      "deps": [],
+      "priority": 0,
+      "seed": 0,
+      "expected_seconds": 4100
+    },
+    {
+      "id": "train_326",
+      "kind": "train",
+      "group": "326",
+      "deps": [],
+      "priority": 0,
+      "seed": 0,
+      "expected_seconds": 4100
+    },
+    {
+      "id": "train_329",
+      "kind": "train",
+      "group": "329",
+      "deps": [],
+      "priority": 0,
+      "seed": 0,
+      "expected_seconds": 4100
+    },
+    {
+      "id": "package",
+      "kind": "cpu",
+      "group": "package",
+      "deps": [
+        "train_322",
+        "train_326",
+        "train_329"
+      ],
+      "priority": 0,
+      "expected_seconds": 120
+    },
+    {
+      "id": "lite20_r70_valid",
+      "kind": "gpu",
+      "group": "inference",
+      "variant": "lite20_r70",
+      "split": "valid",
+      "deps": [
+        "package"
+      ],
+      "priority": 1,
+      "expected_seconds": 1000
+    },
+    {
+      "id": "lite20_r70_test",
+      "kind": "gpu",
+      "group": "inference",
+      "variant": "lite20_r70",
+      "split": "test",
+      "deps": [
+        "package"
+      ],
+      "priority": 1,
+      "expected_seconds": 600
+    },
+    {
+      "id": "lite20_valid",
+      "kind": "gpu",
+      "group": "inference",
+      "variant": "lite20",
+      "split": "valid",
+      "deps": [
+        "package"
+      ],
+      "priority": 1,
+      "expected_seconds": 1000
+    },
+    {
+      "id": "lite20_test",
+      "kind": "gpu",
+      "group": "inference",
+      "variant": "lite20",
+      "split": "test",
+      "deps": [
+        "package"
+      ],
+      "priority": 1,
+      "expected_seconds": 600
+    },
+    {
+      "id": "export",
+      "kind": "cpu",
+      "group": "export",
+      "deps": [
+        "lite20_r70_valid",
+        "lite20_r70_test",
+        "lite20_valid",
+        "lite20_test"
+      ],
+      "priority": 0,
+      "expected_seconds": 120
+    }
+  ]
+}

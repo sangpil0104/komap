@@ -1,0 +1,556 @@
+[
+  {
+    "id": "G00_batch1_control",
+    "contrast": "A00_control",
+    "change": {
+      "batch_size": 1
+    },
+    "config": {
+      "patch": 512,
+      "scale": 2.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bilinear",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "flip4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "G_native_160",
+    "contrast": "G00_batch1_control",
+    "change": {
+      "native_context": 160
+    },
+    "fixed": {
+      "magnification": 2.0,
+      "relative_stride": 0.3359375
+    },
+    "config": {
+      "patch": 320,
+      "scale": 2.0,
+      "overlap": 106,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bilinear",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "flip4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "G_native_192",
+    "contrast": "G00_batch1_control",
+    "change": {
+      "native_context": 192
+    },
+    "fixed": {
+      "magnification": 2.0,
+      "relative_stride": 0.3359375
+    },
+    "config": {
+      "patch": 384,
+      "scale": 2.0,
+      "overlap": 128,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bilinear",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "flip4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "G_native_224",
+    "contrast": "G00_batch1_control",
+    "change": {
+      "native_context": 224
+    },
+    "fixed": {
+      "magnification": 2.0,
+      "relative_stride": 0.3359375
+    },
+    "config": {
+      "patch": 448,
+      "scale": 2.0,
+      "overlap": 149,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bilinear",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "flip4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "G_native_288",
+    "contrast": "G00_batch1_control",
+    "change": {
+      "native_context": 288
+    },
+    "fixed": {
+      "magnification": 2.0,
+      "relative_stride": 0.3359375
+    },
+    "config": {
+      "patch": 576,
+      "scale": 2.0,
+      "overlap": 191,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bilinear",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "flip4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "G_native_320",
+    "contrast": "G00_batch1_control",
+    "change": {
+      "native_context": 320
+    },
+    "fixed": {
+      "magnification": 2.0,
+      "relative_stride": 0.3359375
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.0,
+      "overlap": 212,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bilinear",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "flip4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "G_native_384",
+    "contrast": "G00_batch1_control",
+    "change": {
+      "native_context": 384
+    },
+    "fixed": {
+      "magnification": 2.0,
+      "relative_stride": 0.3359375
+    },
+    "config": {
+      "patch": 768,
+      "scale": 2.0,
+      "overlap": 255,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bilinear",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "flip4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "G_native_448",
+    "contrast": "G00_batch1_control",
+    "change": {
+      "native_context": 448
+    },
+    "fixed": {
+      "magnification": 2.0,
+      "relative_stride": 0.3359375
+    },
+    "config": {
+      "patch": 896,
+      "scale": 2.0,
+      "overlap": 298,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bilinear",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "flip4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "G_native_512",
+    "contrast": "G00_batch1_control",
+    "change": {
+      "native_context": 512
+    },
+    "fixed": {
+      "magnification": 2.0,
+      "relative_stride": 0.3359375
+    },
+    "config": {
+      "patch": 1024,
+      "scale": 2.0,
+      "overlap": 340,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bilinear",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "flip4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "G_native_640",
+    "contrast": "G00_batch1_control",
+    "change": {
+      "native_context": 640
+    },
+    "fixed": {
+      "magnification": 2.0,
+      "relative_stride": 0.3359375
+    },
+    "config": {
+      "patch": 1280,
+      "scale": 2.0,
+      "overlap": 425,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bilinear",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "flip4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "G_native_768",
+    "contrast": "G00_batch1_control",
+    "change": {
+      "native_context": 768
+    },
+    "fixed": {
+      "magnification": 2.0,
+      "relative_stride": 0.3359375
+    },
+    "config": {
+      "patch": 1536,
+      "scale": 2.0,
+      "overlap": 510,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bilinear",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "flip4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "H_resize_256",
+    "contrast": "G00_batch1_control",
+    "change": {
+      "model_input_side": 256
+    },
+    "fixed": {
+      "native_context": 256,
+      "overlap": 170
+    },
+    "config": {
+      "patch": 256,
+      "scale": 1.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bilinear",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "flip4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "H_resize_384",
+    "contrast": "G00_batch1_control",
+    "change": {
+      "model_input_side": 384
+    },
+    "fixed": {
+      "native_context": 256,
+      "overlap": 170
+    },
+    "config": {
+      "patch": 384,
+      "scale": 1.5,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bilinear",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "flip4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "H_resize_448",
+    "contrast": "G00_batch1_control",
+    "change": {
+      "model_input_side": 448
+    },
+    "fixed": {
+      "native_context": 256,
+      "overlap": 170
+    },
+    "config": {
+      "patch": 448,
+      "scale": 1.75,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bilinear",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "flip4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "H_resize_576",
+    "contrast": "G00_batch1_control",
+    "change": {
+      "model_input_side": 576
+    },
+    "fixed": {
+      "native_context": 256,
+      "overlap": 170
+    },
+    "config": {
+      "patch": 576,
+      "scale": 2.25,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bilinear",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "flip4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "H_resize_640",
+    "contrast": "G00_batch1_control",
+    "change": {
+      "model_input_side": 640
+    },
+    "fixed": {
+      "native_context": 256,
+      "overlap": 170
+    },
+    "config": {
+      "patch": 640,
+      "scale": 2.5,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bilinear",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "flip4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "H_resize_768",
+    "contrast": "G00_batch1_control",
+    "change": {
+      "model_input_side": 768
+    },
+    "fixed": {
+      "native_context": 256,
+      "overlap": 170
+    },
+    "config": {
+      "patch": 768,
+      "scale": 3.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bilinear",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "flip4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  },
+  {
+    "id": "H_resize_1024",
+    "contrast": "G00_batch1_control",
+    "change": {
+      "model_input_side": 1024
+    },
+    "fixed": {
+      "native_context": 256,
+      "overlap": 170
+    },
+    "config": {
+      "patch": 1024,
+      "scale": 4.0,
+      "overlap": 170,
+      "input_mode": "bicubic",
+      "input_antialias": false,
+      "restore": "bilinear",
+      "restore_antialias": false,
+      "restore_logits": false,
+      "window": "gaussian",
+      "sigma": 0.125,
+      "tta": "flip4",
+      "tile_merge": "prob",
+      "tta_merge": "prob",
+      "halo": 0,
+      "precision": "fp32",
+      "gamma": 1.0,
+      "contrast": 1.0,
+      "sharpen": 0.0
+    }
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "name": "hr392_s1_f3_oof",
+  "artifact": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/checks/plan_output/E/model392/seed1/fold3_oof/valid_probabilities.npz",
+  "command": [
+    "/home/sppark/miniconda3/envs/komap/bin/python",
+    "-B",
+    "-u",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/source/training/Model349_fusion805/model397_reproduction_bundle/model392/evaluate_image_mean.py",
+    "--checkpoint",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/checks/plan_output/E/model392/seed1/fold3/last.pt",
+    "--data-root",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/checks/plan_output/E/splits/model392_cv/seed1_fold3",
+    "--split",
+    "valid",
+    "--output-dir",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/checks/plan_output/E/model392/seed1/fold3_oof",
+    "--device",
+    "cuda:0",
+    "--batch-size",
+    "2",
+    "--patch-size",
+    "512",
+    "--overlap",
+    "170",
+    "--input-scale",
+    "2.0",
+    "--tta-mode",
+    "flip4"
+  ],
+  "cwd": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/source",
+  "env": {
+    "CUDA_VISIBLE_DEVICES": null,
+    "PYTHONPATH": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/source/training/train_route/experiments:/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/source/training/train_route/experiments/historical_scripts",
+    "OMP_NUM_THREADS": null
+  }
+}

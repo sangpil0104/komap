@@ -1,0 +1,175 @@
+model=6 device=cuda logical_gpu=0 amp=True train=70 valid=20 batch=4
+parameters=26,016,324 trainable=26,016,324
+/Data3/sppark/komap/experiments/model349_no_class_weights_v1/outputs/runs/model349_no_class_weights_train_20261002T112426_091302Z/source_snapshot/experiments/historical_scripts/train_models_2_to_6.py:309: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+train_models_2_to_6:   0%|          | 0/30 [00:00<?, ?item/s]
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][A/Data3/sppark/komap/experiments/model349_no_class_weights_v1/outputs/runs/model349_no_class_weights_train_20261002T112426_091302Z/source_snapshot/experiments/historical_scripts/train_models_2_to_6.py:240: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+train_models_2_to_6: 100%|██████████| 18/18 [00:10<00:00,  1.64item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:10<00:00,  1.64item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][A/Data3/sppark/komap/experiments/model349_no_class_weights_v1/outputs/runs/model349_no_class_weights_train_20261002T112426_091302Z/source_snapshot/experiments/historical_scripts/model1_unet_resnet34.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+model1_unet_resnet34: 100%|██████████| 5/5 [00:01<00:00,  4.52item/s]
+epoch=001/30 train_loss=1.5900 valid_loss=1.7766 miou=0.4761 iou=0.464, 0.400, 0.826, 0.214 time=12.1s
+saved best.pt (mIoU=0.476107)
+train_models_2_to_6:   3%|▎         | 1/30 [00:12<06:04, 12.58s/item]
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:02<00:00,  8.40item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  7.44item/s]
+epoch=002/30 train_loss=1.2754 valid_loss=1.2464 miou=0.5844 iou=0.511, 0.765, 0.809, 0.253 time=2.9s
+saved best.pt (mIoU=0.584358)
+
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:01<00:00, 10.12item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  6.73item/s]
+epoch=003/30 train_loss=1.1546 valid_loss=1.1282 miou=0.6278 iou=0.557, 0.731, 0.833, 0.390 time=2.6s
+saved best.pt (mIoU=0.627783)
+
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:01<00:00,  9.13item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  7.49item/s]
+epoch=004/30 train_loss=1.0821 valid_loss=1.0337 miou=0.6405 iou=0.554, 0.719, 0.868, 0.420 time=2.7s
+saved best.pt (mIoU=0.640531)
+train_models_2_to_6:  13%|█▎        | 4/30 [00:24<02:25,  5.58s/item]
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:01<00:00, 10.26item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  6.11item/s]
+epoch=005/30 train_loss=1.0009 valid_loss=1.0181 miou=0.6635 iou=0.612, 0.755, 0.867, 0.421 time=2.7s
+saved best.pt (mIoU=0.663491)
+
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:01<00:00,  9.84item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  7.69item/s]
+epoch=006/30 train_loss=0.9476 valid_loss=0.9662 miou=0.6830 iou=0.602, 0.790, 0.884, 0.457 time=2.6s
+saved best.pt (mIoU=0.682992)
+
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:01<00:00,  9.14item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  7.07item/s]
+epoch=007/30 train_loss=0.8916 valid_loss=0.8851 miou=0.6523 iou=0.595, 0.794, 0.869, 0.351 time=2.8s
+train_models_2_to_6:  23%|██▎       | 7/30 [00:35<01:44,  4.53s/item]
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:02<00:00,  9.00item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  6.92item/s]
+epoch=008/30 train_loss=0.8340 valid_loss=0.8676 miou=0.6812 iou=0.608, 0.791, 0.880, 0.446 time=2.8s
+
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:02<00:00,  8.71item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  7.53item/s]
+epoch=009/30 train_loss=0.8087 valid_loss=0.9108 miou=0.6096 iou=0.578, 0.650, 0.863, 0.347 time=2.8s
+
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:02<00:00,  8.31item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  9.19item/s]
+epoch=010/30 train_loss=0.7670 valid_loss=0.7812 miou=0.6959 iou=0.632, 0.807, 0.886, 0.459 time=2.8s
+saved best.pt (mIoU=0.695899)
+train_models_2_to_6:  33%|███▎      | 10/30 [00:46<01:22,  4.13s/item]
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:02<00:00,  8.61item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  8.93item/s]
+epoch=011/30 train_loss=0.7374 valid_loss=0.7757 miou=0.6984 iou=0.644, 0.794, 0.886, 0.469 time=2.7s
+saved best.pt (mIoU=0.698351)
+
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:02<00:00,  8.36item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  9.04item/s]
+epoch=012/30 train_loss=0.7120 valid_loss=0.7238 miou=0.6873 iou=0.615, 0.780, 0.894, 0.459 time=2.8s
+
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:01<00:00, 10.27item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  8.51item/s]
+epoch=013/30 train_loss=0.6889 valid_loss=0.6917 miou=0.7020 iou=0.647, 0.796, 0.885, 0.480 time=2.4s
+saved best.pt (mIoU=0.701976)
+train_models_2_to_6:  43%|████▎     | 13/30 [00:56<01:06,  3.93s/item]
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:01<00:00, 10.47item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  7.29item/s]
+epoch=014/30 train_loss=0.6593 valid_loss=0.6747 miou=0.7133 iou=0.657, 0.813, 0.896, 0.487 time=2.5s
+saved best.pt (mIoU=0.713256)
+
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:02<00:00,  8.89item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  8.97item/s]
+epoch=015/30 train_loss=0.6426 valid_loss=0.6450 miou=0.7090 iou=0.655, 0.802, 0.894, 0.485 time=2.7s
+
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:01<00:00, 10.51item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  9.43item/s]
+epoch=016/30 train_loss=0.6300 valid_loss=0.6462 miou=0.7019 iou=0.629, 0.806, 0.893, 0.478 time=2.3s
+
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:02<00:00,  8.82item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  8.71item/s]
+train_models_2_to_6:  43%|████▎     | 13/30 [01:10<01:06,  3.93s/item]epoch=017/30 train_loss=0.6124 valid_loss=0.6243 miou=0.7187 iou=0.666, 0.816, 0.897, 0.496 time=2.7s
+saved best.pt (mIoU=0.718738)
+train_models_2_to_6:  57%|█████▋    | 17/30 [01:10<00:48,  3.73s/item]
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:01<00:00,  9.88item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  9.53item/s]
+epoch=018/30 train_loss=0.5997 valid_loss=0.6136 miou=0.7201 iou=0.665, 0.820, 0.898, 0.497 time=2.4s
+saved best.pt (mIoU=0.720131)
+
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:02<00:00,  8.41item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  8.88item/s]
+epoch=019/30 train_loss=0.5943 valid_loss=0.6094 miou=0.7168 iou=0.652, 0.824, 0.897, 0.495 time=2.8s
+
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:02<00:00,  8.38item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  9.13item/s]
+epoch=020/30 train_loss=0.5899 valid_loss=0.5988 miou=0.7177 iou=0.659, 0.815, 0.900, 0.497 time=2.8s
+train_models_2_to_6:  67%|██████▋   | 20/30 [01:21<00:36,  3.69s/item]
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:01<00:00,  9.69item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  9.05item/s]
+epoch=021/30 train_loss=0.5800 valid_loss=0.5946 miou=0.7171 iou=0.658, 0.816, 0.900, 0.495 time=2.5s
+
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:01<00:00, 10.05item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  8.30item/s]
+epoch=022/30 train_loss=0.5742 valid_loss=0.5898 miou=0.7206 iou=0.656, 0.824, 0.901, 0.502 time=2.5s
+saved best.pt (mIoU=0.720639)
+
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:01<00:00,  9.96item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  8.27item/s]
+epoch=023/30 train_loss=0.5682 valid_loss=0.5786 miou=0.7227 iou=0.659, 0.825, 0.903, 0.504 time=2.5s
+saved best.pt (mIoU=0.722689)
+train_models_2_to_6:  77%|███████▋  | 23/30 [01:32<00:25,  3.63s/item]
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:01<00:00,  9.86item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  9.42item/s]
+epoch=024/30 train_loss=0.5595 valid_loss=0.5892 miou=0.7162 iou=0.648, 0.821, 0.898, 0.497 time=2.5s
+
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:01<00:00,  9.01item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  8.91item/s]
+epoch=025/30 train_loss=0.5516 valid_loss=0.5809 miou=0.7220 iou=0.662, 0.823, 0.899, 0.504 time=2.6s
+
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:01<00:00, 10.57item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  8.18item/s]
+epoch=026/30 train_loss=0.5509 valid_loss=0.5822 miou=0.7217 iou=0.659, 0.824, 0.900, 0.503 time=2.4s
+
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:02<00:00,  8.67item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  8.15item/s]
+epoch=027/30 train_loss=0.5510 valid_loss=0.5755 miou=0.7222 iou=0.661, 0.823, 0.902, 0.503 time=2.8s
+train_models_2_to_6:  90%|█████████ | 27/30 [01:44<00:10,  3.44s/item]
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:02<00:00,  8.84item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  8.53item/s]
+epoch=028/30 train_loss=0.5467 valid_loss=0.5756 miou=0.7220 iou=0.661, 0.823, 0.900, 0.504 time=2.7s
+
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:01<00:00,  9.93item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  9.05item/s]
+epoch=029/30 train_loss=0.5468 valid_loss=0.5790 miou=0.7207 iou=0.658, 0.823, 0.899, 0.503 time=2.5s
+
+train_models_2_to_6:   0%|          | 0/18 [00:00<?, ?item/s][Atrain_models_2_to_6: 100%|██████████| 18/18 [00:01<00:00,  9.84item/s]
+
+model1_unet_resnet34:   0%|          | 0/5 [00:00<?, ?item/s][Amodel1_unet_resnet34: 100%|██████████| 5/5 [00:00<00:00,  8.04item/s]
+epoch=030/30 train_loss=0.5489 valid_loss=0.5772 miou=0.7216 iou=0.658, 0.824, 0.901, 0.503 time=2.5s
+train_models_2_to_6: 100%|██████████| 30/30 [01:53<00:00,  3.80s/item]
+{"model_id": 6, "best_miou": 0.72268879281737, "epochs_completed": 30, "elapsed_seconds": 113.85642623901367, "best_checkpoint": "/Data3/sppark/komap/experiments/model349_no_class_weights_v1/outputs/runs/model349_no_class_weights_train_20261002T112426_091302Z/outputs/model6_unetpp_resnet34/best.pt", "class_names": ["Al3Ni", "Primary Si", "Al", "Eutectic Si"], "class_colors": [[25, 76, 153], [76, 178, 76], [153, 127, 76], [204, 204, 204]]}

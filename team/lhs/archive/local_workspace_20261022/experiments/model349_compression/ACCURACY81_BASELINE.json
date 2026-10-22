@@ -1,0 +1,47 @@
+{
+  "base_id": "fusion805_lite23",
+  "adopted_by": "explicit user instruction: lite23 code package as base",
+  "adopted_at": "2026-10-10T04:08:18.102842+00:00",
+  "package": "Model349_fusion805_lite23_exploratory_code.zip",
+  "package_sha256": "f81b208c3f7239c4abeaddc205c0b6ecd8bb3fbcb310b804a0df6eb27026f8f4",
+  "checkpoint_count": 23,
+  "checkpoint_bytes": 3317816946,
+  "valid20_percent": 80.51727047204673,
+  "configuration": {
+    "key": "s1_24_s2_14_R_canonical14",
+    "expert": {
+      "family_weights": [
+        0.5,
+        0.25,
+        0.25
+      ],
+      "hr_folds": {
+        "1": [
+          2,
+          4
+        ],
+        "2": [
+          1,
+          4
+        ]
+      }
+    },
+    "R_config_file": "selected_R.yaml",
+    "assets_manifest_file": "selected_assets.json",
+    "status": "exploratory; full-search conditional LOSO failed"
+  },
+  "configuration_sha256": "0d813381042bba265465d17ae4c80e78542e0081dbb1d07846d2ce92667f23ad",
+  "validation_file": "experiments/model349_compression/fusion805_compression_round2_20261010/fresh_validation_gpu0/validation.json",
+  "validation_sha256": "7d40b0541304d4003f40c091b4303024c5aa5f72bdc343890477427fc9028bbe",
+  "scope": "baseline for subsequent accuracy81 experiments; frozen existing artifacts retained",
+  "limitations": {
+    "valid20_repeated_development": true,
+    "independent_generalization_verified": false,
+    "conditional_loso_pass": false,
+    "whole_pipeline_new_raw_inference": false,
+    "R_reused_from_previous_raw_inference": true,
+    "test_accuracy_available": false
+  },
+  "goal81_achieved": false,
+  "pending_midpoint": "held18 diagnostic only; any expansion must compare full lite23 stage2 and its baseline, not old27 stage1"
+}

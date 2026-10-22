@@ -1,0 +1,55 @@
+epoch 5 preview TTA:   0%|          | 0/4 [00:00<?, ?flip/s]epoch 5 preview TTA:  25%|██▌       | 1/4 [00:00<00:02,  1.01flip/s]epoch 5 preview TTA:  50%|█████     | 2/4 [00:01<00:01,  1.21flip/s]epoch 5 preview TTA:  75%|███████▌  | 3/4 [00:02<00:00,  1.35flip/s]epoch 5 preview TTA: 100%|██████████| 4/4 [00:02<00:00,  1.67flip/s]epoch 5 preview TTA: 100%|██████████| 4/4 [00:02<00:00,  1.47flip/s]
+{
+  "model_name": "HRNet_taeho",
+  "preview_kind": "intermediate_checkpoint_single_image",
+  "epoch": 5,
+  "planned_epochs": 70,
+  "checkpoint_optimizer_updates": 525,
+  "preview_optimizer_updates": 0,
+  "image_id": "A11_step1_sample4",
+  "height": 480,
+  "width": 675,
+  "checkpoint_sha256": "20e07be73b5f0e2f58349a97cb557ff95eac3f55d99a3837cba839ae4eb706b9",
+  "physical_gpu": 5,
+  "inference_batch_size": 1,
+  "tta": "four_flip",
+  "patch_size": 512,
+  "input_scale": 2.0,
+  "overlap": 170,
+  "predicted_mask": "/Data3/sppark/komap/experiments/HRNet_taeho_multigpu/outputs/previews/20260928T123213_773594Z/A11_step1_sample4_predicted_mask_epoch5.png",
+  "comparison": "/Data3/sppark/komap/experiments/HRNet_taeho_multigpu/outputs/previews/20260928T123213_773594Z/A11_step1_sample4_comparison_epoch5.png",
+  "image_miou": 0.6489883348142693,
+  "class_iou": [
+    0.9553929068747958,
+    0.2095844585063077,
+    0.9066576973255055,
+    0.5243182765504684
+  ],
+  "pixel_error_rate": 0.08680864197530869,
+  "confusion_matrix": [
+    [
+      222297,
+      246,
+      33,
+      1800
+    ],
+    [
+      4591,
+      5200,
+      109,
+      14542
+    ],
+    [
+      1443,
+      21,
+      44477,
+      2729
+    ],
+    [
+      2266,
+      102,
+      244,
+      23900
+    ]
+  ]
+}

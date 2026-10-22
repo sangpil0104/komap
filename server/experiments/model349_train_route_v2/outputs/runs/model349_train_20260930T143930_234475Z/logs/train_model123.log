@@ -1,0 +1,35 @@
+loaded=/Data3/sppark/komap/experiments/model349_train_route_v2/outputs/runs/model349_train_20260930T143930_234475Z/outputs/model109_aspp_native/best.pt compatible=375 missing=0 unexpected=0
+/Data3/sppark/komap/experiments/model349_train_route_v2/outputs/runs/model349_train_20260930T143930_234475Z/source_snapshot/experiments/historical_scripts/resnet34_refinements.py:435: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+candidate=ema device=cuda patches=420 params=28,246,853
+resnet34_refinements:   0%|          | 0/4 [00:00<?, ?item/s]
+resnet34_refinements:   0%|          | 0/105 [00:00<?, ?item/s][A/Data3/sppark/komap/experiments/model349_train_route_v2/outputs/runs/model349_train_20260930T143930_234475Z/source_snapshot/experiments/historical_scripts/resnet34_refinements.py:448: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+resnet34_refinements:  32%|███▏      | 34/105 [00:10<00:21,  3.36item/s][A
+resnet34_refinements:  92%|█████████▏| 97/105 [00:20<00:01,  4.98item/s][Aresnet34_refinements: 100%|██████████| 105/105 [00:22<00:00,  4.72item/s]
+
+resnet34_refinements:   0%|          | 0/20 [00:00<?, ?item/s][Aresnet34_refinements: 100%|██████████| 20/20 [00:08<00:00,  2.24item/s]
+epoch=01/4 loss=0.3997 miou=0.75366 image=0.75366 0.6919,0.8444,0.9273,0.5510
+resnet34_refinements:  25%|██▌       | 1/4 [00:32<01:36, 32.02s/item]
+resnet34_refinements:   0%|          | 0/105 [00:00<?, ?item/s][A
+resnet34_refinements:  53%|█████▎    | 56/105 [00:10<00:08,  5.49item/s][Aresnet34_refinements: 100%|██████████| 105/105 [00:17<00:00,  6.00item/s]
+
+resnet34_refinements:   0%|          | 0/20 [00:00<?, ?item/s][Aresnet34_refinements: 100%|██████████| 20/20 [00:06<00:00,  3.00item/s]
+epoch=02/4 loss=0.4005 miou=0.75239 image=0.75239 0.6905,0.8434,0.9271,0.5485
+resnet34_refinements:  50%|█████     | 2/4 [00:56<00:55, 27.69s/item]
+resnet34_refinements:   0%|          | 0/105 [00:00<?, ?item/s][A
+resnet34_refinements:  47%|████▋     | 49/105 [00:10<00:11,  4.72item/s][Aresnet34_refinements: 100%|██████████| 105/105 [00:19<00:00,  5.33item/s]
+
+resnet34_refinements:   0%|          | 0/20 [00:00<?, ?item/s][Aresnet34_refinements: 100%|██████████| 20/20 [00:07<00:00,  2.64item/s]
+epoch=03/4 loss=0.3940 miou=0.75727 image=0.75727 0.7002,0.8474,0.9283,0.5532
+resnet34_refinements:  75%|███████▌  | 3/4 [01:24<00:27, 27.92s/item]
+resnet34_refinements:   0%|          | 0/105 [00:00<?, ?item/s][A
+resnet34_refinements:  56%|█████▌    | 59/105 [00:10<00:07,  5.82item/s][Aresnet34_refinements: 100%|██████████| 105/105 [00:17<00:00,  5.92item/s]
+
+resnet34_refinements:   0%|          | 0/20 [00:00<?, ?item/s][Aresnet34_refinements: 100%|██████████| 20/20 [00:07<00:00,  2.75item/s]
+epoch=04/4 loss=0.4071 miou=0.75859 image=0.75859 0.7037,0.8475,0.9283,0.5548
+resnet34_refinements: 100%|██████████| 4/4 [01:50<00:00, 27.15s/item]resnet34_refinements: 100%|██████████| 4/4 [01:50<00:00, 27.71s/item]
+resnet34_refinements:   0%|          | 0/20 [00:00<?, ?item/s]resnet34_refinements: 100%|██████████| 20/20 [00:07<00:00,  2.64item/s]
+{"candidate": "ema", "best_fixed_miou": 0.7585851294476602, "best_calibrated": {"image_mean_miou": 0.7586425071622003, "miou": 0.7586425071622003, "image_miou_compat": 0.7586425071622003, "image_class_iou": {"Al3Ni": 0.7052202272779896, "Primary Si": 0.8475837039701176, "Al": 0.9282753763270157, "Eutectic Si": 0.5534907210736785}, "iou": {"Al3Ni": 0.7052202272779896, "Primary Si": 0.8475837039701176, "Al": 0.9282753763270157, "Eutectic Si": 0.5534907210736785}, "image_mean_miou_exclude": 0.7586425071622003, "image_scores": [0.8589291878212566, 0.6567612401238175, 0.7108093416074432, 0.7656855441822388, 0.6988111226694986, 0.8324245234013419, 0.7587939193755334, 0.7893191583947609, 0.8057565455964237, 0.7960399473656803, 0.8188450125137423, 0.8759697596351137, 0.7976708357272125, 0.7937658342997091, 0.7913549170922232, 0.7235464697253167, 0.36790741398245536, 0.8502420958837261, 0.7119409613500493, 0.7682763124964633], "image_scores_exclude": [0.8589291878212566, 0.6567612401238175, 0.7108093416074432, 0.7656855441822388, 0.6988111226694986, 0.8324245234013419, 0.7587939193755334, 0.7893191583947609, 0.8057565455964237, 0.7960399473656803, 0.8188450125137423, 0.8759697596351137, 0.7976708357272125, 0.7937658342997091, 0.7913549170922232, 0.7235464697253167, 0.36790741398245536, 0.8502420958837261, 0.7119409613500493, 0.7682763124964633], "image_mious": [0.8589291878212566, 0.6567612401238175, 0.7108093416074432, 0.7656855441822388, 0.6988111226694986, 0.8324245234013419, 0.7587939193755334, 0.7893191583947609, 0.8057565455964237, 0.7960399473656803, 0.8188450125137423, 0.8759697596351137, 0.7976708357272125, 0.7937658342997091, 0.7913549170922232, 0.7235464697253167, 0.36790741398245536, 0.8502420958837261, 0.7119409613500493, 0.7682763124964633], "image_std_miou": 0.10539087928751907, "image_min_miou": 0.36790741398245536, "image_max_miou": 0.8759697596351137, "metric": "image_mIoU_four_classes_empty0", "al_bias": -0.44999999999999973}}
+wrote test_masks=0 dir=/Data3/sppark/komap/experiments/model349_train_route_v2/outputs/runs/model349_train_20260930T143930_234475Z/outputs/model123_ema/test_masks

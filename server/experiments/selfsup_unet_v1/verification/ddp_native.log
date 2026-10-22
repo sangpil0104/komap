@@ -1,0 +1,32 @@
+{
+  "synthetic_only": true,
+  "world_size": 6,
+  "cuda_visible_devices": "0,1,2,5,6,7",
+  "microbatches_per_rank": 2,
+  "checks": [
+    {
+      "task": "ssl",
+      "finite_loss": true,
+      "output_shape": [
+        1,
+        1,
+        640,
+        640
+      ],
+      "identical_parameters": true,
+      "peak_memory_MiB_rank0": 803.9765625
+    },
+    {
+      "task": "seg",
+      "finite_loss": true,
+      "output_shape": [
+        1,
+        4,
+        640,
+        640
+      ],
+      "identical_parameters": true,
+      "peak_memory_MiB_rank0": 854.95263671875
+    }
+  ]
+}

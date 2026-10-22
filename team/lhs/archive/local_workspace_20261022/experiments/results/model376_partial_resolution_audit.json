@@ -1,0 +1,95 @@
+{
+  "scope": "paired Model376-Model374 train OOF only; official valid/test ZIPs used only for image dimensions",
+  "folds": [
+    1,
+    2,
+    3
+  ],
+  "images": 53,
+  "images_by_fold": {
+    "1": 18,
+    "2": 18,
+    "3": 17
+  },
+  "resolution_counts": {
+    "train": {
+      "1230x875": 20,
+      "1278x909": 24,
+      "1440x1024": 9,
+      "675x480": 17
+    },
+    "valid": {
+      "1096x780": 1,
+      "1230x875": 3,
+      "1278x909": 5,
+      "1440x1024": 2,
+      "675x480": 9
+    },
+    "test": {
+      "1230x875": 4,
+      "1278x909": 2,
+      "1440x1024": 1,
+      "675x480": 3
+    }
+  },
+  "bootstrap": {
+    "unit": "specimen group",
+    "draws": 20000,
+    "seed": 376
+  },
+  "paired_oof_by_resolution": {
+    "groups": 44,
+    "subgroups": {
+      "675x480": {
+        "images": 13,
+        "groups": 12,
+        "mean_delta_pp": 0.8080945684852487,
+        "fold_mean_delta_pp": {
+          "1": 0.7008034565635548,
+          "2": 0.9719062600148987,
+          "3": 0.9915414788775501
+        },
+        "group_bootstrap_95ci_pp": [
+          0.33143934243134904,
+          1.4160287390953048
+        ]
+      },
+      "other_resolutions": {
+        "images": 40,
+        "groups": 32,
+        "mean_delta_pp": 0.1196452865667641,
+        "fold_mean_delta_pp": {
+          "1": 0.8148388198302972,
+          "2": -0.32086275290097144,
+          "3": 0.09669097052547777
+        },
+        "group_bootstrap_95ci_pp": [
+          -0.4051283786786465,
+          0.6770869953488486
+        ]
+      }
+    },
+    "675x480_minus_other_interaction_pp": {
+      "mean": 0.6884492819184846,
+      "group_bootstrap_95ci_pp": [
+        -0.048963548592527384,
+        1.4916015885134277
+      ]
+    },
+    "resolution_mix_standardization": {
+      "valid_675x480_fraction": 0.45,
+      "test_675x480_fraction": 0.3,
+      "estimated_oof_delta_at_valid_mix_pp": 0.4294474634300822,
+      "estimated_oof_delta_at_test_mix_pp": 0.3261800711423095,
+      "valid_mix_bootstrap_95ci_pp": [
+        0.06972753636598795,
+        0.837519770271849
+      ],
+      "test_mix_bootstrap_95ci_pp": [
+        -0.06726751902947227,
+        0.7530610327413837
+      ]
+    }
+  },
+  "interpretation_guard": "Partial folds are descriptive, not an adoption test. Reweighting applies the coarse 675x480-versus-other OOF effects to observed valid/test size mixes; it is not a test score estimate, and the pooled other-resolution category may hide heterogeneity."
+}

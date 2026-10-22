@@ -1,0 +1,31 @@
+{
+  "lock_type": "pre-result local artifact hash lock",
+  "locked_at_utc": "2026-10-02T07:58:08Z",
+  "locked_at_unix": 1790927888,
+  "artifacts_sha256": {
+    "experiments/model382_seed_count_control_preregistration.md": "ed1dafb6c97b533ad15461d1bfd1b7186504a0911b39c07ce512233eed70b721",
+    "experiments/model382_five_model_ensemble_addendum.md": "7c71c3ed2cb17d631f4afe084876212318ed8c09955bbc272b3e1310b4dd3e26",
+    "experiments/model382_oof_ensemble_compare.py": "cd9f1e58047cabb164af4e72a88ca61069dd1a6230f791e10bc42cbd1937b37e",
+    "experiments/model382_oof_ensemble_compare_smoke.py": "d9b00364669717a05f03700b235caa38ef876c139239a66306f338586eb547be"
+  },
+  "pre_result_evidence": {
+    "checked_at_utc": "2026-10-02T07:58Z",
+    "active_runner_pid": 972710,
+    "active_training": "seed1/fold1, epoch50/70 immediately before lock",
+    "val_every": 0,
+    "train_py_behavior": "valid_ds is None when val_every is not positive",
+    "training_log_has_quick_val_mIoU": false,
+    "seed1_fold1_oof_files": [],
+    "all_model382_run_directories": ["seed1/fold1"],
+    "all_model382_oof_directories_with_files": [],
+    "external_experiment_tracker_calls_in_training_source": false,
+    "source_checked": "/workspace/komap_model1/model336_hrnet_best/train.py and komap_seg/",
+    "interpretation": "No Model382 OOF score had been generated or exposed when this lock was created. Existing training stdout contained train loss only."
+  },
+  "enforcement": {
+    "Model382 OOF archive and completion manifest mtime must be newer than locked_at_unix": true,
+    "all four folds and both seeds required; partial OOF is rejected": true,
+    "all Model382 manifest/checkpoint/OOF hashes and fixed recipe args are checked": true,
+    "official validation/test inputs are not accepted by the evaluator": true
+  }
+}

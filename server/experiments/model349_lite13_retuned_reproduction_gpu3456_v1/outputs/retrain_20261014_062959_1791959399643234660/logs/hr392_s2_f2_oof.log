@@ -1,0 +1,48 @@
+A106_step4_sample1: image mIoU zero=0.724550, skip=0.724550
+A111_step1_sample2: image mIoU zero=0.844015, skip=0.844015
+A111_step3_sample4: image mIoU zero=0.858210, skip=0.858210
+A123_step1_sample1: image mIoU zero=0.801593, skip=0.801593
+A123_step4_sample2: image mIoU zero=0.867266, skip=0.867266
+A139_step3_sample4: image mIoU zero=0.757539, skip=0.757539
+A139_step4_sample3: image mIoU zero=0.843266, skip=0.843266
+A147_step4_sample4: image mIoU zero=0.682210, skip=0.682210
+A152_step2_sample1: image mIoU zero=0.830743, skip=0.830743
+A15_step1_sample1: image mIoU zero=0.866655, skip=0.866655
+A167_step3_sample4: image mIoU zero=0.796090, skip=0.796090
+A182_step4_sample3: image mIoU zero=0.717034, skip=0.717034
+A21_step2_sample4: image mIoU zero=0.815673, skip=0.815673
+A2_step4_sample1: image mIoU zero=0.665467, skip=0.665467
+A39_step2_sample3: image mIoU zero=0.851483, skip=0.851483
+A49_step2_sample2: image mIoU zero=0.755606, skip=0.755606
+A61_step2_sample2: image mIoU zero=0.654045, skip=0.654045
+A78_step4_sample1: image mIoU zero=0.756259, skip=0.756259
+{
+  "model": "Model336 HRNet-W48 + SMP U-Net++",
+  "split": "valid",
+  "images": 18,
+  "class_order": [
+    "Al",
+    "Al3Ni",
+    "Primary_Si",
+    "Eutectic_Si"
+  ],
+  "inference": {
+    "patch_size": 512,
+    "base_input_scale": 2.0,
+    "target_width": 1278,
+    "scale_rule": "base_input_scale * target_width / native image width",
+    "overlap": 170,
+    "overlap_rule": "preserve overlap/native-tile ratio",
+    "tta": "4-way horizontal/vertical flips",
+    "tta_mode": "flip4",
+    "tta_enabled": true,
+    "downsample_antialias": false,
+    "batch_size": 2,
+    "device": "cuda:0"
+  },
+  "per_image_metrics": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/outputs/retrain_20261014_062959_1791959399643234660/E/model392/seed2/fold2_oof/valid_per_image.csv",
+  "probabilities": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/outputs/retrain_20261014_062959_1791959399643234660/E/model392/seed2/fold2_oof/valid_probabilities.npz",
+  "image_miou_empty_zero": 0.7826503039272995,
+  "image_miou_empty_skip": 0.7826503039272995,
+  "image_miou_empty_one": 0.7826503039272995
+}

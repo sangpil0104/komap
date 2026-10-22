@@ -1,0 +1,28 @@
+{
+  "name": "prepare_splits",
+  "artifact": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/outputs/retrain_20261014_062959_1791959399643234660/E/splits/model397_split_manifest.json",
+  "command": [
+    "/home/sppark/miniconda3/envs/komap/bin/python",
+    "-B",
+    "-u",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/outputs/retrain_20261014_062959_1791959399643234660/implementation/source/training/Model349_fusion805/model397_reproduction_bundle/scripts/prepare_oof_splits.py",
+    "--data-root",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/data",
+    "--output-root",
+    "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/outputs/retrain_20261014_062959_1791959399643234660/E/splits"
+  ],
+  "cwd": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/outputs/retrain_20261014_062959_1791959399643234660/implementation/source",
+  "env": {
+    "CUDA_VISIBLE_DEVICES": "GPU-2cbc38c2-5330-cfed-4e43-819c008330e7,GPU-c26b1177-bd33-c433-b7b2-7b0cbeafc4d2,GPU-797180ea-8868-f008-3828-0d465756997f,GPU-d7e94612-cce1-c1d5-78b5-3c538803e341",
+    "PYTHONPATH": null,
+    "OMP_NUM_THREADS": "2"
+  },
+  "status": "done",
+  "started_at": "2026-10-14T15:30:00.088604+09:00",
+  "started_unix": 1791959400.0886285,
+  "log": "/Data3/sppark/komap/experiments/model349_lite13_retuned_reproduction_gpu3456_v1/outputs/retrain_20261014_062959_1791959399643234660/logs/prepare_splits.log",
+  "returncode": 0,
+  "wall_seconds": 0.15885142050683498,
+  "finished_at": "2026-10-14T15:30:00.247764+09:00",
+  "artifact_sha256": "86ed00ac162dbc946afb5f08017e1c517624af6c882a69c63de24f7fa27daed3"
+}

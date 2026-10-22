@@ -1,0 +1,81 @@
+usage: model253_highres_scale_finetune.py [-h] --data-dir DATA_DIR
+                                          --checkpoint CHECKPOINT --output-dir
+                                          OUTPUT_DIR [--scale SCALE]
+                                          [--patch-size PATCH_SIZE]
+                                          [--patches-per-image PATCHES_PER_IMAGE]
+                                          [--batch-size BATCH_SIZE]
+                                          [--epochs EPOCHS]
+                                          [--scheduler-epochs SCHEDULER_EPOCHS]
+                                          [--encoder-lr ENCODER_LR]
+                                          [--decoder-lr DECODER_LR]
+                                          [--native-lr NATIVE_LR]
+                                          [--weight-decay WEIGHT_DECAY]
+                                          [--imagewise-lovasz-weight IMAGEWISE_LOVASZ_WEIGHT]
+                                          [--imagewise-cross-entropy]
+                                          [--imagewise-soft-iou-weight IMAGEWISE_SOFT_IOU_WEIGHT]
+                                          [--binary-foreground-weight BINARY_FOREGROUND_WEIGHT]
+                                          [--boundary-radius BOUNDARY_RADIUS]
+                                          [--boundary-weight BOUNDARY_WEIGHT]
+                                          [--val-stride VAL_STRIDE]
+                                          [--tta {none,d4}]
+                                          [--selection-metric {image_mean_miou,image_mean_miou_exclude}]
+                                          [--num-workers NUM_WORKERS]
+                                          [--seed SEED]
+                                          [--memory-fraction MEMORY_FRACTION]
+                                          [--memory-probe] [--eval-only]
+                                          [--global-representation]
+                                          [--metallography-augmentation]
+                                          [--sampling-mode {class_focused,uniform_area}]
+                                          [--no-amp]
+
+options:
+  -h, --help            show this help message and exit
+  --data-dir DATA_DIR
+  --checkpoint CHECKPOINT
+  --output-dir OUTPUT_DIR
+  --scale SCALE
+  --patch-size PATCH_SIZE
+  --patches-per-image PATCHES_PER_IMAGE
+  --batch-size BATCH_SIZE
+  --epochs EPOCHS
+  --scheduler-epochs SCHEDULER_EPOCHS
+                        cosine schedule length; useful for matched partial
+                        runs
+  --encoder-lr ENCODER_LR
+  --decoder-lr DECODER_LR
+  --native-lr NATIVE_LR
+  --weight-decay WEIGHT_DECAY
+  --imagewise-lovasz-weight IMAGEWISE_LOVASZ_WEIGHT
+                        add per-image present-class Lovasz-Softmax to the
+                        supervised loss
+  --imagewise-cross-entropy
+                        replace weighted CE with per-image present-class macro
+                        CE
+  --imagewise-soft-iou-weight IMAGEWISE_SOFT_IOU_WEIGHT
+                        add per-image present-class soft-IoU loss
+  --binary-foreground-weight BINARY_FOREGROUND_WEIGHT
+                        add balanced secondary-vs-Al boundary BCE + image-wise
+                        Soft-IoU
+  --boundary-radius BOUNDARY_RADIUS
+                        half-width in pixels of the boundary emphasis band
+  --boundary-weight BOUNDARY_WEIGHT
+                        relative pixel weight inside the ground-truth boundary
+                        band
+  --val-stride VAL_STRIDE
+  --tta {none,d4}
+  --selection-metric {image_mean_miou,image_mean_miou_exclude}
+  --num-workers NUM_WORKERS
+  --seed SEED
+  --memory-fraction MEMORY_FRACTION
+  --memory-probe
+  --eval-only
+  --global-representation
+                        compute z-score/CDF over the whole resized image
+                        before cropping
+  --metallography-augmentation
+                        add random 0.7–1.4x affine, arbitrary rotations, and
+                        stronger intensity augmentation
+  --sampling-mode {class_focused,uniform_area}
+                        choose class-focused crops or sample crop centers
+                        uniformly by image area
+  --no-amp

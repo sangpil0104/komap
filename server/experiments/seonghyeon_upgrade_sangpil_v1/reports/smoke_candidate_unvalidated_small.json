@@ -1,0 +1,32 @@
+{
+  "data": "synthetic",
+  "optimizer_updates": 0,
+  "detail_size": 128,
+  "context_size": 64,
+  "full_size": false,
+  "steps": 2,
+  "branches": {
+    "texture": true,
+    "context": true,
+    "residual_head": true
+  },
+  "zero_residual_max_difference": 0.0,
+  "backward_diagnostics": [
+    {
+      "loss": 9.599922180175781,
+      "base_gradient_sum": 203.23793705715798,
+      "texture_gradient_sum": 0.0,
+      "context_gradient_sum": 0.0,
+      "head_gradient_sum": 1.5215522050857544
+    },
+    {
+      "loss": 9.357152938842773,
+      "base_gradient_sum": 303.1813964997418,
+      "texture_gradient_sum": 0.015173681938904338,
+      "context_gradient_sum": 0.022771758631279226,
+      "head_gradient_sum": 1.3264394104480743
+    }
+  ],
+  "finite_gradients": true,
+  "peak_memory_GiB": 0.19352054595947266
+}

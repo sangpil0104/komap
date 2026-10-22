@@ -1,0 +1,620 @@
+{
+  "model": 339,
+  "metric": "Exact image-wise 4-class IoU; empty=0 and NaN-skip, image-metric compatibility fields only",
+  "candidate_count": 2,
+  "full_grid_count_including_model270_reference": 81,
+  "gamma_grid": {
+    "al3ni_gamma": [
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7
+    ],
+    "primary_gamma": [
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    "al_gamma": [
+      0.0
+    ],
+    "eutectic_gamma": [
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ]
+  },
+  "fixed_experts_from_model338_strict": {
+    "primary_source": "195",
+    "primary_gamma": 0.7,
+    "al3ni_source": "217",
+    "al3ni_gamma": 0.4,
+    "al_gamma": 0.0,
+    "eutectic_source": "269",
+    "eutectic_gamma": 0.5,
+    "prior_scale": 1.25,
+    "beta_scale": 0.8,
+    "al_delta": 0.0,
+    "eut_delta": 0.15,
+    "gaussian_blend": 0.5,
+    "eut_edge_blend": 0.25,
+    "cleanup_threshold": 128
+  },
+  "best_image_empty_zero": {
+    "primary_source": "195",
+    "primary_gamma": 0.75,
+    "al3ni_source": "217",
+    "al3ni_gamma": 0.4,
+    "al_gamma": 0.0,
+    "eutectic_source": "269",
+    "eutectic_gamma": 0.5,
+    "prior_scale": 1.25,
+    "beta_scale": 0.8,
+    "al_delta": 0.0,
+    "eut_delta": 0.15,
+    "gaussian_blend": 0.5,
+    "eut_edge_blend": 0.25,
+    "cleanup_threshold": 128,
+    "stage": "model270_reference",
+    "candidate": "Model270 reference",
+    "image_miou_compat": 0.12594020676045312,
+    "image_class_iou": {
+      "Al3Ni": 0.15648189369500615,
+      "Primary Si": 0.0,
+      "Al": 0.18942663441448487,
+      "Eutectic Si": 0.15785229893232142
+    },
+    "image_mean_miou": 0.12594020676045312,
+    "image_mean_miou_exclude": 0.12594020676045312,
+    "image_scores": [
+      0.129913662787327,
+      0.10973420179921556,
+      0.11044898957292269,
+      0.13013414915037633,
+      0.13839275630500317,
+      0.13173368225195453,
+      0.13366120875446752,
+      0.12550695260811695,
+      0.12706247808857377,
+      0.13217762981914644,
+      0.1315837156347247,
+      0.1140304694085947,
+      0.12553810651725913,
+      0.1259259880467907,
+      0.1216226044786198,
+      0.1301955550871336,
+      0.11204319078414832,
+      0.13283021713526666,
+      0.13011740029016453,
+      0.12615117668925618
+    ],
+    "image_scores_exclude": [
+      0.129913662787327,
+      0.10973420179921556,
+      0.11044898957292269,
+      0.13013414915037633,
+      0.13839275630500317,
+      0.13173368225195453,
+      0.13366120875446752,
+      0.12550695260811695,
+      0.12706247808857377,
+      0.13217762981914644,
+      0.1315837156347247,
+      0.1140304694085947,
+      0.12553810651725913,
+      0.1259259880467907,
+      0.1216226044786198,
+      0.1301955550871336,
+      0.11204319078414832,
+      0.13283021713526666,
+      0.13011740029016453,
+      0.12615117668925618
+    ],
+    "confusion": [
+      [
+        1126,
+        0,
+        1647,
+        1137
+      ],
+      [
+        1125,
+        0,
+        1591,
+        1078
+      ],
+      [
+        1086,
+        0,
+        1644,
+        1025
+      ],
+      [
+        1086,
+        0,
+        1687,
+        1128
+      ]
+    ]
+  },
+  "best_image_empty_skipped": {
+    "primary_source": "195",
+    "primary_gamma": 0.75,
+    "al3ni_source": "217",
+    "al3ni_gamma": 0.4,
+    "al_gamma": 0.0,
+    "eutectic_source": "269",
+    "eutectic_gamma": 0.5,
+    "prior_scale": 1.25,
+    "beta_scale": 0.8,
+    "al_delta": 0.0,
+    "eut_delta": 0.15,
+    "gaussian_blend": 0.5,
+    "eut_edge_blend": 0.25,
+    "cleanup_threshold": 128,
+    "stage": "model270_reference",
+    "candidate": "Model270 reference",
+    "image_miou_compat": 0.12594020676045312,
+    "image_class_iou": {
+      "Al3Ni": 0.15648189369500615,
+      "Primary Si": 0.0,
+      "Al": 0.18942663441448487,
+      "Eutectic Si": 0.15785229893232142
+    },
+    "image_mean_miou": 0.12594020676045312,
+    "image_mean_miou_exclude": 0.12594020676045312,
+    "image_scores": [
+      0.129913662787327,
+      0.10973420179921556,
+      0.11044898957292269,
+      0.13013414915037633,
+      0.13839275630500317,
+      0.13173368225195453,
+      0.13366120875446752,
+      0.12550695260811695,
+      0.12706247808857377,
+      0.13217762981914644,
+      0.1315837156347247,
+      0.1140304694085947,
+      0.12553810651725913,
+      0.1259259880467907,
+      0.1216226044786198,
+      0.1301955550871336,
+      0.11204319078414832,
+      0.13283021713526666,
+      0.13011740029016453,
+      0.12615117668925618
+    ],
+    "image_scores_exclude": [
+      0.129913662787327,
+      0.10973420179921556,
+      0.11044898957292269,
+      0.13013414915037633,
+      0.13839275630500317,
+      0.13173368225195453,
+      0.13366120875446752,
+      0.12550695260811695,
+      0.12706247808857377,
+      0.13217762981914644,
+      0.1315837156347247,
+      0.1140304694085947,
+      0.12553810651725913,
+      0.1259259880467907,
+      0.1216226044786198,
+      0.1301955550871336,
+      0.11204319078414832,
+      0.13283021713526666,
+      0.13011740029016453,
+      0.12615117668925618
+    ],
+    "confusion": [
+      [
+        1126,
+        0,
+        1647,
+        1137
+      ],
+      [
+        1125,
+        0,
+        1591,
+        1078
+      ],
+      [
+        1086,
+        0,
+        1644,
+        1025
+      ],
+      [
+        1086,
+        0,
+        1687,
+        1128
+      ]
+    ]
+  },
+  "grouped_cv_image_empty_zero": {
+    "image_mean_delta_pp": 0.0,
+    "positive_image_count": 0,
+    "image_count": 20,
+    "specimen_group_count": 20,
+    "group_bootstrap_95ci_delta_pp": [
+      0.0,
+      0.0
+    ],
+    "fold_choices": [
+      {
+        "heldout_specimen": "A10",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A11",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A12",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A13",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A14",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A15",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A16",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A17",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A18",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A19",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A1",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A20",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A2",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A3",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A4",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A5",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A6",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A7",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A8",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A9",
+        "selected": "Model270 reference"
+      }
+    ]
+  },
+  "grouped_cv_image_empty_skipped": {
+    "image_mean_delta_pp": 0.0,
+    "positive_image_count": 0,
+    "image_count": 20,
+    "specimen_group_count": 20,
+    "group_bootstrap_95ci_delta_pp": [
+      0.0,
+      0.0
+    ],
+    "fold_choices": [
+      {
+        "heldout_specimen": "A10",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A11",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A12",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A13",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A14",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A15",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A16",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A17",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A18",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A19",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A1",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A20",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A2",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A3",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A4",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A5",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A6",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A7",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A8",
+        "selected": "Model270 reference"
+      },
+      {
+        "heldout_specimen": "A9",
+        "selected": "Model270 reference"
+      }
+    ]
+  },
+  "records": [
+    {
+      "primary_source": "195",
+      "primary_gamma": 0.75,
+      "al3ni_source": "217",
+      "al3ni_gamma": 0.4,
+      "al_gamma": 0.0,
+      "eutectic_source": "269",
+      "eutectic_gamma": 0.5,
+      "prior_scale": 1.25,
+      "beta_scale": 0.8,
+      "al_delta": 0.0,
+      "eut_delta": 0.15,
+      "gaussian_blend": 0.5,
+      "eut_edge_blend": 0.25,
+      "cleanup_threshold": 128,
+      "stage": "model270_reference",
+      "candidate": "Model270 reference",
+      "image_miou_compat": 0.12594020676045312,
+      "image_class_iou": {
+        "Al3Ni": 0.15648189369500615,
+        "Primary Si": 0.0,
+        "Al": 0.18942663441448487,
+        "Eutectic Si": 0.15785229893232142
+      },
+      "image_mean_miou": 0.12594020676045312,
+      "image_mean_miou_exclude": 0.12594020676045312,
+      "image_scores": [
+        0.129913662787327,
+        0.10973420179921556,
+        0.11044898957292269,
+        0.13013414915037633,
+        0.13839275630500317,
+        0.13173368225195453,
+        0.13366120875446752,
+        0.12550695260811695,
+        0.12706247808857377,
+        0.13217762981914644,
+        0.1315837156347247,
+        0.1140304694085947,
+        0.12553810651725913,
+        0.1259259880467907,
+        0.1216226044786198,
+        0.1301955550871336,
+        0.11204319078414832,
+        0.13283021713526666,
+        0.13011740029016453,
+        0.12615117668925618
+      ],
+      "image_scores_exclude": [
+        0.129913662787327,
+        0.10973420179921556,
+        0.11044898957292269,
+        0.13013414915037633,
+        0.13839275630500317,
+        0.13173368225195453,
+        0.13366120875446752,
+        0.12550695260811695,
+        0.12706247808857377,
+        0.13217762981914644,
+        0.1315837156347247,
+        0.1140304694085947,
+        0.12553810651725913,
+        0.1259259880467907,
+        0.1216226044786198,
+        0.1301955550871336,
+        0.11204319078414832,
+        0.13283021713526666,
+        0.13011740029016453,
+        0.12615117668925618
+      ],
+      "confusion": [
+        [
+          1126,
+          0,
+          1647,
+          1137
+        ],
+        [
+          1125,
+          0,
+          1591,
+          1078
+        ],
+        [
+          1086,
+          0,
+          1644,
+          1025
+        ],
+        [
+          1086,
+          0,
+          1687,
+          1128
+        ]
+      ]
+    },
+    {
+      "primary_source": "195",
+      "primary_gamma": 0.7,
+      "al3ni_source": "217",
+      "al3ni_gamma": 0.3,
+      "al_gamma": 0.0,
+      "eutectic_source": "269",
+      "eutectic_gamma": 0.7,
+      "prior_scale": 1.25,
+      "beta_scale": 0.8,
+      "al_delta": 0.0,
+      "eut_delta": 0.15,
+      "gaussian_blend": 0.5,
+      "eut_edge_blend": 0.25,
+      "cleanup_threshold": 128,
+      "stage": "model339_joint_gamma",
+      "candidate": "joint gamma al3ni_gamma=0.3, primary_gamma=0.7, al_gamma=0.0, eutectic_gamma=0.7",
+      "image_miou_compat": 0.12485720427211376,
+      "image_class_iou": {
+        "Al3Ni": 0.15790197300287276,
+        "Primary Si": 0.0,
+        "Al": 0.18759363290645115,
+        "Eutectic Si": 0.1539332111791311
+      },
+      "image_mean_miou": 0.12485720427211378,
+      "image_mean_miou_exclude": 0.12485720427211378,
+      "image_scores": [
+        0.126444468932488,
+        0.1133677238340062,
+        0.11372626899201702,
+        0.13285049245921823,
+        0.13774300157258657,
+        0.13370249924797586,
+        0.13243009868570188,
+        0.12569742054140792,
+        0.12432423008414925,
+        0.13360812464441357,
+        0.12977525960736755,
+        0.1136599417750449,
+        0.12278043951950343,
+        0.1185712896991514,
+        0.1225987409072212,
+        0.12706929664028627,
+        0.1130037407442202,
+        0.12613755660250525,
+        0.12515766272801962,
+        0.12449582822499097
+      ],
+      "image_scores_exclude": [
+        0.126444468932488,
+        0.1133677238340062,
+        0.11372626899201702,
+        0.13285049245921823,
+        0.13774300157258657,
+        0.13370249924797586,
+        0.13243009868570188,
+        0.12569742054140792,
+        0.12432423008414925,
+        0.13360812464441357,
+        0.12977525960736755,
+        0.1136599417750449,
+        0.12278043951950343,
+        0.1185712896991514,
+        0.1225987409072212,
+        0.12706929664028627,
+        0.1130037407442202,
+        0.12613755660250525,
+        0.12515766272801962,
+        0.12449582822499097
+      ],
+      "confusion": [
+        [
+          1161,
+          0,
+          1639,
+          1110
+        ],
+        [
+          1168,
+          0,
+          1566,
+          1060
+        ],
+        [
+          1154,
+          0,
+          1622,
+          979
+        ],
+        [
+          1129,
+          0,
+          1686,
+          1086
+        ]
+      ]
+    }
+  ]
+}

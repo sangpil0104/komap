@@ -1,0 +1,104 @@
+{
+  "models": {
+    "R329_f1": {
+      "checkpoint": "/workspace/komap_model1/outputs/model329_fullstats_width4000_uniform_group_oof/fold1/last.pt",
+      "file_bytes": 81649456,
+      "tensor_bytes": 81414080,
+      "encoder_tensor_bytes": 70696032,
+      "decoder_and_head_bytes": 10718048,
+      "encoder_state_sha": "8361dffe2f9b98d10a837f25a05a9313a28b81ff2056d938fdb4ae95b82361b4",
+      "encoder_keys": 704,
+      "other_keys": 62
+    },
+    "R329_f3": {
+      "checkpoint": "/workspace/komap_model1/outputs/model329_fullstats_width4000_uniform_group_oof/fold3/last.pt",
+      "file_bytes": 81649456,
+      "tensor_bytes": 81414080,
+      "encoder_tensor_bytes": 70696032,
+      "decoder_and_head_bytes": 10718048,
+      "encoder_state_sha": "ed2cd238c034dbc07074a9de9e5c68cffc94a1d4b45e34d84641f14fbe69d731",
+      "encoder_keys": 704,
+      "other_keys": 62
+    },
+    "R329_f4": {
+      "checkpoint": "/workspace/komap_model1/outputs/model329_fullstats_width4000_uniform_group_oof/fold4/last.pt",
+      "file_bytes": 81649456,
+      "tensor_bytes": 81414080,
+      "encoder_tensor_bytes": 70696032,
+      "decoder_and_head_bytes": 10718048,
+      "encoder_state_sha": "7285301728393f58d9c29f64b7f3425edd2c680ce5c1261daed96e0c30fbe788",
+      "encoder_keys": 704,
+      "other_keys": 62
+    },
+    "B4ws_f1": {
+      "checkpoint": "/workspace/komap_model1/outputs/claude_b4_329_warmstart_bnfreeze/fold1/last.pt",
+      "file_bytes": 81649456,
+      "tensor_bytes": 81414080,
+      "encoder_tensor_bytes": 70696032,
+      "decoder_and_head_bytes": 10718048,
+      "encoder_state_sha": "f87724079704310fe6edc0ded7dbb5a4e5bc7b6d70c233091b70322fcbd2b308",
+      "encoder_keys": 704,
+      "other_keys": 62
+    },
+    "B4ws_f3": {
+      "checkpoint": "/workspace/komap_model1/outputs/claude_b4_329_warmstart_bnfreeze/fold3/last.pt",
+      "file_bytes": 81649456,
+      "tensor_bytes": 81414080,
+      "encoder_tensor_bytes": 70696032,
+      "decoder_and_head_bytes": 10718048,
+      "encoder_state_sha": "3247bf312b36d2c7550d9ad3a8240ccf796ab3380088c2126427eb9321e64773",
+      "encoder_keys": 704,
+      "other_keys": 62
+    }
+  },
+  "encoder_shapes_compatible": true,
+  "all_encoder_values_identical": false,
+  "groups": {
+    "R329": {
+      "before_tensor_bytes": 244242240,
+      "shared_encoder_tensor_bytes": 102850176,
+      "theoretical_saved_bytes": 141392064,
+      "theoretical_saved_percent": 57.89009468632453,
+      "encoders_after": 1,
+      "decoders_after": 3,
+      "ensemble_output_members_after": 3,
+      "performance_preservation_verified": false,
+      "requires_decoder_realignment_training": true
+    },
+    "B4ws": {
+      "before_tensor_bytes": 162828160,
+      "shared_encoder_tensor_bytes": 92132128,
+      "theoretical_saved_bytes": 70696032,
+      "theoretical_saved_percent": 43.417571014743395,
+      "encoders_after": 1,
+      "decoders_after": 2,
+      "ensemble_output_members_after": 2,
+      "performance_preservation_verified": false,
+      "requires_decoder_realignment_training": true
+    },
+    "all_five": {
+      "before_tensor_bytes": 407070400,
+      "shared_encoder_tensor_bytes": 124286272,
+      "theoretical_saved_bytes": 282784128,
+      "theoretical_saved_percent": 69.46811362358943,
+      "encoders_after": 1,
+      "decoders_after": 5,
+      "ensemble_output_members_after": 5,
+      "performance_preservation_verified": false,
+      "requires_decoder_realignment_training": true
+    }
+  },
+  "interpretation": "Architecture and tensor-storage audit only. Different trained encoders cannot be shared losslessly; separate head outputs are still retained. One file is not one model. Exact deployed checkpoint/protocol equivalence must be checked before any training or release.",
+  "next_validation_recipe": {
+    "anchor_policy": "fixed fold1; not best-valid selection",
+    "stage1": "shared encoder with original decoders: raw-image inference on GPU after existing seed queue; no performance claim before evaluation",
+    "stage2": "only if justified, freeze common encoder and BN; realign retained decoders using train70 labels only, fixed updates and last checkpoint",
+    "important_limits": [
+      "Retains 3 R329 or 2 B4ws decoder outputs; reduces duplicated encoders and storage, not automatically the ensemble member count.",
+      "An encoder trained on one fold may have seen another fold head's held images. Original OOF independence is not preserved; no OOF-generalization claim.",
+      "Checkpoint shape compatibility alone is insufficient. Current deployed source SHA, input normalization, class order and TTA must match before inference."
+    ],
+    "test_gt_used": false,
+    "GPU_work_started": false
+  }
+}

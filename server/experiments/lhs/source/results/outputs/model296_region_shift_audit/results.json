@@ -1,0 +1,624 @@
+{
+  "model": 296,
+  "method": "model257 in-sample train vs saved valid component error/calibration audit",
+  "metric": "4-connected predicted secondary components; correctness is component GT-majority class",
+  "ground_truth_use": "diagnostic only; no threshold or model selection",
+  "inference": {
+    "patch_size": 1024,
+    "stride": 576,
+    "scale": 1.0,
+    "tta": "d4"
+  },
+  "train_image_count": 70,
+  "train_specimen_group_count": 59,
+  "valid_image_count": 20,
+  "valid_overlap_image_count": 7,
+  "valid_independent_image_count": 13,
+  "train_in_sample": {
+    "image_count": 70,
+    "component_count": 193289,
+    "component_accuracy": 0.7267925231130586,
+    "component_error_rate": 0.2732074768869413,
+    "area_weighted_accuracy": 0.9701477870736902,
+    "area_weighted_error_rate": 0.029852212926309796,
+    "mean_confidence": 0.6749720135562169,
+    "mean_entropy": 0.7468865447927062,
+    "mean_margin": 0.44079630844743434,
+    "confidence_bins": [
+      {
+        "range": [
+          0.2,
+          0.30000000000000004
+        ],
+        "component_count": 96,
+        "mean_confidence": 0.28729323856532574,
+        "component_accuracy": 0.2916666666666667,
+        "area_weighted_accuracy": 0.28971962661889444
+      },
+      {
+        "range": [
+          0.30000000000000004,
+          0.4
+        ],
+        "component_count": 8625,
+        "mean_confidence": 0.3705996684198794,
+        "component_accuracy": 0.37182608695652175,
+        "area_weighted_accuracy": 0.36797287736590256
+      },
+      {
+        "range": [
+          0.4,
+          0.5
+        ],
+        "component_count": 24552,
+        "mean_confidence": 0.45495577932069303,
+        "component_accuracy": 0.45442326490713586,
+        "area_weighted_accuracy": 0.45643170115507853
+      },
+      {
+        "range": [
+          0.5,
+          0.6000000000000001
+        ],
+        "component_count": 33838,
+        "mean_confidence": 0.5483568435273587,
+        "component_accuracy": 0.5274543412731248,
+        "area_weighted_accuracy": 0.5516159561250068
+      },
+      {
+        "range": [
+          0.6000000000000001,
+          0.7000000000000001
+        ],
+        "component_count": 34779,
+        "mean_confidence": 0.6515255748802306,
+        "component_accuracy": 0.6882601569912878,
+        "area_weighted_accuracy": 0.6901760745659365
+      },
+      {
+        "range": [
+          0.7000000000000001,
+          0.8
+        ],
+        "component_count": 39995,
+        "mean_confidence": 0.7506713332571318,
+        "component_accuracy": 0.8570071258907364,
+        "area_weighted_accuracy": 0.8797551495756555
+      },
+      {
+        "range": [
+          0.8,
+          0.9
+        ],
+        "component_count": 36703,
+        "mean_confidence": 0.8477523611880867,
+        "component_accuracy": 0.9638994087676757,
+        "area_weighted_accuracy": 0.9762376593397073
+      },
+      {
+        "range": [
+          0.9,
+          1.0
+        ],
+        "component_count": 14701,
+        "mean_confidence": 0.9331152450186113,
+        "component_accuracy": 0.9965308482416162,
+        "area_weighted_accuracy": 0.9987623911839737
+      }
+    ],
+    "predicted_class": {
+      "0": {
+        "component_count": 109023,
+        "component_accuracy": 0.7337901176815901,
+        "area_weighted_accuracy": 0.9826291901274604,
+        "mean_confidence": 0.6576967959407907,
+        "mean_entropy": 0.7581885328923104
+      },
+      "1": {
+        "component_count": 4797,
+        "component_accuracy": 0.7410881801125704,
+        "area_weighted_accuracy": 0.98920410691308,
+        "mean_confidence": 0.7378693856446475,
+        "mean_entropy": 0.6191680291820957
+      },
+      "3": {
+        "component_count": 79469,
+        "component_accuracy": 0.7163296379720394,
+        "area_weighted_accuracy": 0.9034855527923892,
+        "mean_confidence": 0.694875087159489,
+        "mean_entropy": 0.7390909146828639
+      }
+    }
+  },
+  "valid_all": {
+    "image_count": 20,
+    "component_count": 55557,
+    "component_accuracy": 0.6290476447612362,
+    "component_error_rate": 0.3709523552387638,
+    "area_weighted_accuracy": 0.9288018403835959,
+    "area_weighted_error_rate": 0.07119815961640408,
+    "mean_confidence": 0.6581337488422637,
+    "mean_entropy": 0.768980777273686,
+    "mean_margin": 0.4114975139201261,
+    "confidence_bins": [
+      {
+        "range": [
+          0.2,
+          0.30000000000000004
+        ],
+        "component_count": 31,
+        "mean_confidence": 0.28755171548935676,
+        "component_accuracy": 0.1935483870967742,
+        "area_weighted_accuracy": 0.17647058794623027
+      },
+      {
+        "range": [
+          0.30000000000000004,
+          0.4
+        ],
+        "component_count": 2653,
+        "mean_confidence": 0.3723506970851322,
+        "component_accuracy": 0.3856012061816811,
+        "area_weighted_accuracy": 0.37391987439449803
+      },
+      {
+        "range": [
+          0.4,
+          0.5
+        ],
+        "component_count": 7743,
+        "mean_confidence": 0.4552396872155075,
+        "component_accuracy": 0.4618364974815963,
+        "area_weighted_accuracy": 0.47476016486235756
+      },
+      {
+        "range": [
+          0.5,
+          0.6000000000000001
+        ],
+        "component_count": 10931,
+        "mean_confidence": 0.5486902519317595,
+        "component_accuracy": 0.4567743115908883,
+        "area_weighted_accuracy": 0.5203344427160163
+      },
+      {
+        "range": [
+          0.6000000000000001,
+          0.7000000000000001
+        ],
+        "component_count": 10863,
+        "mean_confidence": 0.6508269583521589,
+        "component_accuracy": 0.5636564484948909,
+        "area_weighted_accuracy": 0.6095091887307912
+      },
+      {
+        "range": [
+          0.7000000000000001,
+          0.8
+        ],
+        "component_count": 10887,
+        "mean_confidence": 0.7494477265255832,
+        "component_accuracy": 0.7037751446679527,
+        "area_weighted_accuracy": 0.721965532114578
+      },
+      {
+        "range": [
+          0.8,
+          0.9
+        ],
+        "component_count": 9255,
+        "mean_confidence": 0.8470820710505749,
+        "component_accuracy": 0.9096704484062669,
+        "area_weighted_accuracy": 0.9258878538724479
+      },
+      {
+        "range": [
+          0.9,
+          1.0
+        ],
+        "component_count": 3194,
+        "mean_confidence": 0.9316239590076035,
+        "component_accuracy": 0.9849718221665623,
+        "area_weighted_accuracy": 0.9927593194742957
+      }
+    ],
+    "predicted_class": {
+      "0": {
+        "component_count": 30762,
+        "component_accuracy": 0.6385800663155842,
+        "area_weighted_accuracy": 0.9571102465712238,
+        "mean_confidence": 0.6410533003608347,
+        "mean_entropy": 0.775400126198261
+      },
+      "1": {
+        "component_count": 1065,
+        "component_accuracy": 0.6525821596244131,
+        "area_weighted_accuracy": 0.9715953628031586,
+        "mean_confidence": 0.6975517538511697,
+        "mean_entropy": 0.6813511201648366
+      },
+      "3": {
+        "component_count": 23730,
+        "component_accuracy": 0.6156342182890856,
+        "area_weighted_accuracy": 0.8178746272536855,
+        "mean_confidence": 0.6785066346767026,
+        "mean_entropy": 0.7645919687276744
+      }
+    }
+  },
+  "valid_train_specimen_overlap": {
+    "image_count": 7,
+    "component_count": 25125,
+    "component_accuracy": 0.5640995024875622,
+    "component_error_rate": 0.4359004975124378,
+    "area_weighted_accuracy": 0.9236494385009029,
+    "area_weighted_error_rate": 0.07635056149909714,
+    "mean_confidence": 0.6606215138720043,
+    "mean_entropy": 0.7479748112975958,
+    "mean_margin": 0.40426288311042596,
+    "confidence_bins": [
+      {
+        "range": [
+          0.2,
+          0.30000000000000004
+        ],
+        "component_count": 14,
+        "mean_confidence": 0.28542654854910715,
+        "component_accuracy": 0.07142857142857142,
+        "area_weighted_accuracy": 0.06666666643607269
+      },
+      {
+        "range": [
+          0.30000000000000004,
+          0.4
+        ],
+        "component_count": 1293,
+        "mean_confidence": 0.3713437225453538,
+        "component_accuracy": 0.3851508120649652,
+        "area_weighted_accuracy": 0.3756585877914874
+      },
+      {
+        "range": [
+          0.4,
+          0.5
+        ],
+        "component_count": 3142,
+        "mean_confidence": 0.4557257590306784,
+        "component_accuracy": 0.46021642266072565,
+        "area_weighted_accuracy": 0.4654671183669423
+      },
+      {
+        "range": [
+          0.5,
+          0.6000000000000001
+        ],
+        "component_count": 5119,
+        "mean_confidence": 0.5470920856703676,
+        "component_accuracy": 0.3436218011330338,
+        "area_weighted_accuracy": 0.4811990360469474
+      },
+      {
+        "range": [
+          0.6000000000000001,
+          0.7000000000000001
+        ],
+        "component_count": 4820,
+        "mean_confidence": 0.6511384525363376,
+        "component_accuracy": 0.4340248962655602,
+        "area_weighted_accuracy": 0.5921468979635655
+      },
+      {
+        "range": [
+          0.7000000000000001,
+          0.8
+        ],
+        "component_count": 5004,
+        "mean_confidence": 0.7493098721229773,
+        "component_accuracy": 0.6211031175059952,
+        "area_weighted_accuracy": 0.7054516345096161
+      },
+      {
+        "range": [
+          0.8,
+          0.9
+        ],
+        "component_count": 4122,
+        "mean_confidence": 0.8483942569401124,
+        "component_accuracy": 0.893740902474527,
+        "area_weighted_accuracy": 0.9263006558930047
+      },
+      {
+        "range": [
+          0.9,
+          1.0
+        ],
+        "component_count": 1611,
+        "mean_confidence": 0.9288655128780912,
+        "component_accuracy": 0.983860955927995,
+        "area_weighted_accuracy": 0.9955120057288173
+      }
+    ],
+    "predicted_class": {
+      "0": {
+        "component_count": 15149,
+        "component_accuracy": 0.5498712786322529,
+        "area_weighted_accuracy": 0.9459233605548159,
+        "mean_confidence": 0.6430019436220783,
+        "mean_entropy": 0.7571089759452311
+      },
+      "1": {
+        "component_count": 495,
+        "component_accuracy": 0.6242424242424243,
+        "area_weighted_accuracy": 0.9822985201107901,
+        "mean_confidence": 0.6816396423060485,
+        "mean_entropy": 0.7038561500006854
+      },
+      "3": {
+        "component_count": 9481,
+        "component_accuracy": 0.5836937031958654,
+        "area_weighted_accuracy": 0.8156361787117058,
+        "mean_confidence": 0.6876771932456227,
+        "mean_entropy": 0.7356834155687638
+      }
+    }
+  },
+  "valid_train_specimen_independent": {
+    "image_count": 13,
+    "component_count": 30432,
+    "component_accuracy": 0.6826695583596214,
+    "component_error_rate": 0.31733044164037855,
+    "area_weighted_accuracy": 0.9348482065087818,
+    "area_weighted_error_rate": 0.06515179349121825,
+    "mean_confidence": 0.6560798221738807,
+    "mean_entropy": 0.786323538023859,
+    "mean_margin": 0.4174705061353508,
+    "confidence_bins": [
+      {
+        "range": [
+          0.2,
+          0.30000000000000004
+        ],
+        "component_count": 17,
+        "mean_confidence": 0.2893018529695623,
+        "component_accuracy": 0.29411764705882354,
+        "area_weighted_accuracy": 0.26315789468408163
+      },
+      {
+        "range": [
+          0.30000000000000004,
+          0.4
+        ],
+        "component_count": 1360,
+        "mean_confidence": 0.3733080633203773,
+        "component_accuracy": 0.3860294117647059,
+        "area_weighted_accuracy": 0.3722019784923044
+      },
+      {
+        "range": [
+          0.4,
+          0.5
+        ],
+        "component_count": 4601,
+        "mean_confidence": 0.4549077511921936,
+        "component_accuracy": 0.46294283851336665,
+        "area_weighted_accuracy": 0.4834945717091831
+      },
+      {
+        "range": [
+          0.5,
+          0.6000000000000001
+        ],
+        "component_count": 5812,
+        "mean_confidence": 0.5500978591396164,
+        "component_accuracy": 0.5564349621472815,
+        "area_weighted_accuracy": 0.5713493253978901
+      },
+      {
+        "range": [
+          0.6000000000000001,
+          0.7000000000000001
+        ],
+        "component_count": 6043,
+        "mean_confidence": 0.6505785052712816,
+        "component_accuracy": 0.6670527883501572,
+        "area_weighted_accuracy": 0.6302819781185093
+      },
+      {
+        "range": [
+          0.7000000000000001,
+          0.8
+        ],
+        "component_count": 5883,
+        "mean_confidence": 0.7495649836105127,
+        "component_accuracy": 0.7740948495665477,
+        "area_weighted_accuracy": 0.7451263652256681
+      },
+      {
+        "range": [
+          0.8,
+          0.9
+        ],
+        "component_count": 5133,
+        "mean_confidence": 0.8460283343981935,
+        "component_accuracy": 0.9224624975647769,
+        "area_weighted_accuracy": 0.9252655624323296
+      },
+      {
+        "range": [
+          0.9,
+          1.0
+        ],
+        "component_count": 1583,
+        "mean_confidence": 0.9344311963510302,
+        "component_accuracy": 0.9861023373341756,
+        "area_weighted_accuracy": 0.9898981148808964
+      }
+    ],
+    "predicted_class": {
+      "0": {
+        "component_count": 15613,
+        "component_accuracy": 0.7246525331454557,
+        "area_weighted_accuracy": 0.9722535032290127,
+        "mean_confidence": 0.6391625684858216,
+        "mean_entropy": 0.7931476849751233
+      },
+      "1": {
+        "component_count": 570,
+        "component_accuracy": 0.6771929824561403,
+        "area_weighted_accuracy": 0.9623506049249819,
+        "mean_confidence": 0.711370166508775,
+        "mean_entropy": 0.6618072784652835
+      },
+      "3": {
+        "component_count": 14249,
+        "component_accuracy": 0.6368867990736192,
+        "area_weighted_accuracy": 0.8205450069459223,
+        "mean_confidence": 0.6724047281715492,
+        "mean_entropy": 0.7838271425994993
+      }
+    }
+  },
+  "valid_per_image": [
+    {
+      "name": "A117_step4_sample2_image.png",
+      "component_count": 2991,
+      "component_error_rate": 0.21263791374122368,
+      "mean_confidence": 0.7056095535661098,
+      "mean_entropy": 0.709420882362221
+    },
+    {
+      "name": "A11_step1_sample4_image.png",
+      "component_count": 1530,
+      "component_error_rate": 0.41568627450980394,
+      "mean_confidence": 0.6423129040041781,
+      "mean_entropy": 0.8105603631220611
+    },
+    {
+      "name": "A11_step2_sample4_image.png",
+      "component_count": 3201,
+      "component_error_rate": 0.2717900656044986,
+      "mean_confidence": 0.6245406614136451,
+      "mean_entropy": 0.8554383282296846
+    },
+    {
+      "name": "A125_step1_sample4_image.png",
+      "component_count": 3979,
+      "component_error_rate": 0.404121638602664,
+      "mean_confidence": 0.6151602026519838,
+      "mean_entropy": 0.8477908141328689
+    },
+    {
+      "name": "A153_step3_sample3_image.png",
+      "component_count": 6248,
+      "component_error_rate": 0.7447183098591549,
+      "mean_confidence": 0.6633818287130507,
+      "mean_entropy": 0.6771184627250524
+    },
+    {
+      "name": "A170_step4_sample3_image.png",
+      "component_count": 1249,
+      "component_error_rate": 0.14811849479583666,
+      "mean_confidence": 0.7438766013821952,
+      "mean_entropy": 0.643074334574471
+    },
+    {
+      "name": "A181_step1_sample1_image.png",
+      "component_count": 3042,
+      "component_error_rate": 0.3800131492439185,
+      "mean_confidence": 0.6458024237596385,
+      "mean_entropy": 0.7600468640423268
+    },
+    {
+      "name": "A186_step2_sample2_image.png",
+      "component_count": 456,
+      "component_error_rate": 0.35964912280701755,
+      "mean_confidence": 0.7071797673247362,
+      "mean_entropy": 0.6713522947475052
+    },
+    {
+      "name": "A191_step4_sample3_image.png",
+      "component_count": 3899,
+      "component_error_rate": 0.29520389843549627,
+      "mean_confidence": 0.6987004290103423,
+      "mean_entropy": 0.7006317990975109
+    },
+    {
+      "name": "A40_step3_sample3_image.png",
+      "component_count": 2342,
+      "component_error_rate": 0.24765157984628522,
+      "mean_confidence": 0.7102450398707573,
+      "mean_entropy": 0.7041445322252052
+    },
+    {
+      "name": "A42_step2_sample4_image.png",
+      "component_count": 1131,
+      "component_error_rate": 0.15649867374005305,
+      "mean_confidence": 0.772961813459135,
+      "mean_entropy": 0.5710741060165891
+    },
+    {
+      "name": "A44_step4_sample3_image.png",
+      "component_count": 997,
+      "component_error_rate": 0.18655967903711135,
+      "mean_confidence": 0.7892700060081099,
+      "mean_entropy": 0.5569537372338617
+    },
+    {
+      "name": "A55_step2_sample1_image.png",
+      "component_count": 3762,
+      "component_error_rate": 0.32216905901116427,
+      "mean_confidence": 0.6409081736027973,
+      "mean_entropy": 0.8158137472876205
+    },
+    {
+      "name": "A59_step3_sample1_image.png",
+      "component_count": 2788,
+      "component_error_rate": 0.21305595408895264,
+      "mean_confidence": 0.6711547088888147,
+      "mean_entropy": 0.7734219404164611
+    },
+    {
+      "name": "A63_step1_sample4_image.png",
+      "component_count": 3289,
+      "component_error_rate": 0.27972027972027974,
+      "mean_confidence": 0.6124238344302979,
+      "mean_entropy": 0.8526354338481057
+    },
+    {
+      "name": "A67_step1_sample1_image.png",
+      "component_count": 3811,
+      "component_error_rate": 0.2886381527158226,
+      "mean_confidence": 0.5969177068718711,
+      "mean_entropy": 0.8880540265581233
+    },
+    {
+      "name": "A71_step2_sample1_image.png",
+      "component_count": 4043,
+      "component_error_rate": 0.7118476378926539,
+      "mean_confidence": 0.6210616055453086,
+      "mean_entropy": 0.8439643025221343
+    },
+    {
+      "name": "A72_step4_sample4_image.png",
+      "component_count": 1552,
+      "component_error_rate": 0.11018041237113402,
+      "mean_confidence": 0.7465276312198221,
+      "mean_entropy": 0.6396636377597592
+    },
+    {
+      "name": "A74_step3_sample4_image.png",
+      "component_count": 3394,
+      "component_error_rate": 0.33588685916322925,
+      "mean_confidence": 0.6278415031656491,
+      "mean_entropy": 0.8157638708369902
+    },
+    {
+      "name": "A7_step1_sample4_image.png",
+      "component_count": 1853,
+      "component_error_rate": 0.3194819212088505,
+      "mean_confidence": 0.6704420105901462,
+      "mean_entropy": 0.7700202765493089
+    }
+  ],
+  "elapsed_seconds": 332.2314238548279
+}

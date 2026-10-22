@@ -1,0 +1,14 @@
+Verify train/valid/test inputs:   0%|          | 0/190 [00:00<?, ?file/s]Verify train/valid/test inputs:  93%|█████████▎| 176/190 [00:00<00:00, 1751.08file/s]Verify train/valid/test inputs: 100%|██████████| 190/190 [00:00<00:00, 1673.33file/s]
+Check train masks:   0%|          | 0/70 [00:00<?, ?image/s]Check train masks:   0%|          | 0/70 [00:00<?, ?image/s]
+Traceback (most recent call last):
+  File "/Data3/sppark/komap/experiments/model349_lite20_b4ws_retrain_gpu234567_v1/run.py", line 114, in <module>
+    main()
+  File "/Data3/sppark/komap/experiments/model349_lite20_b4ws_retrain_gpu234567_v1/run.py", line 78, in main
+    report = check()
+             ^^^^^^^
+  File "/Data3/sppark/komap/experiments/model349_lite20_b4ws_retrain_gpu234567_v1/preflight.py", line 131, in check
+    gpus=devices, python=sys.executable, data=dataset_check(), expert_data=expert_check(),
+                                              ^^^^^^^^^^^^^^^
+  File "/Data3/sppark/komap/experiments/model349_lite20_b4ws_retrain_gpu234567_v1/preflight.py", line 34, in dataset_check
+    raise ValueError(f'Unknown ground truth color: {target}')
+ValueError: Unknown ground truth color: /Data3/sppark/komap/experiments/model349_lite20_b4ws_retrain_gpu234567_v1/data/train/masks/A101_step3_sample3_mask.png

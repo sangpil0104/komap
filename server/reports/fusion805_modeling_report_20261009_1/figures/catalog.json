@@ -1,0 +1,163 @@
+[
+  {
+    "id": "01_dataset",
+    "title": "데이터 구성",
+    "caption": "실제 입력 파일을 집계했다. train70, valid20, test10이며 시편 수는 A번호 기준이다. [S02]",
+    "file": "figures/01_dataset.png",
+    "svg": "figures/01_dataset.svg"
+  },
+  {
+    "id": "02_resolution",
+    "title": "원본 해상도",
+    "caption": "분할별 해상도 분포. 하나의 고정 크기로 제공된 데이터가 아니므로 원본 좌표 복원이 필요하다. [S02]",
+    "file": "figures/02_resolution.png",
+    "svg": "figures/02_resolution.svg"
+  },
+  {
+    "id": "03_classes",
+    "title": "클래스 불균형",
+    "caption": "좌측은 전체 픽셀 기준, 우측은 각 이미지의 클래스 면적 비율이다. 두 통계의 가중 방식이 다르다. [S02]",
+    "file": "figures/03_classes.png",
+    "svg": "figures/03_classes.svg"
+  },
+  {
+    "id": "04_brightness",
+    "title": "밝기 및 대비",
+    "caption": "영상 사이의 밝기·대비 차이를 확인했다. 정규화와 서로 다른 입력 표현을 사용하는 설계의 관찰 근거다. [S02]",
+    "file": "figures/04_brightness.png",
+    "svg": "figures/04_brightness.svg"
+  },
+  {
+    "id": "05_overlap",
+    "title": "시편 ID 중복",
+    "caption": "train/valid는 파일명 기준 7개 시편 ID를 공유한다. 현재 valid20을 완전한 외부 시편 평가로 해석하지 않는다. [S02]",
+    "file": "figures/05_overlap.png",
+    "svg": "figures/05_overlap.svg"
+  },
+  {
+    "id": "06_representation",
+    "title": "Raw/Z-score/CDF 표현",
+    "caption": "같은 원본에서 절대 밝기·상대 밝기·밝기 순위를 구성한다. CDF의 표시 예시와 실제 구현의 세부 변환은 구분한다. [S02, S05]",
+    "file": "figures/06_representation.png",
+    "svg": "figures/06_representation.svg"
+  },
+  {
+    "id": "07_pipeline",
+    "title": "Fusion805 전체 구조",
+    "caption": "R은 14개, E는 12개, F는 1개 checkpoint다. stage1은 F를 사용하지 않으며 stage2의 최종 규칙도 모든 F label을 덮어쓰는 방식이 아니다. [S03–S06]",
+    "file": "figures/07_pipeline.png",
+    "svg": "figures/07_pipeline.svg"
+  },
+  {
+    "id": "08_architecture",
+    "title": "신경망 계열 비교",
+    "caption": "세 계열의 계산 흐름을 요약했다. F는 11,876 parameters이며 최종 convolution을 0으로 초기화한다. [S04–S06]",
+    "file": "figures/08_architecture.png",
+    "svg": "figures/08_architecture.svg"
+  },
+  {
+    "id": "09_oof",
+    "title": "OOF 학습 절차",
+    "caption": "F의 각 학습 입력은 해당 이미지를 학습에서 제외한 전문가의 예측이다. valid20 정답은 F 학습에 사용하지 않는다. 공식 train/valid 시편 중복과는 별개의 통제다. [S03, S06]",
+    "file": "figures/09_oof.png",
+    "svg": "figures/09_oof.svg"
+  },
+  {
+    "id": "10_metric",
+    "title": "image mIoU의 평균 규칙",
+    "caption": "빈 union은 0으로 처리하고 네 클래스 평균 후 이미지 20장을 평균한다. 그림의 수치는 설명용이며 실제 클래스 성능이 아니다. [S01]",
+    "file": "figures/10_metric.png",
+    "svg": "figures/10_metric.svg"
+  },
+  {
+    "id": "11_stage_scores",
+    "title": "현재 실행의 구성별 성능",
+    "caption": "R/E/두 결합 단계의 valid20 image mIoU. 우측은 같은 부모 가중치에서 결합 단계를 추가했을 때의 변화다. [S03, S07]",
+    "file": "figures/11_stage_scores.png",
+    "svg": "figures/11_stage_scores.svg"
+  },
+  {
+    "id": "12_provenance_scores",
+    "title": "출처별 점수 비교",
+    "caption": "GitHub 최신 fresh 추론 기록과 로컬 재학습 결과를 구분했다. GitHub의 저장 확률 기반 stage2 80.500689%는 본문의 별도 표에 제시한다. [S03, S08, S09]",
+    "file": "figures/12_provenance_scores.png",
+    "svg": "figures/12_provenance_scores.svg"
+  },
+  {
+    "id": "13_class_iou",
+    "title": "클래스별 평균 IoU",
+    "caption": "전체 픽셀을 합쳐 계산한 IoU가 아니다. 빈 클래스도 IoU 0으로 포함한 이미지별 평균이다. [S07]",
+    "file": "figures/13_class_iou.png",
+    "svg": "figures/13_class_iou.svg"
+  },
+  {
+    "id": "14_per_image",
+    "title": "이미지별 성능",
+    "caption": "단계별 분포와 어려운 영상을 표시했다. A71의 낮은 점수는 absent Primary Si 규칙과 다른 클래스의 잔여 오류를 함께 고려해야 한다. [S07]",
+    "file": "figures/14_per_image.png",
+    "svg": "figures/14_per_image.svg"
+  },
+  {
+    "id": "15_heatmap",
+    "title": "이미지·클래스별 IoU",
+    "caption": "stage1의 80개 IoU를 표시했다. 평균이 숨기는 이미지별·클래스별 차이를 확인할 수 있다. [S07]",
+    "file": "figures/15_heatmap.png",
+    "svg": "figures/15_heatmap.svg"
+  },
+  {
+    "id": "16_deltas",
+    "title": "이미지별 단계 변화",
+    "caption": "양수는 개선, 음수는 악화다. 평균 개선이 모든 이미지의 개선을 의미하지 않는다. 두 패널의 가로축 범위는 각각 자동 설정했다. [S07]",
+    "file": "figures/16_deltas.png",
+    "svg": "figures/16_deltas.svg"
+  },
+  {
+    "id": "17_pixel_changes",
+    "title": "변경 픽셀의 결과",
+    "caption": "변경된 위치를 정답 교정·새 오류·오류 간 이동으로 구분했다. image mIoU 변화와는 별도 진단이다. [S07]",
+    "file": "figures/17_pixel_changes.png",
+    "svg": "figures/17_pixel_changes.svg"
+  },
+  {
+    "id": "18_gpu_timeline",
+    "title": "GPU 실행 시간선",
+    "caption": "6대의 RTX 4090에서 작업별 한 GPU를 사용했다. 표기 시간은 작업 점유 경과 시간이며 GPU kernel의 순수 연산 시간이나 DDP 시간은 아니다. [S10]",
+    "file": "figures/18_gpu_timeline.png",
+    "svg": "figures/18_gpu_timeline.svg"
+  },
+  {
+    "id": "19_refiner_loss",
+    "title": "F 학습 곡선",
+    "caption": "학습 기록의 평균 loss를 그대로 표시했다. 마지막 epoch8을 고정 사용하며 validation 점수로 epoch를 고르지 않았다. [S06, S10]",
+    "file": "figures/19_refiner_loss.png",
+    "svg": "figures/19_refiner_loss.svg"
+  },
+  {
+    "id": "20_hard_case",
+    "title": "최저 점수 사례",
+    "caption": "A71_step2_sample1의 원본·정답·예측·오류·변경 위치. 흰색 오류 맵은 올바르게 분류된 픽셀이다. 변경 위치 맵은 정오와 무관하게 새 예측 색으로 표시한다. [S02, S07]",
+    "file": "figures/20_hard_case.png",
+    "svg": "figures/20_hard_case.svg"
+  },
+  {
+    "id": "21_best_case",
+    "title": "최고 점수 사례",
+    "caption": "A44_step4_sample3의 원본·정답·예측·오류·변경 위치. 흰색 오류 맵은 올바르게 분류된 픽셀이다. 변경 위치 맵은 정오와 무관하게 새 예측 색으로 표시한다. [S02, S07]",
+    "file": "figures/21_best_case.png",
+    "svg": "figures/21_best_case.svg"
+  },
+  {
+    "id": "22_refiner_gain",
+    "title": "F 개선 최대 사례",
+    "caption": "A63_step1_sample4의 원본·정답·예측·오류·변경 위치. 흰색 오류 맵은 올바르게 분류된 픽셀이다. 변경 위치 맵은 정오와 무관하게 새 예측 색으로 표시한다. [S02, S07]",
+    "file": "figures/22_refiner_gain.png",
+    "svg": "figures/22_refiner_gain.svg"
+  },
+  {
+    "id": "23_stage1_loss",
+    "title": "R 대비 Stage1 손실 최대 사례",
+    "caption": "A153_step3_sample3의 원본·정답·예측·오류·변경 위치. 흰색 오류 맵은 올바르게 분류된 픽셀이다. 변경 위치 맵은 정오와 무관하게 새 예측 색으로 표시한다. [S02, S07]",
+    "file": "figures/23_stage1_loss.png",
+    "svg": "figures/23_stage1_loss.svg"
+  }
+]

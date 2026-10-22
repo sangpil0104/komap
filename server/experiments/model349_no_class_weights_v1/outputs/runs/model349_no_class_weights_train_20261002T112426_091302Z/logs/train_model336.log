@@ -1,0 +1,748 @@
+Unexpected keys (downsamp_modules.0.1.num_batches_tracked, downsamp_modules.1.1.num_batches_tracked, downsamp_modules.2.1.num_batches_tracked, final_layer.1.num_batches_tracked, downsamp_modules.0.0.bias, downsamp_modules.0.0.weight, downsamp_modules.0.1.bias, downsamp_modules.0.1.running_mean, downsamp_modules.0.1.running_var, downsamp_modules.0.1.weight, downsamp_modules.1.0.bias, downsamp_modules.1.0.weight, downsamp_modules.1.1.bias, downsamp_modules.1.1.running_mean, downsamp_modules.1.1.running_var, downsamp_modules.1.1.weight, downsamp_modules.2.0.bias, downsamp_modules.2.0.weight, downsamp_modules.2.1.bias, downsamp_modules.2.1.running_mean, downsamp_modules.2.1.running_var, downsamp_modules.2.1.weight, final_layer.0.bias, final_layer.0.weight, final_layer.1.bias, final_layer.1.running_mean, final_layer.1.running_var, final_layer.1.weight, classifier.bias, classifier.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+/Data3/sppark/komap/experiments/model349_no_class_weights_v1/outputs/runs/model349_no_class_weights_train_20261002T112426_091302Z/source_snapshot/experiments/model336_hrnet_best/train.py:153: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=use_amp)
+70 train images, 210 steps/epoch, device=cuda:0
+train:   0%|          | 0/70 [00:00<?, ?item/s]
+train:   0%|          | 0/210 [00:00<?, ?item/s][A/Data3/sppark/komap/experiments/model349_no_class_weights_v1/outputs/runs/model349_no_class_weights_train_20261002T112426_091302Z/source_snapshot/experiments/model336_hrnet_best/train.py:179: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+
+train:  20%|██        | 42/210 [00:10<00:40,  4.15item/s][Aepoch   1/70 step   50/210 loss=2.2534
+epoch   1/70 step  100/210 loss=2.0241
+
+train:  55%|█████▌    | 116/210 [00:20<00:15,  6.00item/s][Aepoch   1/70 step  150/210 loss=1.8815
+
+train:  90%|█████████ | 189/210 [00:30<00:03,  6.57item/s][Aepoch   1/70 step  200/210 loss=1.7714
+epoch   1/70 step  210/210 loss=1.7545
+train: 100%|██████████| 210/210 [00:33<00:00,  6.33item/s]
+epoch   1/70 train_loss=1.7545 time=33.2s
+train:   1%|▏         | 1/70 [00:34<39:51, 34.65s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch   2/70 step   50/210 loss=1.3284
+
+train:  33%|███▎      | 70/210 [00:10<00:20,  6.95item/s][Aepoch   2/70 step  100/210 loss=1.3038
+
+train:  68%|██████▊   | 143/210 [00:20<00:09,  7.11item/s][Aepoch   2/70 step  150/210 loss=1.2734
+epoch   2/70 step  200/210 loss=1.2521
+epoch   2/70 step  210/210 loss=1.2455
+train: 100%|██████████| 210/210 [00:29<00:00,  7.12item/s]
+epoch   2/70 train_loss=1.2455 time=29.5s
+train:   3%|▎         | 2/70 [01:08<38:39, 34.11s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch   3/70 step   50/210 loss=1.1443
+
+train:  34%|███▍      | 72/210 [00:10<00:19,  7.20item/s][Aepoch   3/70 step  100/210 loss=1.1454
+
+train:  69%|██████▉   | 145/210 [00:20<00:08,  7.24item/s][Aepoch   3/70 step  150/210 loss=1.1418
+epoch   3/70 step  200/210 loss=1.1410
+epoch   3/70 step  210/210 loss=1.1396
+train: 100%|██████████| 210/210 [00:28<00:00,  7.27item/s]
+epoch   3/70 train_loss=1.1396 time=28.9s
+train:   4%|▍         | 3/70 [01:41<37:45, 33.81s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch   4/70 step   50/210 loss=1.1231
+
+train:  34%|███▍      | 72/210 [00:10<00:19,  7.11item/s][Aepoch   4/70 step  100/210 loss=1.1068
+
+train:  70%|██████▉   | 146/210 [00:20<00:08,  7.25item/s][Aepoch   4/70 step  150/210 loss=1.0999
+epoch   4/70 step  200/210 loss=1.1022
+epoch   4/70 step  210/210 loss=1.1007
+train: 100%|██████████| 210/210 [00:29<00:00,  7.22item/s]
+epoch   4/70 train_loss=1.1007 time=29.1s
+train:   6%|▌         | 4/70 [02:15<37:08, 33.76s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch   5/70 step   50/210 loss=1.0937
+
+train:  33%|███▎      | 70/210 [00:10<00:20,  7.00item/s][Aepoch   5/70 step  100/210 loss=1.0826
+
+train:  68%|██████▊   | 143/210 [00:20<00:09,  7.14item/s][Aepoch   5/70 step  150/210 loss=1.0854
+epoch   5/70 step  200/210 loss=1.0733
+epoch   5/70 step  210/210 loss=1.0784
+train: 100%|██████████| 210/210 [00:29<00:00,  7.14item/s]
+
+train:   0%|          | 0/20 [00:00<?, ?item/s][Atrain: 100%|██████████| 20/20 [00:04<00:00,  4.29item/s]
+epoch   5/70 train_loss=1.0784 time=29.4s quick_val_mIoU=0.6783
+train:   7%|▋         | 5/70 [02:53<38:22, 35.43s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch   6/70 step   50/210 loss=1.0785
+
+train:  34%|███▍      | 71/210 [00:10<00:19,  7.03item/s][Aepoch   6/70 step  100/210 loss=1.0702
+
+train:  69%|██████▊   | 144/210 [00:20<00:09,  7.15item/s][Aepoch   6/70 step  150/210 loss=1.0568
+epoch   6/70 step  200/210 loss=1.0560
+epoch   6/70 step  210/210 loss=1.0544
+train: 100%|██████████| 210/210 [00:29<00:00,  7.14item/s]
+epoch   6/70 train_loss=1.0544 time=29.4s
+train:   9%|▊         | 6/70 [03:27<37:12, 34.89s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch   7/70 step   50/210 loss=1.0776
+
+train:  35%|███▍      | 73/210 [00:10<00:18,  7.22item/s][Aepoch   7/70 step  100/210 loss=1.0462
+
+train:  70%|███████   | 148/210 [00:20<00:08,  7.33item/s][Aepoch   7/70 step  150/210 loss=1.0593
+epoch   7/70 step  200/210 loss=1.0537
+epoch   7/70 step  210/210 loss=1.0523
+train: 100%|██████████| 210/210 [00:28<00:00,  7.28item/s]
+epoch   7/70 train_loss=1.0523 time=28.8s
+train:  10%|█         | 7/70 [04:00<36:03, 34.35s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch   8/70 step   50/210 loss=1.0258
+
+train:  34%|███▍      | 72/210 [00:10<00:19,  7.12item/s][Aepoch   8/70 step  100/210 loss=1.0259
+
+train:  69%|██████▊   | 144/210 [00:20<00:09,  7.08item/s][Aepoch   8/70 step  150/210 loss=1.0277
+epoch   8/70 step  200/210 loss=1.0211
+epoch   8/70 step  210/210 loss=1.0218
+train: 100%|██████████| 210/210 [00:29<00:00,  7.14item/s]
+epoch   8/70 train_loss=1.0218 time=29.4s
+train:  11%|█▏        | 8/70 [04:34<35:20, 34.20s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch   9/70 step   50/210 loss=1.0098
+
+train:  33%|███▎      | 69/210 [00:10<00:20,  6.89item/s][Aepoch   9/70 step  100/210 loss=1.0148
+
+train:  68%|██████▊   | 142/210 [00:20<00:09,  7.10item/s][Aepoch   9/70 step  150/210 loss=1.0186
+epoch   9/70 step  200/210 loss=1.0231
+epoch   9/70 step  210/210 loss=1.0246
+train: 100%|██████████| 210/210 [00:29<00:00,  7.14item/s]
+epoch   9/70 train_loss=1.0246 time=29.4s
+train:  13%|█▎        | 9/70 [05:08<34:38, 34.07s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  10/70 step   50/210 loss=1.0303
+
+train:  34%|███▍      | 71/210 [00:10<00:19,  7.04item/s][Aepoch  10/70 step  100/210 loss=1.0148
+
+train:  68%|██████▊   | 143/210 [00:20<00:09,  7.13item/s][Aepoch  10/70 step  150/210 loss=1.0100
+epoch  10/70 step  200/210 loss=1.0081
+epoch  10/70 step  210/210 loss=1.0073
+train: 100%|██████████| 210/210 [00:29<00:00,  7.18item/s]
+
+train:   0%|          | 0/20 [00:00<?, ?item/s][Atrain: 100%|██████████| 20/20 [00:03<00:00,  5.37item/s]
+epoch  10/70 train_loss=1.0073 time=29.3s quick_val_mIoU=0.6792
+train:  14%|█▍        | 10/70 [05:45<34:58, 34.97s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  11/70 step   50/210 loss=1.0215
+
+train:  34%|███▍      | 71/210 [00:10<00:19,  7.10item/s][Aepoch  11/70 step  100/210 loss=0.9968
+
+train:  68%|██████▊   | 142/210 [00:20<00:09,  7.08item/s][Aepoch  11/70 step  150/210 loss=1.0041
+epoch  11/70 step  200/210 loss=1.0107
+epoch  11/70 step  210/210 loss=1.0070
+train: 100%|██████████| 210/210 [00:29<00:00,  7.11item/s]
+epoch  11/70 train_loss=1.0070 time=29.5s
+train:  16%|█▌        | 11/70 [06:19<33:56, 34.51s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  12/70 step   50/210 loss=1.0093
+
+train:  34%|███▍      | 72/210 [00:10<00:19,  7.20item/s][Aepoch  12/70 step  100/210 loss=0.9993
+
+train:  70%|███████   | 147/210 [00:20<00:08,  7.35item/s][Aepoch  12/70 step  150/210 loss=0.9934
+epoch  12/70 step  200/210 loss=0.9954
+epoch  12/70 step  210/210 loss=0.9938
+train: 100%|██████████| 210/210 [00:28<00:00,  7.27item/s]
+epoch  12/70 train_loss=0.9938 time=28.9s
+train:  17%|█▋        | 12/70 [06:52<33:01, 34.17s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  13/70 step   50/210 loss=0.9769
+
+train:  34%|███▍      | 71/210 [00:10<00:19,  7.08item/s][Aepoch  13/70 step  100/210 loss=0.9874
+
+train:  69%|██████▊   | 144/210 [00:20<00:09,  7.15item/s][Aepoch  13/70 step  150/210 loss=0.9898
+epoch  13/70 step  200/210 loss=0.9943
+epoch  13/70 step  210/210 loss=0.9942
+train: 100%|██████████| 210/210 [00:29<00:00,  7.17item/s]
+epoch  13/70 train_loss=0.9942 time=29.3s
+train:  19%|█▊        | 13/70 [07:25<32:14, 33.93s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  14/70 step   50/210 loss=0.9950
+
+train:  33%|███▎      | 70/210 [00:10<00:20,  6.97item/s][Aepoch  14/70 step  100/210 loss=0.9989
+
+train:  67%|██████▋   | 141/210 [00:20<00:09,  7.04item/s][Aepoch  14/70 step  150/210 loss=0.9976
+epoch  14/70 step  200/210 loss=1.0048
+epoch  14/70 step  210/210 loss=1.0026
+train: 100%|██████████| 210/210 [00:29<00:00,  7.06item/s]
+epoch  14/70 train_loss=1.0026 time=29.7s
+train:  20%|██        | 14/70 [07:59<31:34, 33.84s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  15/70 step   50/210 loss=1.0225
+
+train:  34%|███▍      | 71/210 [00:10<00:19,  7.02item/s][Aepoch  15/70 step  100/210 loss=1.0110
+
+train:  69%|██████▉   | 145/210 [00:20<00:09,  7.21item/s][Aepoch  15/70 step  150/210 loss=1.0027
+epoch  15/70 step  200/210 loss=0.9914
+epoch  15/70 step  210/210 loss=0.9924
+train: 100%|██████████| 210/210 [00:29<00:00,  7.16item/s]
+
+train:   0%|          | 0/20 [00:00<?, ?item/s][Atrain: 100%|██████████| 20/20 [00:03<00:00,  5.62item/s]
+epoch  15/70 train_loss=0.9924 time=29.3s quick_val_mIoU=0.6914
+train:  21%|██▏       | 15/70 [08:36<31:56, 34.84s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  16/70 step   50/210 loss=0.9864
+
+train:  33%|███▎      | 69/210 [00:10<00:20,  6.88item/s][Aepoch  16/70 step  100/210 loss=0.9813
+
+train:  68%|██████▊   | 142/210 [00:20<00:09,  7.08item/s][Aepoch  16/70 step  150/210 loss=0.9860
+epoch  16/70 step  200/210 loss=0.9865
+epoch  16/70 step  210/210 loss=0.9883
+train: 100%|██████████| 210/210 [00:29<00:00,  7.07item/s]
+epoch  16/70 train_loss=0.9883 time=29.7s
+train:  23%|██▎       | 16/70 [09:10<31:06, 34.57s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  17/70 step   50/210 loss=0.9863
+
+train:  33%|███▎      | 70/210 [00:10<00:20,  6.96item/s][Aepoch  17/70 step  100/210 loss=0.9945
+
+train:  68%|██████▊   | 142/210 [00:20<00:09,  7.06item/s][Aepoch  17/70 step  150/210 loss=0.9933
+epoch  17/70 step  200/210 loss=0.9898
+epoch  17/70 step  210/210 loss=0.9920
+train: 100%|██████████| 210/210 [00:29<00:00,  7.08item/s]
+epoch  17/70 train_loss=0.9920 time=29.7s
+train:  24%|██▍       | 17/70 [09:44<30:23, 34.41s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  18/70 step   50/210 loss=0.9671
+
+train:  34%|███▍      | 72/210 [00:10<00:19,  7.12item/s][Aepoch  18/70 step  100/210 loss=0.9788
+
+train:  69%|██████▊   | 144/210 [00:20<00:09,  7.13item/s][Aepoch  18/70 step  150/210 loss=0.9790
+epoch  18/70 step  200/210 loss=0.9694
+epoch  18/70 step  210/210 loss=0.9710
+train: 100%|██████████| 210/210 [00:29<00:00,  7.19item/s]
+epoch  18/70 train_loss=0.9710 time=29.2s
+train:  26%|██▌       | 18/70 [10:18<29:35, 34.15s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  19/70 step   50/210 loss=0.9607
+
+train:  33%|███▎      | 69/210 [00:10<00:20,  6.83item/s][Aepoch  19/70 step  100/210 loss=0.9679
+
+train:  68%|██████▊   | 143/210 [00:20<00:09,  7.13item/s][Aepoch  19/70 step  150/210 loss=0.9702
+epoch  19/70 step  200/210 loss=0.9681
+epoch  19/70 step  210/210 loss=0.9690
+train: 100%|██████████| 210/210 [00:29<00:00,  7.16item/s]
+epoch  19/70 train_loss=0.9690 time=29.3s
+train:  27%|██▋       | 19/70 [10:51<28:48, 33.89s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  20/70 step   50/210 loss=0.9682
+
+train:  34%|███▍      | 71/210 [00:10<00:19,  7.06item/s][Aepoch  20/70 step  100/210 loss=0.9763
+
+train:  69%|██████▊   | 144/210 [00:20<00:09,  7.19item/s][Aepoch  20/70 step  150/210 loss=0.9655
+epoch  20/70 step  200/210 loss=0.9615
+epoch  20/70 step  210/210 loss=0.9600
+train: 100%|██████████| 210/210 [00:29<00:00,  7.23item/s]
+
+train:   0%|          | 0/20 [00:00<?, ?item/s][Atrain: 100%|██████████| 20/20 [00:04<00:00,  4.65item/s]
+epoch  20/70 train_loss=0.9600 time=29.1s quick_val_mIoU=0.6991
+train:  29%|██▊       | 20/70 [11:28<29:09, 34.98s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  21/70 step   50/210 loss=0.9624
+
+train:  34%|███▍      | 71/210 [00:10<00:19,  7.04item/s][Aepoch  21/70 step  100/210 loss=0.9624
+
+train:  69%|██████▉   | 145/210 [00:20<00:08,  7.22item/s][Aepoch  21/70 step  150/210 loss=0.9647
+epoch  21/70 step  200/210 loss=0.9598
+epoch  21/70 step  210/210 loss=0.9559
+train: 100%|██████████| 210/210 [00:29<00:00,  7.21item/s]
+epoch  21/70 train_loss=0.9559 time=29.1s
+train:  30%|███       | 21/70 [12:02<28:12, 34.53s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  22/70 step   50/210 loss=0.9545
+
+train:  33%|███▎      | 69/210 [00:10<00:20,  6.83item/s][Aepoch  22/70 step  100/210 loss=0.9642
+
+train:  68%|██████▊   | 143/210 [00:20<00:09,  7.16item/s][Aepoch  22/70 step  150/210 loss=0.9530
+epoch  22/70 step  200/210 loss=0.9580
+epoch  22/70 step  210/210 loss=0.9588
+train: 100%|██████████| 210/210 [00:29<00:00,  7.17item/s]
+epoch  22/70 train_loss=0.9588 time=29.3s
+train:  31%|███▏      | 22/70 [12:36<27:24, 34.25s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  23/70 step   50/210 loss=0.9523
+
+train:  33%|███▎      | 70/210 [00:10<00:20,  6.95item/s][Aepoch  23/70 step  100/210 loss=0.9580
+
+train:  68%|██████▊   | 142/210 [00:20<00:09,  7.07item/s][Aepoch  23/70 step  150/210 loss=0.9608
+epoch  23/70 step  200/210 loss=0.9573
+epoch  23/70 step  210/210 loss=0.9553
+train: 100%|██████████| 210/210 [00:29<00:00,  7.08item/s]
+epoch  23/70 train_loss=0.9553 time=29.6s
+train:  33%|███▎      | 23/70 [13:10<26:46, 34.19s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  24/70 step   50/210 loss=0.9363
+
+train:  34%|███▍      | 71/210 [00:10<00:19,  7.03item/s][Aepoch  24/70 step  100/210 loss=0.9377
+
+train:  69%|██████▉   | 145/210 [00:20<00:08,  7.24item/s][Aepoch  24/70 step  150/210 loss=0.9392
+epoch  24/70 step  200/210 loss=0.9418
+epoch  24/70 step  210/210 loss=0.9456
+train: 100%|██████████| 210/210 [00:29<00:00,  7.24item/s]
+epoch  24/70 train_loss=0.9456 time=29.0s
+train:  34%|███▍      | 24/70 [13:43<25:59, 33.91s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  25/70 step   50/210 loss=0.9658
+
+train:  34%|███▍      | 71/210 [00:10<00:19,  7.08item/s][Aepoch  25/70 step  100/210 loss=0.9438
+
+train:  69%|██████▉   | 145/210 [00:20<00:08,  7.24item/s][Aepoch  25/70 step  150/210 loss=0.9496
+epoch  25/70 step  200/210 loss=0.9452
+epoch  25/70 step  210/210 loss=0.9417
+train: 100%|██████████| 210/210 [00:28<00:00,  7.26item/s]
+
+train:   0%|          | 0/20 [00:00<?, ?item/s][Atrain: 100%|██████████| 20/20 [00:04<00:00,  4.81item/s]
+epoch  25/70 train_loss=0.9417 time=28.9s quick_val_mIoU=0.6992
+train:  36%|███▌      | 25/70 [14:20<26:09, 34.87s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  26/70 step   50/210 loss=0.9479
+
+train:  34%|███▍      | 71/210 [00:10<00:19,  7.03item/s][Aepoch  26/70 step  100/210 loss=0.9465
+
+train:  69%|██████▊   | 144/210 [00:20<00:09,  7.15item/s][Aepoch  26/70 step  150/210 loss=0.9499
+epoch  26/70 step  200/210 loss=0.9407
+epoch  26/70 step  210/210 loss=0.9388
+train: 100%|██████████| 210/210 [00:29<00:00,  7.06item/s]
+epoch  26/70 train_loss=0.9388 time=29.7s
+train:  37%|███▋      | 26/70 [14:54<25:25, 34.67s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  27/70 step   50/210 loss=0.9404
+
+train:  34%|███▍      | 72/210 [00:10<00:19,  7.13item/s][Aepoch  27/70 step  100/210 loss=0.9381
+
+train:  69%|██████▊   | 144/210 [00:20<00:09,  7.15item/s][Aepoch  27/70 step  150/210 loss=0.9369
+epoch  27/70 step  200/210 loss=0.9331
+epoch  27/70 step  210/210 loss=0.9333
+train: 100%|██████████| 210/210 [00:29<00:00,  7.15item/s]
+epoch  27/70 train_loss=0.9333 time=29.4s
+train:  39%|███▊      | 27/70 [15:28<24:39, 34.42s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  28/70 step   50/210 loss=0.9239
+
+train:  33%|███▎      | 69/210 [00:10<00:20,  6.87item/s][Aepoch  28/70 step  100/210 loss=0.9254
+
+train:  68%|██████▊   | 142/210 [00:20<00:09,  7.09item/s][Aepoch  28/70 step  150/210 loss=0.9273
+epoch  28/70 step  200/210 loss=0.9294
+epoch  28/70 step  210/210 loss=0.9305
+train: 100%|██████████| 210/210 [00:29<00:00,  7.14item/s]
+epoch  28/70 train_loss=0.9305 time=29.4s
+train:  40%|████      | 28/70 [16:02<23:56, 34.21s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  29/70 step   50/210 loss=0.9442
+
+train:  33%|███▎      | 69/210 [00:10<00:20,  6.85item/s][Aepoch  29/70 step  100/210 loss=0.9451
+
+train:  67%|██████▋   | 140/210 [00:20<00:10,  6.99item/s][Aepoch  29/70 step  150/210 loss=0.9401
+epoch  29/70 step  200/210 loss=0.9334
+epoch  29/70 step  210/210 loss=0.9341
+train: 100%|██████████| 210/210 [00:30<00:00,  6.99item/s]
+epoch  29/70 train_loss=0.9341 time=30.0s
+train:  41%|████▏     | 29/70 [16:36<23:23, 34.23s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  30/70 step   50/210 loss=0.9258
+
+train:  33%|███▎      | 69/210 [00:10<00:20,  6.89item/s][Aepoch  30/70 step  100/210 loss=0.9211
+
+train:  68%|██████▊   | 142/210 [00:20<00:09,  7.08item/s][Aepoch  30/70 step  150/210 loss=0.9280
+epoch  30/70 step  200/210 loss=0.9211
+epoch  30/70 step  210/210 loss=0.9185
+train: 100%|██████████| 210/210 [00:29<00:00,  7.13item/s]
+
+train:   0%|          | 0/20 [00:00<?, ?item/s][Atrain: 100%|██████████| 20/20 [00:03<00:00,  5.63item/s]
+epoch  30/70 train_loss=0.9185 time=29.5s quick_val_mIoU=0.6881
+train:  43%|████▎     | 30/70 [17:13<23:28, 35.20s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  31/70 step   50/210 loss=0.9320
+
+train:  34%|███▍      | 71/210 [00:10<00:19,  7.05item/s][Aepoch  31/70 step  100/210 loss=0.9261
+
+train:  70%|██████▉   | 146/210 [00:20<00:08,  7.29item/s][Aepoch  31/70 step  150/210 loss=0.9286
+epoch  31/70 step  200/210 loss=0.9235
+epoch  31/70 step  210/210 loss=0.9198
+train: 100%|██████████| 210/210 [00:28<00:00,  7.26item/s]
+epoch  31/70 train_loss=0.9198 time=28.9s
+train:  44%|████▍     | 31/70 [17:47<22:32, 34.68s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  32/70 step   50/210 loss=0.9221
+
+train:  33%|███▎      | 70/210 [00:10<00:20,  6.99item/s][Aepoch  32/70 step  100/210 loss=0.9227
+
+train:  68%|██████▊   | 143/210 [00:20<00:09,  7.17item/s][Aepoch  32/70 step  150/210 loss=0.9233
+epoch  32/70 step  200/210 loss=0.9252
+epoch  32/70 step  210/210 loss=0.9241
+train: 100%|██████████| 210/210 [00:29<00:00,  7.13item/s]
+epoch  32/70 train_loss=0.9241 time=29.4s
+train:  46%|████▌     | 32/70 [18:20<21:44, 34.32s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  33/70 step   50/210 loss=0.9299
+
+train:  33%|███▎      | 70/210 [00:10<00:20,  6.93item/s][Aepoch  33/70 step  100/210 loss=0.9154
+
+train:  68%|██████▊   | 142/210 [00:20<00:09,  7.06item/s][Aepoch  33/70 step  150/210 loss=0.9201
+epoch  33/70 step  200/210 loss=0.9194
+epoch  33/70 step  210/210 loss=0.9203
+train: 100%|██████████| 210/210 [00:29<00:00,  7.07item/s]
+epoch  33/70 train_loss=0.9203 time=29.7s
+train:  47%|████▋     | 33/70 [18:55<21:10, 34.33s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  34/70 step   50/210 loss=0.8974
+
+train:  34%|███▍      | 72/210 [00:10<00:19,  7.11item/s][Aepoch  34/70 step  100/210 loss=0.8920
+
+train:  69%|██████▉   | 145/210 [00:20<00:09,  7.21item/s][Aepoch  34/70 step  150/210 loss=0.9064
+epoch  34/70 step  200/210 loss=0.9092
+epoch  34/70 step  210/210 loss=0.9092
+train: 100%|██████████| 210/210 [00:29<00:00,  7.17item/s]
+epoch  34/70 train_loss=0.9092 time=29.3s
+train:  49%|████▊     | 34/70 [19:28<20:27, 34.09s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  35/70 step   50/210 loss=0.9035
+
+train:  34%|███▍      | 71/210 [00:10<00:19,  7.01item/s][Aepoch  35/70 step  100/210 loss=0.9031
+
+train:  68%|██████▊   | 143/210 [00:20<00:09,  7.12item/s][Aepoch  35/70 step  150/210 loss=0.9104
+epoch  35/70 step  200/210 loss=0.9088
+epoch  35/70 step  210/210 loss=0.9080
+train: 100%|██████████| 210/210 [00:29<00:00,  7.09item/s]
+
+train:   0%|          | 0/20 [00:00<?, ?item/s][Atrain: 100%|██████████| 20/20 [00:03<00:00,  5.36item/s]
+epoch  35/70 train_loss=0.9080 time=29.6s quick_val_mIoU=0.6876
+train:  50%|█████     | 35/70 [20:06<20:26, 35.05s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  36/70 step   50/210 loss=0.9061
+
+train:  34%|███▍      | 71/210 [00:10<00:19,  7.10item/s][Aepoch  36/70 step  100/210 loss=0.9051
+
+train:  69%|██████▉   | 145/210 [00:20<00:08,  7.26item/s][Aepoch  36/70 step  150/210 loss=0.9100
+epoch  36/70 step  200/210 loss=0.9053
+epoch  36/70 step  210/210 loss=0.9034
+train: 100%|██████████| 210/210 [00:29<00:00,  7.24item/s]
+epoch  36/70 train_loss=0.9034 time=29.0s
+train:  51%|█████▏    | 36/70 [20:39<19:37, 34.64s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  37/70 step   50/210 loss=0.9200
+
+train:  32%|███▏      | 68/210 [00:10<00:21,  6.73item/s][Aepoch  37/70 step  100/210 loss=0.9033
+
+train:  68%|██████▊   | 142/210 [00:20<00:09,  7.09item/s][Aepoch  37/70 step  150/210 loss=0.9104
+epoch  37/70 step  200/210 loss=0.9045
+epoch  37/70 step  210/210 loss=0.9004
+train: 100%|██████████| 210/210 [00:29<00:00,  7.08item/s]
+epoch  37/70 train_loss=0.9004 time=29.6s
+train:  53%|█████▎    | 37/70 [21:13<18:55, 34.41s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  38/70 step   50/210 loss=0.8933
+
+train:  34%|███▍      | 71/210 [00:10<00:19,  7.06item/s][Aepoch  38/70 step  100/210 loss=0.8977
+
+train:  69%|██████▊   | 144/210 [00:20<00:09,  7.18item/s][Aepoch  38/70 step  150/210 loss=0.8991
+epoch  38/70 step  200/210 loss=0.9002
+epoch  38/70 step  210/210 loss=0.8982
+train: 100%|██████████| 210/210 [00:29<00:00,  7.13item/s]
+epoch  38/70 train_loss=0.8982 time=29.4s
+train:  54%|█████▍    | 38/70 [21:47<18:18, 34.33s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  39/70 step   50/210 loss=0.8795
+
+train:  32%|███▏      | 68/210 [00:10<00:21,  6.76item/s][Aepoch  39/70 step  100/210 loss=0.8878
+
+train:  67%|██████▋   | 141/210 [00:20<00:09,  7.04item/s][Aepoch  39/70 step  150/210 loss=0.8973
+epoch  39/70 step  200/210 loss=0.9016
+epoch  39/70 step  210/210 loss=0.9016
+train: 100%|██████████| 210/210 [00:29<00:00,  7.11item/s]
+epoch  39/70 train_loss=0.9016 time=29.5s
+train:  56%|█████▌    | 39/70 [22:21<17:41, 34.24s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  40/70 step   50/210 loss=0.8903
+
+train:  33%|███▎      | 70/210 [00:10<00:20,  6.95item/s][Aepoch  40/70 step  100/210 loss=0.8925
+
+train:  68%|██████▊   | 142/210 [00:20<00:09,  7.04item/s][Aepoch  40/70 step  150/210 loss=0.8912
+epoch  40/70 step  200/210 loss=0.8942
+epoch  40/70 step  210/210 loss=0.8935
+train: 100%|██████████| 210/210 [00:29<00:00,  7.01item/s]
+
+train:   0%|          | 0/20 [00:00<?, ?item/s][Atrain: 100%|██████████| 20/20 [00:04<00:00,  4.43item/s]
+epoch  40/70 train_loss=0.8935 time=29.9s quick_val_mIoU=0.6942
+train:  57%|█████▋    | 40/70 [23:00<17:46, 35.56s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  41/70 step   50/210 loss=0.8704
+
+train:  33%|███▎      | 70/210 [00:10<00:20,  6.93item/s][Aepoch  41/70 step  100/210 loss=0.8788
+
+train:  67%|██████▋   | 141/210 [00:20<00:09,  6.99item/s][Aepoch  41/70 step  150/210 loss=0.8840
+epoch  41/70 step  200/210 loss=0.8888
+epoch  41/70 step  210/210 loss=0.8900
+train: 100%|██████████| 210/210 [00:29<00:00,  7.01item/s]
+epoch  41/70 train_loss=0.8900 time=29.9s
+train:  59%|█████▊    | 41/70 [23:35<17:02, 35.26s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  42/70 step   50/210 loss=0.9024
+
+train:  32%|███▏      | 68/210 [00:10<00:20,  6.78item/s][Aepoch  42/70 step  100/210 loss=0.8833
+
+train:  67%|██████▋   | 140/210 [00:20<00:10,  6.99item/s][Aepoch  42/70 step  150/210 loss=0.8923
+epoch  42/70 step  200/210 loss=0.8939
+epoch  42/70 step  210/210 loss=0.8924
+train: 100%|██████████| 210/210 [00:30<00:00,  6.99item/s]
+epoch  42/70 train_loss=0.8924 time=30.0s
+train:  60%|██████    | 42/70 [24:09<16:20, 35.00s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  43/70 step   50/210 loss=0.8830
+
+train:  33%|███▎      | 70/210 [00:10<00:20,  6.93item/s][Aepoch  43/70 step  100/210 loss=0.8998
+
+train:  68%|██████▊   | 142/210 [00:20<00:09,  7.03item/s][Aepoch  43/70 step  150/210 loss=0.8929
+epoch  43/70 step  200/210 loss=0.8880
+epoch  43/70 step  210/210 loss=0.8875
+train: 100%|██████████| 210/210 [00:30<00:00,  6.98item/s]
+epoch  43/70 train_loss=0.8875 time=30.1s
+train:  61%|██████▏   | 43/70 [24:43<15:40, 34.85s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  44/70 step   50/210 loss=0.8911
+
+train:  33%|███▎      | 69/210 [00:10<00:20,  6.85item/s][Aepoch  44/70 step  100/210 loss=0.8794
+
+train:  66%|██████▌   | 139/210 [00:20<00:10,  6.90item/s][Aepoch  44/70 step  150/210 loss=0.8845
+epoch  44/70 step  200/210 loss=0.8829
+epoch  44/70 step  210/210 loss=0.8796
+train: 100%|██████████| 210/210 [00:30<00:00,  6.94item/s]
+epoch  44/70 train_loss=0.8796 time=30.3s
+train:  63%|██████▎   | 44/70 [25:18<15:06, 34.86s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  45/70 step   50/210 loss=0.8787
+
+train:  32%|███▏      | 67/210 [00:10<00:21,  6.62item/s][Aepoch  45/70 step  100/210 loss=0.8677
+
+train:  66%|██████▌   | 138/210 [00:20<00:10,  6.85item/s][Aepoch  45/70 step  150/210 loss=0.8782
+epoch  45/70 step  200/210 loss=0.8810
+epoch  45/70 step  210/210 loss=0.8834
+
+train: 100%|██████████| 210/210 [00:30<00:00,  7.00item/s][Atrain: 100%|██████████| 210/210 [00:30<00:00,  6.92item/s]
+
+train:   0%|          | 0/20 [00:00<?, ?item/s][Atrain: 100%|██████████| 20/20 [00:04<00:00,  4.57item/s]
+epoch  45/70 train_loss=0.8834 time=30.4s quick_val_mIoU=0.6987
+train:  64%|██████▍   | 45/70 [25:57<14:59, 35.98s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  46/70 step   50/210 loss=0.8891
+
+train:  32%|███▏      | 67/210 [00:10<00:21,  6.68item/s][Aepoch  46/70 step  100/210 loss=0.8890
+
+train:  66%|██████▌   | 138/210 [00:20<00:10,  6.89item/s][Aepoch  46/70 step  150/210 loss=0.8864
+epoch  46/70 step  200/210 loss=0.8823
+
+train: 100%|█████████▉| 209/210 [00:30<00:00,  6.88item/s][Aepoch  46/70 step  210/210 loss=0.8799
+train: 100%|██████████| 210/210 [00:30<00:00,  6.84item/s]
+epoch  46/70 train_loss=0.8799 time=30.7s
+train:  66%|██████▌   | 46/70 [26:32<14:17, 35.74s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  47/70 step   50/210 loss=0.8799
+
+train:  33%|███▎      | 70/210 [00:10<00:20,  6.89item/s][Aepoch  47/70 step  100/210 loss=0.8672
+
+train:  67%|██████▋   | 141/210 [00:20<00:09,  6.97item/s][Aepoch  47/70 step  150/210 loss=0.8761
+epoch  47/70 step  200/210 loss=0.8718
+epoch  47/70 step  210/210 loss=0.8730
+train: 100%|██████████| 210/210 [00:30<00:00,  6.95item/s]
+epoch  47/70 train_loss=0.8730 time=30.2s
+train:  67%|██████▋   | 47/70 [27:07<13:33, 35.37s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  48/70 step   50/210 loss=0.8898
+
+train:  33%|███▎      | 69/210 [00:10<00:20,  6.89item/s][Aepoch  48/70 step  100/210 loss=0.8818
+
+train:  66%|██████▌   | 138/210 [00:20<00:10,  6.85item/s][Aepoch  48/70 step  150/210 loss=0.8815
+epoch  48/70 step  200/210 loss=0.8777
+epoch  48/70 step  210/210 loss=0.8759
+
+train: 100%|██████████| 210/210 [00:30<00:00,  6.96item/s][Atrain: 100%|██████████| 210/210 [00:30<00:00,  6.91item/s]
+epoch  48/70 train_loss=0.8759 time=30.4s
+train:  69%|██████▊   | 48/70 [27:41<12:51, 35.07s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  49/70 step   50/210 loss=0.8484
+
+train:  33%|███▎      | 70/210 [00:10<00:20,  6.97item/s][Aepoch  49/70 step  100/210 loss=0.8543
+
+train:  67%|██████▋   | 141/210 [00:20<00:09,  7.04item/s][Aepoch  49/70 step  150/210 loss=0.8609
+epoch  49/70 step  200/210 loss=0.8701
+epoch  49/70 step  210/210 loss=0.8694
+train: 100%|██████████| 210/210 [00:29<00:00,  7.05item/s]
+epoch  49/70 train_loss=0.8694 time=29.8s
+train:  70%|███████   | 49/70 [28:15<12:10, 34.77s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  50/70 step   50/210 loss=0.8763
+
+train:  33%|███▎      | 70/210 [00:10<00:20,  6.94item/s][Aepoch  50/70 step  100/210 loss=0.8738
+
+train:  68%|██████▊   | 142/210 [00:20<00:09,  7.06item/s][Aepoch  50/70 step  150/210 loss=0.8713
+epoch  50/70 step  200/210 loss=0.8693
+epoch  50/70 step  210/210 loss=0.8691
+train: 100%|██████████| 210/210 [00:29<00:00,  7.12item/s]
+
+train:   0%|          | 0/20 [00:00<?, ?item/s][Atrain: 100%|██████████| 20/20 [00:04<00:00,  4.89item/s]
+epoch  50/70 train_loss=0.8691 time=29.5s quick_val_mIoU=0.6963
+train:  71%|███████▏  | 50/70 [28:53<11:51, 35.59s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  51/70 step   50/210 loss=0.8569
+
+train:  34%|███▍      | 71/210 [00:10<00:19,  7.07item/s][Aepoch  51/70 step  100/210 loss=0.8633
+
+train:  68%|██████▊   | 142/210 [00:20<00:09,  7.02item/s][Aepoch  51/70 step  150/210 loss=0.8720
+epoch  51/70 step  200/210 loss=0.8713
+epoch  51/70 step  210/210 loss=0.8712
+train: 100%|██████████| 210/210 [00:29<00:00,  7.05item/s]
+epoch  51/70 train_loss=0.8712 time=29.8s
+train:  73%|███████▎  | 51/70 [29:27<11:08, 35.18s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  52/70 step   50/210 loss=0.8690
+
+train:  33%|███▎      | 70/210 [00:10<00:20,  7.00item/s][Aepoch  52/70 step  100/210 loss=0.8715
+
+train:  68%|██████▊   | 142/210 [00:20<00:09,  7.11item/s][Aepoch  52/70 step  150/210 loss=0.8764
+epoch  52/70 step  200/210 loss=0.8765
+epoch  52/70 step  210/210 loss=0.8747
+train: 100%|██████████| 210/210 [00:29<00:00,  7.09item/s]
+epoch  52/70 train_loss=0.8747 time=29.6s
+train:  74%|███████▍  | 52/70 [30:01<10:27, 34.85s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  53/70 step   50/210 loss=0.8594
+
+train:  33%|███▎      | 70/210 [00:10<00:20,  6.92item/s][Aepoch  53/70 step  100/210 loss=0.8606
+
+train:  67%|██████▋   | 140/210 [00:20<00:10,  6.95item/s][Aepoch  53/70 step  150/210 loss=0.8616
+epoch  53/70 step  200/210 loss=0.8659
+epoch  53/70 step  210/210 loss=0.8666
+train: 100%|██████████| 210/210 [00:30<00:00,  6.95item/s]
+epoch  53/70 train_loss=0.8666 time=30.2s
+train:  76%|███████▌  | 53/70 [30:35<09:49, 34.68s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  54/70 step   50/210 loss=0.8517
+
+train:  33%|███▎      | 70/210 [00:10<00:20,  6.92item/s][Aepoch  54/70 step  100/210 loss=0.8587
+
+train:  68%|██████▊   | 142/210 [00:20<00:09,  7.03item/s][Aepoch  54/70 step  150/210 loss=0.8599
+epoch  54/70 step  200/210 loss=0.8625
+epoch  54/70 step  210/210 loss=0.8636
+train: 100%|██████████| 210/210 [00:29<00:00,  7.08item/s]
+epoch  54/70 train_loss=0.8636 time=29.7s
+train:  77%|███████▋  | 54/70 [31:09<09:12, 34.51s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  55/70 step   50/210 loss=0.8825
+
+train:  32%|███▏      | 68/210 [00:10<00:21,  6.73item/s][Aepoch  55/70 step  100/210 loss=0.8788
+
+train:  67%|██████▋   | 140/210 [00:20<00:10,  6.95item/s][Aepoch  55/70 step  150/210 loss=0.8672
+epoch  55/70 step  200/210 loss=0.8608
+epoch  55/70 step  210/210 loss=0.8600
+train: 100%|██████████| 210/210 [00:30<00:00,  6.95item/s]
+
+train:   0%|          | 0/20 [00:00<?, ?item/s][Atrain: 100%|██████████| 20/20 [00:04<00:00,  4.98item/s]
+epoch  55/70 train_loss=0.8600 time=30.2s quick_val_mIoU=0.6958
+train:  79%|███████▊  | 55/70 [31:48<08:55, 35.71s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  56/70 step   50/210 loss=0.8583
+
+train:  31%|███▏      | 66/210 [00:10<00:22,  6.53item/s][Aepoch  56/70 step  100/210 loss=0.8560
+
+train:  66%|██████▌   | 138/210 [00:20<00:10,  6.89item/s][Aepoch  56/70 step  150/210 loss=0.8633
+epoch  56/70 step  200/210 loss=0.8584
+epoch  56/70 step  210/210 loss=0.8591
+
+train: 100%|██████████| 210/210 [00:30<00:00,  7.03item/s][Atrain: 100%|██████████| 210/210 [00:30<00:00,  6.93item/s]
+epoch  56/70 train_loss=0.8591 time=30.3s
+train:  80%|████████  | 56/70 [32:22<08:15, 35.38s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  57/70 step   50/210 loss=0.8769
+
+train:  33%|███▎      | 70/210 [00:10<00:20,  6.93item/s][Aepoch  57/70 step  100/210 loss=0.8687
+
+train:  33%|███▎      | 70/210 [00:20<00:20,  6.93item/s][A
+train:  68%|██████▊   | 142/210 [00:20<00:09,  7.05item/s][Aepoch  57/70 step  150/210 loss=0.8703
+epoch  57/70 step  200/210 loss=0.8637
+epoch  57/70 step  210/210 loss=0.8623
+train: 100%|██████████| 210/210 [00:30<00:00,  6.99item/s]
+epoch  57/70 train_loss=0.8623 time=30.1s
+train:  81%|████████▏ | 57/70 [33:00<07:48, 36.04s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  58/70 step   50/210 loss=0.8363
+
+train:  33%|███▎      | 69/210 [00:10<00:20,  6.89item/s][Aepoch  58/70 step  100/210 loss=0.8568
+
+train:  66%|██████▌   | 139/210 [00:20<00:10,  6.95item/s][Aepoch  58/70 step  150/210 loss=0.8564
+epoch  58/70 step  200/210 loss=0.8576
+epoch  58/70 step  210/210 loss=0.8556
+
+train: 100%|██████████| 210/210 [00:30<00:00,  7.00item/s][Atrain: 100%|██████████| 210/210 [00:30<00:00,  6.96item/s]
+epoch  58/70 train_loss=0.8556 time=30.2s
+train:  83%|████████▎ | 58/70 [33:35<07:07, 35.65s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  59/70 step   50/210 loss=0.8586
+
+train:  32%|███▏      | 68/210 [00:10<00:20,  6.79item/s][Aepoch  59/70 step  100/210 loss=0.8477
+
+train:  66%|██████▌   | 139/210 [00:20<00:10,  6.94item/s][Aepoch  59/70 step  150/210 loss=0.8499
+epoch  59/70 step  200/210 loss=0.8502
+epoch  59/70 step  210/210 loss=0.8485
+
+train: 100%|██████████| 210/210 [00:30<00:00,  6.99item/s][Atrain: 100%|██████████| 210/210 [00:30<00:00,  6.94item/s]
+epoch  59/70 train_loss=0.8485 time=30.3s
+train:  84%|████████▍ | 59/70 [34:09<06:29, 35.39s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  60/70 step   50/210 loss=0.8479
+
+train:  34%|███▍      | 71/210 [00:10<00:19,  7.03item/s][Aepoch  60/70 step  100/210 loss=0.8476
+
+train:  69%|██████▊   | 144/210 [00:20<00:09,  7.14item/s][Aepoch  60/70 step  150/210 loss=0.8547
+epoch  60/70 step  200/210 loss=0.8596
+epoch  60/70 step  210/210 loss=0.8555
+train: 100%|██████████| 210/210 [00:29<00:00,  7.14item/s]
+
+train:   0%|          | 0/20 [00:00<?, ?item/s][Atrain: 100%|██████████| 20/20 [00:03<00:00,  5.38item/s]
+epoch  60/70 train_loss=0.8555 time=29.4s quick_val_mIoU=0.6973
+train:  86%|████████▌ | 60/70 [34:47<05:58, 35.89s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  61/70 step   50/210 loss=0.8582
+
+train:  33%|███▎      | 70/210 [00:10<00:20,  6.90item/s][Aepoch  61/70 step  100/210 loss=0.8487
+
+train:  67%|██████▋   | 140/210 [00:20<00:10,  6.90item/s][Aepoch  61/70 step  150/210 loss=0.8514
+epoch  61/70 step  200/210 loss=0.8547
+epoch  61/70 step  210/210 loss=0.8539
+
+train: 100%|██████████| 210/210 [00:30<00:00,  6.94item/s][Atrain: 100%|██████████| 210/210 [00:30<00:00,  6.91item/s]
+epoch  61/70 train_loss=0.8539 time=30.4s
+train:  87%|████████▋ | 61/70 [35:21<05:20, 35.59s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  62/70 step   50/210 loss=0.8550
+
+train:  33%|███▎      | 70/210 [00:10<00:20,  6.96item/s][Aepoch  62/70 step  100/210 loss=0.8587
+
+train:  68%|██████▊   | 142/210 [00:20<00:09,  7.06item/s][Aepoch  62/70 step  150/210 loss=0.8636
+epoch  62/70 step  200/210 loss=0.8574
+epoch  62/70 step  210/210 loss=0.8542
+train: 100%|██████████| 210/210 [00:29<00:00,  7.02item/s]
+epoch  62/70 train_loss=0.8542 time=29.9s
+train:  89%|████████▊ | 62/70 [35:56<04:41, 35.19s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  63/70 step   50/210 loss=0.8541
+
+train:  33%|███▎      | 70/210 [00:10<00:20,  6.95item/s][Aepoch  63/70 step  100/210 loss=0.8555
+
+train:  68%|██████▊   | 142/210 [00:20<00:09,  7.09item/s][Aepoch  63/70 step  150/210 loss=0.8543
+epoch  63/70 step  200/210 loss=0.8550
+epoch  63/70 step  210/210 loss=0.8547
+train: 100%|██████████| 210/210 [00:29<00:00,  7.03item/s]
+epoch  63/70 train_loss=0.8547 time=29.9s
+train:  90%|█████████ | 63/70 [36:30<04:04, 34.92s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  64/70 step   50/210 loss=0.8407
+
+train:  32%|███▏      | 67/210 [00:10<00:21,  6.68item/s][Aepoch  64/70 step  100/210 loss=0.8511
+
+train:  67%|██████▋   | 140/210 [00:20<00:10,  6.99item/s][Aepoch  64/70 step  150/210 loss=0.8608
+epoch  64/70 step  200/210 loss=0.8561
+epoch  64/70 step  210/210 loss=0.8544
+train: 100%|██████████| 210/210 [00:30<00:00,  6.99item/s]
+epoch  64/70 train_loss=0.8544 time=30.0s
+train:  91%|█████████▏| 64/70 [37:04<03:28, 34.68s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  65/70 step   50/210 loss=0.8676
+
+train:  33%|███▎      | 69/210 [00:10<00:20,  6.87item/s][Aepoch  65/70 step  100/210 loss=0.8573
+
+train:  67%|██████▋   | 140/210 [00:20<00:10,  6.98item/s][Aepoch  65/70 step  150/210 loss=0.8564
+epoch  65/70 step  200/210 loss=0.8518
+epoch  65/70 step  210/210 loss=0.8510
+train: 100%|██████████| 210/210 [00:30<00:00,  6.96item/s]
+
+train:   0%|          | 0/20 [00:00<?, ?item/s][Atrain: 100%|██████████| 20/20 [00:03<00:00,  5.13item/s]
+epoch  65/70 train_loss=0.8510 time=30.2s quick_val_mIoU=0.6983
+train:  93%|█████████▎| 65/70 [37:43<02:59, 35.81s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  66/70 step   50/210 loss=0.8592
+
+train:  33%|███▎      | 69/210 [00:10<00:20,  6.84item/s][Aepoch  66/70 step  100/210 loss=0.8553
+
+train:  67%|██████▋   | 140/210 [00:20<00:10,  6.93item/s][Aepoch  66/70 step  150/210 loss=0.8531
+epoch  66/70 step  200/210 loss=0.8540
+epoch  66/70 step  210/210 loss=0.8537
+
+train: 100%|██████████| 210/210 [00:30<00:00,  6.94item/s][Atrain: 100%|██████████| 210/210 [00:30<00:00,  6.90item/s]
+epoch  66/70 train_loss=0.8537 time=30.4s
+train:  94%|█████████▍| 66/70 [38:17<02:22, 35.53s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  67/70 step   50/210 loss=0.8656
+
+train:  33%|███▎      | 69/210 [00:10<00:20,  6.84item/s][Aepoch  67/70 step  100/210 loss=0.8620
+
+train:  66%|██████▌   | 139/210 [00:20<00:10,  6.91item/s][Aepoch  67/70 step  150/210 loss=0.8659
+epoch  67/70 step  200/210 loss=0.8573
+epoch  67/70 step  210/210 loss=0.8553
+train: 100%|██████████| 210/210 [00:30<00:00,  6.97item/s]
+epoch  67/70 train_loss=0.8553 time=30.1s
+train:  96%|█████████▌| 67/70 [38:52<01:45, 35.18s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  68/70 step   50/210 loss=0.8480
+
+train:  33%|███▎      | 69/210 [00:10<00:20,  6.88item/s][Aepoch  68/70 step  100/210 loss=0.8458
+
+train:  66%|██████▌   | 139/210 [00:20<00:10,  6.94item/s][Aepoch  68/70 step  150/210 loss=0.8524
+epoch  68/70 step  200/210 loss=0.8517
+
+train: 100%|█████████▉| 209/210 [00:30<00:00,  6.95item/s][Aepoch  68/70 step  210/210 loss=0.8514
+train: 100%|██████████| 210/210 [00:30<00:00,  6.92item/s]
+epoch  68/70 train_loss=0.8514 time=30.4s
+train:  97%|█████████▋| 68/70 [39:27<01:10, 35.06s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  69/70 step   50/210 loss=0.8444
+
+train:  31%|███▏      | 66/210 [00:10<00:22,  6.51item/s][Aepoch  69/70 step  100/210 loss=0.8466
+
+train:  66%|██████▌   | 138/210 [00:20<00:10,  6.89item/s][Aepoch  69/70 step  150/210 loss=0.8481
+epoch  69/70 step  200/210 loss=0.8500
+epoch  69/70 step  210/210 loss=0.8495
+
+train: 100%|██████████| 210/210 [00:30<00:00,  7.01item/s][Atrain: 100%|██████████| 210/210 [00:30<00:00,  6.92item/s]
+epoch  69/70 train_loss=0.8495 time=30.4s
+train:  99%|█████████▊| 69/70 [40:01<00:34, 34.86s/item]
+train:   0%|          | 0/210 [00:00<?, ?item/s][Aepoch  70/70 step   50/210 loss=0.8558
+
+train:  33%|███▎      | 70/210 [00:10<00:20,  6.94item/s][Aepoch  70/70 step  100/210 loss=0.8603
+
+train:  67%|██████▋   | 140/210 [00:20<00:10,  6.91item/s][Aepoch  70/70 step  150/210 loss=0.8597
+epoch  70/70 step  200/210 loss=0.8562
+epoch  70/70 step  210/210 loss=0.8542
+train: 100%|██████████| 210/210 [00:30<00:00,  6.97item/s]
+
+train:   0%|          | 0/20 [00:00<?, ?item/s][Atrain: 100%|██████████| 20/20 [00:04<00:00,  4.44item/s]
+epoch  70/70 train_loss=0.8542 time=30.1s quick_val_mIoU=0.6954
+train: 100%|██████████| 70/70 [40:40<00:00, 36.08s/item]train: 100%|██████████| 70/70 [40:40<00:00, 34.86s/item]
+done. final model: /Data3/sppark/komap/experiments/model349_no_class_weights_v1/outputs/runs/model349_no_class_weights_train_20261002T112426_091302Z/outputs/model336_hrnet_best/last.pt (evaluate it with evaluate.py)

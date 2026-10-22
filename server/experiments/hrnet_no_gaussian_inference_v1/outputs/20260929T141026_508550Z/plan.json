@@ -1,0 +1,127 @@
+[
+  {
+    "id": "WF_norm_halo1",
+    "contrast": "ZW_WG_bicubic_0.9_0.1",
+    "change": {
+      "model_halo": 1
+    },
+    "engine": "full_v2",
+    "input_transform": {
+      "kind": "gamma",
+      "gamma": 0.9
+    },
+    "forward_transform": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.1
+      }
+    },
+    "config": {
+      "scale": 2.0,
+      "tta": "d4",
+      "precision": "fp32",
+      "restore_mode": "bicubic",
+      "model_halo": 1
+    }
+  },
+  {
+    "id": "WF_norm_halo2",
+    "contrast": "ZW_WG_bicubic_0.9_0.1",
+    "change": {
+      "model_halo": 2
+    },
+    "engine": "full_v2",
+    "input_transform": {
+      "kind": "gamma",
+      "gamma": 0.9
+    },
+    "forward_transform": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.1
+      }
+    },
+    "config": {
+      "scale": 2.0,
+      "tta": "d4",
+      "precision": "fp32",
+      "restore_mode": "bicubic",
+      "model_halo": 2
+    }
+  },
+  {
+    "id": "WF_norm_halo4",
+    "contrast": "ZW_WG_bicubic_0.9_0.1",
+    "change": {
+      "model_halo": 4
+    },
+    "engine": "full_v2",
+    "input_transform": {
+      "kind": "gamma",
+      "gamma": 0.9
+    },
+    "forward_transform": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.1
+      }
+    },
+    "config": {
+      "scale": 2.0,
+      "tta": "d4",
+      "precision": "fp32",
+      "restore_mode": "bicubic",
+      "model_halo": 4
+    }
+  },
+  {
+    "id": "WF_norm_halo8",
+    "contrast": "ZW_WG_bicubic_0.9_0.1",
+    "change": {
+      "model_halo": 8
+    },
+    "engine": "full_v2",
+    "input_transform": {
+      "kind": "gamma",
+      "gamma": 0.9
+    },
+    "forward_transform": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.1
+      }
+    },
+    "config": {
+      "scale": 2.0,
+      "tta": "d4",
+      "precision": "fp32",
+      "restore_mode": "bicubic",
+      "model_halo": 8
+    }
+  },
+  {
+    "id": "WF_norm_halo16",
+    "contrast": "ZW_WG_bicubic_0.9_0.1",
+    "change": {
+      "model_halo": 16
+    },
+    "engine": "full_v2",
+    "input_transform": {
+      "kind": "gamma",
+      "gamma": 0.9
+    },
+    "forward_transform": {
+      "normalization_blend": {
+        "scope": "decoder",
+        "amount": 0.1
+      }
+    },
+    "config": {
+      "scale": 2.0,
+      "tta": "d4",
+      "precision": "fp32",
+      "restore_mode": "bicubic",
+      "model_halo": 16
+    }
+  }
+]

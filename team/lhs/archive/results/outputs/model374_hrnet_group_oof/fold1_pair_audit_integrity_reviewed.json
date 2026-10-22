@@ -1,0 +1,1762 @@
+{
+  "audit": "paired grouped train-OOF metrics recomputed from saved maps; no official-valid/test labels",
+  "score_source": "saved per-fold probability archives and train-OOF masks; checkpoint inference was not rerun by this audit",
+  "metric": "per-image mean of four class IoUs; empty union=0",
+  "class_order": [
+    "Al",
+    "Al3Ni",
+    "Primary_Si",
+    "Eutectic_Si"
+  ],
+  "channel_alignment": "identity; Model329 and Model374 both [Al, Al3Ni, Primary_Si, Eutectic_Si]",
+  "reference_model": 329,
+  "candidate_model": 374,
+  "reference_sha256": "539bc1983bffb3ff55303f6865fc9a2094edc5dea9910551a481005fc1a01837",
+  "reference_fold_maps_compared_to_merged_archive": 18,
+  "reference_fold_map_parity_exact": true,
+  "reference_fold_training_provenance_verified": {
+    "1": {
+      "training_images": 52,
+      "training_specimen_groups": 44,
+      "heldout_images": 18,
+      "heldout_specimen_groups": 15,
+      "train_heldout_group_overlap": [],
+      "model329_training_split": "train_fold1",
+      "no_valid_eval": true,
+      "validation_loader_empty_confirmed_by_log": true,
+      "validation_evaluation_messages": false,
+      "fixed_training_iterations": 16000,
+      "training_args_sha256": "c0d69e6f3a10b4a3726ab0533152c870b9ffc11991ed94419a9c502a002da8e3",
+      "training_log_sha256": "9e3eec90c8f890d0ce4a4cf2bab9b382124822e3ab74a09fe82ec912d4eb6eba",
+      "checkpoint_sha256": "2466fef573bb580c15e15cedc631c36d5ec048c5cc891015263e635a11ce02a2",
+      "external_init_checkpoint": null,
+      "fresh_init_path_verified_in_current_source": true,
+      "source_hashes_measured_at_audit_time": true,
+      "trainer_source_sha256": "bf65382820adc6211bd55f94c25ea5aab01a1405105c1b723810d71c75575ed3",
+      "model_builder_source_sha256": "ea3297e1479dbd156fa45029300888f6e71a98b59b659d6d6f8a7e01ded37ff2",
+      "checkpoint_to_oof_archive_binding_verified": false,
+      "fold_oof_probability_archive_sha256": "b3680bc39f36eb22d6b59d4aaee5d15c4f1ca95dd88866a27d225540cd5d95d0"
+    }
+  },
+  "candidate_fold_training_provenance_verified": {
+    "1": {
+      "heldout_images": 18,
+      "train_state_epoch": 70,
+      "inference_split": "valid",
+      "validation_checkpoint_selection": false,
+      "external_initial_checkpoint": null,
+      "training_args_sha256_verified": true,
+      "checkpoint_sha256_verified": true,
+      "model_code_tree_sha256_verified": true,
+      "evaluation_script_sha256_verified": true,
+      "runner_sha256_verified": false,
+      "runner_sha256_in_manifest": "7b4a4ccfc00001c183dc45c8d315cc77530d317246609d4821f41b5631481a80",
+      "runner_sha256_current": "2704023fc7d773b6082937c026fd20a36807ae4d2f0b3d2175f2defbc58b4bff",
+      "probability_archive_sha256_recorded": "2176c5c2c2f5e230a911e246cdf894e74755f2ee81cdab8bb547b600adee457d",
+      "probability_archive_sha256_bound_to_manifest": false,
+      "inference_manifest_sha256": "bd2b2b856f59354826fd542ee2c8bae3935a0911a9784035c4c1e9f301aded29"
+    }
+  },
+  "provenance_status": "partial_with_warnings",
+  "provenance_warnings": [
+    "Model329 trainer/model-builder source hashes were measured during audit, not at training time",
+    "fold 1: Model329 has no inference manifest binding last.pt to its OOF map",
+    "fold 1: runner SHA differs from inference manifest; training args, checkpoint, model code and evaluation code hashes match",
+    "fold 1: candidate probability archive SHA is recorded now but was not bound to the inference-time manifest"
+  ],
+  "folds": [
+    1
+  ],
+  "fold_summary": {
+    "1": {
+      "image_count": 18,
+      "specimen_group_count": 15,
+      "model329_image_mean_miou_empty0": 0.7693453699044828,
+      "model374_image_mean_miou_empty0": 0.7643494768394258,
+      "fixed_half_blend_image_mean_miou_empty0": 0.7745891484637131,
+      "model374_delta_vs_model329_pp": -0.4995893065056896,
+      "fixed_half_blend_delta_vs_model329_pp": 0.5243778559230337,
+      "fixed_half_blend_positive_images": 12,
+      "class_delta_blend_vs_model329_pp": {
+        "Al": 0.09639276946780129,
+        "Al3Ni": -0.2214786320356099,
+        "Primary_Si": 0.6191699696314488,
+        "Eutectic_Si": 1.6034273166284965
+      }
+    }
+  },
+  "image_count": 18,
+  "specimen_group_count": 15,
+  "group_ownership_exactly_once": true,
+  "model329_image_mean_miou_empty0": 0.7693453699044828,
+  "model374_image_mean_miou_empty0": 0.7643494768394258,
+  "fixed_half_blend_image_mean_miou_empty0": 0.7745891484637131,
+  "model374_delta_vs_model329_pp": -0.49958930650568967,
+  "fixed_half_blend_delta_vs_model329_pp": 0.5243778559230337,
+  "model374_positive_images": 9,
+  "fixed_half_blend_positive_images": 12,
+  "model374_group_bootstrap_95ci_delta_pp": [
+    -2.1986786812619425,
+    1.015557629903063
+  ],
+  "fixed_half_blend_group_bootstrap_95ci_delta_pp": [
+    -0.16558314616679878,
+    1.1530390510361785
+  ],
+  "class_delta_blend_vs_model329_pp": {
+    "Al": 0.09639276946780129,
+    "Al3Ni": -0.2214786320356099,
+    "Primary_Si": 0.6191699696314488,
+    "Eutectic_Si": 1.6034273166284965
+  },
+  "mean_image_oracle_best_model_miou_empty0_diagnostic_only": 0.7794992721819721,
+  "mean_pixel_oracle_miou_empty0_diagnostic_only": 0.8178955202527175,
+  "positive_pixel_complementarity": {
+    "model374_correct_only_pixels": 253054,
+    "model329_correct_only_pixels": 309200,
+    "prediction_disagreement_fraction_image_mean": 0.04368673883691612
+  },
+  "absent_class_false_positive_audit": {
+    "Model329": {
+      "gt_absent_image_class_pairs": 1,
+      "false_positive_absent_image_class_pairs": 0,
+      "false_positive_pixels_on_gt_absent_classes": 0,
+      "mean_image_fraction_predicted_as_gt_absent_classes": 0.0,
+      "image_mean_miou_after_gt_oracle_relabels_absent_class_fp": 0.7693453699044828,
+      "oracle_gain_pp_diagnostic_only": 0.0,
+      "by_class": {
+        "Al": {
+          "gt_absent_images": 0,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        },
+        "Al3Ni": {
+          "gt_absent_images": 0,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        },
+        "Primary_Si": {
+          "gt_absent_images": 1,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        },
+        "Eutectic_Si": {
+          "gt_absent_images": 0,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        }
+      }
+    },
+    "Model374": {
+      "gt_absent_image_class_pairs": 1,
+      "false_positive_absent_image_class_pairs": 0,
+      "false_positive_pixels_on_gt_absent_classes": 0,
+      "mean_image_fraction_predicted_as_gt_absent_classes": 0.0,
+      "image_mean_miou_after_gt_oracle_relabels_absent_class_fp": 0.7643494768394258,
+      "oracle_gain_pp_diagnostic_only": 0.0,
+      "by_class": {
+        "Al": {
+          "gt_absent_images": 0,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        },
+        "Al3Ni": {
+          "gt_absent_images": 0,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        },
+        "Primary_Si": {
+          "gt_absent_images": 1,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        },
+        "Eutectic_Si": {
+          "gt_absent_images": 0,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        }
+      }
+    },
+    "fixed_half_blend": {
+      "gt_absent_image_class_pairs": 1,
+      "false_positive_absent_image_class_pairs": 0,
+      "false_positive_pixels_on_gt_absent_classes": 0,
+      "mean_image_fraction_predicted_as_gt_absent_classes": 0.0,
+      "image_mean_miou_after_gt_oracle_relabels_absent_class_fp": 0.7745891484637131,
+      "oracle_gain_pp_diagnostic_only": 0.0,
+      "by_class": {
+        "Al": {
+          "gt_absent_images": 0,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        },
+        "Al3Ni": {
+          "gt_absent_images": 0,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        },
+        "Primary_Si": {
+          "gt_absent_images": 1,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        },
+        "Eutectic_Si": {
+          "gt_absent_images": 0,
+          "images_with_false_positive": 0,
+          "total_false_positive_pixels": 0,
+          "mean_false_positive_fraction_when_gt_absent": 0.0
+        }
+      }
+    }
+  },
+  "interpretation": "single-fold or partial-fold OOF is exploratory; fixed 0.5 blend is not a tuned weight",
+  "per_image": [
+    {
+      "image": "A118_step2_sample1",
+      "fold": 1,
+      "specimen_group": "A118",
+      "pixels": 1076250,
+      "model329_miou_empty0": 0.8513999125452975,
+      "model374_miou_empty0": 0.8499316745126204,
+      "fixed_half_blend_miou_empty0": 0.8560059244561502,
+      "model374_delta_vs_model329_pp": -0.14682380326770383,
+      "blend_delta_vs_model329_pp": 0.46060119108527475,
+      "model329_class_iou": [
+        0.9529773910823925,
+        0.8588695591420387,
+        0.8811858924463356,
+        0.7125668075104233
+      ],
+      "model374_class_iou": [
+        0.956813160237878,
+        0.8491032547004314,
+        0.8800592902607027,
+        0.7137509928514694
+      ],
+      "blend_class_iou": [
+        0.9586771610052471,
+        0.8622700595201062,
+        0.8777545050113382,
+        0.7253219722879087
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.5699769922854592,
+        0.34005003780674947,
+        -0.34313874349973794,
+        1.2755164777485395
+      ],
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8513999125452975
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8499316745126204
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8560059244561502
+        }
+      },
+      "prediction_disagreement_fraction": 0.029224622531939606,
+      "model374_correct_only_pixels": 15364,
+      "model329_correct_only_pixels": 14251,
+      "image_oracle_best_model_miou_empty0": 0.8513999125452975,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8854152328644544
+    },
+    {
+      "image": "A138_step4_sample3",
+      "fold": 1,
+      "specimen_group": "A138",
+      "pixels": 1076250,
+      "model329_miou_empty0": 0.7067164729781529,
+      "model374_miou_empty0": 0.6338826709437425,
+      "fixed_half_blend_miou_empty0": 0.683936999424697,
+      "model374_delta_vs_model329_pp": -7.283380203441037,
+      "blend_delta_vs_model329_pp": -2.2779473553455887,
+      "model329_class_iou": [
+        0.8977070804933255,
+        0.7517654414829709,
+        0.854420879761253,
+        0.3229724901750625
+      ],
+      "model374_class_iou": [
+        0.8637184762886434,
+        0.6378757820845414,
+        0.8589964228755755,
+        0.17494000252620942
+      ],
+      "blend_class_iou": [
+        0.8901822183365647,
+        0.7177379811266438,
+        0.8685841538998149,
+        0.2592436443357646
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        -0.7524862156760737,
+        -3.402746035632709,
+        1.4163274138561888,
+        -6.372884583929794
+      ],
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7067164729781529
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6338826709437425
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.683936999424697
+        }
+      },
+      "prediction_disagreement_fraction": 0.08379837398373984,
+      "model374_correct_only_pixels": 27556,
+      "model329_correct_only_pixels": 59265,
+      "image_oracle_best_model_miou_empty0": 0.7067164729781529,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.761337544011211
+    },
+    {
+      "image": "A140_step4_sample2",
+      "fold": 1,
+      "specimen_group": "A140",
+      "pixels": 1474560,
+      "model329_miou_empty0": 0.8703573601511555,
+      "model374_miou_empty0": 0.82503977227002,
+      "fixed_half_blend_miou_empty0": 0.8639855067502029,
+      "model374_delta_vs_model329_pp": -4.5317587881135495,
+      "blend_delta_vs_model329_pp": -0.6371853400952587,
+      "model329_class_iou": [
+        0.9491925599547236,
+        0.9106304128104005,
+        0.9074658186363724,
+        0.7141406492031256
+      ],
+      "model374_class_iou": [
+        0.9469371273294962,
+        0.8712026021687901,
+        0.891355216119597,
+        0.590664143462197
+      ],
+      "blend_class_iou": [
+        0.9495179549660561,
+        0.9032636118677687,
+        0.9054804215009642,
+        0.6976800386660222
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.03253950113324411,
+        -0.7366800942631757,
+        -0.198539713540824,
+        -1.6460610537103348
+      ],
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8703573601511555
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.82503977227002
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8639855067502029
+        }
+      },
+      "prediction_disagreement_fraction": 0.03069186740451389,
+      "model374_correct_only_pixels": 12650,
+      "model329_correct_only_pixels": 30205,
+      "image_oracle_best_model_miou_empty0": 0.8703573601511555,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8939448167411275
+    },
+    {
+      "image": "A155_step3_sample2",
+      "fold": 1,
+      "specimen_group": "A155",
+      "pixels": 1161702,
+      "model329_miou_empty0": 0.8615173175247866,
+      "model374_miou_empty0": 0.8743709381828051,
+      "fixed_half_blend_miou_empty0": 0.8756707385101888,
+      "model374_delta_vs_model329_pp": 1.2853620658018539,
+      "blend_delta_vs_model329_pp": 1.4153420985402287,
+      "model329_class_iou": [
+        0.9588562144944436,
+        0.9254687103219285,
+        0.8910913065411131,
+        0.670653038741661
+      ],
+      "model374_class_iou": [
+        0.9625190793523161,
+        0.927887421787184,
+        0.9091672996900986,
+        0.6979099519016214
+      ],
+      "blend_class_iou": [
+        0.962226739150924,
+        0.9294420534705782,
+        0.9086853684997878,
+        0.7023287929194652
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.3370524656480467,
+        0.39733431486497217,
+        1.7594061958674634,
+        3.1675754177804105
+      ],
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8615173175247866
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8743709381828051
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8756707385101888
+        }
+      },
+      "prediction_disagreement_fraction": 0.01816300565893835,
+      "model374_correct_only_pixels": 12103,
+      "model329_correct_only_pixels": 7848,
+      "image_oracle_best_model_miou_empty0": 0.8743709381828051,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8941295847621881
+    },
+    {
+      "image": "A164_step1_sample2",
+      "fold": 1,
+      "specimen_group": "A164",
+      "pixels": 1161702,
+      "model329_miou_empty0": 0.6618926171658177,
+      "model374_miou_empty0": 0.710856881057061,
+      "fixed_half_blend_miou_empty0": 0.6779610024614346,
+      "model374_delta_vs_model329_pp": 4.896426389124331,
+      "blend_delta_vs_model329_pp": 1.6068385295616938,
+      "model329_class_iou": [
+        0.9646668280369307,
+        0.9269947278100277,
+        0.5361679033146486,
+        0.21974100950166378
+      ],
+      "model374_class_iou": [
+        0.9636564928280319,
+        0.9272047388020398,
+        0.6610849608823078,
+        0.29148133171586466
+      ],
+      "blend_class_iou": [
+        0.9652167051732659,
+        0.9300338015939468,
+        0.5714911462431356,
+        0.2451023568353909
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.05498771363351418,
+        0.30390737839190995,
+        3.5323242928486986,
+        2.5361347333727107
+      ],
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6618926171658177
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.710856881057061
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6779610024614346
+        }
+      },
+      "prediction_disagreement_fraction": 0.03344489378515316,
+      "model374_correct_only_pixels": 26063,
+      "model329_correct_only_pixels": 10577,
+      "image_oracle_best_model_miou_empty0": 0.710856881057061,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.73297997108551
+    },
+    {
+      "image": "A164_step4_sample1",
+      "fold": 1,
+      "specimen_group": "A164",
+      "pixels": 1161702,
+      "model329_miou_empty0": 0.8621741929659598,
+      "model374_miou_empty0": 0.8737015721324514,
+      "fixed_half_blend_miou_empty0": 0.8749136444988292,
+      "model374_delta_vs_model329_pp": 1.1527379166491603,
+      "blend_delta_vs_model329_pp": 1.2739451532869484,
+      "model329_class_iou": [
+        0.9437352186145204,
+        0.9010378789160056,
+        0.9069044879171462,
+        0.697019186416167
+      ],
+      "model374_class_iou": [
+        0.9452209024916117,
+        0.9009008505705387,
+        0.9229168918188696,
+        0.7257676436487851
+      ],
+      "blend_class_iou": [
+        0.9471512460863523,
+        0.906221198156682,
+        0.9195130039319721,
+        0.7267691298203109
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.3416027471831895,
+        0.5183319240676387,
+        1.2608516014825932,
+        2.974994340414394
+      ],
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8621741929659598
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8737015721324514
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8749136444988292
+        }
+      },
+      "prediction_disagreement_fraction": 0.025627914904166472,
+      "model374_correct_only_pixels": 15693,
+      "model329_correct_only_pixels": 12910,
+      "image_oracle_best_model_miou_empty0": 0.8737015721324514,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8996059499255314
+    },
+    {
+      "image": "A16_step4_sample4",
+      "fold": 1,
+      "specimen_group": "A16",
+      "pixels": 324000,
+      "model329_miou_empty0": 0.8008908976111057,
+      "model374_miou_empty0": 0.7794718702182248,
+      "fixed_half_blend_miou_empty0": 0.7951615458463892,
+      "model374_delta_vs_model329_pp": -2.141902739288082,
+      "blend_delta_vs_model329_pp": -0.572935176471645,
+      "model329_class_iou": [
+        0.9438454906631352,
+        0.7153679142870628,
+        0.9081786770943248,
+        0.6361715083998997
+      ],
+      "model374_class_iou": [
+        0.9335109398027435,
+        0.6617411305499408,
+        0.9299268262433338,
+        0.5927085842768811
+      ],
+      "blend_class_iou": [
+        0.9395926836022841,
+        0.6999004409045655,
+        0.9178022615250797,
+        0.6233507973536273
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        -0.42528070608510715,
+        -1.546747338249732,
+        0.962358443075495,
+        -1.282071104627236
+      ],
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8008908976111057
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7794718702182248
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7951615458463892
+        }
+      },
+      "prediction_disagreement_fraction": 0.04053703703703704,
+      "model374_correct_only_pixels": 5077,
+      "model329_correct_only_pixels": 7102,
+      "image_oracle_best_model_miou_empty0": 0.8008908976111057,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8478434397085584
+    },
+    {
+      "image": "A200_step4_sample3",
+      "fold": 1,
+      "specimen_group": "A200",
+      "pixels": 1161702,
+      "model329_miou_empty0": 0.6906528149115679,
+      "model374_miou_empty0": 0.6848039897437597,
+      "fixed_half_blend_miou_empty0": 0.6962091600744014,
+      "model374_delta_vs_model329_pp": -0.5848825167808269,
+      "blend_delta_vs_model329_pp": 0.5556345162833431,
+      "model329_class_iou": [
+        0.9394824243635898,
+        0.8404907260355805,
+        0.6267586097570642,
+        0.35587949949003705
+      ],
+      "model374_class_iou": [
+        0.9452920734261285,
+        0.847346613680848,
+        0.6103791875913801,
+        0.33619808427668196
+      ],
+      "blend_class_iou": [
+        0.9458824834522797,
+        0.8527598186963624,
+        0.6266966527861662,
+        0.359497685362797
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.6400059088689902,
+        1.226909266078191,
+        -0.0061956970898058294,
+        0.36181858727599714
+      ],
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6906528149115679
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6848039897437597
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6962091600744014
+        }
+      },
+      "prediction_disagreement_fraction": 0.036213245737719314,
+      "model374_correct_only_pixels": 19144,
+      "model329_correct_only_pixels": 17820,
+      "image_oracle_best_model_miou_empty0": 0.6906528149115679,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.7210932194752677
+    },
+    {
+      "image": "A51_step4_sample4",
+      "fold": 1,
+      "specimen_group": "A51",
+      "pixels": 1161702,
+      "model329_miou_empty0": 0.8342323122917469,
+      "model374_miou_empty0": 0.8232212977433364,
+      "fixed_half_blend_miou_empty0": 0.8317453394544089,
+      "model374_delta_vs_model329_pp": -1.101101454841047,
+      "blend_delta_vs_model329_pp": -0.24869728373380084,
+      "model329_class_iou": [
+        0.9330686214620241,
+        0.7537988918755829,
+        0.9506875977154526,
+        0.6993741381139281
+      ],
+      "model374_class_iou": [
+        0.9316340997115155,
+        0.7321610246081545,
+        0.9318595392671821,
+        0.6972305273864933
+      ],
+      "blend_class_iou": [
+        0.9339307105138468,
+        0.7504981250063862,
+        0.9370686155095412,
+        0.7054839067878614
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.08620890518227231,
+        -0.33007668691966696,
+        -1.36189822059114,
+        0.6109768673933313
+      ],
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8342323122917469
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8232212977433364
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8317453394544089
+        }
+      },
+      "prediction_disagreement_fraction": 0.03116634042120957,
+      "model374_correct_only_pixels": 14540,
+      "model329_correct_only_pixels": 18893,
+      "image_oracle_best_model_miou_empty0": 0.8342323122917469,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8657752133769174
+    },
+    {
+      "image": "A57_step1_sample3",
+      "fold": 1,
+      "specimen_group": "A57",
+      "pixels": 324000,
+      "model329_miou_empty0": 0.5401427606026011,
+      "model374_miou_empty0": 0.5447530249370264,
+      "fixed_half_blend_miou_empty0": 0.5492659214000912,
+      "model374_delta_vs_model329_pp": 0.46102643344252403,
+      "blend_delta_vs_model329_pp": 0.9123160797490093,
+      "model329_class_iou": [
+        0.9266220010837972,
+        0.5250750822329218,
+        0.0,
+        0.7088739590936853
+      ],
+      "model374_class_iou": [
+        0.9316951645749079,
+        0.5198210513234746,
+        0.0,
+        0.7274958838497231
+      ],
+      "blend_class_iou": [
+        0.9318018635298752,
+        0.5347265056376601,
+        0.0,
+        0.7305353164328295
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.5179862446077932,
+        0.9651423404738346,
+        0.0,
+        2.1661357339144205
+      ],
+      "target_absent_class_count": 1,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [
+            2
+          ],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.5401427606026011
+        },
+        "Model374": {
+          "gt_absent_classes": [
+            2
+          ],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.5447530249370264
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [
+            2
+          ],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.5492659214000912
+        }
+      },
+      "prediction_disagreement_fraction": 0.04493518518518518,
+      "model374_correct_only_pixels": 7400,
+      "model329_correct_only_pixels": 5827,
+      "image_oracle_best_model_miou_empty0": 0.5447530249370264,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.5852643634875403
+    },
+    {
+      "image": "A64_step2_sample3",
+      "fold": 1,
+      "specimen_group": "A64",
+      "pixels": 324000,
+      "model329_miou_empty0": 0.7449903598903227,
+      "model374_miou_empty0": 0.7867668409928618,
+      "fixed_half_blend_miou_empty0": 0.7764220587204398,
+      "model374_delta_vs_model329_pp": 4.177648110253907,
+      "blend_delta_vs_model329_pp": 3.1431698830117094,
+      "model329_class_iou": [
+        0.9409729486989759,
+        0.7296064424646173,
+        0.952848307578454,
+        0.3565337408192438
+      ],
+      "model374_class_iou": [
+        0.9454695775739569,
+        0.7457678986243063,
+        0.945241652479066,
+        0.5105882352941177
+      ],
+      "blend_class_iou": [
+        0.9483782032158178,
+        0.7556483401777253,
+        0.950823405746321,
+        0.45083828574189494
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.740525451684193,
+        2.6041897713108053,
+        -0.2024901832132997,
+        9.430454492265111
+      ],
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7449903598903227
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7867668409928618
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7764220587204398
+        }
+      },
+      "prediction_disagreement_fraction": 0.04771604938271605,
+      "model374_correct_only_pixels": 8369,
+      "model329_correct_only_pixels": 6117,
+      "image_oracle_best_model_miou_empty0": 0.7867668409928618,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8322545800150212
+    },
+    {
+      "image": "A69_step4_sample4",
+      "fold": 1,
+      "specimen_group": "A69",
+      "pixels": 324000,
+      "model329_miou_empty0": 0.7600533323831904,
+      "model374_miou_empty0": 0.8024059286694857,
+      "fixed_half_blend_miou_empty0": 0.7830397805347786,
+      "model374_delta_vs_model329_pp": 4.235259628629528,
+      "blend_delta_vs_model329_pp": 2.2986448151588235,
+      "model329_class_iou": [
+        0.9357141557165217,
+        0.7835940773851097,
+        0.9439166898525378,
+        0.3769884065785926
+      ],
+      "model374_class_iou": [
+        0.9325987295568104,
+        0.8004586616488298,
+        0.9398395193485909,
+        0.5367268041237113
+      ],
+      "blend_class_iou": [
+        0.9376689181464392,
+        0.8024157138669012,
+        0.9426882957204616,
+        0.44938619440531297
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.19547624299174338,
+        1.8821636481791582,
+        -0.12283941320762048,
+        7.239778782672035
+      ],
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7600533323831904
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8024059286694857
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7830397805347786
+        }
+      },
+      "prediction_disagreement_fraction": 0.04083024691358025,
+      "model374_correct_only_pixels": 7028,
+      "model329_correct_only_pixels": 5539,
+      "image_oracle_best_model_miou_empty0": 0.8024059286694857,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.837324109611948
+    },
+    {
+      "image": "A7_step1_sample2",
+      "fold": 1,
+      "specimen_group": "A7",
+      "pixels": 1161702,
+      "model329_miou_empty0": 0.8168402895578206,
+      "model374_miou_empty0": 0.8185936728457198,
+      "fixed_half_blend_miou_empty0": 0.8208264843405395,
+      "model374_delta_vs_model329_pp": 0.17533832878992017,
+      "blend_delta_vs_model329_pp": 0.3986194782718888,
+      "model329_class_iou": [
+        0.9671566168158436,
+        0.7809474194765301,
+        0.8891033970670131,
+        0.6301537248718959
+      ],
+      "model374_class_iou": [
+        0.9691269415612414,
+        0.770661402498652,
+        0.898367053424259,
+        0.6362192938987268
+      ],
+      "blend_class_iou": [
+        0.969710544361566,
+        0.7848702132893574,
+        0.893080684596577,
+        0.635644495114658
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.25539275457223676,
+        0.392279381282723,
+        0.3977287529563833,
+        0.5490770242762122
+      ],
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8168402895578206
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8185936728457198
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8208264843405395
+        }
+      },
+      "prediction_disagreement_fraction": 0.027441633052194107,
+      "model374_correct_only_pixels": 15949,
+      "model329_correct_only_pixels": 13865,
+      "image_oracle_best_model_miou_empty0": 0.8185936728457198,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8604136126705552
+    },
+    {
+      "image": "A7_step4_sample3",
+      "fold": 1,
+      "specimen_group": "A7",
+      "pixels": 1161702,
+      "model329_miou_empty0": 0.6747994264207133,
+      "model374_miou_empty0": 0.6423969404382667,
+      "fixed_half_blend_miou_empty0": 0.6677106357010213,
+      "model374_delta_vs_model329_pp": -3.240248598244666,
+      "blend_delta_vs_model329_pp": -0.708879071969204,
+      "model329_class_iou": [
+        0.8646197950073959,
+        0.6197307778334326,
+        0.8364063919619475,
+        0.37844074088007723
+      ],
+      "model374_class_iou": [
+        0.8361341360485142,
+        0.5010014937533949,
+        0.8501131105749844,
+        0.3823390213761733
+      ],
+      "blend_class_iou": [
+        0.854521691047102,
+        0.5664444281142903,
+        0.8531768668676826,
+        0.39669955677501056
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        -1.009810396029398,
+        -5.328634971914226,
+        1.6770474905735022,
+        1.8258815894933333
+      ],
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6747994264207133
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6423969404382667
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.6677106357010213
+        }
+      },
+      "prediction_disagreement_fraction": 0.09763261146145913,
+      "model374_correct_only_pixels": 40128,
+      "model329_correct_only_pixels": 66161,
+      "image_oracle_best_model_miou_empty0": 0.6747994264207133,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.7354108404191749
+    },
+    {
+      "image": "A87_step2_sample2",
+      "fold": 1,
+      "specimen_group": "A87",
+      "pixels": 324000,
+      "model329_miou_empty0": 0.841893472964689,
+      "model374_miou_empty0": 0.8507742927512313,
+      "fixed_half_blend_miou_empty0": 0.8542502058565669,
+      "model374_delta_vs_model329_pp": 0.8880819786542316,
+      "blend_delta_vs_model329_pp": 1.2356732891877886,
+      "model329_class_iou": [
+        0.9343484403381697,
+        0.7845941900809579,
+        0.935912581216775,
+        0.7127186802228533
+      ],
+      "model374_class_iou": [
+        0.9361525704809287,
+        0.7751133280531167,
+        0.968043323018329,
+        0.7237879494525506
+      ],
+      "blend_class_iou": [
+        0.9368818428816097,
+        0.7852258810722548,
+        0.9654538990282058,
+        0.7294392004441976
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.2533402543440033,
+        0.0631690991296896,
+        2.9541317811430767,
+        1.6720520221344293
+      ],
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.841893472964689
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8507742927512313
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8542502058565669
+        }
+      },
+      "prediction_disagreement_fraction": 0.031953703703703706,
+      "model374_correct_only_pixels": 5046,
+      "model329_correct_only_pixels": 4508,
+      "image_oracle_best_model_miou_empty0": 0.8507742927512313,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8818169334705577
+    },
+    {
+      "image": "A8_step2_sample3",
+      "fold": 1,
+      "specimen_group": "A8",
+      "pixels": 324000,
+      "model329_miou_empty0": 0.775767491141526,
+      "model374_miou_empty0": 0.7858189236228816,
+      "fixed_half_blend_miou_empty0": 0.7921598503676872,
+      "model374_delta_vs_model329_pp": 1.0051432481355649,
+      "blend_delta_vs_model329_pp": 1.6392359226161224,
+      "model329_class_iou": [
+        0.91075126691675,
+        0.7601404326769632,
+        0.8037984092767413,
+        0.628379855695649
+      ],
+      "model374_class_iou": [
+        0.9055890998227872,
+        0.7375443733856375,
+        0.8291288261015809,
+        0.6710133951815213
+      ],
+      "blend_class_iou": [
+        0.9111018742039829,
+        0.75635203655207,
+        0.8299440080877206,
+        0.6712414826269754
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.03506072872329069,
+        -0.3788396124893234,
+        2.614559881097933,
+        4.286162693132633
+      ],
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.775767491141526
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7858189236228816
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7921598503676872
+        }
+      },
+      "prediction_disagreement_fraction": 0.05732716049382716,
+      "model374_correct_only_pixels": 8505,
+      "model329_correct_only_pixels": 8262,
+      "image_oracle_best_model_miou_empty0": 0.7858189236228816,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8410077075804072
+    },
+    {
+      "image": "A8_step3_sample3",
+      "fold": 1,
+      "specimen_group": "A8",
+      "pixels": 324000,
+      "model329_miou_empty0": 0.751387503526932,
+      "model374_miou_empty0": 0.7395772375895444,
+      "fixed_half_blend_miou_empty0": 0.7592797689135448,
+      "model374_delta_vs_model329_pp": -1.1810265937387543,
+      "blend_delta_vs_model329_pp": 0.7892265386612807,
+      "model329_class_iou": [
+        0.8909777261349381,
+        0.7146559439998932,
+        0.8173744594354938,
+        0.5825418845374026
+      ],
+      "model374_class_iou": [
+        0.8844309168050175,
+        0.6882756453893282,
+        0.8093883357041252,
+        0.5762140524597071
+      ],
+      "blend_class_iou": [
+        0.8913736542993116,
+        0.7113358169238957,
+        0.8300333673441249,
+        0.6043762370868468
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        0.039592816437350464,
+        -0.3320127075997492,
+        1.2658907908631112,
+        2.1834352549444214
+      ],
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.751387503526932
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7395772375895444
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7592797689135448
+        }
+      },
+      "prediction_disagreement_fraction": 0.0666141975308642,
+      "model374_correct_only_pixels": 8520,
+      "model329_correct_only_pixels": 10837,
+      "image_oracle_best_model_miou_empty0": 0.751387503526932,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8099868747600858
+    },
+    {
+      "image": "A94_step4_sample2",
+      "fold": 1,
+      "specimen_group": "A94",
+      "pixels": 324000,
+      "model329_miou_empty0": 0.8025081236473028,
+      "model374_miou_empty0": 0.7319230544586252,
+      "fixed_half_blend_miou_empty0": 0.7840601050354628,
+      "model374_delta_vs_model329_pp": -7.058506918867769,
+      "blend_delta_vs_model329_pp": -1.844801861184009,
+      "model329_class_iou": [
+        0.9411604145247432,
+        0.8259792242447346,
+        0.7871557067623619,
+        0.6557371490573715
+      ],
+      "model374_class_iou": [
+        0.9358018754508295,
+        0.8040787176638629,
+        0.6227804244261586,
+        0.5650312002936498
+      ],
+      "blend_class_iou": [
+        0.9393893989338999,
+        0.8197356733331539,
+        0.7425510545698025,
+        0.6345642933049946
+      ],
+      "class_delta_blend_vs_model329_pp": [
+        -0.177101559084325,
+        -0.6243550911580686,
+        -4.460465219255938,
+        -2.117285575237682
+      ],
+      "target_absent_class_count": 0,
+      "absent_target_predicted_by_model329": 0,
+      "absent_target_predicted_by_model374": 0,
+      "absent_target_predicted_by_blend": 0,
+      "absent_class_audit": {
+        "Model329": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.8025081236473028
+        },
+        "Model374": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7319230544586252
+        },
+        "fixed_half_blend": {
+          "gt_absent_classes": [],
+          "gt_absent_class_fp_pixels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "gt_absent_class_fp_image_class_pairs": 0,
+          "gt_absent_class_fp_pixel_count": 0,
+          "gt_absent_class_fp_fraction_of_image": 0.0,
+          "gt_oracle_miou_after_relabeling_absent_class_fp_empty0": 0.7840601050354628
+        }
+      },
+      "prediction_disagreement_fraction": 0.04304320987654321,
+      "model374_correct_only_pixels": 3919,
+      "model329_correct_only_pixels": 9213,
+      "image_oracle_best_model_miou_empty0": 0.8025081236473028,
+      "pixel_oracle_miou_empty0_diagnostic_only": 0.8365153705828586
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+[2026-09-24 14:35:37 KST] [START] GPUs=0,1,2,5,6,7 | 유효 배치=8 | 로그=/Data3/sppark/komap/experiments/single_unet_v2/outputs/logs/suite_20260924T053536_GpL2HW.log | 전체 순서=S0 → S1 → S2
+[2026-09-24 14:35:37 KST] [ESTIMATE_BASIS] 기존 학습의 최근 20개 구간 중앙값 × GPU별 micro-batch round 비율 × 입력 면적 비율
+[2026-09-24 14:35:37 KST] [ESTIMATE_BASIS] 통신/검증 시간 미측정 초기 근사. 준비 00:00:30, 검증/보고서 00:03:00씩 가정. 새 로그 4개부터 학습 속도 실측 보정.
+[2026-09-24 14:35:37 KST] [INITIAL_ESTIMATE] 전체 학습 update=0/22000 (0.0%) | 이번 실행 경과=00:00:00 | 남은 학습=06:37:20 | 검증 포함 남은 시간≈06:47:50 | 이번 실행 총 예상 소요≈06:47:50
+[2026-09-24 14:35:37 KST] [FINISH_ETA] 예상 전체 완료≈2026-09-24 21:23:26 KST (2026-09-24 12:23:26 UTC) | 실측 진행에 따라 갱신
+[2026-09-24 14:35:37 KST] [MODEL_ETA] S0 x1 대기 update=2000/8000 | 학습 남음≈00:21:40 | 0.217초/update (초기 근사)
+[2026-09-24 14:35:37 KST] [MODEL_ETA] S1 x2 대기 update=0/8000 | 학습 남음≈01:55:35 | 0.867초/update (초기 근사)
+[2026-09-24 14:35:37 KST] [MODEL_ETA] S2 x3 대기 update=0/8000 | 학습 남음≈04:20:04 | 1.951초/update (초기 근사)
+[2026-09-24 14:35:37 KST] [PROCESS] suite_pid=3313029 | launcher_pid=3313015
+[2026-09-24 14:35:39 KST] [OUTPUT] Run: /Data3/sppark/komap/experiments/single_unet_v2/outputs/runs/S0_x1_seed2026_migrate1to6_20260924T052545_946201Z
+[2026-09-24 14:35:39 KST] [STAGE] S0 x1 | 시작 update=2000/8000 | run=/Data3/sppark/komap/experiments/single_unet_v2/outputs/runs/S0_x1_seed2026_migrate1to6_20260924T052545_946201Z
+[2026-09-24 14:35:40 KST] [OUTPUT] usage: run.py [-h] [--nnodes NNODES] [--nproc-per-node NPROC_PER_NODE]
+[2026-09-24 14:35:40 KST] [OUTPUT]               [--rdzv-backend RDZV_BACKEND] [--rdzv-endpoint RDZV_ENDPOINT]
+[2026-09-24 14:35:40 KST] [OUTPUT]               [--rdzv-id RDZV_ID] [--rdzv-conf RDZV_CONF] [--standalone]
+[2026-09-24 14:35:40 KST] [OUTPUT]               [--max-restarts MAX_RESTARTS]
+[2026-09-24 14:35:40 KST] [OUTPUT]               [--monitor-interval MONITOR_INTERVAL]
+[2026-09-24 14:35:40 KST] [OUTPUT]               [--start-method {spawn,fork,forkserver}] [--role ROLE] [-m]
+[2026-09-24 14:35:40 KST] [OUTPUT]               [--no-python] [--run-path] [--log-dir LOG_DIR] [-r REDIRECTS]
+[2026-09-24 14:35:40 KST] [OUTPUT]               [-t TEE] [--local-ranks-filter LOCAL_RANKS_FILTER]
+[2026-09-24 14:35:40 KST] [OUTPUT]               [--node-rank NODE_RANK] [--master-addr MASTER_ADDR]
+[2026-09-24 14:35:40 KST] [OUTPUT]               [--master-port MASTER_PORT] [--local-addr LOCAL_ADDR]
+[2026-09-24 14:35:40 KST] [OUTPUT]               [--logs-specs LOGS_SPECS]
+[2026-09-24 14:35:40 KST] [OUTPUT]               training_script ...
+[2026-09-24 14:35:40 KST] [OUTPUT] run.py: error: ambiguous option: --run could match --run-path, --run_path
+[2026-09-24 14:35:40 KST] [OUTPUT] Traceback (most recent call last):
+[2026-09-24 14:35:40 KST] [OUTPUT]   File "/Data3/sppark/komap/experiments/single_unet_v2/run.py", line 283, in <module>
+[2026-09-24 14:35:40 KST] [OUTPUT]     main()
+[2026-09-24 14:35:40 KST] [OUTPUT]   File "/Data3/sppark/komap/experiments/single_unet_v2/run.py", line 267, in main
+[2026-09-24 14:35:40 KST] [OUTPUT]     _, folder = launch(options)
+[2026-09-24 14:35:40 KST] [OUTPUT]                 ^^^^^^^^^^^^^^^
+[2026-09-24 14:35:40 KST] [OUTPUT]   File "/Data3/sppark/komap/experiments/single_unet_v2/run.py", line 155, in launch
+[2026-09-24 14:35:40 KST] [OUTPUT]     subprocess.run(command, check=True, env={**os.environ, "PYTHONUNBUFFERED": "1", "PYTHONDONTWRITEBYTECODE": "1"})
+[2026-09-24 14:35:40 KST] [OUTPUT]   File "/home/sppark/miniconda3/envs/komap/lib/python3.11/subprocess.py", line 571, in run
+[2026-09-24 14:35:40 KST] [OUTPUT]     raise CalledProcessError(retcode, process.args,
+[2026-09-24 14:35:40 KST] [OUTPUT] subprocess.CalledProcessError: Command '['/home/sppark/miniconda3/envs/komap/bin/python', '-m', 'torch.distributed.run', '--standalone', '--nproc_per_node=6', '/Data3/sppark/komap/experiments/single_unet_v2/run.py', '_worker', '--run', '/Data3/sppark/komap/experiments/single_unet_v2/outputs/runs/S0_x1_seed2026_migrate1to6_20260924T052545_946201Z', '--resume']' returned non-zero exit status 2.
+[2026-09-24 14:35:41 KST] [FAILED] 종료 코드=1; 실제 경과=00:00:05. 위 오류와 마지막 checkpoint를 확인하세요.

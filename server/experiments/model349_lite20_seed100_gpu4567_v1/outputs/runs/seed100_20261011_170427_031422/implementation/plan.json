@@ -1,0 +1,1826 @@
+{
+  "model": "Model349_lite20_b4ws",
+  "training_count": 100,
+  "gpus": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "seeds": [
+    3407,
+    3408,
+    3409,
+    3410,
+    3411,
+    3412,
+    3413,
+    3414,
+    3415,
+    3416,
+    3417,
+    3418,
+    3419,
+    3420,
+    3421,
+    3422,
+    3423,
+    3424,
+    3425,
+    3426,
+    3427,
+    3428,
+    3429,
+    3430,
+    3431,
+    3432,
+    3433,
+    3434,
+    3435,
+    3436,
+    3437,
+    3438,
+    3439,
+    3440,
+    3441,
+    3442,
+    3443,
+    3444,
+    3445,
+    3446,
+    3447,
+    3448,
+    3449,
+    3450,
+    3451,
+    3452,
+    3453,
+    3454,
+    3455,
+    3456,
+    3457,
+    3458,
+    3459,
+    3460,
+    3461,
+    3462,
+    3463,
+    3464,
+    3465,
+    3466,
+    3467,
+    3468,
+    3469,
+    3470,
+    3471,
+    3472,
+    3473,
+    3474,
+    3475,
+    3476,
+    3477,
+    3478,
+    3479,
+    3480,
+    3481,
+    3482,
+    3483,
+    3484,
+    3485,
+    3486,
+    3487,
+    3488,
+    3489,
+    3490,
+    3491,
+    3492,
+    3493,
+    3494,
+    3495,
+    3496,
+    3497,
+    3498,
+    3499,
+    3500,
+    3501,
+    3502,
+    3503,
+    3504,
+    3505,
+    3506
+  ],
+  "baseline": "/Data3/sppark/komap/experiments/model349_lite20_b4ws_retrain_gpu234567_v1/outputs/lite20_b4ws_train_20261011_130221_265591",
+  "baseline_image_miou": 0.8025584552762022,
+  "group_counts": {
+    "336": 12,
+    "347": 12,
+    "269": 8,
+    "restart51": 12,
+    "restart61": 4,
+    "326": 8,
+    "322": 4,
+    "E_b4": 24,
+    "E_hr": 8,
+    "F": 8
+  },
+  "deployed_checkpoints": 20,
+  "coordinate_rounds": 2,
+  "top_per_group": 2,
+  "tasks": [
+    {
+      "id": "baseline",
+      "kind": "cpu",
+      "group": "baseline",
+      "deps": [],
+      "expected_seconds": 120,
+      "priority": 0
+    },
+    {
+      "id": "336_00",
+      "kind": "train",
+      "group": "336",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 2600,
+      "priority": 0,
+      "seed": 3407,
+      "recipe": "train_model336"
+    },
+    {
+      "id": "336_01",
+      "kind": "train",
+      "group": "336",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 2600,
+      "priority": 0,
+      "seed": 3408,
+      "recipe": "train_model336"
+    },
+    {
+      "id": "336_02",
+      "kind": "train",
+      "group": "336",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 2600,
+      "priority": 0,
+      "seed": 3409,
+      "recipe": "train_model336"
+    },
+    {
+      "id": "336_03",
+      "kind": "train",
+      "group": "336",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 2600,
+      "priority": 0,
+      "seed": 3410,
+      "recipe": "train_model336"
+    },
+    {
+      "id": "336_04",
+      "kind": "train",
+      "group": "336",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 2600,
+      "priority": 0,
+      "seed": 3411,
+      "recipe": "train_model336"
+    },
+    {
+      "id": "336_05",
+      "kind": "train",
+      "group": "336",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 2600,
+      "priority": 0,
+      "seed": 3412,
+      "recipe": "train_model336"
+    },
+    {
+      "id": "336_06",
+      "kind": "train",
+      "group": "336",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 2600,
+      "priority": 0,
+      "seed": 3413,
+      "recipe": "train_model336"
+    },
+    {
+      "id": "336_07",
+      "kind": "train",
+      "group": "336",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 2600,
+      "priority": 0,
+      "seed": 3414,
+      "recipe": "train_model336"
+    },
+    {
+      "id": "336_08",
+      "kind": "train",
+      "group": "336",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 2600,
+      "priority": 0,
+      "seed": 3415,
+      "recipe": "train_model336"
+    },
+    {
+      "id": "336_09",
+      "kind": "train",
+      "group": "336",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 2600,
+      "priority": 0,
+      "seed": 3416,
+      "recipe": "train_model336"
+    },
+    {
+      "id": "336_10",
+      "kind": "train",
+      "group": "336",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 2600,
+      "priority": 0,
+      "seed": 3417,
+      "recipe": "train_model336"
+    },
+    {
+      "id": "336_11",
+      "kind": "train",
+      "group": "336",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 2600,
+      "priority": 0,
+      "seed": 3418,
+      "recipe": "train_model336"
+    },
+    {
+      "id": "parents",
+      "kind": "cpu",
+      "group": "parents",
+      "deps": [
+        "336_00",
+        "336_01",
+        "336_02",
+        "336_03",
+        "336_04",
+        "336_05",
+        "336_06",
+        "336_07",
+        "336_08",
+        "336_09",
+        "336_10",
+        "336_11"
+      ],
+      "expected_seconds": 1,
+      "priority": 0
+    },
+    {
+      "id": "347_00",
+      "kind": "train",
+      "group": "347",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 500,
+      "priority": 1,
+      "seed": 3419,
+      "recipe": "train_model347",
+      "parent_rank": null
+    },
+    {
+      "id": "347_01",
+      "kind": "train",
+      "group": "347",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 500,
+      "priority": 1,
+      "seed": 3420,
+      "recipe": "train_model347",
+      "parent_rank": null
+    },
+    {
+      "id": "347_02",
+      "kind": "train",
+      "group": "347",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 500,
+      "priority": 1,
+      "seed": 3421,
+      "recipe": "train_model347",
+      "parent_rank": null
+    },
+    {
+      "id": "347_03",
+      "kind": "train",
+      "group": "347",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 500,
+      "priority": 1,
+      "seed": 3422,
+      "recipe": "train_model347",
+      "parent_rank": null
+    },
+    {
+      "id": "347_04",
+      "kind": "train",
+      "group": "347",
+      "deps": [
+        "parents"
+      ],
+      "expected_seconds": 500,
+      "priority": 1,
+      "seed": 3423,
+      "recipe": "train_model347",
+      "parent_rank": 0
+    },
+    {
+      "id": "347_05",
+      "kind": "train",
+      "group": "347",
+      "deps": [
+        "parents"
+      ],
+      "expected_seconds": 500,
+      "priority": 1,
+      "seed": 3424,
+      "recipe": "train_model347",
+      "parent_rank": 0
+    },
+    {
+      "id": "347_06",
+      "kind": "train",
+      "group": "347",
+      "deps": [
+        "parents"
+      ],
+      "expected_seconds": 500,
+      "priority": 1,
+      "seed": 3425,
+      "recipe": "train_model347",
+      "parent_rank": 0
+    },
+    {
+      "id": "347_07",
+      "kind": "train",
+      "group": "347",
+      "deps": [
+        "parents"
+      ],
+      "expected_seconds": 500,
+      "priority": 1,
+      "seed": 3426,
+      "recipe": "train_model347",
+      "parent_rank": 0
+    },
+    {
+      "id": "347_08",
+      "kind": "train",
+      "group": "347",
+      "deps": [
+        "parents"
+      ],
+      "expected_seconds": 500,
+      "priority": 1,
+      "seed": 3427,
+      "recipe": "train_model347",
+      "parent_rank": 1
+    },
+    {
+      "id": "347_09",
+      "kind": "train",
+      "group": "347",
+      "deps": [
+        "parents"
+      ],
+      "expected_seconds": 500,
+      "priority": 1,
+      "seed": 3428,
+      "recipe": "train_model347",
+      "parent_rank": 1
+    },
+    {
+      "id": "347_10",
+      "kind": "train",
+      "group": "347",
+      "deps": [
+        "parents"
+      ],
+      "expected_seconds": 500,
+      "priority": 1,
+      "seed": 3429,
+      "recipe": "train_model347",
+      "parent_rank": 1
+    },
+    {
+      "id": "347_11",
+      "kind": "train",
+      "group": "347",
+      "deps": [
+        "parents"
+      ],
+      "expected_seconds": 500,
+      "priority": 1,
+      "seed": 3430,
+      "recipe": "train_model347",
+      "parent_rank": 1
+    },
+    {
+      "id": "269_00",
+      "kind": "train",
+      "group": "269",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 430,
+      "priority": 1,
+      "seed": 3431,
+      "recipe": "train_model269"
+    },
+    {
+      "id": "269_01",
+      "kind": "train",
+      "group": "269",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 430,
+      "priority": 1,
+      "seed": 3432,
+      "recipe": "train_model269"
+    },
+    {
+      "id": "269_02",
+      "kind": "train",
+      "group": "269",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 430,
+      "priority": 1,
+      "seed": 3433,
+      "recipe": "train_model269"
+    },
+    {
+      "id": "269_03",
+      "kind": "train",
+      "group": "269",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 430,
+      "priority": 1,
+      "seed": 3434,
+      "recipe": "train_model269"
+    },
+    {
+      "id": "269_04",
+      "kind": "train",
+      "group": "269",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 430,
+      "priority": 1,
+      "seed": 3435,
+      "recipe": "train_model269"
+    },
+    {
+      "id": "269_05",
+      "kind": "train",
+      "group": "269",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 430,
+      "priority": 1,
+      "seed": 3436,
+      "recipe": "train_model269"
+    },
+    {
+      "id": "269_06",
+      "kind": "train",
+      "group": "269",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 430,
+      "priority": 1,
+      "seed": 3437,
+      "recipe": "train_model269"
+    },
+    {
+      "id": "269_07",
+      "kind": "train",
+      "group": "269",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 430,
+      "priority": 1,
+      "seed": 3438,
+      "recipe": "train_model269"
+    },
+    {
+      "id": "restart51_00",
+      "kind": "train",
+      "group": "restart51",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 400,
+      "priority": 1,
+      "seed": 3439,
+      "recipe": "train_restart51"
+    },
+    {
+      "id": "restart51_01",
+      "kind": "train",
+      "group": "restart51",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 400,
+      "priority": 1,
+      "seed": 3440,
+      "recipe": "train_restart51"
+    },
+    {
+      "id": "restart51_02",
+      "kind": "train",
+      "group": "restart51",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 400,
+      "priority": 1,
+      "seed": 3441,
+      "recipe": "train_restart51"
+    },
+    {
+      "id": "restart51_03",
+      "kind": "train",
+      "group": "restart51",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 400,
+      "priority": 1,
+      "seed": 3442,
+      "recipe": "train_restart51"
+    },
+    {
+      "id": "restart51_04",
+      "kind": "train",
+      "group": "restart51",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 400,
+      "priority": 1,
+      "seed": 3443,
+      "recipe": "train_restart51"
+    },
+    {
+      "id": "restart51_05",
+      "kind": "train",
+      "group": "restart51",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 400,
+      "priority": 1,
+      "seed": 3444,
+      "recipe": "train_restart51"
+    },
+    {
+      "id": "restart51_06",
+      "kind": "train",
+      "group": "restart51",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 400,
+      "priority": 1,
+      "seed": 3445,
+      "recipe": "train_restart51"
+    },
+    {
+      "id": "restart51_07",
+      "kind": "train",
+      "group": "restart51",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 400,
+      "priority": 1,
+      "seed": 3446,
+      "recipe": "train_restart51"
+    },
+    {
+      "id": "restart51_08",
+      "kind": "train",
+      "group": "restart51",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 400,
+      "priority": 1,
+      "seed": 3447,
+      "recipe": "train_restart51"
+    },
+    {
+      "id": "restart51_09",
+      "kind": "train",
+      "group": "restart51",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 400,
+      "priority": 1,
+      "seed": 3448,
+      "recipe": "train_restart51"
+    },
+    {
+      "id": "restart51_10",
+      "kind": "train",
+      "group": "restart51",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 400,
+      "priority": 1,
+      "seed": 3449,
+      "recipe": "train_restart51"
+    },
+    {
+      "id": "restart51_11",
+      "kind": "train",
+      "group": "restart51",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 400,
+      "priority": 1,
+      "seed": 3450,
+      "recipe": "train_restart51"
+    },
+    {
+      "id": "restart61_00",
+      "kind": "train",
+      "group": "restart61",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 360,
+      "priority": 1,
+      "seed": 3451,
+      "recipe": "train_restart61"
+    },
+    {
+      "id": "restart61_01",
+      "kind": "train",
+      "group": "restart61",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 360,
+      "priority": 1,
+      "seed": 3452,
+      "recipe": "train_restart61"
+    },
+    {
+      "id": "restart61_02",
+      "kind": "train",
+      "group": "restart61",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 360,
+      "priority": 1,
+      "seed": 3453,
+      "recipe": "train_restart61"
+    },
+    {
+      "id": "restart61_03",
+      "kind": "train",
+      "group": "restart61",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 360,
+      "priority": 1,
+      "seed": 3454,
+      "recipe": "train_restart61"
+    },
+    {
+      "id": "326_00",
+      "kind": "train",
+      "group": "326",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 3100,
+      "priority": 1,
+      "seed": 3455,
+      "recipe": "train_model326_fold1",
+      "fold": 1,
+      "set": 0
+    },
+    {
+      "id": "326_01",
+      "kind": "train",
+      "group": "326",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 3100,
+      "priority": 1,
+      "seed": 3456,
+      "recipe": "train_model326_fold2",
+      "fold": 2,
+      "set": 0
+    },
+    {
+      "id": "326_set0",
+      "kind": "group",
+      "group": "326",
+      "deps": [
+        "326_00",
+        "326_01"
+      ],
+      "expected_seconds": 100,
+      "priority": 1,
+      "set": 0
+    },
+    {
+      "id": "326_02",
+      "kind": "train",
+      "group": "326",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 3100,
+      "priority": 1,
+      "seed": 3457,
+      "recipe": "train_model326_fold1",
+      "fold": 1,
+      "set": 1
+    },
+    {
+      "id": "326_03",
+      "kind": "train",
+      "group": "326",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 3100,
+      "priority": 1,
+      "seed": 3458,
+      "recipe": "train_model326_fold2",
+      "fold": 2,
+      "set": 1
+    },
+    {
+      "id": "326_set1",
+      "kind": "group",
+      "group": "326",
+      "deps": [
+        "326_02",
+        "326_03"
+      ],
+      "expected_seconds": 100,
+      "priority": 1,
+      "set": 1
+    },
+    {
+      "id": "326_04",
+      "kind": "train",
+      "group": "326",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 3100,
+      "priority": 1,
+      "seed": 3459,
+      "recipe": "train_model326_fold1",
+      "fold": 1,
+      "set": 2
+    },
+    {
+      "id": "326_05",
+      "kind": "train",
+      "group": "326",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 3100,
+      "priority": 1,
+      "seed": 3460,
+      "recipe": "train_model326_fold2",
+      "fold": 2,
+      "set": 2
+    },
+    {
+      "id": "326_set2",
+      "kind": "group",
+      "group": "326",
+      "deps": [
+        "326_04",
+        "326_05"
+      ],
+      "expected_seconds": 100,
+      "priority": 1,
+      "set": 2
+    },
+    {
+      "id": "326_06",
+      "kind": "train",
+      "group": "326",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 3100,
+      "priority": 1,
+      "seed": 3461,
+      "recipe": "train_model326_fold1",
+      "fold": 1,
+      "set": 3
+    },
+    {
+      "id": "326_07",
+      "kind": "train",
+      "group": "326",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 3100,
+      "priority": 1,
+      "seed": 3462,
+      "recipe": "train_model326_fold2",
+      "fold": 2,
+      "set": 3
+    },
+    {
+      "id": "326_set3",
+      "kind": "group",
+      "group": "326",
+      "deps": [
+        "326_06",
+        "326_07"
+      ],
+      "expected_seconds": 100,
+      "priority": 1,
+      "set": 3
+    },
+    {
+      "id": "322_00",
+      "kind": "train",
+      "group": "322",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 3100,
+      "priority": 1,
+      "seed": 3463,
+      "recipe": "train_model322_fold3",
+      "fold": 3,
+      "set": 0
+    },
+    {
+      "id": "322_set0",
+      "kind": "group",
+      "group": "322",
+      "deps": [
+        "322_00"
+      ],
+      "expected_seconds": 100,
+      "priority": 1,
+      "set": 0
+    },
+    {
+      "id": "322_01",
+      "kind": "train",
+      "group": "322",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 3100,
+      "priority": 1,
+      "seed": 3464,
+      "recipe": "train_model322_fold3",
+      "fold": 3,
+      "set": 1
+    },
+    {
+      "id": "322_set1",
+      "kind": "group",
+      "group": "322",
+      "deps": [
+        "322_01"
+      ],
+      "expected_seconds": 100,
+      "priority": 1,
+      "set": 1
+    },
+    {
+      "id": "322_02",
+      "kind": "train",
+      "group": "322",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 3100,
+      "priority": 1,
+      "seed": 3465,
+      "recipe": "train_model322_fold3",
+      "fold": 3,
+      "set": 2
+    },
+    {
+      "id": "322_set2",
+      "kind": "group",
+      "group": "322",
+      "deps": [
+        "322_02"
+      ],
+      "expected_seconds": 100,
+      "priority": 1,
+      "set": 2
+    },
+    {
+      "id": "322_03",
+      "kind": "train",
+      "group": "322",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 3100,
+      "priority": 1,
+      "seed": 3466,
+      "recipe": "train_model322_fold3",
+      "fold": 3,
+      "set": 3
+    },
+    {
+      "id": "322_set3",
+      "kind": "group",
+      "group": "322",
+      "deps": [
+        "322_03"
+      ],
+      "expected_seconds": 100,
+      "priority": 1,
+      "set": 3
+    },
+    {
+      "id": "E_b4_00",
+      "kind": "train",
+      "group": "E_b4",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 450,
+      "priority": 1,
+      "seed": 3467,
+      "recipe": "train_b4ws_fold1",
+      "fold": 1,
+      "set": 0
+    },
+    {
+      "id": "E_b4_01",
+      "kind": "train",
+      "group": "E_b4",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 450,
+      "priority": 1,
+      "seed": 3468,
+      "recipe": "train_b4ws_fold2",
+      "fold": 2,
+      "set": 0
+    },
+    {
+      "id": "E_b4_02",
+      "kind": "train",
+      "group": "E_b4",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 450,
+      "priority": 1,
+      "seed": 3469,
+      "recipe": "train_b4ws_fold3",
+      "fold": 3,
+      "set": 0
+    },
+    {
+      "id": "E_b4_03",
+      "kind": "train",
+      "group": "E_b4",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 450,
+      "priority": 1,
+      "seed": 3470,
+      "recipe": "train_b4ws_fold4",
+      "fold": 4,
+      "set": 0
+    },
+    {
+      "id": "E_b4_set0",
+      "kind": "group",
+      "group": "E_b4",
+      "deps": [
+        "E_b4_00",
+        "E_b4_01",
+        "E_b4_02",
+        "E_b4_03"
+      ],
+      "expected_seconds": 180,
+      "priority": 1,
+      "set": 0
+    },
+    {
+      "id": "E_b4_04",
+      "kind": "train",
+      "group": "E_b4",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 450,
+      "priority": 1,
+      "seed": 3471,
+      "recipe": "train_b4ws_fold1",
+      "fold": 1,
+      "set": 1
+    },
+    {
+      "id": "E_b4_05",
+      "kind": "train",
+      "group": "E_b4",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 450,
+      "priority": 1,
+      "seed": 3472,
+      "recipe": "train_b4ws_fold2",
+      "fold": 2,
+      "set": 1
+    },
+    {
+      "id": "E_b4_06",
+      "kind": "train",
+      "group": "E_b4",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 450,
+      "priority": 1,
+      "seed": 3473,
+      "recipe": "train_b4ws_fold3",
+      "fold": 3,
+      "set": 1
+    },
+    {
+      "id": "E_b4_07",
+      "kind": "train",
+      "group": "E_b4",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 450,
+      "priority": 1,
+      "seed": 3474,
+      "recipe": "train_b4ws_fold4",
+      "fold": 4,
+      "set": 1
+    },
+    {
+      "id": "E_b4_set1",
+      "kind": "group",
+      "group": "E_b4",
+      "deps": [
+        "E_b4_04",
+        "E_b4_05",
+        "E_b4_06",
+        "E_b4_07"
+      ],
+      "expected_seconds": 180,
+      "priority": 1,
+      "set": 1
+    },
+    {
+      "id": "E_b4_08",
+      "kind": "train",
+      "group": "E_b4",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 450,
+      "priority": 1,
+      "seed": 3475,
+      "recipe": "train_b4ws_fold1",
+      "fold": 1,
+      "set": 2
+    },
+    {
+      "id": "E_b4_09",
+      "kind": "train",
+      "group": "E_b4",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 450,
+      "priority": 1,
+      "seed": 3476,
+      "recipe": "train_b4ws_fold2",
+      "fold": 2,
+      "set": 2
+    },
+    {
+      "id": "E_b4_10",
+      "kind": "train",
+      "group": "E_b4",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 450,
+      "priority": 1,
+      "seed": 3477,
+      "recipe": "train_b4ws_fold3",
+      "fold": 3,
+      "set": 2
+    },
+    {
+      "id": "E_b4_11",
+      "kind": "train",
+      "group": "E_b4",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 450,
+      "priority": 1,
+      "seed": 3478,
+      "recipe": "train_b4ws_fold4",
+      "fold": 4,
+      "set": 2
+    },
+    {
+      "id": "E_b4_set2",
+      "kind": "group",
+      "group": "E_b4",
+      "deps": [
+        "E_b4_08",
+        "E_b4_09",
+        "E_b4_10",
+        "E_b4_11"
+      ],
+      "expected_seconds": 180,
+      "priority": 1,
+      "set": 2
+    },
+    {
+      "id": "E_b4_12",
+      "kind": "train",
+      "group": "E_b4",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 450,
+      "priority": 1,
+      "seed": 3479,
+      "recipe": "train_b4ws_fold1",
+      "fold": 1,
+      "set": 3
+    },
+    {
+      "id": "E_b4_13",
+      "kind": "train",
+      "group": "E_b4",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 450,
+      "priority": 1,
+      "seed": 3480,
+      "recipe": "train_b4ws_fold2",
+      "fold": 2,
+      "set": 3
+    },
+    {
+      "id": "E_b4_14",
+      "kind": "train",
+      "group": "E_b4",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 450,
+      "priority": 1,
+      "seed": 3481,
+      "recipe": "train_b4ws_fold3",
+      "fold": 3,
+      "set": 3
+    },
+    {
+      "id": "E_b4_15",
+      "kind": "train",
+      "group": "E_b4",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 450,
+      "priority": 1,
+      "seed": 3482,
+      "recipe": "train_b4ws_fold4",
+      "fold": 4,
+      "set": 3
+    },
+    {
+      "id": "E_b4_set3",
+      "kind": "group",
+      "group": "E_b4",
+      "deps": [
+        "E_b4_12",
+        "E_b4_13",
+        "E_b4_14",
+        "E_b4_15"
+      ],
+      "expected_seconds": 180,
+      "priority": 1,
+      "set": 3
+    },
+    {
+      "id": "E_b4_16",
+      "kind": "train",
+      "group": "E_b4",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 450,
+      "priority": 1,
+      "seed": 3483,
+      "recipe": "train_b4ws_fold1",
+      "fold": 1,
+      "set": 4
+    },
+    {
+      "id": "E_b4_17",
+      "kind": "train",
+      "group": "E_b4",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 450,
+      "priority": 1,
+      "seed": 3484,
+      "recipe": "train_b4ws_fold2",
+      "fold": 2,
+      "set": 4
+    },
+    {
+      "id": "E_b4_18",
+      "kind": "train",
+      "group": "E_b4",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 450,
+      "priority": 1,
+      "seed": 3485,
+      "recipe": "train_b4ws_fold3",
+      "fold": 3,
+      "set": 4
+    },
+    {
+      "id": "E_b4_19",
+      "kind": "train",
+      "group": "E_b4",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 450,
+      "priority": 1,
+      "seed": 3486,
+      "recipe": "train_b4ws_fold4",
+      "fold": 4,
+      "set": 4
+    },
+    {
+      "id": "E_b4_set4",
+      "kind": "group",
+      "group": "E_b4",
+      "deps": [
+        "E_b4_16",
+        "E_b4_17",
+        "E_b4_18",
+        "E_b4_19"
+      ],
+      "expected_seconds": 180,
+      "priority": 1,
+      "set": 4
+    },
+    {
+      "id": "E_b4_20",
+      "kind": "train",
+      "group": "E_b4",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 450,
+      "priority": 1,
+      "seed": 3487,
+      "recipe": "train_b4ws_fold1",
+      "fold": 1,
+      "set": 5
+    },
+    {
+      "id": "E_b4_21",
+      "kind": "train",
+      "group": "E_b4",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 450,
+      "priority": 1,
+      "seed": 3488,
+      "recipe": "train_b4ws_fold2",
+      "fold": 2,
+      "set": 5
+    },
+    {
+      "id": "E_b4_22",
+      "kind": "train",
+      "group": "E_b4",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 450,
+      "priority": 1,
+      "seed": 3489,
+      "recipe": "train_b4ws_fold3",
+      "fold": 3,
+      "set": 5
+    },
+    {
+      "id": "E_b4_23",
+      "kind": "train",
+      "group": "E_b4",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 450,
+      "priority": 1,
+      "seed": 3490,
+      "recipe": "train_b4ws_fold4",
+      "fold": 4,
+      "set": 5
+    },
+    {
+      "id": "E_b4_set5",
+      "kind": "group",
+      "group": "E_b4",
+      "deps": [
+        "E_b4_20",
+        "E_b4_21",
+        "E_b4_22",
+        "E_b4_23"
+      ],
+      "expected_seconds": 180,
+      "priority": 1,
+      "set": 5
+    },
+    {
+      "id": "E_hr_00",
+      "kind": "train",
+      "group": "E_hr",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 2000,
+      "priority": 1,
+      "seed": 3491,
+      "recipe": "train_expert_hr1_fold2",
+      "fold": 2,
+      "slot": 1,
+      "set": 0
+    },
+    {
+      "id": "E_hr_01",
+      "kind": "train",
+      "group": "E_hr",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 2000,
+      "priority": 1,
+      "seed": 3492,
+      "recipe": "train_expert_hr1_fold4",
+      "fold": 4,
+      "slot": 1,
+      "set": 0
+    },
+    {
+      "id": "E_hr_02",
+      "kind": "train",
+      "group": "E_hr",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 2000,
+      "priority": 1,
+      "seed": 3493,
+      "recipe": "train_expert_hr2_fold1",
+      "fold": 1,
+      "slot": 2,
+      "set": 0
+    },
+    {
+      "id": "E_hr_03",
+      "kind": "train",
+      "group": "E_hr",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 2000,
+      "priority": 1,
+      "seed": 3494,
+      "recipe": "train_expert_hr2_fold4",
+      "fold": 4,
+      "slot": 2,
+      "set": 0
+    },
+    {
+      "id": "E_hr_set0",
+      "kind": "group",
+      "group": "E_hr",
+      "deps": [
+        "E_hr_00",
+        "E_hr_01",
+        "E_hr_02",
+        "E_hr_03"
+      ],
+      "expected_seconds": 550,
+      "priority": 1,
+      "set": 0
+    },
+    {
+      "id": "E_hr_04",
+      "kind": "train",
+      "group": "E_hr",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 2000,
+      "priority": 1,
+      "seed": 3495,
+      "recipe": "train_expert_hr1_fold2",
+      "fold": 2,
+      "slot": 1,
+      "set": 1
+    },
+    {
+      "id": "E_hr_05",
+      "kind": "train",
+      "group": "E_hr",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 2000,
+      "priority": 1,
+      "seed": 3496,
+      "recipe": "train_expert_hr1_fold4",
+      "fold": 4,
+      "slot": 1,
+      "set": 1
+    },
+    {
+      "id": "E_hr_06",
+      "kind": "train",
+      "group": "E_hr",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 2000,
+      "priority": 1,
+      "seed": 3497,
+      "recipe": "train_expert_hr2_fold1",
+      "fold": 1,
+      "slot": 2,
+      "set": 1
+    },
+    {
+      "id": "E_hr_07",
+      "kind": "train",
+      "group": "E_hr",
+      "deps": [
+        "baseline"
+      ],
+      "expected_seconds": 2000,
+      "priority": 1,
+      "seed": 3498,
+      "recipe": "train_expert_hr2_fold4",
+      "fold": 4,
+      "slot": 2,
+      "set": 1
+    },
+    {
+      "id": "E_hr_set1",
+      "kind": "group",
+      "group": "E_hr",
+      "deps": [
+        "E_hr_04",
+        "E_hr_05",
+        "E_hr_06",
+        "E_hr_07"
+      ],
+      "expected_seconds": 550,
+      "priority": 1,
+      "set": 1
+    },
+    {
+      "id": "select_RE",
+      "kind": "cpu",
+      "group": "select_RE",
+      "deps": [
+        "336_00",
+        "336_01",
+        "336_02",
+        "336_03",
+        "336_04",
+        "336_05",
+        "336_06",
+        "336_07",
+        "336_08",
+        "336_09",
+        "336_10",
+        "336_11",
+        "347_00",
+        "347_01",
+        "347_02",
+        "347_03",
+        "347_04",
+        "347_05",
+        "347_06",
+        "347_07",
+        "347_08",
+        "347_09",
+        "347_10",
+        "347_11",
+        "269_00",
+        "269_01",
+        "269_02",
+        "269_03",
+        "269_04",
+        "269_05",
+        "269_06",
+        "269_07",
+        "restart51_00",
+        "restart51_01",
+        "restart51_02",
+        "restart51_03",
+        "restart51_04",
+        "restart51_05",
+        "restart51_06",
+        "restart51_07",
+        "restart51_08",
+        "restart51_09",
+        "restart51_10",
+        "restart51_11",
+        "restart61_00",
+        "restart61_01",
+        "restart61_02",
+        "restart61_03",
+        "326_00",
+        "326_01",
+        "326_set0",
+        "326_02",
+        "326_03",
+        "326_set1",
+        "326_04",
+        "326_05",
+        "326_set2",
+        "326_06",
+        "326_07",
+        "326_set3",
+        "322_00",
+        "322_set0",
+        "322_01",
+        "322_set1",
+        "322_02",
+        "322_set2",
+        "322_03",
+        "322_set3",
+        "E_b4_00",
+        "E_b4_01",
+        "E_b4_02",
+        "E_b4_03",
+        "E_b4_set0",
+        "E_b4_04",
+        "E_b4_05",
+        "E_b4_06",
+        "E_b4_07",
+        "E_b4_set1",
+        "E_b4_08",
+        "E_b4_09",
+        "E_b4_10",
+        "E_b4_11",
+        "E_b4_set2",
+        "E_b4_12",
+        "E_b4_13",
+        "E_b4_14",
+        "E_b4_15",
+        "E_b4_set3",
+        "E_b4_16",
+        "E_b4_17",
+        "E_b4_18",
+        "E_b4_19",
+        "E_b4_set4",
+        "E_b4_20",
+        "E_b4_21",
+        "E_b4_22",
+        "E_b4_23",
+        "E_b4_set5",
+        "E_hr_00",
+        "E_hr_01",
+        "E_hr_02",
+        "E_hr_03",
+        "E_hr_set0",
+        "E_hr_04",
+        "E_hr_05",
+        "E_hr_06",
+        "E_hr_07",
+        "E_hr_set1"
+      ],
+      "expected_seconds": 2400,
+      "priority": 1
+    },
+    {
+      "id": "features",
+      "kind": "gpu",
+      "group": "features",
+      "deps": [
+        "select_RE"
+      ],
+      "expected_seconds": 700,
+      "priority": 1
+    },
+    {
+      "id": "F_00",
+      "kind": "train",
+      "group": "F",
+      "deps": [
+        "features"
+      ],
+      "expected_seconds": 110,
+      "priority": 1,
+      "seed": 3499,
+      "recipe": "train_refiner"
+    },
+    {
+      "id": "F_01",
+      "kind": "train",
+      "group": "F",
+      "deps": [
+        "features"
+      ],
+      "expected_seconds": 110,
+      "priority": 1,
+      "seed": 3500,
+      "recipe": "train_refiner"
+    },
+    {
+      "id": "F_02",
+      "kind": "train",
+      "group": "F",
+      "deps": [
+        "features"
+      ],
+      "expected_seconds": 110,
+      "priority": 1,
+      "seed": 3501,
+      "recipe": "train_refiner"
+    },
+    {
+      "id": "F_03",
+      "kind": "train",
+      "group": "F",
+      "deps": [
+        "features"
+      ],
+      "expected_seconds": 110,
+      "priority": 1,
+      "seed": 3502,
+      "recipe": "train_refiner"
+    },
+    {
+      "id": "F_04",
+      "kind": "train",
+      "group": "F",
+      "deps": [
+        "features"
+      ],
+      "expected_seconds": 110,
+      "priority": 1,
+      "seed": 3503,
+      "recipe": "train_refiner"
+    },
+    {
+      "id": "F_05",
+      "kind": "train",
+      "group": "F",
+      "deps": [
+        "features"
+      ],
+      "expected_seconds": 110,
+      "priority": 1,
+      "seed": 3504,
+      "recipe": "train_refiner"
+    },
+    {
+      "id": "F_06",
+      "kind": "train",
+      "group": "F",
+      "deps": [
+        "features"
+      ],
+      "expected_seconds": 110,
+      "priority": 1,
+      "seed": 3505,
+      "recipe": "train_refiner"
+    },
+    {
+      "id": "F_07",
+      "kind": "train",
+      "group": "F",
+      "deps": [
+        "features"
+      ],
+      "expected_seconds": 110,
+      "priority": 1,
+      "seed": 3506,
+      "recipe": "train_refiner"
+    },
+    {
+      "id": "select_final",
+      "kind": "cpu",
+      "group": "select_final",
+      "deps": [
+        "F_00",
+        "F_01",
+        "F_02",
+        "F_03",
+        "F_04",
+        "F_05",
+        "F_06",
+        "F_07"
+      ],
+      "expected_seconds": 2400,
+      "priority": 1
+    },
+    {
+      "id": "export",
+      "kind": "gpu",
+      "group": "export",
+      "deps": [
+        "select_final"
+      ],
+      "expected_seconds": 1200,
+      "priority": 1
+    }
+  ]
+}

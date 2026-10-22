@@ -1,0 +1,11 @@
+--- previous/experiments/historical_scripts/pairwise_margin_finetune.py
++++ lite12/experiments/historical_scripts/pairwise_margin_finetune.py
+@@ -191,7 +191,7 @@
+     (output_dir / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+     np.savez_compressed(output_dir / "valid_probabilities.npz",
+                         **{f"p{i}": value.astype(np.float16) for i, value in enumerate(probabilities)})
+-    n_test = evaluate_and_save_test(model, args, device, use_amp, best_calibrated["biases"], output_dir)
++    n_test = 0  # Seed search evaluates validation only; no test inference.
+     print(json.dumps({"summary": summary, "test_masks": n_test}, ensure_ascii=False), flush=True)
+ 
+ 

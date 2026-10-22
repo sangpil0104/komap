@@ -1,0 +1,38 @@
+experiments:
+  e00_ft_control:
+    description: 기존 CNN을 동일 예산으로 추가 학습하는 대조군
+  e01_hard:
+    description: 학습 70장의 오분류 위치 중심 패치 추출
+    hard: true
+  e02_weighted:
+    description: Al3Ni·공정 Si의 CE 가중치 강화
+    weighted: true
+  e03_overlap_loss:
+    description: Dice·Lovasz 비중 강화
+    overlap: true
+  e04_hard_weighted:
+    description: 오분류 중심 추출 + 클래스 가중 CE
+    hard: true
+    weighted: true
+  e05_aspp:
+    description: residual ASPP 문맥 블록
+    aspp: true
+  e06_aspp_hard:
+    description: residual ASPP + 오분류 중심 추출
+    aspp: true
+    hard: true
+  e07_aspp_weighted:
+    description: residual ASPP + 클래스 가중 CE
+    aspp: true
+    weighted: true
+  e08_aspp_hard_weighted:
+    description: residual ASPP + 오분류 중심 추출 + 클래스 가중 CE
+    aspp: true
+    hard: true
+    weighted: true
+  e09_aspp_long_tail:
+    description: e08 조합 + 전체 영상 단계 확대
+    aspp: true
+    hard: true
+    weighted: true
+    long_tail: true

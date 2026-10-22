@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KoMaP · corrected ensemble valid audit</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">KoMaP / visual audit</p>
+        <h1>Corrected ensemble valid audit</h1>
+        <p class="subtitle">공식 클래스 매핑 교정 · ResNet34 + ASPP ensemble + EMA · valid 원본, 정답, 예측, error map</p>
+      </div>
+      <div class="counter" id="counter">1 / 20</div>
+    </header>
+
+    <div class="warning">
+      <span class="warning-icon">!</span>
+      <span>초록은 정답과 일치, 빨강은 오분류입니다. 공식 클래스 색상표 기준으로 라벨을 교정한 결과입니다.</span>
+    </div>
+
+    <section class="toolbar" aria-label="이미지 탐색 도구">
+      <button id="prev" class="button secondary" type="button">← 이전</button>
+      <select id="image-select" aria-label="이미지 선택"></select>
+      <button id="next" class="button secondary" type="button">다음 →</button>
+      <label class="opacity-control" for="opacity">
+        Mask overlay
+        <input id="opacity" type="range" min="0" max="100" value="55">
+        <output id="opacity-value">55%</output>
+      </label>
+    </section>
+
+    <section class="comparison-grid">
+      <article class="panel">
+        <div class="panel-heading"><h2>원본 이미지</h2><span id="original-size"></span></div>
+        <div class="image-frame"><img id="original" alt="원본 현미경 이미지"></div>
+      </article>
+      <article class="panel">
+        <div class="panel-heading"><h2>Ground truth</h2><span>valid mask</span></div>
+        <div class="image-frame"><img id="ground-truth" alt="valid 정답 mask"></div>
+      </article>
+      <article class="panel">
+        <div class="panel-heading"><h2>예측 mask</h2><span>corrected ensemble</span></div>
+        <div class="image-frame"><img id="prediction" alt="corrected ensemble 예측 mask"></div>
+      </article>
+      <article class="panel">
+        <div class="panel-heading"><h2>Error map</h2><span id="error-summary">loading</span></div>
+        <div class="image-frame"><img id="error-map" alt="정답과 예측의 error map"></div>
+      </article>
+    </section>
+
+    <section class="metrics panel">
+      <div class="panel-heading"><h2>선택 이미지 지표</h2><span id="selected-name"></span></div>
+      <div class="metric-grid">
+        <div><span>mIoU</span><strong id="selected-miou">—</strong></div>
+        <div><span>Error rate</span><strong id="selected-error-rate">—</strong></div>
+        <div><span>Error pixels</span><strong id="selected-error-pixels">—</strong></div>
+        <div><span>Pixels</span><strong id="selected-pixels">—</strong></div>
+      </div>
+    </section>
+
+    <section class="overlay-panel panel">
+      <div class="panel-heading">
+        <h2>Overlay</h2>
+        <span>슬라이더로 mask 투명도 조절</span>
+      </div>
+      <div class="overlay-frame" id="overlay-frame">
+        <img id="overlay-original" alt="원본 overlay">
+        <img id="overlay-prediction" alt="예측 overlay">
+      </div>
+    </section>
+
+    <section class="legend panel">
+      <div class="panel-heading"><h2>공식 클래스 색상표</h2><span>KoMaP mask palette</span></div>
+      <div class="legend-items">
+        <div><i class="swatch primary"></i><span>Primary Si</span><code>#4CB24C</code></div>
+        <div><i class="swatch al3ni"></i><span>Al3Ni</span><code>#194C99</code></div>
+        <div><i class="swatch eutectic"></i><span>Eutectic Si</span><code>#CCCCCC</code></div>
+        <div><i class="swatch al"></i><span>Al</span><code>#997F4C</code></div>
+        <div><i class="swatch correct"></i><span>Error map · correct</span><code>#26694C</code></div>
+        <div><i class="swatch wrong"></i><span>Error map · wrong</span><code>#E84343</code></div>
+      </div>
+    </section>
+
+    <section class="metrics panel summary-panel">
+      <div class="panel-heading"><h2>전체 valid 요약</h2><span>corrected ensemble / neutral bias</span></div>
+      <div class="metric-grid">
+        <div><span>Global mIoU</span><strong id="global-miou">—</strong></div>
+        <div><span>Image-wise mean mIoU</span><strong id="image-mean-miou">—</strong></div>
+        <div><span>Primary Si IoU</span><strong id="global-primary">—</strong></div>
+        <div><span>Al3Ni IoU</span><strong id="global-al3ni">—</strong></div>
+        <div><span>Eutectic Si IoU</span><strong id="global-eutectic">—</strong></div>
+        <div><span>Al IoU</span><strong id="global-al">—</strong></div>
+      </div>
+    </section>
+
+    <section class="thumb-section">
+      <div class="section-heading"><h2>전체 이미지</h2><span>클릭해서 이동</span></div>
+      <div id="thumbnails" class="thumbnails"></div>
+    </section>
+
+    <footer>
+      <span>source: <code>valid.zip</code> · prediction: <code>model125_corrected_ensemble_valid</code></span>
+      <span>local visual audit</span>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

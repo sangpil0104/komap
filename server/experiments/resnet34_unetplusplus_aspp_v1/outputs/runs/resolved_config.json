@@ -1,0 +1,136 @@
+{
+  "project": "komap",
+  "experiment": "resnet34_unetplusplus_aspp_v1",
+  "seed": 2026,
+  "data": {
+    "root": "dataset",
+    "manifest": "data/processed/manifest.csv",
+    "folds": "data/processed/folds.json",
+    "classes": [
+      "primary_si",
+      "al3ni",
+      "eutectic_si",
+      "al"
+    ],
+    "palette": [
+      [
+        76,
+        178,
+        76
+      ],
+      [
+        25,
+        76,
+        153
+      ],
+      [
+        204,
+        204,
+        204
+      ],
+      [
+        153,
+        127,
+        76
+      ]
+    ],
+    "ignore_index": 255,
+    "image_channels": [
+      "gray",
+      "image_zscore",
+      "image_cdf"
+    ],
+    "pad_multiple": 32
+  },
+  "model": {
+    "name": "resnet34_unetplusplus_aspp",
+    "backbone": "resnet34",
+    "pretrained": true,
+    "in_channels": 3,
+    "num_classes": 4,
+    "stem_channels": 32,
+    "aspp_width": 128,
+    "aspp_rates": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "deep_supervision": false
+  },
+  "sampling": {
+    "halo": 64,
+    "mix": {
+      "uniform": 0.6,
+      "eutectic_center": 0.25,
+      "error_or_boundary": 0.15
+    }
+  },
+  "augmentation": {
+    "d4": true,
+    "photometric_probability": 0.5,
+    "brightness_offset": [
+      -0.04,
+      0.04
+    ],
+    "contrast_gain": [
+      0.9,
+      1.1
+    ],
+    "gamma": [
+      0.9,
+      1.1
+    ]
+  },
+  "loss": {
+    "ce_weight": 1.0,
+    "dice_weight": 1.0,
+    "class_weights": null
+  },
+  "train": {
+    "optimizer": "adamw",
+    "encoder_lr": 0.0001,
+    "decoder_lr": 0.0003,
+    "weight_decay": 0.0001,
+    "effective_batch_size": 8,
+    "micro_batch_size": 1,
+    "precision": "bf16",
+    "gradient_clip_norm": 1.0,
+    "ema_decay": 0.99,
+    "eval_every_updates": 200,
+    "checkpoint_every_updates": 100,
+    "stages": [
+      {
+        "name": "s0_patch512",
+        "mode": "patch",
+        "core_size": 512,
+        "max_updates": 2000,
+        "warmup_updates": 100,
+        "encoder_lr": 0.0001,
+        "decoder_lr": 0.0003
+      },
+      {
+        "name": "s1_patch768",
+        "mode": "patch",
+        "core_size": 768,
+        "max_updates": 1500,
+        "warmup_updates": 100,
+        "encoder_lr": 5e-05,
+        "decoder_lr": 0.00015
+      },
+      {
+        "name": "s2_fullframe",
+        "mode": "full_frame",
+        "core_size": null,
+        "max_updates": 1000,
+        "warmup_updates": 50,
+        "encoder_lr": 1e-05,
+        "decoder_lr": 3e-05
+      }
+    ]
+  },
+  "inference": {
+    "d4": true,
+    "pad_multiple": 32
+  }
+}

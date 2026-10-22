@@ -1,0 +1,45 @@
+Model349: CHECK (no training)
+{
+  "physical_gpus": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "max_concurrent_gpu_stages": 4,
+  "gpu_stages": 50,
+  "cpu_stages": 9,
+  "initial_assignment": {
+    "4": "train_model6",
+    "5": "train_model336",
+    "6": "train_model322_fold1",
+    "7": "train_model322_fold2"
+  },
+  "scheduling": "one independent model/fold per GPU; dependencies respected",
+  "training_started": false
+}
+Check train:   0%|          | 0/70 [00:00<?, ?image/s]Check train:   1%|▏         | 1/70 [00:00<00:07,  9.00image/s]Check train:   3%|▎         | 2/70 [00:00<00:07,  9.35image/s]Check train:   6%|▌         | 4/70 [00:00<00:06,  9.61image/s]Check train:   9%|▊         | 6/70 [00:00<00:06,  9.86image/s]Check train:  11%|█▏        | 8/70 [00:00<00:06, 10.03image/s]Check train:  13%|█▎        | 9/70 [00:00<00:06, 10.02image/s]Check train:  16%|█▌        | 11/70 [00:01<00:05, 10.10image/s]Check train:  19%|█▊        | 13/70 [00:01<00:06,  9.37image/s]Check train:  21%|██▏       | 15/70 [00:01<00:06,  9.06image/s]Check train:  23%|██▎       | 16/70 [00:01<00:06,  8.72image/s]Check train:  24%|██▍       | 17/70 [00:01<00:06,  8.44image/s]Check train:  26%|██▌       | 18/70 [00:01<00:05,  8.68image/s]Check train:  27%|██▋       | 19/70 [00:02<00:05,  8.87image/s]Check train:  29%|██▊       | 20/70 [00:02<00:05,  8.43image/s]Check train:  30%|███       | 21/70 [00:02<00:05,  8.60image/s]Check train:  31%|███▏      | 22/70 [00:02<00:05,  8.71image/s]Check train:  33%|███▎      | 23/70 [00:02<00:05,  8.84image/s]Check train:  34%|███▍      | 24/70 [00:02<00:05,  8.95image/s]Check train:  36%|███▌      | 25/70 [00:02<00:05,  8.95image/s]Check train:  37%|███▋      | 26/70 [00:02<00:04,  9.00image/s]Check train:  39%|███▊      | 27/70 [00:02<00:04,  9.06image/s]Check train:  41%|████▏     | 29/70 [00:03<00:03, 10.98image/s]Check train:  44%|████▍     | 31/70 [00:03<00:03, 10.36image/s]Check train:  47%|████▋     | 33/70 [00:03<00:03, 11.52image/s]Check train:  50%|█████     | 35/70 [00:03<00:03,  9.62image/s]Check train:  53%|█████▎    | 37/70 [00:03<00:03,  9.73image/s]Check train:  56%|█████▌    | 39/70 [00:04<00:02, 10.89image/s]Check train:  59%|█████▊    | 41/70 [00:04<00:03,  9.54image/s]Check train:  61%|██████▏   | 43/70 [00:04<00:02,  9.64image/s]Check train:  64%|██████▍   | 45/70 [00:04<00:02,  9.67image/s]Check train:  67%|██████▋   | 47/70 [00:04<00:02,  9.78image/s]Check train:  70%|███████   | 49/70 [00:05<00:02,  9.72image/s]Check train:  71%|███████▏  | 50/70 [00:05<00:02,  9.65image/s]Check train:  73%|███████▎  | 51/70 [00:05<00:01,  9.51image/s]Check train:  74%|███████▍  | 52/70 [00:05<00:01,  9.43image/s]Check train:  76%|███████▌  | 53/70 [00:05<00:01,  9.43image/s]Check train:  77%|███████▋  | 54/70 [00:05<00:01,  9.41image/s]Check train:  83%|████████▎ | 58/70 [00:05<00:00, 16.06image/s]Check train:  87%|████████▋ | 61/70 [00:05<00:00, 16.55image/s]Check train:  90%|█████████ | 63/70 [00:06<00:00, 15.75image/s]Check train:  96%|█████████▌| 67/70 [00:06<00:00, 20.12image/s]Check train: 100%|██████████| 70/70 [00:06<00:00, 11.03image/s]
+Check valid:   0%|          | 0/20 [00:00<?, ?image/s]Check valid:   5%|▌         | 1/20 [00:00<00:01,  9.82image/s]Check valid:  20%|██        | 4/20 [00:00<00:01, 15.56image/s]Check valid:  30%|███       | 6/20 [00:00<00:00, 14.87image/s]Check valid:  40%|████      | 8/20 [00:00<00:01, 11.43image/s]Check valid:  50%|█████     | 10/20 [00:00<00:00, 10.09image/s]Check valid:  60%|██████    | 12/20 [00:01<00:00, 10.03image/s]Check valid:  70%|███████   | 14/20 [00:01<00:00, 11.64image/s]Check valid:  90%|█████████ | 18/20 [00:01<00:00, 16.71image/s]Check valid: 100%|██████████| 20/20 [00:01<00:00, 15.89image/s]Check valid: 100%|██████████| 20/20 [00:01<00:00, 13.53image/s]
+fold=1 train=52 heldout=18 heldout_groups=15
+fold=2 train=52 heldout=18 heldout_groups=15
+fold=3 train=53 heldout=17 heldout_groups=14
+fold=4 train=53 heldout=17 heldout_groups=15
+verified 70 images across 4 grouped folds; input data were symlinked, not copied
+PREFLIGHT OK: 4 GPUs, 59 stages, no training.
+CHECK_DIRECTORY=/Data3/sppark/komap/experiments/lhs_349_397_gpu4567_v1/model349/outputs/checks/model349_preflight_20261006T005450_384065Z
+Model397: CHECK (no training)
+test_comparison_zero_delta (__main__.Model397Smoke.test_comparison_zero_delta) ... ok
+test_fixed_fold_inventory (__main__.Model397Smoke.test_fixed_fold_inventory) ... ok
+test_group_bootstrap_is_reproducible_and_fold_stratified (__main__.Model397Smoke.test_group_bootstrap_is_reproducible_and_fold_stratified) ... ok
+test_group_step_parser (__main__.Model397Smoke.test_group_step_parser) ... ok
+test_official_empty_union_zero (__main__.Model397Smoke.test_official_empty_union_zero) ... ok
+test_oof_manifest_binds_checkpoint_and_probabilities (__main__.Model397Smoke.test_oof_manifest_binds_checkpoint_and_probabilities) ... ok
+test_perfect_four_class_iou (__main__.Model397Smoke.test_perfect_four_class_iou) ... ok
+test_saved_recipe_verifier (__main__.Model397Smoke.test_saved_recipe_verifier) ... ok
+test_synthetic_split_creation_and_idempotence (__main__.Model397Smoke.test_synthetic_split_creation_and_idempotence) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.536s
+
+OK
+Model397 CHECK OK; no training

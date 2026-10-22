@@ -1,0 +1,159 @@
+GPU=GPU-c26b1177-bd33-c433-b7b2-7b0cbeafc4d2 NVIDIA GeForce RTX 4090
+COMMAND: /home/sppark/miniconda3/envs/komap/bin/python -B -u /Data3/sppark/komap/experiments/model349_seed100_gpu4567_v1/outputs/runs/seed100_20261007T103906_646909Z/implementation/source/experiments/historical_scripts/model253_highres_scale_finetune.py --data-dir /Data3/sppark/komap/experiments/model349_train_route_v2/outputs/runs/model349_train_20260930T143930_234475Z/data --checkpoint /Data3/sppark/komap/experiments/model349_train_route_v2/outputs/runs/model349_train_20260930T143930_234475Z/outputs/model257_full_image_stats_1x/best.pt --output-dir /Data3/sppark/komap/experiments/model349_seed100_gpu4567_v1/outputs/runs/seed100_20261007T103906_646909Z/jobs/m269_s3412/attempt_1/training --scale 1 --patch-size 1024 --patches-per-image 8 --batch-size 2 --epochs 4 --scheduler-epochs 4 --encoder-lr 2.5e-6 --decoder-lr 7.5e-6 --native-lr 5e-5 --weight-decay 1e-4 --val-stride 576 --tta d4 --selection-metric image_mean_miou --seed 3412 --global-representation --num-workers 4
+/Data3/sppark/komap/experiments/model349_seed100_gpu4567_v1/outputs/runs/seed100_20261007T103906_646909Z/implementation/source/experiments/historical_scripts/model253_highres_scale_finetune.py:471: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(enabled=use_amp)
+device=cuda scale=1.0 patch=1024 patches=560 batch=2 tta=d4
+model253_highres_scale_finetune:   0%|          | 0/4 [00:00<?, ?item/s]
+model253_highres_scale_finetune:   0%|          | 0/280 [00:00<?, ?item/s][A/Data3/sppark/komap/experiments/model349_seed100_gpu4567_v1/outputs/runs/seed100_20261007T103906_646909Z/implementation/source/experiments/historical_scripts/model253_highres_scale_finetune.py:494: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+
+model253_highres_scale_finetune:   6%|▋         | 18/280 [00:10<02:25,  1.80item/s][A
+model253_highres_scale_finetune:  26%|██▋       | 74/280 [00:20<00:51,  4.00item/s][A
+model253_highres_scale_finetune:  46%|████▋     | 130/280 [00:30<00:32,  4.62item/s][A
+model253_highres_scale_finetune:  66%|██████▌   | 184/280 [00:40<00:19,  4.88item/s][A
+model253_highres_scale_finetune:  85%|████████▌ | 239/280 [00:50<00:08,  5.08item/s][Amodel253_highres_scale_finetune: 100%|██████████| 280/280 [00:58<00:00,  4.76item/s]
+
+model253_highres_scale_finetune:   0%|          | 0/20 [00:00<?, ?item/s][A/Data3/sppark/komap/experiments/model349_seed100_gpu4567_v1/outputs/runs/seed100_20261007T103906_646909Z/implementation/source/experiments/historical_scripts/model253_highres_scale_finetune.py:230: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=use_amp):
+validated A117_step4_sample2_image.png
+validated A11_step1_sample4_image.png
+validated A11_step2_sample4_image.png
+validated A125_step1_sample4_image.png
+validated A153_step3_sample3_image.png
+validated A170_step4_sample3_image.png
+validated A181_step1_sample1_image.png
+validated A186_step2_sample2_image.png
+validated A191_step4_sample3_image.png
+validated A40_step3_sample3_image.png
+validated A42_step2_sample4_image.png
+validated A44_step4_sample3_image.png
+
+model253_highres_scale_finetune:  60%|██████    | 12/20 [00:10<00:06,  1.16item/s][Avalidated A55_step2_sample1_image.png
+validated A59_step3_sample1_image.png
+validated A63_step1_sample4_image.png
+validated A67_step1_sample1_image.png
+validated A71_step2_sample1_image.png
+validated A72_step4_sample4_image.png
+validated A74_step3_sample4_image.png
+validated A7_step1_sample4_image.png
+model253_highres_scale_finetune: 100%|██████████| 20/20 [00:15<00:00,  1.31item/s]
+{"epoch": 1, "train_loss": 0.3420373899596078, "image_miou_compat": 0.771424041892622, "image_mean_miou": 0.771424041892622, "image_mean_miou_exclude": 0.771424041892622, "image_class_iou": {"Al3Ni": 0.7204746984076508, "Primary Si": 0.8546630139571384, "Al": 0.9306987299263941, "Eutectic Si": 0.579859725279305}, "seconds": 74.3841016292572}
+model253_highres_scale_finetune:  25%|██▌       | 1/4 [01:14<03:44, 74.71s/item]
+model253_highres_scale_finetune:   0%|          | 0/280 [00:00<?, ?item/s][A
+model253_highres_scale_finetune:  17%|█▋        | 47/280 [00:10<00:49,  4.69item/s][A
+model253_highres_scale_finetune:  37%|███▋      | 103/280 [00:20<00:33,  5.22item/s][A
+model253_highres_scale_finetune:  57%|█████▋    | 159/280 [00:30<00:22,  5.30item/s][A
+model253_highres_scale_finetune:  76%|███████▌  | 213/280 [00:40<00:12,  5.25item/s][A
+model253_highres_scale_finetune:  97%|█████████▋| 271/280 [00:51<00:01,  5.38item/s][Amodel253_highres_scale_finetune: 100%|██████████| 280/280 [00:52<00:00,  5.31item/s]
+
+model253_highres_scale_finetune:   0%|          | 0/20 [00:00<?, ?item/s][Avalidated A117_step4_sample2_image.png
+validated A11_step1_sample4_image.png
+validated A11_step2_sample4_image.png
+validated A125_step1_sample4_image.png
+validated A153_step3_sample3_image.png
+validated A170_step4_sample3_image.png
+validated A181_step1_sample1_image.png
+validated A186_step2_sample2_image.png
+validated A191_step4_sample3_image.png
+validated A40_step3_sample3_image.png
+validated A42_step2_sample4_image.png
+validated A44_step4_sample3_image.png
+validated A55_step2_sample1_image.png
+validated A59_step3_sample1_image.png
+validated A63_step1_sample4_image.png
+
+model253_highres_scale_finetune:  75%|███████▌  | 15/20 [00:10<00:03,  1.42item/s][Avalidated A67_step1_sample1_image.png
+validated A71_step2_sample1_image.png
+validated A72_step4_sample4_image.png
+validated A74_step3_sample4_image.png
+validated A7_step1_sample4_image.png
+model253_highres_scale_finetune: 100%|██████████| 20/20 [00:13<00:00,  1.47item/s]
+{"epoch": 2, "train_loss": 0.3396431189562593, "image_miou_compat": 0.7718901354737281, "image_mean_miou": 0.7718901354737281, "image_mean_miou_exclude": 0.7718901354737281, "image_class_iou": {"Al3Ni": 0.7206184185001089, "Primary Si": 0.854927908776507, "Al": 0.9315678187564392, "Eutectic Si": 0.5804463958618572}, "seconds": 141.39149594306946}
+model253_highres_scale_finetune:  50%|█████     | 2/4 [02:21<02:20, 70.17s/item]
+model253_highres_scale_finetune:   0%|          | 0/280 [00:00<?, ?item/s][A
+model253_highres_scale_finetune:  18%|█▊        | 50/280 [00:10<00:46,  4.96item/s][A
+model253_highres_scale_finetune:  37%|███▋      | 103/280 [00:20<00:34,  5.14item/s][A
+model253_highres_scale_finetune:  56%|█████▌    | 156/280 [00:31<00:24,  5.00item/s][A
+model253_highres_scale_finetune:  74%|███████▍  | 208/280 [00:41<00:14,  5.04item/s][A
+model253_highres_scale_finetune:  94%|█████████▍| 264/280 [00:51<00:03,  5.15item/s][Amodel253_highres_scale_finetune: 100%|██████████| 280/280 [00:54<00:00,  5.14item/s]
+
+model253_highres_scale_finetune:   0%|          | 0/20 [00:00<?, ?item/s][Avalidated A117_step4_sample2_image.png
+validated A11_step1_sample4_image.png
+validated A11_step2_sample4_image.png
+validated A125_step1_sample4_image.png
+validated A153_step3_sample3_image.png
+validated A170_step4_sample3_image.png
+validated A181_step1_sample1_image.png
+validated A186_step2_sample2_image.png
+validated A191_step4_sample3_image.png
+validated A40_step3_sample3_image.png
+validated A42_step2_sample4_image.png
+validated A44_step4_sample3_image.png
+validated A55_step2_sample1_image.png
+validated A59_step3_sample1_image.png
+validated A63_step1_sample4_image.png
+
+model253_highres_scale_finetune:  75%|███████▌  | 15/20 [00:10<00:03,  1.46item/s][Avalidated A67_step1_sample1_image.png
+validated A71_step2_sample1_image.png
+validated A72_step4_sample4_image.png
+validated A74_step3_sample4_image.png
+validated A7_step1_sample4_image.png
+model253_highres_scale_finetune: 100%|██████████| 20/20 [00:13<00:00,  1.50item/s]
+{"epoch": 3, "train_loss": 0.33700425385364463, "image_miou_compat": 0.7711046494287771, "image_mean_miou": 0.7711046494287771, "image_mean_miou_exclude": 0.7711046494287771, "image_class_iou": {"Al3Ni": 0.7166286026983204, "Primary Si": 0.8554669034385416, "Al": 0.9324275226457373, "Eutectic Si": 0.5798955689325089}, "seconds": 209.87819862365723}
+model253_highres_scale_finetune:  75%|███████▌  | 3/4 [03:29<01:09, 69.26s/item]
+model253_highres_scale_finetune:   0%|          | 0/280 [00:00<?, ?item/s][A
+model253_highres_scale_finetune:  18%|█▊        | 49/280 [00:10<00:47,  4.86item/s][A
+model253_highres_scale_finetune:  38%|███▊      | 105/280 [00:20<00:33,  5.28item/s][A
+model253_highres_scale_finetune:  38%|███▊      | 105/280 [00:30<00:33,  5.28item/s][A
+model253_highres_scale_finetune:  56%|█████▋    | 158/280 [00:30<00:23,  5.25item/s][A
+model253_highres_scale_finetune:  75%|███████▌  | 211/280 [00:40<00:13,  5.20item/s][A
+model253_highres_scale_finetune:  94%|█████████▍| 263/280 [00:51<00:03,  5.06item/s][Amodel253_highres_scale_finetune: 100%|██████████| 280/280 [00:54<00:00,  5.14item/s]
+
+model253_highres_scale_finetune:   0%|          | 0/20 [00:00<?, ?item/s][Avalidated A117_step4_sample2_image.png
+validated A11_step1_sample4_image.png
+validated A11_step2_sample4_image.png
+validated A125_step1_sample4_image.png
+validated A153_step3_sample3_image.png
+validated A170_step4_sample3_image.png
+validated A181_step1_sample1_image.png
+validated A186_step2_sample2_image.png
+validated A191_step4_sample3_image.png
+validated A40_step3_sample3_image.png
+validated A42_step2_sample4_image.png
+validated A44_step4_sample3_image.png
+validated A55_step2_sample1_image.png
+validated A59_step3_sample1_image.png
+validated A63_step1_sample4_image.png
+
+model253_highres_scale_finetune:  75%|███████▌  | 15/20 [00:10<00:03,  1.47item/s][Avalidated A67_step1_sample1_image.png
+validated A71_step2_sample1_image.png
+validated A72_step4_sample4_image.png
+validated A74_step3_sample4_image.png
+validated A7_step1_sample4_image.png
+model253_highres_scale_finetune: 100%|██████████| 20/20 [00:13<00:00,  1.51item/s]
+{"epoch": 4, "train_loss": 0.33666747074042047, "image_miou_compat": 0.7705525577733044, "image_mean_miou": 0.7705525577733044, "image_mean_miou_exclude": 0.7705525577733044, "image_class_iou": {"Al3Ni": 0.7186177203129447, "Primary Si": 0.8548755488313727, "Al": 0.9304869572871516, "Eutectic Si": 0.5782300046617492}, "seconds": 277.90695118904114}
+model253_highres_scale_finetune: 100%|██████████| 4/4 [04:37<00:00, 68.77s/item]model253_highres_scale_finetune: 100%|██████████| 4/4 [04:37<00:00, 69.48s/item]
+model253_highres_scale_finetune:   0%|          | 0/20 [00:00<?, ?item/s]validated A117_step4_sample2_image.png
+validated A11_step1_sample4_image.png
+validated A11_step2_sample4_image.png
+validated A125_step1_sample4_image.png
+validated A153_step3_sample3_image.png
+validated A170_step4_sample3_image.png
+validated A181_step1_sample1_image.png
+validated A186_step2_sample2_image.png
+validated A191_step4_sample3_image.png
+validated A40_step3_sample3_image.png
+validated A42_step2_sample4_image.png
+validated A44_step4_sample3_image.png
+validated A55_step2_sample1_image.png
+validated A59_step3_sample1_image.png
+validated A63_step1_sample4_image.png
+validated A67_step1_sample1_image.png
+model253_highres_scale_finetune:  80%|████████  | 16/20 [00:10<00:02,  1.58item/s]validated A71_step2_sample1_image.png
+validated A72_step4_sample4_image.png
+validated A74_step3_sample4_image.png
+validated A7_step1_sample4_image.png
+model253_highres_scale_finetune: 100%|██████████| 20/20 [00:12<00:00,  1.60item/s]
+{"method": "supervised fine-tuning", "loss": "weighted CE + Dice", "selection_metric": "image_mean_miou", "best_selection": 0.7718901354737281, "best_record": {"epoch": 2, "train_loss": 0.3396431189562593, "image_miou_compat": 0.7718901354737281, "image_mean_miou": 0.7718901354737281, "image_mean_miou_exclude": 0.7718901354737281, "image_class_iou": {"Al3Ni": 0.7206184185001089, "Primary Si": 0.854927908776507, "Al": 0.9315678187564392, "Eutectic Si": 0.5804463958618572}, "seconds": 141.39149594306946}, "final": {"image_mean_miou": 0.7718901354737281, "miou": 0.7718901354737281, "image_miou_compat": 0.7718901354737281, "image_class_iou": {"Al3Ni": 0.7206184185001089, "Primary Si": 0.854927908776507, "Al": 0.9315678187564392, "Eutectic Si": 0.5804463958618572}, "iou": {"Al3Ni": 0.7206184185001089, "Primary Si": 0.854927908776507, "Al": 0.9315678187564392, "Eutectic Si": 0.5804463958618572}, "image_mean_miou_exclude": 0.7718901354737281, "image_scores": [0.8633276840937794, 0.6682622942371144, 0.7457502027669282, 0.778490521980151, 0.6760586476093312, 0.879906675821107, 0.7945104100270478, 0.765633029437735, 0.8110483109650133, 0.8135719904941028, 0.8106658738640601, 0.8794239544456991, 0.808742799342266, 0.822390925779277, 0.8272143531419955, 0.7289448878841489, 0.36520838519296694, 0.8575795367070319, 0.7545750940259023, 0.7864971316589057], "image_scores_exclude": [0.8633276840937794, 0.6682622942371144, 0.7457502027669282, 0.778490521980151, 0.6760586476093312, 0.879906675821107, 0.7945104100270478, 0.765633029437735, 0.8110483109650133, 0.8135719904941028, 0.8106658738640601, 0.8794239544456991, 0.808742799342266, 0.822390925779277, 0.8272143531419955, 0.7289448878841489, 0.36520838519296694, 0.8575795367070319, 0.7545750940259023, 0.7864971316589057], "image_mious": [0.8633276840937794, 0.6682622942371144, 0.7457502027669282, 0.778490521980151, 0.6760586476093312, 0.879906675821107, 0.7945104100270478, 0.765633029437735, 0.8110483109650133, 0.8135719904941028, 0.8106658738640601, 0.8794239544456991, 0.808742799342266, 0.822390925779277, 0.8272143531419955, 0.7289448878841489, 0.36520838519296694, 0.8575795367070319, 0.7545750940259023, 0.7864971316589057], "image_std_miou": 0.10945906028481954, "image_min_miou": 0.36520838519296694, "image_max_miou": 0.879906675821107, "metric": "image_mIoU_four_classes_empty0"}, "elapsed_seconds": 296.1797831058502, "parent_checkpoint": "/Data3/sppark/komap/experiments/model349_train_route_v2/outputs/runs/model349_train_20260930T143930_234475Z/outputs/model257_full_image_stats_1x/best.pt", "scale_factor": 1.0, "patch_size": 1024, "training_representation": "full-image statistics before crop"}
+Model349 image mIoU:   0%|          | 0/20 [00:00<?, ?image/s]Model349 image mIoU:  80%|████████  | 16/20 [00:10<00:02,  1.59image/s]Model349 image mIoU: 100%|██████████| 20/20 [00:11<00:00,  1.72image/s]
+COMPLETE m269_s3412 image_miou=0.8005986395943714

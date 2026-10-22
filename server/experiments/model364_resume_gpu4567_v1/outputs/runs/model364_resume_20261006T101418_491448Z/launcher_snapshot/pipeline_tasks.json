@@ -1,0 +1,1245 @@
+{
+  "description": "Resume Model364 after 26 completed stages; scale3 native overlap114 stride57",
+  "serial_reference_sha256": "7ee3f3d4660d671f42d60a3b46dc061edf7aaf693799a47ba182dedb759ba9f5",
+  "prepare_cv_argv": [
+    "{source}/experiments/model322_team_b4/KoMaP/prepare_group_cv.py",
+    "--data",
+    "{run}/data",
+    "--manifest",
+    "{source}/bundle_assets/training/model303_progress.json",
+    "--out",
+    "{run}/data_model322_group_cv"
+  ],
+  "tasks": [
+    {
+      "id": "train_model257",
+      "serial_index": 19,
+      "kind": "gpu",
+      "priority": 2,
+      "deps": [],
+      "argv": [
+        "{source}/experiments/historical_scripts/model253_highres_scale_finetune.py",
+        "--data-dir",
+        "{run}/data",
+        "--checkpoint",
+        "{run}/outputs/model242_native_stem_ema/best_ema.pt",
+        "--output-dir",
+        "{run}/outputs/model257_full_image_stats_1x",
+        "--scale",
+        "1",
+        "--patch-size",
+        "1024",
+        "--patches-per-image",
+        "8",
+        "--batch-size",
+        "2",
+        "--epochs",
+        "4",
+        "--scheduler-epochs",
+        "4",
+        "--encoder-lr",
+        "5e-6",
+        "--decoder-lr",
+        "1.5e-5",
+        "--native-lr",
+        "1e-4",
+        "--weight-decay",
+        "1e-4",
+        "--val-stride",
+        "576",
+        "--tta",
+        "d4",
+        "--selection-metric",
+        "image_mean_miou",
+        "--seed",
+        "257",
+        "--global-representation",
+        "--num-workers",
+        "4"
+      ],
+      "requires": [
+        "{run}/outputs/model242_native_stem_ema/best_ema.pt"
+      ],
+      "produces": [
+        "{run}/outputs/model257_full_image_stats_1x/best.pt"
+      ]
+    },
+    {
+      "id": "train_model269",
+      "serial_index": 20,
+      "kind": "gpu",
+      "priority": 2,
+      "deps": [
+        "train_model257"
+      ],
+      "argv": [
+        "{source}/experiments/historical_scripts/model253_highres_scale_finetune.py",
+        "--data-dir",
+        "{run}/data",
+        "--checkpoint",
+        "{run}/outputs/model257_full_image_stats_1x/best.pt",
+        "--output-dir",
+        "{run}/outputs/model269_fullstats_1x_extended",
+        "--scale",
+        "1",
+        "--patch-size",
+        "1024",
+        "--patches-per-image",
+        "8",
+        "--batch-size",
+        "2",
+        "--epochs",
+        "4",
+        "--scheduler-epochs",
+        "4",
+        "--encoder-lr",
+        "2.5e-6",
+        "--decoder-lr",
+        "7.5e-6",
+        "--native-lr",
+        "5e-5",
+        "--weight-decay",
+        "1e-4",
+        "--val-stride",
+        "576",
+        "--tta",
+        "d4",
+        "--selection-metric",
+        "image_mean_miou",
+        "--seed",
+        "269",
+        "--global-representation",
+        "--num-workers",
+        "4"
+      ],
+      "requires": [
+        "{run}/outputs/model257_full_image_stats_1x/best.pt"
+      ],
+      "produces": [
+        "{run}/outputs/model269_fullstats_1x_extended/valid_probs.npz"
+      ]
+    },
+    {
+      "id": "train_model322_fold3",
+      "serial_index": 25,
+      "kind": "gpu",
+      "priority": 100,
+      "deps": [],
+      "argv": [
+        "{source}/experiments/model322_team_b4/KoMaP/train.py",
+        "--data",
+        "{run}/data_model322_group_cv",
+        "--train_splits",
+        "train_fold3",
+        "--out",
+        "{run}/outputs/model322_team_b4_group_oof/fold3",
+        "--arch",
+        "unet",
+        "--encoder",
+        "efficientnet-b4",
+        "--norm",
+        "imagenet",
+        "--input",
+        "gray3",
+        "--crop",
+        "1536",
+        "--scale",
+        "3",
+        "--target_width",
+        "0",
+        "--sample",
+        "area",
+        "--bs",
+        "2",
+        "--iters",
+        "16000",
+        "--lr",
+        "3e-4",
+        "--wd",
+        "1e-2",
+        "--dice_w",
+        "1",
+        "--cldice_w",
+        "0",
+        "--seed",
+        "0",
+        "--workers",
+        "4",
+        "--no_valid_eval"
+      ],
+      "requires": [],
+      "produces": [
+        "{run}/outputs/model322_team_b4_group_oof/fold3/last.pt",
+        "{run}/outputs/model322_team_b4_group_oof/fold3"
+      ]
+    },
+    {
+      "id": "oof_model322_fold3",
+      "serial_index": 26,
+      "kind": "gpu",
+      "priority": 2,
+      "deps": [
+        "train_model322_fold3"
+      ],
+      "argv": [
+        "{source}/experiments/model322_team_b4/KoMaP/predict.py",
+        "--data",
+        "{run}/data_model322_group_cv",
+        "--split",
+        "oof_fold3",
+        "--runs",
+        "{run}/outputs/model322_team_b4_group_oof/fold3",
+        "--out",
+        "{run}/outputs/model322_team_b4_group_oof/fold3_oof",
+        "--save_probs"
+      ],
+      "requires": [
+        "{run}/outputs/model322_team_b4_group_oof/fold3"
+      ],
+      "produces": [
+        "{run}/outputs/model322_team_b4_group_oof/fold3_oof/probabilities.npz"
+      ]
+    },
+    {
+      "id": "train_model322_fold4",
+      "serial_index": 27,
+      "kind": "gpu",
+      "priority": 100,
+      "deps": [],
+      "argv": [
+        "{source}/experiments/model322_team_b4/KoMaP/train.py",
+        "--data",
+        "{run}/data_model322_group_cv",
+        "--train_splits",
+        "train_fold4",
+        "--out",
+        "{run}/outputs/model322_team_b4_group_oof/fold4",
+        "--arch",
+        "unet",
+        "--encoder",
+        "efficientnet-b4",
+        "--norm",
+        "imagenet",
+        "--input",
+        "gray3",
+        "--crop",
+        "1536",
+        "--scale",
+        "3",
+        "--target_width",
+        "0",
+        "--sample",
+        "area",
+        "--bs",
+        "2",
+        "--iters",
+        "16000",
+        "--lr",
+        "3e-4",
+        "--wd",
+        "1e-2",
+        "--dice_w",
+        "1",
+        "--cldice_w",
+        "0",
+        "--seed",
+        "0",
+        "--workers",
+        "4",
+        "--no_valid_eval"
+      ],
+      "requires": [],
+      "produces": [
+        "{run}/outputs/model322_team_b4_group_oof/fold4/last.pt",
+        "{run}/outputs/model322_team_b4_group_oof/fold4"
+      ]
+    },
+    {
+      "id": "oof_model322_fold4",
+      "serial_index": 28,
+      "kind": "gpu",
+      "priority": 2,
+      "deps": [
+        "train_model322_fold4"
+      ],
+      "argv": [
+        "{source}/experiments/model322_team_b4/KoMaP/predict.py",
+        "--data",
+        "{run}/data_model322_group_cv",
+        "--split",
+        "oof_fold4",
+        "--runs",
+        "{run}/outputs/model322_team_b4_group_oof/fold4",
+        "--out",
+        "{run}/outputs/model322_team_b4_group_oof/fold4_oof",
+        "--save_probs"
+      ],
+      "requires": [
+        "{run}/outputs/model322_team_b4_group_oof/fold4"
+      ],
+      "produces": [
+        "{run}/outputs/model322_team_b4_group_oof/fold4_oof/probabilities.npz"
+      ]
+    },
+    {
+      "id": "aggregate_model322",
+      "serial_index": 29,
+      "kind": "cpu",
+      "priority": 2,
+      "deps": [
+        "oof_model322_fold3",
+        "oof_model322_fold4"
+      ],
+      "argv": [
+        "{source}/experiments/model322_team_b4/KoMaP/aggregate_oof.py",
+        "--runs",
+        "{run}/outputs/model322_team_b4_group_oof",
+        "--folds",
+        "4",
+        "--expected-images",
+        "70"
+      ],
+      "requires": [],
+      "produces": [
+        "{run}/outputs/model322_team_b4_group_oof/train_oof_probs.npz"
+      ]
+    },
+    {
+      "id": "valid_model322",
+      "serial_index": 30,
+      "kind": "gpu",
+      "priority": 2,
+      "deps": [
+        "aggregate_model322"
+      ],
+      "argv": [
+        "{source}/experiments/model322_team_b4/KoMaP/predict.py",
+        "--data",
+        "{run}/data",
+        "--split",
+        "valid",
+        "--runs",
+        "{run}/outputs/model322_team_b4_group_oof/fold1",
+        "{run}/outputs/model322_team_b4_group_oof/fold2",
+        "{run}/outputs/model322_team_b4_group_oof/fold3",
+        "{run}/outputs/model322_team_b4_group_oof/fold4",
+        "--out",
+        "{run}/outputs/model322_team_b4_group_oof/valid_ensemble",
+        "--save_probs"
+      ],
+      "requires": [
+        "{run}/outputs/model322_team_b4_group_oof/fold1",
+        "{run}/outputs/model322_team_b4_group_oof/fold2",
+        "{run}/outputs/model322_team_b4_group_oof/fold3",
+        "{run}/outputs/model322_team_b4_group_oof/fold4"
+      ],
+      "produces": [
+        "{run}/outputs/model322_team_b4_group_oof/valid_ensemble/probabilities.npz"
+      ]
+    },
+    {
+      "id": "train_model326_fold1",
+      "serial_index": 31,
+      "kind": "gpu",
+      "priority": 100,
+      "deps": [],
+      "argv": [
+        "{source}/experiments/model326_hybrid_fullstats/KoMaP/train.py",
+        "--data",
+        "{run}/data_model322_group_cv",
+        "--train_splits",
+        "train_fold1",
+        "--out",
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold1",
+        "--arch",
+        "unet",
+        "--encoder",
+        "efficientnet-b4",
+        "--norm",
+        "image_global",
+        "--input",
+        "zcdf3",
+        "--crop",
+        "1536",
+        "--scale",
+        "3",
+        "--target_width",
+        "0",
+        "--sample",
+        "area",
+        "--bs",
+        "2",
+        "--iters",
+        "16000",
+        "--lr",
+        "3e-4",
+        "--wd",
+        "1e-2",
+        "--dice_w",
+        "1",
+        "--cldice_w",
+        "0",
+        "--seed",
+        "0",
+        "--workers",
+        "4",
+        "--no_valid_eval"
+      ],
+      "requires": [],
+      "produces": [
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold1/last.pt",
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold1"
+      ]
+    },
+    {
+      "id": "oof_model326_fold1",
+      "serial_index": 32,
+      "kind": "gpu",
+      "priority": 2,
+      "deps": [
+        "train_model326_fold1"
+      ],
+      "argv": [
+        "{source}/experiments/model326_hybrid_fullstats/KoMaP/predict.py",
+        "--data",
+        "{run}/data_model322_group_cv",
+        "--split",
+        "oof_fold1",
+        "--runs",
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold1",
+        "--out",
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold1_oof",
+        "--save_probs"
+      ],
+      "requires": [
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold1"
+      ],
+      "produces": [
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold1_oof/probabilities.npz"
+      ]
+    },
+    {
+      "id": "train_model326_fold2",
+      "serial_index": 33,
+      "kind": "gpu",
+      "priority": 100,
+      "deps": [],
+      "argv": [
+        "{source}/experiments/model326_hybrid_fullstats/KoMaP/train.py",
+        "--data",
+        "{run}/data_model322_group_cv",
+        "--train_splits",
+        "train_fold2",
+        "--out",
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold2",
+        "--arch",
+        "unet",
+        "--encoder",
+        "efficientnet-b4",
+        "--norm",
+        "image_global",
+        "--input",
+        "zcdf3",
+        "--crop",
+        "1536",
+        "--scale",
+        "3",
+        "--target_width",
+        "0",
+        "--sample",
+        "area",
+        "--bs",
+        "2",
+        "--iters",
+        "16000",
+        "--lr",
+        "3e-4",
+        "--wd",
+        "1e-2",
+        "--dice_w",
+        "1",
+        "--cldice_w",
+        "0",
+        "--seed",
+        "0",
+        "--workers",
+        "4",
+        "--no_valid_eval"
+      ],
+      "requires": [],
+      "produces": [
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold2/last.pt",
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold2"
+      ]
+    },
+    {
+      "id": "oof_model326_fold2",
+      "serial_index": 34,
+      "kind": "gpu",
+      "priority": 2,
+      "deps": [
+        "train_model326_fold2"
+      ],
+      "argv": [
+        "{source}/experiments/model326_hybrid_fullstats/KoMaP/predict.py",
+        "--data",
+        "{run}/data_model322_group_cv",
+        "--split",
+        "oof_fold2",
+        "--runs",
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold2",
+        "--out",
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold2_oof",
+        "--save_probs"
+      ],
+      "requires": [
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold2"
+      ],
+      "produces": [
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold2_oof/probabilities.npz"
+      ]
+    },
+    {
+      "id": "train_model326_fold3",
+      "serial_index": 35,
+      "kind": "gpu",
+      "priority": 100,
+      "deps": [],
+      "argv": [
+        "{source}/experiments/model326_hybrid_fullstats/KoMaP/train.py",
+        "--data",
+        "{run}/data_model322_group_cv",
+        "--train_splits",
+        "train_fold3",
+        "--out",
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold3",
+        "--arch",
+        "unet",
+        "--encoder",
+        "efficientnet-b4",
+        "--norm",
+        "image_global",
+        "--input",
+        "zcdf3",
+        "--crop",
+        "1536",
+        "--scale",
+        "3",
+        "--target_width",
+        "0",
+        "--sample",
+        "area",
+        "--bs",
+        "2",
+        "--iters",
+        "16000",
+        "--lr",
+        "3e-4",
+        "--wd",
+        "1e-2",
+        "--dice_w",
+        "1",
+        "--cldice_w",
+        "0",
+        "--seed",
+        "0",
+        "--workers",
+        "4",
+        "--no_valid_eval"
+      ],
+      "requires": [],
+      "produces": [
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold3/last.pt",
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold3"
+      ]
+    },
+    {
+      "id": "oof_model326_fold3",
+      "serial_index": 36,
+      "kind": "gpu",
+      "priority": 2,
+      "deps": [
+        "train_model326_fold3"
+      ],
+      "argv": [
+        "{source}/experiments/model326_hybrid_fullstats/KoMaP/predict.py",
+        "--data",
+        "{run}/data_model322_group_cv",
+        "--split",
+        "oof_fold3",
+        "--runs",
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold3",
+        "--out",
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold3_oof",
+        "--save_probs"
+      ],
+      "requires": [
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold3"
+      ],
+      "produces": [
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold3_oof/probabilities.npz"
+      ]
+    },
+    {
+      "id": "train_model326_fold4",
+      "serial_index": 37,
+      "kind": "gpu",
+      "priority": 100,
+      "deps": [],
+      "argv": [
+        "{source}/experiments/model326_hybrid_fullstats/KoMaP/train.py",
+        "--data",
+        "{run}/data_model322_group_cv",
+        "--train_splits",
+        "train_fold4",
+        "--out",
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold4",
+        "--arch",
+        "unet",
+        "--encoder",
+        "efficientnet-b4",
+        "--norm",
+        "image_global",
+        "--input",
+        "zcdf3",
+        "--crop",
+        "1536",
+        "--scale",
+        "3",
+        "--target_width",
+        "0",
+        "--sample",
+        "area",
+        "--bs",
+        "2",
+        "--iters",
+        "16000",
+        "--lr",
+        "3e-4",
+        "--wd",
+        "1e-2",
+        "--dice_w",
+        "1",
+        "--cldice_w",
+        "0",
+        "--seed",
+        "0",
+        "--workers",
+        "4",
+        "--no_valid_eval"
+      ],
+      "requires": [],
+      "produces": [
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold4/last.pt",
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold4"
+      ]
+    },
+    {
+      "id": "oof_model326_fold4",
+      "serial_index": 38,
+      "kind": "gpu",
+      "priority": 2,
+      "deps": [
+        "train_model326_fold4"
+      ],
+      "argv": [
+        "{source}/experiments/model326_hybrid_fullstats/KoMaP/predict.py",
+        "--data",
+        "{run}/data_model322_group_cv",
+        "--split",
+        "oof_fold4",
+        "--runs",
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold4",
+        "--out",
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold4_oof",
+        "--save_probs"
+      ],
+      "requires": [
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold4"
+      ],
+      "produces": [
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold4_oof/probabilities.npz"
+      ]
+    },
+    {
+      "id": "aggregate_model326",
+      "serial_index": 39,
+      "kind": "cpu",
+      "priority": 2,
+      "deps": [
+        "oof_model326_fold1",
+        "oof_model326_fold2",
+        "oof_model326_fold3",
+        "oof_model326_fold4"
+      ],
+      "argv": [
+        "{source}/experiments/model326_hybrid_fullstats/KoMaP/aggregate_oof.py",
+        "--runs",
+        "{run}/outputs/model326_hybrid_fullstats_group_oof",
+        "--folds",
+        "4",
+        "--expected-images",
+        "70"
+      ],
+      "requires": [],
+      "produces": [
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/train_oof_probs.npz"
+      ]
+    },
+    {
+      "id": "valid_model326",
+      "serial_index": 40,
+      "kind": "gpu",
+      "priority": 2,
+      "deps": [
+        "aggregate_model326"
+      ],
+      "argv": [
+        "{source}/experiments/model326_hybrid_fullstats/KoMaP/predict.py",
+        "--data",
+        "{run}/data",
+        "--split",
+        "valid",
+        "--runs",
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold1",
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold2",
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold3",
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold4",
+        "--out",
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/valid_ensemble",
+        "--save_probs"
+      ],
+      "requires": [
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold1",
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold2",
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold3",
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/fold4"
+      ],
+      "produces": [
+        "{run}/outputs/model326_hybrid_fullstats_group_oof/valid_ensemble/probabilities.npz"
+      ]
+    },
+    {
+      "id": "train_model329_fold1",
+      "serial_index": 41,
+      "kind": "gpu",
+      "priority": 100,
+      "deps": [],
+      "argv": [
+        "{source}/experiments/model326_hybrid_fullstats/KoMaP/train.py",
+        "--data",
+        "{run}/data_model322_group_cv",
+        "--train_splits",
+        "train_fold1",
+        "--out",
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold1",
+        "--arch",
+        "unet",
+        "--encoder",
+        "efficientnet-b4",
+        "--norm",
+        "image_global",
+        "--input",
+        "zcdf3",
+        "--crop",
+        "1536",
+        "--scale",
+        "1",
+        "--target_width",
+        "4000",
+        "--sample",
+        "uniform",
+        "--bs",
+        "2",
+        "--iters",
+        "16000",
+        "--lr",
+        "3e-4",
+        "--wd",
+        "1e-2",
+        "--dice_w",
+        "1",
+        "--cldice_w",
+        "0",
+        "--seed",
+        "0",
+        "--workers",
+        "4",
+        "--no_valid_eval"
+      ],
+      "requires": [],
+      "produces": [
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold1/last.pt",
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold1"
+      ]
+    },
+    {
+      "id": "oof_model329_fold1",
+      "serial_index": 42,
+      "kind": "gpu",
+      "priority": 2,
+      "deps": [
+        "train_model329_fold1"
+      ],
+      "argv": [
+        "{source}/experiments/model326_hybrid_fullstats/KoMaP/predict.py",
+        "--data",
+        "{run}/data_model322_group_cv",
+        "--split",
+        "oof_fold1",
+        "--runs",
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold1",
+        "--out",
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold1_oof",
+        "--save_probs"
+      ],
+      "requires": [
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold1"
+      ],
+      "produces": [
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold1_oof/probabilities.npz"
+      ]
+    },
+    {
+      "id": "train_model329_fold2",
+      "serial_index": 43,
+      "kind": "gpu",
+      "priority": 100,
+      "deps": [],
+      "argv": [
+        "{source}/experiments/model326_hybrid_fullstats/KoMaP/train.py",
+        "--data",
+        "{run}/data_model322_group_cv",
+        "--train_splits",
+        "train_fold2",
+        "--out",
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold2",
+        "--arch",
+        "unet",
+        "--encoder",
+        "efficientnet-b4",
+        "--norm",
+        "image_global",
+        "--input",
+        "zcdf3",
+        "--crop",
+        "1536",
+        "--scale",
+        "1",
+        "--target_width",
+        "4000",
+        "--sample",
+        "uniform",
+        "--bs",
+        "2",
+        "--iters",
+        "16000",
+        "--lr",
+        "3e-4",
+        "--wd",
+        "1e-2",
+        "--dice_w",
+        "1",
+        "--cldice_w",
+        "0",
+        "--seed",
+        "0",
+        "--workers",
+        "4",
+        "--no_valid_eval"
+      ],
+      "requires": [],
+      "produces": [
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold2/last.pt",
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold2"
+      ]
+    },
+    {
+      "id": "oof_model329_fold2",
+      "serial_index": 44,
+      "kind": "gpu",
+      "priority": 2,
+      "deps": [
+        "train_model329_fold2"
+      ],
+      "argv": [
+        "{source}/experiments/model326_hybrid_fullstats/KoMaP/predict.py",
+        "--data",
+        "{run}/data_model322_group_cv",
+        "--split",
+        "oof_fold2",
+        "--runs",
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold2",
+        "--out",
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold2_oof",
+        "--save_probs"
+      ],
+      "requires": [
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold2"
+      ],
+      "produces": [
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold2_oof/probabilities.npz"
+      ]
+    },
+    {
+      "id": "train_model329_fold3",
+      "serial_index": 45,
+      "kind": "gpu",
+      "priority": 100,
+      "deps": [],
+      "argv": [
+        "{source}/experiments/model326_hybrid_fullstats/KoMaP/train.py",
+        "--data",
+        "{run}/data_model322_group_cv",
+        "--train_splits",
+        "train_fold3",
+        "--out",
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold3",
+        "--arch",
+        "unet",
+        "--encoder",
+        "efficientnet-b4",
+        "--norm",
+        "image_global",
+        "--input",
+        "zcdf3",
+        "--crop",
+        "1536",
+        "--scale",
+        "1",
+        "--target_width",
+        "4000",
+        "--sample",
+        "uniform",
+        "--bs",
+        "2",
+        "--iters",
+        "16000",
+        "--lr",
+        "3e-4",
+        "--wd",
+        "1e-2",
+        "--dice_w",
+        "1",
+        "--cldice_w",
+        "0",
+        "--seed",
+        "0",
+        "--workers",
+        "4",
+        "--no_valid_eval"
+      ],
+      "requires": [],
+      "produces": [
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold3/last.pt",
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold3"
+      ]
+    },
+    {
+      "id": "oof_model329_fold3",
+      "serial_index": 46,
+      "kind": "gpu",
+      "priority": 2,
+      "deps": [
+        "train_model329_fold3"
+      ],
+      "argv": [
+        "{source}/experiments/model326_hybrid_fullstats/KoMaP/predict.py",
+        "--data",
+        "{run}/data_model322_group_cv",
+        "--split",
+        "oof_fold3",
+        "--runs",
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold3",
+        "--out",
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold3_oof",
+        "--save_probs"
+      ],
+      "requires": [
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold3"
+      ],
+      "produces": [
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold3_oof/probabilities.npz"
+      ]
+    },
+    {
+      "id": "train_model329_fold4",
+      "serial_index": 47,
+      "kind": "gpu",
+      "priority": 100,
+      "deps": [],
+      "argv": [
+        "{source}/experiments/model326_hybrid_fullstats/KoMaP/train.py",
+        "--data",
+        "{run}/data_model322_group_cv",
+        "--train_splits",
+        "train_fold4",
+        "--out",
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold4",
+        "--arch",
+        "unet",
+        "--encoder",
+        "efficientnet-b4",
+        "--norm",
+        "image_global",
+        "--input",
+        "zcdf3",
+        "--crop",
+        "1536",
+        "--scale",
+        "1",
+        "--target_width",
+        "4000",
+        "--sample",
+        "uniform",
+        "--bs",
+        "2",
+        "--iters",
+        "16000",
+        "--lr",
+        "3e-4",
+        "--wd",
+        "1e-2",
+        "--dice_w",
+        "1",
+        "--cldice_w",
+        "0",
+        "--seed",
+        "0",
+        "--workers",
+        "4",
+        "--no_valid_eval"
+      ],
+      "requires": [],
+      "produces": [
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold4/last.pt",
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold4"
+      ]
+    },
+    {
+      "id": "oof_model329_fold4",
+      "serial_index": 48,
+      "kind": "gpu",
+      "priority": 2,
+      "deps": [
+        "train_model329_fold4"
+      ],
+      "argv": [
+        "{source}/experiments/model326_hybrid_fullstats/KoMaP/predict.py",
+        "--data",
+        "{run}/data_model322_group_cv",
+        "--split",
+        "oof_fold4",
+        "--runs",
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold4",
+        "--out",
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold4_oof",
+        "--save_probs"
+      ],
+      "requires": [
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold4"
+      ],
+      "produces": [
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold4_oof/probabilities.npz"
+      ]
+    },
+    {
+      "id": "aggregate_model329",
+      "serial_index": 49,
+      "kind": "cpu",
+      "priority": 2,
+      "deps": [
+        "oof_model329_fold1",
+        "oof_model329_fold2",
+        "oof_model329_fold3",
+        "oof_model329_fold4"
+      ],
+      "argv": [
+        "{source}/experiments/model326_hybrid_fullstats/KoMaP/aggregate_oof.py",
+        "--runs",
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof",
+        "--folds",
+        "4",
+        "--expected-images",
+        "70"
+      ],
+      "requires": [],
+      "produces": [
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/train_oof_probs.npz"
+      ]
+    },
+    {
+      "id": "valid_model329",
+      "serial_index": 50,
+      "kind": "gpu",
+      "priority": 2,
+      "deps": [
+        "aggregate_model329"
+      ],
+      "argv": [
+        "{source}/experiments/model326_hybrid_fullstats/KoMaP/predict.py",
+        "--data",
+        "{run}/data",
+        "--split",
+        "valid",
+        "--runs",
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold1",
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold2",
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold3",
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold4",
+        "--out",
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/valid_ensemble",
+        "--save_probs"
+      ],
+      "requires": [
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold1",
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold2",
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold3",
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/fold4"
+      ],
+      "produces": [
+        "{run}/outputs/model329_fullstats_width4000_uniform_group_oof/valid_ensemble/probabilities.npz"
+      ]
+    },
+    {
+      "id": "evaluate_model347",
+      "serial_index": 54,
+      "kind": "gpu",
+      "priority": 1,
+      "deps": [],
+      "argv": [
+        "{source}/experiments/model336_hrnet_best/evaluate_image_mean.py",
+        "--checkpoint",
+        "{run}/outputs/model347_hrnet_inverse_ce_finetune/last.pt",
+        "--data-root",
+        "{run}/data",
+        "--split",
+        "valid",
+        "--output-dir",
+        "{run}/outputs/model347_hrnet_inverse_ce_finetune/valid_eval",
+        "--device",
+        "cuda:0",
+        "--batch-size",
+        "2"
+      ],
+      "requires": [
+        "{run}/outputs/model347_hrnet_inverse_ce_finetune/last.pt"
+      ],
+      "produces": [
+        "{run}/outputs/model347_hrnet_inverse_ce_finetune/valid_eval/valid_probabilities.npz"
+      ]
+    },
+    {
+      "id": "evaluate_model361",
+      "serial_index": 56,
+      "kind": "gpu",
+      "priority": 0,
+      "deps": [],
+      "argv": [
+        "{source}/experiments/model336_hrnet_best/evaluate_image_mean.py",
+        "--checkpoint",
+        "{run}/outputs/model361_hrnet_scale3_finetune/last.pt",
+        "--data-root",
+        "{run}/data",
+        "--split",
+        "valid",
+        "--output-dir",
+        "{run}/outputs/model361_hrnet_scale3_finetune/valid_eval",
+        "--device",
+        "cuda:0",
+        "--patch-size",
+        "512",
+        "--overlap",
+        "114",
+        "--input-scale",
+        "3.0",
+        "--batch-size",
+        "2",
+        "--tta-mode",
+        "flip4"
+      ],
+      "requires": [
+        "{run}/outputs/model361_hrnet_scale3_finetune/last.pt"
+      ],
+      "produces": [
+        "{run}/outputs/model361_hrnet_scale3_finetune/valid_eval/valid_probabilities.npz"
+      ]
+    },
+    {
+      "id": "export_model364",
+      "serial_index": 58,
+      "kind": "cpu",
+      "priority": 2,
+      "deps": [
+        "train_model257",
+        "train_model269",
+        "train_model322_fold3",
+        "oof_model322_fold3",
+        "train_model322_fold4",
+        "oof_model322_fold4",
+        "aggregate_model322",
+        "valid_model322",
+        "train_model326_fold1",
+        "oof_model326_fold1",
+        "train_model326_fold2",
+        "oof_model326_fold2",
+        "train_model326_fold3",
+        "oof_model326_fold3",
+        "train_model326_fold4",
+        "oof_model326_fold4",
+        "aggregate_model326",
+        "valid_model326",
+        "train_model329_fold1",
+        "oof_model329_fold1",
+        "train_model329_fold2",
+        "oof_model329_fold2",
+        "train_model329_fold3",
+        "oof_model329_fold3",
+        "train_model329_fold4",
+        "oof_model329_fold4",
+        "aggregate_model329",
+        "valid_model329",
+        "evaluate_model347",
+        "evaluate_model361"
+      ],
+      "argv": [
+        "{source}/experiments/export_model364_fixed.py",
+        "--root",
+        "{run}"
+      ],
+      "requires": [],
+      "produces": [
+        "{run}/result_path.txt"
+      ]
+    }
+  ],
+  "parent_run": "/Data3/sppark/komap/experiments/model364_reproduction_gpu4567_v1/outputs/runs/model364_train_20261006T075724_689269Z",
+  "completed_reused": [
+    "build_model183_cache",
+    "evaluate_model336",
+    "infer_model220_tent",
+    "infer_model351_d4",
+    "infer_route47",
+    "oof_model322_fold1",
+    "oof_model322_fold2",
+    "train_model109",
+    "train_model123",
+    "train_model181",
+    "train_model194",
+    "train_model195",
+    "train_model239",
+    "train_model242",
+    "train_model322_fold1",
+    "train_model322_fold2",
+    "train_model336",
+    "train_model347",
+    "train_model361",
+    "train_model6",
+    "train_model62",
+    "train_model97",
+    "train_model98",
+    "train_restart51",
+    "train_restart59",
+    "train_restart61"
+  ]
+}

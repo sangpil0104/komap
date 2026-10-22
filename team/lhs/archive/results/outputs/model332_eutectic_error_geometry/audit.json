@@ -1,0 +1,813 @@
+{
+  "audit": "Model322 grouped train OOF only; no valid/test images or masks read",
+  "image_count": 70,
+  "specimen_group_count": 59,
+  "class_order": [
+    "Al",
+    "Al3Ni",
+    "Primary_Si",
+    "Eutectic_Si"
+  ],
+  "empty_union_policy": "IoU=0",
+  "image_mean_miou_pct": 78.53463555945274,
+  "per_image_class_iou_mean_pct": {
+    "Al": 92.7726954658623,
+    "Al3Ni": 79.3327655954268,
+    "Primary_Si": 86.31452067112471,
+    "Eutectic_Si": 55.71856050539713
+  },
+  "eutectic_class_iou_group_bootstrap_95ci_pct": [
+    0.5238362153723287,
+    0.5914468735807316
+  ],
+  "boundary_band": "GT Eutectic inner boundary, dilated by 2 iterations with 8-connectivity",
+  "gt_eutectic_pixels_in_band_pct": 95.7091295875489,
+  "eutectic_false_negative_pixels_in_band_pct": 93.84780009171939,
+  "eutectic_false_positive_pixels_in_band_pct": 36.72221224764062,
+  "eutectic_pooled_iou_near_boundary_pct": 65.22591413436548,
+  "eutectic_pooled_iou_far_from_boundary_pct": 12.88116054673812,
+  "eutectic_false_negative_prediction_counts": {
+    "Al": 402633,
+    "Al3Ni": 746385,
+    "Primary_Si": 250904,
+    "Eutectic_Si": 0
+  },
+  "eutectic_false_positive_gt_source_counts": {
+    "Al": 265838,
+    "Al3Ni": 603093,
+    "Primary_Si": 256151,
+    "Eutectic_Si": 0
+  },
+  "per_image": [
+    {
+      "image": "A101_step3_sample3",
+      "specimen_group": "A101",
+      "image_miou_pct": 83.04329335457264,
+      "class_iou_pct": {
+        "Al": 94.02605005566122,
+        "Al3Ni": 85.28489760474709,
+        "Primary_Si": 93.41852487135506,
+        "Eutectic_Si": 59.443700886527175
+      }
+    },
+    {
+      "image": "A106_step4_sample1",
+      "specimen_group": "A106",
+      "image_miou_pct": 76.4391686014424,
+      "class_iou_pct": {
+        "Al": 93.0548441035628,
+        "Al3Ni": 83.7495991241554,
+        "Primary_Si": 79.18826820827643,
+        "Eutectic_Si": 49.763962969775
+      }
+    },
+    {
+      "image": "A108_step2_sample2",
+      "specimen_group": "A108",
+      "image_miou_pct": 88.27557143811526,
+      "class_iou_pct": {
+        "Al": 95.62314475784162,
+        "Al3Ni": 92.95371401304278,
+        "Primary_Si": 92.72281856160573,
+        "Eutectic_Si": 71.80260841997092
+      }
+    },
+    {
+      "image": "A109_step1_sample3",
+      "specimen_group": "A109",
+      "image_miou_pct": 84.7491355549016,
+      "class_iou_pct": {
+        "Al": 94.99670836076366,
+        "Al3Ni": 90.70915691811214,
+        "Primary_Si": 85.79777350759898,
+        "Eutectic_Si": 67.49290343313159
+      }
+    },
+    {
+      "image": "A111_step1_sample2",
+      "specimen_group": "A111",
+      "image_miou_pct": 80.3105468910918,
+      "class_iou_pct": {
+        "Al": 94.94957441320608,
+        "Al3Ni": 75.27836204594017,
+        "Primary_Si": 93.59167218244178,
+        "Eutectic_Si": 57.42257892277915
+      }
+    },
+    {
+      "image": "A111_step3_sample4",
+      "specimen_group": "A111",
+      "image_miou_pct": 81.54809809891461,
+      "class_iou_pct": {
+        "Al": 94.11920589864991,
+        "Al3Ni": 78.69494195416725,
+        "Primary_Si": 97.85071115066137,
+        "Eutectic_Si": 55.527533392179876
+      }
+    },
+    {
+      "image": "A118_step2_sample1",
+      "specimen_group": "A118",
+      "image_miou_pct": 85.41938329098504,
+      "class_iou_pct": {
+        "Al": 95.7097514988101,
+        "Al3Ni": 86.34903595709447,
+        "Primary_Si": 87.44099016359672,
+        "Eutectic_Si": 72.17775554443888
+      }
+    },
+    {
+      "image": "A121_step2_sample2",
+      "specimen_group": "A121",
+      "image_miou_pct": 80.59193493569859,
+      "class_iou_pct": {
+        "Al": 95.46092202368996,
+        "Al3Ni": 81.75843776516835,
+        "Primary_Si": 95.35148813934137,
+        "Eutectic_Si": 49.79689181459471
+      }
+    },
+    {
+      "image": "A123_step1_sample1",
+      "specimen_group": "A123",
+      "image_miou_pct": 78.54202475306083,
+      "class_iou_pct": {
+        "Al": 93.21739352196778,
+        "Al3Ni": 77.88290017386592,
+        "Primary_Si": 88.3848365835659,
+        "Eutectic_Si": 54.68296873284375
+      }
+    },
+    {
+      "image": "A123_step4_sample2",
+      "specimen_group": "A123",
+      "image_miou_pct": 86.19999949696803,
+      "class_iou_pct": {
+        "Al": 94.33657923692954,
+        "Al3Ni": 86.87066808209067,
+        "Primary_Si": 93.68352838028437,
+        "Eutectic_Si": 69.90922228856755
+      }
+    },
+    {
+      "image": "A125_step2_sample1",
+      "specimen_group": "A125",
+      "image_miou_pct": 68.39313039895588,
+      "class_iou_pct": {
+        "Al": 95.02027445719202,
+        "Al3Ni": 68.50966551913737,
+        "Primary_Si": 84.73379466177093,
+        "Eutectic_Si": 25.30878695772313
+      }
+    },
+    {
+      "image": "A130_step1_sample1",
+      "specimen_group": "A130",
+      "image_miou_pct": 86.10691565147799,
+      "class_iou_pct": {
+        "Al": 95.32785752708726,
+        "Al3Ni": 92.23509025027812,
+        "Primary_Si": 90.60812937843285,
+        "Eutectic_Si": 66.25658545011372
+      }
+    },
+    {
+      "image": "A137_step4_sample2",
+      "specimen_group": "A137",
+      "image_miou_pct": 87.46893445606278,
+      "class_iou_pct": {
+        "Al": 94.49546838111233,
+        "Al3Ni": 86.6124965804825,
+        "Primary_Si": 96.86570801852304,
+        "Eutectic_Si": 71.90206484413325
+      }
+    },
+    {
+      "image": "A138_step4_sample3",
+      "specimen_group": "A138",
+      "image_miou_pct": 71.29989640243377,
+      "class_iou_pct": {
+        "Al": 90.12047021414703,
+        "Al3Ni": 75.40511055453972,
+        "Primary_Si": 86.11521547164203,
+        "Eutectic_Si": 33.5587893694063
+      }
+    },
+    {
+      "image": "A139_step3_sample4",
+      "specimen_group": "A139",
+      "image_miou_pct": 71.87681299350034,
+      "class_iou_pct": {
+        "Al": 93.91673465252279,
+        "Al3Ni": 77.73818548353508,
+        "Primary_Si": 93.94209724997621,
+        "Eutectic_Si": 21.910234587967288
+      }
+    },
+    {
+      "image": "A139_step4_sample3",
+      "specimen_group": "A139",
+      "image_miou_pct": 83.67786956171271,
+      "class_iou_pct": {
+        "Al": 95.07423070816724,
+        "Al3Ni": 80.99083780707812,
+        "Primary_Si": 98.41193364319994,
+        "Eutectic_Si": 60.234476088405586
+      }
+    },
+    {
+      "image": "A140_step4_sample2",
+      "specimen_group": "A140",
+      "image_miou_pct": 87.33265768812404,
+      "class_iou_pct": {
+        "Al": 95.17027382185096,
+        "Al3Ni": 91.34898448902852,
+        "Primary_Si": 90.93828963609691,
+        "Eutectic_Si": 71.8730828055198
+      }
+    },
+    {
+      "image": "A146_step2_sample1",
+      "specimen_group": "A146",
+      "image_miou_pct": 87.66001283523393,
+      "class_iou_pct": {
+        "Al": 94.88337809938756,
+        "Al3Ni": 93.38915351791208,
+        "Primary_Si": 90.62477100523208,
+        "Eutectic_Si": 71.74274871840393
+      }
+    },
+    {
+      "image": "A147_step4_sample4",
+      "specimen_group": "A147",
+      "image_miou_pct": 69.09829848205909,
+      "class_iou_pct": {
+        "Al": 86.24331006734084,
+        "Al3Ni": 82.23937099062057,
+        "Primary_Si": 85.95645385446872,
+        "Eutectic_Si": 21.95405901580621
+      }
+    },
+    {
+      "image": "A150_step4_sample1",
+      "specimen_group": "A150",
+      "image_miou_pct": 71.36632414928043,
+      "class_iou_pct": {
+        "Al": 95.57998194261765,
+        "Al3Ni": 83.93925105624812,
+        "Primary_Si": 73.17087363864655,
+        "Eutectic_Si": 32.7751899596094
+      }
+    },
+    {
+      "image": "A152_step2_sample1",
+      "specimen_group": "A152",
+      "image_miou_pct": 82.83956505360383,
+      "class_iou_pct": {
+        "Al": 94.93285274428507,
+        "Al3Ni": 85.53874527679481,
+        "Primary_Si": 85.13256991172294,
+        "Eutectic_Si": 65.75409228161254
+      }
+    },
+    {
+      "image": "A153_step1_sample4",
+      "specimen_group": "A153",
+      "image_miou_pct": 81.58153137236786,
+      "class_iou_pct": {
+        "Al": 93.16241760441541,
+        "Al3Ni": 77.44408673384395,
+        "Primary_Si": 94.09836483763169,
+        "Eutectic_Si": 61.62125631358042
+      }
+    },
+    {
+      "image": "A154_step2_sample3",
+      "specimen_group": "A154",
+      "image_miou_pct": 80.55996161150193,
+      "class_iou_pct": {
+        "Al": 93.91592517510531,
+        "Al3Ni": 82.77870971561643,
+        "Primary_Si": 80.95394447069376,
+        "Eutectic_Si": 64.59126708459227
+      }
+    },
+    {
+      "image": "A155_step3_sample2",
+      "specimen_group": "A155",
+      "image_miou_pct": 86.50840642456019,
+      "class_iou_pct": {
+        "Al": 96.12233207979479,
+        "Al3Ni": 92.57757604537534,
+        "Primary_Si": 89.67607923008963,
+        "Eutectic_Si": 67.65763834298102
+      }
+    },
+    {
+      "image": "A156_step4_sample1",
+      "specimen_group": "A156",
+      "image_miou_pct": 73.5304487759161,
+      "class_iou_pct": {
+        "Al": 92.04816274809727,
+        "Al3Ni": 77.88290861763979,
+        "Primary_Si": 82.261371607403,
+        "Eutectic_Si": 41.929352130524315
+      }
+    },
+    {
+      "image": "A156_step4_sample2",
+      "specimen_group": "A156",
+      "image_miou_pct": 77.05062700947146,
+      "class_iou_pct": {
+        "Al": 92.07292508803903,
+        "Al3Ni": 80.43296837802303,
+        "Primary_Si": 88.09074208570085,
+        "Eutectic_Si": 47.60587248612288
+      }
+    },
+    {
+      "image": "A159_step4_sample4",
+      "specimen_group": "A159",
+      "image_miou_pct": 76.23913474420432,
+      "class_iou_pct": {
+        "Al": 89.17983265580966,
+        "Al3Ni": 80.22363033455436,
+        "Primary_Si": 92.1324141911702,
+        "Eutectic_Si": 43.42066179528308
+      }
+    },
+    {
+      "image": "A15_step1_sample1",
+      "specimen_group": "A15",
+      "image_miou_pct": 86.01934461964464,
+      "class_iou_pct": {
+        "Al": 95.88524785577648,
+        "Al3Ni": 87.92668485815786,
+        "Primary_Si": 92.31930061924338,
+        "Eutectic_Si": 67.9461451454008
+      }
+    },
+    {
+      "image": "A164_step1_sample2",
+      "specimen_group": "A164",
+      "image_miou_pct": 66.61802406363904,
+      "class_iou_pct": {
+        "Al": 96.84043091605812,
+        "Al3Ni": 93.60285846212011,
+        "Primary_Si": 53.588830964561666,
+        "Eutectic_Si": 22.4399759118163
+      }
+    },
+    {
+      "image": "A164_step4_sample1",
+      "specimen_group": "A164",
+      "image_miou_pct": 87.57170849087592,
+      "class_iou_pct": {
+        "Al": 94.72521846419986,
+        "Al3Ni": 90.66723151874602,
+        "Primary_Si": 92.7245902083136,
+        "Eutectic_Si": 72.16979377224419
+      }
+    },
+    {
+      "image": "A166_step4_sample3",
+      "specimen_group": "A166",
+      "image_miou_pct": 83.28093982525584,
+      "class_iou_pct": {
+        "Al": 94.24823565510893,
+        "Al3Ni": 85.39447445476576,
+        "Primary_Si": 86.3368236278652,
+        "Eutectic_Si": 67.1442255632835
+      }
+    },
+    {
+      "image": "A167_step3_sample4",
+      "specimen_group": "A167",
+      "image_miou_pct": 78.08215847083473,
+      "class_iou_pct": {
+        "Al": 91.406328652832,
+        "Al3Ni": 83.91774819093031,
+        "Primary_Si": 86.98308491040027,
+        "Eutectic_Si": 50.021472129176324
+      }
+    },
+    {
+      "image": "A16_step4_sample4",
+      "specimen_group": "A16",
+      "image_miou_pct": 78.31909024815292,
+      "class_iou_pct": {
+        "Al": 93.52847268594475,
+        "Al3Ni": 67.60629921259842,
+        "Primary_Si": 91.62491495020721,
+        "Eutectic_Si": 60.51667414386122
+      }
+    },
+    {
+      "image": "A181_step4_sample4",
+      "specimen_group": "A181",
+      "image_miou_pct": 80.6391796834215,
+      "class_iou_pct": {
+        "Al": 92.24782519684872,
+        "Al3Ni": 83.37051633409587,
+        "Primary_Si": 96.86522143602177,
+        "Eutectic_Si": 50.07315576671964
+      }
+    },
+    {
+      "image": "A182_step4_sample3",
+      "specimen_group": "A182",
+      "image_miou_pct": 69.00690196163032,
+      "class_iou_pct": {
+        "Al": 94.82274671592143,
+        "Al3Ni": 85.85980842097983,
+        "Primary_Si": 58.544066525799195,
+        "Eutectic_Si": 36.800986183820825
+      }
+    },
+    {
+      "image": "A187_step2_sample1",
+      "specimen_group": "A187",
+      "image_miou_pct": 86.11365585699129,
+      "class_iou_pct": {
+        "Al": 94.44848640354357,
+        "Al3Ni": 89.27393530731142,
+        "Primary_Si": 96.53821158714608,
+        "Eutectic_Si": 64.19399012996408
+      }
+    },
+    {
+      "image": "A187_step4_sample4",
+      "specimen_group": "A187",
+      "image_miou_pct": 75.4952297951549,
+      "class_iou_pct": {
+        "Al": 86.38681586245663,
+        "Al3Ni": 77.58959638728093,
+        "Primary_Si": 95.17810026385224,
+        "Eutectic_Si": 42.826406667029794
+      }
+    },
+    {
+      "image": "A188_step4_sample1",
+      "specimen_group": "A188",
+      "image_miou_pct": 85.88911933992884,
+      "class_iou_pct": {
+        "Al": 94.5083368114476,
+        "Al3Ni": 90.15805183162871,
+        "Primary_Si": 91.9107620138548,
+        "Eutectic_Si": 66.97932670278429
+      }
+    },
+    {
+      "image": "A18_step2_sample1",
+      "specimen_group": "A18",
+      "image_miou_pct": 89.4189935798241,
+      "class_iou_pct": {
+        "Al": 97.72883653044204,
+        "Al3Ni": 93.35848909048252,
+        "Primary_Si": 93.60419988992223,
+        "Eutectic_Si": 72.98444880844966
+      }
+    },
+    {
+      "image": "A191_step3_sample1",
+      "specimen_group": "A191",
+      "image_miou_pct": 90.61557843068259,
+      "class_iou_pct": {
+        "Al": 95.9230252055007,
+        "Al3Ni": 90.92931047886886,
+        "Primary_Si": 95.36216096266934,
+        "Eutectic_Si": 80.24781707569147
+      }
+    },
+    {
+      "image": "A191_step4_sample1",
+      "specimen_group": "A191",
+      "image_miou_pct": 81.73944808888682,
+      "class_iou_pct": {
+        "Al": 93.89764568643093,
+        "Al3Ni": 79.18552809142311,
+        "Primary_Si": 90.93904785296164,
+        "Eutectic_Si": 62.93557072473159
+      }
+    },
+    {
+      "image": "A200_step4_sample3",
+      "specimen_group": "A200",
+      "image_miou_pct": 69.1350199487494,
+      "class_iou_pct": {
+        "Al": 94.19600635775649,
+        "Al3Ni": 84.22985931348262,
+        "Primary_Si": 62.4659222909703,
+        "Eutectic_Si": 35.64829183278822
+      }
+    },
+    {
+      "image": "A201_step3_sample1",
+      "specimen_group": "A201",
+      "image_miou_pct": 78.07067249428174,
+      "class_iou_pct": {
+        "Al": 91.9266108880728,
+        "Al3Ni": 82.60477482663158,
+        "Primary_Si": 84.46424711166623,
+        "Eutectic_Si": 53.28705715075635
+      }
+    },
+    {
+      "image": "A201_step3_sample4",
+      "specimen_group": "A201",
+      "image_miou_pct": 79.10991662819137,
+      "class_iou_pct": {
+        "Al": 91.30574592825934,
+        "Al3Ni": 80.56733952439626,
+        "Primary_Si": 92.73873671606047,
+        "Eutectic_Si": 51.82784434404941
+      }
+    },
+    {
+      "image": "A21_step2_sample4",
+      "specimen_group": "A21",
+      "image_miou_pct": 84.8262142009996,
+      "class_iou_pct": {
+        "Al": 95.16266807408455,
+        "Al3Ni": 78.26154665792386,
+        "Primary_Si": 90.21054990120926,
+        "Eutectic_Si": 75.6700921707808
+      }
+    },
+    {
+      "image": "A222_step2_sample2",
+      "specimen_group": "A222",
+      "image_miou_pct": 78.26483310987209,
+      "class_iou_pct": {
+        "Al": 94.75498116952517,
+        "Al3Ni": 77.9831593846669,
+        "Primary_Si": 80.59278852395171,
+        "Eutectic_Si": 59.72840336134454
+      }
+    },
+    {
+      "image": "A224_step1_sample2",
+      "specimen_group": "A224",
+      "image_miou_pct": 57.501976040220214,
+      "class_iou_pct": {
+        "Al": 79.16598218446488,
+        "Al3Ni": 58.12204907071313,
+        "Primary_Si": 49.669287102808305,
+        "Eutectic_Si": 43.05058580289455
+      }
+    },
+    {
+      "image": "A224_step4_sample2",
+      "specimen_group": "A224",
+      "image_miou_pct": 69.74790234904133,
+      "class_iou_pct": {
+        "Al": 84.38697199470337,
+        "Al3Ni": 73.25620230656013,
+        "Primary_Si": 76.21240400208059,
+        "Eutectic_Si": 45.13603109282121
+      }
+    },
+    {
+      "image": "A2_step4_sample1",
+      "specimen_group": "A2",
+      "image_miou_pct": 61.838316035298725,
+      "class_iou_pct": {
+        "Al": 78.11188769977842,
+        "Al3Ni": 49.930576703709626,
+        "Primary_Si": 79.47548397157432,
+        "Eutectic_Si": 39.8353157661325
+      }
+    },
+    {
+      "image": "A39_step2_sample3",
+      "specimen_group": "A39",
+      "image_miou_pct": 85.1345135788075,
+      "class_iou_pct": {
+        "Al": 95.04730569264835,
+        "Al3Ni": 83.30129416112037,
+        "Primary_Si": 90.70749468999696,
+        "Eutectic_Si": 71.48195977146436
+      }
+    },
+    {
+      "image": "A40_step3_sample4",
+      "specimen_group": "A40",
+      "image_miou_pct": 84.6367262512826,
+      "class_iou_pct": {
+        "Al": 94.62808127863204,
+        "Al3Ni": 83.87925045059559,
+        "Primary_Si": 91.16386543063845,
+        "Eutectic_Si": 68.87570784526427
+      }
+    },
+    {
+      "image": "A49_step2_sample2",
+      "specimen_group": "A49",
+      "image_miou_pct": 79.13152383104132,
+      "class_iou_pct": {
+        "Al": 95.31841669296308,
+        "Al3Ni": 77.52652007062291,
+        "Primary_Si": 92.33381040835592,
+        "Eutectic_Si": 51.34734815222336
+      }
+    },
+    {
+      "image": "A51_step4_sample4",
+      "specimen_group": "A51",
+      "image_miou_pct": 83.33657038333615,
+      "class_iou_pct": {
+        "Al": 93.57485546363434,
+        "Al3Ni": 75.22038876029767,
+        "Primary_Si": 94.84850657679836,
+        "Eutectic_Si": 69.70253073261424
+      }
+    },
+    {
+      "image": "A55_step3_sample4",
+      "specimen_group": "A55",
+      "image_miou_pct": 83.38168736609644,
+      "class_iou_pct": {
+        "Al": 94.60034120181483,
+        "Al3Ni": 85.4522179220006,
+        "Primary_Si": 94.08475642429467,
+        "Eutectic_Si": 59.38943391627567
+      }
+    },
+    {
+      "image": "A57_step1_sample3",
+      "specimen_group": "A57",
+      "image_miou_pct": 52.01039848860491,
+      "class_iou_pct": {
+        "Al": 92.48353272743518,
+        "Al3Ni": 48.24665812122322,
+        "Primary_Si": 0.0,
+        "Eutectic_Si": 67.31140310576129
+      }
+    },
+    {
+      "image": "A61_step2_sample2",
+      "specimen_group": "A61",
+      "image_miou_pct": 62.74677057809554,
+      "class_iou_pct": {
+        "Al": 84.96021032248923,
+        "Al3Ni": 28.481048093611776,
+        "Primary_Si": 81.7218859509398,
+        "Eutectic_Si": 55.8239379453414
+      }
+    },
+    {
+      "image": "A64_step2_sample3",
+      "specimen_group": "A64",
+      "image_miou_pct": 72.16481804914058,
+      "class_iou_pct": {
+        "Al": 93.96659314237394,
+        "Al3Ni": 71.77801019741142,
+        "Primary_Si": 93.96175248291893,
+        "Eutectic_Si": 28.952916373858045
+      }
+    },
+    {
+      "image": "A66_step3_sample2",
+      "specimen_group": "A66",
+      "image_miou_pct": 70.89567898578622,
+      "class_iou_pct": {
+        "Al": 91.58106944669389,
+        "Al3Ni": 58.37975858867224,
+        "Primary_Si": 97.23453870660492,
+        "Eutectic_Si": 36.387349201173784
+      }
+    },
+    {
+      "image": "A69_step4_sample4",
+      "specimen_group": "A69",
+      "image_miou_pct": 75.30758436722283,
+      "class_iou_pct": {
+        "Al": 92.7842248413418,
+        "Al3Ni": 77.41983938991275,
+        "Primary_Si": 93.09989701338826,
+        "Eutectic_Si": 37.926376224248564
+      }
+    },
+    {
+      "image": "A78_step4_sample1",
+      "specimen_group": "A78",
+      "image_miou_pct": 74.19913699329005,
+      "class_iou_pct": {
+        "Al": 82.95384523643881,
+        "Al3Ni": 70.2684805659634,
+        "Primary_Si": 96.01713062098501,
+        "Eutectic_Si": 47.55709154977299
+      }
+    },
+    {
+      "image": "A7_step1_sample2",
+      "specimen_group": "A7",
+      "image_miou_pct": 82.01443642774362,
+      "class_iou_pct": {
+        "Al": 96.91338719257394,
+        "Al3Ni": 79.02537674847659,
+        "Primary_Si": 88.87052205664659,
+        "Eutectic_Si": 63.24845971327737
+      }
+    },
+    {
+      "image": "A7_step4_sample3",
+      "specimen_group": "A7",
+      "image_miou_pct": 66.08126302138666,
+      "class_iou_pct": {
+        "Al": 84.73016312239726,
+        "Al3Ni": 53.77640853981569,
+        "Primary_Si": 85.71002164017611,
+        "Eutectic_Si": 40.10845878315758
+      }
+    },
+    {
+      "image": "A83_step1_sample2",
+      "specimen_group": "A83",
+      "image_miou_pct": 81.42022427313049,
+      "class_iou_pct": {
+        "Al": 93.55149735929427,
+        "Al3Ni": 77.98469387755102,
+        "Primary_Si": 93.3514437600993,
+        "Eutectic_Si": 60.793262095577326
+      }
+    },
+    {
+      "image": "A87_step2_sample2",
+      "specimen_group": "A87",
+      "image_miou_pct": 79.92653630937644,
+      "class_iou_pct": {
+        "Al": 93.0346886386589,
+        "Al3Ni": 71.9857773946773,
+        "Primary_Si": 93.07338627813937,
+        "Eutectic_Si": 61.61229292603018
+      }
+    },
+    {
+      "image": "A89_step1_sample2",
+      "specimen_group": "A89",
+      "image_miou_pct": 77.20793394558699,
+      "class_iou_pct": {
+        "Al": 91.64931077151834,
+        "Al3Ni": 73.80152496703549,
+        "Primary_Si": 88.78777334653783,
+        "Eutectic_Si": 54.5931266972563
+      }
+    },
+    {
+      "image": "A8_step2_sample3",
+      "specimen_group": "A8",
+      "image_miou_pct": 73.84164928302584,
+      "class_iou_pct": {
+        "Al": 90.19536883784546,
+        "Al3Ni": 72.83035738477795,
+        "Primary_Si": 76.1138374404165,
+        "Eutectic_Si": 56.22703346906346
+      }
+    },
+    {
+      "image": "A8_step3_sample3",
+      "specimen_group": "A8",
+      "image_miou_pct": 72.28076710377361,
+      "class_iou_pct": {
+        "Al": 88.09135586992467,
+        "Al3Ni": 68.23008735371157,
+        "Primary_Si": 80.07228785671899,
+        "Eutectic_Si": 52.729337334739235
+      }
+    },
+    {
+      "image": "A94_step4_sample2",
+      "specimen_group": "A94",
+      "image_miou_pct": 77.32608765381177,
+      "class_iou_pct": {
+        "Al": 92.99933493906603,
+        "Al3Ni": 78.8053744845018,
+        "Primary_Si": 77.9911648453848,
+        "Eutectic_Si": 59.50847634629442
+      }
+    },
+    {
+      "image": "A96_step1_sample1",
+      "specimen_group": "A96",
+      "image_miou_pct": 88.57043313110938,
+      "class_iou_pct": {
+        "Al": 96.42333844923584,
+        "Al3Ni": 92.79539229720135,
+        "Primary_Si": 88.84005145797599,
+        "Eutectic_Si": 76.22295032002438
+      }
+    },
+    {
+      "image": "A98_step2_sample4",
+      "specimen_group": "A98",
+      "image_miou_pct": 90.79584185224707,
+      "class_iou_pct": {
+        "Al": 96.23265260616871,
+        "Al3Ni": 91.49060689413004,
+        "Primary_Si": 94.54021991744423,
+        "Eutectic_Si": 80.91988799124529
+      }
+    }
+  ]
+}

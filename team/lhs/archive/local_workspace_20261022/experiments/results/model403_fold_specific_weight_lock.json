@@ -1,0 +1,35 @@
+{
+  "experiment": "Model403 class-balanced local supervised contrastive auxiliary loss",
+  "amendment": "Before any optimizer step, replace the pooled four-fold coefficient with one coefficient calibrated using only the corresponding outer-train fold. This prevents a held-out fold's masks from affecting its own OOF model through cross-fold loss-scale calibration.",
+  "probe_weight": 0.0065,
+  "calibration_rule": "supcon_weight = probe_weight / median initial decoder-gradient norm ratio, using the four recorded seed-1 calibration batches from the same outer-train fold; no optimizer step or held-out/official-valid/test data.",
+  "folds": {
+    "1": {
+      "calibration_path": "experiments/results/gradient_calibration_seed1_fold1.json",
+      "calibration_sha256": "0d8108c97ec3febc71d47b02787a28a80d61e0a8b3cb8ef0810204e3ffe20984",
+      "median_gradient_norm_ratio": 1.0839717740873231,
+      "supcon_weight": 0.005996466103070659
+    },
+    "2": {
+      "calibration_path": "experiments/results/gradient_calibration_seed1_fold2.json",
+      "calibration_sha256": "ebae0c00ffe71efde89ae91fe99acdd1afb8610d72866c095e15b4453cb27d95",
+      "median_gradient_norm_ratio": 1.0459401036300446,
+      "supcon_weight": 0.006214504996453496
+    },
+    "3": {
+      "calibration_path": "experiments/results/gradient_calibration_seed1_fold3.json",
+      "calibration_sha256": "2dee09519ec046386586314018415c5ec0d38428f6933d555ac9edcffff015b5",
+      "median_gradient_norm_ratio": 1.0987936571629966,
+      "supcon_weight": 0.005915578377820742
+    },
+    "4": {
+      "calibration_path": "experiments/results/gradient_calibration_seed1_fold4.json",
+      "calibration_sha256": "a8dedcfae71880f04d70fd4962440366cd02e51076679f20c28f53ccd2e81454",
+      "median_gradient_norm_ratio": 1.0392288095502988,
+      "supcon_weight": 0.006254637997201711
+    }
+  },
+  "official_valid_read": false,
+  "test_read": false,
+  "optimizer_steps_during_calibration": 0
+}
